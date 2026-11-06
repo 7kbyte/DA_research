@@ -168,6 +168,7 @@ def evaluate_task(model: torch.nn.Module, tokenizer: Any, examples: Sequence[Map
               "acc": sum(x["correct_acc"] for x in predictions) / n,
               "acc_norm": sum(x["correct_acc_norm"] for x in predictions) / n,
               "official_metrics": ["acc", "acc_norm"], "official_single_primary_metric": None,
+              "project_primary_metric": "acc_norm", "project_auxiliary_metric": "acc",
               "acc_norm_denominator": "Python character length of choice without added target delimiter",
               "wall_seconds": time.perf_counter() - run_begin,
               "encoding_wall_seconds": encoding_seconds,

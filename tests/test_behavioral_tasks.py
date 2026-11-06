@@ -106,6 +106,24 @@ class BehavioralTests(unittest.TestCase):
         self.assertTrue(all(mode is False and grad is False for mode, grad in model.observed))
         self.assertIsNone(model.logits.grad)
 
+    def test_nonuniform_causal_scores_predict_space_then_answer_token(self):
+        class MarkovLM(torch.nn.Module):
+            def __init__(self):
+                super().__init__()
+                source, target = torch.arange(256).unsqueeze(1), torch.arange(256).unsqueeze(0)
+                self.table = torch.nn.Parameter(((source * 7 + target * 11) % 19).float() / 3)
+
+            def forward(self, input_ids, attention_mask=None, use_cache=False):
+                return SimpleNamespace(logits=self.table[input_ids])
+
+        model = MarkovLM()
+        rows = [{"task": "piqa", "item_id": "a", "fingerprint": "a", "context": "A", "choices": ["x", "y"], "gold": 0}]
+        _, predictions = evaluate_task(model, ByteTokenizer(), rows, batch_size=2, precision="fp32")
+        expected = [torch.log_softmax(model.table[ord("A")], -1)[ord(" ")]
+                    + torch.log_softmax(model.table[ord(" ")], -1)[ord(choice)] for choice in ["x", "y"]]
+        for actual, reference in zip(predictions[0]["choice_logprobs"], expected):
+            self.assertAlmostEqual(actual, reference.item(), places=5)
+
     def test_zero_accuracy_change_can_mask_equal_losses_and_gains(self):
         def rows(values):
             return [{"task": "piqa", "item_id": str(i), "fingerprint": str(i), "gold": 0,

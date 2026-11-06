@@ -85,6 +85,24 @@ def test_document_bootstrap_weights_and_all_chunks_stay_together():
     assert exact["equal_document"] == {"estimate": .25,"ci_low": .25,"ci_high": .25}
 
 
+def test_same_objective_source_pairs_match_seed_b_and_lambda():
+    registry = [{"group": group, "seed": seed, "ratio": .05, "weight": .1}
+                for group in ("B1", "B2", "B3", "B4") for seed in (11,22,33)]
+    values = {"B1": 0., "B2": 2., "B3": 3., "B4": 7.}
+    rows = [{**row, "run_id": f"{row['group']}{row['seed']}",
+             "g_new": 100*row["seed"] + values[row["group"]]} for row in registry]
+    pairs, stats = paired_seed_differences(rows, registry)
+    for comparison, expected in (("B3-B1",3.),("B4-B2",5.)):
+        selected = [r for r in pairs if r["comparison"] == comparison]
+        assert len(selected) == 3 and [r["g_new"] for r in selected] == [expected]*3
+        aggregate = next(r for r in stats if r["comparison"]==comparison and r["metric"]=="g_new")
+        assert aggregate["n"]==3 and aggregate["mean"]==expected and aggregate["std_ddof1"]==0
+    changed = [dict(r) for r in rows]
+    next(r for r in changed if r["group"]=="B3" and r["seed"]==22)["weight"] = .5
+    with pytest.raises(ValueError,match="outside"):
+        paired_seed_differences(changed,registry)
+
+
 def test_bootstrap_rejects_misalignment_and_chunk_without_document():
     a = corpus({"a": [(2,1)]}); b = corpus({"b": [(2,1)]})
     with pytest.raises(ValueError,match="document sets"):

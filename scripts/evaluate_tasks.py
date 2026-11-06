@@ -11,6 +11,8 @@ import torch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from replay_study.evaluate import load_causal_model, write_json
+from replay_study.execution import (add_execution_arguments, configure_execution, execution_provenance,
+                                     verify_matching_execution)
 from replay_study.tasks import HARNESS_REVISION, evaluate_task, load_jsonl, transition_summary
 
 
@@ -26,10 +28,12 @@ def main():
     parser.add_argument("--device", default="cuda:0")
     parser.add_argument("--batch-size", type=int, default=16)
     parser.add_argument("--precision", choices=("bf16", "fp32"), default="bf16")
+    add_execution_arguments(parser)
     parser.add_argument("--max-length", type=int, default=2048)
     parser.add_argument("--smoke", action="store_true", help="Only first <=8 questions; excluded from formal results")
     parser.add_argument("--limit", type=int, default=8, help="Used only by --smoke")
     args = parser.parse_args()
+    configure_execution(args)
     run_begin = time.perf_counter()
     if args.smoke and not 1 <= args.limit <= 8:
         parser.error("smoke must use 1..8 questions per task")
@@ -41,15 +45,21 @@ def main():
     baseline = json.loads(args.baseline.read_text()) if args.baseline else None
     if baseline and baseline["harness_revision"] != HARNESS_REVISION:
         raise ValueError("baseline harness revision does not match frozen scorer")
+    if baseline and not baseline.get("complete"):
+        raise ValueError("baseline summary is incomplete")
     if baseline and (baseline.get("checkpoint") is not None or baseline["revision"] != args.revision or baseline["model"] != args.model):
         raise ValueError("baseline must be the identical initial model/revision without an adapted checkpoint")
     if baseline and baseline["precision"] != args.precision:
         raise ValueError("baseline and adapted evaluation precision must match")
+    if baseline:
+        verify_matching_execution(baseline.get("execution_provenance", {}), execution_provenance(args, model))
     if baseline and baseline["evaluation_role"] != ("smoke" if args.smoke else "formal"):
         raise ValueError("cannot pair a smoke result with a formal full-split result")
     summary = {"model": args.model, "revision": args.revision, "checkpoint": args.checkpoint,
                "harness_revision": HARNESS_REVISION, "precision": args.precision,
-               "evaluation_role": "smoke" if args.smoke else "formal", "tasks": {}}
+               "execution_provenance": execution_provenance(args, model),
+               "project_primary_metric": "acc_norm", "project_auxiliary_metric": "acc",
+               "evaluation_role": "smoke" if args.smoke else "formal", "tasks": {}, "complete": False}
     args.output.parent.mkdir(parents=True, exist_ok=True)
     for task in args.tasks:
         path = args.data_root / f"{task}_validation.jsonl"
@@ -66,8 +76,9 @@ def main():
         prediction_path = args.output.with_name(args.output.stem + f"_{task}.jsonl")
         if baseline:
             prior = baseline["tasks"][task]
-            if prior["max_length"] != args.max_length or prior["data_sha256"] != manifest["artifact_sha256"]:
-                raise ValueError("baseline/adapted context limit or task data hash differs")
+            if (prior["max_length"] != args.max_length or prior["batch_size"] != args.batch_size
+                    or prior["data_sha256"] != manifest["artifact_sha256"]):
+                raise ValueError("baseline/adapted context limit, batch size or task data hash differs")
             if hashlib.sha256(Path(prior["predictions_path"]).read_bytes()).hexdigest() != prior["predictions_sha256"]:
                 raise ValueError("baseline prediction file hash differs from its summary")
             original = load_jsonl(prior["predictions_path"])
@@ -83,6 +94,7 @@ def main():
         write_json(args.output, summary)
     summary["peak_gpu_memory_bytes"] = torch.cuda.max_memory_allocated(args.device) if torch.device(args.device).type == "cuda" else 0
     summary["wall_seconds"] = time.perf_counter() - run_begin
+    summary["complete"] = True
     write_json(args.output, summary)
     print(args.output)
 

@@ -19,7 +19,8 @@ import numpy as np
 
 
 CORPORA = ("target", "c4", "wikitext")
-PAIRS = (("M", "B4"), ("C", "B4"), ("B2", "B1"), ("B4", "B3"))
+PAIRS = (("M", "B4"), ("C", "B4"), ("B2", "B1"), ("B4", "B3"),
+         ("B3", "B1"), ("B4", "B2"))
 GROUPS = ("B0", "B1", "B2", "B3", "B4", "D", "M", "C")
 LABELS = {"B0": "Target only", "B1": "C4 CE", "B2": "C4 KL", "B3": "Generated CE",
           "B4": "Generated KL", "D": "Deduplicated KL", "M": "NLL-stratified KL", "C": "Cluster KL"}
@@ -819,6 +820,7 @@ def plot_analysis(bundle: Mapping[str, Any], output: str | Path) -> None:
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
     from matplotlib.lines import Line2D
+    from matplotlib.ticker import MaxNLocator
 
     output = Path(output)
     figure_dir = output / "figures"
@@ -848,6 +850,8 @@ def plot_analysis(bundle: Mapping[str, Any], output: str | Path) -> None:
     for ax, name in zip(axes, ("C4", "WikiText-103")):
         ax.set_title(name); ax.set_xlabel(r"New-domain gain $G_{new}$ (nats/token)")
         ax.set_ylabel(r"Old-domain forgetting $F_{old}$ (nats/token)")
+        ax.xaxis.set_major_locator(MaxNLocator(nbins=5))
+        ax.yaxis.set_major_locator(MaxNLocator(nbins=5))
         ax.axhline(0, color=".75", linewidth=.6); ax.grid(alpha=.18)
     handles = []
     for group in GROUPS:
