@@ -1,0 +1,16 @@
+# C后续模型NLL分析：沿用冻结统计与v3门禁
+
+2026-11-06 16:23 UTC操作说明。410M已经完整分析；本页不授权1B、2.8B或任何行为分数，不创建未来READY、plan或first-read记录。
+
+410M的v2检查在读取完整模型等价证明时把`producer_source`的Python文件当作JSON，已通过独立v3门禁修复。旧统计协议与源码仍保持原SHA；v3只修来源类型处理并收紧正常完成证据。代码和独立验收见[操作修复说明](补充评价guard_v3操作修复说明.md)及[独立工程验收](补充评价guard_v3独立工程验收.md)。不能再把旧v2 check命令直接用于含此来源字段的C模型证明。
+
+后续每个完整模型分别走以下操作：
+
+1. 等真实whole-model训练、final/best源审计与实际等价证明完成，由原v5 producer发布该模型的真实READY及NLL manifest。1B为24条件、48逻辑端点；2.8B为15条件、30逻辑端点。物理次数按真实manifest决定，只扣已证明相同的权重，不预支1B的六个D/B4别名。2.8B没有D组。
+2. 仍调用冻结`analyze_supplemental_phase_v2.py prepare`，使用原协议`docs/supplemental_aux_analysis_protocol_v2.json`、该模型真实READY、v5当时最新不可变cache snapshot的路径和SHA；保留生成的FALSE模板。prepare不读分数。不能把可变cache_progress作为snapshot，也不能省略显式checkpoint白名单和当前五项stat核验。
+3. 为该模型另写非授权operational repair，严格采用已审阅v3结构，绑定其真实prepared plan、manifest、原protocol以及两代源码。C410的repair明确绑定C410，不能跨模型复用。旧v2 guard/CLI的SHA分别为64c89e37be3d595c239ad2683d72a85cdef6db776374ef6eeae28e23b97c3aea、a2f613babda5f1fd3b520259515b1acda90703ef42d3c7089c32c7e57497af3a；v3 guard/CLI分别为6190ded0f8c21c035a1829f0d4f451d3842af9f5f03942dcc1fceb94bdcbc4cb、bd0463e34fe9373ffcb37587f6838f5f5bb1a852b6eafc023bd67923ec97ed0c。repair本身的score_access_authorized必须为false。
+4. 完整闭包全部正常结束后，单独计时运行v3 `check`，传入原plan和该模型repair。核完整definition、整数rc0、两个stop键都不存在、实际wrapper argv、完整输出及alias/baseline来源。检查只哈希评分字节，不解析其语义。保存原始state及whole-child wall/user/sys；失败与重试分目录，不覆盖。期望计数以真实plan为准。
+5. ROOT审阅check的ready、完整attestations和实际cache/fresh counters后，另签TRUE authority；保留原FALSE所有身份字段并增加同一operational_repair proof。随后只运行一次v3 `analyze`，保存whole-child timer。first-read路径始终来自旧plan的固定manifest命名，不能换输出目录重置journal。
+6. 只有COMPLETE存在且完整final/best均成功，才做整模型报告与独立重算。final/best各保留全部方法、三个seed、六指标、冻结配对及条件文档区间；成本按actual_run_id去重，完整训练不因best较早而减记。1B/2.8B分别使用匹配自身模型、extended数据和推断政策的initial，不与主v3或其他模型混用。
+
+1B合同ID为`extended_pythia_1b_100m_nll`，2.8B为`extended_pythia_2p8b_25m_nll`。任何最终handoff后的state必须含相同完整definition闭包和经验证的继承凭证；不手工拼接旧state。C行为manifest若同样携带producer_source的完整状态证明，也应使用v3 check/analyze，并为其独立behavior plan生成精确非授权repair；不能拿本模型NLL authority或repair复用。主behavior沿用其已有独立wrapper，A behavior沿用其完整合同。各行为评价都须按自己的完整plan和首次读取门禁处理。此页没有改变参数网格、训练时长、评价集或统计方法。

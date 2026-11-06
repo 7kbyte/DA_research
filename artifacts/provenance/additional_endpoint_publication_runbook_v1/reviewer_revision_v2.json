@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-11-06T16:20:54.705786+00:00",
+  "status": "prepared_only_independent_metadata_reviewer_revision_v2_no_real_package_review",
+  "ROOT_authorized": false,
+  "source": {
+    "path": "artifacts/provenance/additional_endpoint_publication_runbook_v1/review_metadata.py",
+    "sha256": "55703ede1af5f187cd10750b29a999c4ebd845d00c9bf45a03780206f82f79e1"
+  },
+  "test": {
+    "path": "artifacts/provenance/additional_endpoint_publication_runbook_v1/test_review_metadata.py",
+    "sha256": "f7a81e52559f7a35dcbda51139deaf08c237b50b66a026e600d293c81f8da257",
+    "observed_result": "13 passed in0.03s",
+    "command": "python -m pytest -q artifacts/provenance/additional_endpoint_publication_runbook_v1/test_review_metadata.py"
+  },
+  "prior_unchanged_source": {
+    "path": "artifacts/provenance/additional_endpoint_publication_runbook_v1/pre_change_v1/review_metadata.py",
+    "sha256": "f9dc48af81bb5f9fe9e2b12d43c46619811bdcb5330c916d929988475571828e"
+  },
+  "prior_unchanged_preparation": {
+    "path": "artifacts/provenance/additional_endpoint_publication_runbook_v1/pre_change_v1/preparation_receipt.json",
+    "sha256": "31bff8d1ab9b0ac2795aa6e93f1700cb732e26f85e474e4831dd90d27f2aaa3b"
+  },
+  "changes": [
+    "Explicit config/summary record SHA equality to scope bound.input_sha256[bound config/summary path], before fresh small-file verification",
+    "Whole child and each completed training scheduler require type(returncode) is int and value0; reject stop_requested and stop_requested_at keys regardless of values"
+  ],
+  "live_exporter_sha256": "c93e0c1d35fe39b3d71155a126db841b76648ba6b3afd58d475be4eb9c9da853",
+  "live_C_final_exporter_sha256": "bc057d04298b91a8189dae58fb6189c19b69faf70c9c83298d7854bf1cc38390",
+  "codec_sha256": "3c2bcf9e38773ae4f69c27f85f342356dbefcb53d817be4321da6e9c4e550e1a",
+  "not_performed": [
+    "No live source/helper changes",
+    "No whole package actual metadata review; completion still pending",
+    "No CP/base/ZIP/TAR payload read, encode, decode, sample, batch, GPU, shared write or publication"
+  ]
+}

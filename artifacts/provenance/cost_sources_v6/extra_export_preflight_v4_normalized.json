@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/additional_endpoint_export_preparation_v4.json",
+    "sha256": "fff7c8468dcbbd783e24e62c052cfcad84b4813de1b1c18ec170d9cbbb501035"
+  },
+  "original_wall_pointer": "/preparation/wall_seconds",
+  "wall_seconds": 10.175718050450087,
+  "CPU_component_pointers": [
+    "/preparation/process_cpu_seconds"
+  ],
+  "CPU_components": {
+    "/preparation/process_cpu_seconds": 9.695836787
+  },
+  "recorded_inclusive_CPU_seconds": 9.695836787,
+  "original_returncode": null,
+  "scope": "One actual v4 preparation function region after imports; same timer also copied into scope, count once. Native bytes do not constitute a second timed operation.",
+  "timing_semantics": "independent_measured_body_region_after_imports",
+  "normalization": "Copy measured wall and sum only explicitly listed disjoint CPU components; never infer from UTC/bytes.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false,
+  "original_source_fields_or_semantics_changed": false
+}

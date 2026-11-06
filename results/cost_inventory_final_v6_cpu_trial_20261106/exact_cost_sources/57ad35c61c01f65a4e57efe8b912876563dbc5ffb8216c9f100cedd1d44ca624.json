@@ -1,0 +1,34 @@
+{
+  "scope": "four distinct development/input-analysis invocations; excludes imports/test/document/output work; no inference",
+  "prior_runs": [
+    {
+      "version": "development before canonical capacity audit; exact source revision not archived",
+      "wall_seconds": 1.7675634361803532,
+      "process_cpu_seconds": 2.949092193
+    },
+    {
+      "version": "canonical capacity audit; before summary/rank metadata",
+      "wall_seconds": 4.335387352854013,
+      "process_cpu_seconds": 5.622189527
+    },
+    {
+      "version": "summary before rank SHA addition",
+      "wall_seconds": 4.144902963191271,
+      "process_cpu_seconds": 5.490854605
+    }
+  ],
+  "current_run": {
+    "source_sha256": "5cc51a2e19fb5458c3b6803f6281fc5792d51042ad19662295a04556b7b146b1",
+    "wall_seconds": 3.8850046396255493,
+    "process_cpu_seconds": 5.17757305
+  },
+  "analysis_region_wall_sum_seconds": 14.132858391851187,
+  "analysis_region_cpu_sum_seconds": 19.239709375,
+  "unknown_costs": [
+    "process startup imports",
+    "tests CPU time",
+    "one-off stable-rank readback CPU time",
+    "CSV/JSON/document writing"
+  ],
+  "nonadditivity": "Current run occurs both here and bank_geometry.json: do not add it twice."
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_nll_analysis_actual_v3/analyze_whole_child_timing.json",
+    "sha256": "664d1093770262283a2f2daa3b382b06a9d7b5a07199d1538b764950fec1a7c4"
+  },
+  "original_wall_pointer": "/wall_seconds",
+  "wall_seconds": 11.763358913362026,
+  "CPU_component_pointers": [
+    "/user_cpu_seconds",
+    "/sys_cpu_seconds"
+  ],
+  "CPU_components": {
+    "/user_cpu_seconds": 11.212102,
+    "/sys_cpu_seconds": 0.6156079999999999
+  },
+  "recorded_inclusive_CPU_seconds": 11.82771,
+  "original_returncode": 0,
+  "scope": "ROOT-authorized complete C410 NLL analysis child, including its own repeated gate, collection/bootstrap/write; no other model scores parsed by this cost collector.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall and sum only explicitly listed disjoint CPU components; never infer from UTC/bytes.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false,
+  "original_source_fields_or_semantics_changed": false
+}

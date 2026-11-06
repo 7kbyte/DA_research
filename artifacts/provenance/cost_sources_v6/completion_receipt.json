@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "status": "passed_observed_snapshot_not_whole_study_complete",
+  "source_spec": {
+    "path": "/tmp/grad-research-20261106/worktree/configs/cost_inventory_final_sources_v6.json",
+    "sha256": "e4c99db9b1803681ad8706bb90480ede0be584975324040df979c1c9966b17e0"
+  },
+  "inventory": {
+    "path": "/tmp/grad-research-20261106/worktree/results/cost_inventory_final_v6_cpu_trial_20261106/inventory.json",
+    "sha256": "9be5f07368851351e6fa795d7694dfcf45e31babfcfcb34572cf96d2e5e6356c"
+  },
+  "collection_receipt": {
+    "path": "/tmp/grad-research-20261106/worktree/results/cost_inventory_final_v6_cpu_trial_20261106/collection_receipt.json",
+    "sha256": "22dea839c915e47c17f196322d385ccd699aa31dd844c0f3b5096aeb89de4997"
+  },
+  "directed_verification": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v6/directed_verification_receipt.json",
+    "sha256": "0fa1f907b80fc94a8e7f03c1bafaf4aef84965a5cdffefc3457b89cc7bcaac6e"
+  },
+  "collector_whole_child_timing": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v6/trial_whole_child_timing.json",
+    "sha256": "eabe8cd7322677e912234071ee9bd8fd98ec6e4e5f9286f91b0b9bb99597ee40"
+  },
+  "explanation": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/成本来源v6与C410实际分析成本.md",
+    "sha256": "c2bca8e67d75d6af9f28b3566ad14691fa1edec7a79d4863bedbce0acf533c92"
+  },
+  "new_explicit_rows": 25,
+  "new_context_rows": 9,
+  "new_explicit_disjoint_wall_sum_seconds": 612.3461088724434,
+  "new_explicit_known_inclusive_CPU_sum_seconds": 449.024313311,
+  "new_actual_inference_jobs": 43,
+  "attested_inference_jobs_before": 253,
+  "attested_inference_jobs_after": 296,
+  "exact_cost_source_snapshot_count": 190,
+  "old_source_versions_preserved": true,
+  "collector_source_unchanged": true,
+  "C410_publication_dynamic_slot_explanation": "The retained dynamic C publication slot stays null solely to avoid adding inner publisher time. Actual whole-child publication is independently registered; the old slot label is not global publication status.",
+  "source_and_table_proofs": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v6/prepare.py",
+      "sha256": "5cbd2b44ca550a7b2344be940abaf3bd6da9f4be15e327742113087f27069ed7"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v6/run_trial.py",
+      "sha256": "ce9ed0c8f9310bb0998fb5018a841f0bb8490516de4ee43dc1481cf23eb84c51"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v6/verify_trial.py",
+      "sha256": "5bf1c22617c2a0d0876d284c225526ded32e9947e7d99974cda62ebd2cf5cad3"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v6/explicit_new_registration_table.json",
+      "sha256": "1089e934bd6be6b5531ba0579ba32f5a6301469e19769b65b0078d317207bff8"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v6/new_disjoint_operations.csv",
+      "sha256": "03bf12ac6093fc2fa614925a7d43de8fff045610349b55a00c6baf8e729d058c"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v6/category_delta_vs_v5.csv",
+      "sha256": "fd8f812cb6f0772bc935b7061acae77a40348c068108f81e2b8f45962470a97d"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v6/new_nonadditive_context_rows.csv",
+      "sha256": "1cf9ab3aa5198aa8476e06636ef8feb4fc2b01411ce570d9e180aad4c9f161a2"
+    }
+  ],
+  "whole_study_complete": false,
+  "score_semantics_read": false,
+  "GB_model_or_archive_payloads_read": 0,
+  "new_GPU_or_scheduler_started": false,
+  "future_registration_gaps": [
+    "A/B whole batches after actual completed receipts; do not repeat first samples.",
+    "Remaining C drafts/assembly grow naturally; register future actual publications once with correct parent boundary.",
+    "New future scoring phases only after real manifest/completion; no phantom forward or premature alias deductions.",
+    "This cost-collector child and QC region are measured separately and not recursively included; unmeasured engineering/review/unknown parents stay unknown."
+  ]
+}

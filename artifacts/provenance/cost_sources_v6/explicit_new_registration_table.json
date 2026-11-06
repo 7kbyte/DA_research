@@ -1,0 +1,302 @@
+[
+  {
+    "id": "C410_actual_READY_preflight_whole_child",
+    "original_source": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_early_NLL_actual_v1/preflight_attempt_1/parent_timing.json",
+      "sha256": "fb53840e783a60f2705059c4bbf58e163ec9207c669f697029c43a95039dfa29"
+    },
+    "wall_pointer": "/wall_seconds",
+    "measured_wall_seconds": 1.3677426129579544,
+    "known_inclusive_CPU_seconds": 1.384795,
+    "scope": "Actual READY preflight child spawn-to-exit; no score/GPU/queue write.",
+    "timing_semantics": "independent_measured_complete_operation"
+  },
+  {
+    "id": "C410_NLL_priority_append_region",
+    "original_source": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_early_NLL_actual_v1/enqueue/receipt.json",
+      "sha256": "a742e7428911ca94e8e3fe92d7300c4dca9dae67406b6adb975e7092e7349504"
+    },
+    "wall_pointer": "/append_wall_seconds",
+    "measured_wall_seconds": 1.3514885865151882,
+    "known_inclusive_CPU_seconds": null,
+    "scope": "Measured manager append region only; not full ROOT planning/review, master GPU work or subsequent reload wait.",
+    "timing_semantics": "independent_measured_append_region_not_whole_parent"
+  },
+  {
+    "id": "C410_aux_v2_prepare_whole_child",
+    "original_source": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_aux_v2_prepare_execution_v1/whole_process_timing.json",
+      "sha256": "33055382c3672d1436338ce40c5093ba0534fcb72888a686cd70305655d38b53"
+    },
+    "wall_pointer": "/whole_child_process_wall_seconds",
+    "measured_wall_seconds": 0.3543778918683529,
+    "known_inclusive_CPU_seconds": 0.427241,
+    "scope": "Prepare only; checkpoint allowlist/cache binding, not actual score analysis or checkpoint payload digest operation.",
+    "timing_semantics": "independent_measured_complete_operation"
+  },
+  {
+    "id": "C410_final_publication_whole_child",
+    "original_source": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_final_publication_actual_v1/parent_timing.json",
+      "sha256": "9ae8e965352ad5f96157cdd9c4db38a247558df43c9fa4cce31a92a88a2d2597"
+    },
+    "wall_pointer": "/wall_seconds",
+    "measured_wall_seconds": 191.49669512361288,
+    "known_inclusive_CPU_seconds": 91.95005,
+    "scope": "Whole publisher child spawn-to-exit; internal publisher wall/readback/copy/fsync are nested.",
+    "timing_semantics": "independent_measured_complete_operation"
+  },
+  {
+    "id": "C410_final_publication_metadata_review_whole_child",
+    "original_source": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_final_publication_runbook_v1/actual_metadata_review/parent_timing.json",
+      "sha256": "106d38edfc8c1f9e5aa730bee325ed12795574ec0ca5d8c6a196c8eda8a6e76f"
+    },
+    "wall_pointer": "/wall_seconds",
+    "measured_wall_seconds": 0.09231575205922127,
+    "known_inclusive_CPU_seconds": 0.05439599999999999,
+    "scope": "Independent small-metadata reviewer child, no TAR/weight payload read.",
+    "timing_semantics": "independent_measured_complete_operation"
+  },
+  {
+    "id": "extra435_initial_five_allocations",
+    "original_source": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/extra_endpoint_reservations_v1/sequence.json",
+      "sha256": "8fe366e175b789494ea606377ab9393868747672a5262293f503acf91ff08e27"
+    },
+    "wall_pointer": "/initial_allocation_timing/wall_seconds",
+    "measured_wall_seconds": 82.5746856071055,
+    "known_inclusive_CPU_seconds": 11.874083209,
+    "scope": "Independent five1GiB initial allocation/fallocate/fsync body; growers separate.",
+    "timing_semantics": "independent_measured_complete_operation"
+  },
+  {
+    "id": "extra_export_preflight_v1",
+    "original_source": {
+      "path": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v1/scope.json",
+      "sha256": "df2ed3ce0117d1d41ac7985f33fdf813254716f2818fff11e1639ca2ab412779"
+    },
+    "wall_pointer": "/preparation_wall_seconds",
+    "measured_wall_seconds": 10.213459879159927,
+    "known_inclusive_CPU_seconds": 9.712953124999999,
+    "scope": "One actual preflight function region after imports, although its prepared scope was never encoded. Includes native/data/small-input hashes; do not add native hash children.",
+    "timing_semantics": "independent_measured_body_region_after_imports"
+  },
+  {
+    "id": "extra_export_preflight_v2",
+    "original_source": {
+      "path": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v2/scope.json",
+      "sha256": "a35b87e032b9bccf4527ab562e9168043013ca619c8150a8b6caf984d66d402c"
+    },
+    "wall_pointer": "/preparation_wall_seconds",
+    "measured_wall_seconds": 10.11905338615179,
+    "known_inclusive_CPU_seconds": 9.648970669999999,
+    "scope": "One actual preflight function region after imports, although its prepared scope was never encoded. Includes native/data/small-input hashes; do not add native hash children.",
+    "timing_semantics": "independent_measured_body_region_after_imports"
+  },
+  {
+    "id": "extra_export_preflight_v3",
+    "original_source": {
+      "path": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v3/scope.json",
+      "sha256": "f8a53c821e4ec9093dcc4b49d386942f7c959abcb2d2fbf3a402083048b533fa"
+    },
+    "wall_pointer": "/preparation_wall_seconds",
+    "measured_wall_seconds": 10.23345721513033,
+    "known_inclusive_CPU_seconds": 9.72586452,
+    "scope": "One actual preflight function region after imports, although its prepared scope was never encoded. Includes native/data/small-input hashes; do not add native hash children.",
+    "timing_semantics": "independent_measured_body_region_after_imports"
+  },
+  {
+    "id": "extra_export_preflight_v4",
+    "original_source": {
+      "path": "/tmp/grad-research-20261106/worktree/docs/additional_endpoint_export_preparation_v4.json",
+      "sha256": "fff7c8468dcbbd783e24e62c052cfcad84b4813de1b1c18ec170d9cbbb501035"
+    },
+    "wall_pointer": "/preparation/wall_seconds",
+    "measured_wall_seconds": 10.175718050450087,
+    "known_inclusive_CPU_seconds": 9.695836787,
+    "scope": "One actual v4 preparation function region after imports; same timer also copied into scope, count once. Native bytes do not constitute a second timed operation.",
+    "timing_semantics": "independent_measured_body_region_after_imports"
+  },
+  {
+    "id": "CPU_full743_test_suite_whole_child",
+    "original_source": {
+      "path": "/tmp/grad-research-20261106/worktree/logs/tests_after_additional_export_v4_full_timing.json",
+      "sha256": "428d7698f7eb32bd14de4712d9ee744d074f04439034ddac25c362349d1118d6"
+    },
+    "wall_pointer": "/wall_seconds",
+    "measured_wall_seconds": 28.265095628798008,
+    "known_inclusive_CPU_seconds": 32.394847,
+    "scope": "Complete ROOT743 CPU test-suite child; its own pytest display is nested. Earlier separate90test invocation has only a pytest display, not a measured whole-parent source, and is not imputed here.",
+    "timing_semantics": "independent_measured_complete_operation"
+  },
+  {
+    "id": "C410_validation_review_whole_child",
+    "original_source": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_validation_review_v1/whole_process_timing.json",
+      "sha256": "483372eddb9d858ede0a177699b81a0d43d59f1821e8cfad2a3d789790283605"
+    },
+    "wall_pointer": "/whole_child_process_wall_seconds",
+    "measured_wall_seconds": 1.571703962981701,
+    "known_inclusive_CPU_seconds": 1.56508,
+    "scope": "Complete independent validation review child; its own CSV/summary/event/hash gates and output writes included.",
+    "timing_semantics": "independent_measured_complete_operation"
+  },
+  {
+    "id": "C410_validation_review_postcheck_region",
+    "original_source": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_validation_review_v1/completion_receipt.json",
+      "sha256": "b6b860b5808061da1318fefb5563c3b604a9cc7662ae7779f7a519c15001ca77"
+    },
+    "wall_pointer": "/post_review_region_wall_seconds",
+    "measured_wall_seconds": 0.012522652745246887,
+    "known_inclusive_CPU_seconds": 0.012464999999999999,
+    "scope": "Independent later post-import CSV/summary readback/small source hashes, outside prior review child. Not full engineering task.",
+    "timing_semantics": "independent_measured_body_region_after_imports"
+  },
+  {
+    "id": "optional_five_package_cutoff_corrigendum_body",
+    "original_source": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/optional_weight_expansion_cutoff_corrigendum_v1/completion_receipt.json",
+      "sha256": "c8384f7581ab496d9b3a64780409bef73596e6be341ad869d966b171cc332c44"
+    },
+    "wall_pointer": "/wall_seconds",
+    "measured_wall_seconds": 0.006069846451282501,
+    "known_inclusive_CPU_seconds": 0.005990000000000002,
+    "scope": "Post-import correction body/writes only; not whole process, actual exporter or original planning time.",
+    "timing_semantics": "independent_measured_body_region_after_imports"
+  },
+  {
+    "id": "extra_export_A_remaining_final_single_sample_whole_child",
+    "original_source": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/additional_endpoint_actual_v4/A_remaining_final_sample/whole_child_timing.json",
+      "sha256": "8ee7f70f4857c7d96cd44d4b51fc8df49169c0f76883ced231caf2723399d636"
+    },
+    "wall_pointer": "/wall_seconds",
+    "measured_wall_seconds": 104.66365860402584,
+    "known_inclusive_CPU_seconds": 105.541788,
+    "scope": "Inclusive one actual single-sample exporter child. Startup hashing+endpoint codec+verification/receipt nested; no publication. Future full batch reuses this first record without re-encoding and has a separate future timer.",
+    "timing_semantics": "independent_measured_complete_operation"
+  },
+  {
+    "id": "extra_export_B_all_final_single_sample_whole_child",
+    "original_source": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/additional_endpoint_actual_v4/B_all_final_sample/whole_child_timing.json",
+      "sha256": "eaaa57edc1a9c666f5dd28a771d62ff19d927757da290449ac1e3f65bdd8a3c6"
+    },
+    "wall_pointer": "/wall_seconds",
+    "measured_wall_seconds": 104.72573426738381,
+    "known_inclusive_CPU_seconds": 105.61329099999999,
+    "scope": "Inclusive one actual single-sample exporter child. Startup hashing+endpoint codec+verification/receipt nested; no publication. Future full batch reuses this first record without re-encoding and has a separate future timer.",
+    "timing_semantics": "independent_measured_complete_operation"
+  },
+  {
+    "id": "guard_v3_author_initial95_synthetic_tests_whole_child",
+    "original_source": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/supplemental_guard_v3_repair_v1/synthetic_tests_whole_child_timing.json",
+      "sha256": "7f7fc77c810c62e041b47d62c2ac965c877be4ea97591be35cd63a4ecbc682d5"
+    },
+    "wall_pointer": "/whole_child_process_wall_seconds",
+    "measured_wall_seconds": 2.4073542542755604,
+    "known_inclusive_CPU_seconds": 2.425071,
+    "scope": "Initial independent repair95-test child. Superseded source remains snapshotted; actual historical CPU work still counted once.",
+    "timing_semantics": "independent_measured_complete_operation"
+  },
+  {
+    "id": "guard_v3_author_final97_synthetic_tests_whole_child",
+    "original_source": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/supplemental_guard_v3_repair_v2/synthetic_tests_whole_child_timing.json",
+      "sha256": "0699e230b80b44a529b0422fd238ae3904eed0a16f445ff1ff076bc61b38533a"
+    },
+    "wall_pointer": "/whole_child_process_wall_seconds",
+    "measured_wall_seconds": 2.510565474629402,
+    "known_inclusive_CPU_seconds": 2.5137769999999997,
+    "scope": "Separate final plan-bound97-test child; not nested in the initial author test child.",
+    "timing_semantics": "independent_measured_complete_operation"
+  },
+  {
+    "id": "guard_v3_independent_candidate48_tests_whole_child",
+    "original_source": {
+      "path": "/tmp/grad-research-20261106/worktree/results/supplemental_guard_v3_independent_review_v1/candidate_1/receipt.json",
+      "sha256": "48f830f7f964b69e74839596cd4dd872f7987d1cbdefd9f4f82cd3f75d822575"
+    },
+    "wall_pointer": "/whole_child_wall_seconds",
+    "measured_wall_seconds": 1.2430415824055672,
+    "known_inclusive_CPU_seconds": 1.296754,
+    "scope": "Separate reviewer child48tests before plan-binding amendment; source snapshot retained.",
+    "timing_semantics": "independent_measured_complete_operation"
+  },
+  {
+    "id": "guard_v3_independent_final104_tests_whole_child",
+    "original_source": {
+      "path": "/tmp/grad-research-20261106/worktree/results/supplemental_guard_v3_independent_review_v1/final_stable/test_receipt.json",
+      "sha256": "ff9fc38afc935706d5c8e0629236bf582722c078b9fff74c13fb491c3848430a"
+    },
+    "wall_pointer": "/whole_child_wall_seconds",
+    "measured_wall_seconds": 2.708947416394949,
+    "known_inclusive_CPU_seconds": 2.710607,
+    "scope": "Separate reviewer final104-test child; source/AST review engineering outside child remains unknown.",
+    "timing_semantics": "independent_measured_complete_operation"
+  },
+  {
+    "id": "CPU_full793_test_suite_whole_child",
+    "original_source": {
+      "path": "/tmp/grad-research-20261106/worktree/logs/tests_after_supplemental_guard_v3_full.json",
+      "sha256": "edaf305e794f4080c184107d9cea4a4895339e9eb520b6500d3c7e58e09e0cdf"
+    },
+    "wall_pointer": "/whole_child_wall_seconds",
+    "measured_wall_seconds": 29.389251053333282,
+    "known_inclusive_CPU_seconds": 33.331734,
+    "scope": "ROOT complete793-test child spawn-through-exit; overlaps test content but is a genuinely separate execution, not nested in previous pytest children.",
+    "timing_semantics": "independent_measured_complete_operation"
+  },
+  {
+    "id": "C410_aux_v2_failed_check_whole_child",
+    "original_source": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_nll_analysis_actual_v1/check_whole_child_timing.json",
+      "sha256": "71fc84e1dfeae4231825cc1e4da035391784122afa86bf5c143eef0a27c8483b"
+    },
+    "wall_pointer": "/wall_seconds",
+    "measured_wall_seconds": 1.5079725533723831,
+    "known_inclusive_CPU_seconds": 1.612413,
+    "scope": "Real failedv2 score-blind check child before any score parse/authority/journal; charged as actual failed work, never recast as successful analysis.",
+    "timing_semantics": "independent_measured_complete_operation"
+  },
+  {
+    "id": "C410_aux_v3_actual_check_whole_child",
+    "original_source": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_nll_analysis_actual_v3/check_whole_child_timing.json",
+      "sha256": "442dc4ed82acf5d3a1db904952a768786bef9b05b2777289f88dd30d2a72ec00"
+    },
+    "wall_pointer": "/wall_seconds",
+    "measured_wall_seconds": 1.936519742012024,
+    "known_inclusive_CPU_seconds": 2.033886,
+    "scope": "Real successfulv3 score-blind check child; guard/source/output hashing below is a nested child and is not added again.",
+    "timing_semantics": "independent_measured_complete_operation"
+  },
+  {
+    "id": "C410_aux_v3_actual_analyze_whole_child",
+    "original_source": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_nll_analysis_actual_v3/analyze_whole_child_timing.json",
+      "sha256": "664d1093770262283a2f2daa3b382b06a9d7b5a07199d1538b764950fec1a7c4"
+    },
+    "wall_pointer": "/wall_seconds",
+    "measured_wall_seconds": 11.763358913362026,
+    "known_inclusive_CPU_seconds": 11.82771,
+    "scope": "ROOT-authorized complete C410 NLL analysis child, including its own repeated gate, collection/bootstrap/write; no other model scores parsed by this cost collector.",
+    "timing_semantics": "independent_measured_complete_operation"
+  },
+  {
+    "id": "evaluation_budget_v6_actual_completion_whole_child",
+    "original_source": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_execution_v1/whole_child_timing.json",
+      "sha256": "d0f4de512280f490a875ae3d9c466343d6e4291feacf2c362c2b71677daafbf7"
+    },
+    "wall_pointer": "/wall_seconds",
+    "measured_wall_seconds": 1.6553188152611256,
+    "known_inclusive_CPU_seconds": 1.66471,
+    "scope": "Actual-completion score-blind evaluation budgetv6 child. Internal budget collector/verification timers are nested, not new operations.",
+    "timing_semantics": "independent_measured_complete_operation"
+  }
+]
