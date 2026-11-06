@@ -1,0 +1,1874 @@
+{
+  "generated_at_utc": "2026-11-06T10:03:52.151187+00:00",
+  "status": "all72_primary_endpoints_lossless_verified_and_durable",
+  "frozen_primary_manifest_sha256": "d1502bcaff5cdcd75d984a4b8776f1cb4027b596f474835bfe9ed18875d9fd18",
+  "logical_endpoints": 72,
+  "physical_weight_archives": 66,
+  "alias_count": 6,
+  "durable_final_logical_endpoints": 36,
+  "scratch_only_best_logical_endpoints": 0,
+  "all72_original_source_files_retained_with_frozen_size_mtime": true,
+  "source_retention_check": "exists + frozen size/mtime; source whole-file SHA and tensor equality established by bound delivery receipts",
+  "packages": [
+    {
+      "name": "primary_final_weights",
+      "kind": "final",
+      "logical_endpoints": 24,
+      "unique_archives": 21,
+      "tar_path": "/tmp/grad-research-20261106/delivery/primary_final_weights_lossless_v1.tar",
+      "tar_bytes": 24949391360,
+      "tar_sha256": "2bb090fbe7df172b31102068715143ab702087ff49f77ef7dfd5db3637c928b1",
+      "receipt_path": "/tmp/grad-research-20261106/delivery/primary_final_weights_lossless_v1.tar.receipt.json",
+      "receipt_sha256": "57ec1733448a13afac2abb0d7992dd57cb5667f39cb5ea538f5542f57c441806",
+      "manifest_path": "/tmp/grad-research-20261106/delivery/primary_final_weights_manifest.json",
+      "manifest_sha256": "4120d177c22200b0bc5ee8390e0c2e2a1f5be1acbc58ef0f6d209bd47f96e8fb",
+      "durable": true,
+      "publication_receipt": "/tmp/grad-research-20261106/worktree/docs/primary_weights_durable_publication.json"
+    },
+    {
+      "name": "budget_final_weights",
+      "kind": "final",
+      "logical_endpoints": 12,
+      "unique_archives": 12,
+      "tar_path": "/tmp/grad-research-20261106/delivery/budget_final_weights_lossless_v1.tar",
+      "tar_bytes": 14651054080,
+      "tar_sha256": "539c2bc6c51e009464f5d5b16d9c97c4f7c5c5ed7db20b06dbd23b38a6aca3df",
+      "receipt_path": "/tmp/grad-research-20261106/delivery/budget_final_weights_lossless_v1.tar.receipt.json",
+      "receipt_sha256": "c5c006a68d756bfdb1b21e34cc7f95f01bb148f1d006cdf3c4f5d6451d7bfe87",
+      "manifest_path": "/tmp/grad-research-20261106/delivery/budget_final_weights_manifest.json",
+      "manifest_sha256": "88e03b0f40bfdecabb68bfaa4a6f58de729e3008a1828244507a495449bbe388",
+      "durable": true,
+      "publication_receipt": "/tmp/grad-research-20261106/worktree/docs/budget_final_weights_durable_publication.json"
+    },
+    {
+      "name": "primary_best_weights",
+      "kind": "best",
+      "logical_endpoints": 36,
+      "unique_archives": 33,
+      "tar_path": "/tmp/grad-research-20261106/delivery/primary_best_weights_lossless_v1.tar",
+      "tar_bytes": 37979074560,
+      "tar_sha256": "02e104573c0601f92100ad7a32ffb4d0c2db1860250e921a86909657830df0f5",
+      "receipt_path": "/tmp/grad-research-20261106/delivery/primary_best_weights_lossless_v1.tar.receipt.json",
+      "receipt_sha256": "614cc8b5f1d2e387698dc6060b0c24851c1c15e832d8d045f5ba664054c028da",
+      "manifest_path": "/tmp/grad-research-20261106/delivery/primary_best_weights_manifest.json",
+      "manifest_sha256": "fbd5d91c967d46e7b55d1aca62fd1c4a9a71c6e646ebe697bc0b730199698e4f",
+      "durable": true,
+      "publication_receipt": "/tmp/grad-research-20261106/worktree/docs/primary_best_weights_durable_publication.json",
+      "durable_tar_path": "/data/202610/7kb/research_delivery/primary_best_weights_lossless_v1.tar"
+    }
+  ],
+  "logical_endpoints_inventory": [
+    {
+      "endpoint_id": "formal_deterministic_B0_s11_b0_w0__best",
+      "run_id": "formal_deterministic_B0_s11_b0_w0",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_B0_s11_b0_w0__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "500ff12dc03743c43d5fc2892326c5315b5586a9c7c7190a90d664952eacdcd8",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "97c98150066eaf56b927367cac52813c76bff36c2ea213eca9f05d0ebda32eff",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 11,
+      "group": "B0",
+      "ratio": 0.0,
+      "weight": 0.0,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 0
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B0_s11_b0_w0__final",
+      "run_id": "formal_deterministic_B0_s11_b0_w0",
+      "kind": "final",
+      "package_name": "primary_final_weights",
+      "archive_member": "weights/formal_deterministic_B0_s11_b0_w0.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "0bbe89f7037ea585d504edf75686f36dbe4a8254f79d266e6c61ee0bc8b1925b",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "f470ccf71260fb6fae2defdf5b3211bb2519efc8d04a6057bfd2600df2b88211",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 11,
+      "group": "B0",
+      "ratio": 0.0,
+      "weight": 0.0,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 0
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B0_s22_b0_w0__best",
+      "run_id": "formal_deterministic_B0_s22_b0_w0",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_B0_s22_b0_w0__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "c30854535539c93762b8e1cdf0dac415d95fcd8ef3fc2c087f33800dd38eaf9b",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "d0e1ddfb1c3628fdf7190a81d6e7eaf5476b0bd32e5584ac06d9bcde8eb216e6",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 22,
+      "group": "B0",
+      "ratio": 0.0,
+      "weight": 0.0,
+      "actual_checkpoint_exposure": {
+        "step": 150,
+        "target_prediction_tokens": 4905600,
+        "replay_prediction_tokens": 0
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B0_s22_b0_w0__final",
+      "run_id": "formal_deterministic_B0_s22_b0_w0",
+      "kind": "final",
+      "package_name": "primary_final_weights",
+      "archive_member": "weights/formal_deterministic_B0_s22_b0_w0.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "8685d60332e130043b0fbfb7a0dc7fcc9de016d7305dc748a52b5daa9befa704",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "38e7bb8a15e0c8c8e1ff79ddd869daa8aff91b5891fcc8f2fa30c964fa9892eb",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 22,
+      "group": "B0",
+      "ratio": 0.0,
+      "weight": 0.0,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 0
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B0_s33_b0_w0__best",
+      "run_id": "formal_deterministic_B0_s33_b0_w0",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_B0_s33_b0_w0__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "e5e51c505025a75d9140d59655720fa428d4c3f05ab4e2070f21e4de0d0ff432",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "bf0b856c8db67428e05f5a28ad06d2b3c1f512e13ce3143526d91898c311fe55",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 33,
+      "group": "B0",
+      "ratio": 0.0,
+      "weight": 0.0,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 0
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B0_s33_b0_w0__final",
+      "run_id": "formal_deterministic_B0_s33_b0_w0",
+      "kind": "final",
+      "package_name": "primary_final_weights",
+      "archive_member": "weights/formal_deterministic_B0_s33_b0_w0.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "14e6c9e74539b153f9eea9d863aacb2fe5d72a9c947a1b4208a7af28dfd3c1fe",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "e65b6217163b74c5235f1625dbade3c1197c7d10609fdb723b7fc5bdf84a2e2b",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 33,
+      "group": "B0",
+      "ratio": 0.0,
+      "weight": 0.0,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 0
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B1_s11_b0p05_w0p05__best",
+      "run_id": "formal_deterministic_B1_s11_b0p05_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_B1_s11_b0p05_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "e3601f5fe53a7b394221a75ff95905af54863311db284b47bc9782d1759ffc42",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "b0ba2de57a7d69bc766d3d29524ae038898d6bd20bb5a6c0cd030ecd861d4c69",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 11,
+      "group": "B1",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 163520
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B1_s11_b0p05_w0p05__final",
+      "run_id": "formal_deterministic_B1_s11_b0p05_w0p05",
+      "kind": "final",
+      "package_name": "primary_final_weights",
+      "archive_member": "weights/formal_deterministic_B1_s11_b0p05_w0p05.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "8407be4383a9f06dc0599b1007e46f141a76a8fe91e56680ef9e8ffdb9459562",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "e995cbdfccbb4c6027d08838ca11c60954c53fee44877c6ff9be636d21207d3b",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 11,
+      "group": "B1",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 500000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B1_s22_b0p05_w0p05__best",
+      "run_id": "formal_deterministic_B1_s22_b0p05_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_B1_s22_b0p05_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "893143d675bdd441e7ceb726ba854f01981b0c7899e3e7485a33ab65fd406ac4",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "a8ea02a022d70bdd602d5f2f97d65b5a2740a934e5a4e9ad0273ee361e70f5a0",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 22,
+      "group": "B1",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 163520
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B1_s22_b0p05_w0p05__final",
+      "run_id": "formal_deterministic_B1_s22_b0p05_w0p05",
+      "kind": "final",
+      "package_name": "primary_final_weights",
+      "archive_member": "weights/formal_deterministic_B1_s22_b0p05_w0p05.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "7e77fde98397870ccaa19f0622462efe3ce5f1042e665bb8d4f863e985557a3e",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "4bc419e4459edce79a3fdfdb3f6edfb406883f7f4f3314273595ca1474ad22c3",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 22,
+      "group": "B1",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 500000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B1_s33_b0p05_w0p05__best",
+      "run_id": "formal_deterministic_B1_s33_b0p05_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_B1_s33_b0p05_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "0946d5552e754c290a51015da9110e522f9fc7160e1d55d6e9f071bdff4eeb56",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "eedc64c90eb671808f3e2f6c12d2698eef7eda7276292d80317cfbe59f217a55",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 33,
+      "group": "B1",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 163520
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B1_s33_b0p05_w0p05__final",
+      "run_id": "formal_deterministic_B1_s33_b0p05_w0p05",
+      "kind": "final",
+      "package_name": "primary_final_weights",
+      "archive_member": "weights/formal_deterministic_B1_s33_b0p05_w0p05.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "cd32820679f719cfe2780671c0b0496d5b071c66eb0600b184ce9c8537acce9b",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "b7e86ed3988cdb8d2863e0fcf27f0c1f494d2010297ad43ca40d7f4ab2af8833",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 33,
+      "group": "B1",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 500000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B2_s11_b0p05_w0p05__best",
+      "run_id": "formal_deterministic_B2_s11_b0p05_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_B2_s11_b0p05_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "c569a1280b199890cea93c89170545f21c860962e40338ff432e53aeb9beeee3",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "9cf019e4083e97690293143946ced29318d07b3fbe81429a4538517a872523bb",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 11,
+      "group": "B2",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 50,
+        "target_prediction_tokens": 1635200,
+        "replay_prediction_tokens": 81760
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B2_s11_b0p05_w0p05__final",
+      "run_id": "formal_deterministic_B2_s11_b0p05_w0p05",
+      "kind": "final",
+      "package_name": "primary_final_weights",
+      "archive_member": "weights/formal_deterministic_B2_s11_b0p05_w0p05.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "8b5c3a4a7b367d80e1fadbc2a74953fddb8d80d90626092cb42d2b7d2d63ae95",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "d4b2dbb801d7eea83e22c6d5fc2f43bdaee6c7c2dd792c664e0378e1f673fc84",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 11,
+      "group": "B2",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 500000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B2_s22_b0p05_w0p05__best",
+      "run_id": "formal_deterministic_B2_s22_b0p05_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_B2_s22_b0p05_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "f6e528a2a9267ed7999927d56a0c0cf442484bacfd05d91c770dbc1cc609c6d1",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "95cf3c1c52e89e42dfec46fc256be63fcd54069a34a093b56518dc2a568c4c43",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 22,
+      "group": "B2",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 163520
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B2_s22_b0p05_w0p05__final",
+      "run_id": "formal_deterministic_B2_s22_b0p05_w0p05",
+      "kind": "final",
+      "package_name": "primary_final_weights",
+      "archive_member": "weights/formal_deterministic_B2_s22_b0p05_w0p05.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "d15fefdd7af1f66331676cfe6934cbb193b7e71a60f972ad8db5897e1f32cf50",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "7ea8dde63bee3a819c2edbab267a8421bf9764be54a371dddfed82e1f13ccd4d",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 22,
+      "group": "B2",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 500000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B2_s33_b0p05_w0p05__best",
+      "run_id": "formal_deterministic_B2_s33_b0p05_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_B2_s33_b0p05_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "7e887bb9e570c05c0ebec73e4e4f94588ce8eeb6ec7bc095e8b4e7ba9a2b283a",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "844919c01ac26b4d046bc361ebba6e32887cde1a156a31ff0ca004a58ffe2731",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 33,
+      "group": "B2",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 163520
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B2_s33_b0p05_w0p05__final",
+      "run_id": "formal_deterministic_B2_s33_b0p05_w0p05",
+      "kind": "final",
+      "package_name": "primary_final_weights",
+      "archive_member": "weights/formal_deterministic_B2_s33_b0p05_w0p05.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "92a281fa34d0fa8da408328b6d64c855aaf495d5ca83a78d45499c406d44b98c",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "b9cac2bfefbd6c9283cf86780505bee88ef9fc8ee9a898c87e5cad858cbdcfa9",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 33,
+      "group": "B2",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 500000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B3_s11_b0p05_w0p05__best",
+      "run_id": "formal_deterministic_B3_s11_b0p05_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_B3_s11_b0p05_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "3951698a46388736c8014d139182be5c7f2c35211a09da04c9e320cc4bac1d87",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "0bcee572f70e3321af91edba123872d68c09cbd20ccfcc8779ea4750a16b3d2b",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 11,
+      "group": "B3",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 163520
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B3_s11_b0p05_w0p05__final",
+      "run_id": "formal_deterministic_B3_s11_b0p05_w0p05",
+      "kind": "final",
+      "package_name": "primary_final_weights",
+      "archive_member": "weights/formal_deterministic_B3_s11_b0p05_w0p05.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "56305f83b6cb56e41b186c8825de242ccb8f7ffc4b9870d12f4e60892bdef734",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "94193aaf59f5be6815281f5bc9d783f489cc9205d5751c0056610d583a094465",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 11,
+      "group": "B3",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 500000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B3_s22_b0p05_w0p05__best",
+      "run_id": "formal_deterministic_B3_s22_b0p05_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_B3_s22_b0p05_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "fff9e9bc729ff411384bc774403489893fd928e0eb61d6b726613f0c7fbe0055",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "c5d8492cae2cfeb735fe4a9ed849d9d067a3058e010d06a3073deefbfff7cffd",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 22,
+      "group": "B3",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 163520
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B3_s22_b0p05_w0p05__final",
+      "run_id": "formal_deterministic_B3_s22_b0p05_w0p05",
+      "kind": "final",
+      "package_name": "primary_final_weights",
+      "archive_member": "weights/formal_deterministic_B3_s22_b0p05_w0p05.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "9a07dbbe9cf8b8589608344163c6ef81bb64c761d72ea82e64eda859cdf6716f",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "701e6429bc0b934e6d376e390231be7a336807140ba8a27bd6f1360f64b9cb98",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 22,
+      "group": "B3",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 500000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B3_s33_b0p05_w0p05__best",
+      "run_id": "formal_deterministic_B3_s33_b0p05_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_B3_s33_b0p05_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "253708f3c29281819c13529e35bed5a519894c1819aaab400636b909bb32b856",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "6734907b74683fc9ad64d929f49a70b6facf25c8406f29dc7db054a1d92b030a",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 33,
+      "group": "B3",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 163520
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B3_s33_b0p05_w0p05__final",
+      "run_id": "formal_deterministic_B3_s33_b0p05_w0p05",
+      "kind": "final",
+      "package_name": "primary_final_weights",
+      "archive_member": "weights/formal_deterministic_B3_s33_b0p05_w0p05.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "2723dfe924379cc55238233484ec89aeb2e319c83f147647a0e1c645130e8a0a",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "71400a897d53e09d52e7b936fb3119c451e6107a572d2e66b027764d217a80a5",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 33,
+      "group": "B3",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 500000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B4_s11_b0p01_w0p05__best",
+      "run_id": "formal_deterministic_B4_s11_b0p01_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_B4_s11_b0p01_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "c315d6a24ed49b640fd97da5a92f94fd67865a92478c414ba6f3b1dfd3e47234",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "d540551cddcec62621edb7d8019af50ae02905e4dd28bbc063e772819a8cf4a6",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 11,
+      "group": "B4",
+      "ratio": 0.01,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 32704
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B4_s11_b0p01_w0p05__final",
+      "run_id": "formal_deterministic_B4_s11_b0p01_w0p05",
+      "kind": "final",
+      "package_name": "budget_final_weights",
+      "archive_member": "weights/formal_deterministic_B4_s11_b0p01_w0p05__final.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "854f62218ea5f562309ccbba3c7a3beb0a6a7b6fa21fdc289c0e36c24d2ed289",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "7054d795aff92eff7ba74f64f000f20146045a54da80b5468f702c5bc0f44762",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 11,
+      "group": "B4",
+      "ratio": 0.01,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 100000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B4_s11_b0p05_w0p05__best",
+      "run_id": "formal_deterministic_B4_s11_b0p05_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_B4_s11_b0p05_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "cb76a09bf26e0242c04ec7f066b27c82a94567166988842fac3d661b5131b09e",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "db7f99401668aa8de3ac01c54eb1f1958fa8fe7fe632d7d4e52a434528318839",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 11,
+      "group": "B4",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 163520
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B4_s11_b0p05_w0p05__final",
+      "run_id": "formal_deterministic_B4_s11_b0p05_w0p05",
+      "kind": "final",
+      "package_name": "primary_final_weights",
+      "archive_member": "weights/formal_deterministic_B4_s11_b0p05_w0p05.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "63069435cb5ea77931a58d7b00b573bcc4b517fdea283f7b551345997508c28c",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "19bf6f08e0c34d3334973a17142c7801f1be89f8fb20e49fc37f5b194303d014",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 11,
+      "group": "B4",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 500000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B4_s11_b0p1_w0p05__best",
+      "run_id": "formal_deterministic_B4_s11_b0p1_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_B4_s11_b0p1_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "dce3759a2e19fa5d7b2b5ce610963b73b6ba12371ab87d2f9d3217d73deef051",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "7fcfa60ead37919ed3d844c88431eb9831b62d32ae40817537b86d846cdf89dc",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 11,
+      "group": "B4",
+      "ratio": 0.1,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 327040
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B4_s11_b0p1_w0p05__final",
+      "run_id": "formal_deterministic_B4_s11_b0p1_w0p05",
+      "kind": "final",
+      "package_name": "budget_final_weights",
+      "archive_member": "weights/formal_deterministic_B4_s11_b0p1_w0p05__final.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "cf7213ebc5e900b8c9e9401be4ceb4ad76056976c9b49b8bd4ad64aa668d5fe6",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "891923890176ff9e752b414629aa56f333dd02db989255519e900451d787ca5a",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 11,
+      "group": "B4",
+      "ratio": 0.1,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 1000000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B4_s22_b0p01_w0p05__best",
+      "run_id": "formal_deterministic_B4_s22_b0p01_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_B4_s22_b0p01_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "f79a8104980a40442fca754a8963acdbcf4b0ebf00629734efae22b3c343cf27",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "5bd9ab0b61e3965b085f811bc4bd72556fc51bdbc0bdd40f31fe916346c182a4",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 22,
+      "group": "B4",
+      "ratio": 0.01,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 32704
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B4_s22_b0p01_w0p05__final",
+      "run_id": "formal_deterministic_B4_s22_b0p01_w0p05",
+      "kind": "final",
+      "package_name": "budget_final_weights",
+      "archive_member": "weights/formal_deterministic_B4_s22_b0p01_w0p05__final.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "dfcfa250f86d4a0221f0a951f410a50316eac31e6e351888529378014da94a1e",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "fe7d3d849f27040fbe35dd02e6d66ec9ff65037853e0e6e06369a3989b7f5e0d",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 22,
+      "group": "B4",
+      "ratio": 0.01,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 100000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B4_s22_b0p05_w0p05__best",
+      "run_id": "formal_deterministic_B4_s22_b0p05_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_B4_s22_b0p05_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "f869252ca86d21eec3755d9a0f16b65111340d92bedd895f8d57ae64be8dcc65",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "c52b7537f32d906221b4d2f59ffdf5a9afb2aed71d2384f8fefc3d6c3332ad3c",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 22,
+      "group": "B4",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 163520
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B4_s22_b0p05_w0p05__final",
+      "run_id": "formal_deterministic_B4_s22_b0p05_w0p05",
+      "kind": "final",
+      "package_name": "primary_final_weights",
+      "archive_member": "weights/formal_deterministic_B4_s22_b0p05_w0p05.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "ea070c9c195a7a92fbd72da3fd9f6248eb451a2b99fa5155fb747313428f2f01",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "59dd70a377bb40346ba76fc3a410f2d7268d1729d2e658d960ecbd75c202211c",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 22,
+      "group": "B4",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 500000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B4_s22_b0p1_w0p05__best",
+      "run_id": "formal_deterministic_B4_s22_b0p1_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_B4_s22_b0p1_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "d67e17fb7adfce290bafbf9348c12537485a6f09ce32fd09e5bf96123a4870b8",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "1dd9255d748a7448083a3c49d674cefa7dd44e68cd3f0334ede367f493520cee",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 22,
+      "group": "B4",
+      "ratio": 0.1,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 327040
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B4_s22_b0p1_w0p05__final",
+      "run_id": "formal_deterministic_B4_s22_b0p1_w0p05",
+      "kind": "final",
+      "package_name": "budget_final_weights",
+      "archive_member": "weights/formal_deterministic_B4_s22_b0p1_w0p05__final.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "9610f5c73c746da1b5f5f6e9e88373c4c62f8bf6e44e74e4fab46920958f5400",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "2fd54deb41a836f3597c1a23fd05bd6ff4e9ce3dde0758b3ed8bff0ed40715ed",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 22,
+      "group": "B4",
+      "ratio": 0.1,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 1000000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B4_s33_b0p01_w0p05__best",
+      "run_id": "formal_deterministic_B4_s33_b0p01_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_B4_s33_b0p01_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "b8ca1ecef4ba49eab99d9b714d916fb555e8260c8c522792a5f7b0d6c209752f",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "1ba3925da672278f517f3ff5ec495e7346c439ae1a95cd18ed493f42c1568ac2",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 33,
+      "group": "B4",
+      "ratio": 0.01,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 32704
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B4_s33_b0p01_w0p05__final",
+      "run_id": "formal_deterministic_B4_s33_b0p01_w0p05",
+      "kind": "final",
+      "package_name": "budget_final_weights",
+      "archive_member": "weights/formal_deterministic_B4_s33_b0p01_w0p05__final.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "6e42093ec36b354479e973ee1108780c666e8a884398f8d24532934e17cb1a7d",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "6e1e0ca52456b2e9549a4c2a3714f00f28a8612a8f22d654d02aaf613695f353",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 33,
+      "group": "B4",
+      "ratio": 0.01,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 100000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B4_s33_b0p05_w0p05__best",
+      "run_id": "formal_deterministic_B4_s33_b0p05_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_B4_s33_b0p05_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "45d2fc7aee28211d5cf1c3d121061abd4e6e388064b1d39041e1c8a2faa914a1",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "aca04864c5682c8bd4c3592dcf299caea309e826b6dc7ee4be83393bbfca0594",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 33,
+      "group": "B4",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 163520
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B4_s33_b0p05_w0p05__final",
+      "run_id": "formal_deterministic_B4_s33_b0p05_w0p05",
+      "kind": "final",
+      "package_name": "primary_final_weights",
+      "archive_member": "weights/formal_deterministic_B4_s33_b0p05_w0p05.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "9182dfb3ed8fc85238950459ee1b2300665964d207989faafc30b75240993042",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "75bb24fc30f01b7ffbae525a22a943efa2cc85c7c8a14f48aa24f97db2fb0e2f",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 33,
+      "group": "B4",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 500000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B4_s33_b0p1_w0p05__best",
+      "run_id": "formal_deterministic_B4_s33_b0p1_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_B4_s33_b0p1_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "c26eb868ee1c1a15854abd32ebfdfa3e07483750590f4b5226fa94d04ca05968",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "f4c95fdf25e57f05ae1c86e100b62ad403f708cb409971d3e48fd39453dfb17f",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 33,
+      "group": "B4",
+      "ratio": 0.1,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 327040
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_B4_s33_b0p1_w0p05__final",
+      "run_id": "formal_deterministic_B4_s33_b0p1_w0p05",
+      "kind": "final",
+      "package_name": "budget_final_weights",
+      "archive_member": "weights/formal_deterministic_B4_s33_b0p1_w0p05__final.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "9bf66aeff7caca8f03702fc34d64fb0c38828e1f07c00754eb5fa03fa3eb7fc6",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "39a7f2d127c6e984d2366a52b0eeb5e733c1343f18cad2e8cb7805c792148413",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 33,
+      "group": "B4",
+      "ratio": 0.1,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 1000000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_C_s11_b0p05_w0p05__best",
+      "run_id": "formal_deterministic_C_s11_b0p05_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_C_s11_b0p05_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "d2c3ae01273c0daafe861729d892b809a07acf94132dc06d5f21b6d541dcc7c0",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "801001892a5bc59dab97dcc70825c8d3d1b3d8c349d424f5501f320776ef91f3",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 11,
+      "group": "C",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 163520
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_C_s11_b0p05_w0p05__final",
+      "run_id": "formal_deterministic_C_s11_b0p05_w0p05",
+      "kind": "final",
+      "package_name": "primary_final_weights",
+      "archive_member": "weights/formal_deterministic_C_s11_b0p05_w0p05.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "72b92f49a62dcfd8849fa319a17c838b7fc43008f109f2863f2854d49f8d012a",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "77e78e3601d5b46550fee67aa383c26fa15fa812a714e53f215822e815c0efe2",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 11,
+      "group": "C",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 500000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_C_s22_b0p05_w0p05__best",
+      "run_id": "formal_deterministic_C_s22_b0p05_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_C_s22_b0p05_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "e9cf8afa5fc82ec107113048ec57d45476be8d68abf4a3479ba87bd040433191",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "b8a6de0af4960300f9b24b562390e57ecbcb3e911c2232e01bac16bfee8b1758",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 22,
+      "group": "C",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 163520
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_C_s22_b0p05_w0p05__final",
+      "run_id": "formal_deterministic_C_s22_b0p05_w0p05",
+      "kind": "final",
+      "package_name": "primary_final_weights",
+      "archive_member": "weights/formal_deterministic_C_s22_b0p05_w0p05.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "5332d5df291b720ab52ff95b50683932c8153d49637694efc698e6193efb3c3f",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "b090b878d7c5a7f7d1a1f1615878835d9c0641db005582d61ffc8c66f5492e44",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 22,
+      "group": "C",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 500000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_C_s33_b0p05_w0p05__best",
+      "run_id": "formal_deterministic_C_s33_b0p05_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_C_s33_b0p05_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "89b52b57b3e63e1a968c39c9732d0ef93ea24ea824815e2e7fb87195ac7b780e",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "d09d5b46f3d41c6f698380b6003186f0d95febf369cd830ba05dc3171d0645cb",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 33,
+      "group": "C",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 163520
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_C_s33_b0p05_w0p05__final",
+      "run_id": "formal_deterministic_C_s33_b0p05_w0p05",
+      "kind": "final",
+      "package_name": "primary_final_weights",
+      "archive_member": "weights/formal_deterministic_C_s33_b0p05_w0p05.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "a9422a90aaa786f4e176e1f24dbdf6b1d4cb7bdabd92282bfa10fea0e8b28a11",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "2a071ce912dfd153c69a044a2b65e0996a9338a61d2e576394552468f6442b6c",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 33,
+      "group": "C",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 500000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_D_s11_b0p05_w0p05__best",
+      "run_id": "formal_deterministic_D_s11_b0p05_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_B4_s11_b0p05_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "cb76a09bf26e0242c04ec7f066b27c82a94567166988842fac3d661b5131b09e",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "50bf7cfba968c280772301f7a2b6fc8184bfc961e97e200543c3402103b00e30",
+      "alias_of": "formal_deterministic_B4_s11_b0p05_w0p05__best",
+      "durable": true,
+      "training_seed": 11,
+      "group": "D",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 163520
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_D_s11_b0p05_w0p05__final",
+      "run_id": "formal_deterministic_D_s11_b0p05_w0p05",
+      "kind": "final",
+      "package_name": "primary_final_weights",
+      "archive_member": "weights/formal_deterministic_B4_s11_b0p05_w0p05.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "63069435cb5ea77931a58d7b00b573bcc4b517fdea283f7b551345997508c28c",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "f68f61a3e0f4793205d007ba5d1a2ed0ec813f20281c74d14aa4a0aabfb83351",
+      "alias_of": "formal_deterministic_B4_s11_b0p05_w0p05__final",
+      "durable": true,
+      "training_seed": 11,
+      "group": "D",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 500000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_D_s22_b0p05_w0p05__best",
+      "run_id": "formal_deterministic_D_s22_b0p05_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_B4_s22_b0p05_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "f869252ca86d21eec3755d9a0f16b65111340d92bedd895f8d57ae64be8dcc65",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "cf098bab0b1acf1674b6d5ce1b162f453b89adf9e92896e0882a2be0c67d3eb5",
+      "alias_of": "formal_deterministic_B4_s22_b0p05_w0p05__best",
+      "durable": true,
+      "training_seed": 22,
+      "group": "D",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 163520
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_D_s22_b0p05_w0p05__final",
+      "run_id": "formal_deterministic_D_s22_b0p05_w0p05",
+      "kind": "final",
+      "package_name": "primary_final_weights",
+      "archive_member": "weights/formal_deterministic_B4_s22_b0p05_w0p05.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "ea070c9c195a7a92fbd72da3fd9f6248eb451a2b99fa5155fb747313428f2f01",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "c0a391795e5e107267b22c951d4e7ac5fc1a49a63d14c85d018bc2efd118f7cd",
+      "alias_of": "formal_deterministic_B4_s22_b0p05_w0p05__final",
+      "durable": true,
+      "training_seed": 22,
+      "group": "D",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 500000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_D_s33_b0p05_w0p05__best",
+      "run_id": "formal_deterministic_D_s33_b0p05_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_B4_s33_b0p05_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "45d2fc7aee28211d5cf1c3d121061abd4e6e388064b1d39041e1c8a2faa914a1",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "0c189016f736e528c343ea1790e4764f49af730597606a5982072f4360847c06",
+      "alias_of": "formal_deterministic_B4_s33_b0p05_w0p05__best",
+      "durable": true,
+      "training_seed": 33,
+      "group": "D",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 163520
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_D_s33_b0p05_w0p05__final",
+      "run_id": "formal_deterministic_D_s33_b0p05_w0p05",
+      "kind": "final",
+      "package_name": "primary_final_weights",
+      "archive_member": "weights/formal_deterministic_B4_s33_b0p05_w0p05.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "9182dfb3ed8fc85238950459ee1b2300665964d207989faafc30b75240993042",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "6e8adaabc9c3c2d377cbfbe1e602031052c902957a177d472d0604140eb60a4e",
+      "alias_of": "formal_deterministic_B4_s33_b0p05_w0p05__final",
+      "durable": true,
+      "training_seed": 33,
+      "group": "D",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 500000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_M_s11_b0p01_w0p05__best",
+      "run_id": "formal_deterministic_M_s11_b0p01_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_M_s11_b0p01_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "10d17f9218864cd134193fae5c080e0b37beae22bdd313bbc04dcf36a5e232e1",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "62729e2fb73b8c69b094f9ff9ca972ed6a6ade8a5b78b9e26e354c56150f1016",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 11,
+      "group": "M",
+      "ratio": 0.01,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 32704
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_M_s11_b0p01_w0p05__final",
+      "run_id": "formal_deterministic_M_s11_b0p01_w0p05",
+      "kind": "final",
+      "package_name": "budget_final_weights",
+      "archive_member": "weights/formal_deterministic_M_s11_b0p01_w0p05__final.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "7127a7135fae1586f8da36f20ed06a9ecef79e22a39abab4b969e34178017667",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "53aa0f8a65d7929cecff96c89ae1665eaf289f53354c221945ce054ab370cd0e",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 11,
+      "group": "M",
+      "ratio": 0.01,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 100000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_M_s11_b0p05_w0p05__best",
+      "run_id": "formal_deterministic_M_s11_b0p05_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_M_s11_b0p05_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "d507f3a1c07e454c8c87b10a4f5723642c9dd21fdfa53ebb00e243291c588d0b",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "e8cdf5d2bb344c7b642a3bc789912fc98dadeb0b21b5fa903b5e9a2ad215a45d",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 11,
+      "group": "M",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 163520
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_M_s11_b0p05_w0p05__final",
+      "run_id": "formal_deterministic_M_s11_b0p05_w0p05",
+      "kind": "final",
+      "package_name": "primary_final_weights",
+      "archive_member": "weights/formal_deterministic_M_s11_b0p05_w0p05.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "111dbd84dc16951f1e80ee2f9c4e03c3a7eb89659157a6a8e1cba2aacab89231",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "fbe0925a4716a8723b6acae28c584a2757a7dcbb11c7cef18de006f87621326c",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 11,
+      "group": "M",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 500000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_M_s11_b0p1_w0p05__best",
+      "run_id": "formal_deterministic_M_s11_b0p1_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_M_s11_b0p1_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "8a9583e237c1eb06f32401e96674f9d1547902bfb26af62a84594cae4b1679a8",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "f86169035aa5b0dfce12127a06de22dc50e0603ae854c744922e28470127a31a",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 11,
+      "group": "M",
+      "ratio": 0.1,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 327040
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_M_s11_b0p1_w0p05__final",
+      "run_id": "formal_deterministic_M_s11_b0p1_w0p05",
+      "kind": "final",
+      "package_name": "budget_final_weights",
+      "archive_member": "weights/formal_deterministic_M_s11_b0p1_w0p05__final.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "17008bf5e1d0057e299d3d771bfea51d67c4010abe099ca5c5e581a3eb774b7f",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "bb24a28a4f799f8e756d1677a643942fde6cbcba4fea56465d6b21c2c7db378c",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 11,
+      "group": "M",
+      "ratio": 0.1,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 1000000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_M_s22_b0p01_w0p05__best",
+      "run_id": "formal_deterministic_M_s22_b0p01_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_M_s22_b0p01_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "2e82a41b7ec60faf1f8e423d1b1dbfc0868aeeda2f9d7f4c1f25f45b7d35b295",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "b03ac164bb1dbc770aeae8957520bac31084a8a36dc86086aa3c68192a62eeb2",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 22,
+      "group": "M",
+      "ratio": 0.01,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 32704
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_M_s22_b0p01_w0p05__final",
+      "run_id": "formal_deterministic_M_s22_b0p01_w0p05",
+      "kind": "final",
+      "package_name": "budget_final_weights",
+      "archive_member": "weights/formal_deterministic_M_s22_b0p01_w0p05__final.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "5dcca1603976e17fa3d9e530544087952d93f321f3b202886bb9d942f85edabf",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "5b439fec1ef50c5dac3558bfd410b04442e96afcf525f7fd7aa0fb7fae79c773",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 22,
+      "group": "M",
+      "ratio": 0.01,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 100000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_M_s22_b0p05_w0p05__best",
+      "run_id": "formal_deterministic_M_s22_b0p05_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_M_s22_b0p05_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "c5b7f801ca3e6662fca6f3cee734e941e216a595a982a681ee32a1f8cb512f45",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "a02169078dcae787c08cdbe70659b37317f2bbb4aa3c075eb45605f9df721055",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 22,
+      "group": "M",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 163520
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_M_s22_b0p05_w0p05__final",
+      "run_id": "formal_deterministic_M_s22_b0p05_w0p05",
+      "kind": "final",
+      "package_name": "primary_final_weights",
+      "archive_member": "weights/formal_deterministic_M_s22_b0p05_w0p05.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "5478a2fa77ee3db6ff4f78bb0c0f93dae22786d51e8def1df6a82e926d93f5e9",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "9a7f524d6dbf98a2494e14bb2d181aefe618a797ae2eab41fba79b7e669ea6b8",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 22,
+      "group": "M",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 500000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_M_s22_b0p1_w0p05__best",
+      "run_id": "formal_deterministic_M_s22_b0p1_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_M_s22_b0p1_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "068f7259f7fe652a0032a970874dcd70c377aab8420cb1bbd640a012c7204ea1",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "8a7be4eab454a1d7f988f77145603b788cfb5e7bec5fee9e9b7d1cdcc94d5ea9",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 22,
+      "group": "M",
+      "ratio": 0.1,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 150,
+        "target_prediction_tokens": 4905600,
+        "replay_prediction_tokens": 490560
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_M_s22_b0p1_w0p05__final",
+      "run_id": "formal_deterministic_M_s22_b0p1_w0p05",
+      "kind": "final",
+      "package_name": "budget_final_weights",
+      "archive_member": "weights/formal_deterministic_M_s22_b0p1_w0p05__final.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "1dba866297231ec8882f53e53ff72aaf3ddc661d673f61f247bafee78e5f72ab",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "31a960adb35e404a912ab918ae9c13ecc7c0c3806ef1e13be9f612d339087f2a",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 22,
+      "group": "M",
+      "ratio": 0.1,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 1000000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_M_s33_b0p01_w0p05__best",
+      "run_id": "formal_deterministic_M_s33_b0p01_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_M_s33_b0p01_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "86c316eeff50a60c2bd6fd44d9551b51b266f79363c0bb554511f7fcab9e11ab",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "2d9e40b03d67e98dd0a59474c40419ffd2d644f0a1720321dcd87e8a767268c0",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 33,
+      "group": "M",
+      "ratio": 0.01,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 32704
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_M_s33_b0p01_w0p05__final",
+      "run_id": "formal_deterministic_M_s33_b0p01_w0p05",
+      "kind": "final",
+      "package_name": "budget_final_weights",
+      "archive_member": "weights/formal_deterministic_M_s33_b0p01_w0p05__final.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "623703feb8e29206ee9e0e09dd25e3141b512f0affdf301c33eb3674b00845d2",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "a38b9334504f2808f3fe162b8a9186e561d94e8ef02e5897d0996277f56d0a4c",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 33,
+      "group": "M",
+      "ratio": 0.01,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 100000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_M_s33_b0p05_w0p05__best",
+      "run_id": "formal_deterministic_M_s33_b0p05_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_M_s33_b0p05_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "af390395b21f336e964b1f27f3ee1af2a5d7003928d7f14efe316ae9870bf63a",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "1d9cd41b065985a0c846915d99db81975f412397b38f2e7280590dff615fd03e",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 33,
+      "group": "M",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 163520
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_M_s33_b0p05_w0p05__final",
+      "run_id": "formal_deterministic_M_s33_b0p05_w0p05",
+      "kind": "final",
+      "package_name": "primary_final_weights",
+      "archive_member": "weights/formal_deterministic_M_s33_b0p05_w0p05.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "7a5accdcc7d4438b3d74dd54a1bdc352dd1cce7bf5e9f12530762076515e501c",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "fc7ee69ae608599fe0eae7776ec27c4e9f60f8b14fb00ccae67301b16e74fce1",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 33,
+      "group": "M",
+      "ratio": 0.05,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 500000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_M_s33_b0p1_w0p05__best",
+      "run_id": "formal_deterministic_M_s33_b0p1_w0p05",
+      "kind": "best",
+      "package_name": "primary_best_weights",
+      "archive_member": "weights/formal_deterministic_M_s33_b0p1_w0p05__best.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "ac348cf678aec1a4a3ec6e4f5fdbc8ba8613ae33ec33230c195627b68077953d",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "741d3572b70acd51caf516b0d744b45182ff61bd2aa3102fc36117bf8369b9e3",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 33,
+      "group": "M",
+      "ratio": 0.1,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 100,
+        "target_prediction_tokens": 3270400,
+        "replay_prediction_tokens": 327040
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    },
+    {
+      "endpoint_id": "formal_deterministic_M_s33_b0p1_w0p05__final",
+      "run_id": "formal_deterministic_M_s33_b0p1_w0p05",
+      "kind": "final",
+      "package_name": "budget_final_weights",
+      "archive_member": "weights/formal_deterministic_M_s33_b0p1_w0p05__final.xor.zip",
+      "model_fingerprint": {
+        "sha256_model_state": "207efb682501c2076cffc54fab5d41ccaae07d94406c6ae8c709261361d9bd0d",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "1db1eb7f0e5d34df4740bc0703ba966998c09150977f8eeed8a5306033673860",
+      "alias_of": null,
+      "durable": true,
+      "training_seed": 33,
+      "group": "M",
+      "ratio": 0.1,
+      "weight": 0.05,
+      "actual_checkpoint_exposure": {
+        "step": 306,
+        "target_prediction_tokens": 10000000,
+        "replay_prediction_tokens": 1000000
+      },
+      "full_training_target_prediction_tokens": 10000000,
+      "source_checkpoint_retained": true
+    }
+  ],
+  "remaining45_export_costs": {
+    "encode_process_cpu_seconds": 3113.185750675,
+    "encode_wall_seconds_sum": 3095.538397435099,
+    "batch_wall_seconds": 4467.701417889446,
+    "batch_process_cpu_seconds": 4507.651304359,
+    "best_incremental_wall_after_budget_seconds": 3229.8410105854273,
+    "cumulative_package_wall_seconds_not_additive": true
+  },
+  "gpu_used": false,
+  "test_scores_read_for_export": false,
+  "durable_best_logical_endpoints": 36,
+  "previous_inventory_sha256": "421eaeea55f82b7e0f5a37bc4c421a9e1c61fcd115204ecf604f13c5d107b812"
+}

@@ -49,6 +49,11 @@ if first_read.exists():
                  '该授权只覆盖主 NLL，其他阶段和行为分数须各自满足解封条件。')
 else:
     lines.append('主 NLL 已排队，只有全部 67 项完成并通过完整性门禁后才读取；尚无首次读取记录。')
+supplement_A_read = protocol.get('first_supplement_A_nll_read')
+if supplement_A_read and (ROOT / supplement_A_read).exists():
+    receipt = json.loads((ROOT / supplement_A_read).read_text())
+    lines.append(f"补充 A NLL 首次允许语义读取时间：{receipt['semantic_access_enabled_at_utc']}；"
+                 '完整126条件及固定验证选择的18条件已解封。B/C和行为分数仍须分别满足完整性与授权条件。')
 lines += ['', '## 当前数据与选参记录', '']
 for rel in ['artifacts/data/VERSION', 'artifacts/evaluation_v3/VERSION']:
     path = ROOT/rel

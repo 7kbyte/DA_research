@@ -1,0 +1,23 @@
+{
+  "authorized_at_utc": "2026-11-06T09:49:25.249875+00:00",
+  "pid": 3117429,
+  "argv": [
+    "python",
+    "scripts/grow_reserved_file.py",
+    "--plan",
+    "docs/primary_best_storage_growth_plan.json",
+    "--expected-plan-sha256",
+    "087fc67fd932f87c6a17cb394a463625ae01dac07d3e8fa351125938e9b71f83",
+    "--progress",
+    "logs/primary_best_storage_growth.progress.json",
+    "--receipt",
+    "docs/primary_best_storage_growth_receipt.json"
+  ],
+  "plan_sha256": "087fc67fd932f87c6a17cb394a463625ae01dac07d3e8fa351125938e9b71f83",
+  "source_sha256": "0ff798eec88d0bd19b86b02ec61d481c846cca1438687ea98e8ce70e9dca4588",
+  "root_reviewed_source_and_29_tests": true,
+  "scope": "append zeros only to existing best reservation; retain 2GiB free floor; stop by 2026-11-07 02:00 UTC",
+  "publication_authorized_by_this_receipt": false,
+  "report_reserves_untouched": true,
+  "gpu_used": false
+}

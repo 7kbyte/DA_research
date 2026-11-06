@@ -9,10 +9,11 @@
 ## 导航
 
 - [研究报告工作稿](研究报告.md)与[PDF预览](reports/研究报告_工作稿.pdf)
+- [主实验独立NLL结果](docs/主NLL测试结果讨论.md)与[补充A完整权重敏感性结果](docs/补充A_NLL完整结果.md)
 - [文献调研](literature/文献调研.md)
 - [环境重建与移交](docs/环境重建与移交.md)
 - [已校验的共享盘快照](docs/durable_snapshot_latest.json)
-- [主24条件最终模型的共享盘无损权重包验收](docs/primary_weights_durable_publication.json)与[恢复说明](docs/无损权重交付格式.md)
+- 主36条件的final与best共72个逻辑端点均已持久保存：[best端点验收](docs/primary_best_weights_durable_publication.json)、[主比例24条件验收](docs/primary_weights_durable_publication.json)、[预算敏感性12条件验收](docs/budget_final_weights_durable_publication.json)及[恢复说明](docs/无损权重交付格式.md)
 - [研究路线与时间安排](docs/研究路线与时间安排.md)
 - [工程接口与实验约定](docs/ENGINEERING_CONTRACT.md)
 - `configs/`：冻结前pilot及正式实验配置。
