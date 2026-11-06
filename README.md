@@ -8,7 +8,10 @@
 
 ## 导航
 
+- [研究报告工作稿](研究报告.md)与[PDF预览](reports/研究报告_工作稿.pdf)
 - [文献调研](literature/文献调研.md)
+- [环境重建与移交](docs/环境重建与移交.md)
+- [已校验的共享盘快照](docs/durable_snapshot_latest.json)
 - [研究路线与时间安排](docs/研究路线与时间安排.md)
 - [工程接口与实验约定](docs/ENGINEERING_CONTRACT.md)
 - `configs/`：冻结前pilot及正式实验配置。
@@ -20,3 +23,15 @@
 ## 研究解释边界
 
 本项目测量特定文本分布的下一词预测损失与输出漂移。数学文本损失下降不等于数学推理能力提高；C4也不是Pythia的原始预训练语料。固定样本库大小、累计回放token和实际计算成本分别计量。pilot、正式对照、补充探索将独立标记。
+
+## 异地解包与路径重定位
+
+将代码、数据和统计归档解包到新的workspace，并按`artifacts/assets/model_provenance.json`或`extended_model_provenance.json`中固定revision与SHA，在新scratch的`models/<模型名>-final/`准备基础模型。配置中的两个旧workspace前缀及scratch路径由独立helper重定位：
+
+```bash
+python scripts/reproduce_experiments.py relocate --registry configs/formal_deterministic_registry.json --input-manifest artifacts/provenance/formal_deterministic_input_snapshot.json --new-workspace /your/research --new-scratch /your/scratch --namespace replica01
+```
+
+`relocate`先核对原配置、冻结core、目标/回放/验证/测试数据及模型SHA，再生成新namespace的配置、registry、queue与`reproduction_of`来源记录；原结果保持原位，路径调整不记作新科学设置。扩展实验额外重复传入其matched extended protocol作为`--input-manifest`；可用`--run-id`选择单项。复制时清除旧日期deadline，可用`--deadline`指定新的操作截止时间。输入目录中的symlink需在交付机器可解析，归档应携带实际数据字节。
+
+随后用`reproduce --registry <新registry路径> --gpus 0 --deadline <新的UTC截止时间>`复核输入并打印启动命令；添加`--execute`后以detached scheduler训练新运行。先按冻结环境文件准备依赖，运行时版本和实际精度仍由每项summary记录。该helper及测试仅准备和dry-run验证，未执行重训。
