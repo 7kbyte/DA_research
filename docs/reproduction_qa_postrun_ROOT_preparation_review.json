@@ -1,0 +1,42 @@
+{
+  "reviewed_at_utc": "2026-11-06T10:58:33.729081+00:00",
+  "status": "source_and_temporary_CPU_tests_reviewed_only",
+  "reviewer": "root",
+  "files": [
+    {
+      "path": "scripts/verify_reproduction_qa_postrun.py",
+      "sha256": "5417fc0747d94feae828e0e53133edf66745b2fb60885cc591f84f2feceea7e2"
+    },
+    {
+      "path": "tests/test_reproduction_qa_postrun.py",
+      "sha256": "c57137bec95fe499a187cc4cd63f8573d7bdc5869732ebb8ef841609cec0bbd8"
+    },
+    {
+      "path": "results/reproduction_qa/archive0732_seed11_2x2_v1/postrun_expected_final_best_v2.json",
+      "sha256": "93da7a152e4f88968a01a8a569b1d057511474e6ccf1f04a4c336dcaafe891ce"
+    },
+    {
+      "path": "docs/归档复现QA_final_best独立验收器.md",
+      "sha256": "a290ec64706b795e31766c5f9318bb528320262ec74e0448c25a3d6e3d60082c"
+    }
+  ],
+  "tests": {
+    "command": "CUDA_VISIBLE_DEVICES='' OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 pytest -q tests/test_reproduction_qa_postrun.py",
+    "passed": 24,
+    "reported_seconds": 2.1
+  },
+  "scope": [
+    "complete four-job and eight-endpoint structural gate before large reads",
+    "archived SHA-bound complete model fingerprint with exact exposure and strict policy",
+    "fresh entire serialized checkpoint SHA and five-stat before/after",
+    "final and best selection mapped to independent namespace",
+    "failure does not become passed and receipt cannot overwrite",
+    "parent CPU/wall and nested actual repeated read bytes separated"
+  ],
+  "actual_QA_training_executed": false,
+  "actual_new_QA_checkpoints_verified": false,
+  "root_GPU_execution_authorized": false,
+  "planning_CPU_postcheck_seconds": 300,
+  "planning_seconds_measured": false,
+  "later_start_requires_all_scientific_work_complete_and_budget_gate": true
+}

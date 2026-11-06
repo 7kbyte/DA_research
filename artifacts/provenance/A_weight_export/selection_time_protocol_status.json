@@ -1,0 +1,48 @@
+{
+  "updated_at_utc": "2026-11-06T07:20:44.416250+00:00",
+  "stage": "主36训练与独立NLL测试完成；补充A/B及长程63按冻结方案继续",
+  "active_registry": "configs/formal_deterministic_registry.json",
+  "active_lr_selection": "results/pilot_lr_selection_deterministic_v3.json",
+  "active_lambda_selection": "results/pilot_lambda_selection_deterministic_v3.json",
+  "provisional_registries": [
+    "configs/formal_registry.json"
+  ],
+  "provisional_schedulers": [
+    "formal_job_state",
+    "lambda_job_state",
+    "lambda_v3_job_state",
+    "v3_lr_eval_job_state"
+  ],
+  "note": "旧非确定性pilot/formal仅供诊断；主strict36为正式主结果。补充训练独立phase，截止00:00 UTC；主active_registry保留供分析与alias验证。",
+  "test_scores_seen": true,
+  "scheduler_pid": 2964213,
+  "scheduler_state": "logs/formal_deterministic_job_state.json",
+  "qualification": "results/formal_deterministic_qualification.json",
+  "active_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "primary_status": "completed_and_audited",
+  "primary_audit": "results/formal_run_audit.json",
+  "supplemental_scheduler_pid": 2988506,
+  "supplemental_scheduler_state": "logs/supplemental_job_state.json",
+  "supplemental_master_queue": "configs/supplemental_v1_queue.json",
+  "supplemental_phase_index": "configs/supplemental_v1_registry_index.json",
+  "extended_cpu_driver_pid": 2984415,
+  "extended_calibration_progress": "logs/extended_calibration_master_progress.json",
+  "extended_calibration_status": "completed_all_models",
+  "extended_formal_freeze": "results/extended_formal_freeze.json",
+  "extended_formal_registries": [
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal_active_registry.json",
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal_active_registry.json",
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_h25m_formal_active_registry.json"
+  ],
+  "extended_2p8b_horizon_selection": "docs/extended_2p8b_horizon_selection.json",
+  "primary_nll_execution_authority": "docs/primary_nll_test_execution_authority.json",
+  "primary_nll_enqueue_confirmation": "docs/primary_nll_enqueue_confirmation.json",
+  "primary_nll_read_gate": "all67 complete, source and attestation integrity passed; first read journal required",
+  "test_scores_seen_scope": "primary NLL final/best only; other phases and behavior remain sealed",
+  "first_primary_test_read": "docs/primary_nll_first_test_read.json"
+}

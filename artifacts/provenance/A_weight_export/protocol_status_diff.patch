@@ -1,0 +1,23 @@
+--- /data/202610/7kb/research_delivery/research_snapshot_20261106_0838.tar.gz::docs/protocol_status.json
++++ current/docs/protocol_status.json
+@@ -1,6 +1,6 @@
+ {
+-  "updated_at_utc": "2026-11-06T07:20:44.416250+00:00",
+-  "stage": "主36训练与独立NLL测试完成；补充A/B及长程63按冻结方案继续",
++  "updated_at_utc": "2026-11-06T09:50:36.525903+00:00",
++  "stage": "主36与补充A126独立NLL测试完成并各自通过解封；B60与长程63继续冻结方案",
+   "active_registry": "configs/formal_deterministic_registry.json",
+   "active_lr_selection": "results/pilot_lr_selection_deterministic_v3.json",
+   "active_lambda_selection": "results/pilot_lambda_selection_deterministic_v3.json",
+@@ -43,6 +43,9 @@
+   "primary_nll_execution_authority": "docs/primary_nll_test_execution_authority.json",
+   "primary_nll_enqueue_confirmation": "docs/primary_nll_enqueue_confirmation.json",
+   "primary_nll_read_gate": "all67 complete, source and attestation integrity passed; first read journal required",
+-  "test_scores_seen_scope": "primary NLL final/best only; other phases and behavior remain sealed",
+-  "first_primary_test_read": "docs/primary_nll_first_test_read.json"
++  "test_scores_seen_scope": "primary NLL final/best and supplement A full126 final plus fixed validation-selected18 only; B/C/behavior remain sealed",
++  "first_primary_test_read": "docs/primary_nll_first_test_read.json",
++  "supplement_A_nll_analysis_complete": "results/supplemental_analysis_v2/supplement_A_nll/COMPLETE.json",
++  "supplement_A_validation_selection": "results/supplement_A_validation/validation_lambda_selection.json",
++  "first_supplement_A_nll_read": "artifacts/provenance/supplemental_score_first_reads_v1/supplement_A_nll_88dc927c9b4909cca66901608216290e1e435022e4ff925c00875f5099077a90.json"
+ }
