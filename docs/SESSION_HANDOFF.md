@@ -319,3 +319,13 @@ QApackaginggapconfirmed: scripts/package_research.py doesNOTinclude externalQA s
 21:05 UTC operational note: master600complete4running3pending; formal260/267. Firstlast1B B4s33 nowrunning,3C2.8stillactive. No failures. OriginalCfinal2.8draft8/15 at20:52,1B18/24; noC1/2 wholepackage orREADY yet. Allagentsidle; noactualCbest samples/nativepub/behaviorreading. Lastconservativeheadroom67.75GiB20:42; no cachehintperformed. FutureifmemorygatefailsafteraCnativepub, mayuseits own completed justpublished SCRATCH TAR (freshcleanpages) forboundedreadonlyfadvise instead ofoldA, onlyafteractualstablepub/source/no writer; no globaldrop/model/CP/base touches.
 Finalguidecaution: exporter unique_weights counts independentencoded ZIPs afterexplicitD/B4alias, not necessarilyglobaldistinctFPsha acrossfinal/best. WhenaddingC1/2futurecheckactualmetadata forpossiblebest==final orcrosspackageFP equality; report physicalZIP count andlogicalendpoints separately, donotassumeeveryZIP isadifferentglobalstate. No newdedup/reencode/no changeexistingpackagesneeded. FP32 capacitymaystateonefilepereachphysicalencoding, notthemathematicalminimumacrossidenticalFPs.
 Behaviorfrozenprotocolcompletevalidation PiQA1838,HellaSwag10042;char-normalized acc_norm primary,rawaccaux, notsubsetnoruniqueofficialprimary. Futureactualreviewstillmustverifycounts; no actualscoresemanticsreadyet.
+
+## 2026-11-06 21:28 UTC：C2.8完整训练与best首样
+
+- 2.8B最后M_s33于21:24:01.408813严格rc0完成；全15已完成。1B最后C_s33已在GPU3于21:24:01启动，master603 completed/4 running/0 pending，正式263/267；尚不能最终handoff。
+- v5真实7/9 READY；新C2p8B NLL30logical/31physical、behavior15final。无D等价alias。ROOT核15实际训练definition/argv/strict int0/no任何stop字段和30个checkpoint历史完整SHA receipt＋当前五stat，未读CP/base载荷。
+- 21:10预算及独立复核已ROOT接受，accept SHA367ea5a972cfd11bb5bb33c43f7ddff5efe78cb1de3a3db577b01c61cdc43501，commit772b7df；训练预测22:22:42、高档评价01:05:35仅代理，非handoff许可。
+- ROOT于21:26:56.842864用原run_one启动C2p8B_best单样，wrapper3421079/child3421080。授权a12cfaee18d538dd60a62c4bbd99de0ea0049d0e8a2c51dc1057ec21aa5e733e；spec50619c2fc7f9040cab7fe4bb72a301fb892d0177018ff0804540892439d347be，均在artifacts/provenance/additional_endpoint_actual_v4/。显式slot2/package C2p8B_best/max1，空CVD/2线程；首B0_s11 best，不按结果选。只授权样例，未授权batch或publication。
+- ROOT新增本次首样48GiB保守available门槛，非原scope值/峰值保证；实际precheck55.95GiB，launch约58.16GiB。1200+120秒仅准入allowance，run_one没有hardtimeout。
+- audit_phase(compare_weights=False)仍fresh散列model_files；ROOT未为precheck重复调用。既有exporter在编码前的fullphase_source_audit.json已真实passed15/no violations（21:27:40观察），属于样例parent实际IO，不能叫metadata-only。
+- eval_selection正在仅准备C2.8两个analysis plan/FALSE/v3 operational repair，禁止TRUE/check/analyze与评分读取。最终解封需actual successor同一个不可变state路径/SHA从check开始绑定。
