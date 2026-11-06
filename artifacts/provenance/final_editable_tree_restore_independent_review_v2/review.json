@@ -1,0 +1,144 @@
+{
+  "status": "passed_independent_v2_software_and_toy_review_only_not_real_tree_restore",
+  "at_utc": "2026-11-06T20:15:08.878617+00:00",
+  "source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_preparation_v2/restore_tree.py",
+    "bytes": 19608,
+    "sha256": "3994c30e582645ded4c28997af706427cb99cd8318b9f921f836b68527c57452"
+  },
+  "reviewed_sources": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_preparation_v2/test_final_tree_restore.py",
+      "bytes": 17680,
+      "sha256": "e8a821dbc49c50be88d8e769137957efe9c2dbb70b2cd45d5398e77c9d30b3d1"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_preparation_v2/RUNBOOK.md",
+      "bytes": 9054,
+      "sha256": "88da6ad639b94f41bd1f7bf7718d43670f0f39c0412859ae279bc1f05a266818"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_preparation_v2/plan.FALSE.template.json",
+      "bytes": 1888,
+      "sha256": "1e27877490a7e71b072423887257f573f4e6ddca009103421865d1ce102166fb"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_preparation_v2/authority.FALSE.template.json",
+      "bytes": 1525,
+      "sha256": "015c4663bec6ad39b53e0eb637ce30a8a22465cdf731a95f26c08449398d7ad9"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_preparation_v2/preparation_receipt.json",
+      "bytes": 7717,
+      "sha256": "f3343f40958e1fd32abf1e1d82373b18546671b5a7588815f0c9fccb8f62faaf"
+    }
+  ],
+  "preserved_v1_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_preparation_v1/restore_tree.py",
+    "bytes": 17409,
+    "sha256": "046f74609068ec425c704fdb04d85015d1944b8e04a630e06dcc82ce06a0679e"
+  },
+  "ROOT_actual_platform_probes": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_preparation_v1/actual_durable_directory_commit_probe.json",
+      "bytes": 919,
+      "sha256": "a91aa7867b73b3f27228f02295457f745fb7bee0ca6fca5c92fc4c7e008da0b3"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_preparation_v1/actual_durable_file_marker_probe.json",
+      "bytes": 624,
+      "sha256": "ead7e7656e6c40894e85423994863a48846d50b09ec0d5fab07959e4c6d14d3d"
+    }
+  ],
+  "platform_conclusion": "Directory RENAME_NOREPLACE is actually unsupported (EINVAL); actual same-directory regular-file hardlink-noreplace, source-unlink retention and fsync probe passed. This supports the marker primitive, not an assertion that an actual archive restoration has passed. Future runtime re-probes before reserve release.",
+  "unchanged_safety_extraction_AST": [
+    "signature",
+    "details",
+    "digest",
+    "absolute",
+    "safe_relative",
+    "real_directory",
+    "absent",
+    "fsync_dir",
+    "write_json",
+    "chown_file_sync",
+    "bound_json",
+    "HashingReader",
+    "create_member",
+    "extract_and_check"
+  ],
+  "accepted_guarantees": [
+    "Fixed final acceptance and explicit marker publication mode plus ROOT-bound source/plan/auth/receipt identity remain required before exclusive namespace creation and reserve release.",
+    "Candidate research directory exists before full verification and has no atomic-directory-publication guarantee. It remains unaccepted until matching complete marker + external strict int0 + ROOT actual acceptance.",
+    "All gzip compressed bytes/tails and exact manifest/member set are verified and files/directories/ownership fsynced before marker preparation.",
+    "Complete marker binds archive/stat5, exact candidate, plan/auth/tool/receipt SHAs, manifest/count/member SHA; fsynced same-directory temp is hardlinked without replacement, own temp unlinked and evidence parent fsynced.",
+    "Marker truth does not pre-attest post-link parent fsync. Successful stdout and strict external rc0 provide that operation evidence; ROOT must verify matching marker SHA and all actual inputs.",
+    "Premature/colliding marker is not overwritten. A failed process after link preserves marker and explicitly reports uncertain/unknown durability; directory/marker presence alone never enables workspace switching.",
+    "No ordinary or atomic directory rename, old workspace mutation, automatic retry, or replacement of existing namespace is used. Capacity release remains non-atomic and released reserve is not recreated."
+  ],
+  "independent_toys": {
+    "count": 3,
+    "passed": 3,
+    "cases": [
+      "Early marker injection rejected before candidate creation/reserve release; foreign marker retained and failure explicit",
+      "At actual marker link hook all exact candidate bytes/manifest/SHAs and plan/auth/tool bindings already complete; success marker SHA, nlink1, temp removal and parent_fsynced verified",
+      "Error immediately after actual link produces failed state with present complete marker and unknown durability, not success"
+    ],
+    "sources": [
+      {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_independent_review_v2/restore_tree.py",
+        "bytes": 19608,
+        "sha256": "3994c30e582645ded4c28997af706427cb99cd8318b9f921f836b68527c57452"
+      },
+      {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_independent_review_v2/author_fixture.py",
+        "bytes": 17680,
+        "sha256": "e8a821dbc49c50be88d8e769137957efe9c2dbb70b2cd45d5398e77c9d30b3d1"
+      },
+      {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_independent_review_v2/test_independent_marker.py",
+        "bytes": 4204,
+        "sha256": "3741763ad312b73405c8a31718ea528fee1ae634044b1b1a83c47ccc6b073712"
+      }
+    ],
+    "stdout": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_independent_review_v2/stdout.txt",
+      "bytes": 128,
+      "sha256": "8d3b98623e3eac745ef63b2d9bc7dd99f982c3d3bd914cf3f4f6b55eafb9b602"
+    },
+    "stderr": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_independent_review_v2/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "whole_child_timing": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_independent_review_v2/whole_child_timing.json",
+      "bytes": 837,
+      "sha256": "76b3dac99691e5b0d2d21193e9690e84eeb3330b63adfb430b8413bb4d41fc64"
+    },
+    "whole_wall_seconds": 0.41275549307465553,
+    "user_cpu_seconds": 0.340866,
+    "system_cpu_seconds": 0.060786
+  },
+  "author_45_toys_not_repeated": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_preparation_v2/tests_attempt1/whole_child_timing.json",
+    "bytes": 789,
+    "sha256": "83519a48d8467849072795cc8aa54ac5a1b44dee3e24db8776bf4f0c0e2d6e06"
+  },
+  "scope": {
+    "real_archive_payload_or_headers_read": false,
+    "real_reserve_payload_read_or_consumed": false,
+    "shared_delivery_write": false,
+    "original_workspace_or_symlink_modified": false,
+    "real_authority_created": false,
+    "live_source_edited": false,
+    "synthetic_only": true
+  },
+  "remaining_actual_conditions": [
+    "Actual final durable archive publication and fixed final ROOT acceptance",
+    "Explicit new ROOT execution authority/namespace and current archive+reserve identity",
+    "Whole external timer/strict0, marker SHA/source bindings and independent actual acceptance before any separately authorized symlink switch"
+  ],
+  "timing_note": "Only listed synthetic test child wall/user/sys measured; manual review whole unknown. Child includes nested toys; do not add their internal restore wall again.",
+  "new_blocking_defects": []
+}
