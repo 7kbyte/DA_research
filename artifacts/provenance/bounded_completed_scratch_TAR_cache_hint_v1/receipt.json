@@ -1,0 +1,96 @@
+{
+  "status": "single_bounded_completed_owned_scratch_TAR_cache_hint_returned",
+  "at_utc": "2026-11-06T21:45:53.980341+00:00",
+  "source": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/A_remaining_final/A_remaining_final_weights_lossless_v1.tar",
+  "publication": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/A_remaining_final_weights_durable_publication.json",
+    "sha256": "449fcd5a88991473f4fbd042b633382718450c975b4e4c2811c66a542e7720cb"
+  },
+  "completion": {
+    "path": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/A_remaining_final/completion.json",
+    "sha256": "0b79a1b870644304a2d671b1f8cc1ed12c8dfb24cd3c86bf52a53baf18a2bb6b"
+  },
+  "source_before": {
+    "device": 139,
+    "inode": 4436072948,
+    "bytes": 106627983360,
+    "allocated_bytes": 106627985408,
+    "mode": "0o644",
+    "uid": 0,
+    "gid": 0,
+    "mtime_ns": 1793988787440902467,
+    "ctime_ns": 1793989026621917771
+  },
+  "source_after": {
+    "device": 139,
+    "inode": 4436072948,
+    "bytes": 106627983360,
+    "allocated_bytes": 106627985408,
+    "mode": "0o644",
+    "uid": 0,
+    "gid": 0,
+    "mtime_ns": 1793988787440902467,
+    "ctime_ns": 1793989026621917771
+  },
+  "no_existing_open_descriptors_observed": [],
+  "source_historical_fsync_and_publication_verified": true,
+  "fd_mode": "O_RDONLY|O_CLOEXEC|O_NOFOLLOW + shared nonblocking flock",
+  "operation": "os.posix_fadvise",
+  "advice": "POSIX_FADV_DONTNEED",
+  "offset": 0,
+  "length_bytes": 68719476736,
+  "operation_region_wall_seconds": 1.0232553109526634,
+  "cgroup_before": {
+    "observed_at_utc": "2026-11-06T21:45:52.955510+00:00",
+    "memory_max": 1030792151040,
+    "memory_current": 1030619570176,
+    "anon": 12017651712,
+    "file": 999254061056,
+    "shmem": 25885483008,
+    "active_file": 957164544000,
+    "inactive_file": 16204029952,
+    "file_dirty": 200753152,
+    "file_writeback": 0,
+    "unevictable": 0,
+    "conservative_clean_inactive_credit": 16003276800,
+    "conservative_available": 16175857664,
+    "memory_events": {
+      "low": 0,
+      "high": 0,
+      "max": 197522,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0
+    }
+  },
+  "cgroup_after": {
+    "observed_at_utc": "2026-11-06T21:45:53.980309+00:00",
+    "memory_max": 1030792151040,
+    "memory_current": 1030480039936,
+    "anon": 12016128000,
+    "file": 999271477248,
+    "shmem": 25885483008,
+    "active_file": 957164552192,
+    "inactive_file": 16221417472,
+    "file_dirty": 218173440,
+    "file_writeback": 0,
+    "unevictable": 0,
+    "conservative_clean_inactive_credit": 16003244032,
+    "conservative_available": 16315355136,
+    "memory_events": {
+      "low": 0,
+      "high": 0,
+      "max": 197522,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0
+    }
+  },
+  "source_payload_read_bytes": 0,
+  "source_bytes_deleted_or_modified": false,
+  "durable_destination_touched": false,
+  "CP_base_ZIP_train_files_touched": false,
+  "global_drop_caches": false,
+  "reclaimed_bytes_measured": null,
+  "scope_note": "Hint only; observed cgroup changes include concurrent work and are not proof that exactly64GiB was reclaimed. No batch authority; ROOT must recheck fresh resource gate."
+}

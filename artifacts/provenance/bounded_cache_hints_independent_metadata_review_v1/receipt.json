@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "status": "passed_metadata_and_retained_source_review",
+  "source_proofs": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/bounded_completed_scratch_TAR_cache_hint_v1/receipt.json",
+      "sha256": "307d9ed8b61500ccf1545f1a3c77e11de9fc5221187e1ab463bf2bcb94f4e0ca"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/bounded_completed_scratch_TAR_cache_hint_v1/whole_child_timing.json",
+      "sha256": "3e4358c6644c7939f4935974823a7440f1b1ccce33e7bf5fcf89d633920ad77d"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/bounded_completed_scratch_TAR_cache_hint_v1/executed_operation.py",
+      "sha256": "eae86e38dc042719a1c41706bd50da1f57f869f270bea22d909269dd50ba9422"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/bounded_completed_verification_cache_hint_v1/receipt.json",
+      "sha256": "24b4394c1748eaff1fa97c45f34ce8a4cd83981296af6b5f689fca6d27802941"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/bounded_completed_verification_cache_hint_v1/whole_child_timing.json",
+      "sha256": "c596ecdd3923571451d95be24a867f47a8450f217dd11cd83a3c6b4b354428d5"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/bounded_completed_verification_cache_hint_v1/executed_operation.py",
+      "sha256": "35b4bef1e623db68f24bb6ae1117ca94f0e2a4f9d8d6560f8d4fdf96f4527ecf"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/bounded_completed_verification_cache_hint_v1/record_extended_v2_pythia_2p8b_m8_h25m_formal_B0_s11_w0__best.json",
+      "sha256": "9df37117b934739075b8851989d542fe555802705c804325ef96b43a22667d17"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/bounded_completed_verification_cache_hint_v1/record_extended_v2_pythia_2p8b_m8_h25m_formal_B1_s33_w0p05.json",
+      "sha256": "841d929f17a9a1a38af0cce2413e7c780a87d84544c2e9f97c2cae1986f9e18f"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/bounded_completed_verification_cache_hint_v1/record_extended_v2_pythia_2p8b_m8_h25m_formal_B0_s33_w0.json",
+      "sha256": "d8a2714f96be5816afe43195ec5232298846d53912e023bcc550072e9cfa726e"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/bounded_completed_verification_cache_hint_v1/record_extended_v2_pythia_2p8b_m8_h25m_formal_M_s22_w0p05.json",
+      "sha256": "78e87055df517364e1a7d7a8bc8a69230d59eeecd8e4128b3342ef8ad6c0d05b"
+    }
+  ],
+  "operations": [
+    {
+      "kind": "completed_scratch_A93_TAR_prefix",
+      "bytes_advised": 68719476736,
+      "current_target_stat_matches": true,
+      "original_operation_checked_maps": false,
+      "observed_available_GiB": [
+        15.06494140625,
+        15.19485855102539
+      ]
+    },
+    {
+      "kind": "four_completed_derived_verification_outputs",
+      "bytes_advised": 44404063376,
+      "current_target_stats_match": true,
+      "observed_available_GiB": [
+        12.95064926147461,
+        51.747676849365234
+      ]
+    }
+  ],
+  "scope": "Independent small JSON/source reads and target stat only; no payload opened and no cache hint rerun.",
+  "checks": {
+    "strict_integer_rc0": true,
+    "source_script_sha_matches_parent_timer": true,
+    "historical_record_copies_currently_match": true,
+    "current_target_stat_matches_original_after": true,
+    "verification_lock_wording_accurate": true,
+    "TAR_did_not_claim_maps_scan": true,
+    "stat_evidence_is_not_fresh_payload_hash": true,
+    "source_no_payload_read_or_write_calls": true,
+    "advice_does_not_guarantee_reclaim": true,
+    "concurrent_cgroup_changes_not_exact_reclaimed_bytes": true,
+    "resource_gate_not_lowered_or_authorized_by_hint": true
+  },
+  "cost": {
+    "disjoint_whole_child_wall_seconds": [
+      1.0591175816953182,
+      3.0040804967284203
+    ],
+    "disjoint_whole_child_wall_sum_seconds": 4.0631980784237385,
+    "inclusive_child_cpu_sum_seconds": 3.964346,
+    "nested_regions_excluded": [
+      "operation_region_wall_seconds",
+      "items[].readonly_fd_fsync_region_seconds",
+      "items[].advice_region_seconds"
+    ],
+    "this_independent_review_whole_time": "unknown"
+  },
+  "limits": [
+    "Current SHA was recomputed for small evidence/source only; restored/TAR payload SHA remains historical.",
+    "File shared locks are advisory and are not producer leases.",
+    "The first TAR operation checked FDs but did not claim a maps scan; the four-output operation checked both.",
+    "No claim of exact reclaimed bytes or durable future availability."
+  ]
+}
