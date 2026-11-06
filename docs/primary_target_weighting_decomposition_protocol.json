@@ -1,0 +1,18 @@
+{
+  "declared_at_utc": "2026-11-06T07:18:26.407190+00:00",
+  "analysis_status": "post-test descriptive decomposition",
+  "trigger": "Primary predeclared token/equal-document weighting differs for near-zero target gain; all primary NLL has already been unsealed",
+  "primary_first_score_read": "docs/primary_nll_first_test_read.json",
+  "scope": "All36 primary conditions, final and validation-selected best, FineMath test only",
+  "manifest": "docs/primary_evaluation_v2_execution_matched_nll_manifest.json",
+  "manifest_sha256": "d1502bcaff5cdcd75d984a4b8776f1cb4027b596f474835bfe9ed18875d9fd18",
+  "formula": "G_token-G_doc=Cov_population(n_document_retained_prediction_tokens,g_document)/mean(n_document_retained_prediction_tokens)",
+  "grouping": "Exact retained chunk counts 1,2,3,4; fixed by existing capped test data",
+  "limits": [
+    "Descriptive weighting identity, not a causal length effect",
+    "Retained evaluation length is not full original document length",
+    "No new model/hyperparameter/data/checkpoint selection",
+    "No new training or scoring; reuse only authorized primary NLL",
+    "All conditions and both endpoints exported; figure may show primary b=.05 groups and omit exactly identical D with explicit check"
+  ]
+}
