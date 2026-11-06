@@ -1,0 +1,40 @@
+{
+  "complete": true,
+  "synthetic_only": true,
+  "checks": [
+    {
+      "case": "missing logical task/score endpoint",
+      "rejected": true,
+      "reason": "Missing task/score/logical endpoint"
+    },
+    {
+      "case": "A collided score/quantity labels forbidden",
+      "rejected": true,
+      "reason": "Duplicate presentation row"
+    },
+    {
+      "case": "mixed model full phase forbidden",
+      "rejected": true,
+      "reason": "Do not mix models"
+    },
+    {
+      "case": "CSV SHA differs before parse",
+      "rejected": true,
+      "reason": "SHA differs: /tmp/grad-research-20261106/worktree/artifacts/provenance/behavioral_presentation_preparation_v1/synthetic_inputs/supplement_A/endpoints.csv"
+    },
+    {
+      "case": "missing explicit production reviewer proof",
+      "rejected": true,
+      "reason": "Explicit reviewer COMPLETE path/SHA required"
+    }
+  ],
+  "source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/behavioral_presentation_preparation_v2/verify_negative_boundaries.py",
+    "sha256": "b4ef3e573d9ca15c920c8c2447c2953a1b615c3dd5c292790ac6f1f4fecf080e"
+  },
+  "process_scope_wall_seconds": 0.01305675134062767,
+  "process_scope_user_cpu_seconds": 0.012911000000000002,
+  "process_scope_system_cpu_seconds": 0.0,
+  "timing_scope": "Only in-process toy checks after import, not complete interpreter child wall; engineering total unknown",
+  "actual_outputs_or_true_authority_opened_or_created": false
+}
