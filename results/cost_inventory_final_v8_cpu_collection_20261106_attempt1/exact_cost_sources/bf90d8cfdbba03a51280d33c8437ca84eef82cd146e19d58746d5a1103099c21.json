@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_schema_repair_v1/regression_whole_child_timing.json",
+    "sha256": "df373c04d80b673c649e3ca19d3737aee9deca11373bbc4a4fdbda861844cf3e"
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 8.435614384710789,
+  "CPU_component_pointers": [
+    "/child_user_seconds",
+    "/child_system_seconds"
+  ],
+  "CPU_components": {
+    "/child_user_seconds": 8.701008,
+    "/child_system_seconds": 4.233037
+  },
+  "recorded_inclusive_CPU_seconds": 12.934045000000001,
+  "original_returncode": 1,
+  "scope": "Actual failed synthetic regression child (four failures), rc1.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Measured wall copied; only named disjoint CPU components summed. Unknowns remain null; failed actual invocations preserve rc. No UTC estimates.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

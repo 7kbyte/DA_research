@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_preparation_v1/preparation_receipt.json",
+    "sha256": "f13b3c054ea14959df2e26ae98df116adf90404df3a3d8a0204fd3dbd893f50d"
+  },
+  "original_wall_pointer": "/timing/wall_seconds",
+  "wall_seconds": 0.11657911539077759,
+  "CPU_component_pointers": [
+    "/timing/self_user_seconds",
+    "/timing/self_sys_seconds"
+  ],
+  "CPU_components": {
+    "/timing/self_user_seconds": 0.05734299999999999,
+    "/timing/self_sys_seconds": 0.016051
+  },
+  "recorded_inclusive_CPU_seconds": 0.07339399999999999,
+  "original_returncode": null,
+  "scope": "Measured small-source preparation region only; manual authoring whole unknown. The recorded read counter covers the metadata/tool loop, not every helper hash/import read.",
+  "timing_semantics": "partial_region_parent_unknown_not_additive",
+  "normalization": "Measured wall copied; only named disjoint CPU components summed. Unknowns remain null; failed actual invocations preserve rc. No UTC estimates.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

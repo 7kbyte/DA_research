@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/report_delivery_section7_update_v3/render_whole_child_timing.json",
+    "sha256": "8cf222cc78f04a619c1aadab116a5867bf53816328ab84ca09374b1d3685bb9d"
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 12.487890485674143,
+  "CPU_component_pointers": [
+    "/whole_child_user_cpu_seconds",
+    "/whole_child_sys_cpu_seconds"
+  ],
+  "CPU_components": {
+    "/whole_child_user_cpu_seconds": 12.100992,
+    "/whole_child_sys_cpu_seconds": 0.352253
+  },
+  "recorded_inclusive_CPU_seconds": 12.453244999999999,
+  "original_returncode": 0,
+  "scope": "Independent actual report render spawn-to-exit. V2 was a redundant no-source-change render; original inaccurate scope corrected only by retained correction_receipt.json. All actual costs retained, internal render timers nested.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Measured wall copied; only named disjoint CPU components summed. Unknowns remain null; failed actual invocations preserve rc. No UTC estimates.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

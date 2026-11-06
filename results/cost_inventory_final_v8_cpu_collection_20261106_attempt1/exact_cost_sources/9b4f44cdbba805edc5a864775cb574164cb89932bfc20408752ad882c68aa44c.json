@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "status": "pending_source_supplement_only",
+  "basis": "ROOT explicitly confirmed both completed parent timers in the current task; source receipts independently checked here. This is not an execution or publication authority.",
+  "initial_catalog_sha256": "aadb3e80993940f32aef2c1d0f0cf744185d7b4376c78bb3fd8bd112264d0da5",
+  "candidates": [
+    {
+      "id": "C410_best_batch",
+      "source": {
+        "path": "artifacts/provenance/additional_endpoint_actual_v4/C410_best_batch/whole_child_timing.json",
+        "sha256": "c24ba9a50917cf88478bdccd71c79feb2f0541fe4a2572afa155b68c99f74d5a",
+        "bytes": 405,
+        "retained_bytes": "artifacts/provenance/cost_sources_v8_pending_v1/source_bytes/c24ba9a50917cf88478bdccd71c79feb2f0541fe4a2572afa155b68c99f74d5a.json",
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 23764792198,
+          "st_size": 405,
+          "st_mtime_ns": 1793991574385553749,
+          "st_ctime_ns": 1793991574385553749
+        }
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 1953.1042039617896,
+      "cpu_component_pointers": [
+        "/user_cpu_seconds",
+        "/sys_cpu_seconds"
+      ],
+      "cpu_component_values": {
+        "/user_cpu_seconds": 1809.686042,
+        "/sys_cpu_seconds": 159.870604
+      },
+      "recorded_CPU_seconds": 1969.556646,
+      "CPU_scope": "whole_child_process_tree",
+      "returncode_pointer": "/returncode",
+      "returncode": 0,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "scope": "ROOT confirmed complete after initial catalog freeze. Actual exporter spawn-to-exit: startup/resume verification, 20 new weights, three proven-alias metadata operations and assembly. Original 105.168669581 sample encode is a separate prior operation; sample resume checks do not re-charge that encode. Assembly 109.004355 seconds is nested and not additive.",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "C410_best_publication_metadata_review",
+      "source": {
+        "path": "artifacts/provenance/C410_best_publication_metadata_review_actual_v1/whole_child_timing.json",
+        "sha256": "16fa92250b72494a5a99c0bde57a6d08905f8fffbe65e622e1a4ebea878c41c9",
+        "bytes": 383,
+        "retained_bytes": "artifacts/provenance/cost_sources_v8_pending_v1/source_bytes/16fa92250b72494a5a99c0bde57a6d08905f8fffbe65e622e1a4ebea878c41c9.json",
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 30332440835,
+          "st_size": 383,
+          "st_mtime_ns": 1793991610078418668,
+          "st_ctime_ns": 1793991610078418668
+        }
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 2.308287311345339,
+      "cpu_component_pointers": [
+        "/user_cpu_seconds",
+        "/sys_cpu_seconds"
+      ],
+      "cpu_component_values": {
+        "/user_cpu_seconds": 1.7961070000000001,
+        "/sys_cpu_seconds": 0.514635
+      },
+      "recorded_CPU_seconds": 2.3107420000000003,
+      "CPU_scope": "whole_child_process_tree",
+      "returncode_pointer": "/returncode",
+      "returncode": 0,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "scope": "ROOT confirmed complete after initial catalog freeze. Independent whole metadata reviewer spawn-to-exit; internal reviewer regions are nested. No large payload rehash, no publication included.",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    }
+  ],
+  "C410_best_publisher_registered": false,
+  "new_project_snapshot_registered": false,
+  "initial_freeze_limitations": "The initial catalog's no-Cbest-batch statement describes its freeze boundary; only these two subsequently ROOT-confirmed completed parents are now appended."
+}

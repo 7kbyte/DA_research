@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_best_publication_runbook_v1/permission_gate_tests/whole_child_timing.json",
+    "sha256": "9bd75c3cf6cdc1a1765207a39cc0e19b9c37e1ef54fac0b3dd94d1a572d9224c"
+  },
+  "original_wall_pointer": "/whole_wall_seconds",
+  "wall_seconds": 0.3765859715640545,
+  "CPU_component_pointers": [
+    "/children_user_seconds",
+    "/children_sys_seconds"
+  ],
+  "CPU_components": {
+    "/children_user_seconds": 0.33669099999999996,
+    "/children_sys_seconds": 0.037876
+  },
+  "recorded_inclusive_CPU_seconds": 0.374567,
+  "original_returncode": 0,
+  "scope": "Actual five-case explicit-authority guard child; wrapper self CPU unrecorded.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Measured wall copied; only named disjoint CPU components summed. Unknowns remain null; failed actual invocations preserve rc. No UTC estimates.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

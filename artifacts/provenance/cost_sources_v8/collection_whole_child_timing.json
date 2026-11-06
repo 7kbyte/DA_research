@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "returncode": 0,
+  "whole_child_wall_seconds": 8.667578175663948,
+  "child_user_seconds": 6.662219,
+  "child_system_seconds": 1.854631,
+  "child_peak_RSS_bytes_cumulative": 1474719744,
+  "started_at_utc": "2026-11-06T19:32:02.974070+00:00",
+  "finished_at_utc": "2026-11-06T19:32:11.641654+00:00",
+  "argv": [
+    "python",
+    "artifacts/provenance/cost_sources_v7/run_collection_with_IO_audit.py",
+    "--sources",
+    "configs/cost_inventory_final_sources_v8.json",
+    "--output",
+    "results/cost_inventory_final_v8_cpu_collection_20261106_attempt1"
+  ],
+  "source_spec_sha256": "572cb3bf1e53bac59f0d5f5a60341e1c8a78dd1b592c1cf6b5689dfef673ec03",
+  "unchanged_IO_audit_wrapper_sha256": "a3513d44a64adbab37feafcb1f7d0e15a31a61defac7572cd5482621775bede9",
+  "scope": "Whole unchanged v7 IO-audit wrapper plus unchanged v2 collector child spawn-to-exit, including actual opaque score-output streaming SHA. All collector internal timers nested. This successful collection is not recursively included in its own ledger. No CP/native/TAR/ZIP/tensor payload reads; IO audit is authority.",
+  "GPU_used": false,
+  "score_semantics_parsed": false,
+  "current_collection_self_charged": false,
+  "manual_engineering_whole_seconds": null
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_schema_repair_v1/actual_schema_audit_whole_child_timing.json",
+    "sha256": "0b68faee9791fe9e5ac8840d588e6a023145028158bf8ba954c4f37b81531151"
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 0.019942771643400192,
+  "CPU_component_pointers": [
+    "/child_user_seconds",
+    "/child_system_seconds"
+  ],
+  "CPU_components": {
+    "/child_user_seconds": 0.013669999999999405,
+    "/child_system_seconds": 0.00586199999999959
+  },
+  "recorded_inclusive_CPU_seconds": 0.019531999999998995,
+  "original_returncode": 1,
+  "scope": "Actual schema-audit child failed with syntax error, rc1.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Measured wall copied; only named disjoint CPU components summed. Unknowns remain null; failed actual invocations preserve rc. No UTC estimates.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

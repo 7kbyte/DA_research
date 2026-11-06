@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/additional_endpoint_actual_v4/A_remaining_final_batch/whole_child_timing.json",
+    "sha256": "c6d6ee7f817cd2bafe0ea93734a4710644b91da55e8964a60c56930ab0770d86"
+  },
+  "original_wall_pointer": "/wall_seconds",
+  "wall_seconds": 9397.590868961066,
+  "CPU_component_pointers": [
+    "/user_cpu_seconds",
+    "/sys_cpu_seconds"
+  ],
+  "CPU_components": {
+    "/user_cpu_seconds": 8422.386734,
+    "/sys_cpu_seconds": 1058.206539
+  },
+  "recorded_inclusive_CPU_seconds": 9480.593273,
+  "original_returncode": 0,
+  "scope": "Actual A batch: startup/resume verification, 92 new encodes and whole TAR assembly. The original first-sample encode was a separate earlier v7-registered operation; reused sample metadata does not re-charge it.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Measured wall copied; only named disjoint CPU components summed. Unknowns remain null; failed actual invocations preserve rc. No UTC estimates.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

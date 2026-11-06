@@ -1,0 +1,42 @@
+{
+  "scope": "Two independent disjoint child probes; no actual package review/publication/payload reads; argument-parser failure occurs before publisher invocation",
+  "probes": [
+    {
+      "name": "original_synthetic_tests",
+      "argv": [
+        "/usr/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "artifacts/provenance/C_native_final_publication_runbook_v2/initial_source_bytes/artifacts/provenance/C_native_final_publication_runbook_v1/test_review_metadata.py"
+      ],
+      "returncode": 0,
+      "whole_child_wall_seconds": 0.7407073602080345,
+      "user_CPU_seconds": 0.381372,
+      "sys_CPU_seconds": 0.182661
+    },
+    {
+      "name": "runbook_missing_progress_argparse",
+      "argv": [
+        "/usr/bin/python",
+        "scripts/publish_reserved_archive.py",
+        "--source",
+        "/nonexistent/readonly-source",
+        "--expected-sha256",
+        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "--expected-bytes",
+        "1",
+        "--reserved",
+        "/nonexistent/readonly-reserve",
+        "--destination",
+        "/nonexistent/readonly-dest",
+        "--receipt",
+        "/nonexistent/readonly-receipt"
+      ],
+      "returncode": 2,
+      "whole_child_wall_seconds": 0.03609698265790939,
+      "user_CPU_seconds": 0.027588,
+      "sys_CPU_seconds": 0.007902999999999993
+    }
+  ]
+}

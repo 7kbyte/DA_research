@@ -1,0 +1,1588 @@
+{
+  "synthetic_only": true,
+  "actual_restore_runner_or_bind_execute_called": false,
+  "actual_payload_bytes_read": 0,
+  "wrapper_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/run_whole_child.py",
+    "sha256": "2a2d09daac8504b099a5cd9682dff722bbad0519922ba39beedf4e96e9498266"
+  },
+  "original_failure_probe_sha256": "132e7b973843c8dadcdaecc6add88194842f2d7198f4857f94c649c4d3a9b58e",
+  "same_fake_runner_retested": true,
+  "fixed_timeout_probe": {
+    "returncode": 124,
+    "whole_child_timing": {
+      "returncode": 124,
+      "direct_child_returncode": 0,
+      "timed_out": true,
+      "inclusive_execution_cap_seconds": 1,
+      "execution_plus_cleanup_budget_seconds": 11.0,
+      "process_group_cleanup": {
+        "status": "whole_group_absence_confirmed_after_KILL",
+        "whole_group_absence_confirmed": true,
+        "pgid": 3329065,
+        "subreaper_enabled": true,
+        "signals": [
+          {
+            "signal": "SIGTERM",
+            "outcome": "sent_to_whole_group",
+            "since_cleanup_start_seconds": 0.0031257793307304382
+          },
+          {
+            "signal": "SIGKILL",
+            "outcome": "sent_to_whole_group",
+            "since_cleanup_start_seconds": 5.005925241857767
+          }
+        ],
+        "snapshots": [
+          {
+            "since_cleanup_start_seconds": 0.0031003132462501526,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329065,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866221
+              },
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329065,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 0.00509054958820343,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329065,
+                "state": "R",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866221
+              },
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329065,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 0.05724285915493965,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 0.11669139936566353,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 0.16886227950453758,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 0.22100871428847313,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 0.27366118133068085,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 0.3258906193077564,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 0.37926429510116577,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 0.4315475560724735,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 0.4836610369384289,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 0.5357020609080791,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 0.5876774601638317,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 0.6399869509041309,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 0.6920612677931786,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 0.7441953644156456,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 0.796283807605505,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 0.8485540971159935,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 0.9010023660957813,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 0.9532919339835644,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 1.0057230442762375,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 1.0579413957893848,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 1.1103980988264084,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 1.1623524315655231,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 1.2171431817114353,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 1.2693768702447414,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 1.3215070739388466,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 1.373549584299326,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 1.425686165690422,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 1.4798722974956036,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 1.5319840610027313,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 1.5845466256141663,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 1.6365548223257065,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 1.6886318437755108,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 1.7407108694314957,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 1.7926883548498154,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 1.844679582864046,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 1.8966718800365925,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 1.9486771002411842,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 2.0009945891797543,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 2.0529828928411007,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 2.1049159690737724,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 2.157197307795286,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 2.209124345332384,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 2.2611523009836674,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 2.3130874633789062,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 2.3653589263558388,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 2.417657431215048,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 2.469905834645033,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 2.5223272144794464,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 2.5743927024304867,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 2.6264847069978714,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 2.678773805499077,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 2.7309134155511856,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 2.7830634750425816,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 2.835077814757824,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 2.8873361609876156,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 2.9399555511772633,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 2.992134463042021,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 3.044275339692831,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 3.09637538343668,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 3.14839443564415,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 3.2006652802228928,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 3.2528523355722427,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 3.304821614176035,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 3.3568502962589264,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 3.408837713301182,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 3.4608643129467964,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 3.512854892760515,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 3.5648277401924133,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 3.617104649543762,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 3.6692287288606167,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 3.7215189673006535,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 3.7734596878290176,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 3.8255301974713802,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 3.877455808222294,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 3.9294085167348385,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 3.981389559805393,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 4.033423665910959,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 4.085376102477312,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 4.13732498511672,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 4.189385287463665,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 4.241378024220467,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 4.293423797935247,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 4.345761124044657,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 4.39782190322876,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 4.450400318950415,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 4.502644181251526,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 4.555102039128542,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 4.607322797179222,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 4.659417521208525,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 4.7115642838180065,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 4.763636991381645,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 4.81564662232995,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 4.867750842124224,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 4.919905595481396,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 4.971912298351526,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 5.005906719714403,
+            "killpg_0_exists": true,
+            "members": [
+              {
+                "pid": 3329066,
+                "state": "S",
+                "ppid": 3329064,
+                "pgid": 3329065,
+                "session": 3329065,
+                "start_time_ticks": 2397866225
+              }
+            ]
+          },
+          {
+            "since_cleanup_start_seconds": 5.007103335112333,
+            "killpg_0_exists": false,
+            "members": []
+          }
+        ],
+        "adopted_zombies_reaped": [
+          {
+            "pid": 3329066,
+            "wait_status": 9,
+            "returncode": -9
+          }
+        ],
+        "final_observation": {
+          "since_cleanup_start_seconds": 5.007103335112333,
+          "killpg_0_exists": false,
+          "members": []
+        },
+        "cleanup_wall_seconds": 5.007106032222509,
+        "boundary": "SIGKILL cannot guarantee immediate removal of uninterruptible D-state tasks; unresolved groups are explicit failures, never success"
+      },
+      "whole_child_process_wall_seconds": 6.007772911339998,
+      "whole_child_user_cpu_seconds": 0.031449,
+      "whole_child_sys_cpu_seconds": 0.01769,
+      "child_peak_RSS_bytes": 16609280,
+      "accounting": "Inclusive child spawn-to-exit plus full process-group cleanup/reaping. Descendant CPU is attributed when reaped; failed unresolved groups may have incomplete CPU totals. Body/stages are nested.",
+      "admission": {
+        "cap_seconds": 1,
+        "TERM_grace_seconds": 5.0,
+        "KILL_grace_seconds": 5.0,
+        "teardown_overhead_allowance_seconds": 2.0,
+        "teardown_budget_seconds": 12.0,
+        "admission_margin_seconds": 300,
+        "required_remaining_seconds": 301,
+        "deadline_utc": "2026-11-07T02:56:32+00:00"
+      }
+    },
+    "independently_observed_descendant_absent": true
+  },
+  "admission_boundaries": [
+    {
+      "model": "pythia-1b",
+      "execution_cap_seconds": 600,
+      "strict_latest_start_utc": "2026-11-07T02:41:32+00:00",
+      "at_boundary_rejected": true,
+      "one_second_before_admitted": true,
+      "admission": {
+        "cap_seconds": 600,
+        "TERM_grace_seconds": 5.0,
+        "KILL_grace_seconds": 5.0,
+        "teardown_overhead_allowance_seconds": 2.0,
+        "teardown_budget_seconds": 12.0,
+        "admission_margin_seconds": 300,
+        "required_remaining_seconds": 900,
+        "deadline_utc": "2026-11-07T02:56:32+00:00"
+      },
+      "cap_plus_teardown_ends_by_utc": "2026-11-07T02:51:44+00:00"
+    },
+    {
+      "model": "pythia-2.8b",
+      "execution_cap_seconds": 1200,
+      "strict_latest_start_utc": "2026-11-07T02:31:32+00:00",
+      "at_boundary_rejected": true,
+      "one_second_before_admitted": true,
+      "admission": {
+        "cap_seconds": 1200,
+        "TERM_grace_seconds": 5.0,
+        "KILL_grace_seconds": 5.0,
+        "teardown_overhead_allowance_seconds": 2.0,
+        "teardown_budget_seconds": 12.0,
+        "admission_margin_seconds": 300,
+        "required_remaining_seconds": 1500,
+        "deadline_utc": "2026-11-07T02:56:32+00:00"
+      },
+      "cap_plus_teardown_ends_by_utc": "2026-11-07T02:51:44+00:00"
+    }
+  ],
+  "simulated_D_state_unconfirmed_cleanup": {
+    "status": "FAILED_group_absence_unconfirmed_live_D_or_unreaped_members",
+    "whole_group_absence_confirmed": false,
+    "pgid": 999999999,
+    "subreaper_enabled": true,
+    "signals": [
+      {
+        "signal": "SIGTERM",
+        "outcome": "sent_to_whole_group",
+        "since_cleanup_start_seconds": 6.809830665588379e-05
+      },
+      {
+        "signal": "SIGKILL",
+        "outcome": "sent_to_whole_group",
+        "since_cleanup_start_seconds": 9.21003520488739e-05
+      }
+    ],
+    "snapshots": [
+      {
+        "since_cleanup_start_seconds": 3.611668944358826e-05,
+        "killpg_0_exists": true,
+        "members": [
+          {
+            "pid": 999999998,
+            "state": "D",
+            "ppid": 1,
+            "pgid": 999999999,
+            "session": 999999999,
+            "start_time_ticks": 1
+          }
+        ]
+      },
+      {
+        "since_cleanup_start_seconds": 8.231028914451599e-05,
+        "killpg_0_exists": true,
+        "members": [
+          {
+            "pid": 999999998,
+            "state": "D",
+            "ppid": 1,
+            "pgid": 999999999,
+            "session": 999999999,
+            "start_time_ticks": 1
+          }
+        ]
+      },
+      {
+        "since_cleanup_start_seconds": 0.00010385364294052124,
+        "killpg_0_exists": true,
+        "members": [
+          {
+            "pid": 999999998,
+            "state": "D",
+            "ppid": 1,
+            "pgid": 999999999,
+            "session": 999999999,
+            "start_time_ticks": 1
+          }
+        ]
+      }
+    ],
+    "adopted_zombies_reaped": [],
+    "final_observation": {
+      "since_cleanup_start_seconds": 0.00010385364294052124,
+      "killpg_0_exists": true,
+      "members": [
+        {
+          "pid": 999999998,
+          "state": "D",
+          "ppid": 1,
+          "pgid": 999999999,
+          "session": 999999999,
+          "start_time_ticks": 1
+        }
+      ]
+    },
+    "cleanup_wall_seconds": 0.0001049041748046875,
+    "boundary": "SIGKILL cannot guarantee immediate removal of uninterruptible D-state tasks; unresolved groups are explicit failures, never success"
+  },
+  "limits": "No real hung NFS test. Uninterruptible D-state cleanup is not guaranteed; unresolved groups explicitly fail and CPU totals can be incomplete.",
+  "whole_probe_parent_timing": {
+    "wall_seconds": 6.058140937238932,
+    "user_cpu_seconds": 0.17535499999999998,
+    "system_cpu_seconds": 0.13691599999999998,
+    "scope": "Complete independent toy wrapper subprocess, pure admission checks, mock D-state and cleanup; wrapper child time is nested, not additive"
+  }
+}

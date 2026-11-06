@@ -1,0 +1,86 @@
+{
+  "status": "passed",
+  "source": "/tmp/grad-research-20261106/delivery/research_snapshot_20261106_1010.tar.gz",
+  "destination": "/data/202610/7kb/research_delivery/research_snapshot_20261106_1010.tar.gz",
+  "source_sha256": "9592d3debd30576701c466277c2386b24e27b7a006df2efffaf4662a4388bec7",
+  "destination_sha256": "9592d3debd30576701c466277c2386b24e27b7a006df2efffaf4662a4388bec7",
+  "bytes": 428473090,
+  "original_reservation": "/data/202610/7kb/research_delivery/.snapshot_1010_reservation",
+  "original_reservation_stat": {
+    "device": 106,
+    "inode": 521896789,
+    "bytes": 428473090,
+    "allocated_bytes": 428474368,
+    "mode": "0o600",
+    "uid": 11471,
+    "gid": 11471,
+    "mtime_ns": 1793959830943158262,
+    "ctime_ns": 1793959830943158262
+  },
+  "destination_stat": {
+    "device": 106,
+    "inode": 521896789,
+    "bytes": 428473090,
+    "allocated_bytes": 428474368,
+    "mode": "0o600",
+    "uid": 11471,
+    "gid": 11471,
+    "mtime_ns": 1793959834188381192,
+    "ctime_ns": 1793959834188381192
+  },
+  "original_inode_preserved": true,
+  "permissions_and_ownership_preserved": true,
+  "overwrite": false,
+  "source_stable_stat": {
+    "device": 139,
+    "inode": 6651088876,
+    "bytes": 428473090,
+    "allocated_bytes": 428474368,
+    "mode": "0o644",
+    "uid": 0,
+    "gid": 0,
+    "mtime_ns": 1793959782242881571,
+    "ctime_ns": 1793959795622826674
+  },
+  "source_retained": true,
+  "gpu_used": false,
+  "file_fsync_after_copy": true,
+  "prefix_sha_verified_before_truncate": true,
+  "file_fsync_after_truncate": true,
+  "atomic_rename_noreplace": false,
+  "atomic_destination_commit_noreplace": true,
+  "publication_method": "atomic_hard_link_noreplace_fsync_then_unlink",
+  "parent_directory_fsync": true,
+  "durability_events": [
+    {
+      "event": "source_sha_and_stable_stat_verified",
+      "utc": "2026-11-06T10:10:31.431028+00:00",
+      "sha256": "9592d3debd30576701c466277c2386b24e27b7a006df2efffaf4662a4388bec7"
+    },
+    {
+      "event": "full_prefix_write_fsync_completed",
+      "utc": "2026-11-06T10:10:32.358925+00:00",
+      "bytes": 428473090
+    },
+    {
+      "event": "entire_valid_prefix_sha_verified_before_truncate",
+      "utc": "2026-11-06T10:10:34.120813+00:00",
+      "sha256": "9592d3debd30576701c466277c2386b24e27b7a006df2efffaf4662a4388bec7",
+      "reservation_size_before_truncate": 428473090
+    },
+    {
+      "event": "truncate_to_verified_length_and_file_fsync_completed",
+      "utc": "2026-11-06T10:10:34.124857+00:00",
+      "bytes": 428473090
+    },
+    {
+      "event": "parent_directory_fsync_completed",
+      "utc": "2026-11-06T10:10:34.188974+00:00",
+      "path": "/data/202610/7kb/research_delivery"
+    }
+  ],
+  "started_at_utc": "2026-11-06T10:10:31.023748+00:00",
+  "finished_at_utc": "2026-11-06T10:10:34.189242+00:00",
+  "wall_seconds": 3.165511194616556,
+  "publisher_source_sha256": "9c194743383a16f98313f767fe2e722c309ec57c1aafc65d9b99d08e5407022e"
+}

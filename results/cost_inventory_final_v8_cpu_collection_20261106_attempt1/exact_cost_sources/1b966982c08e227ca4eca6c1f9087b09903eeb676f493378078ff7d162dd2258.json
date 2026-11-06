@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_all_final_publication_metadata_review_actual_v1/whole_child_timing.json",
+    "sha256": "9c7636b87d558b1ead44977bdfd27acbfc87c8b362dbb76340682ebb14bbdb90"
+  },
+  "original_wall_pointer": "/whole_parent_wall_seconds",
+  "wall_seconds": 1.8300067521631718,
+  "CPU_component_pointers": [
+    "/parent_self_user_seconds",
+    "/parent_self_system_seconds",
+    "/children_user_seconds",
+    "/children_system_seconds"
+  ],
+  "CPU_components": {
+    "/parent_self_user_seconds": 0.008944999999999998,
+    "/parent_self_system_seconds": 0.009968,
+    "/children_user_seconds": 1.226769,
+    "/children_system_seconds": 0.47385099999999997
+  },
+  "recorded_inclusive_CPU_seconds": 1.719533,
+  "original_returncode": 0,
+  "scope": "Inclusive parent around actual metadata review child; child1.811s and reviewer body1.5686s are nested.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Measured wall copied; only named disjoint CPU components summed. No UTC estimates.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

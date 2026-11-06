@@ -1,0 +1,1098 @@
+{
+  "schema_version": 1,
+  "status": "v8_explicit_measured_source_registration_not_whole_study_final",
+  "spec": {
+    "path": "/tmp/grad-research-20261106/worktree/configs/cost_inventory_final_sources_v8.json",
+    "sha256": "572cb3bf1e53bac59f0d5f5a60341e1c8a78dd1b592c1cf6b5689dfef673ec03"
+  },
+  "preserved_v7": {
+    "path": "/tmp/grad-research-20261106/worktree/configs/cost_inventory_final_sources_v7.json",
+    "sha256": "0cab816da531e857ded88a004624d9a946a1bd3dae75f295ed68e1e4f40b1f0e"
+  },
+  "collector": {
+    "path": "/tmp/grad-research-20261106/worktree/scripts/inventory_study_costs_final_v2.py",
+    "sha256": "864effb89f20dbfce3ba6ce51db8eb8351b087c2ac92d255274fe6267753f6ae"
+  },
+  "IO_audit_wrapper": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v7/run_collection_with_IO_audit.py",
+    "sha256": "a3513d44a64adbab37feafcb1f7d0e15a31a61defac7572cd5482621775bede9"
+  },
+  "parents": [
+    {
+      "id": "v8_cost_v6_successful_collection",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v6/trial_whole_child_timing.json",
+        "sha256": "eabe8cd7322677e912234071ee9bd8fd98ec6e4e5f9286f91b0b9bb99597ee40"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 6.833468526601791,
+      "known_CPU_seconds": 6.695788,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_cost_v7_successful_collection",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v7/collection_whole_child_timing.json",
+        "sha256": "29f8d5d4013c9e801ea07a5c7ee8e7566baebb22d8595d8d74f2a886a5971a6b"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 8.851966518908739,
+      "known_CPU_seconds": 8.674479,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_A_remaining93_batch",
+      "category": "lossless_export",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/additional_endpoint_actual_v4/A_remaining_final_batch/whole_child_timing.json",
+        "sha256": "c6d6ee7f817cd2bafe0ea93734a4710644b91da55e8964a60c56930ab0770d86"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 9397.590868961066,
+      "known_CPU_seconds": 9480.593273,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_A_remaining93_metadata_review",
+      "category": "storage_publication",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/A_remaining_final_publication_metadata_review_actual_v1/whole_child_timing.json",
+        "sha256": "3e4a6c5ce98bad365916e1f5da9a3c81d433d1dde9892e65d375b3d7774b2ecb"
+      },
+      "wall_pointer": "/whole_parent_wall_seconds",
+      "wall_seconds": 1.5158360935747623,
+      "known_CPU_seconds": 1.548359,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_A_remaining93_publication",
+      "category": "storage_publication",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/A_remaining_final_publication_actual_v1/whole_child_timing.json",
+        "sha256": "8b835cbbdd245e698d00db26925d4b8bf2130b159e63ef88dddae86a6147fde4"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 820.2060375325382,
+      "known_CPU_seconds": 421.554953,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_C410_best_first_sample",
+      "category": "lossless_export",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/additional_endpoint_actual_v4/C410_best_sample/whole_child_timing.json",
+        "sha256": "24b41e8a361a0e1341005151f107406a2bd43c59f33011dae82e5605fb4f7de3"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 105.16866958141327,
+      "known_CPU_seconds": 106.12407300000001,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_B_native_shared_lock_regression",
+      "category": "archive_qa",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_preparation_v1/lock_regression_tests/whole_child_timing.json",
+        "sha256": "7ed746d253528e8b7cdd9cab3c404c66e4a1d96bb16cc3e385102ea257bc6574"
+      },
+      "wall_pointer": "/whole_wall_seconds",
+      "wall_seconds": 0.3846968971192837,
+      "known_CPU_seconds": 0.378811,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_B_native_independent_identity_probe",
+      "category": "archive_qa",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_independent_review_v1/whole_bound_identity_probe_timing.json",
+        "sha256": "3e9761cc6aed38290f875bff53dc0cd68dae575b65c7617082bc2daaced0de02"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 0.10084423795342445,
+      "known_CPU_seconds": 0.097271,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_B_native_independent_lock_probe",
+      "category": "archive_qa",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_independent_review_v1/whole_lock_revision_probe_timing.json",
+        "sha256": "0cf9f13c442feb25da22754918f3de35b8ff3fe18d23aea7626424c9beace7ad"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 0.056663382798433304,
+      "known_CPU_seconds": 0.055364,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_B_native_actual_restore",
+      "category": "archive_qa",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_actual_parent_v1/whole_child_timing.json",
+        "sha256": "367522dfd3fc966a8ba33eaa2a60705f26d71d62f7e5642f5d88dfef17144018"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 36.18444097042084,
+      "known_CPU_seconds": 30.074923,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_B_native_independent_actual_metadata_review",
+      "category": "archive_qa",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_independent_acceptance_v1/whole_child_timing.json",
+        "sha256": "76a163da74be821515431a7134c329c671237381015862316a971fa310383b4a"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 0.12979328632354736,
+      "known_CPU_seconds": 0.109625,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_Cbest_preparation_collection_failure",
+      "category": "archive_qa",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_best_publication_runbook_v1/preparation_tests/whole_child_timing.json",
+        "sha256": "e844c11ca99bcfe2f075f5607e063491adc84b05cb9fabdb8b84f022f25f226f"
+      },
+      "wall_pointer": "/whole_wall_seconds",
+      "wall_seconds": 1.723019003868103,
+      "known_CPU_seconds": 1.753133,
+      "original_returncode": 2,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_Cbest_preparation_importlib171_tests",
+      "category": "archive_qa",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_best_publication_runbook_v1/preparation_tests_importlib/whole_child_timing.json",
+        "sha256": "e67ca0be4ac2fd1fe00c8786825b17e168c52b5864d26b4b30b12651af306718"
+      },
+      "wall_pointer": "/whole_wall_seconds",
+      "wall_seconds": 2.1369420550763607,
+      "known_CPU_seconds": 2.281813,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_Cbest_explicit_permission_tests",
+      "category": "archive_qa",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_best_publication_runbook_v1/permission_gate_tests/whole_child_timing.json",
+        "sha256": "9bd75c3cf6cdc1a1765207a39cc0e19b9c37e1ef54fac0b3dd94d1a572d9224c"
+      },
+      "wall_pointer": "/whole_wall_seconds",
+      "wall_seconds": 0.3765859715640545,
+      "known_CPU_seconds": 0.374567,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_Cbest_independent_original_probe",
+      "category": "archive_qa",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_best_publication_independent_review_v1/whole_probe_timing.json",
+        "sha256": "a13acd7fb1216da04b8ec314dd30ac80cca5c280e3361a20a6d6f46f5ed9e38b"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 0.10777314379811287,
+      "known_CPU_seconds": 0.106623,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_Cbest_independent_explicit_permission_probe",
+      "category": "archive_qa",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_best_publication_independent_review_v1/whole_explicit_authority_v2_probe_timing.json",
+        "sha256": "13700b6bf8685233725fdf1d49b3c1aab24239cd63e1e48deebec8cc6211b5f3"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 0.06256147474050522,
+      "known_CPU_seconds": 0.061806999999999994,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_behavioral_presentation_synthetic_smoke_v1",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/behavioral_presentation_preparation_v1/whole_smoke_timing.json",
+        "sha256": "87a07c84f7926b41f62c958a961ad6cd406a8348bbc196131059be34a47fbb98"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 20.95235274359584,
+      "known_CPU_seconds": 29.950682,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_behavioral_presentation_synthetic_smoke_v2",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/behavioral_presentation_preparation_v2/whole_smoke_timing.json",
+        "sha256": "0a87c09fc315ea245356a2aa0e720267c9eec646b687a42eaf1afed6b6bcdb55"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 21.449059471488,
+      "known_CPU_seconds": 30.552888,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_Cmodel_review_tests_attempt1",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/tests_attempt1/whole_child_timing.json",
+        "sha256": "cf32ae0004bc84a0f2b531423065f3fbd921d042b02bbf0fbd0adae62b231109"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 7.624306183308363,
+      "known_CPU_seconds": 80.636787,
+      "original_returncode": 1,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_Cmodel_review_tests_attempt2",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/tests_attempt2/whole_child_timing.json",
+        "sha256": "131decbd82ec501898866e6c3b6d6f056913e32d0173bdf5263de36cb834d306"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 7.077109880745411,
+      "known_CPU_seconds": 11.202818,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_Cmodel_review_tests_attempt3",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/tests_attempt3/whole_child_timing.json",
+        "sha256": "8962793f7f032521b770e61664691e442e9d00979245309310783d09dd159723"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 7.728532120585442,
+      "known_CPU_seconds": 12.216194,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_Cmodel_review_tests_final",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/tests_final/tests_whole_child_timing.json",
+        "sha256": "a5526810470aa47b34748fa338ceafc94d25848b32c420aa8c2bb82464051f94"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 7.931991785764694,
+      "known_CPU_seconds": 12.328554,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_Cmodel_review_tests_stable_source",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/tests_stable_source/whole_child_timing.json",
+        "sha256": "c7c7995920c05f50d46c5f4cf985bacea143592a6009180792beaaf48de37877"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 7.948721818625927,
+      "known_CPU_seconds": 12.313065,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_Cmodel_review_toy_cli",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/toy_cli_whole_child_timing.json",
+        "sha256": "d4a308d672a315291c368a9310f0517acd33106c673e776533b467fbf8ea4e53"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 13.144849460572004,
+      "known_CPU_seconds": 20.643247,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_Cmodel_review_toy_cli_stable_source",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/toy_cli_stable_source/whole_child_timing.json",
+        "sha256": "6c3086cd03aff034c2dd9b2057c3fa0f9bdc8a9100b4e9b33f2bb8d45e33bbf5"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 13.317339926958084,
+      "known_CPU_seconds": 20.858488,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_Cmodel_review_regression_failed",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_schema_repair_v1/regression_whole_child_timing.json",
+        "sha256": "df373c04d80b673c649e3ca19d3737aee9deca11373bbc4a4fdbda861844cf3e"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 8.435614384710789,
+      "known_CPU_seconds": 12.934045000000001,
+      "original_returncode": 1,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_Cmodel_review_regression_fixed41",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_schema_repair_v1/regression_attempt2_whole_child_timing.json",
+        "sha256": "e12b7166f2a9d110f870cbd0bc11c224319629041053b9698c5a923b4e469640"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 8.049041021615267,
+      "known_CPU_seconds": 12.552135,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_Cmodel_review_schema_audit_syntax_failure",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_schema_repair_v1/actual_schema_audit_whole_child_timing.json",
+        "sha256": "0b68faee9791fe9e5ac8840d588e6a023145028158bf8ba954c4f37b81531151"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 0.019942771643400192,
+      "known_CPU_seconds": 0.019531999999998995,
+      "original_returncode": 1,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_Cmodel_review_schema_audit_actual_metadata",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_schema_repair_v1/actual_schema_audit_attempt2_whole_child_timing.json",
+        "sha256": "1e836e0199fb8b3142e9d649978f78f5709740ffa02251938d3d36ccb22cfdc1"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 0.3026620037853718,
+      "known_CPU_seconds": 0.411751,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_C410_best_batch",
+      "category": "lossless_export",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/additional_endpoint_actual_v4/C410_best_batch/whole_child_timing.json",
+        "sha256": "c24ba9a50917cf88478bdccd71c79feb2f0541fe4a2572afa155b68c99f74d5a"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 1953.1042039617896,
+      "known_CPU_seconds": 1969.556646,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_C410_best_publication_metadata_review",
+      "category": "storage_publication",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_best_publication_metadata_review_actual_v1/whole_child_timing.json",
+        "sha256": "16fa92250b72494a5a99c0bde57a6d08905f8fffbe65e622e1a4ebea878c41c9"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 2.308287311345339,
+      "known_CPU_seconds": 2.3107420000000003,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_report_delivery_section7_render_v1",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/report_delivery_section7_update_v1/render_whole_child_timing.json",
+        "sha256": "42fd38cfba4630db7d8732162ace5543fdfc5b6b1705ae57c8852e7fd716cb67"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 12.414517648518085,
+      "known_CPU_seconds": 12.37507,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_report_delivery_section7_render_v2",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/report_delivery_section7_update_v2/render_whole_child_timing.json",
+        "sha256": "a6d34a7460d58856d5f55157db00e8821873392bc0f504d0589ee42aceee217f"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 12.859898209571838,
+      "known_CPU_seconds": 12.806248,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_report_delivery_section7_render_v3",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/report_delivery_section7_update_v3/render_whole_child_timing.json",
+        "sha256": "8cf222cc78f04a619c1aadab116a5867bf53816328ab84ca09374b1d3685bb9d"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 12.487890485674143,
+      "known_CPU_seconds": 12.453244999999999,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_report_QA_delivery_section7_v1",
+      "category": "archive_qa",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/report_review/delivery_section7_update_v1/whole_child_timing.json",
+        "sha256": "3fe6591b393493d20f4c87ab85032c4d102ec69be474371be5541d11e2d0dd58"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 2.5984970554709435,
+      "known_CPU_seconds": 2.6967040000000004,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_report_QA_delivery_section7_v3",
+      "category": "archive_qa",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/report_review/delivery_section7_update_v3/whole_child_timing.json",
+        "sha256": "da0debd4766aa60fa3fa955ff4106af0f58931d4351c0778f99182bdadb1ca34"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 2.481557536870241,
+      "known_CPU_seconds": 2.581506,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_snapshot1918_build",
+      "category": "lossless_export",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/snapshot_1918_build/whole_process_timing.json",
+        "sha256": "49252fa2f45cad226aadb88936bb043cc83802775db7f44a9d1cf6af03607338"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 111.66101625934243,
+      "known_CPU_seconds": 110.284329,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_snapshot1918_publication",
+      "category": "storage_publication",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/snapshot_1918_publication/whole_child_timing.json",
+        "sha256": "d607a04f901e6c4c98afdddf7e6958268f836b4b166b0e49cba9459ee7a55883"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 6.030017629265785,
+      "known_CPU_seconds": 3.188573,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_snapshot1918_bounded_review_attempt1",
+      "category": "archive_qa",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/snapshot_1918_independent_bounded_review_v1/whole_child_timing.json",
+        "sha256": "ecce8b1f8b3dc570b523442a3877a2f22fd284471b21225120ca6b862630a482"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 21.441286388784647,
+      "known_CPU_seconds": 19.779651,
+      "original_returncode": 1,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_snapshot1918_bounded_review_attempt2",
+      "category": "archive_qa",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/snapshot_1918_independent_bounded_review_v2/whole_child_timing.json",
+        "sha256": "46ad5eeb9ee7aa567aadca5b07cfb88ebeb47532ddd961f378a4e3f5d56d6868"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 32.06563150137663,
+      "known_CPU_seconds": 29.998936999999998,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_evaluation_budget_v6_refresh1925_attempt1",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_1925_v1/whole_child_timing.json",
+        "sha256": "583fba9deecebd41512ccc99ee40da074179feb1926ab9c826d66b26995325fd"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 1.409778043627739,
+      "known_CPU_seconds": 1.470341,
+      "original_returncode": 3,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_evaluation_budget_v6_refresh1925_attempt2",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_1925_v2/whole_child_timing.json",
+        "sha256": "42abb061908089311a8ac4f39b19c1a03b29cb4be736376495fb206c4a5ae0eb"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 1.5884364247322083,
+      "known_CPU_seconds": 1.5943559999999999,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_evaluation_budget1925_independent_description",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_1925_v2/whole_description_timing.json",
+        "sha256": "fdd7f4c0ce592d356a4a4e4d2d5ef5b9614f1042a1138aaf7f417ebeb152d6f2"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 0.06095944717526436,
+      "known_CPU_seconds": 0.059629999999999996,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_C410_best_publication_independent_actual_check",
+      "category": "storage_publication",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_best_publication_independent_acceptance_v1/whole_independent_check_timing_attempt1.json",
+        "sha256": "00bf90a0111d86cb09670f2ba289fb0c38f385630cb72edcdeb8424bbd81b586"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 0.2671946659684181,
+      "known_CPU_seconds": 0.261084,
+      "original_returncode": 0,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_pending_v8_sources_attempt1_failed",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v8_pending_v1/preparation_whole_child_timing.json",
+        "sha256": "0d6b1664b4fd68ed6ca5ee6ed9e10303729c538298775c1bdf851633990d5911"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 0.07484787330031395,
+      "known_CPU_seconds": 0.073937,
+      "original_returncode": 1,
+      "additive_parent": true
+    },
+    {
+      "id": "v8_pending_v8_sources_attempt2_success",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v8_pending_v1/preparation_attempt2_whole_child_timing.json",
+        "sha256": "d3548ff773b8e03fe4a4e7520f47803538ef8f43c7e579d86043801d2c83bb44"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 0.07413392513990402,
+      "known_CPU_seconds": 0.07342,
+      "original_returncode": 0,
+      "additive_parent": true
+    }
+  ],
+  "regions_separate_nonadditive": [
+    {
+      "id": "v8_A_remaining93_independent_metadata_region",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/docs/A_remaining_final_durable_publication_independent_review_v1.json",
+        "sha256": "307324a400159d85a046bdc6766721c7984e0d9296d74d02b98bf3c64500bc27"
+      },
+      "wall_pointer": "/timing/wall_seconds",
+      "wall_seconds": 0.013571098446846008,
+      "known_CPU_seconds": 0.009336,
+      "original_returncode": null,
+      "additive_parent": false
+    },
+    {
+      "id": "v8_C410_best_sample_independent_region",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_best_sample_independent_review_v1/REVIEW.json",
+        "sha256": "a80ff86c1e3976bf30f04e2e59c04c6373399c99e97849dbfa11fc282162c3d9"
+      },
+      "wall_pointer": "/audit_region_wall_seconds",
+      "wall_seconds": 0.0795803852379322,
+      "known_CPU_seconds": 0.078971,
+      "original_returncode": null,
+      "additive_parent": false
+    },
+    {
+      "id": "v8_B_native_preparation_region",
+      "category": "archive_qa",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_preparation_v1/preparation_receipt.json",
+        "sha256": "f13b3c054ea14959df2e26ae98df116adf90404df3a3d8a0204fd3dbd893f50d"
+      },
+      "wall_pointer": "/timing/wall_seconds",
+      "wall_seconds": 0.11657911539077759,
+      "known_CPU_seconds": 0.07339399999999999,
+      "original_returncode": null,
+      "additive_parent": false
+    },
+    {
+      "id": "v8_B_native_schema_guard_region",
+      "category": "archive_qa",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_preparation_v1/schema_guard_checks.json",
+        "sha256": "e02c32ce5838e3cf9bda825a884c131dc8cba0af86a1c2428ef171dc02a1da71"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 0.0015232190489768982,
+      "known_CPU_seconds": 0.0015158470000000007,
+      "original_returncode": null,
+      "additive_parent": false
+    },
+    {
+      "id": "v8_Cbest_preparation_region",
+      "category": "archive_qa",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_best_publication_runbook_v1/preparation_receipt.json",
+        "sha256": "626a8fb0542ad9eca8d79cbee48901aad874aaf4c62a96960ffe49b5911ab091"
+      },
+      "wall_pointer": "/timer/wall_seconds",
+      "wall_seconds": 0.06986260414123535,
+      "known_CPU_seconds": 0.069217,
+      "original_returncode": null,
+      "additive_parent": false
+    },
+    {
+      "id": "v8_delivery_guide_v5_manifest_union_region",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/results/delivery_capacity_guide_v5/metadata_calculation.json",
+        "sha256": "722c5a6fe02b772c722772174e817fcfa213d3e2fbbe31913ba1db82fcea00e9"
+      },
+      "wall_pointer": "/timing/wall_seconds",
+      "wall_seconds": 0.03128630667924881,
+      "known_CPU_seconds": 0.024008999999999996,
+      "original_returncode": null,
+      "additive_parent": false
+    },
+    {
+      "id": "v8_delivery_guide_v5_navigation_region",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/docs/交付文件与恢复容量指南_来源核对_v5.json",
+        "sha256": "bb51825b0bc47ac20306a85228346ac0d8c35ab14f83a50b85a7f210331b28ef"
+      },
+      "wall_pointer": "/measured_regions/guide_and_navigation_region/wall_seconds",
+      "wall_seconds": 0.003734264522790909,
+      "known_CPU_seconds": 0.003211999999999998,
+      "original_returncode": null,
+      "additive_parent": false
+    },
+    {
+      "id": "v8_C410_best_publication_internal_region",
+      "category": "storage_publication",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/docs/C410_best_weights_durable_publication.json",
+        "sha256": "139e54cfcbae7763a1b651abd4b54c2646dbc1af99dff26787cce0b28107091a"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 195.2169531546533,
+      "known_CPU_seconds": null,
+      "original_returncode": null,
+      "additive_parent": false
+    },
+    {
+      "id": "v8_snapshot1918_allocation_region",
+      "category": "storage_wait_and_reservation",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/snapshot_1918_publication/actual_allocation.json",
+        "sha256": "bb213ff3d42cb891604d5d416a92ee743107f56c5aa9fb15f1468ed471e19aca"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 12.091926030814648,
+      "known_CPU_seconds": 1.63836,
+      "original_returncode": null,
+      "additive_parent": false
+    },
+    {
+      "id": "v8_pending_v8_sources_finalization_region",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v8_pending_v1/finalization_region_receipt.json",
+        "sha256": "f1cda5aed03a29564523a6a05ae18523b46a2de8254b1c16ee77d422d612b6a7"
+      },
+      "wall_pointer": "/region_wall_seconds",
+      "wall_seconds": 0.01594560593366623,
+      "known_CPU_seconds": 0.012331000000000002,
+      "original_returncode": null,
+      "additive_parent": false
+    },
+    {
+      "id": "v8_delivery_guide_v6_union_region",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/results/delivery_capacity_guide_v6/metadata_calculation.json",
+        "sha256": "7c6d4c5c2ad34fbc053128352da6bae6ecde1ff31b0b236ad24ac2522b613ca7"
+      },
+      "wall_pointer": "/timing/wall_seconds",
+      "wall_seconds": 0.05291920155286789,
+      "known_CPU_seconds": 0.040570999999999996,
+      "original_returncode": null,
+      "additive_parent": false
+    },
+    {
+      "id": "v8_delivery_guide_v6_navigation_region",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/docs/交付文件与恢复容量指南_来源核对_v6.json",
+        "sha256": "1035f596606bd2e8a5ba18aaa8e58b303b624742367b4c2ef4ba50c7762721fb"
+      },
+      "wall_pointer": "/measured_regions/guide_and_navigation_region/wall_seconds",
+      "wall_seconds": 0.0005807764828205109,
+      "known_CPU_seconds": 0.0005730000000000006,
+      "original_returncode": null,
+      "additive_parent": false
+    },
+    {
+      "id": "v8_delivery_guide_v6_source_QA_region",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/results/delivery_capacity_guide_v6/source_QA.json",
+        "sha256": "eee8d49d390a087324a4a6d82ee045e9bb97edf42fb5498f53bca01a01db97d5"
+      },
+      "wall_pointer": "/timer/region_wall_seconds",
+      "wall_seconds": 0.013622421771287918,
+      "known_CPU_seconds": 0.010211000000000001,
+      "original_returncode": null,
+      "additive_parent": false
+    },
+    {
+      "id": "v8_delivery_guide_v7_snapshot_update_region",
+      "category": "cpu_analysis",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/docs/交付文件与恢复容量指南_来源核对_v7.json",
+        "sha256": "8e157587b322e1ff62813ac9937dd150b39786b9d31432af0e62a0b952afb906"
+      },
+      "wall_pointer": "/measured_region/wall_seconds",
+      "wall_seconds": 0.013521268963813782,
+      "known_CPU_seconds": 0.002117,
+      "original_returncode": null,
+      "additive_parent": false
+    }
+  ],
+  "parent_operations": 46,
+  "region_operations": 14,
+  "parent_wall_increment_seconds": 12678.339845579118,
+  "parent_known_CPU_increment_seconds": 12498.669467000003,
+  "partial_region_wall_separate_seconds": 207.72160545364022,
+  "source_path_and_SHA_pointer_dedup_checked_against_all_v7_operations": true,
+  "skipped_existing_duplicates": [],
+  "original_metadata_sources": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v8_pending_v1/pending_sources.json",
+      "sha256": "aadb3e80993940f32aef2c1d0f0cf744185d7b4376c78bb3fd8bd112264d0da5"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v8_pending_v1/supplement_01_completed_C410_best.json",
+      "sha256": "9b4f44cdbba805edc5a864775cb574164cb89932bfc20408752ad882c68aa44c"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v8_pending_v1/supplement_02_C410_best_publication_region.json",
+      "sha256": "69bcbf449c03f834c1b5c7a513a7bffcbc0400b73570598625cd50516058eeef"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v6/trial_whole_child_timing.json",
+      "sha256": "eabe8cd7322677e912234071ee9bd8fd98ec6e4e5f9286f91b0b9bb99597ee40"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v7/collection_whole_child_timing.json",
+      "sha256": "29f8d5d4013c9e801ea07a5c7ee8e7566baebb22d8595d8d74f2a886a5971a6b"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/additional_endpoint_actual_v4/A_remaining_final_batch/whole_child_timing.json",
+      "sha256": "c6d6ee7f817cd2bafe0ea93734a4710644b91da55e8964a60c56930ab0770d86"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/A_remaining_final_publication_metadata_review_actual_v1/whole_child_timing.json",
+      "sha256": "3e4a6c5ce98bad365916e1f5da9a3c81d433d1dde9892e65d375b3d7774b2ecb"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/A_remaining_final_publication_actual_v1/whole_child_timing.json",
+      "sha256": "8b835cbbdd245e698d00db26925d4b8bf2130b159e63ef88dddae86a6147fde4"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/docs/A_remaining_final_durable_publication_independent_review_v1.json",
+      "sha256": "307324a400159d85a046bdc6766721c7984e0d9296d74d02b98bf3c64500bc27"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/additional_endpoint_actual_v4/C410_best_sample/whole_child_timing.json",
+      "sha256": "24b41e8a361a0e1341005151f107406a2bd43c59f33011dae82e5605fb4f7de3"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_best_sample_independent_review_v1/REVIEW.json",
+      "sha256": "a80ff86c1e3976bf30f04e2e59c04c6373399c99e97849dbfa11fc282162c3d9"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_preparation_v1/preparation_receipt.json",
+      "sha256": "f13b3c054ea14959df2e26ae98df116adf90404df3a3d8a0204fd3dbd893f50d"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_preparation_v1/schema_guard_checks.json",
+      "sha256": "e02c32ce5838e3cf9bda825a884c131dc8cba0af86a1c2428ef171dc02a1da71"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_preparation_v1/lock_regression_tests/whole_child_timing.json",
+      "sha256": "7ed746d253528e8b7cdd9cab3c404c66e4a1d96bb16cc3e385102ea257bc6574"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_independent_review_v1/whole_bound_identity_probe_timing.json",
+      "sha256": "3e9761cc6aed38290f875bff53dc0cd68dae575b65c7617082bc2daaced0de02"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_independent_review_v1/whole_lock_revision_probe_timing.json",
+      "sha256": "0cf9f13c442feb25da22754918f3de35b8ff3fe18d23aea7626424c9beace7ad"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_actual_parent_v1/whole_child_timing.json",
+      "sha256": "367522dfd3fc966a8ba33eaa2a60705f26d71d62f7e5642f5d88dfef17144018"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_independent_acceptance_v1/whole_child_timing.json",
+      "sha256": "76a163da74be821515431a7134c329c671237381015862316a971fa310383b4a"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_best_publication_runbook_v1/preparation_tests/whole_child_timing.json",
+      "sha256": "e844c11ca99bcfe2f075f5607e063491adc84b05cb9fabdb8b84f022f25f226f"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_best_publication_runbook_v1/preparation_tests_importlib/whole_child_timing.json",
+      "sha256": "e67ca0be4ac2fd1fe00c8786825b17e168c52b5864d26b4b30b12651af306718"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_best_publication_runbook_v1/permission_gate_tests/whole_child_timing.json",
+      "sha256": "9bd75c3cf6cdc1a1765207a39cc0e19b9c37e1ef54fac0b3dd94d1a572d9224c"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_best_publication_runbook_v1/preparation_receipt.json",
+      "sha256": "626a8fb0542ad9eca8d79cbee48901aad874aaf4c62a96960ffe49b5911ab091"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_best_publication_independent_review_v1/whole_probe_timing.json",
+      "sha256": "a13acd7fb1216da04b8ec314dd30ac80cca5c280e3361a20a6d6f46f5ed9e38b"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_best_publication_independent_review_v1/whole_explicit_authority_v2_probe_timing.json",
+      "sha256": "13700b6bf8685233725fdf1d49b3c1aab24239cd63e1e48deebec8cc6211b5f3"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/behavioral_presentation_preparation_v1/whole_smoke_timing.json",
+      "sha256": "87a07c84f7926b41f62c958a961ad6cd406a8348bbc196131059be34a47fbb98"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/behavioral_presentation_preparation_v2/whole_smoke_timing.json",
+      "sha256": "0a87c09fc315ea245356a2aa0e720267c9eec646b687a42eaf1afed6b6bcdb55"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/delivery_capacity_guide_v5/metadata_calculation.json",
+      "sha256": "722c5a6fe02b772c722772174e817fcfa213d3e2fbbe31913ba1db82fcea00e9"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/docs/交付文件与恢复容量指南_来源核对_v5.json",
+      "sha256": "bb51825b0bc47ac20306a85228346ac0d8c35ab14f83a50b85a7f210331b28ef"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/tests_attempt1/whole_child_timing.json",
+      "sha256": "cf32ae0004bc84a0f2b531423065f3fbd921d042b02bbf0fbd0adae62b231109"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/tests_attempt2/whole_child_timing.json",
+      "sha256": "131decbd82ec501898866e6c3b6d6f056913e32d0173bdf5263de36cb834d306"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/tests_attempt3/whole_child_timing.json",
+      "sha256": "8962793f7f032521b770e61664691e442e9d00979245309310783d09dd159723"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/tests_final/tests_whole_child_timing.json",
+      "sha256": "a5526810470aa47b34748fa338ceafc94d25848b32c420aa8c2bb82464051f94"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/tests_stable_source/whole_child_timing.json",
+      "sha256": "c7c7995920c05f50d46c5f4cf985bacea143592a6009180792beaaf48de37877"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/toy_cli_whole_child_timing.json",
+      "sha256": "d4a308d672a315291c368a9310f0517acd33106c673e776533b467fbf8ea4e53"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/toy_cli_stable_source/whole_child_timing.json",
+      "sha256": "6c3086cd03aff034c2dd9b2057c3fa0f9bdc8a9100b4e9b33f2bb8d45e33bbf5"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_schema_repair_v1/regression_whole_child_timing.json",
+      "sha256": "df373c04d80b673c649e3ca19d3737aee9deca11373bbc4a4fdbda861844cf3e"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_schema_repair_v1/regression_attempt2_whole_child_timing.json",
+      "sha256": "e12b7166f2a9d110f870cbd0bc11c224319629041053b9698c5a923b4e469640"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_schema_repair_v1/actual_schema_audit_whole_child_timing.json",
+      "sha256": "0b68faee9791fe9e5ac8840d588e6a023145028158bf8ba954c4f37b81531151"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_schema_repair_v1/actual_schema_audit_attempt2_whole_child_timing.json",
+      "sha256": "1e836e0199fb8b3142e9d649978f78f5709740ffa02251938d3d36ccb22cfdc1"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/additional_endpoint_actual_v4/C410_best_batch/whole_child_timing.json",
+      "sha256": "c24ba9a50917cf88478bdccd71c79feb2f0541fe4a2572afa155b68c99f74d5a"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_best_publication_metadata_review_actual_v1/whole_child_timing.json",
+      "sha256": "16fa92250b72494a5a99c0bde57a6d08905f8fffbe65e622e1a4ebea878c41c9"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/docs/C410_best_weights_durable_publication.json",
+      "sha256": "139e54cfcbae7763a1b651abd4b54c2646dbc1af99dff26787cce0b28107091a"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/report_delivery_section7_update_v1/render_whole_child_timing.json",
+      "sha256": "42fd38cfba4630db7d8732162ace5543fdfc5b6b1705ae57c8852e7fd716cb67"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/report_delivery_section7_update_v2/render_whole_child_timing.json",
+      "sha256": "a6d34a7460d58856d5f55157db00e8821873392bc0f504d0589ee42aceee217f"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/report_delivery_section7_update_v3/render_whole_child_timing.json",
+      "sha256": "8cf222cc78f04a619c1aadab116a5867bf53816328ab84ca09374b1d3685bb9d"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/report_review/delivery_section7_update_v1/whole_child_timing.json",
+      "sha256": "3fe6591b393493d20f4c87ab85032c4d102ec69be474371be5541d11e2d0dd58"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/report_review/delivery_section7_update_v3/whole_child_timing.json",
+      "sha256": "da0debd4766aa60fa3fa955ff4106af0f58931d4351c0778f99182bdadb1ca34"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/snapshot_1918_build/whole_process_timing.json",
+      "sha256": "49252fa2f45cad226aadb88936bb043cc83802775db7f44a9d1cf6af03607338"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/snapshot_1918_publication/whole_child_timing.json",
+      "sha256": "d607a04f901e6c4c98afdddf7e6958268f836b4b166b0e49cba9459ee7a55883"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/snapshot_1918_publication/actual_allocation.json",
+      "sha256": "bb213ff3d42cb891604d5d416a92ee743107f56c5aa9fb15f1468ed471e19aca"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/snapshot_1918_independent_bounded_review_v1/whole_child_timing.json",
+      "sha256": "ecce8b1f8b3dc570b523442a3877a2f22fd284471b21225120ca6b862630a482"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/snapshot_1918_independent_bounded_review_v2/whole_child_timing.json",
+      "sha256": "46ad5eeb9ee7aa567aadca5b07cfb88ebeb47532ddd961f378a4e3f5d56d6868"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_1925_v1/whole_child_timing.json",
+      "sha256": "583fba9deecebd41512ccc99ee40da074179feb1926ab9c826d66b26995325fd"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_1925_v2/whole_child_timing.json",
+      "sha256": "42abb061908089311a8ac4f39b19c1a03b29cb4be736376495fb206c4a5ae0eb"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_1925_v2/whole_description_timing.json",
+      "sha256": "fdd7f4c0ce592d356a4a4e4d2d5ef5b9614f1042a1138aaf7f417ebeb152d6f2"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_best_publication_independent_acceptance_v1/whole_independent_check_timing_attempt1.json",
+      "sha256": "00bf90a0111d86cb09670f2ba289fb0c38f385630cb72edcdeb8424bbd81b586"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v8_pending_v1/preparation_whole_child_timing.json",
+      "sha256": "0d6b1664b4fd68ed6ca5ee6ed9e10303729c538298775c1bdf851633990d5911"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v8_pending_v1/preparation_attempt2_whole_child_timing.json",
+      "sha256": "d3548ff773b8e03fe4a4e7520f47803538ef8f43c7e579d86043801d2c83bb44"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v8_pending_v1/finalization_region_receipt.json",
+      "sha256": "f1cda5aed03a29564523a6a05ae18523b46a2de8254b1c16ee77d422d612b6a7"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/delivery_capacity_guide_v6/metadata_calculation.json",
+      "sha256": "7c6d4c5c2ad34fbc053128352da6bae6ecde1ff31b0b236ad24ac2522b613ca7"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/docs/交付文件与恢复容量指南_来源核对_v6.json",
+      "sha256": "1035f596606bd2e8a5ba18aaa8e58b303b624742367b4c2ef4ba50c7762721fb"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/delivery_capacity_guide_v6/source_QA.json",
+      "sha256": "eee8d49d390a087324a4a6d82ee045e9bb97edf42fb5498f53bca01a01db97d5"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/docs/交付文件与恢复容量指南_来源核对_v7.json",
+      "sha256": "8e157587b322e1ff62813ac9937dd150b39786b9d31432af0e62a0b952afb906"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/report_delivery_section7_update_v2/correction_receipt.json",
+      "sha256": "c098aab76ac89d677991f91237fb3f94ab2a1240f3844196b929ea5ebc941275"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/snapshot_1918_independent_bounded_review_v2/COMPLETE.json",
+      "sha256": "962b2dbbe388a8cf1c8e9603b6e53ed33d195a3529609b04098bcb3b489efb2d"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_best_publication_actual_v1/outer_timing_receipt_failure.json",
+      "sha256": "8c284e922503b2fd9e747e377db776aa73e146c9ff1f886901e775193626b13f"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_best_publication_actual_v1/ROOT_acceptance.json",
+      "sha256": "ce7c7905d5f7a424eb3832bd83080f17b906b5b45fddd685170338ef3623e3a8"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_best_publication_independent_acceptance_v1/COMPLETE.json",
+      "sha256": "061878b13d99d9c044af5da3e44725c0afd100aa1d910d1cfce10f5befa88287"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/delivery_capacity_guide_v6/initial_failed_calculation.json",
+      "sha256": "67985af2aef35152bc391ab64e577a92a1b2a1b4117e8d3da17f68f059f5f68f"
+    }
+  ],
+  "dynamic_C_opaque_and_training_growth_separate_from_static_registration_increment": true,
+  "whole_study_complete": false,
+  "current_collection_self_cost_registered": false,
+  "preparation_region": {
+    "wall_seconds": 0.052090343087911606,
+    "self_user_seconds": 0.039506,
+    "self_system_seconds": 0.012068,
+    "scope": "Only this preparation script main-entry through normalization/config/source reads; manual authoring and final delta serialization excluded. Not included in v8 ledger."
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "status": "passed_actual_v8_cost_collection_observed_snapshot_not_final",
+  "at_utc": "2026-11-06T19:34:52.719570+00:00",
+  "source_spec": {
+    "path": "/tmp/grad-research-20261106/worktree/configs/cost_inventory_final_sources_v8.json",
+    "sha256": "572cb3bf1e53bac59f0d5f5a60341e1c8a78dd1b592c1cf6b5689dfef673ec03",
+    "bytes": 290770
+  },
+  "unchanged_collector": {
+    "path": "/tmp/grad-research-20261106/worktree/scripts/inventory_study_costs_final_v2.py",
+    "sha256": "864effb89f20dbfce3ba6ce51db8eb8351b087c2ac92d255274fe6267753f6ae",
+    "bytes": 16117
+  },
+  "unchanged_IO_audit": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v7/run_collection_with_IO_audit.py",
+    "sha256": "a3513d44a64adbab37feafcb1f7d0e15a31a61defac7572cd5482621775bede9",
+    "bytes": 3802
+  },
+  "inventory": {
+    "path": "/tmp/grad-research-20261106/worktree/results/cost_inventory_final_v8_cpu_collection_20261106_attempt1/inventory.json",
+    "sha256": "9d48a7bd63299300204ce5d7c5c214f92860d071498b0c398f2c547e0de173d2",
+    "bytes": 11289533
+  },
+  "collection_receipt": {
+    "path": "/tmp/grad-research-20261106/worktree/results/cost_inventory_final_v8_cpu_collection_20261106_attempt1/collection_receipt.json",
+    "sha256": "28c7f5042cf71005eba88ad66a7312d87a955ad521be2981c337aa06604aa2e9",
+    "bytes": 209554
+  },
+  "IO_audit": {
+    "path": "/tmp/grad-research-20261106/worktree/results/cost_inventory_final_v8_cpu_collection_20261106_attempt1/IO_audit.json",
+    "sha256": "25582594533b657e83264ecf19ec97f4d74ec1815ec9770537def3d554a8ff97",
+    "bytes": 128068
+  },
+  "collection_whole_child_timing": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v8/collection_whole_child_timing.json",
+    "sha256": "fc43f9a854a21e0be0e5f01384424e7067b934b11bf8512af39a2b3a2d4aa534",
+    "bytes": 1261
+  },
+  "source_preparation_whole_child_timing": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v8/preparation_whole_child_timing.json",
+    "sha256": "fa55cb4693e88e1c8ba83092b59799bdc7741a48dca3a63f6bb9aa1920c01abf",
+    "bytes": 545
+  },
+  "registration_delta": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v8/registration_delta.json",
+    "sha256": "fa1f306e29151f438ed9eae0661b0a3b88e1f05fe2d68159462f51e074f35a7c",
+    "bytes": 50801
+  },
+  "QC": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v8/QC.json",
+    "sha256": "c22bbc166892d27df1d0827421163828262edda45aca411a34c1a45ea235eb07",
+    "bytes": 32070
+  },
+  "summary": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v8/收集与增量说明.md",
+    "sha256": "d8c0eb8ad996631d3caff206cf09cca8b10fcf7206034cb8d136cf409d492609",
+    "bytes": 3486
+  },
+  "static_parent_operations": 46,
+  "static_region_operations": 14,
+  "dynamic_new_C_draft_operations": 7,
+  "static_parent_wall_increment_seconds": 12678.339845579118,
+  "dynamic_wall_delta_seconds": 2344.0494205355644,
+  "total_operational_disjoint_wall_delta_seconds": 15022.389266114682,
+  "partial_regions_nonadditive_wall_seconds": 207.72160545364022,
+  "measured_failed_actual_operations_retained": [
+    {
+      "id": "v8_Cbest_preparation_collection_failure",
+      "returncode": 2,
+      "wall_seconds": 1.723019003868103
+    },
+    {
+      "id": "v8_Cmodel_review_tests_attempt1",
+      "returncode": 1,
+      "wall_seconds": 7.624306183308363
+    },
+    {
+      "id": "v8_Cmodel_review_regression_failed",
+      "returncode": 1,
+      "wall_seconds": 8.435614384710789
+    },
+    {
+      "id": "v8_Cmodel_review_schema_audit_syntax_failure",
+      "returncode": 1,
+      "wall_seconds": 0.019942771643400192
+    },
+    {
+      "id": "v8_snapshot1918_bounded_review_attempt1",
+      "returncode": 1,
+      "wall_seconds": 21.441286388784647
+    },
+    {
+      "id": "v8_evaluation_budget_v6_refresh1925_attempt1",
+      "returncode": 3,
+      "wall_seconds": 1.409778043627739
+    },
+    {
+      "id": "v8_pending_v8_sources_attempt1_failed",
+      "returncode": 1,
+      "wall_seconds": 0.07484787330031395
+    }
+  ],
+  "current_collection_self_registered": false,
+  "opaque_score_SHA_actual_read_bytes": 456416316,
+  "weight_base_TAR_ZIP_tensor_read_bytes": 0,
+  "score_semantics_deserialized": false,
+  "old_v6_v7_and_science_unchanged": true,
+  "exact_copy_bindings": 432,
+  "exact_copy_unique_bytes": 24620818,
+  "whole_study_complete": false,
+  "manual_engineering_parent_seconds": null,
+  "reader_scope": "Only cost metadata, summary/log cost fields and opaque score-output streams under unchanged IO audit. No native model/checkpoint/archive/tensor payloads."
+}

@@ -1,12 +1,12 @@
 # 研究运行状态
 
-更新时间：2026-11-06T16:41:27.561472+00:00
+更新时间：2026-11-06T19:46:28.412179+00:00
 截止时间：2026-11-07 03:26:32 UTC（北京时间11:26）
-已用 13.25 小时；剩余 10.75 小时。
+已用 16.33 小时；剩余 7.67 小时。
 
 以下状态来自运行日志。配置完成不等于实验完成；正式结论以最终研究报告为准。
 
-当前阶段：410M长程NLL已独立复核并写入16页PDF；指定长程模型已从两份持久TAR实际恢复。1B/2.8B训练与A/B额外权重导出继续；其余测试、行为及归档重新训练QA待各自完整门禁。
+当前阶段：主36、A108新增、B60、C410长程24均已完成并分析；1B与2.8B继续训练。八权重包已持久发布，覆盖288实际端点/276完整指纹；B固定native单例CPU恢复及C410 best整包独立验收通过。19:18项目快照已持久发布并独立复核，含16页研究报告与12页答辩稿；成本v8独立复核及ROOT验收通过。C1B/2.8B及行为结果尚未解封。
 
 旧非确定性pilot/formal仅供诊断；主strict36为正式主结果。补充训练独立phase，截止00:00 UTC；主active_registry保留供分析与alias验证。
 
@@ -18,7 +18,7 @@
 | lambda_job_state（已隔离） | 16 | 0 | 0 | 0 |
 | lambda_v3_job_state（已隔离） | 16 | 0 | 0 | 0 |
 | lr_deterministic_v3_job_state | 4 | 0 | 0 | 0 |
-| supplemental_job_state | 574 | 4 | 29 | 0 |
+| supplemental_job_state | 591 | 4 | 12 | 0 |
 | v3_lr_eval_job_state（已隔离） | 4 | 0 | 0 | 0 |
 
 ## 当前单一调度器内的阶段
@@ -38,8 +38,8 @@
 | extended_v2_pythia_2p8b_m8_lambda | 16 | 0 | 0 | 0 |
 | primary_behavior_initial_timing | 1 | 0 | 0 | 0 |
 | extended_v2_pythia_410m_m64_formal | 24 | 0 | 0 | 0 |
-| extended_v2_pythia_1b_m32_formal | 5 | 4 | 15 | 0 |
-| extended_v2_pythia_2p8b_m8_h25m_formal | 1 | 0 | 14 | 0 |
+| extended_v2_pythia_1b_m32_formal | 20 | 0 | 4 | 0 |
+| extended_v2_pythia_2p8b_m8_h25m_formal | 3 | 4 | 8 | 0 |
 | planned_model_initial_timing_v1 | 2 | 0 | 0 | 0 |
 | replay_fit_diagnostic_v2 | 15 | 0 | 0 | 0 |
 | primary_independent_nll_test | 67 | 0 | 0 | 0 |

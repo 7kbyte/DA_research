@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/toy_cli_whole_child_timing.json",
+    "sha256": "d4a308d672a315291c368a9310f0517acd33106c673e776533b467fbf8ea4e53"
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 13.144849460572004,
+  "CPU_component_pointers": [
+    "/child_user_seconds",
+    "/child_system_seconds"
+  ],
+  "CPU_components": {
+    "/child_user_seconds": 14.409619999999999,
+    "/child_system_seconds": 6.233627
+  },
+  "recorded_inclusive_CPU_seconds": 20.643247,
+  "original_returncode": 0,
+  "scope": "Whole synthetic CLI smoke child includes both nested CLI/plot/bootstrap executions.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Measured wall copied; only named disjoint CPU components summed. Unknowns remain null; failed actual invocations preserve rc. No UTC estimates.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

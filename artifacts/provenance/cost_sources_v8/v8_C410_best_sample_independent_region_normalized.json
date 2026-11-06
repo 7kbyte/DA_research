@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_best_sample_independent_review_v1/REVIEW.json",
+    "sha256": "a80ff86c1e3976bf30f04e2e59c04c6373399c99e97849dbfa11fc282162c3d9"
+  },
+  "original_wall_pointer": "/audit_region_wall_seconds",
+  "wall_seconds": 0.0795803852379322,
+  "CPU_component_pointers": [
+    "/audit_region_user_seconds",
+    "/audit_region_system_seconds"
+  ],
+  "CPU_components": {
+    "/audit_region_user_seconds": 0.046375,
+    "/audit_region_system_seconds": 0.032596
+  },
+  "recorded_inclusive_CPU_seconds": 0.078971,
+  "original_returncode": null,
+  "scope": "Completed independent sample small-metadata/stat audit region; embedded sample and collector timer copies excluded.",
+  "timing_semantics": "partial_region_parent_unknown_not_additive",
+  "normalization": "Measured wall copied; only named disjoint CPU components summed. Unknowns remain null; failed actual invocations preserve rc. No UTC estimates.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

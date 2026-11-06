@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_validation_review_v1/completion_receipt.json",
+    "sha256": "b6b860b5808061da1318fefb5563c3b604a9cc7662ae7779f7a519c15001ca77"
+  },
+  "original_wall_pointer": "/post_review_region_wall_seconds",
+  "wall_seconds": 0.012522652745246887,
+  "CPU_component_pointers": [
+    "/post_review_region_user_cpu_seconds",
+    "/post_review_region_sys_cpu_seconds"
+  ],
+  "CPU_components": {
+    "/post_review_region_user_cpu_seconds": 0.011289999999999998,
+    "/post_review_region_sys_cpu_seconds": 0.0011750000000000007
+  },
+  "recorded_inclusive_CPU_seconds": 0.012464999999999999,
+  "original_returncode": null,
+  "scope": "Independent later post-import CSV/summary readback/small source hashes, outside prior review child. Not full engineering task.",
+  "timing_semantics": "independent_measured_body_region_after_imports",
+  "normalization": "Copy measured wall and sum only explicitly listed disjoint CPU components; never infer from UTC/bytes.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false,
+  "original_source_fields_or_semantics_changed": false
+}

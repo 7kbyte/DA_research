@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/results/delivery_capacity_guide_v6/source_QA.json",
+    "sha256": "eee8d49d390a087324a4a6d82ee045e9bb97edf42fb5498f53bca01a01db97d5"
+  },
+  "original_wall_pointer": "/timer/region_wall_seconds",
+  "wall_seconds": 0.013622421771287918,
+  "CPU_component_pointers": [
+    "/timer/region_self_user_seconds",
+    "/timer/region_self_system_seconds"
+  ],
+  "CPU_components": {
+    "/timer/region_self_user_seconds": 0.004177999999999999,
+    "/timer/region_self_system_seconds": 0.006033000000000002
+  },
+  "recorded_inclusive_CPU_seconds": 0.010211000000000001,
+  "original_returncode": null,
+  "scope": "Separate small-source SHA QA region, not the whole guide task.",
+  "timing_semantics": "partial_region_parent_unknown_not_additive",
+  "normalization": "Measured wall copied; only named disjoint CPU components summed. Unknowns remain null; failed actual invocations preserve rc. No UTC estimates.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

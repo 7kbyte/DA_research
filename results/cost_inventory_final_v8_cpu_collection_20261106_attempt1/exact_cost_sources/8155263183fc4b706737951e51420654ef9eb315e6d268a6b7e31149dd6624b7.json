@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v7/collection_whole_child_timing.json",
+    "sha256": "29f8d5d4013c9e801ea07a5c7ee8e7566baebb22d8595d8d74f2a886a5971a6b"
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 8.851966518908739,
+  "CPU_component_pointers": [
+    "/whole_child_user_seconds",
+    "/whole_child_sys_seconds"
+  ],
+  "CPU_components": {
+    "/whole_child_user_seconds": 6.488174,
+    "/whole_child_sys_seconds": 2.186305
+  },
+  "recorded_inclusive_CPU_seconds": 8.674479,
+  "original_returncode": 0,
+  "scope": "Successful v7 collector plus IO-audit child; its internal collector timer is nested.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Measured wall copied; only named disjoint CPU components summed. Unknowns remain null; failed actual invocations preserve rc. No UTC estimates.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

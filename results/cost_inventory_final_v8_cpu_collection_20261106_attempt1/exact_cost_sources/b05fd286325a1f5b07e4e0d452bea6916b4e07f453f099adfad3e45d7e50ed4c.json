@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_1925_v1/whole_child_timing.json",
+    "sha256": "583fba9deecebd41512ccc99ee40da074179feb1926ab9c826d66b26995325fd"
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 1.409778043627739,
+  "CPU_component_pointers": [
+    "/user_cpu_seconds",
+    "/sys_cpu_seconds"
+  ],
+  "CPU_components": {
+    "/user_cpu_seconds": 1.199546,
+    "/sys_cpu_seconds": 0.270795
+  },
+  "recorded_inclusive_CPU_seconds": 1.470341,
+  "original_returncode": 3,
+  "scope": "Independent actual score-blind budget producer child; attempt1 rc3 failure retained, attempt2 corrected success retained.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Measured wall copied; only named disjoint CPU components summed. Unknowns remain null; failed actual invocations preserve rc. No UTC estimates.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

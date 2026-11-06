@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/tests_final/tests_whole_child_timing.json",
+    "sha256": "a5526810470aa47b34748fa338ceafc94d25848b32c420aa8c2bb82464051f94"
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 7.931991785764694,
+  "CPU_component_pointers": [
+    "/child_user_seconds",
+    "/child_system_seconds"
+  ],
+  "CPU_components": {
+    "/child_user_seconds": 8.321419,
+    "/child_system_seconds": 4.007135
+  },
+  "recorded_inclusive_CPU_seconds": 12.328554,
+  "original_returncode": 0,
+  "scope": "Independent final targeted synthetic test child.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Measured wall copied; only named disjoint CPU components summed. Unknowns remain null; failed actual invocations preserve rc. No UTC estimates.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

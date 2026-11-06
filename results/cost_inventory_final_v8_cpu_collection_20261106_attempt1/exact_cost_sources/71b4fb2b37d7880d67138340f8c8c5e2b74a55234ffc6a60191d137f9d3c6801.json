@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v8_pending_v1/finalization_region_receipt.json",
+    "sha256": "f1cda5aed03a29564523a6a05ae18523b46a2de8254b1c16ee77d422d612b6a7"
+  },
+  "original_wall_pointer": "/region_wall_seconds",
+  "wall_seconds": 0.01594560593366623,
+  "CPU_component_pointers": [
+    "/region_self_user_seconds",
+    "/region_self_system_seconds"
+  ],
+  "CPU_components": {
+    "/region_self_user_seconds": 0.008006000000000003,
+    "/region_self_system_seconds": 0.004324999999999999
+  },
+  "recorded_inclusive_CPU_seconds": 0.012331000000000002,
+  "original_returncode": null,
+  "scope": "Independent small metadata finalization region; no complete manual parent timer.",
+  "timing_semantics": "partial_region_parent_unknown_not_additive",
+  "normalization": "Measured wall copied; only named disjoint CPU components summed. Unknowns remain null; failed actual invocations preserve rc. No UTC estimates.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

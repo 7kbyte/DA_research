@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v6/trial_whole_child_timing.json",
+    "sha256": "eabe8cd7322677e912234071ee9bd8fd98ec6e4e5f9286f91b0b9bb99597ee40"
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 6.833468526601791,
+  "CPU_component_pointers": [
+    "/whole_child_user_cpu_seconds",
+    "/whole_child_sys_cpu_seconds"
+  ],
+  "CPU_components": {
+    "/whole_child_user_cpu_seconds": 5.413159,
+    "/whole_child_sys_cpu_seconds": 1.282629
+  },
+  "recorded_inclusive_CPU_seconds": 6.695788,
+  "original_returncode": 0,
+  "scope": "Successful v6 collector spawn-to-exit; not previously charged to its own ledger.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Measured wall copied; only named disjoint CPU components summed. Unknowns remain null; failed actual invocations preserve rc. No UTC estimates.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

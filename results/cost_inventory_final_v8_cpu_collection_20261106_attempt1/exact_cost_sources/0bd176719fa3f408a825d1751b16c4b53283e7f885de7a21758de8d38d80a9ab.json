@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_durable_restore_actual_v1/whole_child_timing.json",
+    "sha256": "1a915c165c9c5065f0576051404fc5689bf98aea128453e8519f330c746c7167"
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 39.20801364630461,
+  "CPU_component_pointers": [
+    "/whole_child_user_cpu_seconds",
+    "/whole_child_sys_cpu_seconds"
+  ],
+  "CPU_components": {
+    "/whole_child_user_cpu_seconds": 23.403308,
+    "/whole_child_sys_cpu_seconds": 9.19073
+  },
+  "recorded_inclusive_CPU_seconds": 32.594038,
+  "original_returncode": 0,
+  "scope": "One original two-package restore runner; all driver/stage/decode/fingerprint timers nested; distinct from previously charged general restore-example69.49s",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Measured wall copied; only named disjoint CPU components summed. No UTC estimates.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

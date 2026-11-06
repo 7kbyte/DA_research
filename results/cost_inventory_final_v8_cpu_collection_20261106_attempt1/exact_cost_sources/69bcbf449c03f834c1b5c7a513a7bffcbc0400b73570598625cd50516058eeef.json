@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "status": "pending_cost_source_publication_internal_region_only",
+  "created_at_utc": "2026-11-06T19:11:38.541806+00:00",
+  "candidates": [
+    {
+      "id": "C410_best_publication_internal_region",
+      "classification": "pending_measured_region_parent_unknown",
+      "source": {
+        "path": "docs/C410_best_weights_durable_publication.json",
+        "sha256": "139e54cfcbae7763a1b651abd4b54c2646dbc1af99dff26787cce0b28107091a",
+        "bytes": 3016,
+        "retained_bytes": "source_bytes/139e54cfcbae7763a1b651abd4b54c2646dbc1af99dff26787cce0b28107091a.json"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 195.2169531546533,
+      "cpu_component_pointers": [],
+      "recorded_CPU_seconds": null,
+      "timing_semantics": "partial_region_parent_unknown_not_additive",
+      "exact_external_whole_wall_seconds": null,
+      "publisher_child_returncode": null,
+      "outer_wrapper_returncode_observed": 1,
+      "nested_subtimers_added": false,
+      "scope": "Only completed publisher internal region is measured. The outer wrapper failed while exclusively creating a timing receipt after publication. No exact outer wall/CPU/childrc was persisted. Do not infer from UTC or use the copied batch timer."
+    }
+  ],
+  "exception_evidence": {
+    "path": "artifacts/provenance/C410_best_publication_actual_v1/outer_timing_receipt_failure.json",
+    "sha256": "8c284e922503b2fd9e747e377db776aa73e146c9ff1f886901e775193626b13f",
+    "bytes": 1684,
+    "retained_bytes": "source_bytes/8c284e922503b2fd9e747e377db776aa73e146c9ff1f886901e775193626b13f.json"
+  },
+  "ROOT_acceptance": {
+    "path": "artifacts/provenance/C410_best_publication_actual_v1/ROOT_acceptance.json",
+    "sha256": "ce7c7905d5f7a424eb3832bd83080f17b906b5b45fddd685170338ef3623e3a8",
+    "bytes": 6824,
+    "retained_bytes": "source_bytes/ce7c7905d5f7a424eb3832bd83080f17b906b5b45fddd685170338ef3623e3a8.json"
+  },
+  "misplaced_timer_excluded_as_batch_copy": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_best_publication_actual_v1/batch_whole_child_timing.json",
+    "sha256": "c24ba9a50917cf88478bdccd71c79feb2f0541fe4a2572afa155b68c99f74d5a",
+    "bytes": 405
+  },
+  "original_batch_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/additional_endpoint_actual_v4/C410_best_batch/whole_child_timing.json",
+    "sha256": "c24ba9a50917cf88478bdccd71c79feb2f0541fe4a2572afa155b68c99f74d5a",
+    "bytes": 405
+  },
+  "historical_catalog_counts_after_append": {
+    "independent_measured_parents": 31,
+    "partial_regions_parent_unknown": 8,
+    "historical_total": 39
+  },
+  "collector_executed": false,
+  "active_cost_configs_modified": false,
+  "source_payload_read_or_rehashed": false,
+  "original_catalog_completion_preserved": true
+}

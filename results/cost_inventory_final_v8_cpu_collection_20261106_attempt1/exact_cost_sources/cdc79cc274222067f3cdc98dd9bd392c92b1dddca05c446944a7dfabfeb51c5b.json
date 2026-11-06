@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_best_publication_runbook_v1/preparation_tests/whole_child_timing.json",
+    "sha256": "e844c11ca99bcfe2f075f5607e063491adc84b05cb9fabdb8b84f022f25f226f"
+  },
+  "original_wall_pointer": "/whole_wall_seconds",
+  "wall_seconds": 1.723019003868103,
+  "CPU_component_pointers": [
+    "/parent_user_seconds",
+    "/parent_sys_seconds",
+    "/children_user_seconds",
+    "/children_sys_seconds"
+  ],
+  "CPU_components": {
+    "/parent_user_seconds": 0.00040699999999999764,
+    "/parent_sys_seconds": 0.0,
+    "/children_user_seconds": 1.480739,
+    "/children_sys_seconds": 0.271987
+  },
+  "recorded_inclusive_CPU_seconds": 1.753133,
+  "original_returncode": 2,
+  "scope": "Actual failed pytest collection child, rc2; cost retained despite failure.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Measured wall copied; only named disjoint CPU components summed. Unknowns remain null; failed actual invocations preserve rc. No UTC estimates.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

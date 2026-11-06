@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/additional_endpoint_actual_v4/C410_best_batch/whole_child_timing.json",
+    "sha256": "c24ba9a50917cf88478bdccd71c79feb2f0541fe4a2572afa155b68c99f74d5a"
+  },
+  "original_wall_pointer": "/wall_seconds",
+  "wall_seconds": 1953.1042039617896,
+  "CPU_component_pointers": [
+    "/user_cpu_seconds",
+    "/sys_cpu_seconds"
+  ],
+  "CPU_components": {
+    "/user_cpu_seconds": 1809.686042,
+    "/sys_cpu_seconds": 159.870604
+  },
+  "recorded_inclusive_CPU_seconds": 1969.556646,
+  "original_returncode": 0,
+  "scope": "ROOT confirmed complete after initial catalog freeze. Actual exporter spawn-to-exit: startup/resume verification, 20 new weights, three proven-alias metadata operations and assembly. Original 105.168669581 sample encode is a separate prior operation; sample resume checks do not re-charge that encode. Assembly 109.004355 seconds is nested and not additive.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Measured wall copied; only named disjoint CPU components summed. Unknowns remain null; failed actual invocations preserve rc. No UTC estimates.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

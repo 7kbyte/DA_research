@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_independent_acceptance_v1/whole_child_timing.json",
+    "sha256": "76a163da74be821515431a7134c329c671237381015862316a971fa310383b4a"
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 0.12979328632354736,
+  "CPU_component_pointers": [
+    "/child_user_seconds",
+    "/child_system_seconds"
+  ],
+  "CPU_components": {
+    "/child_user_seconds": 0.083467,
+    "/child_system_seconds": 0.026157999999999997
+  },
+  "recorded_inclusive_CPU_seconds": 0.109625,
+  "original_returncode": 0,
+  "scope": "Separate automated small-metadata/stat post-restoration child; not nested inside the prior ROOT restore. Manual reading/doc writing whole unknown.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Measured wall copied; only named disjoint CPU components summed. Unknowns remain null; failed actual invocations preserve rc. No UTC estimates.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}
