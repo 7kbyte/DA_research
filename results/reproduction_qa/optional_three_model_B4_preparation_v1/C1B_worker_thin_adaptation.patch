@@ -1,0 +1,42 @@
+--- prove_optional_C2p8b_best_identity.py
++++ prove_optional_C1b_best_identity.py
+@@ -1,4 +1,7 @@
+-"""CPU-only identity proof of the one predeclared original best checkpoint.
++"""CPU-only identity proof of the predeclared C1B original best checkpoint.
++
++Thin fixed-identity adaptation of prove_optional_C2p8b_best_identity.py;
++the existing C2.8B implementation and evidence are not modified.
+ 
+ No training, archive creation, relocation, model forward, or score analysis.
+ Selection is bound opaquely; its validation NLL is never emitted.
+@@ -18,9 +21,9 @@
+ from datetime import datetime, timezone
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+-RUN_ID = "extended_v2_pythia_2p8b_m8_h25m_formal_B4_s11_w0p05"
+-TEMPLATE_SHA = "05fe83d2a327c065190883774365641fac432a0546e1b13946a479ada0fc0881"
+-TEMPLATE = ROOT / "docs/optional_C2p8b_B4_seed11_QA_ROOT_FALSE_TEMPLATE.json"
++RUN_ID = "extended_v2_pythia_1b_m32_formal_B4_s11_w0p05"
++TEMPLATE_SHA = "e84360ca3d1e7bd0dcb722bb90c0971340f11c2cf3845d6e3af95693c19708a9"
++TEMPLATE = ROOT / "docs/optional_C1b_B4_seed11_original_best_identity_CPU_INPUT.json"
+ 
+ 
+ def require(condition, message):
+@@ -104,7 +107,7 @@
+     summary_path = next(p["path"] for p in sources if p["path"].endswith(RUN_ID + "_summary.json"))
+     summary = json.loads(Path(summary_path).read_text())
+     require(summary["config"] == cfg and summary["status"] == "completed", "Original summary/config not complete and equal")
+-    require(counters(summary["counters"]) == template["full_counters"] == dict(step=765, target_prediction_tokens=25000000, replay_prediction_tokens=1250000), "Original full exposure differs")
++    require(counters(summary["counters"]) == template["full_counters"] == dict(step=3058, target_prediction_tokens=100000000, replay_prediction_tokens=5000000), "Original full exposure differs")
+     require(draft["definition_sha256"] == definition_sha and draft["completed_scheduler_record"] == record, "Original completed record differs from verified final draft")
+     qa.provenance_matches(summary["provenance"], template["required_original_execution_provenance"])
+     qa.strict_policy(template["required_original_execution_provenance"], cfg)
+@@ -153,7 +156,7 @@
+             model_state = saved["model_state"]
+             require(all(t.dtype == torch.float32 for t in model_state.values()), "Original state dtype differs")
+             tensor_count = len(model_state); fingerprint = codec.model_fingerprint(model_state)
+-            require(fingerprint["state_elements"] == 2775208960, "Complete model element inventory differs")
++            require(fingerprint["state_elements"] == 1011781632, "Complete model element inventory differs")
+             fd_after = signature(os.fstat(rawfile.fileno())); require(fd_after == before == signature(best.stat()), "Original best changed during full model fingerprint")
+             receipt.update(model_state_fingerprint=fingerprint, model_tensor_count=tensor_count,
+                            model_state_tensor_bytes_hashed=sum(t.numel() * t.element_size() for t in model_state.values()),

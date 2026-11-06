@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "status": "passed_preparation_checks_NOT_actual_retraining",
+  "false_template_rejection": {
+    "path": "/tmp/grad-research-20261106/worktree/results/reproduction_qa/optional_three_model_B4_preparation_v1/FALSE_template_rejection.json",
+    "sha256": "a89bb51dbc5960f987e9620bbd7ff7f951ca4a215c104a4533583c52681428df"
+  },
+  "new_checkpoint_reads_in_rejection": 0,
+  "read_operations_in_rejection": 0,
+  "unchanged_existing_single_option_sources": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/prove_optional_C2p8b_best_identity.py",
+      "sha256": "28709318c02aebc17e38af0bfd9dac3b8795fdebd9663c2e921d133998206743"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/docs/optional_C2p8b_B4_seed11_QA_ROOT_FALSE_TEMPLATE.json",
+      "sha256": "05fe83d2a327c065190883774365641fac432a0546e1b13946a479ada0fc0881"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/docs/optional_C2p8b_B4_seed11_QA_expected_identity_TEMPLATE.json",
+      "sha256": "824f5a991ac496d864ade865b649f73f3a0cbd4ef0573d980da81d98a4f3e40e"
+    }
+  ],
+  "C1B_thin_adaptation_diff": {
+    "path": "/tmp/grad-research-20261106/worktree/results/reproduction_qa/optional_three_model_B4_preparation_v1/C1B_worker_thin_adaptation.patch",
+    "sha256": "84ac8dab26d906522a06a8292c7fcc9377c0820942d4fe1e4dbe68c6186b82d3"
+  },
+  "preparation_receipt": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/optional_three_model_B4_archive_QA_CPU_preparation_receipt_v1.json",
+    "sha256": "936a20f77600692f5bef9c62396a15b07fb015583c6de689c69f290bb1f28c56"
+  },
+  "documentation": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/三模型B4归档QA_条件准备说明.md",
+    "sha256": "1778dd923f07c9689e676c5af60b55c2b7d8dd3dc67039905bae7102b9fa4341"
+  },
+  "all_document_links_exist": true,
+  "reused_existing_tiny_CPU_tests": {
+    "command": "CUDA_VISIBLE_DEVICES='' OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 PYTHONPATH=src python -m pytest -q tests/test_reproduction_qa_postrun.py tests/test_optional_extended_qa_identity.py",
+    "passed": 29,
+    "pytest_reported_seconds": 2.39,
+    "CPU_seconds_not_recorded": "unknown",
+    "scope": "Existing temporary tiny checkpoint tests; no real rerun or GPU"
+  },
+  "new_GPU_or_training_authority": false,
+  "source_optimizer_checkpoints_or_live_exporter_modified": false
+}

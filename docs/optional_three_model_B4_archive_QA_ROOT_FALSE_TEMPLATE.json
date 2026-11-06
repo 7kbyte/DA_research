@@ -1,0 +1,318 @@
+{
+  "schema_version": 1,
+  "status": "FALSE_TEMPLATE_CPU_PREPARATION_ONLY_NOT_READY",
+  "root_authorized": false,
+  "GPU_execution_allowed": false,
+  "training_started": false,
+  "queues_materialized_or_enqueued": false,
+  "predeclaration": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/optional_three_model_B4_archive_QA_ROOT_predeclaration_v1.json",
+    "sha256": "23923ef16feda2dd9e4b3c3c0a52528e61a0c70e8e4cb9488dcfc0958bcf583f",
+    "bytes": 9072
+  },
+  "namespace": "archive0732_qa_Cthree_B4_seed11_v1",
+  "archived_workspace": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research",
+  "independent_scratch": "/tmp/grad-research-20261106/reproduction_qa/optional_Cthree_B4_seed11_v1/scratch",
+  "conditions": [
+    {
+      "model": "pythia-410m",
+      "original_run_id": "extended_v2_pythia_410m_m64_formal_B4_s11_w0p05",
+      "new_run_id": "archive0732_qa_Cthree_B4_seed11_v1__extended_v2_pythia_410m_m64_formal_B4_s11_w0p05",
+      "source_registry": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal_active_registry.json",
+        "sha256": "c7f5c50d6794ba0df0dc3e071198da761f084ad9347ce5d9ce4dddf867ee48bd"
+      },
+      "source_config": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal/extended_v2_pythia_410m_m64_formal_B4_s11_w0p05.json",
+        "sha256": "dcd08b2ac0976bf942b73419da8989b44a952f49402cd1a57e47d97d20d577c6"
+      },
+      "input_snapshot": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/extended_v2_pythia_410m_m64_formal_input_snapshot.json",
+        "sha256": "5b065523d3a87235bf143ae144655589ea42591f71ef49e4dc430633954a029e",
+        "bytes": 21195
+      },
+      "final_identity_source": {
+        "path": "/tmp/grad-research-20261106/delivery/extended_C_final_v1/pythia-410m/records/extended_v2_pythia_410m_m64_formal_B4_s11_w0p05.json",
+        "sha256": "8e5d6020970fd19e2dcd2df50b7f1080dcb6bb2b2b2d8a7d983c2f7c2e7b87e3",
+        "bytes": 7559
+      },
+      "original_parent_wall_seconds": 2145.9951066970825,
+      "runtime_expected_seconds": 2700,
+      "full_counters": {
+        "step": 3058,
+        "target_prediction_tokens": 100000000,
+        "replay_prediction_tokens": 5000000
+      },
+      "base_revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+      "base_files_required": {
+        "/tmp/grad-research-20261106/models/pythia-410m-final/config.json": {
+          "sha256": "d4c11e84a59c8af4d88446bba53b718f7aef740daa070ded08fd6a9a3aca4fc6",
+          "bytes": 570
+        },
+        "/tmp/grad-research-20261106/models/pythia-410m-final/special_tokens_map.json": {
+          "sha256": "6f50ab5a5a509a1c309d6171f339b196a900dc9c99ad0408ff23bb615fdae7ad",
+          "bytes": 99
+        },
+        "/tmp/grad-research-20261106/models/pythia-410m-final/tokenizer_config.json": {
+          "sha256": "70e38394e494931c6f773ba41e19460dd4436526b852207367f04341b4066d3f",
+          "bytes": 396
+        },
+        "/tmp/grad-research-20261106/models/pythia-410m-final/tokenizer.json": {
+          "sha256": "c24618a1b3e6a38167beff1c72cffd126c3a66254347304b50547d12c5f25624",
+          "bytes": 2113710
+        },
+        "/tmp/grad-research-20261106/models/pythia-410m-final/README.md": {
+          "sha256": "d7d60ae94cb0882f19381632532a01d39247fe6f932016c39768b1f67c9f2bf9",
+          "bytes": 13593
+        },
+        "/tmp/grad-research-20261106/models/pythia-410m-final/model.safetensors": {
+          "sha256": "3e09001631bb18ec8a6f4522f8e6ab26a53099e69228f9822adc91bfbe27511b",
+          "bytes": 911373632
+        }
+      },
+      "durable_base_package_status": "primary_durable_base_closure_exists_but_future_isolated_extraction_and_fresh_relocation_pending"
+    },
+    {
+      "model": "pythia-1b",
+      "original_run_id": "extended_v2_pythia_1b_m32_formal_B4_s11_w0p05",
+      "new_run_id": "archive0732_qa_Cthree_B4_seed11_v1__extended_v2_pythia_1b_m32_formal_B4_s11_w0p05",
+      "source_registry": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal_active_registry.json",
+        "sha256": "c106330d947904447fe7c1aa42fa8dbe8a337a683520801b90653d7d6474b8d6"
+      },
+      "source_config": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B4_s11_w0p05.json",
+        "sha256": "b608f35518c4ea4f7e2b0e67f6dca1e8f7c3c5e969ebf28b7158782ca3b7085f"
+      },
+      "input_snapshot": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/extended_v2_pythia_1b_m32_formal_input_snapshot.json",
+        "sha256": "8cdc78f694464d1e0ef179614e00eddfa192b600ace68f7fe044f5d34446832a",
+        "bytes": 20966
+      },
+      "final_identity_source": {
+        "path": "/tmp/grad-research-20261106/delivery/extended_C_final_v1/pythia-1b/records/extended_v2_pythia_1b_m32_formal_B4_s11_w0p05.json",
+        "sha256": "5064fbaa7c07f60d9e457077c6226c988359a6a593675b0f4e22d5a1c8fe16bc",
+        "bytes": 7514
+      },
+      "original_parent_wall_seconds": 3058.805523633957,
+      "runtime_expected_seconds": 3600,
+      "full_counters": {
+        "step": 3058,
+        "target_prediction_tokens": 100000000,
+        "replay_prediction_tokens": 5000000
+      },
+      "base_revision": "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2",
+      "base_files_required": {
+        "/tmp/grad-research-20261106/models/pythia-1b-final/model.safetensors": {
+          "sha256": "7e6dff44849e036a73296368e663bd9420009977f03a8d4d747b234264f37107",
+          "bytes": 2090701528
+        },
+        "/tmp/grad-research-20261106/models/pythia-1b-final/tokenizer_config.json": {
+          "sha256": "70e38394e494931c6f773ba41e19460dd4436526b852207367f04341b4066d3f",
+          "bytes": 396
+        },
+        "/tmp/grad-research-20261106/models/pythia-1b-final/special_tokens_map.json": {
+          "sha256": "6f50ab5a5a509a1c309d6171f339b196a900dc9c99ad0408ff23bb615fdae7ad",
+          "bytes": 99
+        },
+        "/tmp/grad-research-20261106/models/pythia-1b-final/config.json": {
+          "sha256": "302d6702a29de1039066e41404877fb8c53b7ddc82e88f9aba277f230086cfe0",
+          "bytes": 569
+        },
+        "/tmp/grad-research-20261106/models/pythia-1b-final/tokenizer.json": {
+          "sha256": "c24618a1b3e6a38167beff1c72cffd126c3a66254347304b50547d12c5f25624",
+          "bytes": 2113710
+        },
+        "/tmp/grad-research-20261106/models/pythia-1b-final/README.md": {
+          "sha256": "eb4025893f212f2baf2fe92be87d26c028593e86b0e3572b7ac5114080bbb6dc",
+          "bytes": 13568
+        }
+      },
+      "durable_base_package_status": "pending_future_ROOT_accepted_actual_C_package_and_offline_base_extraction"
+    },
+    {
+      "model": "pythia-2.8b",
+      "original_run_id": "extended_v2_pythia_2p8b_m8_h25m_formal_B4_s11_w0p05",
+      "new_run_id": "archive0732_qa_Cthree_B4_seed11_v1__extended_v2_pythia_2p8b_m8_h25m_formal_B4_s11_w0p05",
+      "source_registry": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_h25m_formal_active_registry.json",
+        "sha256": "c98360002f763a98423d16bf99c866edfbec21da2668a04cb3ccfd5652888d05"
+      },
+      "source_config": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_h25m_formal/extended_v2_pythia_2p8b_m8_h25m_formal_B4_s11_w0p05.json",
+        "sha256": "a5e592f181c30cf673a2c817e649a595dd0dca53e547253b92c9a5ccacc0aa3d"
+      },
+      "input_snapshot": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/extended_v2_pythia_2p8b_m8_h25m_formal_input_snapshot.json",
+        "sha256": "49d3965a7d0909b23ab5880efe3c4d8b32944c5335e802435dd92e4cec017379",
+        "bytes": 17092
+      },
+      "final_identity_source": {
+        "path": "/tmp/grad-research-20261106/delivery/extended_C_final_v1/pythia-2.8b/records/extended_v2_pythia_2p8b_m8_h25m_formal_B4_s11_w0p05.json",
+        "sha256": "72d24a730c7aa2396b8b798136aa64eea5520d6aaefa78773486bda6316f19bb",
+        "bytes": 7643
+      },
+      "original_parent_wall_seconds": 2125.9341356754303,
+      "runtime_expected_seconds": 2340,
+      "full_counters": {
+        "step": 765,
+        "target_prediction_tokens": 25000000,
+        "replay_prediction_tokens": 1250000
+      },
+      "base_revision": "2a259cdd96a4beb1cdf467512e3904197345f6a9",
+      "base_files_required": {
+        "/tmp/grad-research-20261106/models/pythia-2.8b-final/model.safetensors": {
+          "sha256": "ab496f1c3fd79e3c749a9d5414136a2c8e4224f94eecb261970315cdb0f813fe",
+          "bytes": 5684693096
+        },
+        "/tmp/grad-research-20261106/models/pythia-2.8b-final/config.json": {
+          "sha256": "fe1a9b9550935517588c98f89df24db7d7eadf4c4a00dd32e127a2d4585e9827",
+          "bytes": 571
+        },
+        "/tmp/grad-research-20261106/models/pythia-2.8b-final/tokenizer_config.json": {
+          "sha256": "70e38394e494931c6f773ba41e19460dd4436526b852207367f04341b4066d3f",
+          "bytes": 396
+        },
+        "/tmp/grad-research-20261106/models/pythia-2.8b-final/special_tokens_map.json": {
+          "sha256": "6f50ab5a5a509a1c309d6171f339b196a900dc9c99ad0408ff23bb615fdae7ad",
+          "bytes": 99
+        },
+        "/tmp/grad-research-20261106/models/pythia-2.8b-final/tokenizer.json": {
+          "sha256": "c24618a1b3e6a38167beff1c72cffd126c3a66254347304b50547d12c5f25624",
+          "bytes": 2113710
+        },
+        "/tmp/grad-research-20261106/models/pythia-2.8b-final/README.md": {
+          "sha256": "f9d5d9b2a3695d7c8099aa5d59406c1c922bee8c29099a1fae27045d9ee498f6",
+          "bytes": 13593
+        }
+      },
+      "durable_base_package_status": "pending_future_ROOT_accepted_actual_C_package_and_offline_base_extraction"
+    }
+  ],
+  "expected_identity_TEMPLATE": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/optional_three_model_B4_archive_QA_expected_identity_TEMPLATE.json",
+    "sha256": "d0cf440b15bc3afa15587a1971f8cb860e183bf2c19984ef15b21b16457aeebe",
+    "bytes": 21407
+  },
+  "planned_source_subset_registry": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/configs/reproductions/archive0732_qa_Cthree_B4_seed11_v1_original_source_registry.json",
+  "source_subset_rule": "Future copy exactly three declared rows from SHA-bound archived registries; preserve original rows and source hashes.",
+  "runtime_jobs_TEMPLATE": [
+    {
+      "id": "archive0732_qa_Cthree_B4_seed11_v1__extended_v2_pythia_410m_m64_formal_B4_s11_w0p05",
+      "argv": [
+        "/usr/bin/python",
+        "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/scripts/make_experiments.py",
+        "run",
+        "--config",
+        "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/configs/reproductions/archive0732_qa_Cthree_B4_seed11_v1/archive0732_qa_Cthree_B4_seed11_v1__extended_v2_pythia_410m_m64_formal_B4_s11_w0p05.json",
+        "--summary-copy",
+        "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/results/reproductions/archive0732_qa_Cthree_B4_seed11_v1/archive0732_qa_Cthree_B4_seed11_v1__extended_v2_pythia_410m_m64_formal_B4_s11_w0p05_summary.json"
+      ],
+      "env": {
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "HF_HOME": "/tmp/grad-research-20261106/reproduction_qa/optional_Cthree_B4_seed11_v1/scratch/cache/huggingface"
+      },
+      "expected_seconds": 2700,
+      "outputs": [
+        "/tmp/grad-research-20261106/reproduction_qa/optional_Cthree_B4_seed11_v1/scratch/runs/archive0732_qa_Cthree_B4_seed11_v1__extended_v2_pythia_410m_m64_formal_B4_s11_w0p05/summary.json",
+        "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/results/reproductions/archive0732_qa_Cthree_B4_seed11_v1/archive0732_qa_Cthree_B4_seed11_v1__extended_v2_pythia_410m_m64_formal_B4_s11_w0p05_summary.json"
+      ]
+    },
+    {
+      "id": "archive0732_qa_Cthree_B4_seed11_v1__extended_v2_pythia_1b_m32_formal_B4_s11_w0p05",
+      "argv": [
+        "/usr/bin/python",
+        "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/scripts/make_experiments.py",
+        "run",
+        "--config",
+        "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/configs/reproductions/archive0732_qa_Cthree_B4_seed11_v1/archive0732_qa_Cthree_B4_seed11_v1__extended_v2_pythia_1b_m32_formal_B4_s11_w0p05.json",
+        "--summary-copy",
+        "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/results/reproductions/archive0732_qa_Cthree_B4_seed11_v1/archive0732_qa_Cthree_B4_seed11_v1__extended_v2_pythia_1b_m32_formal_B4_s11_w0p05_summary.json"
+      ],
+      "env": {
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "HF_HOME": "/tmp/grad-research-20261106/reproduction_qa/optional_Cthree_B4_seed11_v1/scratch/cache/huggingface"
+      },
+      "expected_seconds": 3600,
+      "outputs": [
+        "/tmp/grad-research-20261106/reproduction_qa/optional_Cthree_B4_seed11_v1/scratch/runs/archive0732_qa_Cthree_B4_seed11_v1__extended_v2_pythia_1b_m32_formal_B4_s11_w0p05/summary.json",
+        "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/results/reproductions/archive0732_qa_Cthree_B4_seed11_v1/archive0732_qa_Cthree_B4_seed11_v1__extended_v2_pythia_1b_m32_formal_B4_s11_w0p05_summary.json"
+      ]
+    },
+    {
+      "id": "archive0732_qa_Cthree_B4_seed11_v1__extended_v2_pythia_2p8b_m8_h25m_formal_B4_s11_w0p05",
+      "argv": [
+        "/usr/bin/python",
+        "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/scripts/make_experiments.py",
+        "run",
+        "--config",
+        "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/configs/reproductions/archive0732_qa_Cthree_B4_seed11_v1/archive0732_qa_Cthree_B4_seed11_v1__extended_v2_pythia_2p8b_m8_h25m_formal_B4_s11_w0p05.json",
+        "--summary-copy",
+        "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/results/reproductions/archive0732_qa_Cthree_B4_seed11_v1/archive0732_qa_Cthree_B4_seed11_v1__extended_v2_pythia_2p8b_m8_h25m_formal_B4_s11_w0p05_summary.json"
+      ],
+      "env": {
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "HF_HOME": "/tmp/grad-research-20261106/reproduction_qa/optional_Cthree_B4_seed11_v1/scratch/cache/huggingface"
+      },
+      "expected_seconds": 2340,
+      "outputs": [
+        "/tmp/grad-research-20261106/reproduction_qa/optional_Cthree_B4_seed11_v1/scratch/runs/archive0732_qa_Cthree_B4_seed11_v1__extended_v2_pythia_2p8b_m8_h25m_formal_B4_s11_w0p05/summary.json",
+        "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/results/reproductions/archive0732_qa_Cthree_B4_seed11_v1/archive0732_qa_Cthree_B4_seed11_v1__extended_v2_pythia_2p8b_m8_h25m_formal_B4_s11_w0p05_summary.json"
+      ]
+    }
+  ],
+  "generic_helper_queue_expected_seconds": 600,
+  "runtime_delta_rule": "Preserve helper600 queue. Independent runtime queue must differ ONLY in expected_seconds=2700/3600/2340 by exact ID. Bind both SHAs and compare every other key.",
+  "scheduler_argv_TEMPLATE": [
+    "/usr/bin/python",
+    "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/scripts/schedule_jobs.py",
+    "--queue",
+    "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/configs/reproductions/archive0732_qa_Cthree_B4_seed11_v1_runtime_queue.json",
+    "--state",
+    "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/logs/reproductions/archive0732_qa_Cthree_B4_seed11_v1_job_state.json",
+    "--gpus",
+    "<ROOT_ASSIGNED_THREE_DISTINCT_FREE_H100_IDS>",
+    "--deadline",
+    "2026-11-07T02:56:32Z",
+    "--exit-when-idle",
+    "--launch-margin-seconds",
+    "120",
+    "--stop-margin-seconds",
+    "120"
+  ],
+  "scheduler_environment_TEMPLATE": {
+    "PYTHONPATH": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/src",
+    "HF_HOME": "/tmp/grad-research-20261106/reproduction_qa/optional_Cthree_B4_seed11_v1/scratch/cache/huggingface",
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "OMP_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2"
+  },
+  "before_launch_gates": [
+    "All original scientific training, evaluation and full-scope analyses complete",
+    "Original priority four-run main410M archive QA complete",
+    "Optional three-model B4 QA only if at least4800seconds remain until2026-11-07T02:56:32Z; otherwise preserve the existing single2.8B option with its original3600seconds gate",
+    "All earlier scheduler and child process groups exited; all four GPUs free",
+    "Actual durable bases accepted/offline-restored; fresh core/config/model/data verification completed",
+    "Fresh namespace and outputs absent; resume_from=None; no live-code fallback",
+    "ROOT separately binds actual plan/queue/expected endpoints/three GPU IDs and current UTC"
+  ],
+  "latest_actual_start_utc": "2026-11-07T01:36:32Z",
+  "minimum_remaining_wall_seconds": 4800,
+  "deadline_utc": "2026-11-07T02:56:32Z",
+  "launch_margin_seconds": 120,
+  "stop_margin_seconds": 120,
+  "CPU_postcheck_planning_allowance_seconds": 600,
+  "CPU_postcheck_allowance_is_measured": false,
+  "single_2p8b_option": "Original FALSE template unchanged; preserve its >=3600s gate if three-model gate fails. No auto-authority.",
+  "source_constraints": [
+    "Use actual verified durable archives and archived unmodified training core/relocation helper",
+    "New isolated namespaces; original runs and checkpoints never overwritten",
+    "All previous GPU scheduler processes and child process groups exited; all GPUs free",
+    "Fixed runtime queue differs from generic600seconds only by declared per-model admission allowance; retain both queues and exact comparison",
+    "Existing postrun verifier validates exact config/inputs/execution/counters/selection plus fresh complete model-state fingerprints for final and best",
+    "No optimizer-state/resume, new-container or cross-hardware reproducibility claim; same-platform archive rerun QA only",
+    "Actual GPU assignments and whole train/verification costs recorded separately from original scientific experiments"
+  ],
+  "new_scientific_repeats": 0
+}
