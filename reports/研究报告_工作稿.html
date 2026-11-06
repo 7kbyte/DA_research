@@ -5,14 +5,14 @@
       @bottom-right { content: counter(page) ' / ' counter(pages); font-size: 8pt; color: #666; }
     }
     html { font-family: ReportCJK, 'Noto Serif CJK SC', 'Songti SC', SimSun, serif; color: #20252a; }
-    body { font-size: 10.5pt; line-height: 1.65; }
+    body { font-size: 10.5pt; line-height: 1.6; }
     h1 { font-size: 23pt; line-height: 1.35; margin: 0 0 18pt; color: #183b50; }
     h2 { font-size: 14.5pt; margin-top: 22pt; border-bottom: .6pt solid #b2c4ce;
          padding-bottom: 4pt; color: #183b50; break-after: avoid; }
     h3 { font-size: 11.5pt; margin-top: 15pt; break-after: avoid; }
-    p { margin: 8pt 0; orphans: 3; widows: 3; }
+    p { margin: 7pt 0; orphans: 3; widows: 3; }
     a { color: #155f8b; text-decoration: none; overflow-wrap: anywhere; }
-    table { border-collapse: collapse; width: 100%; font-size: 8.5pt; line-height: 1.45; margin: 12pt 0; }
+    table { border-collapse: collapse; width: 100%; font-size: 8.5pt; line-height: 1.45; margin: 12pt 0; break-inside: avoid; }
     thead { display: table-header-group; background: #eaf0f3; }
     th, td { border: .5pt solid #b7c4cc; padding: 5pt; vertical-align: top; overflow-wrap: anywhere; }
     tr { break-inside: avoid; }
@@ -90,7 +90,7 @@
 <h3 id="31">3.1 参数选择与公平比较</h3>
 <p>学习率由独立校准种子 101 的目标验证损失选择，候选为 10⁻⁵、3×10⁻⁵、10⁻⁴；最终采用 3×10⁻⁵。共享 λ 候选为 0.05、0.5、1、5，按 B1—B4 的平均验证得分选择：目标 NLL 变化加两个旧域 NLL 变化的平均值，得分越低越好，最终采用 0.05。这里的等权得分是一项明确的决策规则，不是所有应用共同接受的效用函数。各方法共享这一选择，保证校准规则一致，但不保证各自达到最优；补充 A 再提供较完整的权重曲线。</p>
 <p>每步有效目标批量为 64 个完整块，采用 microbatch 16、梯度累积 4；末步按剩余有效预测位置计数。优化器为 fused AdamW，β=(0.9,0.95)、ε=10⁻⁸、weight decay=0.1、梯度范数裁剪阈值 1。学习率采用 3% warmup 和余弦衰减，最低为峰值的 10%。学生与教师权重保留 FP32，CUDA 前向采用 BF16 autocast，CE/KL 概率运算使用 FP32。KL 覆盖完整词表，不只比较生成 token 的概率。</p>
-<p>同一 seed 下，各组共享目标文本顺序与学习率日程；回放具有独立的数据流和计数。306 步完成 10M 目标预测 token，主回放比例对应累计 500,000 个预测 token，约为 100,156-token 回放库容量的五倍。这是反复读取有限库，不能称为新增了 500,000 个不同 token。优化、验证和数据生成均有单独日志，等 token 暴露也不等于等墙钟时间或等 FLOPs。</p>
+<p>同一 seed 下，各组共享目标文本顺序与学习率日程；回放具有独立的数据流和计数。三个正式 seed 分别对应一整套生成池、选库和训练数据顺序，因此跨 seed 波动包含这些来源，不能只归因为优化器随机性。补充 B 另固定生成池和训练流，以分离选库条件波动。306 步完成 10M 目标预测 token，主回放比例对应累计 500,000 个预测 token，约为 100,156-token 回放库容量的五倍。这是反复读取有限库，不能称为新增了 500,000 个不同 token。优化、验证和数据生成均有单独日志，等 token 暴露也不等于等墙钟时间或等 FLOPs。</p>
 <h3 id="32">3.2 生成、选库与可检验机制</h3>
 <p>生成从单个 BOS token 开始，温度为 1，top-p=1、top-k=0；每块继续采样 511 个 token，遇到 EOS 仍继续，得到固定长度的 512-token 块。各正式 seed 有独立生成池，同一 seed 的 B3/B4/D/M/C 共用该池。未施加质量过滤或人工挑选；这种无条件生成方式便于控制预算，也限制了语义和任务覆盖。</p>
 <p>M 根据教师平均 NLL 排序分为五个等频层，按最大余数法分配抽样整数配额。它控制的是所选库的 NLL 组成，不直接优先容易文本。C 对教师最后层预测上下文的平均表示作 L2 归一化，使用 MiniBatchKMeans 并选最近代表。选择统计与评估任务不同，特征覆盖改善不能当作旧知识保留的证据。实际生成池没有整块精确重复，因此 D 与 B4 的库完全相同；本次 D 是数值空对照，不能估计在有重复语料中的去重收益。</p>
@@ -150,81 +150,348 @@
 <p>相同生成库的 B4/D 空对照进一步发现，默认 CUDA 注意力反向传播的非确定性足以影响训练比较。原批次已隔离，不进入正式方法结论。严格确定性设置通过跨 GPU 梯度和权重重复检查后，全部学习率和 λ 校准重新执行。完整 306 步 B4/D 资格检查中，各步损失、梯度范数、七次验证以及最终权重均一致。正式代码版本为 <code>de54262b8deff2c49547bba740d0dbf28a1074a7</code>，十个核心源码与训练前快照相符。</p>
 <p>这次修复不意味着任意硬件和软件版本之间都能逐位复现。最终 36 组训练全部完成，<a href="../results/formal_run_audit.json">完整审计</a>没有发现违反冻结协议的情况；三个 seed 的 B4/D 逐步训练、验证值及完整模型参数指纹均相同。这证明当前平台及冻结实现下的相同输入控制通过了实际检查。记录另见<a href="../results/determinism_evidence.json">确定性证据</a>、<a href="../results/formal_deterministic_qualification.json">最初资格检查</a>和<a href="../docs/%E7%8B%AC%E7%AB%8B%E5%AE%9E%E7%8E%B0%E5%AE%A1%E6%9F%A5.md">独立实现审查</a>。</p>
 <h2 id="5">5. 结果章节与统计约定</h2>
-<p><strong>主实验训练与验证分析已完成；独立测试结果仍待预定评估。</strong></p>
+<p><strong>主实验训练、验证和独立 NLL 测试已完成；补充训练与行为评价继续按冻结方案进行。</strong></p>
 <p>固定目标暴露的最终检查点为主要端点；按目标验证损失选择的最佳检查点另报，并保留其实际训练量。C4 与 WikiText 的变化分别报告。三个训练种子的个体结果、均值与样本标准差同时给出；成对文档 bootstrap 只描述给定检查点下的文档抽样不确定性，不代替训练种子的变化。</p>
 <p>选库机制的前置诊断见<a href="../docs/%E5%9B%9E%E6%94%BE%E5%BA%93%E5%88%86%E5%B8%83%E8%AF%8A%E6%96%AD.md">回放库分布诊断</a>。成本测量区分方法独立使用时所需统计与本研究共享准备产物的实际消耗。训练、验证、检查点写入和准备过程分别计时，教师前向等嵌套计时不重复相加。</p>
-<h3 id="51">5.1 完整验证结果：用于诊断，尚非独立测试结论</h3>
-<p>以下是已完成主36的验证端点，其中主比例对照为八组各三个 seed。表中数字为均值 ± 样本标准差，单位为 nats/预测 token；初始验证 NLL 为数学 2.420674、C4 3.068728、WikiText 3.129984。G 为初始减适应后数学 NLL，F 为适应后减初始旧域 NLL。全部最终端点的目标暴露均为 10M。</p>
+<h3 id="51-10m">5.1 独立测试：固定 10M 目标暴露的主要比较</h3>
+<p>67 项物理 NLL 推理全部完成，冻结来源与执行完整性核对通过后，于 2026-11-06 07:14:59 UTC 首次读取测试分数。它们包含初始模型及 66 个不同适应后端点；六个 D/B4 逻辑端点凭完整模型状态相等证明复用推理，共覆盖 36 个配置的 final/best 两种端点。全部训练方法、网格、长程时长及验证选择规则已在此次读取之前冻结，没有据测试调参。行为分数和补充阶段测试另行封存。</p>
+<p>初始测试 NLL 为数学 2.418839、C4 3.098363、WikiText 3.099172。以下是主比例八组的 token 加权结果，均值±三个 pipeline seed 的样本标准差，单位 nats/预测 token。G 越大越好，F 越小越好；正 F 仍表示损失增长，KL 缓解遗忘不等于消除遗忘。</p>
 <table>
 <thead>
 <tr>
 <th>组别</th>
-<th style="text-align: right;">目标增益 G（越大越好）</th>
-<th style="text-align: right;">C4 遗忘 F（越小越好）</th>
-<th style="text-align: right;">WikiText 遗忘 F（越小越好）</th>
+<th style="text-align: right;">数学增益 G</th>
+<th style="text-align: right;">C4 遗忘 F</th>
+<th style="text-align: right;">WikiText 遗忘 F</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>B0</td>
-<td style="text-align: right;">0.0259 ± 0.0093</td>
-<td style="text-align: right;">0.2050 ± 0.0134</td>
-<td style="text-align: right;">0.2250 ± 0.0156</td>
+<td style="text-align: right;">0.0077 ± 0.0108</td>
+<td style="text-align: right;">0.2032 ± 0.0137</td>
+<td style="text-align: right;">0.2272 ± 0.0163</td>
 </tr>
 <tr>
 <td>B1</td>
-<td style="text-align: right;">0.0223 ± 0.0049</td>
-<td style="text-align: right;">0.1781 ± 0.0051</td>
-<td style="text-align: right;">0.2106 ± 0.0070</td>
+<td style="text-align: right;">0.0054 ± 0.0047</td>
+<td style="text-align: right;">0.1755 ± 0.0049</td>
+<td style="text-align: right;">0.2119 ± 0.0046</td>
 </tr>
 <tr>
 <td>B2</td>
-<td style="text-align: right;">0.0260 ± 0.0123</td>
-<td style="text-align: right;">0.1096 ± 0.0052</td>
-<td style="text-align: right;">0.1321 ± 0.0109</td>
+<td style="text-align: right;">0.0088 ± 0.0129</td>
+<td style="text-align: right;">0.1072 ± 0.0047</td>
+<td style="text-align: right;">0.1375 ± 0.0117</td>
 </tr>
 <tr>
 <td>B3</td>
-<td style="text-align: right;">0.0245 ± 0.0063</td>
-<td style="text-align: right;">0.1929 ± 0.0119</td>
-<td style="text-align: right;">0.2030 ± 0.0154</td>
+<td style="text-align: right;">0.0074 ± 0.0057</td>
+<td style="text-align: right;">0.1911 ± 0.0118</td>
+<td style="text-align: right;">0.2041 ± 0.0143</td>
 </tr>
 <tr>
 <td>B4</td>
-<td style="text-align: right;">0.0258 ± 0.0144</td>
-<td style="text-align: right;">0.1444 ± 0.0161</td>
-<td style="text-align: right;">0.1396 ± 0.0191</td>
+<td style="text-align: right;">0.0086 ± 0.0166</td>
+<td style="text-align: right;">0.1444 ± 0.0174</td>
+<td style="text-align: right;">0.1420 ± 0.0185</td>
 </tr>
 <tr>
 <td>D</td>
-<td style="text-align: right;">0.0258 ± 0.0144</td>
-<td style="text-align: right;">0.1444 ± 0.0161</td>
-<td style="text-align: right;">0.1396 ± 0.0191</td>
+<td style="text-align: right;">0.0086 ± 0.0166</td>
+<td style="text-align: right;">0.1444 ± 0.0174</td>
+<td style="text-align: right;">0.1420 ± 0.0185</td>
 </tr>
 <tr>
 <td>M</td>
-<td style="text-align: right;">0.0328 ± 0.0035</td>
-<td style="text-align: right;">0.1389 ± 0.0058</td>
-<td style="text-align: right;">0.1391 ± 0.0004</td>
+<td style="text-align: right;">0.0163 ± 0.0032</td>
+<td style="text-align: right;">0.1378 ± 0.0073</td>
+<td style="text-align: right;">0.1430 ± 0.0001</td>
 </tr>
 <tr>
 <td>C</td>
-<td style="text-align: right;">0.0150 ± 0.0068</td>
-<td style="text-align: right;">0.1670 ± 0.0068</td>
-<td style="text-align: right;">0.1560 ± 0.0071</td>
+<td style="text-align: right;">-0.0036 ± 0.0061</td>
+<td style="text-align: right;">0.1671 ± 0.0077</td>
+<td style="text-align: right;">0.1593 ± 0.0062</td>
 </tr>
 </tbody>
 </table>
-<p>同来源的 KL−CE 对比在三个 seed 上均减少旧域损失增长：B2−B1 在 C4/WikiText 的成对差为 −0.0685±0.0011 / −0.0786±0.0042；B4−B3 为 −0.0485±0.0144 / −0.0634±0.0114。相应目标增益差较小且 seed 方向混合。生成 KL 相比 C4 KL 的目标增益几乎相同，但 C4 遗忘更高；本结果不支持生成回放全面优于替代真实文本。</p>
-<p>M−B4 在目标增益和两个旧域上的平均差分别为 +0.0070、−0.0056、−0.0006，均小于对应成对标准差，主要受 seed22 影响；另两个 seed 的旧域结果反而较差。因此三 seed 的均值不足以证明分层稳定改善保留。C 在所定义表示空间中的覆盖更好，但验证目标增益和旧域保留的平均结果都比 B4 差。这是机制诊断与实际保留之间不能直接划等号的一个实例，不是所有聚类选择方法都无效的结论。</p>
-<p><img alt="主实验验证轨迹，细线为seed，粗线为同暴露均值" src="../results/analysis/formal_deterministic_validation/figures/validation_trajectories.png"></p>
-<p>36 个按目标验证选择的最佳检查点全部早于最终 10M：1 个位于 1.6352M、33 个位于 3.2704M、2 个位于 4.9056M。最佳验证点的数学收益组均值约为 0.060—0.071，而最终组均值约为 0.015—0.033，提示有限目标库重复训练后出现验证退化。最佳点使用同一验证集选择，其指标有选择偏差，并且曝光不同；必须通过独立测试另报，不能替换等 10M 的主要比较。</p>
-<p>相近目标损失的插值仅是粗粒度诊断，大部分穿越位于初始模型到首个验证点之间。由于没有对应真实中间检查点，不用它断言同等适应程度下的精确优势。完整数值、全部预定配对与实际曝光见<a href="../results/analysis/formal_deterministic_validation/figure_notes_zh.md">验证分析</a>和<a href="../results/analysis/formal_deterministic_validation_best/best%E9%AA%8C%E8%AF%81%E7%AB%AF%E7%82%B9%E8%AF%B4%E6%98%8E.md">最佳验证端点</a>。</p>
-<h3 id="52">5.2 独立测试与行为结果</h3>
-<p>正式测试与行为推理尚未开始。本节将在预定方法、参数和端点冻结后，以实际测试输出填写。</p>
+<p>同来源 KL−CE 在两个旧域、三个 seed 上均降低了损失增长。生成 KL 相比 C4 KL 的目标增益平均相近，但 C4 遗忘更高；WikiText 差异较小。两种生成/真实来源在 CE 下的排序也随旧域而异，因此不支持生成回放对所有评价分布的统一优势。下表完整保留六项预定配对，先在同 seed 内相减，再计算均值和样本 SD；ΔG 为正支持前者，ΔF 为负支持前者。</p>
+<table>
+<thead>
+<tr>
+<th>成对比较（前者减后者）</th>
+<th style="text-align: right;">ΔG</th>
+<th style="text-align: right;">ΔF C4</th>
+<th style="text-align: right;">ΔF WikiText</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M-B4</td>
+<td style="text-align: right;">0.0076 ± 0.0167</td>
+<td style="text-align: right;">-0.0067 ± 0.0160</td>
+<td style="text-align: right;">0.0011 ± 0.0185</td>
+</tr>
+<tr>
+<td>C-B4</td>
+<td style="text-align: right;">-0.0122 ± 0.0142</td>
+<td style="text-align: right;">0.0227 ± 0.0106</td>
+<td style="text-align: right;">0.0174 ± 0.0174</td>
+</tr>
+<tr>
+<td>B2-B1</td>
+<td style="text-align: right;">0.0034 ± 0.0092</td>
+<td style="text-align: right;">-0.0683 ± 0.0005</td>
+<td style="text-align: right;">-0.0743 ± 0.0072</td>
+</tr>
+<tr>
+<td>B4-B3</td>
+<td style="text-align: right;">0.0012 ± 0.0133</td>
+<td style="text-align: right;">-0.0466 ± 0.0158</td>
+<td style="text-align: right;">-0.0622 ± 0.0105</td>
+</tr>
+<tr>
+<td>B3-B1</td>
+<td style="text-align: right;">0.0020 ± 0.0041</td>
+<td style="text-align: right;">0.0156 ± 0.0087</td>
+<td style="text-align: right;">-0.0077 ± 0.0106</td>
+</tr>
+<tr>
+<td>B4-B2</td>
+<td style="text-align: right;">-0.0002 ± 0.0090</td>
+<td style="text-align: right;">0.0373 ± 0.0134</td>
+<td style="text-align: right;">0.0044 ± 0.0075</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="固定10M独立测试的六项预定成对比较，点为seed，误差线为样本SD" src="../results/analysis/primary_nll_v2/final/paired_contrasts_7in.svg"></p>
+<p>M 的数学增益与 C4 保留平均略好于 B4，但差异小于相应 seed 间成对标准差；WikiText 平均反而略差。三个 seed 不足以支持“分层稳定胜出”。C 在固定 10M 最终端点的三个主要均值上都劣于 B4；这限定于当前特征、聚类实现、预算和端点，不能推广成聚类选择普遍无效。</p>
+<p>最终数学增益比验证阶段所见更弱。C 的 token 加权均值为 −0.0036，但每个 seed 的条件 95% 文档 bootstrap 区间均跨零，不宜将这份接近零的估计写成稳定的负适应收益。按文档等权，C 的平均增益为 +0.0183，B4 为 +0.0299，M 为 +0.0371；两个口径权重不同，对近零绝对增益可能给出不同符号，必须并列保留。它们都只测数学文本下一词拟合，不能作为推理能力的结论。</p>
+<p>按文档重采样时，FineMath、C4、WikiText 的样本数分别为 466、595、60，使用 5000 次成对抽样。区间条件于已经训练的模型及当前文档样本，不包含重新训练、选库、调参或换数据分区的不确定性，不能把抽样次数当作实验重复数。全部逐 seed、等文档指标、配对区间和来源 SHA 见<a href="../docs/%E4%B8%BBNLL%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E8%AE%A8%E8%AE%BA.md">独立测试讨论</a>及<a href="../results/analysis/primary_nll_v2/final/analysis_manifest.json">主测试 final 分析</a>。</p>
+<p>B4 在 b=.01/.05/.10 的 C4 遗忘均值依次为 .1383/.1444/.1504，WikiText 为 .1365/.1420/.1514；M 的 C4 约为 .1378/.1378/.1399。增加累计回放量没有呈现简单的单调保留收益。该比较固定 λ=.05，改变 b 同时改变每步样本数、有限库重复次数和单 token 相对系数，不能解释为单独增加平均 KL 权重；全部预算条件仍包含在主分析中。</p>
+<h3 id="52">5.2 训练轨迹与验证选择的较早端点</h3>
+<p>完整验证轨迹显示，主36的最佳目标验证点全部早于最终10M：1个在1.6352M、33个在3.2704M、2个在4.9056M。目标训练集只有约2.093M不同目标预测位置，重复训练后出现目标验证退化。最佳点完全由验证选择，随后才独立测试；固定10M主比较依然保留。</p>
+<p><img alt="主实验验证轨迹，细线为seed，粗线为同暴露均值，D与B4完全一致" src="../results/report_figures/primary_validation_trajectories.svg"></p>
+<p>以下表格是这些验证选点的<strong>独立测试</strong>结果，而不是用于选点的验证分数。单位、方向和seed SD同上；不同方法的实际选点曝光可能不同，因此不是相同训练量的另一张主排名表。</p>
+<table>
+<thead>
+<tr>
+<th>组别</th>
+<th style="text-align: right;">数学增益 G</th>
+<th style="text-align: right;">C4 遗忘 F</th>
+<th style="text-align: right;">WikiText 遗忘 F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B0</td>
+<td style="text-align: right;">0.0468 ± 0.0067</td>
+<td style="text-align: right;">0.1115 ± 0.0193</td>
+<td style="text-align: right;">0.1322 ± 0.0160</td>
+</tr>
+<tr>
+<td>B1</td>
+<td style="text-align: right;">0.0526 ± 0.0035</td>
+<td style="text-align: right;">0.0736 ± 0.0020</td>
+<td style="text-align: right;">0.1058 ± 0.0036</td>
+</tr>
+<tr>
+<td>B2</td>
+<td style="text-align: right;">0.0528 ± 0.0053</td>
+<td style="text-align: right;">0.0623 ± 0.0154</td>
+<td style="text-align: right;">0.0868 ± 0.0203</td>
+</tr>
+<tr>
+<td>B3</td>
+<td style="text-align: right;">0.0514 ± 0.0048</td>
+<td style="text-align: right;">0.0874 ± 0.0035</td>
+<td style="text-align: right;">0.1057 ± 0.0102</td>
+</tr>
+<tr>
+<td>B4</td>
+<td style="text-align: right;">0.0544 ± 0.0049</td>
+<td style="text-align: right;">0.0781 ± 0.0016</td>
+<td style="text-align: right;">0.0879 ± 0.0027</td>
+</tr>
+<tr>
+<td>D</td>
+<td style="text-align: right;">0.0544 ± 0.0049</td>
+<td style="text-align: right;">0.0781 ± 0.0016</td>
+<td style="text-align: right;">0.0879 ± 0.0027</td>
+</tr>
+<tr>
+<td>M</td>
+<td style="text-align: right;">0.0530 ± 0.0058</td>
+<td style="text-align: right;">0.0784 ± 0.0023</td>
+<td style="text-align: right;">0.0902 ± 0.0128</td>
+</tr>
+<tr>
+<td>C</td>
+<td style="text-align: right;">0.0574 ± 0.0011</td>
+<td style="text-align: right;">0.0806 ± 0.0057</td>
+<td style="text-align: right;">0.0903 ± 0.0025</td>
+</tr>
+</tbody>
+</table>
+<p>36个配置中，验证选出的较早点在独立测试的数学损失和两个旧域损失上均低于各自最终点。这是同一次训练中两个预定端点的描述性比较，支持当前小目标库下继续训练至10M出现收益退化的判断；它不增加独立训练次数，也不表示已检验所有停止策略。实际训练仍执行到10M，所以成本按完整路径记账，不能按较早点抹去已发生的后续计算。</p>
+<p>选择策略的表现在两类端点间也不同：C 在最佳点的数学增益均值高于 B4，旧域损失增长仍略高；M 在最佳点的三个均值上没有显示相对 B4 的优势。在本次均位于3.2704M的B3/B4最佳点，生成KL−CE的数学增益平均差为+0.0030，C4/WikiText遗忘差为−0.0093/−0.0178，小于最终10M处的旧域差异。保留效应的大小也依赖所比较的训练端点。不能只用最终端点的排序概括整条训练轨迹，也不能根据测试临时决定只展示某个端点。逐配置曝光与全部数值见<a href="../results/analysis/primary_nll_v2/best/analysis_manifest.json">best测试分析</a>，完整验证表另见<a href="../docs/%E6%AD%A3%E5%BC%8F%E9%AA%8C%E8%AF%81%E7%BB%93%E6%9E%9C%E8%AE%A8%E8%AE%BA_%E9%9D%9E%E6%B5%8B%E8%AF%95.md">验证结果讨论</a>。</p>
+<p>相近目标验证损失的插值仅作粗粒度诊断，大部分穿越位于初始到首个验证点之间；没有对应真实中间检查点，不据此宣称同等适应程度下的精确优势。两个预先登记加权指标的差别另作<a href="../docs/%E4%B8%BB%E6%95%B0%E5%AD%A6%E6%B5%8B%E8%AF%95%E6%9D%83%E9%87%8D%E5%B7%AE%E5%BC%82_%E6%B5%8B%E8%AF%95%E5%90%8E%E6%8F%8F%E8%BF%B0%E6%80%A7%E5%88%86%E8%A7%A3.md">测试后描述性分解</a>：它解释固定样本中的加权关系，不作长度因果结论，也不参与选模。</p>
+<h3 id="53">5.3 探索性诊断：有限生成库的标签拟合</h3>
+<p>主验证结果出现 CE/KL 差异后，另登记一项诊断，比较 B3/B4 在实际随机回放库及同池补集上的变化。每个 seed 的库含 196 块，补集含其余 1761 块；两者互斥并完整覆盖原生成池。补集未进入该随机库，但来自参与过统计与选择的同一池，因此不能充当新的独立测试集。这项诊断不用于调参或改变主比较。</p>
+<p>以各分区自己的初始 NLL 为基线，定义 ΔNLL 为适应后减初始损失，gap 为补集 ΔNLL 减库内 ΔNLL。以下为固定 10M 最终端点的三 seed 均值±样本标准差，单位 nats/预测 token。</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th style="text-align: right;">库内 ΔNLL</th>
+<th style="text-align: right;">补集 ΔNLL</th>
+<th style="text-align: right;">gap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B3 生成 CE</td>
+<td style="text-align: right;">−0.7378 ± 0.0575</td>
+<td style="text-align: right;">+0.2893 ± 0.0128</td>
+<td style="text-align: right;">1.0271 ± 0.0698</td>
+</tr>
+<tr>
+<td>B4 生成 KL</td>
+<td style="text-align: right;">+0.1242 ± 0.0013</td>
+<td style="text-align: right;">+0.1704 ± 0.0022</td>
+<td style="text-align: right;">0.0462 ± 0.0020</td>
+</tr>
+</tbody>
+</table>
+<p>B3−B4 的成对 gap 差为 +0.9809±0.0678，三个 seed 同向。B3 在库内已见标签上的 NLL 大幅下降，但其库内教师 KL 为 0.3872，高于补集的 0.2895；B4 对应为 0.1283 和 0.1709。标签拟合与教师完整条件分布的匹配在这里给出了不同信息。该模式与有限标签被反复拟合的解释一致，不能单独证明全部旧域退化的原因。</p>
+<p>对固定学生参数和前缀，新抽教师标签的期望 CE 等于教师熵加 forward KL；训练后的参数已经依赖同一 bank，库内经验 CE 不再能直接代替这一期望。B4 也使用过库内上下文，其库内指标同样不是独立评价。按目标验证选择的最佳点在本诊断中均为 3.2704M，其成对 gap 差为 +0.4366±0.0239。仅有最佳与最终两个端点，不能推出训练全程的单调变化。</p>
+<p>该诊断新增 15 次推理、没有新增训练，推理子进程合计 319.5 秒，输入验证 49.5 秒；教师前向已包含在推理时间内。逐 seed 数值、KL、端点曝光与全部成本见<a href="../docs/%E6%8E%A2%E7%B4%A2%E6%80%A7%E5%9B%9E%E6%94%BE%E6%8B%9F%E5%90%88%E8%AF%8A%E6%96%AD%E7%BB%93%E6%9E%9C.md">完整诊断</a>。</p>
+<h3 id="54">5.4 主实验的实际成本口径</h3>
+<p>下表取主比例八组、每组三 seed 的实际记录。训练一列为均值±样本 SD，其余为均值，单位秒；父项合计包含模型设置、训练、验证和检查点写入。它是各进程已记账分项的总和，不是四卡并行后的总历时，也不是纯 GPU kernel 时间。</p>
+<table>
+<thead>
+<tr>
+<th>组别</th>
+<th style="text-align: right;">训练秒数</th>
+<th style="text-align: right;">验证秒数</th>
+<th style="text-align: right;">父项合计秒数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B0</td>
+<td style="text-align: right;">170.9 ± 0.7</td>
+<td style="text-align: right;">132.7</td>
+<td style="text-align: right;">316.2</td>
+</tr>
+<tr>
+<td>B1</td>
+<td style="text-align: right;">189.7 ± 0.6</td>
+<td style="text-align: right;">132.5</td>
+<td style="text-align: right;">334.2</td>
+</tr>
+<tr>
+<td>B2</td>
+<td style="text-align: right;">198.2 ± 3.4</td>
+<td style="text-align: right;">132.8</td>
+<td style="text-align: right;">343.0</td>
+</tr>
+<tr>
+<td>B3</td>
+<td style="text-align: right;">193.3 ± 0.9</td>
+<td style="text-align: right;">133.2</td>
+<td style="text-align: right;">339.3</td>
+</tr>
+<tr>
+<td>B4</td>
+<td style="text-align: right;">198.8 ± 2.9</td>
+<td style="text-align: right;">133.1</td>
+<td style="text-align: right;">344.5</td>
+</tr>
+<tr>
+<td>D</td>
+<td style="text-align: right;">201.2 ± 1.5</td>
+<td style="text-align: right;">132.4</td>
+<td style="text-align: right;">345.8</td>
+</tr>
+<tr>
+<td>M</td>
+<td style="text-align: right;">198.2 ± 2.3</td>
+<td style="text-align: right;">133.1</td>
+<td style="text-align: right;">343.6</td>
+</tr>
+<tr>
+<td>C</td>
+<td style="text-align: right;">200.6 ± 1.2</td>
+<td style="text-align: right;">133.0</td>
+<td style="text-align: right;">346.1</td>
+</tr>
+</tbody>
+</table>
+<p>KL 组的训练教师前向约为6.1秒，已包含在训练父项中，不能再加一次。D/B4 虽然模型状态相同，本研究确实各自执行了训练，其训练成本均保留；只在之后的评价与权重保存中复用了已经证明相同的模型。各组整次运行的 allocated 峰值约为17.29 GiB，包含共同的教师 KL 验证和教师常驻，不能据此说训练目标本身具有相同内存需求。</p>
+<p>固定预测预算还需与实际输入量区分。所有主运行均处理10M目标预测位置，对应10,019,570个有效输入位置及10,019,840个含padding输入位置；不同回放预算的实际计数如下，相同b在各方法和seed间完全一致。</p>
+<table>
+<thead>
+<tr>
+<th>b</th>
+<th style="text-align: right;">回放预测暴露</th>
+<th style="text-align: right;">有效输入位置</th>
+<th style="text-align: right;">含padding输入位置</th>
+<th style="text-align: right;">唯一监督覆盖</th>
+<th style="text-align: right;">重复监督暴露</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.01</td>
+<td style="text-align: right;">100,000</td>
+<td style="text-align: right;">175,257</td>
+<td style="text-align: right;">238,899</td>
+<td style="text-align: right;">100,000</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>0.05</td>
+<td style="text-align: right;">500,000</td>
+<td style="text-align: right;">563,443</td>
+<td style="text-align: right;">626,176</td>
+<td style="text-align: right;">100,156</td>
+<td style="text-align: right;">399,844</td>
+</tr>
+<tr>
+<td>0.10</td>
+<td style="text-align: right;">1,000,000</td>
+<td style="text-align: right;">1,064,421</td>
+<td style="text-align: right;">1,126,912</td>
+<td style="text-align: right;">100,156</td>
+<td style="text-align: right;">899,844</td>
+</tr>
+</tbody>
+</table>
+<p>库容量均为100,156，b=.01实际尚未监督完整个库。分块读取跨步保留进度，同时重读完整因果前缀；旧位置只提供上下文，不重复计入当轮监督预算。这里的输入计数只计学生训练流，不再加上教师前向，也不包含验证，因此不能当作所有模型调用总量或FLOPs。三个非零b在当前批量下都需要每步一次回放前向；B4训练时间的三seed观察范围分别为193.3–198.0、195.9–201.7、202.2–203.7秒，预测量的十倍变化并未对应训练墙钟的十倍变化。这些是当前实现与并发环境的观察，不能作独立的运行时间因果估计。<a href="../docs/%E4%B8%BB36%E8%BF%90%E8%A1%8C%E9%A2%84%E7%AE%97%E5%8F%A3%E5%BE%84.md">逐项预算审计</a>提供完整计数、λ/b和独立重算证据。</p>
+<p>三个正式生成池分别耗时119.0、117.1、117.5秒，联合教师统计约8.1秒/池；每池 NLL 分层选择约0.067秒、聚类选择约2.35–2.66秒。准备父项合计386.3秒，在本次共享池研究中只计一次，不能按使用该池的方法或预算条件重复计费。这里没有把混合 pilot/正式准备的未分摊开销全部强算给主实验。</p>
+<p>独立部署成本与共享研究成本不同。单独运行 M 需要 NLL 统计，C 可只提取不经 LM head 的教师特征；<a href="../docs/%E9%80%89%E6%8B%A9%E7%BB%9F%E8%AE%A1%E7%8B%AC%E7%AB%8B%E6%88%90%E6%9C%AC%E8%AF%8A%E6%96%AD.md">独立计时诊断</a>中两条路径分别约8.66秒和3.32秒/池，不能凭“聚类”名称断言 C 的准备总成本必然更高。这些新测统计计时与历史 CPU 选择计时来自不同测量，不能相加后冒称已测端到端系统时间。本文为控制比较让随机组也使用完整1M候选池；其他实现可以直接为随机回放生成较小库，本文没有实测该替代路径，因此当前成本不是生产部署的最低成本。</p>
+<p>主67项独立 NLL 推理子进程累计1782.7秒，冻结输入验证285.1秒；初始模型计一次，六个相等端点没有重复前向。探索性 replay-fit 另有15项推理；两种端点的训练费仍按同一次完整训练计一次。原始分项见<a href="../results/analysis/formal_deterministic_validation/training_costs.csv">主训练成本</a>、<a href="../results/analysis/formal_deterministic_validation/shared_preparation_costs.csv">共享准备成本</a>和<a href="../results/analysis/primary_nll_v2/all67_physical_inference_costs.csv">主测试成本</a>。全部校准、失败诊断、扩展训练、资源利用及后处理的总账将在研究截止前汇总；此表不冒充整个24小时的费用。</p>
 <h2 id="6">6. 补充实验与解释边界</h2>
 <p><a href="../docs/%E8%A1%A5%E5%85%85%E5%AE%9E%E9%AA%8C%E9%A2%84%E6%A1%88.md">补充实验预案</a>包含损失权重曲线、固定训练流与生成池的选库条件波动、较大目标库与较大模型，以及固定的零样本选择题评价。补充 B 的抽样种子不是独立训练种子。扩展训练与主数据有包含和重合关系，需要使用配套去污染评价集合，也不能称为第二次独立总体复制。</p>
+<p>补充 A 固定六种回放方法、七个 λ 和三个 seed，共 126 个逻辑条件，其中 18 个沿用主实验。整套验证网格完成后，才按预先指定的目标与旧域等权得分选择每种方法的 λ。补充 B 固定生成池和训练流，比较三种选库规则、两种库容量和十个选库 seed，共 60 个条件，估计条件选库波动。</p>
+<p>长程部分固定 Pythia-410M 与 1B 各八组×三个 seed，分别处理 100M 目标预测 token；2.8B 为五组×三个 seed、25M token。各模型使用约 20M 不同目标预测位置及配套评价集合。2.8B 原定 50M 因纯运行时间预算在正式长程启动前一次性改为 25M，保留全部十五个条件、重设完整学习率日程，没有依据测试结果删组选种子。不同模型同时改变容量、批量、数据与训练时长，不能将其差异单独归因为参数规模。具体决策与时间余量见<a href="../docs/2p8B%E8%AE%AD%E7%BB%83%E6%97%B6%E9%95%BF%E9%A2%84%E7%AE%97%E4%BF%AE%E8%AE%A2.md">预算修订</a>。</p>
 <p>共享小规模校准提供统一、可审计的比较条件，不保证每个方法在长训练下达到全局最优。局部表示覆盖、输出 KL、文本 NLL 和选择题正确率描述不同对象。最终结论将依据实际完成的实验范围，明确未验证的模型、分布与能力。</p>
 <h2 id="7">7. 复现与交付状态</h2>
-<p>代码位于 <code>src/replay_study/</code> 和 <code>scripts/</code>，冻结配置、输入版本与哈希位于 <code>configs/</code> 和 <code>artifacts/</code>。实际运行状态见<a href="../docs/STATUS.md">STATUS</a>。共享存储出现 ENOSPC 后，工作树迁至本机大盘，原路径通过链接保留；最终交付时将单独列明持久化归档与仍在临时盘上的大型权重，避免将两者混淆。</p>
-<p>本文与配套代码由 AI 协助研究和实现，保留来源、实验日志和失败记录，供作者复核、修改并按学校要求披露。当前文档为研究交付工作稿，不能把占位内容视为已经得到的实验发现。</p></body></html>
+<p>代码位于 <code>src/replay_study/</code> 和 <code>scripts/</code>，冻结配置、输入版本与哈希位于 <code>configs/</code> 和 <code>artifacts/</code>。实际运行状态见<a href="../docs/STATUS.md">STATUS</a>。共享存储出现 ENOSPC 后，工作树迁至本机大盘，原路径通过链接保留。主八组×三 seed 的最终权重现已无损编码、逐 tensor 还原核对，并写入持久存储；包含 21 份不同权重及 D/B4 的三个别名，归档约 23.24 GiB。该归档还包含固定初始模型与恢复代码，不含优化器状态；它支持恢复模型参数，不能直接恢复 AdamW 训练进度。另十二个预算敏感性条件、最佳点和补充实验权重的保存位置将在最终交付清单中分别说明。格式与校验见<a href="../docs/%E6%97%A0%E6%8D%9F%E6%9D%83%E9%87%8D%E4%BA%A4%E4%BB%98%E6%A0%BC%E5%BC%8F.md">无损权重交付说明</a>。</p>
+<p>本文与配套代码由 AI 协助研究和实现，保留来源、实验日志和失败记录，供作者复核、修改并按学校要求披露。当前文档为研究交付工作稿，不能把占位内容视为已经得到的实验发现。</p>
+<h2 id="8">8. 主要参考文献与资源</h2>
+<p>下列条目供独立阅读报告时定位核心来源；完整 28 条记录及文献之间的比较见配套调研和 <code>literature/references.bib</code>。预印本按核实的版本引用，不擅自补写发表状态。</p>
+<ol>
+<li>Béthune L, Grangier D, Busbridge D, et al. <a href="https://proceedings.mlr.press/v267/bethune25a.html">Scaling Laws for Forgetting during Finetuning with Pretraining Data Injection</a>. ICML, PMLR 267: 4020–4042, 2025.</li>
+<li>Marek M, Cho D, Qiu S, et al. <a href="https://arxiv.org/abs/2605.26097">Forgetting in Language Models: Capacity, Optimization, and Self-Generated Replay</a>. arXiv:2605.26097, 2026.</li>
+<li>Kotha S, Liang P. <a href="https://arxiv.org/abs/2603.04964">Replaying pre-training data improves fine-tuning</a>. arXiv:2603.04964, 2026.</li>
+<li>Huang J, Cui L, Wang A, et al. <a href="https://aclanthology.org/2024.acl-long.77/">Mitigating Catastrophic Forgetting in Large Language Models with Self-Synthesized Rehearsal</a>. ACL: 1416–1428, 2024.</li>
+<li>Biderman S, Schoelkopf H, Anthony Q G, et al. <a href="https://proceedings.mlr.press/v202/biderman23a.html">Pythia: A Suite for Analyzing Large Language Models Across Training and Scaling</a>. ICML, PMLR 202: 2397–2430, 2023.</li>
+<li>Raffel C, Shazeer N, Roberts A, et al. <a href="https://jmlr.org/papers/v21/20-074.html">Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer</a>. JMLR 21(140): 1–67, 2020. C4 的论文来源；实际子集与 revision 另见数据清单。</li>
+<li>HuggingFaceTB. <a href="https://huggingface.co/datasets/HuggingFaceTB/finemath">FineMath 数据卡</a>. 访问日期：2026-11-06。具体下载版本、文档分区与 token 数以本研究保存的 manifest 为准。</li>
+<li>Martens J. <a href="https://jmlr.org/papers/v21/17-678.html">New Insights and Perspectives on the Natural Gradient Method</a>. JMLR 21(146): 1–76, 2020. 用于局部 Fisher/KL 关系的理论背景。</li>
+<li>Efron B. <a href="https://doi.org/10.1214/aos/1176344552">Bootstrap Methods: Another Look at the Jackknife</a>. The Annals of Statistics 7(1): 1–26, 1979. 本研究按文档成对抽样的具体规则另见统计协议。</li>
+</ol>
+<p>行为任务、WikiText 资源及实际固定评分实现的条目均包含在完整参考文献数据库中；其评分结果将在对应冻结评价完成后报告。</p></body></html>

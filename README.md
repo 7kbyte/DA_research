@@ -35,4 +35,6 @@ python scripts/reproduce_experiments.py relocate --registry configs/formal_deter
 
 `relocate`先核对原配置、冻结core、目标/回放/验证/测试数据及模型SHA，再生成新namespace的配置、registry、queue与`reproduction_of`来源记录；原结果保持原位，路径调整不记作新科学设置。扩展实验额外重复传入其matched extended protocol作为`--input-manifest`；可用`--run-id`选择单项。复制时清除旧日期deadline，可用`--deadline`指定新的操作截止时间。输入目录中的symlink需在交付机器可解析，归档应携带实际数据字节。
 
-随后用`reproduce --registry <新registry路径> --gpus 0 --deadline <新的UTC截止时间>`复核输入并打印启动命令；添加`--execute`后以detached scheduler训练新运行。先按冻结环境文件准备依赖，运行时版本和实际精度仍由每项summary记录。该helper及测试仅准备和dry-run验证，未执行重训。
+随后用`reproduce --registry <新registry路径> --gpus 0 --deadline <新的UTC截止时间>`复核输入并打印启动命令；添加`--execute`后以detached scheduler训练新运行。先按冻结环境文件准备依赖，运行时版本和实际精度仍由每项summary记录。
+
+已从实际共享盘快照重新解包，逐文件核对3925个归档成员，并使用归档内原始helper完成B1/B2/B3/B4、seed11的路径重定位和启动命令dry-run；基座、34项输入与10份冻结科学源码均通过核验，见[归档复现QA](docs/归档复现QA演练.md)。这验证了归档内容与启动准备，尚未验证重新训练的权重一致性，也未完成全新容器的环境重建。

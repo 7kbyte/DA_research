@@ -44,14 +44,14 @@ def main():
       @bottom-right { content: counter(page) ' / ' counter(pages); font-size: 8pt; color: #666; }
     }
     html { font-family: ReportCJK, 'Noto Serif CJK SC', 'Songti SC', SimSun, serif; color: #20252a; }
-    body { font-size: 10.5pt; line-height: 1.65; }
+    body { font-size: 10.5pt; line-height: 1.6; }
     h1 { font-size: 23pt; line-height: 1.35; margin: 0 0 18pt; color: #183b50; }
     h2 { font-size: 14.5pt; margin-top: 22pt; border-bottom: .6pt solid #b2c4ce;
          padding-bottom: 4pt; color: #183b50; break-after: avoid; }
     h3 { font-size: 11.5pt; margin-top: 15pt; break-after: avoid; }
-    p { margin: 8pt 0; orphans: 3; widows: 3; }
+    p { margin: 7pt 0; orphans: 3; widows: 3; }
     a { color: #155f8b; text-decoration: none; overflow-wrap: anywhere; }
-    table { border-collapse: collapse; width: 100%; font-size: 8.5pt; line-height: 1.45; margin: 12pt 0; }
+    table { border-collapse: collapse; width: 100%; font-size: 8.5pt; line-height: 1.45; margin: 12pt 0; break-inside: avoid; }
     thead { display: table-header-group; background: #eaf0f3; }
     th, td { border: .5pt solid #b7c4cc; padding: 5pt; vertical-align: top; overflow-wrap: anywhere; }
     tr { break-inside: avoid; }
