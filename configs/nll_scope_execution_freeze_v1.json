@@ -1,0 +1,387 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-06T06:26:49.621118+00:00",
+  "state": "root_fixed_endpoint_scope_before_first_real_NLL_test",
+  "authority": "Root explicit endpoint scope amendment; no NLL test score observed",
+  "prepared_only": true,
+  "inference_launch_authorized_by_this_file": false,
+  "NLL_test_scores_seen": false,
+  "prior_evidence_untouched": true,
+  "phases": [
+    {
+      "phase": "primary",
+      "model": "pythia-410m",
+      "data_family": "main_v3",
+      "training_cells": 36,
+      "endpoints": [
+        "final",
+        "best"
+      ],
+      "logical_endpoints": 72,
+      "proven_forward_aliases": 6,
+      "additional_adapted_inferences": 66
+    },
+    {
+      "phase": "supplement_A",
+      "model": "pythia-410m",
+      "data_family": "main_v3",
+      "training_cells": 126,
+      "endpoints": [
+        "final"
+      ],
+      "logical_endpoints": 126,
+      "registered_primary_aliases": 18,
+      "additional_adapted_inferences": 108
+    },
+    {
+      "phase": "supplement_B",
+      "model": "pythia-410m",
+      "data_family": "main_v3",
+      "training_cells": 60,
+      "endpoints": [
+        "final"
+      ],
+      "logical_endpoints": 60,
+      "additional_adapted_inferences": 60
+    },
+    {
+      "phase": "supplement_C",
+      "model": "pythia-410m",
+      "data_family": "extended_v1",
+      "training_cells": 24,
+      "endpoints": [
+        "final",
+        "best"
+      ],
+      "logical_endpoints": 48,
+      "additional_adapted_inferences": 48,
+      "formal_completion_claim": false,
+      "future_full_state_equivalence_not_yet_deducted": true
+    },
+    {
+      "phase": "supplement_C",
+      "model": "pythia-1b",
+      "data_family": "extended_v1",
+      "training_cells": 24,
+      "endpoints": [
+        "final",
+        "best"
+      ],
+      "logical_endpoints": 48,
+      "additional_adapted_inferences": 48,
+      "formal_completion_claim": false,
+      "future_full_state_equivalence_not_yet_deducted": true
+    },
+    {
+      "phase": "supplement_C",
+      "model": "pythia-2.8b",
+      "data_family": "extended_v1",
+      "training_cells": 15,
+      "endpoints": [
+        "final",
+        "best"
+      ],
+      "logical_endpoints": 30,
+      "additional_adapted_inferences": 30,
+      "formal_completion_claim": false,
+      "future_full_state_equivalence_not_yet_deducted": true
+    }
+  ],
+  "logical_endpoints": 384,
+  "baseline_rule": "Unique model + heldout tensor SHA + actual inference execution policy; main_v3 and extended_v1 remain separate",
+  "planned_initial_baselines": 4,
+  "adapted_forward_count_after_only_current_proofs": 360,
+  "total_inference_jobs_before_further_proven_aliases": 364,
+  "checkpoint_selection": "Final at actual prescribed exposure; best from target validation only, preserving step/target/replay exposure",
+  "physical_training_cost_rule": "Inference aliases never remove actual physical training costs; best exposure never substitutes for complete training cost",
+  "C_2p8b_duration": "Root permits complete fifteen-run 25M fallback instead of 50M before first formal, solely from timing; training_engine separate amendment required. Endpoint/seed/group counts unchanged here.",
+  "baseline_groups": [
+    {
+      "model": "pythia-410m",
+      "data_family": "main_v3",
+      "inference_policy": {
+        "model": "/tmp/grad-research-20261106/models/pythia-410m-final",
+        "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+        "batch_size": 16,
+        "max_length": 512,
+        "device": "cuda:0",
+        "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+        "cuda_version": "12.4",
+        "gpu_name": "NVIDIA H100 80GB HBM3",
+        "precision": "bf16",
+        "device_type": "cuda",
+        "effective_precision": "cuda_bfloat16_autocast",
+        "attention_implementation": "sdpa",
+        "attention_backend": "auto",
+        "deterministic_algorithms": true,
+        "deterministic_warn_only": false,
+        "allow_tf32_matmul": true,
+        "allow_tf32_cudnn": true,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "flash_sdp_enabled": true,
+        "mem_efficient_sdp_enabled": true,
+        "math_sdp_enabled": true,
+        "cudnn_sdp_enabled": true,
+        "model_weight_dtype": "torch.float32"
+      },
+      "corpora": {
+        "target": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/finemath_test.pt",
+          "sha256": "3fdea241e0bf812e772ab1789ec1e9e722fdd6a18efdf6850e5aeb18cfac63f3",
+          "chunks": 1024,
+          "prediction_tokens": 523264
+        },
+        "c4": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/c4_test.pt",
+          "sha256": "95457714af354880c92716edd99b878110e9635d70f3d0d2435dc75e9a755e61",
+          "chunks": 1024,
+          "prediction_tokens": 523264
+        },
+        "wikitext": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/wikitext103_test.pt",
+          "sha256": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f",
+          "chunks": 529,
+          "prediction_tokens": 270319
+        }
+      },
+      "adapted_inferences_before_further_equivalence_proofs": 234,
+      "initial_inferences": 1,
+      "prediction_tokens_per_inference": 1316847,
+      "student_prediction_tokens": 309459045,
+      "teacher_additional_prediction_tokens": 308142198,
+      "initial_teacher_logits_reused": true
+    },
+    {
+      "model": "pythia-410m",
+      "data_family": "extended_v1",
+      "inference_policy": {
+        "model": "/tmp/grad-research-20261106/models/pythia-410m-final",
+        "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+        "batch_size": 16,
+        "max_length": 512,
+        "device": "cuda:0",
+        "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+        "cuda_version": "12.4",
+        "gpu_name": "NVIDIA H100 80GB HBM3",
+        "precision": "bf16",
+        "device_type": "cuda",
+        "effective_precision": "cuda_bfloat16_autocast",
+        "attention_implementation": "sdpa",
+        "attention_backend": "auto",
+        "deterministic_algorithms": true,
+        "deterministic_warn_only": false,
+        "allow_tf32_matmul": true,
+        "allow_tf32_cudnn": true,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "flash_sdp_enabled": true,
+        "mem_efficient_sdp_enabled": true,
+        "math_sdp_enabled": true,
+        "cudnn_sdp_enabled": true,
+        "model_weight_dtype": "torch.float32"
+      },
+      "corpora": {
+        "target": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_test.pt",
+          "sha256": "f19f802f985d929ecb3a623e3255785159b1fcb895c8f439bc037a7012d29718",
+          "chunks": 979,
+          "prediction_tokens": 500269
+        },
+        "c4": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_test.pt",
+          "sha256": "e81744326b66513afdfc02cc3b74b9c92908cd2359f13d0eac2b1a99bf516747",
+          "chunks": 979,
+          "prediction_tokens": 500269
+        },
+        "wikitext": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_test.pt",
+          "sha256": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f",
+          "chunks": 529,
+          "prediction_tokens": 270319
+        }
+      },
+      "adapted_inferences_before_further_equivalence_proofs": 48,
+      "initial_inferences": 1,
+      "prediction_tokens_per_inference": 1270857,
+      "student_prediction_tokens": 62271993,
+      "teacher_additional_prediction_tokens": 61001136,
+      "initial_teacher_logits_reused": true
+    },
+    {
+      "model": "pythia-1b",
+      "data_family": "extended_v1",
+      "inference_policy": {
+        "model": "/tmp/grad-research-20261106/models/pythia-1b-final",
+        "revision": "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2",
+        "batch_size": 16,
+        "max_length": 512,
+        "device": "cuda:0",
+        "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+        "cuda_version": "12.4",
+        "gpu_name": "NVIDIA H100 80GB HBM3",
+        "precision": "bf16",
+        "device_type": "cuda",
+        "effective_precision": "cuda_bfloat16_autocast",
+        "attention_implementation": "sdpa",
+        "attention_backend": "auto",
+        "deterministic_algorithms": true,
+        "deterministic_warn_only": false,
+        "allow_tf32_matmul": true,
+        "allow_tf32_cudnn": true,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "flash_sdp_enabled": true,
+        "mem_efficient_sdp_enabled": true,
+        "math_sdp_enabled": true,
+        "cudnn_sdp_enabled": true,
+        "model_weight_dtype": "torch.float32"
+      },
+      "corpora": {
+        "target": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_test.pt",
+          "sha256": "f19f802f985d929ecb3a623e3255785159b1fcb895c8f439bc037a7012d29718",
+          "chunks": 979,
+          "prediction_tokens": 500269
+        },
+        "c4": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_test.pt",
+          "sha256": "e81744326b66513afdfc02cc3b74b9c92908cd2359f13d0eac2b1a99bf516747",
+          "chunks": 979,
+          "prediction_tokens": 500269
+        },
+        "wikitext": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_test.pt",
+          "sha256": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f",
+          "chunks": 529,
+          "prediction_tokens": 270319
+        }
+      },
+      "adapted_inferences_before_further_equivalence_proofs": 48,
+      "initial_inferences": 1,
+      "prediction_tokens_per_inference": 1270857,
+      "student_prediction_tokens": 62271993,
+      "teacher_additional_prediction_tokens": 61001136,
+      "initial_teacher_logits_reused": true
+    },
+    {
+      "model": "pythia-2.8b",
+      "data_family": "extended_v1",
+      "inference_policy": {
+        "model": "/tmp/grad-research-20261106/models/pythia-2.8b-final",
+        "revision": "2a259cdd96a4beb1cdf467512e3904197345f6a9",
+        "batch_size": 8,
+        "max_length": 512,
+        "device": "cuda:0",
+        "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+        "cuda_version": "12.4",
+        "gpu_name": "NVIDIA H100 80GB HBM3",
+        "precision": "bf16",
+        "device_type": "cuda",
+        "effective_precision": "cuda_bfloat16_autocast",
+        "attention_implementation": "sdpa",
+        "attention_backend": "auto",
+        "deterministic_algorithms": true,
+        "deterministic_warn_only": false,
+        "allow_tf32_matmul": true,
+        "allow_tf32_cudnn": true,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "flash_sdp_enabled": true,
+        "mem_efficient_sdp_enabled": true,
+        "math_sdp_enabled": true,
+        "cudnn_sdp_enabled": true,
+        "model_weight_dtype": "torch.float32"
+      },
+      "corpora": {
+        "target": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_test.pt",
+          "sha256": "f19f802f985d929ecb3a623e3255785159b1fcb895c8f439bc037a7012d29718",
+          "chunks": 979,
+          "prediction_tokens": 500269
+        },
+        "c4": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_test.pt",
+          "sha256": "e81744326b66513afdfc02cc3b74b9c92908cd2359f13d0eac2b1a99bf516747",
+          "chunks": 979,
+          "prediction_tokens": 500269
+        },
+        "wikitext": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_test.pt",
+          "sha256": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f",
+          "chunks": 529,
+          "prediction_tokens": 270319
+        }
+      },
+      "adapted_inferences_before_further_equivalence_proofs": 30,
+      "initial_inferences": 1,
+      "prediction_tokens_per_inference": 1270857,
+      "student_prediction_tokens": 39396567,
+      "teacher_additional_prediction_tokens": 38125710,
+      "initial_teacher_logits_reused": true
+    }
+  ],
+  "source_sha256": {
+    "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_nll_manifest.json": "d1502bcaff5cdcd75d984a4b8776f1cb4027b596f474835bfe9ed18875d9fd18",
+    "/tmp/grad-research-20261106/worktree/scripts/freeze_nll_scope.py": "6a014c4393fc7dc6ef42d5a5fef9ed23656467c2ccf226e5ed837820fea75451",
+    "/tmp/grad-research-20261106/worktree/configs/supplemental_v1_A_registry.json": "0f43c49530b79d09c18113e8c50239b640e99bbbdcb26b890e805d71cf291310",
+    "/tmp/grad-research-20261106/worktree/configs/supplemental_v1/activated/B_conditional_bank_variance/executor_registry.json": "841c8f86a6b6bc6c098ca5f3540b1ac3c758f6cc5cb0d48fc5f4083759b517cc",
+    "/tmp/grad-research-20261106/worktree/configs/formal_deterministic/formal_deterministic_B4_s11_b0p05_w0p05.json": "a4f8622c5ca6e65bd09adf28e24a175ab65165a6cc6aee567386ca7f8b831c9e",
+    "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s11_b0p05_w0p05_summary.json": "600892fa82d0a73b92e31c7f032792e20a22add11ef08722306527c8e4034bdf",
+    "/tmp/grad-research-20261106/worktree/configs/formal_deterministic/formal_deterministic_B4_s22_b0p05_w0p05.json": "72274eb106907958b04ee2434c07c4c7de42092c26c59f8a7d5e3103f3b2dd66",
+    "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s22_b0p05_w0p05_summary.json": "32a28e2daf25f05a28a468f81a590b27d00edf6ea6490b1716cb43c7ddffded3",
+    "/tmp/grad-research-20261106/worktree/configs/formal_deterministic/formal_deterministic_B4_s33_b0p05_w0p05.json": "fea1d37dd6f38b94807ade1d10aa0c927f499de9f770572fc4707e0649c73f5c",
+    "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s33_b0p05_w0p05_summary.json": "ca32af13fb9ac7960fa07fdc135442d2f514d53de142af50f27207c840f1a73d",
+    "/tmp/grad-research-20261106/worktree/configs/formal_deterministic/formal_deterministic_B4_s11_b0p01_w0p05.json": "d828394748d89c6817047b339581ffa55326b3076db664d87eccdd1030dd3da5",
+    "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s11_b0p01_w0p05_summary.json": "61dd48fc92dc640b18dfc6ceea548d0ca59fe3e3c433f86a5be5cb798b1f9998",
+    "/tmp/grad-research-20261106/worktree/configs/formal_deterministic/formal_deterministic_B4_s22_b0p01_w0p05.json": "280745de5d80dd19bd6977c770a898455c2b936f110e02c1edfbb30c4f8d6341",
+    "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s22_b0p01_w0p05_summary.json": "c11a921419ace1edd57e0d6ce1b4d10f7d6982c8fe0bc99017a1d89932f5d03a",
+    "/tmp/grad-research-20261106/worktree/configs/formal_deterministic/formal_deterministic_B4_s33_b0p01_w0p05.json": "8eb710814a86935b1682ba73a111c13889acf59c07ddba3e20a6229f7fd24f94",
+    "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s33_b0p01_w0p05_summary.json": "408fed44794dde087424327ccc677cfd0fa1e7c1eb00e38952a33cbe68415919",
+    "/tmp/grad-research-20261106/worktree/configs/formal_deterministic/formal_deterministic_B4_s11_b0p1_w0p05.json": "a01be76e178bd4568d2f499ec4b0c91bd7902a1392a125fc681e5634a11a4bae",
+    "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s11_b0p1_w0p05_summary.json": "a528eeb08bc2f48fde105ff835263d60bfaa6d0ee5b2619d722ef10dd249f502",
+    "/tmp/grad-research-20261106/worktree/configs/formal_deterministic/formal_deterministic_B4_s22_b0p1_w0p05.json": "d7776a97b884cc0321b83d26361496ddc783ed82e58b1124a571c1b5db105612",
+    "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s22_b0p1_w0p05_summary.json": "e1b2114505ceff830fb134f55b35a285ca3fa95ed87f595f12f532e4882ee5a0",
+    "/tmp/grad-research-20261106/worktree/configs/formal_deterministic/formal_deterministic_B4_s33_b0p1_w0p05.json": "b86ba6b9e9c954d715c70667700e128c49d4e91928612d960d265c777f656c53",
+    "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s33_b0p1_w0p05_summary.json": "84aed885a3abc71baf38d80ace16f1b633524bece93bf9cf47cd5a516cf34f1f",
+    "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/finemath_test.json": "63b07f91703e0ab084a61e4b8ffd5a2ee8b719f0ed39ff059a94aca33eadb05c",
+    "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/finemath_test.pt": "3fdea241e0bf812e772ab1789ec1e9e722fdd6a18efdf6850e5aeb18cfac63f3",
+    "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/c4_test.json": "272e023f73a35b3cf0324b995ce8dcd0715f92bf6a9da39eacf8eb8745e6c8ce",
+    "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/c4_test.pt": "95457714af354880c92716edd99b878110e9635d70f3d0d2435dc75e9a755e61",
+    "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/wikitext103_test.json": "d9797bc38cd4b1a2366a51522cc567e432807f6aa54163352f9a015537c24a5b",
+    "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/wikitext103_test.pt": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f",
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_lr_registry.json": "2ff7788ae3da97dec62dde24910706cfb7d8d5fd1198776eea95340664c985f9",
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_lr/extended_v2_pythia_410m_m64_lr_B0_s101_lr1em05.json": "90e94e833366abc1f18b7355a762a8485eb793b88474fd6758b0b710fdb7e411",
+    "/tmp/grad-research-20261106/worktree/results/extended/pythia-410m/extended_v2_pythia_410m_m64_lr_B0_s101_lr1em05_summary.json": "d0dc508fd55472424ba96a4f141d0a633df5be38192108813073e26642c9ee33",
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_lr/extended_v2_pythia_410m_m64_lr_B0_s101_lr3em05.json": "9b1ac86fff47c81cda4079bd615fd793cb3254f420b41b876538b7ac326cdf6f",
+    "/tmp/grad-research-20261106/worktree/results/extended/pythia-410m/extended_v2_pythia_410m_m64_lr_B0_s101_lr3em05_summary.json": "642dbffd8da75d005cd1735ddd8adb0a8b1bf98a35f89d9fce81bc6233c4f1e5",
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_lr/extended_v2_pythia_410m_m64_lr_B0_s101_lr0p0001.json": "88f31bb42aa2175d479b9dd31bf5da00ee9201545884301a84a4522547012f13",
+    "/tmp/grad-research-20261106/worktree/results/extended/pythia-410m/extended_v2_pythia_410m_m64_lr_B0_s101_lr0p0001_summary.json": "657c726a7b684acef83cd0d8f0ec319b1b9681ac843859d65d9efdee2218c176",
+    "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_test.json": "b6f64ffb6695e9e850b40927a0d9cfd33b11ad95088cbc46972251e3775a7649",
+    "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_test.pt": "f19f802f985d929ecb3a623e3255785159b1fcb895c8f439bc037a7012d29718",
+    "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_test.json": "e105d85150041c37670523724f5106c3a864afb44e89b6fd3cb7530b251d7e39",
+    "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_test.pt": "e81744326b66513afdfc02cc3b74b9c92908cd2359f13d0eac2b1a99bf516747",
+    "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_test.json": "4b8a5bee339a6c0cc1412c4ba5b381e4cd521b2e06c68d84db61f6379e02660f",
+    "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_test.pt": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f",
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_lr_registry.json": "0774b9e6f8c2f43f553baf7582fbc04a8350fdd7b9737cbc2b87fa221a4c1080",
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_lr/extended_v2_pythia_1b_m32_lr_B0_s101_lr1em05.json": "380e86b3b8d47eced37c10785d7628d40d5818b71c89b7bfb20f4e6b52e8716c",
+    "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_lr_B0_s101_lr1em05_summary.json": "d42840803c67f57abb6f490ead252d376d925c90f80a8d24eb537c33f7027442",
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_lr/extended_v2_pythia_1b_m32_lr_B0_s101_lr3em05.json": "7cc277128de891d7dbd3ae854b3ce567125163489a5dcd4f860d44974bfd1eee",
+    "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_lr_B0_s101_lr3em05_summary.json": "ebfc57a32ca90b7b65d6aba9639604a6e13a1c65dfa0859a4723ca613dcfd04d",
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_lr/extended_v2_pythia_1b_m32_lr_B0_s101_lr0p0001.json": "e1d91b2a8bb276c8bdf06a86761c28b9c0999ad8414368c251d7eb9a4f6cb38d",
+    "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_lr_B0_s101_lr0p0001_summary.json": "77b5f43cc89aef201716fce5afe32e206172e4ae209bccff3cff75de612e03ca",
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_lr_registry.json": "4c0f4b9567e569b671b9f7bb3b88f859da1f9fd4eb9b00d7e049cbe7432e7703",
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_lr/extended_v2_pythia_2p8b_m8_lr_B0_s101_lr1em05.json": "c31fe744bbf94f087f9bc5efdd45198e74e36f52a236f9fb11847aa2d21c9b35",
+    "/tmp/grad-research-20261106/worktree/results/extended/pythia-2.8b/extended_v2_pythia_2p8b_m8_lr_B0_s101_lr1em05_summary.json": "7ae91d8be2da829269bbcc6982347f1edef6e129eab17c65f69e656c6398ab26",
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_lr/extended_v2_pythia_2p8b_m8_lr_B0_s101_lr3em05.json": "9c87d455591f7d6fdd808d136e15941c56119709be28466a7756c6ddd283d2c3",
+    "/tmp/grad-research-20261106/worktree/results/extended/pythia-2.8b/extended_v2_pythia_2p8b_m8_lr_B0_s101_lr3em05_summary.json": "6d8c054bdbb78cf48fb2a1f897681f195ed8046749fef011659b769f18e07dda",
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_lr/extended_v2_pythia_2p8b_m8_lr_B0_s101_lr0p0001.json": "a19083b635bb097c07633ef4ee1af95b081dfe96c4b50901ea3792c1afaffed8",
+    "/tmp/grad-research-20261106/worktree/results/extended/pythia-2.8b/extended_v2_pythia_2p8b_m8_lr_B0_s101_lr0p0001_summary.json": "98143c83d86e3867a2d3f00805ed40aeaa2291fa0a1da6d8a1b287d4f83c37c9"
+  },
+  "behavior_scope_unchanged": "configs/behavioral_scope_execution_freeze_v2.json",
+  "new_inference_started": false
+}

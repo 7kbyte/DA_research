@@ -1,0 +1,49 @@
+{
+  "state": "root_enqueue_confirmed_monitor_active_waiting_all67",
+  "created_at_utc": "2026-11-06T07:01:26.302739+00:00",
+  "manifest": "docs/primary_evaluation_v2_execution_matched_nll_manifest.json",
+  "manifest_sha256": "d1502bcaff5cdcd75d984a4b8776f1cb4027b596f474835bfe9ed18875d9fd18",
+  "authorized_scope": "primary NLL only, after all67 jobs complete and integrity checks pass; behavior/other phases sealed",
+  "score_files_read": false,
+  "successful_enqueue_confirmation_received": true,
+  "related_CPU_tests": "12 passed",
+  "bootstrap_replicates": 5000,
+  "paired_comparisons": [
+    "M-B4",
+    "C-B4",
+    "B2-B1",
+    "B4-B3",
+    "B3-B1",
+    "B4-B2"
+  ],
+  "weights": [
+    "prediction_token_weighted",
+    "equal_document"
+  ],
+  "future_monitor_argv": [
+    "python",
+    "scripts/monitor_primary_nll_readiness.py",
+    "--watch-seconds",
+    "43200"
+  ],
+  "future_guarded_analysis_argv": [
+    "python",
+    "scripts/analyze_primary_nll.py",
+    "--enqueue-confirmation",
+    "docs/primary_nll_enqueue_confirmation.json",
+    "--unseal-primary-nll-after-complete",
+    "--wait-seconds",
+    "43200"
+  ],
+  "analysis_sources_sha256": {
+    "scripts/monitor_primary_nll_readiness.py": "1124ebb9cb8871d78e7b89f6aec1bede7ed09406017d2bb2394b257cc3033fc6",
+    "scripts/analyze_primary_nll.py": "488b247fa0bc24e13010fc5fa0616133d26427328181f4c095ff910f8f6ac6e7",
+    "src/replay_study/nll_v2_analysis.py": "422b8fd39d32eff697c46156280be4557ad39ae818d0f200e841e2536de75b21",
+    "src/replay_study/analysis.py": "05d50004d60acdc4dc098d94f35a36fb1739f3f856267c7d2cdc35e02d96922c",
+    "tests/test_primary_nll_readiness.py": "717a5f52ab574d256bfc6c0fa50b5e4c76bd247299f15e7a4c78093ebb333414",
+    "tests/test_nll_v2_analysis.py": "4eafa86cd1c252f4ba6d0d8b3d50110c3b566b76e92c5ac3a8cdaf05104ba1e1"
+  },
+  "enqueue_confirmation": "docs/primary_nll_enqueue_confirmation.json",
+  "authority": "docs/primary_nll_test_execution_authority.json",
+  "activated_at_utc": "2026-11-06T07:02:56.469146+00:00"
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "behavior_pythia-410m_109f59e1e08b4d91880e_initial",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+      "--manifest-sha256",
+      "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+      "--job-id",
+      "behavior_pythia-410m_109f59e1e08b4d91880e_initial",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/baselines/109f59e1e08b4d91880e04fc18414e3548cd0718cfb5b3fdab10b946d8639ab1.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/baselines/109f59e1e08b4d91880e04fc18414e3548cd0718cfb5b3fdab10b946d8639ab1_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/baselines/109f59e1e08b4d91880e04fc18414e3548cd0718cfb5b3fdab10b946d8639ab1_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/baselines/109f59e1e08b4d91880e04fc18414e3548cd0718cfb5b3fdab10b946d8639ab1_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    }
+  }
+]

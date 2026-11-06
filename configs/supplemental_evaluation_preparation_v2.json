@@ -1,0 +1,785 @@
+{
+  "schema_version": 1,
+  "prepared_only": true,
+  "launch_authorized": false,
+  "training_completion_claim": false,
+  "root_frozen_scope": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/configs/behavioral_scope_execution_freeze_v2.json",
+      "sha256": "ebb86bc4ace0c3e4426b3830ea40a7963697163a98e59b8ca2fdf9746a186962"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/configs/nll_scope_execution_freeze_v1.json",
+      "sha256": "2b9be7cc136b2f85808568a9536b98b1d8499b7eb0d615f03f23c0c7ce4ca77d"
+    }
+  ],
+  "plans": [
+    {
+      "id": "supplement_A_nll",
+      "mode": "nll",
+      "phase": {
+        "family": "A",
+        "name": "supplement_A",
+        "role": "supplement_A",
+        "expected_phase": "supplement_A_lambda_sweep",
+        "expected_rows": 126,
+        "registry": {
+          "path": "/tmp/grad-research-20261106/worktree/configs/supplemental_v1_A_registry.json",
+          "sha256": "0f43c49530b79d09c18113e8c50239b640e99bbbdcb26b890e805d71cf291310"
+        },
+        "protocol": {
+          "path": "/tmp/grad-research-20261106/worktree/docs/损失权重敏感性预注册_lambda_sweep_deterministic.json",
+          "sha256": "96e4a5a701f00d5c5468659bb68f27b9c483bf6f96bc48d8ccd7f0b3b51faf9d"
+        },
+        "source_proof_files": {
+          "/tmp/grad-research-20261106/worktree/artifacts/provenance/supplemental_v1_orchestration_snapshot.json": "6962c0377d9bb73721b42dfa954082d9fa245e798bc610920565b3a791f73587",
+          "/tmp/grad-research-20261106/worktree/configs/lambda_sweep_deterministic_registry.json": "e342e67b23ece61a21ece4187002f6d1eb75c0cb345bf16f50f619060e1eacf4",
+          "/tmp/grad-research-20261106/worktree/configs/primary_evaluation_v2_execution_matched_phase_spec.json": "5ca78e5d8c22ffe5c79a9cd9d6dabf5e0d2d4c927c7875afc578f68bcf44e0c5"
+        },
+        "protocol_expect": {
+          "data_version": "v3",
+          "target_prediction_tokens_per_run": 10000000,
+          "replay_ratio": 0.05
+        },
+        "model": {
+          "path": "/tmp/grad-research-20261106/models/pythia-410m-final",
+          "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+        },
+        "model_tag": "pythia-410m",
+        "training_data": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data/finemath_train.pt",
+          "sha256": "af49c1455484f3471bf1a3569601373e2e84795849b9f59291b96ff2d637b39f"
+        },
+        "validation_data": {
+          "target": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/finemath_validation.pt",
+            "sha256": "431937e95ea9ba4f98cb19da38f53bdc1f90f57f35173a2b85dc3c3a560b4490"
+          },
+          "c4": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/c4_validation.pt",
+            "sha256": "89c38a59a9985195efed818ed651d56bc00a399b3f08df4c98f5baf9380be453"
+          },
+          "wikitext": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/wikitext103_validation.pt",
+            "sha256": "4018c33bd6e36b45aafcb5b5129ed18cbd480613ccbed0f8cdf57a02e8b0e85c"
+          }
+        },
+        "test_data": {
+          "target": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/finemath_test.pt",
+            "sha256": "3fdea241e0bf812e772ab1789ec1e9e722fdd6a18efdf6850e5aeb18cfac63f3"
+          },
+          "c4": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/c4_test.pt",
+            "sha256": "95457714af354880c92716edd99b878110e9635d70f3d0d2435dc75e9a755e61"
+          },
+          "wikitext": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/wikitext103_test.pt",
+            "sha256": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f"
+          }
+        },
+        "data_family": "main_v3"
+      },
+      "checkpoints": [
+        "final"
+      ],
+      "prior_plans": [
+        {
+          "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_nll_manifest.json",
+          "sha256": "d1502bcaff5cdcd75d984a4b8776f1cb4027b596f474835bfe9ed18875d9fd18"
+        }
+      ],
+      "A_selection_path": null
+    },
+    {
+      "id": "supplement_A_behavior",
+      "mode": "behavior",
+      "phase": {
+        "family": "A",
+        "name": "supplement_A",
+        "role": "supplement_A",
+        "expected_phase": "supplement_A_lambda_sweep",
+        "expected_rows": 126,
+        "registry": {
+          "path": "/tmp/grad-research-20261106/worktree/configs/supplemental_v1_A_registry.json",
+          "sha256": "0f43c49530b79d09c18113e8c50239b640e99bbbdcb26b890e805d71cf291310"
+        },
+        "protocol": {
+          "path": "/tmp/grad-research-20261106/worktree/docs/损失权重敏感性预注册_lambda_sweep_deterministic.json",
+          "sha256": "96e4a5a701f00d5c5468659bb68f27b9c483bf6f96bc48d8ccd7f0b3b51faf9d"
+        },
+        "source_proof_files": {
+          "/tmp/grad-research-20261106/worktree/artifacts/provenance/supplemental_v1_orchestration_snapshot.json": "6962c0377d9bb73721b42dfa954082d9fa245e798bc610920565b3a791f73587",
+          "/tmp/grad-research-20261106/worktree/configs/lambda_sweep_deterministic_registry.json": "e342e67b23ece61a21ece4187002f6d1eb75c0cb345bf16f50f619060e1eacf4",
+          "/tmp/grad-research-20261106/worktree/configs/primary_evaluation_v2_execution_matched_phase_spec.json": "5ca78e5d8c22ffe5c79a9cd9d6dabf5e0d2d4c927c7875afc578f68bcf44e0c5"
+        },
+        "protocol_expect": {
+          "data_version": "v3",
+          "target_prediction_tokens_per_run": 10000000,
+          "replay_ratio": 0.05
+        },
+        "model": {
+          "path": "/tmp/grad-research-20261106/models/pythia-410m-final",
+          "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+        },
+        "model_tag": "pythia-410m",
+        "training_data": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data/finemath_train.pt",
+          "sha256": "af49c1455484f3471bf1a3569601373e2e84795849b9f59291b96ff2d637b39f"
+        },
+        "validation_data": {
+          "target": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/finemath_validation.pt",
+            "sha256": "431937e95ea9ba4f98cb19da38f53bdc1f90f57f35173a2b85dc3c3a560b4490"
+          },
+          "c4": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/c4_validation.pt",
+            "sha256": "89c38a59a9985195efed818ed651d56bc00a399b3f08df4c98f5baf9380be453"
+          },
+          "wikitext": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/wikitext103_validation.pt",
+            "sha256": "4018c33bd6e36b45aafcb5b5129ed18cbd480613ccbed0f8cdf57a02e8b0e85c"
+          }
+        },
+        "test_data": {
+          "target": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/finemath_test.pt",
+            "sha256": "3fdea241e0bf812e772ab1789ec1e9e722fdd6a18efdf6850e5aeb18cfac63f3"
+          },
+          "c4": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/c4_test.pt",
+            "sha256": "95457714af354880c92716edd99b878110e9635d70f3d0d2435dc75e9a755e61"
+          },
+          "wikitext": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/wikitext103_test.pt",
+            "sha256": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f"
+          }
+        },
+        "data_family": "main_v3"
+      },
+      "checkpoints": [
+        "final"
+      ],
+      "prior_plans": [
+        {
+          "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+          "sha256": "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934"
+        },
+        {
+          "path": "/tmp/grad-research-20261106/worktree/docs/planned_model_behavioral_timing_v1_manifest.json",
+          "sha256": "062c170687f7e86c61f247fc6c46c99352faeca25306923c223e28ab81d45c20"
+        }
+      ],
+      "A_selection_path": "/tmp/grad-research-20261106/worktree/results/supplement_A_validation/validation_lambda_selection.json"
+    },
+    {
+      "id": "supplement_B_nll",
+      "mode": "nll",
+      "phase": {
+        "family": "B",
+        "name": "supplement_B",
+        "role": "supplement_B",
+        "expected_phase": "conditional_bank_variance",
+        "expected_rows": 60,
+        "registry": {
+          "path": "/tmp/grad-research-20261106/worktree/configs/supplemental_v1/activated/B_conditional_bank_variance/executor_registry.json",
+          "sha256": "841c8f86a6b6bc6c098ca5f3540b1ac3c758f6cc5cb0d48fc5f4083759b517cc"
+        },
+        "protocol": {
+          "path": "/tmp/grad-research-20261106/worktree/configs/supplemental_v1/activated/B_conditional_bank_variance/activation.json",
+          "sha256": "fb0db7f1f0ccd110cec47eb53dbffd547f58ea5bfdf4a9997db7e189d833970c"
+        },
+        "protocol_expect": {
+          "phase": "conditional_bank_variance",
+          "source_artifacts_modified": false
+        },
+        "source_proof_files": {
+          "/tmp/grad-research-20261106/worktree/configs/supplemental_v1/activated/B_conditional_bank_variance/activation.json": "fb0db7f1f0ccd110cec47eb53dbffd547f58ea5bfdf4a9997db7e189d833970c",
+          "/tmp/grad-research-20261106/worktree/artifacts/bank_variance_410m_v1/preparation_manifest.json": "a40393f18322acc6ffe060e3ea60e43da458639d65b1adf381516fb70ee3e35d",
+          "/tmp/grad-research-20261106/worktree/artifacts/bank_variance_410m_v1/registry.json": "4d61144c19bde7b77f2d8db8119054d661bd1b7602ee52b0b4b8f0b762952552",
+          "/tmp/grad-research-20261106/worktree/configs/primary_evaluation_v2_execution_matched_phase_spec.json": "5ca78e5d8c22ffe5c79a9cd9d6dabf5e0d2d4c927c7875afc578f68bcf44e0c5"
+        },
+        "model": {
+          "path": "/tmp/grad-research-20261106/models/pythia-410m-final",
+          "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+        },
+        "model_tag": "pythia-410m",
+        "training_data": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data/finemath_train.pt",
+          "sha256": "af49c1455484f3471bf1a3569601373e2e84795849b9f59291b96ff2d637b39f"
+        },
+        "validation_data": {
+          "target": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/finemath_validation.pt",
+            "sha256": "431937e95ea9ba4f98cb19da38f53bdc1f90f57f35173a2b85dc3c3a560b4490"
+          },
+          "c4": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/c4_validation.pt",
+            "sha256": "89c38a59a9985195efed818ed651d56bc00a399b3f08df4c98f5baf9380be453"
+          },
+          "wikitext": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/wikitext103_validation.pt",
+            "sha256": "4018c33bd6e36b45aafcb5b5129ed18cbd480613ccbed0f8cdf57a02e8b0e85c"
+          }
+        },
+        "test_data": {
+          "target": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/finemath_test.pt",
+            "sha256": "3fdea241e0bf812e772ab1789ec1e9e722fdd6a18efdf6850e5aeb18cfac63f3"
+          },
+          "c4": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/c4_test.pt",
+            "sha256": "95457714af354880c92716edd99b878110e9635d70f3d0d2435dc75e9a755e61"
+          },
+          "wikitext": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/wikitext103_test.pt",
+            "sha256": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f"
+          }
+        },
+        "data_family": "main_v3"
+      },
+      "checkpoints": [
+        "final"
+      ],
+      "prior_plans": [
+        {
+          "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_nll_manifest.json",
+          "sha256": "d1502bcaff5cdcd75d984a4b8776f1cb4027b596f474835bfe9ed18875d9fd18"
+        }
+      ],
+      "A_selection_path": null
+    },
+    {
+      "id": "extended_pythia_410m_100m_nll",
+      "mode": "nll",
+      "phase": {
+        "family": "C",
+        "name": "extended_pythia_410m_100m",
+        "role": "extended",
+        "expected_phase": "formal",
+        "expected_rows": 24,
+        "model_tag": "pythia-410m",
+        "model": {
+          "path": "/tmp/grad-research-20261106/models/pythia-410m-final",
+          "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+        },
+        "data_family": "extended_v1",
+        "registry": {
+          "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal_active_registry.json",
+          "sha256": "c7f5c50d6794ba0df0dc3e071198da761f084ad9347ce5d9ce4dddf867ee48bd"
+        },
+        "protocol": {
+          "path": "/tmp/grad-research-20261106/worktree/docs/extended_v2_pythia_410m_m64_formal_protocol.json",
+          "sha256": "15bb2daec1521413e80749fb99c0a324cf24ecf62d5d17d4accf845682772b31"
+        },
+        "protocol_expect": {
+          "model": "pythia-410m",
+          "data_version": "extended_v1",
+          "model_revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+          "formal_target_prediction_tokens": 100000000,
+          "shared_learning_rate": 3e-05,
+          "shared_lambda": 0.05
+        },
+        "training_data": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_train.pt",
+          "sha256": "d75095a4c1847f72168d7cad1fd56da8d82ac7f5b17c43673dd70ed7eae118b0"
+        },
+        "validation_data": {
+          "target": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_validation.pt",
+            "sha256": "59b2bb2d89104652785915e08c45ad3f8815037461da5216de42408ccfbb3ea0"
+          },
+          "c4": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_validation.pt",
+            "sha256": "ee0389143e28fc8d0e2e3f1107674e7a8d8a178d324c350820223937d7bcb274"
+          },
+          "wikitext": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_validation.pt",
+            "sha256": "4018c33bd6e36b45aafcb5b5129ed18cbd480613ccbed0f8cdf57a02e8b0e85c"
+          }
+        },
+        "test_data": {
+          "target": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_test.pt",
+            "sha256": "f19f802f985d929ecb3a623e3255785159b1fcb895c8f439bc037a7012d29718"
+          },
+          "c4": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_test.pt",
+            "sha256": "e81744326b66513afdfc02cc3b74b9c92908cd2359f13d0eac2b1a99bf516747"
+          },
+          "wikitext": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_test.pt",
+            "sha256": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f"
+          }
+        },
+        "source_proof_files": {
+          "/tmp/grad-research-20261106/worktree/artifacts/provenance/extended_v2_pythia_410m_m64_formal_input_snapshot.json": "5b065523d3a87235bf143ae144655589ea42591f71ef49e4dc430633954a029e",
+          "/tmp/grad-research-20261106/worktree/results/extended_formal_freeze.json": "50786c00724008eed6a96cb753b442295152f9dea96d73a2c75f8fcf16033528"
+        }
+      },
+      "checkpoints": [
+        "final",
+        "best"
+      ],
+      "prior_plans": [
+        {
+          "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_nll_manifest.json",
+          "sha256": "d1502bcaff5cdcd75d984a4b8776f1cb4027b596f474835bfe9ed18875d9fd18"
+        }
+      ],
+      "A_selection_path": null
+    },
+    {
+      "id": "extended_pythia_410m_100m_behavior",
+      "mode": "behavior",
+      "phase": {
+        "family": "C",
+        "name": "extended_pythia_410m_100m",
+        "role": "extended",
+        "expected_phase": "formal",
+        "expected_rows": 24,
+        "model_tag": "pythia-410m",
+        "model": {
+          "path": "/tmp/grad-research-20261106/models/pythia-410m-final",
+          "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+        },
+        "data_family": "extended_v1",
+        "registry": {
+          "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal_active_registry.json",
+          "sha256": "c7f5c50d6794ba0df0dc3e071198da761f084ad9347ce5d9ce4dddf867ee48bd"
+        },
+        "protocol": {
+          "path": "/tmp/grad-research-20261106/worktree/docs/extended_v2_pythia_410m_m64_formal_protocol.json",
+          "sha256": "15bb2daec1521413e80749fb99c0a324cf24ecf62d5d17d4accf845682772b31"
+        },
+        "protocol_expect": {
+          "model": "pythia-410m",
+          "data_version": "extended_v1",
+          "model_revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+          "formal_target_prediction_tokens": 100000000,
+          "shared_learning_rate": 3e-05,
+          "shared_lambda": 0.05
+        },
+        "training_data": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_train.pt",
+          "sha256": "d75095a4c1847f72168d7cad1fd56da8d82ac7f5b17c43673dd70ed7eae118b0"
+        },
+        "validation_data": {
+          "target": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_validation.pt",
+            "sha256": "59b2bb2d89104652785915e08c45ad3f8815037461da5216de42408ccfbb3ea0"
+          },
+          "c4": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_validation.pt",
+            "sha256": "ee0389143e28fc8d0e2e3f1107674e7a8d8a178d324c350820223937d7bcb274"
+          },
+          "wikitext": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_validation.pt",
+            "sha256": "4018c33bd6e36b45aafcb5b5129ed18cbd480613ccbed0f8cdf57a02e8b0e85c"
+          }
+        },
+        "test_data": {
+          "target": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_test.pt",
+            "sha256": "f19f802f985d929ecb3a623e3255785159b1fcb895c8f439bc037a7012d29718"
+          },
+          "c4": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_test.pt",
+            "sha256": "e81744326b66513afdfc02cc3b74b9c92908cd2359f13d0eac2b1a99bf516747"
+          },
+          "wikitext": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_test.pt",
+            "sha256": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f"
+          }
+        },
+        "source_proof_files": {
+          "/tmp/grad-research-20261106/worktree/artifacts/provenance/extended_v2_pythia_410m_m64_formal_input_snapshot.json": "5b065523d3a87235bf143ae144655589ea42591f71ef49e4dc430633954a029e",
+          "/tmp/grad-research-20261106/worktree/results/extended_formal_freeze.json": "50786c00724008eed6a96cb753b442295152f9dea96d73a2c75f8fcf16033528"
+        }
+      },
+      "checkpoints": [
+        "final"
+      ],
+      "prior_plans": [
+        {
+          "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+          "sha256": "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934"
+        },
+        {
+          "path": "/tmp/grad-research-20261106/worktree/docs/planned_model_behavioral_timing_v1_manifest.json",
+          "sha256": "062c170687f7e86c61f247fc6c46c99352faeca25306923c223e28ab81d45c20"
+        }
+      ],
+      "A_selection_path": null
+    },
+    {
+      "id": "extended_pythia_1b_100m_nll",
+      "mode": "nll",
+      "phase": {
+        "family": "C",
+        "name": "extended_pythia_1b_100m",
+        "role": "extended",
+        "expected_phase": "formal",
+        "expected_rows": 24,
+        "model_tag": "pythia-1b",
+        "model": {
+          "path": "/tmp/grad-research-20261106/models/pythia-1b-final",
+          "revision": "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+        },
+        "data_family": "extended_v1",
+        "registry": {
+          "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal_active_registry.json",
+          "sha256": "c106330d947904447fe7c1aa42fa8dbe8a337a683520801b90653d7d6474b8d6"
+        },
+        "protocol": {
+          "path": "/tmp/grad-research-20261106/worktree/docs/extended_v2_pythia_1b_m32_formal_protocol.json",
+          "sha256": "90cb3dd20893f5b755ed3710681efe91b5323580ebf3caaba090a846e7013f53"
+        },
+        "protocol_expect": {
+          "model": "pythia-1b",
+          "data_version": "extended_v1",
+          "model_revision": "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2",
+          "formal_target_prediction_tokens": 100000000,
+          "shared_learning_rate": 3e-05,
+          "shared_lambda": 0.05
+        },
+        "training_data": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_train.pt",
+          "sha256": "d75095a4c1847f72168d7cad1fd56da8d82ac7f5b17c43673dd70ed7eae118b0"
+        },
+        "validation_data": {
+          "target": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_validation.pt",
+            "sha256": "59b2bb2d89104652785915e08c45ad3f8815037461da5216de42408ccfbb3ea0"
+          },
+          "c4": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_validation.pt",
+            "sha256": "ee0389143e28fc8d0e2e3f1107674e7a8d8a178d324c350820223937d7bcb274"
+          },
+          "wikitext": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_validation.pt",
+            "sha256": "4018c33bd6e36b45aafcb5b5129ed18cbd480613ccbed0f8cdf57a02e8b0e85c"
+          }
+        },
+        "test_data": {
+          "target": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_test.pt",
+            "sha256": "f19f802f985d929ecb3a623e3255785159b1fcb895c8f439bc037a7012d29718"
+          },
+          "c4": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_test.pt",
+            "sha256": "e81744326b66513afdfc02cc3b74b9c92908cd2359f13d0eac2b1a99bf516747"
+          },
+          "wikitext": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_test.pt",
+            "sha256": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f"
+          }
+        },
+        "source_proof_files": {
+          "/tmp/grad-research-20261106/worktree/artifacts/provenance/extended_v2_pythia_1b_m32_formal_input_snapshot.json": "8cdc78f694464d1e0ef179614e00eddfa192b600ace68f7fe044f5d34446832a",
+          "/tmp/grad-research-20261106/worktree/results/extended_formal_freeze.json": "50786c00724008eed6a96cb753b442295152f9dea96d73a2c75f8fcf16033528"
+        }
+      },
+      "checkpoints": [
+        "final",
+        "best"
+      ],
+      "prior_plans": [
+        {
+          "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_nll_manifest.json",
+          "sha256": "d1502bcaff5cdcd75d984a4b8776f1cb4027b596f474835bfe9ed18875d9fd18"
+        }
+      ],
+      "A_selection_path": null
+    },
+    {
+      "id": "extended_pythia_1b_100m_behavior",
+      "mode": "behavior",
+      "phase": {
+        "family": "C",
+        "name": "extended_pythia_1b_100m",
+        "role": "extended",
+        "expected_phase": "formal",
+        "expected_rows": 24,
+        "model_tag": "pythia-1b",
+        "model": {
+          "path": "/tmp/grad-research-20261106/models/pythia-1b-final",
+          "revision": "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+        },
+        "data_family": "extended_v1",
+        "registry": {
+          "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal_active_registry.json",
+          "sha256": "c106330d947904447fe7c1aa42fa8dbe8a337a683520801b90653d7d6474b8d6"
+        },
+        "protocol": {
+          "path": "/tmp/grad-research-20261106/worktree/docs/extended_v2_pythia_1b_m32_formal_protocol.json",
+          "sha256": "90cb3dd20893f5b755ed3710681efe91b5323580ebf3caaba090a846e7013f53"
+        },
+        "protocol_expect": {
+          "model": "pythia-1b",
+          "data_version": "extended_v1",
+          "model_revision": "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2",
+          "formal_target_prediction_tokens": 100000000,
+          "shared_learning_rate": 3e-05,
+          "shared_lambda": 0.05
+        },
+        "training_data": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_train.pt",
+          "sha256": "d75095a4c1847f72168d7cad1fd56da8d82ac7f5b17c43673dd70ed7eae118b0"
+        },
+        "validation_data": {
+          "target": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_validation.pt",
+            "sha256": "59b2bb2d89104652785915e08c45ad3f8815037461da5216de42408ccfbb3ea0"
+          },
+          "c4": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_validation.pt",
+            "sha256": "ee0389143e28fc8d0e2e3f1107674e7a8d8a178d324c350820223937d7bcb274"
+          },
+          "wikitext": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_validation.pt",
+            "sha256": "4018c33bd6e36b45aafcb5b5129ed18cbd480613ccbed0f8cdf57a02e8b0e85c"
+          }
+        },
+        "test_data": {
+          "target": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_test.pt",
+            "sha256": "f19f802f985d929ecb3a623e3255785159b1fcb895c8f439bc037a7012d29718"
+          },
+          "c4": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_test.pt",
+            "sha256": "e81744326b66513afdfc02cc3b74b9c92908cd2359f13d0eac2b1a99bf516747"
+          },
+          "wikitext": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_test.pt",
+            "sha256": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f"
+          }
+        },
+        "source_proof_files": {
+          "/tmp/grad-research-20261106/worktree/artifacts/provenance/extended_v2_pythia_1b_m32_formal_input_snapshot.json": "8cdc78f694464d1e0ef179614e00eddfa192b600ace68f7fe044f5d34446832a",
+          "/tmp/grad-research-20261106/worktree/results/extended_formal_freeze.json": "50786c00724008eed6a96cb753b442295152f9dea96d73a2c75f8fcf16033528"
+        }
+      },
+      "checkpoints": [
+        "final"
+      ],
+      "prior_plans": [
+        {
+          "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+          "sha256": "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934"
+        },
+        {
+          "path": "/tmp/grad-research-20261106/worktree/docs/planned_model_behavioral_timing_v1_manifest.json",
+          "sha256": "062c170687f7e86c61f247fc6c46c99352faeca25306923c223e28ab81d45c20"
+        }
+      ],
+      "A_selection_path": null
+    },
+    {
+      "id": "extended_pythia_2p8b_25m_nll",
+      "mode": "nll",
+      "phase": {
+        "family": "C",
+        "name": "extended_pythia_2p8b_25m",
+        "role": "extended",
+        "expected_phase": "formal",
+        "expected_rows": 15,
+        "model_tag": "pythia-2.8b",
+        "model": {
+          "path": "/tmp/grad-research-20261106/models/pythia-2.8b-final",
+          "revision": "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+        },
+        "data_family": "extended_v1",
+        "registry": {
+          "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_h25m_formal_active_registry.json",
+          "sha256": "c98360002f763a98423d16bf99c866edfbec21da2668a04cb3ccfd5652888d05"
+        },
+        "protocol": {
+          "path": "/tmp/grad-research-20261106/worktree/docs/extended_v2_pythia_2p8b_m8_h25m_formal_protocol.json",
+          "sha256": "5056fabcc349160bf34f96317597a4376964c7132062b7b7de5a590535e56e60"
+        },
+        "protocol_expect": {
+          "model": "pythia-2.8b",
+          "data_version": "extended_v1",
+          "model_revision": "2a259cdd96a4beb1cdf467512e3904197345f6a9",
+          "formal_target_prediction_tokens": 25000000,
+          "shared_learning_rate": 1e-05,
+          "shared_lambda": 0.05
+        },
+        "training_data": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_train.pt",
+          "sha256": "d75095a4c1847f72168d7cad1fd56da8d82ac7f5b17c43673dd70ed7eae118b0"
+        },
+        "validation_data": {
+          "target": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_validation.pt",
+            "sha256": "59b2bb2d89104652785915e08c45ad3f8815037461da5216de42408ccfbb3ea0"
+          },
+          "c4": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_validation.pt",
+            "sha256": "ee0389143e28fc8d0e2e3f1107674e7a8d8a178d324c350820223937d7bcb274"
+          },
+          "wikitext": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_validation.pt",
+            "sha256": "4018c33bd6e36b45aafcb5b5129ed18cbd480613ccbed0f8cdf57a02e8b0e85c"
+          }
+        },
+        "test_data": {
+          "target": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_test.pt",
+            "sha256": "f19f802f985d929ecb3a623e3255785159b1fcb895c8f439bc037a7012d29718"
+          },
+          "c4": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_test.pt",
+            "sha256": "e81744326b66513afdfc02cc3b74b9c92908cd2359f13d0eac2b1a99bf516747"
+          },
+          "wikitext": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_test.pt",
+            "sha256": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f"
+          }
+        },
+        "source_proof_files": {
+          "/tmp/grad-research-20261106/worktree/artifacts/provenance/extended_v2_pythia_2p8b_m8_h25m_formal_input_snapshot.json": "49d3965a7d0909b23ab5880efe3c4d8b32944c5335e802435dd92e4cec017379",
+          "/tmp/grad-research-20261106/worktree/results/extended_formal_freeze.json": "50786c00724008eed6a96cb753b442295152f9dea96d73a2c75f8fcf16033528"
+        }
+      },
+      "checkpoints": [
+        "final",
+        "best"
+      ],
+      "prior_plans": [
+        {
+          "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_nll_manifest.json",
+          "sha256": "d1502bcaff5cdcd75d984a4b8776f1cb4027b596f474835bfe9ed18875d9fd18"
+        }
+      ],
+      "A_selection_path": null
+    },
+    {
+      "id": "extended_pythia_2p8b_25m_behavior",
+      "mode": "behavior",
+      "phase": {
+        "family": "C",
+        "name": "extended_pythia_2p8b_25m",
+        "role": "extended",
+        "expected_phase": "formal",
+        "expected_rows": 15,
+        "model_tag": "pythia-2.8b",
+        "model": {
+          "path": "/tmp/grad-research-20261106/models/pythia-2.8b-final",
+          "revision": "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+        },
+        "data_family": "extended_v1",
+        "registry": {
+          "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_h25m_formal_active_registry.json",
+          "sha256": "c98360002f763a98423d16bf99c866edfbec21da2668a04cb3ccfd5652888d05"
+        },
+        "protocol": {
+          "path": "/tmp/grad-research-20261106/worktree/docs/extended_v2_pythia_2p8b_m8_h25m_formal_protocol.json",
+          "sha256": "5056fabcc349160bf34f96317597a4376964c7132062b7b7de5a590535e56e60"
+        },
+        "protocol_expect": {
+          "model": "pythia-2.8b",
+          "data_version": "extended_v1",
+          "model_revision": "2a259cdd96a4beb1cdf467512e3904197345f6a9",
+          "formal_target_prediction_tokens": 25000000,
+          "shared_learning_rate": 1e-05,
+          "shared_lambda": 0.05
+        },
+        "training_data": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_train.pt",
+          "sha256": "d75095a4c1847f72168d7cad1fd56da8d82ac7f5b17c43673dd70ed7eae118b0"
+        },
+        "validation_data": {
+          "target": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_validation.pt",
+            "sha256": "59b2bb2d89104652785915e08c45ad3f8815037461da5216de42408ccfbb3ea0"
+          },
+          "c4": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_validation.pt",
+            "sha256": "ee0389143e28fc8d0e2e3f1107674e7a8d8a178d324c350820223937d7bcb274"
+          },
+          "wikitext": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_validation.pt",
+            "sha256": "4018c33bd6e36b45aafcb5b5129ed18cbd480613ccbed0f8cdf57a02e8b0e85c"
+          }
+        },
+        "test_data": {
+          "target": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_test.pt",
+            "sha256": "f19f802f985d929ecb3a623e3255785159b1fcb895c8f439bc037a7012d29718"
+          },
+          "c4": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_test.pt",
+            "sha256": "e81744326b66513afdfc02cc3b74b9c92908cd2359f13d0eac2b1a99bf516747"
+          },
+          "wikitext": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_test.pt",
+            "sha256": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f"
+          }
+        },
+        "source_proof_files": {
+          "/tmp/grad-research-20261106/worktree/artifacts/provenance/extended_v2_pythia_2p8b_m8_h25m_formal_input_snapshot.json": "49d3965a7d0909b23ab5880efe3c4d8b32944c5335e802435dd92e4cec017379",
+          "/tmp/grad-research-20261106/worktree/results/extended_formal_freeze.json": "50786c00724008eed6a96cb753b442295152f9dea96d73a2c75f8fcf16033528"
+        }
+      },
+      "checkpoints": [
+        "final"
+      ],
+      "prior_plans": [
+        {
+          "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+          "sha256": "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934"
+        },
+        {
+          "path": "/tmp/grad-research-20261106/worktree/docs/planned_model_behavioral_timing_v1_manifest.json",
+          "sha256": "062c170687f7e86c61f247fc6c46c99352faeca25306923c223e28ab81d45c20"
+        }
+      ],
+      "A_selection_path": null
+    }
+  ],
+  "producer_source": {
+    "path": "/tmp/grad-research-20261106/worktree/scripts/prepare_supplemental_evaluations.py",
+    "sha256": "92761983bf1b5a3e411a55e1ebd5e68974cb90b98428c7607fd6bb03f681a303"
+  },
+  "optional_C_final_model_equivalence_proof": "/tmp/grad-research-20261106/worktree/results/extended_final_model_equivalence_proofs.json",
+  "primary_final_model_equivalence_proof": {
+    "path": "/tmp/grad-research-20261106/worktree/results/formal_model_equivalence_proofs.json",
+    "sha256": "bdd4ccf7de88a9baba973cbb1907ecd90a50f693ee9d75c48f0e019bfa8048be"
+  },
+  "handoff_prior_sources": [
+    {
+      "queue_path": "/tmp/grad-research-20261106/worktree/configs/primary_evaluation_v2_execution_matched_nll_queue.json",
+      "queue_sha256": "1428e024f710873a09138ccd47742e2897a6eb25fe3d9b35523153d43e7df346",
+      "manifests": [
+        {
+          "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_nll_manifest.json",
+          "sha256": "d1502bcaff5cdcd75d984a4b8776f1cb4027b596f474835bfe9ed18875d9fd18"
+        }
+      ]
+    },
+    {
+      "queue_path": "/tmp/grad-research-20261106/worktree/configs/primary_evaluation_v2_execution_matched_behavior_queue.json",
+      "queue_sha256": "393f3df2f0213e2e4e4d2387109b750825c797b909f4b05d16cd3cb739f6aaa9",
+      "manifests": [
+        {
+          "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+          "sha256": "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934"
+        }
+      ]
+    },
+    {
+      "queue_path": "/tmp/grad-research-20261106/worktree/configs/planned_model_behavioral_timing_v1_queue.json",
+      "queue_sha256": "427f2e212cce083aad7aa80ccf543240d3928c5e1957c2fed613a0542655d2c6",
+      "manifests": [
+        {
+          "path": "/tmp/grad-research-20261106/worktree/docs/planned_model_behavioral_timing_v1_manifest.json",
+          "sha256": "062c170687f7e86c61f247fc6c46c99352faeca25306923c223e28ab81d45c20"
+        }
+      ]
+    }
+  ],
+  "read_policy": "Training status/counters, frozen identity/provenance and validation-only chosen IDs; never heldout/task score outputs",
+  "no_model_initialization_or_scheduler_start": true
+}

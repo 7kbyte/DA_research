@@ -1,0 +1,34 @@
+{
+  "state": "prepared_metric_display_frozen_waiting_unified_supplementary_freeze",
+  "recorded_at_utc": "2026-11-06T04:07:45.579400+00:00",
+  "project_primary_metric": "acc_norm",
+  "project_auxiliary_metric": "acc",
+  "acc_norm_denominator": "official choice Python character length, excluding added target delimiter",
+  "transitions": "separate CC/CW/WC/WW for both acc and acc_norm; never mix normalization",
+  "harness_revision": "d6de81643928d653435c431bae19945d41d32520",
+  "data_manifest": "artifacts/behavioral/data_manifest.json",
+  "protocol_document": "docs/行为评估协议.md",
+  "real_task_results_seen": false,
+  "real_model_inference_authorized_now": false,
+  "root_decision": "acc_norm main display, acc alongside; hold task evaluation until all supplementary protocols frozen",
+  "execution_defaults": {
+    "batch_size": 16,
+    "precision": "FP32 weights with CUDA BF16 autocast",
+    "deterministic_algorithms": true,
+    "warn_only": false,
+    "attention_backend": "auto",
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "allow_tf32_matmul": true,
+    "allow_tf32_cudnn": true,
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false,
+    "cudnn_sdp_enabled": true
+  },
+  "baseline_adapted_execution_must_match": true,
+  "training_status": "Earlier namespaces provisional; strict recalibration ongoing; behavioral inference still disabled pending root unified supplementary freeze.",
+  "execution_policy_amendment": {
+    "utc": "2026-11-06T04:38:28.961318+00:00",
+    "reason": "NVIDIA Torch build exposes fourth cuDNN SDP backend; auto explicitly enables it, flash/math explicitly disable it. No behavioral model inference has been run.",
+    "baseline_adapted_must_match_cudnn_sdp": true
+  }
+}

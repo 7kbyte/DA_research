@@ -1,0 +1,322 @@
+{
+  "scope": "Current explicit source list; update and re-run for newly registered phases. Missing sources and unregistered physical runs remain visible.",
+  "registries": [
+    {
+      "path": "configs/formal_deterministic_registry.json",
+      "category": "primary"
+    },
+    {
+      "path": "configs/supplemental_v1_A_registry.json",
+      "category": "supplement"
+    },
+    {
+      "path": "configs/lambda_sweep_deterministic_registry.json",
+      "category": "supplement"
+    },
+    {
+      "path": "configs/lr_deterministic_v3_registry.json",
+      "category": "pilot"
+    },
+    {
+      "path": "configs/lambda_deterministic_v3_registry.json",
+      "category": "pilot"
+    },
+    {
+      "path": "configs/extended_pythia_410m_lr_registry.json",
+      "category": "pilot"
+    },
+    {
+      "path": "configs/extended_pythia_1b_lr_registry.json",
+      "category": "pilot"
+    },
+    {
+      "path": "configs/extended_pythia_2p8b_lr_registry.json",
+      "category": "pilot"
+    },
+    {
+      "path": "configs/extended_v2_pythia_2p8b_m8_lr_registry.json",
+      "category": "pilot"
+    },
+    {
+      "path": "configs/formal_registry.json",
+      "category": "provisional"
+    },
+    {
+      "path": "configs/lambda_registry.json",
+      "category": "provisional"
+    },
+    {
+      "path": "configs/lambda_v3_registry.json",
+      "category": "provisional"
+    },
+    {
+      "path": "configs/lambda_sweep_registry.json",
+      "category": "provisional"
+    },
+    {
+      "path": "configs/v3_lr_evaluation_registry.json",
+      "category": "provisional"
+    },
+    {
+      "path": "configs/supplemental_v1_benchmark_registry.json",
+      "category": "diagnostic"
+    }
+  ],
+  "generation_summaries": [
+    {
+      "path": "results/generation_summary.json",
+      "category": "primary"
+    },
+    {
+      "path": "results/extended_pythia-1b_generation_summary.json",
+      "category": "supplement"
+    },
+    {
+      "path": "results/extended_pythia-2.8b_generation_summary.json",
+      "category": "supplement"
+    }
+  ],
+  "reuse_summaries": [
+    {
+      "path": "results/extended_pythia-410m_bank_provenance.json",
+      "category": "supplement"
+    }
+  ],
+  "run_overrides": [
+    {
+      "path": "/tmp/grad-research-20261106/runs/pilot_engine_b8_c32",
+      "category": "diagnostic",
+      "reason": "Explicit engine/determinism/throughput diagnostic run; registration status still reported independently"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/runs/pilot_engine_b8_c64",
+      "category": "diagnostic",
+      "reason": "Explicit engine/determinism/throughput diagnostic run; registration status still reported independently"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/runs/pilot_engine_b16_c32",
+      "category": "diagnostic",
+      "reason": "Explicit engine/determinism/throughput diagnostic run; registration status still reported independently"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/runs/pilot_engine_b16_c64",
+      "category": "diagnostic",
+      "reason": "Explicit engine/determinism/throughput diagnostic run; registration status still reported independently"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/runs/diagnostic_deterministic_auto_gpu0_r1",
+      "category": "diagnostic",
+      "reason": "Explicit engine/determinism/throughput diagnostic run; registration status still reported independently"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/runs/diagnostic_deterministic_auto_gpu0_r2",
+      "category": "diagnostic",
+      "reason": "Explicit engine/determinism/throughput diagnostic run; registration status still reported independently"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/runs/diagnostic_deterministic_auto_gpu2_r1",
+      "category": "diagnostic",
+      "reason": "Explicit engine/determinism/throughput diagnostic run; registration status still reported independently"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/runs/diagnostic_deterministic_auto_gpu2_r2",
+      "category": "diagnostic",
+      "reason": "Explicit engine/determinism/throughput diagnostic run; registration status still reported independently"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/runs/benchmark_extended_pythia_1b_m16_s101",
+      "category": "diagnostic",
+      "reason": "Explicit engine/determinism/throughput diagnostic run; registration status still reported independently"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/runs/benchmark_extended_pythia_2p8b_m8_s101",
+      "category": "diagnostic",
+      "reason": "Explicit engine/determinism/throughput diagnostic run; registration status still reported independently"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/runs/pilot_lr_1e-05",
+      "category": "provisional",
+      "reason": "Original LR calibration predates frozen strict rerun; retain physical cost only"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/runs/pilot_lr_3e-05",
+      "category": "provisional",
+      "reason": "Original LR calibration predates frozen strict rerun; retain physical cost only"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/runs/pilot_lr_1e-04",
+      "category": "provisional",
+      "reason": "Original LR calibration predates frozen strict rerun; retain physical cost only"
+    }
+  ],
+  "extra_costs": [
+    {
+      "path": "artifacts/pilot/generated_bs16_seed911.json",
+      "category": "diagnostic",
+      "component": "generation_throughput_or_invalid_EOS_pilot",
+      "pointers": [
+        "/generation_wall_seconds"
+      ],
+      "scope": "Real recorded sampling work, including invalid EOS-stopping pilots; no scientific validity is implied"
+    },
+    {
+      "path": "artifacts/pilot/generated_bs32_seed911.json",
+      "category": "diagnostic",
+      "component": "generation_throughput_or_invalid_EOS_pilot",
+      "pointers": [
+        "/generation_wall_seconds"
+      ],
+      "scope": "Real recorded sampling work, including invalid EOS-stopping pilots; no scientific validity is implied"
+    },
+    {
+      "path": "artifacts/pilot/generated_bs64_seed911.json",
+      "category": "diagnostic",
+      "component": "generation_throughput_or_invalid_EOS_pilot",
+      "pointers": [
+        "/generation_wall_seconds"
+      ],
+      "scope": "Real recorded sampling work, including invalid EOS-stopping pilots; no scientific validity is implied"
+    },
+    {
+      "path": "artifacts/pilot/generated_eos_continue_bs32_seed911.json",
+      "category": "diagnostic",
+      "component": "generation_throughput_or_invalid_EOS_pilot",
+      "pointers": [
+        "/generation_wall_seconds"
+      ],
+      "scope": "Real recorded sampling work, including invalid EOS-stopping pilots; no scientific validity is implied"
+    },
+    {
+      "path": "artifacts/pilot/generated_eos_continue_bs64_seed911.json",
+      "category": "diagnostic",
+      "component": "generation_throughput_or_invalid_EOS_pilot",
+      "pointers": [
+        "/generation_wall_seconds"
+      ],
+      "scope": "Real recorded sampling work, including invalid EOS-stopping pilots; no scientific validity is implied"
+    },
+    {
+      "path": "artifacts/pilot/generated_eos_continue_bs128_seed911.json",
+      "category": "diagnostic",
+      "component": "generation_throughput_or_invalid_EOS_pilot",
+      "pointers": [
+        "/generation_wall_seconds"
+      ],
+      "scope": "Real recorded sampling work, including invalid EOS-stopping pilots; no scientific validity is implied"
+    },
+    {
+      "path": "artifacts/pilot/generated_eos_continue_bs256_seed911.json",
+      "category": "diagnostic",
+      "component": "generation_throughput_or_invalid_EOS_pilot",
+      "pointers": [
+        "/generation_wall_seconds"
+      ],
+      "scope": "Real recorded sampling work, including invalid EOS-stopping pilots; no scientific validity is implied"
+    },
+    {
+      "path": "artifacts/extended/pythia-2.8b/smoke/pool_seed909_batch128.json",
+      "category": "diagnostic",
+      "component": "expanded_model_generation_memory_smoke",
+      "pointers": [
+        "/generation_wall_seconds"
+      ]
+    },
+    {
+      "path": "results/selection_cost_diagnostic_main410m_seed11.json",
+      "category": "diagnostic",
+      "component": "independent_preparation_cost_measurement",
+      "pointers": [
+        "/model_load_wall_seconds",
+        "/modes/*/warmup/wall_seconds",
+        "/modes/*/trials/*/wall_seconds"
+      ]
+    },
+    {
+      "path": "artifacts/pilot/initial_teacher_general_validation.json",
+      "category": "diagnostic",
+      "component": "standalone_initial_general_validation_smoke",
+      "pointers": [
+        "/corpora/*/wall_seconds"
+      ]
+    },
+    {
+      "path": "results/pilots/lr_deterministic_v3/initial.json",
+      "category": "pilot",
+      "component": "standalone_initial_validation",
+      "pointers": [
+        "/corpora/*/wall_seconds"
+      ]
+    },
+    {
+      "path": "results/pilots/lr_deterministic_v3/initial_cudnn_matched.json",
+      "category": "pilot",
+      "component": "standalone_matched_initial_validation",
+      "pointers": [
+        "/corpora/*/wall_seconds"
+      ]
+    },
+    {
+      "path": "results/determinism_probe_gpu0_auto.json",
+      "category": "diagnostic",
+      "component": "standalone_gradient_repeat_only",
+      "pointers": [
+        "/gradient_repeats/*/seconds"
+      ],
+      "scope": "Three-step probe runs are already physical run directories and are not added here"
+    },
+    {
+      "path": "results/determinism_probe_gpu2_auto.json",
+      "category": "diagnostic",
+      "component": "standalone_gradient_repeat_only",
+      "pointers": [
+        "/gradient_repeats/*/seconds"
+      ],
+      "scope": "Three-step probe runs are already physical run directories and are not added here"
+    },
+    {
+      "path": "results/pilots/v3_lr/initial.json",
+      "category": "provisional",
+      "component": "standalone_v3_LR_reevaluation",
+      "pointers": [
+        "/corpora/*/wall_seconds"
+      ],
+      "scope": "Old training checkpoints re-evaluated on amended v3 validation, not current strict LR summary-derived reports"
+    },
+    {
+      "path": "results/pilots/v3_lr/lr_1e-05.json",
+      "category": "provisional",
+      "component": "standalone_v3_LR_reevaluation",
+      "pointers": [
+        "/corpora/*/wall_seconds"
+      ],
+      "scope": "Old training checkpoints re-evaluated on amended v3 validation, not current strict LR summary-derived reports"
+    },
+    {
+      "path": "results/pilots/v3_lr/lr_3e-05.json",
+      "category": "provisional",
+      "component": "standalone_v3_LR_reevaluation",
+      "pointers": [
+        "/corpora/*/wall_seconds"
+      ],
+      "scope": "Old training checkpoints re-evaluated on amended v3 validation, not current strict LR summary-derived reports"
+    },
+    {
+      "path": "results/pilots/v3_lr/lr_1e-04.json",
+      "category": "provisional",
+      "component": "standalone_v3_LR_reevaluation",
+      "pointers": [
+        "/corpora/*/wall_seconds"
+      ],
+      "scope": "Old training checkpoints re-evaluated on amended v3 validation, not current strict LR summary-derived reports"
+    }
+  ],
+  "loss_bounds": [
+    {
+      "path": "artifacts/extended/disk_full_resume_incident.json",
+      "pointer": "/lost_work_observed_lower_bound_seconds",
+      "category": "diagnostic",
+      "reason": "ENOSPC discarded generation work; observed lower bound only, not exact total"
+    }
+  ],
+  "telemetry_summary": "results/resources/telemetry_summary.json"
+}

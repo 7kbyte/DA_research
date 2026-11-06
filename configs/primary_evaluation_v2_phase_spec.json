@@ -1,0 +1,133 @@
+{
+  "schema_version": 2,
+  "science_frozen": true,
+  "checkpoints": [
+    "final",
+    "best"
+  ],
+  "phases": [
+    {
+      "name": "primary",
+      "role": "primary",
+      "science_frozen": true,
+      "expected_phase": "formal",
+      "model_tag": "pythia-410m",
+      "model": {
+        "path": "/tmp/grad-research-20261106/models/pythia-410m-final",
+        "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      },
+      "data_family": "main_v3",
+      "registry": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/formal_deterministic_registry.json",
+        "sha256": "284fa9dd939dab75195afe3f968e0eb6411501b26b8a5caa1962b4ee5e9f372b"
+      },
+      "protocol": {
+        "path": "/tmp/grad-research-20261106/worktree/docs/formal_deterministic_protocol.json",
+        "sha256": "6c77bef7a437c05c18a6a7d6633d3e2cb04c35034355253d00d58ea5e9ce2954"
+      },
+      "protocol_expect": {
+        "active": true,
+        "phase": "formal_main_strict_deterministic",
+        "data_version": "v3",
+        "model_revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+        "shared_learning_rate": 3e-05,
+        "shared_lambda": 0.05,
+        "formal_target_prediction_tokens": 10000000,
+        "frozen_for_formal_at_utc": "2026-11-06T04:42:33.095347+00:00"
+      },
+      "training_data": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/data/finemath_train.pt",
+        "sha256": "af49c1455484f3471bf1a3569601373e2e84795849b9f59291b96ff2d637b39f"
+      },
+      "validation_data": {
+        "target": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/finemath_validation.pt",
+          "sha256": "431937e95ea9ba4f98cb19da38f53bdc1f90f57f35173a2b85dc3c3a560b4490"
+        },
+        "c4": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/c4_validation.pt",
+          "sha256": "89c38a59a9985195efed818ed651d56bc00a399b3f08df4c98f5baf9380be453"
+        },
+        "wikitext": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/wikitext103_validation.pt",
+          "sha256": "4018c33bd6e36b45aafcb5b5129ed18cbd480613ccbed0f8cdf57a02e8b0e85c"
+        }
+      },
+      "test_data": {
+        "target": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/finemath_test.pt",
+          "sha256": "3fdea241e0bf812e772ab1789ec1e9e722fdd6a18efdf6850e5aeb18cfac63f3"
+        },
+        "c4": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/c4_test.pt",
+          "sha256": "95457714af354880c92716edd99b878110e9635d70f3d0d2435dc75e9a755e61"
+        },
+        "wikitext": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/wikitext103_test.pt",
+          "sha256": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f"
+        }
+      },
+      "config_sha256": {
+        "formal_deterministic_B0_s11_b0_w0": "87f5f7532971848dfcbd63f5bf0351ad448056a1c99f80aacc62aeaf8fd10211",
+        "formal_deterministic_B1_s11_b0p05_w0p05": "550cfc01f6b852885acf7de04ea14d24d63692f2846141617465ca11ba238354",
+        "formal_deterministic_B2_s11_b0p05_w0p05": "bc1b7af8be9ea7e6444549ae752856c3ac2f62db2c90eff6782edef15904bf8f",
+        "formal_deterministic_B3_s11_b0p05_w0p05": "76abf6118fda7252b107f4f399cd5fec39423e9258f66f20135f7e49b22666e4",
+        "formal_deterministic_B4_s11_b0p05_w0p05": "a4f8622c5ca6e65bd09adf28e24a175ab65165a6cc6aee567386ca7f8b831c9e",
+        "formal_deterministic_D_s11_b0p05_w0p05": "70fdcddb527f6c9998c0ae9619528a0b8c5897f16e4e26cddeb2330c66a31518",
+        "formal_deterministic_M_s11_b0p05_w0p05": "156cc22839c77205e77808b17e6da6bd0f8587f5ed860d56a044cd4a461ae38d",
+        "formal_deterministic_C_s11_b0p05_w0p05": "62559fc2554af7c8b706e4ca7d1ff8776bc65eca873dc2b8cdd060e1d60d24ba",
+        "formal_deterministic_B0_s22_b0_w0": "7b8e2cbdc8416b33551f5869dd988edd20a7eba47039e441433b4702dcf3d2a0",
+        "formal_deterministic_B1_s22_b0p05_w0p05": "89710e07f2447cfa8ff70c9c425c81c7150824a45ebe3aad80defe823507b5ef",
+        "formal_deterministic_B2_s22_b0p05_w0p05": "f543bb2472379776fb092efdda5ec77d2c6c8897947aaad271db24aaea6f422c",
+        "formal_deterministic_B3_s22_b0p05_w0p05": "298368e8b675354e4df69d66f3d431239602826cb398a0e07cedf60afd69d963",
+        "formal_deterministic_B4_s22_b0p05_w0p05": "72274eb106907958b04ee2434c07c4c7de42092c26c59f8a7d5e3103f3b2dd66",
+        "formal_deterministic_D_s22_b0p05_w0p05": "1961fc7f1f068aa5213c0b086cc4c46ecc88118bfce2b8ba7c86d7d9e02c56f6",
+        "formal_deterministic_M_s22_b0p05_w0p05": "69cfd00712bcdda767dba7b737ab447f41cd454cd7e528221f5908d9a9859397",
+        "formal_deterministic_C_s22_b0p05_w0p05": "ff92336957d4a6cc85423731a4ae68557bdd968e3b1f0b26737125e7e0d0fc6c",
+        "formal_deterministic_B0_s33_b0_w0": "d26e85344b3ce8bc2989cd14d9f4118ea0f7d09c7a25b0f9d8116cf3113303a1",
+        "formal_deterministic_B1_s33_b0p05_w0p05": "87205ba5ecba359cbff3891b7f8ebe1a935ad91d7323aab58653be0b5fb55a48",
+        "formal_deterministic_B2_s33_b0p05_w0p05": "16d74194bc9baa8fe6749ef448e861204041c48e79785fc42fc34885db741c6b",
+        "formal_deterministic_B3_s33_b0p05_w0p05": "7220072969d902e5ec581e3b8664c1fb99978c9896230a3652f8828a25036b95",
+        "formal_deterministic_B4_s33_b0p05_w0p05": "fea1d37dd6f38b94807ade1d10aa0c927f499de9f770572fc4707e0649c73f5c",
+        "formal_deterministic_D_s33_b0p05_w0p05": "750c239d05ac3454c29b9a0badbe58fa74fa39e3819263b42ae9c5ab47185015",
+        "formal_deterministic_M_s33_b0p05_w0p05": "d09971d6b199e512d52e4cd3f3c46a678f81219d299950b0035d22d10eebae23",
+        "formal_deterministic_C_s33_b0p05_w0p05": "4927690ca0a96671c6e07f1cfb1bbbdfea629af82e0f5e076102b2bcfc818242",
+        "formal_deterministic_B4_s11_b0p01_w0p05": "d828394748d89c6817047b339581ffa55326b3076db664d87eccdd1030dd3da5",
+        "formal_deterministic_B4_s22_b0p01_w0p05": "280745de5d80dd19bd6977c770a898455c2b936f110e02c1edfbb30c4f8d6341",
+        "formal_deterministic_B4_s33_b0p01_w0p05": "8eb710814a86935b1682ba73a111c13889acf59c07ddba3e20a6229f7fd24f94",
+        "formal_deterministic_B4_s11_b0p1_w0p05": "a01be76e178bd4568d2f499ec4b0c91bd7902a1392a125fc681e5634a11a4bae",
+        "formal_deterministic_B4_s22_b0p1_w0p05": "d7776a97b884cc0321b83d26361496ddc783ed82e58b1124a571c1b5db105612",
+        "formal_deterministic_B4_s33_b0p1_w0p05": "b86ba6b9e9c954d715c70667700e128c49d4e91928612d960d265c777f656c53",
+        "formal_deterministic_M_s11_b0p01_w0p05": "b2d0142677cdd35b98c54514940f24e3fca20ea8e5cf886d9272016f591db89a",
+        "formal_deterministic_M_s22_b0p01_w0p05": "015c90f80c2c9f6d976b7f64bacc1f8e6f2b61e82e552c0af0834782b73a452e",
+        "formal_deterministic_M_s33_b0p01_w0p05": "4819a1d60e51ac4667f9a94fa017a2b1e00204c82799b42387c42918760d633b",
+        "formal_deterministic_M_s11_b0p1_w0p05": "90320f3bdcb0747dfc04986628adab27443e19eceacd151d53e6c34cab8bb291",
+        "formal_deterministic_M_s22_b0p1_w0p05": "817dbb83fb06ca616fc2b3fba89ba9dcea5d3514338b5f509c17fa7c5da6ebc1",
+        "formal_deterministic_M_s33_b0p1_w0p05": "6d22038ce3c726135d2a8b6d08fc26ddfe9e65f4eda78d4caaebed733ccaa9ac"
+      },
+      "source_proof_files": {
+        "/tmp/grad-research-20261106/worktree/artifacts/provenance/formal_deterministic_input_snapshot.json": "77ffd91d7999367729166087edfe4833a64daffd18c94aff04210c56e4f92d67",
+        "/tmp/grad-research-20261106/worktree/results/formal_run_audit.json": "3ab507ecaf9953e7056649f2fee1320467b0ba3b23f65e6584cb876dbae0cf00"
+      }
+    }
+  ],
+  "model_equivalence_proofs": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/formal_model_equivalence_proofs.json",
+      "sha256": "bdd4ccf7de88a9baba973cbb1907ecd90a50f693ee9d75c48f0e019bfa8048be"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/formal_best_model_equivalence_proofs.json",
+      "sha256": "542fa36058a8b7b5993bd24b88ac7559c5f59036307bd8b34e8b787803d095a6"
+    }
+  ],
+  "behavior": {
+    "data_root": "/tmp/grad-research-20261106/worktree/artifacts/behavioral",
+    "batch_size": 16,
+    "max_length": 2048,
+    "data_manifest_sha256": "5c91890603f5149fb2f2f62b29edd16ee2044d3602d75265f819f35a501b7d0f",
+    "harness_manifest_sha256": "2301b180eddd3a65d028f8bcb570f8e8ad2b63017a1f184b0174c16eb819452f"
+  },
+  "inference_launch_authorized_by_preparation": false,
+  "subsequent_science_rule": "Supplementary methods/grids preregistered; LR/lambda selection remains validation-only; heldout/task results cannot change scientific conditions"
+}

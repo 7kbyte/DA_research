@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "state": "root_frozen_before_first_real_score",
+  "authority": "Root task explicitly froze scope, model-specific behavior batch and context before any real scoring",
+  "real_task_scores_seen": false,
+  "inference_launch_authorized_by_this_file": false,
+  "primary_metric": "acc_norm",
+  "auxiliary_metric": "acc",
+  "transitions": "CC/CW/WC/WW separately for both metrics",
+  "max_length": 2048,
+  "behavior_batch_size_by_model": {
+    "pythia-410m": 16,
+    "pythia-1b": 16,
+    "pythia-2.8b": 8
+  },
+  "scope": {
+    "primary": {"runs": 36, "checkpoints": ["final", "best"], "logical_endpoints": 72},
+    "supplement_A": {"checkpoints": ["final"], "maximum_endpoints": 18, "selection": "Six methods x three training seeds selected from complete validation grid by preregistered rule"},
+    "supplement_B": {"behavior": false, "NLL_only": true},
+    "extended": {"checkpoints": ["final"], "logical_endpoints_by_model": {"pythia-410m": 24, "pythia-1b": 24, "pythia-2.8b": 15}}
+  },
+  "initial": "Once per distinct model/task/actual inference execution policy, shared across phases when identical",
+  "required_training_evidence": "Recorded torch_version, cuda_version, gpu, precision, four SDP backends, strict/warn_only, TF32, cuDNN, CUBLAS and FP32 model/required-teacher dtypes; no current-environment fallback",
+  "required_worker_environment": "Match recorded training Torch/CUDA/GPU before model scoring and in actual result provenance",
+  "subsequent_science": "All supplementary methods/grids preregistered; selection stays validation-only; early heldout/behavior results cannot change later scientific or budget conditions"
+}

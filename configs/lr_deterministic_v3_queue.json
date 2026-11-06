@@ -1,0 +1,99 @@
+[
+  {
+    "id": "lr_deterministic_v3_initial",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_evaluate.py",
+      "--model",
+      "/tmp/grad-research-20261106/models/pythia-410m-final",
+      "--revision",
+      "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+      "--device",
+      "cuda:0",
+      "--batch-size",
+      "16",
+      "--precision",
+      "bf16",
+      "--teacher-kl",
+      "--include-chunks",
+      "--deterministic-algorithms",
+      "--attention-backend",
+      "auto",
+      "--output",
+      "/tmp/grad-research-20261106/worktree/results/pilots/lr_deterministic_v3/initial.json",
+      "--corpus",
+      "target=/data/202610/7kb/research/artifacts/evaluation_v3/finemath_validation.pt",
+      "--corpus",
+      "c4=/data/202610/7kb/research/artifacts/evaluation_v3/c4_validation.pt",
+      "--corpus",
+      "wikitext=/data/202610/7kb/research/artifacts/evaluation_v3/wikitext103_validation.pt"
+    ],
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "expected_seconds": 120,
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/pilots/lr_deterministic_v3/initial.json"
+    ]
+  },
+  {
+    "id": "pilot_lr_deterministic_v3_1e-05",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+      "run",
+      "--config",
+      "/tmp/grad-research-20261106/worktree/configs/lr_deterministic_v3/pilot_lr_deterministic_v3_1e-05.json",
+      "--summary-copy",
+      "/tmp/grad-research-20261106/worktree/results/pilots/pilot_lr_deterministic_v3_1e-05_summary.json"
+    ],
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "expected_seconds": 180,
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/pilots/pilot_lr_deterministic_v3_1e-05_summary.json",
+      "/tmp/grad-research-20261106/runs/pilot_lr_deterministic_v3_1e-05/summary.json"
+    ]
+  },
+  {
+    "id": "pilot_lr_deterministic_v3_3e-05",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+      "run",
+      "--config",
+      "/tmp/grad-research-20261106/worktree/configs/lr_deterministic_v3/pilot_lr_deterministic_v3_3e-05.json",
+      "--summary-copy",
+      "/tmp/grad-research-20261106/worktree/results/pilots/pilot_lr_deterministic_v3_3e-05_summary.json"
+    ],
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "expected_seconds": 180,
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/pilots/pilot_lr_deterministic_v3_3e-05_summary.json",
+      "/tmp/grad-research-20261106/runs/pilot_lr_deterministic_v3_3e-05/summary.json"
+    ]
+  },
+  {
+    "id": "pilot_lr_deterministic_v3_1e-04",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+      "run",
+      "--config",
+      "/tmp/grad-research-20261106/worktree/configs/lr_deterministic_v3/pilot_lr_deterministic_v3_1e-04.json",
+      "--summary-copy",
+      "/tmp/grad-research-20261106/worktree/results/pilots/pilot_lr_deterministic_v3_1e-04_summary.json"
+    ],
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "expected_seconds": 180,
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/pilots/pilot_lr_deterministic_v3_1e-04_summary.json",
+      "/tmp/grad-research-20261106/runs/pilot_lr_deterministic_v3_1e-04/summary.json"
+    ]
+  }
+]

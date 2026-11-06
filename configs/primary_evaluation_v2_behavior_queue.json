@@ -1,0 +1,1899 @@
+[
+  {
+    "id": "behavior_pythia-410m_41a3156878bf36d607b4_initial",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/baselines/41a3156878bf36d607b48e21c055dce6784b367497e2a081dfdf41dbead2edc0.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/baselines/41a3156878bf36d607b48e21c055dce6784b367497e2a081dfdf41dbead2edc0_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/baselines/41a3156878bf36d607b48e21c055dce6784b367497e2a081dfdf41dbead2edc0_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/baselines/41a3156878bf36d607b48e21c055dce6784b367497e2a081dfdf41dbead2edc0_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    }
+  },
+  {
+    "id": "behavior_pythia-410m_c721aa0f459a2d04763d0854",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_c721aa0f459a2d04763d0854",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B0_s11_b0_w0/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B0_s11_b0_w0/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B0_s11_b0_w0/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B0_s11_b0_w0/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_27313256e42d5081957f9abb",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_27313256e42d5081957f9abb",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B0_s11_b0_w0/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B0_s11_b0_w0/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B0_s11_b0_w0/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B0_s11_b0_w0/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_53d688f1b68b4cac468e60ed",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_53d688f1b68b4cac468e60ed",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B1_s11_b0p05_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B1_s11_b0p05_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B1_s11_b0p05_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B1_s11_b0p05_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_097220050b54f59dbcb16caa",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_097220050b54f59dbcb16caa",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B1_s11_b0p05_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B1_s11_b0p05_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B1_s11_b0p05_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B1_s11_b0p05_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_47c887d70e8e2ab706cf670f",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_47c887d70e8e2ab706cf670f",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B2_s11_b0p05_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B2_s11_b0p05_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B2_s11_b0p05_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B2_s11_b0p05_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_2a0408ac81a56e9aab306086",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_2a0408ac81a56e9aab306086",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B2_s11_b0p05_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B2_s11_b0p05_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B2_s11_b0p05_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B2_s11_b0p05_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_ddf528ce3c112c4ffca83191",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_ddf528ce3c112c4ffca83191",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B3_s11_b0p05_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B3_s11_b0p05_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B3_s11_b0p05_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B3_s11_b0p05_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_37e91ecb0f79b49e672a509b",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_37e91ecb0f79b49e672a509b",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B3_s11_b0p05_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B3_s11_b0p05_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B3_s11_b0p05_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B3_s11_b0p05_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_257019e22541f2531d74dcd5",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_257019e22541f2531d74dcd5",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p05_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p05_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p05_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p05_w0p05/final_piqa.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_D_s11_b0p05_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_D_s11_b0p05_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_D_s11_b0p05_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_D_s11_b0p05_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_0b7048f9d6c49263a6caac1d",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_0b7048f9d6c49263a6caac1d",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p05_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p05_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p05_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p05_w0p05/best_piqa.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_D_s11_b0p05_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_D_s11_b0p05_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_D_s11_b0p05_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_D_s11_b0p05_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_a79923f95fe4409655842303",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_a79923f95fe4409655842303",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p05_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p05_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p05_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p05_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_4da172f6755cdbc228bb3abf",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_4da172f6755cdbc228bb3abf",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p05_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p05_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p05_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p05_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_7e170394f9f1bed12190872e",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_7e170394f9f1bed12190872e",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_C_s11_b0p05_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_C_s11_b0p05_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_C_s11_b0p05_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_C_s11_b0p05_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_5efe95a58ced1160c6ebe5fe",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_5efe95a58ced1160c6ebe5fe",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_C_s11_b0p05_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_C_s11_b0p05_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_C_s11_b0p05_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_C_s11_b0p05_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_9abbaaf34fcb7f08df6df7f6",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_9abbaaf34fcb7f08df6df7f6",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B0_s22_b0_w0/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B0_s22_b0_w0/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B0_s22_b0_w0/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B0_s22_b0_w0/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_20d47195af8428c32b1a25ee",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_20d47195af8428c32b1a25ee",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B0_s22_b0_w0/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B0_s22_b0_w0/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B0_s22_b0_w0/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B0_s22_b0_w0/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_046b6747377839e840f28a1b",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_046b6747377839e840f28a1b",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B1_s22_b0p05_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B1_s22_b0p05_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B1_s22_b0p05_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B1_s22_b0p05_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_c8a41db1f992fab77f4c5393",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_c8a41db1f992fab77f4c5393",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B1_s22_b0p05_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B1_s22_b0p05_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B1_s22_b0p05_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B1_s22_b0p05_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_2ee455b1a9b4f2491bc20951",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_2ee455b1a9b4f2491bc20951",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B2_s22_b0p05_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B2_s22_b0p05_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B2_s22_b0p05_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B2_s22_b0p05_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_5f9e2bf6c52f0088aa54c48c",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_5f9e2bf6c52f0088aa54c48c",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B2_s22_b0p05_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B2_s22_b0p05_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B2_s22_b0p05_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B2_s22_b0p05_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_f850fcffcccbce9cdce041ed",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_f850fcffcccbce9cdce041ed",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B3_s22_b0p05_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B3_s22_b0p05_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B3_s22_b0p05_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B3_s22_b0p05_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_240d457e3394cec2b218211b",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_240d457e3394cec2b218211b",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B3_s22_b0p05_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B3_s22_b0p05_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B3_s22_b0p05_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B3_s22_b0p05_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_e824bce72da69d36ae6b6f2d",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_e824bce72da69d36ae6b6f2d",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p05_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p05_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p05_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p05_w0p05/final_piqa.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_D_s22_b0p05_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_D_s22_b0p05_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_D_s22_b0p05_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_D_s22_b0p05_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_c9ab56d27780a735b4236fe3",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_c9ab56d27780a735b4236fe3",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p05_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p05_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p05_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p05_w0p05/best_piqa.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_D_s22_b0p05_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_D_s22_b0p05_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_D_s22_b0p05_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_D_s22_b0p05_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_57aaa76d8445c394ce06ef80",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_57aaa76d8445c394ce06ef80",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p05_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p05_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p05_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p05_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_d9ad518cae533acfe9f0aad1",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_d9ad518cae533acfe9f0aad1",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p05_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p05_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p05_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p05_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_085ee5adf8e5fd1a56f4fc17",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_085ee5adf8e5fd1a56f4fc17",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_C_s22_b0p05_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_C_s22_b0p05_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_C_s22_b0p05_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_C_s22_b0p05_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_7e9275ead156a056c3a1d12b",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_7e9275ead156a056c3a1d12b",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_C_s22_b0p05_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_C_s22_b0p05_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_C_s22_b0p05_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_C_s22_b0p05_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_a208e4627ea88d9c16c90e99",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_a208e4627ea88d9c16c90e99",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B0_s33_b0_w0/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B0_s33_b0_w0/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B0_s33_b0_w0/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B0_s33_b0_w0/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_8d579bc560e9a2622e3ead23",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_8d579bc560e9a2622e3ead23",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B0_s33_b0_w0/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B0_s33_b0_w0/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B0_s33_b0_w0/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B0_s33_b0_w0/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_97032cd04972f7f56bc4fa8c",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_97032cd04972f7f56bc4fa8c",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B1_s33_b0p05_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B1_s33_b0p05_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B1_s33_b0p05_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B1_s33_b0p05_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_0b2f20985a7375a2d2a7f6d2",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_0b2f20985a7375a2d2a7f6d2",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B1_s33_b0p05_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B1_s33_b0p05_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B1_s33_b0p05_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B1_s33_b0p05_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_de3bf2d75b1819a1a56121ef",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_de3bf2d75b1819a1a56121ef",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B2_s33_b0p05_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B2_s33_b0p05_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B2_s33_b0p05_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B2_s33_b0p05_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_6be9ccc0b6cde7cd16f7d419",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_6be9ccc0b6cde7cd16f7d419",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B2_s33_b0p05_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B2_s33_b0p05_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B2_s33_b0p05_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B2_s33_b0p05_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_df35fe2cca410c5548b2c2ca",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_df35fe2cca410c5548b2c2ca",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B3_s33_b0p05_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B3_s33_b0p05_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B3_s33_b0p05_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B3_s33_b0p05_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_10105adbffb0a435d98b345e",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_10105adbffb0a435d98b345e",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B3_s33_b0p05_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B3_s33_b0p05_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B3_s33_b0p05_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B3_s33_b0p05_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_3ea47327cac3f452e638b35a",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_3ea47327cac3f452e638b35a",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p05_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p05_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p05_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p05_w0p05/final_piqa.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_D_s33_b0p05_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_D_s33_b0p05_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_D_s33_b0p05_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_D_s33_b0p05_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_0f2c21300c5ad04c79d98920",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_0f2c21300c5ad04c79d98920",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p05_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p05_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p05_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p05_w0p05/best_piqa.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_D_s33_b0p05_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_D_s33_b0p05_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_D_s33_b0p05_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_D_s33_b0p05_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_492693c6f33a4e05d9bb1a72",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_492693c6f33a4e05d9bb1a72",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p05_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p05_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p05_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p05_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_54800f3938a39a554e02e73a",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_54800f3938a39a554e02e73a",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p05_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p05_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p05_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p05_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_1ff29badafd95c016248dab4",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_1ff29badafd95c016248dab4",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_C_s33_b0p05_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_C_s33_b0p05_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_C_s33_b0p05_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_C_s33_b0p05_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_4edde163ed03049e4283fd4a",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_4edde163ed03049e4283fd4a",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_C_s33_b0p05_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_C_s33_b0p05_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_C_s33_b0p05_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_C_s33_b0p05_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_e44aea86a6b3943b710a3754",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_e44aea86a6b3943b710a3754",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p01_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p01_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p01_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p01_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_f971edb25d65cf2eb4d5151a",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_f971edb25d65cf2eb4d5151a",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p01_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p01_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p01_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p01_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_c0f8da1c0a203d15158a63b0",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_c0f8da1c0a203d15158a63b0",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p01_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p01_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p01_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p01_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_270db81cf5464bf798e956a3",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_270db81cf5464bf798e956a3",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p01_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p01_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p01_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p01_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_ef9c0753538a710f20e1d824",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_ef9c0753538a710f20e1d824",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p01_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p01_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p01_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p01_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_89ef55d08ff6e9124cf2ece2",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_89ef55d08ff6e9124cf2ece2",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p01_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p01_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p01_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p01_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_85c435ba4a36259692509b56",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_85c435ba4a36259692509b56",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p1_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p1_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p1_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p1_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_54ae6a9992ff4e134ac9e5fe",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_54ae6a9992ff4e134ac9e5fe",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p1_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p1_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p1_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p1_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_b094ff1684570be060f698f8",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_b094ff1684570be060f698f8",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p1_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p1_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p1_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p1_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_826912739882346d81cc24b2",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_826912739882346d81cc24b2",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p1_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p1_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p1_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p1_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_dc29e76ebcb913b7a254fbe8",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_dc29e76ebcb913b7a254fbe8",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p1_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p1_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p1_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p1_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_d37742bc0c7816b1cab7c1b6",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_d37742bc0c7816b1cab7c1b6",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p1_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p1_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p1_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p1_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_4e360742676e2a75c25dadd3",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_4e360742676e2a75c25dadd3",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p01_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p01_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p01_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p01_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_f242d78c5ef4979a5dc44dcb",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_f242d78c5ef4979a5dc44dcb",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p01_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p01_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p01_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p01_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_818f900360a3f78e5aa782b4",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_818f900360a3f78e5aa782b4",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p01_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p01_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p01_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p01_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_464aa2211fb83f1632dd2911",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_464aa2211fb83f1632dd2911",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p01_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p01_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p01_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p01_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_3eb8f563db5ce45854367e7a",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_3eb8f563db5ce45854367e7a",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p01_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p01_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p01_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p01_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_51daf13e46e912f78bf9edff",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_51daf13e46e912f78bf9edff",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p01_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p01_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p01_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p01_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_925de2d4ceea39f4a11a699b",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_925de2d4ceea39f4a11a699b",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p1_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p1_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p1_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p1_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_72125b5be8786648f8d811c6",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_72125b5be8786648f8d811c6",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p1_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p1_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p1_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p1_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_74032ef6635c85deaefd17f7",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_74032ef6635c85deaefd17f7",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p1_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p1_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p1_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p1_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_48b3f28af72cc85cae369dd2",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_48b3f28af72cc85cae369dd2",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p1_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p1_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p1_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p1_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_7654d34f4efd664598893ba1",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_7654d34f4efd664598893ba1",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p1_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p1_w0p05/final_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p1_w0p05/final_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p1_w0p05/final_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  },
+  {
+    "id": "behavior_pythia-410m_cff3327f63122ed8dcddacd7",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+      "--manifest-sha256",
+      "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+      "--job-id",
+      "behavior_pythia-410m_cff3327f63122ed8dcddacd7",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p1_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p1_w0p05/best_execution.json",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p1_w0p05/best_hellaswag.jsonl",
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p1_w0p05/best_piqa.jsonl"
+    ],
+    "expected_seconds": 300,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "behavior_pythia-410m_41a3156878bf36d607b4_initial"
+    ]
+  }
+]
