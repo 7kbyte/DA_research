@@ -1,0 +1,981 @@
+{
+  "schema_version": 1,
+  "status": "ROOT_authorized_actual_C410_NLL_priority_only",
+  "authorized": true,
+  "authorized_by": "root",
+  "authorized_at_utc": "2026-11-06T15:20:42.710269+00:00",
+  "preflight": {
+    "path": "/tmp/grad-research-20261106/worktree/results/C410_actual_READY_preflight_v1/preflight.json",
+    "sha256": "d2dd8e28d869eacbfaae700399b14ec02815bc83b5b6167a2fa16e6f4268c7a0"
+  },
+  "actual_ready": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_nll/READY.json",
+    "sha256": "d776f2aa440fa303ab0807c40d988b4036176c191a52a386410c0b09a5405481",
+    "stat_dev_ino_size_mtime_ns_ctime_ns": [
+      139,
+      68893676467,
+      7867,
+      1793978338109407989,
+      1793978338109407989
+    ]
+  },
+  "actual_manifest": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_nll/manifest.json",
+    "sha256": "48f8b2235c303211e4f79a92c16c7fb1c8d3757ce5d66a97a555fba7dfcf8f32",
+    "stat_dev_ino_size_mtime_ns_ctime_ns": [
+      139,
+      68893676465,
+      2340545,
+      1793978338104408009,
+      1793978338105408005
+    ]
+  },
+  "actual_phase_queue": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_nll/queue.json",
+    "sha256": "d94df2358c0e2c644135b7071f95ae7adc6fd09ed74609437133a380eabb968d",
+    "stat_dev_ino_size_mtime_ns_ctime_ns": [
+      139,
+      68893676466,
+      48671,
+      1793978338106408001,
+      1793978338106408001
+    ]
+  },
+  "master_queue_before_sha256": "b4a2c80b1d0ced8f47aa4bb79c41ba14594a7c446dd2ff2c8acfe93eb04edf99",
+  "master_pid": 2988506,
+  "physical_inference_jobs": 43,
+  "physical_adapted": 42,
+  "new_matched_extended_initial": 1,
+  "logical_endpoints": 48,
+  "source_training_runs": 24,
+  "actual_proved_aliases": 6,
+  "scope": "Complete410M final+best NLL only; no behavior or other model score authority",
+  "time_gates": {
+    "scenario": "actual_READY_C410_NLL_priority_high",
+    "all63_training_starts": [
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B0_s11_w0",
+        "model": "pythia-1b",
+        "status": "running",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T14:42:02.008767+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B0_s22_w0",
+        "model": "pythia-1b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T16:13:08.026895+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B0_s33_w0",
+        "model": "pythia-1b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T18:07:43.365990+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B1_s11_w0p05",
+        "model": "pythia-1b",
+        "status": "running",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T14:46:02.741780+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B1_s22_w0p05",
+        "model": "pythia-1b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T16:53:48.120505+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B1_s33_w0p05",
+        "model": "pythia-1b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T18:47:27.988015+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B2_s11_w0p05",
+        "model": "pythia-1b",
+        "status": "running",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T15:15:28.158180+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B2_s22_w0p05",
+        "model": "pythia-1b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T16:53:54.501227+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B2_s33_w0p05",
+        "model": "pythia-1b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T18:49:10.722750+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B3_s11_w0p05",
+        "model": "pythia-1b",
+        "status": "running",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T15:16:28.341969+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B3_s22_w0p05",
+        "model": "pythia-1b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T17:04:51.927605+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B3_s33_w0p05",
+        "model": "pythia-1b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T18:58:42.918328+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B4_s11_w0p05",
+        "model": "pythia-1b",
+        "status": "completed",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T10:57:11.187616+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B4_s22_w0p05",
+        "model": "pythia-1b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T17:10:13.766625+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B4_s33_w0p05",
+        "model": "pythia-1b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T21:40:40.695705+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_C_s11_w0p05",
+        "model": "pythia-1b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T16:12:50.909561+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_C_s22_w0p05",
+        "model": "pythia-1b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T18:01:20.061264+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_C_s33_w0p05",
+        "model": "pythia-1b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T22:08:26.384048+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_D_s11_w0p05",
+        "model": "pythia-1b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T15:56:25.263441+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_D_s22_w0p05",
+        "model": "pythia-1b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T17:50:05.130951+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_D_s33_w0p05",
+        "model": "pythia-1b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T21:44:29.035704+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_M_s11_w0p05",
+        "model": "pythia-1b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T15:56:31.644163+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_M_s22_w0p05",
+        "model": "pythia-1b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T17:51:47.865686+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_M_s33_w0p05",
+        "model": "pythia-1b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T21:49:47.801191+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B0_s11_w0",
+        "model": "pythia-2.8b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T18:59:27.266699+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B0_s22_w0",
+        "model": "pythia-2.8b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T19:55:11.051987+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B0_s33_w0",
+        "model": "pythia-2.8b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T20:52:56.438532+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B1_s11_w0p05",
+        "model": "pythia-2.8b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T19:35:50.408527+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B1_s22_w0p05",
+        "model": "pythia-2.8b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T20:14:23.423529+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B1_s33_w0p05",
+        "model": "pythia-2.8b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T21:02:07.680703+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B2_s11_w0p05",
+        "model": "pythia-2.8b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T19:43:44.998461+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B2_s22_w0p05",
+        "model": "pythia-2.8b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T20:22:56.339582+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B2_s33_w0p05",
+        "model": "pythia-2.8b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T21:05:17.694583+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B4_s11_w0p05",
+        "model": "pythia-2.8b",
+        "status": "completed",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T10:57:21.217790+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B4_s22_w0p05",
+        "model": "pythia-2.8b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T20:26:10.890896+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B4_s33_w0p05",
+        "model": "pythia-2.8b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T21:10:40.997504+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_M_s11_w0p05",
+        "model": "pythia-2.8b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T19:47:04.087208+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_M_s22_w0p05",
+        "model": "pythia-2.8b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T20:31:34.193816+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_M_s33_w0p05",
+        "model": "pythia-2.8b",
+        "status": "pending",
+        "basis": "forecast_pending_dispatch",
+        "start_utc": "2026-11-06T21:29:19.580360+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_B0_s11_w0",
+        "model": "pythia-410m",
+        "status": "completed",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T11:47:29.869547+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_B0_s22_w0",
+        "model": "pythia-410m",
+        "status": "completed",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T12:23:06.488492+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_B0_s33_w0",
+        "model": "pythia-410m",
+        "status": "completed",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T13:34:09.622350+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_B1_s11_w0p05",
+        "model": "pythia-410m",
+        "status": "completed",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T11:47:59.966872+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_B1_s22_w0p05",
+        "model": "pythia-410m",
+        "status": "completed",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T12:24:06.682093+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_B1_s33_w0p05",
+        "model": "pythia-410m",
+        "status": "completed",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T13:35:09.797899+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_B2_s11_w0p05",
+        "model": "pythia-410m",
+        "status": "completed",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T11:02:02.028946+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_B2_s22_w0p05",
+        "model": "pythia-410m",
+        "status": "completed",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T12:54:22.241948+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_B2_s33_w0p05",
+        "model": "pythia-410m",
+        "status": "completed",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T14:04:55.223273+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_B3_s11_w0p05",
+        "model": "pythia-410m",
+        "status": "completed",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T11:48:10.004038+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_B3_s22_w0p05",
+        "model": "pythia-410m",
+        "status": "completed",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T12:54:32.273386+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_B3_s33_w0p05",
+        "model": "pythia-410m",
+        "status": "completed",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T14:05:15.284794+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_B4_s11_w0p05",
+        "model": "pythia-410m",
+        "status": "completed",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T10:57:01.156819+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_B4_s22_w0p05",
+        "model": "pythia-410m",
+        "status": "completed",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T12:58:32.994795+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_B4_s33_w0p05",
+        "model": "pythia-410m",
+        "status": "completed",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T14:06:15.476940+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_C_s11_w0p05",
+        "model": "pythia-410m",
+        "status": "completed",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T12:22:46.426385+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_C_s22_w0p05",
+        "model": "pythia-410m",
+        "status": "completed",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T13:30:18.886712+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_C_s33_w0p05",
+        "model": "pythia-410m",
+        "status": "completed",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T14:40:41.763020+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_D_s11_w0p05",
+        "model": "pythia-410m",
+        "status": "completed",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T11:48:10.004623+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_D_s22_w0p05",
+        "model": "pythia-410m",
+        "status": "completed",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T12:59:03.088517+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_D_s33_w0p05",
+        "model": "pythia-410m",
+        "status": "completed",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T14:10:06.159653+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_M_s11_w0p05",
+        "model": "pythia-410m",
+        "status": "completed",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T12:18:45.682638+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_M_s22_w0p05",
+        "model": "pythia-410m",
+        "status": "completed",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T13:29:18.701018+00:00"
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_M_s33_w0p05",
+        "model": "pythia-410m",
+        "status": "completed",
+        "basis": "actual_already_started",
+        "start_utc": "2026-11-06T14:39:51.611712+00:00"
+      }
+    ],
+    "finish_utc": "2026-11-06T23:05:49.241112+00:00",
+    "unfinished_C_launch_headroom_seconds": 1293.615952,
+    "all_unfinished_C_launches_at_least300seconds_before_strict_cutoff": true,
+    "whole_master_finish_headroom_before_stop_seconds": 2650.758888,
+    "whole_master_finish_at_least900seconds_before_stop": true,
+    "both_ROOT_time_gates": true,
+    "FIFO": {
+      "status": "complete_time_simulation",
+      "hypothetical_phase_priority_before_pending": true,
+      "actual_running_children_not_preempted": true,
+      "all_remaining_job_durations_receive_10pct_once": true,
+      "unassigned_conservative_nonphase_slot_seconds": 0.0,
+      "makespan_seconds_with_10pct": 27978.63862193661,
+      "ideal_four_slot_seconds_with_10pct": 26924.919311508926,
+      "longrun_FIFO_imbalance_seconds_above_ideal": 1053.7193104276848,
+      "future_dispatch_timing_rows": [
+        {
+          "id": "nll_pythia-410m_3aedc05b62a7fc71ec81_initial",
+          "slot": 0,
+          "start_seconds": 565.6915000179958,
+          "end_seconds": 613.8931815700126
+        },
+        {
+          "id": "nll_pythia-410m_49aa098b365c0a16e6b44130",
+          "slot": 0,
+          "start_seconds": 613.8931815700126,
+          "end_seconds": 678.2361326191844
+        },
+        {
+          "id": "nll_pythia-410m_98891dbd4035afad1d849da5",
+          "slot": 0,
+          "start_seconds": 678.2361326191844,
+          "end_seconds": 742.5112129707148
+        },
+        {
+          "id": "nll_pythia-410m_4d1023db4e192a7e7fb60a73",
+          "slot": 0,
+          "start_seconds": 742.5112129707148,
+          "end_seconds": 806.8541640198866
+        },
+        {
+          "id": "nll_pythia-410m_08f8a32172828e7e6f23c86f",
+          "slot": 0,
+          "start_seconds": 806.8541640198866,
+          "end_seconds": 871.129244371417
+        },
+        {
+          "id": "nll_pythia-410m_20bdf4db120a4bb3e8059719",
+          "slot": 0,
+          "start_seconds": 871.129244371417,
+          "end_seconds": 935.4721954205888
+        },
+        {
+          "id": "nll_pythia-410m_9194faaf0d2db72056d42a90",
+          "slot": 0,
+          "start_seconds": 935.4721954205888,
+          "end_seconds": 999.7472757721192
+        },
+        {
+          "id": "nll_pythia-410m_00b5ee5dabe9ac45a7d800ce",
+          "slot": 0,
+          "start_seconds": 999.7472757721192,
+          "end_seconds": 1064.090226821291
+        },
+        {
+          "id": "nll_pythia-410m_8052e287511cf7a0995a7615",
+          "slot": 0,
+          "start_seconds": 1064.090226821291,
+          "end_seconds": 1128.3653071728215
+        },
+        {
+          "id": "nll_pythia-410m_1c05878a191132157d32f7d6",
+          "slot": 1,
+          "start_seconds": 1120.8307832109974,
+          "end_seconds": 1185.1737342601693
+        },
+        {
+          "id": "nll_pythia-410m_57e4870721b6260142a0199f",
+          "slot": 0,
+          "start_seconds": 1128.3653071728215,
+          "end_seconds": 1192.640387524352
+        },
+        {
+          "id": "nll_pythia-410m_538340d95a6ad8f373f603e8",
+          "slot": 1,
+          "start_seconds": 1185.1737342601693,
+          "end_seconds": 1249.5166853093413
+        },
+        {
+          "id": "nll_pythia-410m_7b80db5f8c7bf4dc9f814be2",
+          "slot": 0,
+          "start_seconds": 1192.640387524352,
+          "end_seconds": 1256.9154678758825
+        },
+        {
+          "id": "nll_pythia-410m_b2f75825a17767d1208d4fab",
+          "slot": 1,
+          "start_seconds": 1249.5166853093413,
+          "end_seconds": 1313.8596363585132
+        },
+        {
+          "id": "nll_pythia-410m_d872c146b76a2af81791636c",
+          "slot": 0,
+          "start_seconds": 1256.9154678758825,
+          "end_seconds": 1321.190548227413
+        },
+        {
+          "id": "nll_pythia-410m_ee2f5d68986852b54e1a138f",
+          "slot": 1,
+          "start_seconds": 1313.8596363585132,
+          "end_seconds": 1378.202587407685
+        },
+        {
+          "id": "nll_pythia-410m_30e918563fb94d460255a53e",
+          "slot": 0,
+          "start_seconds": 1321.190548227413,
+          "end_seconds": 1385.4656285789436
+        },
+        {
+          "id": "nll_pythia-410m_f90a50a95eabde2cd6eb286f",
+          "slot": 1,
+          "start_seconds": 1378.202587407685,
+          "end_seconds": 1442.545538456857
+        },
+        {
+          "id": "nll_pythia-410m_b3786c3b202c59a901a4ebf1",
+          "slot": 0,
+          "start_seconds": 1385.4656285789436,
+          "end_seconds": 1449.740708930474
+        },
+        {
+          "id": "nll_pythia-410m_270dd4e69c7f36321bbc5c5e",
+          "slot": 1,
+          "start_seconds": 1442.545538456857,
+          "end_seconds": 1506.888489506029
+        },
+        {
+          "id": "nll_pythia-410m_7caffcafd3818f727dd761c7",
+          "slot": 0,
+          "start_seconds": 1449.740708930474,
+          "end_seconds": 1514.0157892820046
+        },
+        {
+          "id": "nll_pythia-410m_6e120586a9c3e2e464e7eb84",
+          "slot": 1,
+          "start_seconds": 1506.888489506029,
+          "end_seconds": 1571.2314405552008
+        },
+        {
+          "id": "nll_pythia-410m_87288d4bf719c66fe4e32b38",
+          "slot": 0,
+          "start_seconds": 1514.0157892820046,
+          "end_seconds": 1578.290869633535
+        },
+        {
+          "id": "nll_pythia-410m_c619f214f9149c999c359aa6",
+          "slot": 1,
+          "start_seconds": 1571.2314405552008,
+          "end_seconds": 1635.5743916043727
+        },
+        {
+          "id": "nll_pythia-410m_850961dd790dec3acb9f8453",
+          "slot": 0,
+          "start_seconds": 1578.290869633535,
+          "end_seconds": 1642.5659499850656
+        },
+        {
+          "id": "nll_pythia-410m_e72964db9b7f21d1facade98",
+          "slot": 1,
+          "start_seconds": 1635.5743916043727,
+          "end_seconds": 1699.9173426535447
+        },
+        {
+          "id": "nll_pythia-410m_d2eb95ce1f74146bac86cec9",
+          "slot": 0,
+          "start_seconds": 1642.5659499850656,
+          "end_seconds": 1706.841030336596
+        },
+        {
+          "id": "nll_pythia-410m_34a506faaa1b8bb2a3fd9075",
+          "slot": 1,
+          "start_seconds": 1699.9173426535447,
+          "end_seconds": 1764.2602937027166
+        },
+        {
+          "id": "nll_pythia-410m_65120e2f744a87cce4332cee",
+          "slot": 0,
+          "start_seconds": 1706.841030336596,
+          "end_seconds": 1771.1161106881266
+        },
+        {
+          "id": "nll_pythia-410m_25e6c01cc6930c602a58863b",
+          "slot": 1,
+          "start_seconds": 1764.2602937027166,
+          "end_seconds": 1828.6032447518885
+        },
+        {
+          "id": "nll_pythia-410m_de5cbaea7f148ea18b494dda",
+          "slot": 0,
+          "start_seconds": 1771.1161106881266,
+          "end_seconds": 1835.391191039657
+        },
+        {
+          "id": "nll_pythia-410m_ca16e64fd7d8960654064d10",
+          "slot": 1,
+          "start_seconds": 1828.6032447518885,
+          "end_seconds": 1892.9461958010604
+        },
+        {
+          "id": "nll_pythia-410m_da17fe39c9e36e13a27dc38f",
+          "slot": 0,
+          "start_seconds": 1835.391191039657,
+          "end_seconds": 1899.6662713911876
+        },
+        {
+          "id": "nll_pythia-410m_e74a6c060d3881ebf66d728a",
+          "slot": 1,
+          "start_seconds": 1892.9461958010604,
+          "end_seconds": 1957.2891468502323
+        },
+        {
+          "id": "nll_pythia-410m_2633b67e7f59bfcc5f0420a0",
+          "slot": 0,
+          "start_seconds": 1899.6662713911876,
+          "end_seconds": 1963.941351742718
+        },
+        {
+          "id": "nll_pythia-410m_aeab3d90e7fa0cc0f2f79fc8",
+          "slot": 1,
+          "start_seconds": 1957.2891468502323,
+          "end_seconds": 2021.6320978994042
+        },
+        {
+          "id": "nll_pythia-410m_ac6af9159d04c0c34068ae68",
+          "slot": 0,
+          "start_seconds": 1963.941351742718,
+          "end_seconds": 2028.2164320942486
+        },
+        {
+          "id": "nll_pythia-410m_b598a93fadb2ccf1c4adbec4",
+          "slot": 1,
+          "start_seconds": 2021.6320978994042,
+          "end_seconds": 2085.975048948576
+        },
+        {
+          "id": "nll_pythia-410m_7046af03e2ba3261cc786b3f",
+          "slot": 0,
+          "start_seconds": 2028.2164320942486,
+          "end_seconds": 2092.491512445779
+        },
+        {
+          "id": "nll_pythia-410m_28d56a240ee0981d62e35250",
+          "slot": 1,
+          "start_seconds": 2085.975048948576,
+          "end_seconds": 2150.317999997748
+        },
+        {
+          "id": "nll_pythia-410m_3ba05a0a23f50271b5ccdb77",
+          "slot": 0,
+          "start_seconds": 2092.491512445779,
+          "end_seconds": 2156.7665927973094
+        },
+        {
+          "id": "nll_pythia-410m_2007e7bfb9365f0ffd5bcecc",
+          "slot": 1,
+          "start_seconds": 2150.317999997748,
+          "end_seconds": 2214.6609510469198
+        },
+        {
+          "id": "nll_pythia-410m_4ff68a45b81effb16b03310e",
+          "slot": 0,
+          "start_seconds": 2156.7665927973094,
+          "end_seconds": 2221.04167314884
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_D_s11_w0p05",
+          "slot": 1,
+          "start_seconds": 2214.6609510469198,
+          "end_seconds": 5657.518015217001
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_M_s11_w0p05",
+          "slot": 0,
+          "start_seconds": 2221.04167314884,
+          "end_seconds": 5663.898737318922
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_C_s11_w0p05",
+          "slot": 3,
+          "start_seconds": 3200.307070809479,
+          "end_seconds": 6643.164134979561
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B0_s22_w0",
+          "slot": 2,
+          "start_seconds": 3217.4244053990074,
+          "end_seconds": 6321.325114698068
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B1_s22_w0p05",
+          "slot": 1,
+          "start_seconds": 5657.518015217001,
+          "end_seconds": 9034.528460985384
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B2_s22_w0p05",
+          "slot": 0,
+          "start_seconds": 5663.898737318922,
+          "end_seconds": 9137.26319552067
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B3_s22_w0p05",
+          "slot": 2,
+          "start_seconds": 6321.325114698068,
+          "end_seconds": 9709.45877396121
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B4_s22_w0p05",
+          "slot": 3,
+          "start_seconds": 6643.164134979561,
+          "end_seconds": 10092.763499578707
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_D_s22_w0p05",
+          "slot": 1,
+          "start_seconds": 9034.528460985384,
+          "end_seconds": 12477.385525155467
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_M_s22_w0p05",
+          "slot": 0,
+          "start_seconds": 9137.26319552067,
+          "end_seconds": 12580.120259690753
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_C_s22_w0p05",
+          "slot": 2,
+          "start_seconds": 9709.45877396121,
+          "end_seconds": 13152.315838131293
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B0_s33_w0",
+          "slot": 3,
+          "start_seconds": 10092.763499578707,
+          "end_seconds": 13196.664208877768
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B1_s33_w0p05",
+          "slot": 1,
+          "start_seconds": 12477.385525155467,
+          "end_seconds": 15854.395970923852
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B2_s33_w0p05",
+          "slot": 0,
+          "start_seconds": 12580.120259690753,
+          "end_seconds": 16053.484717892501
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B3_s33_w0p05",
+          "slot": 2,
+          "start_seconds": 13152.315838131293,
+          "end_seconds": 16540.449497394435
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B0_s11_w0",
+          "slot": 3,
+          "start_seconds": 13196.664208877768,
+          "end_seconds": 15379.80603734371
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B1_s11_w0p05",
+          "slot": 3,
+          "start_seconds": 15379.80603734371,
+          "end_seconds": 17692.821039475257
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B2_s11_w0p05",
+          "slot": 1,
+          "start_seconds": 15854.395970923852,
+          "end_seconds": 18205.73709211597
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_M_s11_w0p05",
+          "slot": 0,
+          "start_seconds": 16053.484717892501,
+          "end_seconds": 18400.288405586285
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B0_s22_w0",
+          "slot": 2,
+          "start_seconds": 16540.449497394435,
+          "end_seconds": 18723.591325860376
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B1_s22_w0p05",
+          "slot": 3,
+          "start_seconds": 17692.821039475257,
+          "end_seconds": 20005.836041606803
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B2_s22_w0p05",
+          "slot": 1,
+          "start_seconds": 18205.73709211597,
+          "end_seconds": 20557.07821330809
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B4_s22_w0p05",
+          "slot": 0,
+          "start_seconds": 18400.288405586285,
+          "end_seconds": 20747.09209328007
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_M_s22_w0p05",
+          "slot": 2,
+          "start_seconds": 18723.591325860376,
+          "end_seconds": 21070.39501355416
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B0_s33_w0",
+          "slot": 3,
+          "start_seconds": 20005.836041606803,
+          "end_seconds": 22188.977870072744
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B1_s33_w0p05",
+          "slot": 1,
+          "start_seconds": 20557.07821330809,
+          "end_seconds": 22870.093215439636
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B2_s33_w0p05",
+          "slot": 0,
+          "start_seconds": 20747.09209328007,
+          "end_seconds": 23098.43321447219
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B4_s33_w0p05",
+          "slot": 2,
+          "start_seconds": 21070.39501355416,
+          "end_seconds": 23417.198701247944
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_M_s33_w0p05",
+          "slot": 3,
+          "start_seconds": 22188.977870072744,
+          "end_seconds": 24535.781557766528
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B4_s33_w0p05",
+          "slot": 1,
+          "start_seconds": 22870.093215439636,
+          "end_seconds": 26319.69258003878
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_D_s33_w0p05",
+          "slot": 0,
+          "start_seconds": 23098.43321447219,
+          "end_seconds": 26541.29027864227
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_M_s33_w0p05",
+          "slot": 2,
+          "start_seconds": 23417.198701247944,
+          "end_seconds": 26860.055765418027
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_C_s33_w0p05",
+          "slot": 3,
+          "start_seconds": 24535.781557766528,
+          "end_seconds": 27978.63862193661
+        }
+      ]
+    },
+    "unchanged_full_v5_tail_envelope_finish_utc": "2026-11-07T02:02:37.261732+00:00",
+    "envelope_margin_before30minute_delivery_tail_seconds": 3234.738268
+  },
+  "no_scientific_definitions_horizons_or_seed_changes": true,
+  "no_score_semantics_read_for_this_decision": true,
+  "actual_running_jobs_not_preempted": true,
+  "main_behavior_still_deferred": true,
+  "existing_full_evaluation_tail_not_credited": true,
+  "unchanged_delivery_tail_minutes": 30
+}
