@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "status": "completed_exact_three_boundary_corrections_single_render",
+  "completed_at_utc": "2026-11-06T19:50:56.561763+00:00",
+  "application": {
+    "path": "artifacts/provenance/report_scientific_boundary_revision_v1/application_receipt.json",
+    "sha256": "3b67b03da6a6a38f8964a370e7a1e5efc82e3dfb13b5587c2217a4fe64f03e72",
+    "bytes": 5992
+  },
+  "expected_three_changes": {
+    "path": "artifacts/provenance/report_scientific_boundary_revision_v1/expected_three_changes.diff",
+    "sha256": "3834915c643581e5329195d6449c555eab397a3984c4f32052b5739dd549e822",
+    "bytes": 7651
+  },
+  "all_other_MD_bytes_exactly_reconstructed_unchanged": true,
+  "changed_lines": 3,
+  "section7_and_reference_suffix_exactly_unchanged": true,
+  "all_tables_and_figure_references_exactly_unchanged": true,
+  "final_outputs": {
+    "source": {
+      "path": "/tmp/grad-research-20261106/worktree/研究报告.md",
+      "sha256": "e02887e43f49799d3f53f125b91b1aa438f362db17ece5e7daefbda4e67ba052",
+      "bytes": 46203
+    },
+    "html": {
+      "path": "/tmp/grad-research-20261106/worktree/reports/研究报告_工作稿.html",
+      "sha256": "232294ff286d2ac012cdc7a9df2b67f1c537c7af30cec58f7305228ddc3b9013",
+      "bytes": 60572
+    },
+    "pdf": {
+      "path": "/tmp/grad-research-20261106/worktree/reports/研究报告_工作稿.pdf",
+      "sha256": "1a89d6725f3316e1b8be196c2df8c0df385bcecfdd1d3f9741f460eedb8c51e7",
+      "bytes": 1041816
+    },
+    "render": {
+      "path": "/tmp/grad-research-20261106/worktree/reports/研究报告_工作稿.render.json",
+      "sha256": "6165a3251e004e89755d92df56919e245ab324eef3717b6d1b7681323a94c31d",
+      "bytes": 552
+    }
+  },
+  "page_count": 16,
+  "automated_QA": {
+    "path": "artifacts/provenance/report_scientific_boundary_revision_v1/review/automated_QA.json",
+    "sha256": "e5434a5318c1299c4e6fa8692ce93698ec580d77a165d2fadf33cec268daefc9",
+    "bytes": 28441
+  },
+  "HTML_text_blocks_checked": 431,
+  "missing_or_nonexact_blocks": 0,
+  "relative_resources_and_links_checked": 51,
+  "visual_QA": {
+    "status": "passed",
+    "all_16_pages_contact_inspected": true,
+    "last_page_16_full_resolution_inspected": true,
+    "text_tables_figures_and_reference_closing_paragraph_complete": true,
+    "no_clipping_overlap_or_missing_text_observed": true,
+    "contact_sheets": [
+      {
+        "path": "artifacts/provenance/report_scientific_boundary_revision_v1/review/contact_01_04.png",
+        "sha256": "bf28edc9b3ed7846f0bf3934652e6523a5c88ac11543c4b74bae121483c495c0",
+        "bytes": 1080204
+      },
+      {
+        "path": "artifacts/provenance/report_scientific_boundary_revision_v1/review/contact_05_08.png",
+        "sha256": "c32a44dd9d0cf59315710c3748ebdc31c9ea5d8c7c2e389fe95838f32c1922bb",
+        "bytes": 923580
+      },
+      {
+        "path": "artifacts/provenance/report_scientific_boundary_revision_v1/review/contact_09_12.png",
+        "sha256": "ca308d29911b2f77d36e7ccc72b73c153ec3f8aaf98f9e29b00335f85eccc61d",
+        "bytes": 1032602
+      },
+      {
+        "path": "artifacts/provenance/report_scientific_boundary_revision_v1/review/contact_13_16.png",
+        "sha256": "91852ef468dcb656ce21922393158f6469def442b8ee49c06141e6d1eee7d7bb",
+        "bytes": 1006050
+      }
+    ],
+    "full_resolution_last_page": {
+      "path": "artifacts/provenance/report_scientific_boundary_revision_v1/review/page_16.png",
+      "sha256": "5462e143460cbc599325d9c597e97f97de6fe83c69c7d00ca864be04bdc5a3d2",
+      "bytes": 423542
+    },
+    "manual_whole_wall_seconds": null,
+    "manual_whole_timer_status": "unknown; not inferred from timestamps"
+  },
+  "render_count_this_revision": 1,
+  "render_whole_child": {
+    "path": "artifacts/provenance/report_scientific_boundary_revision_v1/render_whole_child_timing.json",
+    "sha256": "3813159dd6a9476f32cfbcfd40aaf56ba672e6ccad391d310b6997aa7d53e7fe",
+    "bytes": 1020
+  },
+  "QA_whole_child": {
+    "path": "artifacts/provenance/report_scientific_boundary_revision_v1/review/whole_child_timing.json",
+    "sha256": "39356f0b2db10ba7d999273c13f5ac033ad0e357fb0f50d32d3621c1c642ff95",
+    "bytes": 658
+  },
+  "timing_scope": "Render and QA are separate full children; their internal timers not added. Manual/authoring parent unknown.",
+  "renderer": {
+    "path": "scripts/render_report.py",
+    "sha256": "d5eee4e76391e5dc1fb1aa3427858c16f99f4f8f56b9111dc117a213c39c5d83",
+    "bytes": 4312
+  },
+  "scientific_core_SHA_unchanged": {
+    "src/replay_study/train.py": "fdfcf6aa12e4d9e60de48b817ce37c5646cb1169f28d971a421f91972543ab6d",
+    "src/replay_study/objectives.py": "9e0a319965bf486ebf721e3e662b6a474046e56c44dfab0d13590a20aedd98be",
+    "src/replay_study/evaluate.py": "d9648b4fbc891746a9bafe9e9639e2ee584521ba68bd949d2091484c833c3c46",
+    "src/replay_study/execution.py": "70ed6b3d63f950ffc00f2c671f20e0d842c154f4cbf1648fe9a6511bbd077bf5",
+    "src/replay_study/generate.py": "7415647d6d2f23e2f0e59f288dc544a21b8fb0eaa9069daf90e5ea949e607e33",
+    "src/replay_study/selection.py": "88814e111aa5db1fb1009d90eba54c353a018fd6c1cbdda4ff4a148b57aa11b7",
+    "src/replay_study/data.py": "e43c6f859db2815ff6b7dcd1a1d65fe71a3ca2621dd6564a3b0424595ab65c24",
+    "scripts/run_evaluate.py": "6d7b9cd6b311f96e94b854e8ccd15f15f92ff9eefbd6b5a0dddc67fee8989ddf",
+    "scripts/run_train.py": "eae92291ad7d4a52717078e8764dc5a5440cba44b09dd0f1cfc46223317798de",
+    "scripts/make_experiments.py": "e6997abcb3c65afcfb2fd9fc1129877b1e4afc3f80ad49be3495aa99a6764df4"
+  },
+  "short_revision_note": {
+    "path": "docs/研究报告三处解释边界修订说明_20261106.md",
+    "sha256": "59746fcc40619c3dce45eb211315ac306b48ae3b386b0d00fc38047376cb0a33",
+    "bytes": 2166
+  },
+  "no_new_statistics_or_scientific_conditions": true,
+  "no_unopened_score_or_model_checkpoint_base_TAR_ZIP_payload_access": true,
+  "no_GPU": true,
+  "no_README_or_other_existing_source_changes": true
+}

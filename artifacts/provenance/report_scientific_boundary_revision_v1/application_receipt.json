@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "status": "exact_three_text_changes_applied_before_single_render",
+  "created_at_utc": "2026-11-06T19:49:37.238573+00:00",
+  "retained": [
+    {
+      "path": "研究报告.md",
+      "sha256": "46d58b6a573ac0a43edc1928cd329ab1911a4e60fc1b1edc1249f4d767fe35c4",
+      "bytes": 45833,
+      "retained": "artifacts/provenance/report_scientific_boundary_revision_v1/retained/研究报告.md"
+    },
+    {
+      "path": "reports/研究报告_工作稿.pdf",
+      "sha256": "5ccf15889a42492f0c3cbe21af6c968924e5392198d8ae40ae6e310421aafa62",
+      "bytes": 1040781,
+      "retained": "artifacts/provenance/report_scientific_boundary_revision_v1/retained/reports/研究报告_工作稿.pdf"
+    },
+    {
+      "path": "reports/研究报告_工作稿.html",
+      "sha256": "a6421fd78582247c1f550185530a804c06ec186cb3e35df75f8f96f82e2952e4",
+      "bytes": 60202,
+      "retained": "artifacts/provenance/report_scientific_boundary_revision_v1/retained/reports/研究报告_工作稿.html"
+    },
+    {
+      "path": "reports/研究报告_工作稿.render.json",
+      "sha256": "9ffdf28214e4c49f1b2c47804fbdb43caed0773a90e48e1e7eaad591c95ad142",
+      "bytes": 552,
+      "retained": "artifacts/provenance/report_scientific_boundary_revision_v1/retained/reports/研究报告_工作稿.render.json"
+    }
+  ],
+  "changes": [
+    {
+      "id": "pointwise_intervals",
+      "before": "不能把抽样次数当作实验重复数。全部逐 seed、等文档指标、配对区间和来源 SHA",
+      "after": "不能把抽样次数当作实验重复数。这些逐项95%区间未经多重比较校正，不保证跨方法、λ、领域及端点的同时覆盖。全部逐 seed、等文档指标、配对区间和来源 SHA"
+    },
+    {
+      "id": "A_selection_reuse",
+      "before": "三个seed的标准差条件于同一个已经选定的λ，不包含重新采样验证集并重复整套调参的波动；逐文档区间同样条件于已训练的模型。",
+      "after": "三个seed的标准差条件于同一个已经选定的λ，不包含重新采样验证集并重复整套调参的波动；逐文档区间同样条件于已训练的模型。A各候选条件的测试端点沿用参与验证选λ的同三条seed训练路径，不是三次独立重复调参，不能估计新seed重做整个选参流程的泛化波动。"
+    },
+    {
+      "id": "extended_matched_data",
+      "before": "不同模型同时改变容量、批量、数据与训练时长，不能将其差异单独归因为参数规模。",
+      "after": "三个扩展模型使用SHA一致的同一目标训练集与评价集；模型、生成回放内容、微批、部分学习率及累计曝光不同，不能将其差异单独归因为参数规模。"
+    }
+  ],
+  "exact_three_substitutions_reconstruct_old_source": true,
+  "changed_line_count": 3,
+  "all_other_source_bytes_identical": true,
+  "new_report_sha256": "e02887e43f49799d3f53f125b91b1aa438f362db17ece5e7daefbda4e67ba052",
+  "protocol_sources": [
+    {
+      "path": "docs/extended_v2_pythia_410m_m64_formal_protocol.json",
+      "sha256": "15bb2daec1521413e80749fb99c0a324cf24ecf62d5d17d4accf845682772b31",
+      "bytes": 12685
+    },
+    {
+      "path": "docs/extended_v2_pythia_1b_m32_formal_protocol.json",
+      "sha256": "90cb3dd20893f5b755ed3710681efe91b5323580ebf3caaba090a846e7013f53",
+      "bytes": 12227
+    },
+    {
+      "path": "docs/extended_v2_pythia_2p8b_m8_h25m_formal_protocol.json",
+      "sha256": "5056fabcc349160bf34f96317597a4376964c7132062b7b7de5a590535e56e60",
+      "bytes": 10740
+    },
+    {
+      "path": "docs/主NLL测试结果讨论.md",
+      "sha256": "cd5a53960ddcda7fd2b34b8bb2c77ddb4fe6139187bec0816d108c82365d1c54",
+      "bytes": 11171
+    },
+    {
+      "path": "docs/补充评价全阶段解封与所选策略分析_v1.md",
+      "sha256": "5bc8ce9fbff5f5cf75ec878f7fdb2036521ba4efeb996a4b683b5240007a3585",
+      "bytes": 10082
+    },
+    {
+      "path": "docs/补充A_NLL正文素材.md",
+      "sha256": "734f7219071a4c86d77e7d7919b416426dfeff9ebf1d63a4142d2845b3991cd2",
+      "bytes": 6005
+    },
+    {
+      "path": "docs/C完整结果解释框架_解封前.md",
+      "sha256": "edec0545dff68ea3dd6a9190af416e8bcd0eb59733866f140f5d184ca0c8460a",
+      "bytes": 5911
+    }
+  ],
+  "extended_data_identity_check": "All three frozen formal protocols have identical complete data_sha256 mappings; only small protocol JSON read, no tensor payload hash/read.",
+  "shared_extended_data_sha256": {
+    "artifacts/data_extended/finemath_train.pt": "d75095a4c1847f72168d7cad1fd56da8d82ac7f5b17c43673dd70ed7eae118b0",
+    "artifacts/data_extended/finemath_validation.pt": "59b2bb2d89104652785915e08c45ad3f8815037461da5216de42408ccfbb3ea0",
+    "artifacts/data_extended/c4_validation.pt": "ee0389143e28fc8d0e2e3f1107674e7a8d8a178d324c350820223937d7bcb274",
+    "artifacts/data_extended/wikitext103_validation.pt": "4018c33bd6e36b45aafcb5b5129ed18cbd480613ccbed0f8cdf57a02e8b0e85c",
+    "artifacts/data_extended/finemath_test.pt": "f19f802f985d929ecb3a623e3255785159b1fcb895c8f439bc037a7012d29718",
+    "artifacts/data_extended/c4_test.pt": "e81744326b66513afdfc02cc3b74b9c92908cd2359f13d0eac2b1a99bf516747",
+    "artifacts/data_extended/wikitext103_test.pt": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f",
+    "artifacts/data_extended/c4_candidate.pt": "c3c916aebcb185f2ea09690c51f2b37c7c4410793f95ce964e27157b9077b696"
+  },
+  "models": [
+    {
+      "model": "pythia-410m",
+      "microbatch_size": 64,
+      "gradient_accumulation_steps": 1,
+      "formal_target_prediction_tokens": 100000000
+    },
+    {
+      "model": "pythia-1b",
+      "microbatch_size": 32,
+      "gradient_accumulation_steps": 2,
+      "formal_target_prediction_tokens": 100000000
+    },
+    {
+      "model": "pythia-2.8b",
+      "microbatch_size": 8,
+      "gradient_accumulation_steps": 8,
+      "formal_target_prediction_tokens": 25000000
+    }
+  ],
+  "no_score_or_weight_payload_read": true
+}
