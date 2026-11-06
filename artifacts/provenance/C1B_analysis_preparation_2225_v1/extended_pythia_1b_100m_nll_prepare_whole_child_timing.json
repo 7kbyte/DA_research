@@ -1,0 +1,36 @@
+{
+  "argv": [
+    "/usr/bin/python",
+    "/tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v2.py",
+    "prepare",
+    "--ready",
+    "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_1b_100m_nll/READY.json",
+    "--ready-sha256",
+    "7fd9ab47e028754f990effa9456b63f1ccfa251f508fb337097c47e594f80c62",
+    "--protocol",
+    "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_protocol_v2.json",
+    "--protocol-sha256",
+    "eed050602c368e5e4be87172ac4d208b890d9a7f7e9811ce1684ae62acc8f742",
+    "--contract-id",
+    "extended_pythia_1b_100m_nll",
+    "--output",
+    "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_1b_100m_nll.json",
+    "--digest-cache-snapshot",
+    "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/digest_cache_snapshot_1794003609611862274.json",
+    "--digest-cache-snapshot-sha256",
+    "bba05b10faab3f3ed3c808f64949fbdd57e31237f122e856c77ffbe2a5b87d4f"
+  ],
+  "cwd": "/tmp/grad-research-20261106/worktree",
+  "env": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "OMP_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2"
+  },
+  "returncode": 0,
+  "whole_child_wall_seconds": 0.36202025413513184,
+  "child_user_seconds": 0.31184799999999996,
+  "child_system_seconds": 0.123206,
+  "completed_at_utc": "2026-11-06T22:21:10.823820+00:00",
+  "scope": "Original v2 prepare only; no check/analyze, no score output read, no CP/base payload read, no authority or GPU."
+}

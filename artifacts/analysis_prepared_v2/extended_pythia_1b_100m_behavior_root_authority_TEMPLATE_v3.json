@@ -1,0 +1,58 @@
+{
+  "allow_partial": false,
+  "allow_score_analysis": false,
+  "authorized_by": "root",
+  "checkpoint_verification": {
+    "cache_reader_source": {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/stat_bound_digest_cache.py",
+      "sha256": "9cc01b493b46a5bf391a7c649a379d87011fff077ddeea701eaf8a84bdb568e2"
+    },
+    "cache_snapshot": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/digest_cache_snapshot_1794003609611862274.json",
+      "sha256": "bba05b10faab3f3ed3c808f64949fbdd57e31237f122e856c77ffbe2a5b87d4f"
+    },
+    "mode": "v5_checkpoint_snapshot"
+  },
+  "contract_id": "extended_pythia_1b_100m_behavior",
+  "expected_counts": {
+    "closure_canonical_forward_jobs": 22,
+    "closure_queue_jobs": 22,
+    "closure_reuse_materializations": 0,
+    "imported_baselines": 1,
+    "imported_canonical_forward_jobs": 1,
+    "logical_aliases": 3,
+    "logical_endpoints": 24,
+    "new_forward_jobs": 21,
+    "queue_jobs": 21,
+    "reuse_jobs": 0
+  },
+  "manifest": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_1b_100m_behavior/manifest.json",
+    "sha256": "e56a85f0c1d1eb2c375f863873fbeed7efc3c934f05b61d77b63ae7a7744fe6d"
+  },
+  "plan": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_1b_100m_behavior.json",
+    "sha256": "0d6fe37a1c376cb56be8b46f6d88b06cf4e7ef8116345ae584c7bc3788eace8c"
+  },
+  "protocol": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_protocol_v2.json",
+    "sha256": "eed050602c368e5e4be87172ac4d208b890d9a7f7e9811ce1684ae62acc8f742"
+  },
+  "ready": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_1b_100m_behavior/READY.json",
+    "sha256": "e6b1776b90acc4e781e1536e908f5dc5a18a707ff938f7f8bb91d31e60a6bbac"
+  },
+  "test_or_behavior_used_for_selection": false,
+  "training_methods_grid_selection_horizons_frozen": true,
+  "operational_repair": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C1B_behavior.json",
+    "sha256": "b86edb21c5e46db26bac205640441a5053aec1727f4251f77e649b2d5a1424b2"
+  },
+  "actual_successor_immutable_state": {
+    "path": null,
+    "sha256": null,
+    "pending_actual_completed_phase_snapshot": true,
+    "same_exact_source_required_for_check_and_analyze": true
+  },
+  "note": "Non-authorizing only. Before first real check, ROOT binds an immutable byte copy of the actual successor state after this full phase closure completes. Other phases may still run. Use that exact state path/SHA for check and analyze; never the old master or different state. This operational state field is externally enforced; frozen core is unchanged."
+}

@@ -1,0 +1,667 @@
+{
+  "status": "passed_metadata_only_prepare_and_v3_schema_validation",
+  "at_utc": "2026-11-06T22:21:41.382893+00:00",
+  "plan_results": [
+    {
+      "contract_id": "extended_pythia_1b_100m_nll",
+      "plan": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_1b_100m_nll.json",
+        "sha256": "e828aa3b0d31c9548b48cca9a3abf597bef708b5da96ee96598a0b9683f18aa4"
+      },
+      "repair": {
+        "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C1B_nll.json",
+        "sha256": "f7b6f22051c59c09d1822f010d2aa39d519bcfd067f6c14b07dac022f80d609c"
+      },
+      "counts": {
+        "closure_canonical_forward_jobs": 43,
+        "closure_queue_jobs": 43,
+        "closure_reuse_materializations": 0,
+        "imported_baselines": 0,
+        "imported_canonical_forward_jobs": 0,
+        "logical_aliases": 6,
+        "logical_endpoints": 48,
+        "new_forward_jobs": 43,
+        "queue_jobs": 43,
+        "reuse_jobs": 0
+      },
+      "schema_validation_only": true,
+      "verification_work": {
+        "checkpoint_verification": {
+          "cache_reader_source": {
+            "path": "/tmp/grad-research-20261106/worktree/scripts/stat_bound_digest_cache.py",
+            "sha256": "9cc01b493b46a5bf391a7c649a379d87011fff077ddeea701eaf8a84bdb568e2"
+          },
+          "cache_snapshot": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/digest_cache_snapshot_1794003609611862274.json",
+            "sha256": "bba05b10faab3f3ed3c808f64949fbdd57e31237f122e856c77ffbe2a5b87d4f"
+          },
+          "mode": "v5_checkpoint_snapshot"
+        },
+        "counters": {
+          "checkpoint_cache_hits": 0,
+          "checkpoint_cached_bytes": 0,
+          "checkpoint_fresh_reads": 0,
+          "checkpoint_fresh_bytes": 0,
+          "other_fresh_reads": 94,
+          "other_fresh_bytes": 6456333,
+          "within_invocation_reuses": 4
+        },
+        "checkpoint_events": [],
+        "cache_hits_are_current_byte_reads": false,
+        "non_checkpoint_files_always_fresh": true,
+        "counter_scope": "Unique paths verified by this explicit guard Verifier; checkpoint counters cover all phase checkpoint checks. Existing collector small-source/output reads are separate.",
+        "cache_reader_counters": {
+          "full_reads": 0,
+          "full_read_bytes": 0,
+          "cache_hits": 0,
+          "invalidations": 0
+        }
+      }
+    },
+    {
+      "contract_id": "extended_pythia_1b_100m_behavior",
+      "plan": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_1b_100m_behavior.json",
+        "sha256": "0d6fe37a1c376cb56be8b46f6d88b06cf4e7ef8116345ae584c7bc3788eace8c"
+      },
+      "repair": {
+        "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C1B_behavior.json",
+        "sha256": "b86edb21c5e46db26bac205640441a5053aec1727f4251f77e649b2d5a1424b2"
+      },
+      "counts": {
+        "closure_canonical_forward_jobs": 22,
+        "closure_queue_jobs": 22,
+        "closure_reuse_materializations": 0,
+        "imported_baselines": 1,
+        "imported_canonical_forward_jobs": 1,
+        "logical_aliases": 3,
+        "logical_endpoints": 24,
+        "new_forward_jobs": 21,
+        "queue_jobs": 21,
+        "reuse_jobs": 0
+      },
+      "schema_validation_only": true,
+      "verification_work": {
+        "checkpoint_verification": {
+          "cache_reader_source": {
+            "path": "/tmp/grad-research-20261106/worktree/scripts/stat_bound_digest_cache.py",
+            "sha256": "9cc01b493b46a5bf391a7c649a379d87011fff077ddeea701eaf8a84bdb568e2"
+          },
+          "cache_snapshot": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/digest_cache_snapshot_1794003609611862274.json",
+            "sha256": "bba05b10faab3f3ed3c808f64949fbdd57e31237f122e856c77ffbe2a5b87d4f"
+          },
+          "mode": "v5_checkpoint_snapshot"
+        },
+        "counters": {
+          "checkpoint_cache_hits": 0,
+          "checkpoint_cached_bytes": 0,
+          "checkpoint_fresh_reads": 0,
+          "checkpoint_fresh_bytes": 0,
+          "other_fresh_reads": 69,
+          "other_fresh_bytes": 5258551,
+          "within_invocation_reuses": 4
+        },
+        "checkpoint_events": [],
+        "cache_hits_are_current_byte_reads": false,
+        "non_checkpoint_files_always_fresh": true,
+        "counter_scope": "Unique paths verified by this explicit guard Verifier; checkpoint counters cover all phase checkpoint checks. Existing collector small-source/output reads are separate.",
+        "cache_reader_counters": {
+          "full_reads": 0,
+          "full_read_bytes": 0,
+          "cache_hits": 0,
+          "invalidations": 0
+        }
+      }
+    }
+  ],
+  "original_training_gate_metadata_only": {
+    "state_source_sha256": "4753b1c3fd13b51e36cedcce62117aef27307eb2040e96b862a4d7c31ff4124f",
+    "queue": {
+      "path": "/tmp/grad-research-20261106/worktree/configs/supplemental_v1_queue.json",
+      "sha256": "37f00a8ac4af9d71aabb6b54f425e3fa222f596e25ce6e049015c0a66185e377"
+    },
+    "complete_runs": 24,
+    "strict_integer_rc0_no_stop_no_missing_exact_definition_actual_argv": true,
+    "records": {
+      "extended_v2_pythia_1b_m32_formal_B0_s11_w0": {
+        "status": "completed",
+        "definition_sha256": "926ad9772738916f9a2151d378acf97a299e0b0a3d1d79ca791ad10a744f953f",
+        "pid": 3246695,
+        "gpu": "0",
+        "log": "logs/jobs/extended_v2_pythia_1b_m32_formal_B0_s11_w0.log",
+        "started_at_utc": "2026-11-06T14:42:02.008767+00:00",
+        "started_at_epoch": 1793976122.0087736,
+        "argv": [
+          "/usr/bin/python",
+          "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+          "run",
+          "--config",
+          "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B0_s11_w0.json",
+          "--summary-copy",
+          "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B0_s11_w0_summary.json"
+        ],
+        "returncode": 0,
+        "ended_at_utc": "2026-11-06T15:27:40.495018+00:00",
+        "elapsed_seconds": 2738.475593328476,
+        "missing_outputs": []
+      },
+      "extended_v2_pythia_1b_m32_formal_B0_s22_w0": {
+        "status": "completed",
+        "definition_sha256": "cd5eca30e94b4279473dfd6a1a5cf96e9ab605aa3d6e9c6698871e4fde53f500",
+        "pid": 3284844,
+        "gpu": "2",
+        "log": "logs/jobs/extended_v2_pythia_1b_m32_formal_B0_s22_w0.log",
+        "started_at_utc": "2026-11-06T16:06:28.181871+00:00",
+        "started_at_epoch": 1793981188.1818786,
+        "argv": [
+          "/usr/bin/python",
+          "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+          "run",
+          "--config",
+          "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B0_s22_w0.json",
+          "--summary-copy",
+          "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B0_s22_w0_summary.json"
+        ],
+        "returncode": 0,
+        "ended_at_utc": "2026-11-06T16:52:17.255810+00:00",
+        "elapsed_seconds": 2749.063299179077,
+        "missing_outputs": []
+      },
+      "extended_v2_pythia_1b_m32_formal_B0_s33_w0": {
+        "status": "completed",
+        "definition_sha256": "a7a2a8edac2e29bb909e5d976ef95d4d01eb1908c58fde7cd99b754aa39a246f",
+        "pid": 3329168,
+        "gpu": "3",
+        "log": "logs/jobs/extended_v2_pythia_1b_m32_formal_B0_s33_w0.log",
+        "started_at_utc": "2026-11-06T17:47:28.228052+00:00",
+        "started_at_epoch": 1793987248.2280595,
+        "argv": [
+          "/usr/bin/python",
+          "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+          "run",
+          "--config",
+          "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B0_s33_w0.json",
+          "--summary-copy",
+          "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B0_s33_w0_summary.json"
+        ],
+        "returncode": 0,
+        "ended_at_utc": "2026-11-06T18:33:17.327017+00:00",
+        "elapsed_seconds": 2749.088116168976,
+        "missing_outputs": []
+      },
+      "extended_v2_pythia_1b_m32_formal_B1_s11_w0p05": {
+        "status": "completed",
+        "definition_sha256": "34f2374eda093d67053b82d7cd80a08bd3a6365c16705671a116f09e6b659cc5",
+        "pid": 3248253,
+        "gpu": "1",
+        "log": "logs/jobs/extended_v2_pythia_1b_m32_formal_B1_s11_w0p05.log",
+        "started_at_utc": "2026-11-06T14:46:02.741780+00:00",
+        "started_at_epoch": 1793976362.741786,
+        "argv": [
+          "/usr/bin/python",
+          "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+          "run",
+          "--config",
+          "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B1_s11_w0p05.json",
+          "--summary-copy",
+          "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B1_s11_w0p05_summary.json"
+        ],
+        "returncode": 0,
+        "ended_at_utc": "2026-11-06T15:35:52.077798+00:00",
+        "elapsed_seconds": 2989.325577735901,
+        "missing_outputs": []
+      },
+      "extended_v2_pythia_1b_m32_formal_B1_s22_w0p05": {
+        "status": "completed",
+        "definition_sha256": "3e26c07118f8c2f0199f175b4acf55d4dcbd0daacf997d3f41ff5f3602e0d13c",
+        "pid": 3302971,
+        "gpu": "0",
+        "log": "logs/jobs/extended_v2_pythia_1b_m32_formal_B1_s22_w0p05.log",
+        "started_at_utc": "2026-11-06T16:48:16.359641+00:00",
+        "started_at_epoch": 1793983696.359647,
+        "argv": [
+          "/usr/bin/python",
+          "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+          "run",
+          "--config",
+          "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B1_s22_w0p05.json",
+          "--summary-copy",
+          "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B1_s22_w0p05_summary.json"
+        ],
+        "returncode": 0,
+        "ended_at_utc": "2026-11-06T17:37:56.283388+00:00",
+        "elapsed_seconds": 2979.9134514331818,
+        "missing_outputs": []
+      },
+      "extended_v2_pythia_1b_m32_formal_B1_s33_w0p05": {
+        "status": "completed",
+        "definition_sha256": "330756b4eff868ea33c9c554b33e1d8eef0155bad303797a6c37eb9a4b4145ae",
+        "pid": 3347126,
+        "gpu": "0",
+        "log": "logs/jobs/extended_v2_pythia_1b_m32_formal_B1_s33_w0p05.log",
+        "started_at_utc": "2026-11-06T18:28:36.371874+00:00",
+        "started_at_epoch": 1793989716.3718824,
+        "argv": [
+          "/usr/bin/python",
+          "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+          "run",
+          "--config",
+          "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B1_s33_w0p05.json",
+          "--summary-copy",
+          "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B1_s33_w0p05_summary.json"
+        ],
+        "returncode": 0,
+        "ended_at_utc": "2026-11-06T19:18:06.179972+00:00",
+        "elapsed_seconds": 2969.797290086746,
+        "missing_outputs": []
+      },
+      "extended_v2_pythia_1b_m32_formal_B2_s11_w0p05": {
+        "status": "completed",
+        "definition_sha256": "35e9c2c73a33339f76917bf6550e60185747c7e5f16364ee77f9a3b7dd9d242c",
+        "pid": 3260662,
+        "gpu": "2",
+        "log": "logs/jobs/extended_v2_pythia_1b_m32_formal_B2_s11_w0p05.log",
+        "started_at_utc": "2026-11-06T15:15:28.158180+00:00",
+        "started_at_epoch": 1793978128.1581872,
+        "argv": [
+          "/usr/bin/python",
+          "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+          "run",
+          "--config",
+          "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B2_s11_w0p05.json",
+          "--summary-copy",
+          "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B2_s11_w0p05_summary.json"
+        ],
+        "returncode": 0,
+        "ended_at_utc": "2026-11-06T16:06:28.180631+00:00",
+        "elapsed_seconds": 3060.011812210083,
+        "missing_outputs": []
+      },
+      "extended_v2_pythia_1b_m32_formal_B2_s22_w0p05": {
+        "status": "completed",
+        "definition_sha256": "96754cec804a558424f23ef3bf16be1aef9bc878aae9117992160dd5d2b89dc0",
+        "pid": 3302972,
+        "gpu": "1",
+        "log": "logs/jobs/extended_v2_pythia_1b_m32_formal_B2_s22_w0p05.log",
+        "started_at_utc": "2026-11-06T16:48:16.360225+00:00",
+        "started_at_epoch": 1793983696.360229,
+        "argv": [
+          "/usr/bin/python",
+          "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+          "run",
+          "--config",
+          "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B2_s22_w0p05.json",
+          "--summary-copy",
+          "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B2_s22_w0p05_summary.json"
+        ],
+        "returncode": 0,
+        "ended_at_utc": "2026-11-06T17:38:56.474612+00:00",
+        "elapsed_seconds": 3040.1036143302917,
+        "missing_outputs": []
+      },
+      "extended_v2_pythia_1b_m32_formal_B2_s33_w0p05": {
+        "status": "completed",
+        "definition_sha256": "70d536bfed7193d699c688ae3bbe68f881ce694a028249ff523f2fa44a597611",
+        "pid": 3347711,
+        "gpu": "1",
+        "log": "logs/jobs/extended_v2_pythia_1b_m32_formal_B2_s33_w0p05.log",
+        "started_at_utc": "2026-11-06T18:29:56.635423+00:00",
+        "started_at_epoch": 1793989796.63543,
+        "argv": [
+          "/usr/bin/python",
+          "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+          "run",
+          "--config",
+          "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B2_s33_w0p05.json",
+          "--summary-copy",
+          "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B2_s33_w0p05_summary.json"
+        ],
+        "returncode": 0,
+        "ended_at_utc": "2026-11-06T19:20:46.700788+00:00",
+        "elapsed_seconds": 3050.0487611293793,
+        "missing_outputs": []
+      },
+      "extended_v2_pythia_1b_m32_formal_B3_s11_w0p05": {
+        "status": "completed",
+        "definition_sha256": "154b5857a80b70833d2dab82280b477d0023b7fa31c5e775c69bf8007cf3d13e",
+        "pid": 3261299,
+        "gpu": "3",
+        "log": "logs/jobs/extended_v2_pythia_1b_m32_formal_B3_s11_w0p05.log",
+        "started_at_utc": "2026-11-06T15:16:28.341969+00:00",
+        "started_at_epoch": 1793978188.341977,
+        "argv": [
+          "/usr/bin/python",
+          "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+          "run",
+          "--config",
+          "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B3_s11_w0p05.json",
+          "--summary-copy",
+          "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B3_s11_w0p05_summary.json"
+        ],
+        "returncode": 0,
+        "ended_at_utc": "2026-11-06T16:06:18.146404+00:00",
+        "elapsed_seconds": 2989.7934358119965,
+        "missing_outputs": []
+      },
+      "extended_v2_pythia_1b_m32_formal_B3_s22_w0p05": {
+        "status": "completed",
+        "definition_sha256": "f1c3f9b50942b339ebc1ea03f51579baf21b07b3af7fba9658894eeccc83c1c4",
+        "pid": 3304675,
+        "gpu": "2",
+        "log": "logs/jobs/extended_v2_pythia_1b_m32_formal_B3_s22_w0p05.log",
+        "started_at_utc": "2026-11-06T16:52:17.257100+00:00",
+        "started_at_epoch": 1793983937.2571073,
+        "argv": [
+          "/usr/bin/python",
+          "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+          "run",
+          "--config",
+          "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B3_s22_w0p05.json",
+          "--summary-copy",
+          "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B3_s22_w0p05_summary.json"
+        ],
+        "returncode": 0,
+        "ended_at_utc": "2026-11-06T17:42:07.145711+00:00",
+        "elapsed_seconds": 2989.8780958652496,
+        "missing_outputs": []
+      },
+      "extended_v2_pythia_1b_m32_formal_B3_s33_w0p05": {
+        "status": "completed",
+        "definition_sha256": "2cd6a3554929b2716f4b43d7b21ed41708d06dca855355c6fb94936ad7c7f4aa",
+        "pid": 3349072,
+        "gpu": "2",
+        "log": "logs/jobs/extended_v2_pythia_1b_m32_formal_B3_s33_w0p05.log",
+        "started_at_utc": "2026-11-06T18:32:57.254467+00:00",
+        "started_at_epoch": 1793989977.2544754,
+        "argv": [
+          "/usr/bin/python",
+          "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+          "run",
+          "--config",
+          "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B3_s33_w0p05.json",
+          "--summary-copy",
+          "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B3_s33_w0p05_summary.json"
+        ],
+        "returncode": 0,
+        "ended_at_utc": "2026-11-06T19:22:27.024645+00:00",
+        "elapsed_seconds": 2969.759588241577,
+        "missing_outputs": []
+      },
+      "extended_v2_pythia_1b_m32_formal_B4_s11_w0p05": {
+        "status": "completed",
+        "definition_sha256": "48855f810aa4fdc841f0b54e8656a90235961e6141433a2cc961e76e4c0a9493",
+        "pid": 3147006,
+        "gpu": "1",
+        "log": "logs/jobs/extended_v2_pythia_1b_m32_formal_B4_s11_w0p05.log",
+        "started_at_utc": "2026-11-06T10:57:11.187616+00:00",
+        "started_at_epoch": 1793962631.1876225,
+        "argv": [
+          "/usr/bin/python",
+          "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+          "run",
+          "--config",
+          "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B4_s11_w0p05.json",
+          "--summary-copy",
+          "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B4_s11_w0p05_summary.json"
+        ],
+        "returncode": 0,
+        "ended_at_utc": "2026-11-06T11:48:10.002835+00:00",
+        "elapsed_seconds": 3058.805523633957,
+        "missing_outputs": []
+      },
+      "extended_v2_pythia_1b_m32_formal_B4_s22_w0p05": {
+        "status": "completed",
+        "definition_sha256": "f8075486b5f54753c0a6c6de9b058269d7b84e0589bac2f8f1571b549e254a10",
+        "pid": 3306685,
+        "gpu": "3",
+        "log": "logs/jobs/extended_v2_pythia_1b_m32_formal_B4_s22_w0p05.log",
+        "started_at_utc": "2026-11-06T16:56:58.170003+00:00",
+        "started_at_epoch": 1793984218.170011,
+        "argv": [
+          "/usr/bin/python",
+          "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+          "run",
+          "--config",
+          "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B4_s22_w0p05.json",
+          "--summary-copy",
+          "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B4_s22_w0p05_summary.json"
+        ],
+        "returncode": 0,
+        "ended_at_utc": "2026-11-06T17:47:28.226763+00:00",
+        "elapsed_seconds": 3030.0462079048157,
+        "missing_outputs": []
+      },
+      "extended_v2_pythia_1b_m32_formal_B4_s33_w0p05": {
+        "status": "completed",
+        "definition_sha256": "d51e9344ab7399bd351dbe00062803a9c02a80ba413d1658d6de40d3fe4161ab",
+        "pid": 3411449,
+        "gpu": "0",
+        "log": "logs/jobs/extended_v2_pythia_1b_m32_formal_B4_s33_w0p05.log",
+        "started_at_utc": "2026-11-06T21:03:27.341016+00:00",
+        "started_at_epoch": 1793999007.3410232,
+        "argv": [
+          "/usr/bin/python",
+          "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+          "run",
+          "--config",
+          "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B4_s33_w0p05.json",
+          "--summary-copy",
+          "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B4_s33_w0p05_summary.json"
+        ],
+        "returncode": 0,
+        "ended_at_utc": "2026-11-06T21:53:57.357778+00:00",
+        "elapsed_seconds": 3030.005435705185,
+        "missing_outputs": []
+      },
+      "extended_v2_pythia_1b_m32_formal_C_s11_w0p05": {
+        "status": "completed",
+        "definition_sha256": "bdf8c8efa9c18b5d56a5afa55e1080db9fbb8798e32bc8301238fdbd4c6351dd",
+        "pid": 3284756,
+        "gpu": "3",
+        "log": "logs/jobs/extended_v2_pythia_1b_m32_formal_C_s11_w0p05.log",
+        "started_at_utc": "2026-11-06T16:06:18.147722+00:00",
+        "started_at_epoch": 1793981178.1477299,
+        "argv": [
+          "/usr/bin/python",
+          "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+          "run",
+          "--config",
+          "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_C_s11_w0p05.json",
+          "--summary-copy",
+          "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_C_s11_w0p05_summary.json"
+        ],
+        "returncode": 0,
+        "ended_at_utc": "2026-11-06T16:56:58.168663+00:00",
+        "elapsed_seconds": 3040.009939432144,
+        "missing_outputs": []
+      },
+      "extended_v2_pythia_1b_m32_formal_C_s22_w0p05": {
+        "status": "completed",
+        "definition_sha256": "c6d330d834b33bd0dcbbd6552bd8d7d6bca3e5911a337ac1cecccec6a77cbcdc",
+        "pid": 3326714,
+        "gpu": "2",
+        "log": "logs/jobs/extended_v2_pythia_1b_m32_formal_C_s22_w0p05.log",
+        "started_at_utc": "2026-11-06T17:42:07.147014+00:00",
+        "started_at_epoch": 1793986927.1470222,
+        "argv": [
+          "/usr/bin/python",
+          "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+          "run",
+          "--config",
+          "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_C_s22_w0p05.json",
+          "--summary-copy",
+          "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_C_s22_w0p05_summary.json"
+        ],
+        "returncode": 0,
+        "ended_at_utc": "2026-11-06T18:32:57.253171+00:00",
+        "elapsed_seconds": 3050.094717979431,
+        "missing_outputs": []
+      },
+      "extended_v2_pythia_1b_m32_formal_C_s33_w0p05": {
+        "status": "completed",
+        "definition_sha256": "55a21e62f5b79c0dd4f7a0f4172c4aeeaa36a28d3dc1bd54c3c8a9b621591e57",
+        "pid": 3419922,
+        "gpu": "3",
+        "log": "logs/jobs/extended_v2_pythia_1b_m32_formal_C_s33_w0p05.log",
+        "started_at_utc": "2026-11-06T21:24:01.410205+00:00",
+        "started_at_epoch": 1794000241.4102125,
+        "argv": [
+          "/usr/bin/python",
+          "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+          "run",
+          "--config",
+          "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_C_s33_w0p05.json",
+          "--summary-copy",
+          "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_C_s33_w0p05_summary.json"
+        ],
+        "returncode": 0,
+        "ended_at_utc": "2026-11-06T22:14:51.585909+00:00",
+        "elapsed_seconds": 3050.164865255356,
+        "missing_outputs": []
+      },
+      "extended_v2_pythia_1b_m32_formal_D_s11_w0p05": {
+        "status": "completed",
+        "definition_sha256": "3ffc69f4099ffb3ee8c1e29c57cc794429d1ccebeba01048219ae7199db63ef3",
+        "pid": 3281060,
+        "gpu": "1",
+        "log": "logs/jobs/extended_v2_pythia_1b_m32_formal_D_s11_w0p05.log",
+        "started_at_utc": "2026-11-06T15:57:36.383283+00:00",
+        "started_at_epoch": 1793980656.3832893,
+        "argv": [
+          "/usr/bin/python",
+          "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+          "run",
+          "--config",
+          "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_D_s11_w0p05.json",
+          "--summary-copy",
+          "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_D_s11_w0p05_summary.json"
+        ],
+        "returncode": 0,
+        "ended_at_utc": "2026-11-06T16:48:16.358387+00:00",
+        "elapsed_seconds": 3039.9647369384766,
+        "missing_outputs": []
+      },
+      "extended_v2_pythia_1b_m32_formal_D_s22_w0p05": {
+        "status": "completed",
+        "definition_sha256": "b13bfa5b44beba83bbee260e33fb1cdce0cd5284fe96d550eec55e9a2bd3972b",
+        "pid": 3324571,
+        "gpu": "0",
+        "log": "logs/jobs/extended_v2_pythia_1b_m32_formal_D_s22_w0p05.log",
+        "started_at_utc": "2026-11-06T17:37:56.284635+00:00",
+        "started_at_epoch": 1793986676.2846417,
+        "argv": [
+          "/usr/bin/python",
+          "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+          "run",
+          "--config",
+          "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_D_s22_w0p05.json",
+          "--summary-copy",
+          "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_D_s22_w0p05_summary.json"
+        ],
+        "returncode": 0,
+        "ended_at_utc": "2026-11-06T18:28:36.370343+00:00",
+        "elapsed_seconds": 3040.0745272636414,
+        "missing_outputs": []
+      },
+      "extended_v2_pythia_1b_m32_formal_D_s33_w0p05": {
+        "status": "completed",
+        "definition_sha256": "17ac97ee1ee4a9cfde3d04e7794120791ae1e44aaba5145495ff455738179b82",
+        "pid": 3412435,
+        "gpu": "2",
+        "log": "logs/jobs/extended_v2_pythia_1b_m32_formal_D_s33_w0p05.log",
+        "started_at_utc": "2026-11-06T21:05:57.890530+00:00",
+        "started_at_epoch": 1793999157.890537,
+        "argv": [
+          "/usr/bin/python",
+          "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+          "run",
+          "--config",
+          "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_D_s33_w0p05.json",
+          "--summary-copy",
+          "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_D_s33_w0p05_summary.json"
+        ],
+        "returncode": 0,
+        "ended_at_utc": "2026-11-06T21:56:47.959755+00:00",
+        "elapsed_seconds": 3050.058643102646,
+        "missing_outputs": []
+      },
+      "extended_v2_pythia_1b_m32_formal_M_s11_w0p05": {
+        "status": "completed",
+        "definition_sha256": "7db4ecfa18ee018dc20b2ed12fdbb21f69a57da3a74a4664b772eba216fb49c8",
+        "pid": 3281148,
+        "gpu": "0",
+        "log": "logs/jobs/extended_v2_pythia_1b_m32_formal_M_s11_w0p05.log",
+        "started_at_utc": "2026-11-06T15:57:46.415788+00:00",
+        "started_at_epoch": 1793980666.4157948,
+        "argv": [
+          "/usr/bin/python",
+          "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+          "run",
+          "--config",
+          "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_M_s11_w0p05.json",
+          "--summary-copy",
+          "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_M_s11_w0p05_summary.json"
+        ],
+        "returncode": 0,
+        "ended_at_utc": "2026-11-06T16:48:16.358658+00:00",
+        "elapsed_seconds": 3029.932231426239,
+        "missing_outputs": []
+      },
+      "extended_v2_pythia_1b_m32_formal_M_s22_w0p05": {
+        "status": "completed",
+        "definition_sha256": "7244f1ecc1e60b5aea6315f1b52e4543a6dda34ea6f956c2ded18823a208da46",
+        "pid": 3325014,
+        "gpu": "1",
+        "log": "logs/jobs/extended_v2_pythia_1b_m32_formal_M_s22_w0p05.log",
+        "started_at_utc": "2026-11-06T17:38:56.475905+00:00",
+        "started_at_epoch": 1793986736.475912,
+        "argv": [
+          "/usr/bin/python",
+          "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+          "run",
+          "--config",
+          "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_M_s22_w0p05.json",
+          "--summary-copy",
+          "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_M_s22_w0p05_summary.json"
+        ],
+        "returncode": 0,
+        "ended_at_utc": "2026-11-06T18:29:56.634283+00:00",
+        "elapsed_seconds": 3060.147819519043,
+        "missing_outputs": []
+      },
+      "extended_v2_pythia_1b_m32_formal_M_s33_w0p05": {
+        "status": "completed",
+        "definition_sha256": "c663d90d1c4b62a7676b4fefc11f556e9c9ee71f156307054648d825459927f2",
+        "pid": 3412988,
+        "gpu": "1",
+        "log": "logs/jobs/extended_v2_pythia_1b_m32_formal_M_s33_w0p05.log",
+        "started_at_utc": "2026-11-06T21:07:18.147335+00:00",
+        "started_at_epoch": 1793999238.1473415,
+        "argv": [
+          "/usr/bin/python",
+          "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+          "run",
+          "--config",
+          "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_M_s33_w0p05.json",
+          "--summary-copy",
+          "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_M_s33_w0p05_summary.json"
+        ],
+        "returncode": 0,
+        "ended_at_utc": "2026-11-06T21:57:58.184799+00:00",
+        "elapsed_seconds": 3040.026879787445,
+        "missing_outputs": []
+      }
+    },
+    "not_the_future_analysis_successor_state": true
+  },
+  "payload_read_bytes": {
+    "checkpoint": 0,
+    "base": 0,
+    "score": 0
+  },
+  "check_or_analyze_executed": false,
+  "first_read_journal_created": false,
+  "authority_created": false,
+  "actual_successor_state_binding_pending": true
+}

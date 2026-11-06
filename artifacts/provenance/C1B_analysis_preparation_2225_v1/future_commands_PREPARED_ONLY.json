@@ -1,0 +1,113 @@
+{
+  "prepared_only": true,
+  "score_access_authorized": false,
+  "actual_successor_immutable_state_binding": {
+    "path": null,
+    "sha256": null,
+    "pending_actual_completed_phase_snapshot": true,
+    "same_source_required_for_both_check_and_analyze": true,
+    "other_evaluation_phases_may_still_run": true,
+    "do_not_use_old_live_master_state": true
+  },
+  "operation_requirements": [
+    "After this exact phase full closure completes, ROOT saves an immutable original-byte copy of the actual successor state and binds path/SHA before any real check. Other evaluation phases may still run.",
+    "Use the identical state path/SHA for check and analyze; verify check scheduler_state/scheduler_state_sha256 against that binding before TRUE authority. This state binding is externally enforced; frozen core is unchanged.",
+    "Future TRUE authority binds exact plan/protocol/READY/manifest/cache/repair and the filled actual successor state identity.",
+    "Keep complete external Popen spawn-exit wall/user/sys/stdout/stderr in new immutable attempt paths; internal work is nested.",
+    "No partial scores, no reset of manifest-scoped first-read journal."
+  ],
+  "phases": [
+    {
+      "contract_id": "extended_pythia_1b_100m_nll",
+      "check_argv_template": [
+        "/usr/bin/python",
+        "/tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v3.py",
+        "check",
+        "--plan",
+        "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_1b_100m_nll.json",
+        "--plan-sha256",
+        "e828aa3b0d31c9548b48cca9a3abf597bef708b5da96ee96598a0b9683f18aa4",
+        "--operational-repair",
+        "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C1B_nll.json",
+        "--operational-repair-sha256",
+        "f7b6f22051c59c09d1822f010d2aa39d519bcfd067f6c14b07dac022f80d609c",
+        "--state",
+        "<ACTUAL_SUCCESSOR_IMMUTABLE_STATE_PATH>",
+        "--output",
+        "<NEW_OPERATION_DIR>/extended_pythia_1b_100m_nll_check_readiness.json"
+      ],
+      "analyze_argv_template": [
+        "/usr/bin/python",
+        "/tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v3.py",
+        "analyze",
+        "--plan",
+        "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_1b_100m_nll.json",
+        "--plan-sha256",
+        "e828aa3b0d31c9548b48cca9a3abf597bef708b5da96ee96598a0b9683f18aa4",
+        "--operational-repair",
+        "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C1B_nll.json",
+        "--operational-repair-sha256",
+        "f7b6f22051c59c09d1822f010d2aa39d519bcfd067f6c14b07dac022f80d609c",
+        "--state",
+        "<ACTUAL_SUCCESSOR_IMMUTABLE_STATE_PATH>",
+        "--authority",
+        "<ROOT_NEW_TRUE_AUTHORITY_PATH>",
+        "--authority-sha256",
+        "<ROOT_NEW_TRUE_AUTHORITY_SHA256>",
+        "--output",
+        "/tmp/grad-research-20261106/worktree/results/supplemental_analysis_v3/extended_pythia_1b_100m_nll"
+      ],
+      "FALSE_authority_v3": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_1b_100m_nll_root_authority_TEMPLATE_v3.json",
+        "sha256": "408e55b15593d8f273dc049390a87a0b826020aad08efd160ada1bfce59cf371"
+      },
+      "first_read_receipt_path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/supplemental_score_first_reads_v1/extended_pythia_1b_100m_nll_e1e71c5d22b4750a7f1a1e9ea278b6fe93296108812ebd0ba71b6130f8d078d7.json"
+    },
+    {
+      "contract_id": "extended_pythia_1b_100m_behavior",
+      "check_argv_template": [
+        "/usr/bin/python",
+        "/tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v3.py",
+        "check",
+        "--plan",
+        "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_1b_100m_behavior.json",
+        "--plan-sha256",
+        "0d6fe37a1c376cb56be8b46f6d88b06cf4e7ef8116345ae584c7bc3788eace8c",
+        "--operational-repair",
+        "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C1B_behavior.json",
+        "--operational-repair-sha256",
+        "b86edb21c5e46db26bac205640441a5053aec1727f4251f77e649b2d5a1424b2",
+        "--state",
+        "<ACTUAL_SUCCESSOR_IMMUTABLE_STATE_PATH>",
+        "--output",
+        "<NEW_OPERATION_DIR>/extended_pythia_1b_100m_behavior_check_readiness.json"
+      ],
+      "analyze_argv_template": [
+        "/usr/bin/python",
+        "/tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v3.py",
+        "analyze",
+        "--plan",
+        "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_1b_100m_behavior.json",
+        "--plan-sha256",
+        "0d6fe37a1c376cb56be8b46f6d88b06cf4e7ef8116345ae584c7bc3788eace8c",
+        "--operational-repair",
+        "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C1B_behavior.json",
+        "--operational-repair-sha256",
+        "b86edb21c5e46db26bac205640441a5053aec1727f4251f77e649b2d5a1424b2",
+        "--state",
+        "<ACTUAL_SUCCESSOR_IMMUTABLE_STATE_PATH>",
+        "--authority",
+        "<ROOT_NEW_TRUE_AUTHORITY_PATH>",
+        "--authority-sha256",
+        "<ROOT_NEW_TRUE_AUTHORITY_SHA256>",
+        "--output",
+        "/tmp/grad-research-20261106/worktree/results/supplemental_analysis_v3/extended_pythia_1b_100m_behavior"
+      ],
+      "FALSE_authority_v3": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_1b_100m_behavior_root_authority_TEMPLATE_v3.json",
+        "sha256": "b469108ed5e218f7ee3cb5294eb752ec43b43b5afa654d21686c951dcda969ba"
+      },
+      "first_read_receipt_path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/supplemental_score_first_reads_v1/extended_pythia_1b_100m_behavior_e56a85f0c1d1eb2c375f863873fbeed7efc3c934f05b61d77b63ae7a7744fe6d.json"
+    }
+  ]
+}
