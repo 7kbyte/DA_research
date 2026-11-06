@@ -1,0 +1,108 @@
+{
+  "frozen_original_aggregate": [
+    {
+      "comparison": "B4-B3",
+      "comparison_policy": "Each method uses its own validation-selected shared lambda; method plus selected lambda varies. Not a fixed-lambda objective effect.",
+      "lambda_a": 5.0,
+      "lambda_b": 0.1,
+      "mean": 0.0,
+      "metric": "accuracy_left_minus_right",
+      "n": 3,
+      "replicate_unit": "training_seed",
+      "std_ddof1": 0.1,
+      "task": "SYNTHETIC_piqa",
+      "training_seeds": "11,22,33",
+      "uncertainty_scope": "Sample SD across these trained checkpoints conditional on their shared validation-selected lambda; not uncertainty of repeating the selection pipeline. Document/question bootstrap is conditional and does not create training replicates"
+    },
+    {
+      "comparison": "B4-B3",
+      "comparison_policy": "Each method uses its own validation-selected shared lambda; method plus selected lambda varies. Not a fixed-lambda objective effect.",
+      "lambda_a": 5.0,
+      "lambda_b": 0.1,
+      "mean": 0.20000000000000004,
+      "metric": "accuracy_left_minus_right",
+      "n": 3,
+      "replicate_unit": "training_seed",
+      "std_ddof1": 0.09999999999999999,
+      "task": "SYNTHETIC_piqa",
+      "training_seeds": "11,22,33",
+      "uncertainty_scope": "Sample SD across these trained checkpoints conditional on their shared validation-selected lambda; not uncertainty of repeating the selection pipeline. Document/question bootstrap is conditional and does not create training replicates"
+    }
+  ],
+  "independent_score_resolved_view": [
+    {
+      "comparison": "B4-B3",
+      "mean": 0.2,
+      "n_training_seeds": 3,
+      "quantity": "accuracy_left_minus_right",
+      "score": "acc_norm",
+      "std_ddof1": 0.09999999999999999
+    },
+    {
+      "comparison": "B4-B3",
+      "mean": 0.0,
+      "n_training_seeds": 3,
+      "quantity": "accuracy_left_minus_right",
+      "score": "acc",
+      "std_ddof1": 0.1
+    }
+  ],
+  "input_seed_pairs": [
+    {
+      "accuracy_left_minus_right": 0.1,
+      "comparison": "B4-B3",
+      "lambda_a": 5.0,
+      "lambda_b": 0.1,
+      "metric": "acc_norm",
+      "task": "SYNTHETIC_piqa",
+      "training_seed": 11
+    },
+    {
+      "accuracy_left_minus_right": 0.2,
+      "comparison": "B4-B3",
+      "lambda_a": 5.0,
+      "lambda_b": 0.1,
+      "metric": "acc_norm",
+      "task": "SYNTHETIC_piqa",
+      "training_seed": 22
+    },
+    {
+      "accuracy_left_minus_right": 0.3,
+      "comparison": "B4-B3",
+      "lambda_a": 5.0,
+      "lambda_b": 0.1,
+      "metric": "acc_norm",
+      "task": "SYNTHETIC_piqa",
+      "training_seed": 33
+    },
+    {
+      "accuracy_left_minus_right": -0.1,
+      "comparison": "B4-B3",
+      "lambda_a": 5.0,
+      "lambda_b": 0.1,
+      "metric": "acc",
+      "task": "SYNTHETIC_piqa",
+      "training_seed": 11
+    },
+    {
+      "accuracy_left_minus_right": 0.0,
+      "comparison": "B4-B3",
+      "lambda_a": 5.0,
+      "lambda_b": 0.1,
+      "metric": "acc",
+      "task": "SYNTHETIC_piqa",
+      "training_seed": 22
+    },
+    {
+      "accuracy_left_minus_right": 0.1,
+      "comparison": "B4-B3",
+      "lambda_a": 5.0,
+      "lambda_b": 0.1,
+      "metric": "acc",
+      "task": "SYNTHETIC_piqa",
+      "training_seed": 33
+    }
+  ],
+  "statistics_or_inference_rules_changed": false,
+  "synthetic_only": true
+}
