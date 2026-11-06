@@ -1,0 +1,81 @@
+{
+  "status": "ROOT_authorized_exact_A_remaining_final_durable_publication",
+  "authorized_by": "root",
+  "allow_publication": true,
+  "created_at_utc": "2026-11-06T18:19:56.618917+00:00",
+  "metadata_review": {
+    "path": "/tmp/grad-research-20261106/worktree/results/A_remaining_final_publication_metadata_acceptance_v1.json",
+    "sha256": "3a4e8ce2ccc1f2ac2a421eb46504bb59597de8867e6cb8334fffd8e0e4eaa22d",
+    "bytes": 339485
+  },
+  "reviewer": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/additional_endpoint_publication_runbook_v1/review_metadata.py",
+    "sha256": "55703ede1af5f187cd10750b29a999c4ebd845d00c9bf45a03780206f82f79e1",
+    "bytes": 10832
+  },
+  "completion": {
+    "path": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/A_remaining_final/completion.json",
+    "sha256": "0b79a1b870644304a2d671b1f8cc1ed12c8dfb24cd3c86bf52a53baf18a2bb6b",
+    "bytes": 925
+  },
+  "manifest": {
+    "path": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/A_remaining_final/additional_weights_manifest.json",
+    "sha256": "9608c49aa5628fe5bf447df2185eba16945ebf08f8aa19be2a9ad7a20d32b492",
+    "bytes": 852081
+  },
+  "whole_batch_timing": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/additional_endpoint_actual_v4/A_remaining_final_batch/whole_child_timing.json",
+    "sha256": "c6d6ee7f817cd2bafe0ea93734a4710644b91da55e8964a60c56930ab0770d86",
+    "bytes": 405
+  },
+  "publisher": {
+    "path": "/tmp/grad-research-20261106/worktree/scripts/publish_reserved_archive.py",
+    "sha256": "9c194743383a16f98313f767fe2e722c309ec57c1aafc65d9b99d08e5407022e",
+    "bytes": 17716
+  },
+  "source": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/A_remaining_final/A_remaining_final_weights_lossless_v1.tar",
+  "expected_sha256": "9e818d15cb826f0948f7092188e684382fea0d03605deac765e1ac19e5ea08b1",
+  "expected_bytes": 106627983360,
+  "reserve_original_observed": {
+    "device": 106,
+    "inode": 622542307,
+    "uid": 11471,
+    "gid": 11471,
+    "mode": 384,
+    "bytes": 123480309760,
+    "allocated_bytes": 123480309760,
+    "links": 1
+  },
+  "destination": "/data/202610/7kb/research_delivery/A_remaining_final_weights_lossless_v1.tar",
+  "argv": [
+    "python",
+    "/tmp/grad-research-20261106/worktree/scripts/publish_reserved_archive.py",
+    "--source",
+    "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/A_remaining_final/A_remaining_final_weights_lossless_v1.tar",
+    "--expected-sha256",
+    "9e818d15cb826f0948f7092188e684382fea0d03605deac765e1ac19e5ea08b1",
+    "--expected-bytes",
+    "106627983360",
+    "--reserved",
+    "/data/202610/7kb/research_delivery/.extra_A_remaining_final_weights_reserve_20261106",
+    "--destination",
+    "/data/202610/7kb/research_delivery/A_remaining_final_weights_lossless_v1.tar",
+    "--receipt",
+    "/tmp/grad-research-20261106/worktree/docs/A_remaining_final_weights_durable_publication.json",
+    "--progress",
+    "/tmp/grad-research-20261106/worktree/artifacts/provenance/A_remaining_final_weights_publication_progress.json"
+  ],
+  "source_retained": true,
+  "large_payloads_not_rehashed_in_ROOT_precheck": true,
+  "publisher_will_fresh_verify_source_copy_and_full_prefix": true,
+  "prewrite_reserve_lock_observed_free_not_lease": true,
+  "time_gate": {
+    "no_new_publication_after_utc": "2026-11-07T02:00:00+00:00",
+    "protected_tail_start_utc": "2026-11-07T02:56:32+00:00",
+    "publication_allowance_seconds": 1200,
+    "margin_seconds": 600,
+    "allowances_are_planning_not_actual_cost": true
+  },
+  "GPU_used": false,
+  "scientific_or_statistics_changes": false
+}

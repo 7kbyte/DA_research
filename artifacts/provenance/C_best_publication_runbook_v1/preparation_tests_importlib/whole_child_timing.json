@@ -1,0 +1,34 @@
+{
+  "returncode": 0,
+  "argv": [
+    "/usr/bin/python",
+    "-m",
+    "pytest",
+    "--import-mode=importlib",
+    "-q",
+    "artifacts/provenance/C_best_publication_runbook_v1/test_review_metadata.py",
+    "artifacts/provenance/C_native_final_publication_runbook_v2/test_review_metadata.py",
+    "tests/test_additional_endpoint_export.py"
+  ],
+  "started_at_utc": "2026-11-06T18:28:21.201088+00:00",
+  "finished_at_utc": "2026-11-06T18:28:23.337994+00:00",
+  "whole_wall_seconds": 2.1369420550763607,
+  "parent_user_seconds": 0.0,
+  "parent_sys_seconds": 0.0006549999999999993,
+  "children_user_seconds": 1.796094,
+  "children_sys_seconds": 0.485064,
+  "child_peak_RSS_bytes": 428236800,
+  "timer_rule": "Whole preparation test invocation; pytest internal duration nested, source authoring and eye review excluded",
+  "synthetic_fixtures_only": true,
+  "real_C_review_or_large_payload_or_scores_or_export_or_publish": false,
+  "logs": {
+    "stdout.log": {
+      "bytes": 292,
+      "sha256": "681d4a99c20fc04b87c1393d4baceab88c7d3759c2905ed6fae3b4e22a07dd4a"
+    },
+    "stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

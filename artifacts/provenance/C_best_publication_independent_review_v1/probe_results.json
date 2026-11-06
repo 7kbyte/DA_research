@@ -1,0 +1,34 @@
+{
+  "status": "targeted_probes_complete_with_authority_bool_finding",
+  "checks": [
+    {
+      "case": "Actual C410 launch/spec/74f6 authority path+SHA pure schema validation",
+      "accepted": true
+    },
+    {
+      "case": "actual-shape foreign authority refused",
+      "rejected": true
+    },
+    {
+      "case": "Actual frozen three-model native6 source/member/SHA schema",
+      "accepted": true
+    },
+    {
+      "case": "sidecar symlink escape refused before read",
+      "rejected": true
+    },
+    {
+      "case": "tiny CP denied even when bounded",
+      "rejected": true
+    },
+    {
+      "case": "Confirmed inherited validator accepts authorized=False; new checker must independently refuse contradiction",
+      "accepted_by_inherited_validator": true,
+      "finding": "requires author correction before final acceptance"
+    }
+  ],
+  "source_sha256": "a31f4062f53e2cfb64e028f822a30dab6e6e500918322b320716e84783f885b5",
+  "large_payload_or_scores_read": false,
+  "actual_full_checker_called": false,
+  "true_authority_created": false
+}
