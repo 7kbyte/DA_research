@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "status": "completed_narrow_prose_update",
+  "created_at_utc": "2026-11-06T22:46:07.296020+00:00",
+  "report_path": "/tmp/grad-research-20261106/worktree/研究报告.md",
+  "report_before_sha256": "e02887e43f49799d3f53f125b91b1aa438f362db17ece5e7daefbda4e67ba052",
+  "report_after_sha256": "81e749e44ebc25322ba5051175422ec3bbe7da72aebe9f41dd8b834fa4e3b803",
+  "diff_scope": "Only four methods/execution-status spans: opening work-in-progress status; section5 completed scientific training/execution handoff; section6.3 remaining sealed results; section7 weight delivery/evaluation/QA status. No existing numerical results, conclusions, scientific caveats, data/scope boundaries, pre-formal 2.8B horizon choice, figures, links to existing outputs, or statistical rules changed.",
+  "exact_replacements": [
+    {
+      "before": "**研究工作稿，实验进行中。最终摘要与结论将在预定测试完成后填写。**",
+      "after": "**研究工作稿。预定科学训练已完成，最终摘要与结论将在其余预定评价完成后填写。**"
+    },
+    {
+      "before": "**主实验训练、验证和独立 NLL 测试已完成；补充训练与行为评价继续按冻结方案进行。**",
+      "after": "**主实验、补充A/B及长程C的预定科学训练已全部完成；其余NLL与行为评价继续按冻结方案执行。**\n\n实际完成267次物理训练：主实验36次、补充A新增108次、补充B 60次、补充C 63次，累计7.215B目标预测token。A网格复用的18项主训练及同一run的final/best不增加训练次数；校准、诊断与可选归档重训QA不计入这一科学矩阵。最后一次训练于2026年11月6日22:14:51 UTC结束，C全63项审计于22:19:33通过；九个补充评价阶段的准备证明齐备后，于22:22交接至单一后继评价队列。训练完成不代替整阶段评价和首次读取门禁。[C完成审计](results/extended_run_audit.json)、[评价交接验收](docs/最终评价实际handoff_独立验收_20261106.md)。"
+    },
+    {
+      "before": "1B、2.8B和行为评价仍按其冻结完整合同执行。局部表示覆盖、输出KL、文本NLL和选择题正确率描述不同对象；后续仅填入真实完成且通过完整性门禁的结果。",
+      "after": "1B和2.8B训练均已完成，其NLL与全部行为结果仍封存，须各自完整阶段通过核验并授权后分析。局部表示覆盖、输出KL、文本NLL和选择题正确率描述不同对象；后续仅填入真实完成且通过完整性门禁的结果。"
+    },
+    {
+      "before": "best保留各自验证选择的实际step与目标/回放曝光，不算新增训练run。1B、2.8B与行为评价仍按冻结完整合同执行，未完整验收的产物不列为已交付。恢复依赖及容量见[交付文件与恢复容量指南](docs/交付文件与恢复容量指南.md)。",
+      "after": "best保留各自验证选择的实际step与目标/回放曝光，不算新增训练run。2.8B的15个final端点已完成第九个持久权重包发布，自带native基座与恢复工具。[2.8B final发布记录](docs/C2p8B_final_weights_durable_publication.json)。1B final发布及1B、2.8B的best包仍在进行；其余评价和可选归档重训QA尚未完成，未完整验收的产物不列为已交付。恢复依赖及容量见[交付文件与恢复容量指南](docs/交付文件与恢复容量指南.md)。"
+    }
+  ],
+  "verification": {
+    "reverse_replacement_reconstructs_original_exactly": true,
+    "scientific_result_payloads_read": false,
+    "score_files_opened": 0,
+    "large_model_or_archive_payloads_opened": 0,
+    "tests_run": false,
+    "PDF_or_deck_rendered": false,
+    "other_report_artifacts_changed": false
+  },
+  "completed_scientific_training": {
+    "physical_runs": 267,
+    "components": [
+      {
+        "phase": "primary",
+        "physical_runs": 36,
+        "target_prediction_tokens_per_run": 10000000,
+        "target_prediction_tokens": 360000000
+      },
+      {
+        "phase": "A_new",
+        "physical_runs": 108,
+        "target_prediction_tokens_per_run": 10000000,
+        "target_prediction_tokens": 1080000000
+      },
+      {
+        "phase": "B",
+        "physical_runs": 60,
+        "target_prediction_tokens_per_run": 10000000,
+        "target_prediction_tokens": 600000000
+      },
+      {
+        "phase": "C_410m",
+        "physical_runs": 24,
+        "target_prediction_tokens_per_run": 100000000,
+        "target_prediction_tokens": 2400000000
+      },
+      {
+        "phase": "C_1b",
+        "physical_runs": 24,
+        "target_prediction_tokens_per_run": 100000000,
+        "target_prediction_tokens": 2400000000
+      },
+      {
+        "phase": "C_2p8b",
+        "physical_runs": 15,
+        "target_prediction_tokens_per_run": 25000000,
+        "target_prediction_tokens": 375000000
+      }
+    ],
+    "actual_target_prediction_tokens": 7215000000,
+    "A_main_training_references": 18,
+    "A_main_references_counted_as_new_training": false,
+    "final_best_counted_as_new_training": false,
+    "excluded": "calibration, provisional/diagnostic runs and optional archive-retraining QA",
+    "main_audit_completed": 36,
+    "supplemental231_status_covered_by_strict_completed_old_state": true,
+    "last_training_run": "extended_v2_pythia_1b_m32_formal_C_s33_w0p05",
+    "last_training_ended_at_utc": "2026-11-06T22:14:51.585909+00:00",
+    "C_full_audit_at_utc": "2026-11-06T22:19:33.269829+00:00",
+    "C_full_audit_completed": 63,
+    "supplemental_evaluation_READY_phases": 9,
+    "single_successor_launched_at_utc": "2026-11-06T22:22:46.449784+00:00"
+  },
+  "delivery_status_observation": {
+    "C2p8B_final_publication_status": "passed",
+    "C2p8B_final_publication_finished_at_utc": "2026-11-06T22:38:55.143189+00:00",
+    "C1B_final_publication_status": "running",
+    "C1B_final_published": false,
+    "C1B_and_C2p8B_best_packages": "in_progress_not_complete",
+    "remaining_C_NLL_and_all_behavior_scores": "sealed",
+    "optional_archive_retraining_QA": "not_completed"
+  },
+  "source_proofs": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/configs/formal_deterministic_registry.json",
+      "sha256": "284fa9dd939dab75195afe3f968e0eb6411501b26b8a5caa1962b4ee5e9f372b",
+      "bytes": 29988
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/configs/supplemental_v1_A_registry.json",
+      "sha256": "0f43c49530b79d09c18113e8c50239b640e99bbbdcb26b890e805d71cf291310",
+      "bytes": 222375
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/configs/supplemental_v1/activated/B_conditional_bank_variance/executor_registry.json",
+      "sha256": "841c8f86a6b6bc6c098ca5f3540b1ac3c758f6cc5cb0d48fc5f4083759b517cc",
+      "bytes": 103343
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal_active_registry.json",
+      "sha256": "c7f5c50d6794ba0df0dc3e071198da761f084ad9347ce5d9ce4dddf867ee48bd",
+      "bytes": 35754
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal_active_registry.json",
+      "sha256": "c106330d947904447fe7c1aa42fa8dbe8a337a683520801b90653d7d6474b8d6",
+      "bytes": 35370
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_h25m_formal_active_registry.json",
+      "sha256": "c98360002f763a98423d16bf99c866edfbec21da2668a04cb3ccfd5652888d05",
+      "bytes": 22674
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/formal_run_audit.json",
+      "sha256": "3ab507ecaf9953e7056649f2fee1320467b0ba3b23f65e6584cb876dbae0cf00",
+      "bytes": 61873
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/extended_run_audit.json",
+      "sha256": "c0716dc5739896c258d69a1a267539095772959f0c3d570770eec9d60b2c9b17",
+      "bytes": 81718
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/successor/old_queue_snapshot.json",
+      "sha256": "37f00a8ac4af9d71aabb6b54f425e3fa222f596e25ce6e049015c0a66185e377",
+      "bytes": 588483
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/successor/old_state_snapshot.json",
+      "sha256": "4753b1c3fd13b51e36cedcce62117aef27307eb2040e96b862a4d7c31ff4124f",
+      "bytes": 625361
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/successor/launch.json",
+      "sha256": "9df19ce3688b7dd19d68e74c8cc2361cce5604703a480ff3bce665de0d34ebe5",
+      "bytes": 1838
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_handoff_prerequisites_independent_v2/receipt.json",
+      "sha256": "631f340084d2c1c6e68a5c1c46bbdc40895bee2ef37625417d4e38d6665ed079",
+      "bytes": 593440
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_handoff_actual_independent_review_v1/receipt.json",
+      "sha256": "e03da4893377904e7bdda681d288fb2679e0d5dd9209fac124f5080af5ca5089",
+      "bytes": 18121
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/docs/最终评价实际handoff_独立验收_20261106.md",
+      "sha256": "9f0148e198ca1bfed0d2fcebf535af1853fc6a7b3f63b4207fc3058ba30afff6",
+      "bytes": 3736
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/docs/C2p8B_final_weights_durable_publication.json",
+      "sha256": "5f17f9aaf68663005592be42aa16c68946b85cfa923ceff8f7303a3b53fe050c",
+      "bytes": 3044
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C2p8B_final_publication_actual_v1/ROOT_acceptance.json",
+      "sha256": "8de7ca0da5f62645d9840c6d52d37b16ba293304d713912bb1a25218615a2f28",
+      "bytes": 2461
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C1B_final_publication_actual_v1/progress.json",
+      "sha256": "b1e5f0855e1c73f70d5c080647c73f9fbb59da365130f3bf5f1b175b385b6181",
+      "bytes": 1016
+    },
+    {
+      "path": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/C1B_best/draft_progress.json",
+      "sha256": "ab875dc815a01b29a66274c4cda09b8dbc700620c0f0c1956a60e15d20b1b1e3",
+      "bytes": 412
+    },
+    {
+      "path": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/C2p8B_best/draft_progress.json",
+      "sha256": "d79a2e49bd537d92aebafb69bae0ac76cbb5176ba9a27663eaba22512c1a6d10",
+      "bytes": 419
+    }
+  ],
+  "timing_scope": "Manual prose editing and metadata review parent time not instrumented; no new computation or inference cost claimed."
+}
