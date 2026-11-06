@@ -1,0 +1,187 @@
+{
+  "status": "verified_additional_endpoint_not_yet_assembled",
+  "package": "C1B_best",
+  "run_id": "extended_v2_pythia_1b_m32_formal_B0_s11_w0",
+  "actual_run_id": "extended_v2_pythia_1b_m32_formal_B0_s11_w0",
+  "phase": "formal",
+  "phase_name": "extended_pythia_1b_100m",
+  "role": "extended",
+  "kind": "best",
+  "model_tag": "pythia-1b",
+  "data_family": "extended_v1",
+  "group": "B0",
+  "training_seed": 11,
+  "generation_seed": null,
+  "selection_seed": null,
+  "ratio": 0.0,
+  "weight": 0.0,
+  "source_checkpoint": "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_B0_s11_w0/checkpoints/checkpoint_best.pt",
+  "source_stat": {
+    "device": 139,
+    "inode": 13118866992,
+    "bytes": 4047211586,
+    "mtime_ns": 1793976686699151466,
+    "ctime_ns": 1793976686699151466
+  },
+  "config_sha256": "425b616c52703bbc822f41437cdac7b905a23343745ac4b40244b5f7a4a54c32",
+  "summary_sha256": "56af99273c832c9cee0be1b9d96b89230e206d62bca5664afe003a6557b000d9",
+  "definition_sha256": "926ad9772738916f9a2151d378acf97a299e0b0a3d1d79ca791ad10a744f953f",
+  "definition": {
+    "id": "extended_v2_pythia_1b_m32_formal_B0_s11_w0",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+      "run",
+      "--config",
+      "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B0_s11_w0.json",
+      "--summary-copy",
+      "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B0_s11_w0_summary.json"
+    ],
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "expected_seconds": 3600,
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B0_s11_w0_summary.json",
+      "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_B0_s11_w0/summary.json"
+    ]
+  },
+  "completed_scheduler_record": {
+    "status": "completed",
+    "definition_sha256": "926ad9772738916f9a2151d378acf97a299e0b0a3d1d79ca791ad10a744f953f",
+    "pid": 3246695,
+    "gpu": "0",
+    "log": "logs/jobs/extended_v2_pythia_1b_m32_formal_B0_s11_w0.log",
+    "started_at_utc": "2026-11-06T14:42:02.008767+00:00",
+    "started_at_epoch": 1793976122.0087736,
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+      "run",
+      "--config",
+      "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B0_s11_w0.json",
+      "--summary-copy",
+      "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B0_s11_w0_summary.json"
+    ],
+    "returncode": 0,
+    "ended_at_utc": "2026-11-06T15:27:40.495018+00:00",
+    "elapsed_seconds": 2738.475593328476,
+    "missing_outputs": []
+  },
+  "frozen_checkpoint_identity_sha256": "25b42945e67b92ecf70b7fee99c82a21b3a57cb0646e725b65dcd905b4f469c1",
+  "actual_exposure": {
+    "checkpoint_step": 612,
+    "target_prediction_tokens": 20014848,
+    "replay_prediction_tokens": 0,
+    "full_training_target_prediction_tokens": 100000000,
+    "full_training_replay_prediction_tokens": 0
+  },
+  "metadata_path": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/C1B_best/metadata/extended_v2_pythia_1b_m32_formal_B0_s11_w0__best.source_metadata.pt",
+  "metadata_member": "metadata/extended_v2_pythia_1b_m32_formal_B0_s11_w0__best.source_metadata.pt",
+  "metadata_sha256": "e9815366ad7c86ff2c56247cb67d73edadbbfa5b98a6c121d09d96a32fcaee05",
+  "all_nonweight_metadata_roundtrip_verified": true,
+  "source_checkpoint_sha256": "25b42945e67b92ecf70b7fee99c82a21b3a57cb0646e725b65dcd905b4f469c1",
+  "archive_path": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/C1B_best/weights/extended_v2_pythia_1b_m32_formal_B0_s11_w0__best.xor.zip",
+  "archive_member": "weights/extended_v2_pythia_1b_m32_formal_B0_s11_w0__best.xor.zip",
+  "archive_sha256": "9cd25ed1e30e00da8e91ff3fac386e3554ae6e9c5ee61959bf4dc9d87c0fd09c",
+  "archive_stat": {
+    "device": 139,
+    "inode": 62448011187,
+    "bytes": 2962108978,
+    "mtime_ns": 1794004371857279325,
+    "ctime_ns": 1794004371915279084
+  },
+  "model_fingerprint": {
+    "sha256_model_state": "b5f8c04923db938b858ef995bbc709bf02d097e6a33dd03979c3bfbb0eaf2aa7",
+    "state_elements": 1011781632
+  },
+  "encode": {
+    "status": "encoded",
+    "archive": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/C1B_best/weights/extended_v2_pythia_1b_m32_formal_B0_s11_w0__best.xor.zip",
+    "archive_sha256": "9cd25ed1e30e00da8e91ff3fac386e3554ae6e9c5ee61959bf4dc9d87c0fd09c",
+    "archive_bytes": 2962108978,
+    "model_raw_bytes": 4047126528,
+    "compression_ratio_archive_over_model_raw": 0.7319042183402673,
+    "model_fingerprint": {
+      "sha256_model_state": "b5f8c04923db938b858ef995bbc709bf02d097e6a33dd03979c3bfbb0eaf2aa7",
+      "state_elements": 1011781632
+    },
+    "base_sha256": "7e6dff44849e036a73296368e663bd9420009977f03a8d4d747b234264f37107",
+    "source_checkpoint_sha256": "25b42945e67b92ecf70b7fee99c82a21b3a57cb0646e725b65dcd905b4f469c1",
+    "source_checkpoint_bytes_including_optimizer": 4047211586,
+    "wall_seconds": 170.094149120152,
+    "cpu_threads": 2,
+    "model_only": true,
+    "lossless_weight_bits": true,
+    "gpu_used": false
+  },
+  "decode": {
+    "status": "decoded_and_hash_verified",
+    "archive": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/C1B_best/weights/extended_v2_pythia_1b_m32_formal_B0_s11_w0__best.xor.zip",
+    "restored": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/C1B_best/verification/extended_v2_pythia_1b_m32_formal_B0_s11_w0__best.restored.pt",
+    "model_fingerprint": {
+      "sha256_model_state": "b5f8c04923db938b858ef995bbc709bf02d097e6a33dd03979c3bfbb0eaf2aa7",
+      "state_elements": 1011781632
+    },
+    "tensor_raw_hashes_verified": 196,
+    "restored_file_sha256": "22aaed68a85986cc3361a5eadf5f8a608dbc314e22e46d14e0219f7ed5c85c4a",
+    "restored_bytes": 4047204946,
+    "wall_seconds": 46.61547742411494,
+    "cpu_threads": 2,
+    "gpu_used": false,
+    "model_only_evaluation_format": true
+  },
+  "bytewise_verification": {
+    "status": "passed",
+    "tensor_count": 196,
+    "all_tensor_bytes_equal": true,
+    "source_checkpoint_sha256": "25b42945e67b92ecf70b7fee99c82a21b3a57cb0646e725b65dcd905b4f469c1",
+    "archive_sha256": "9cd25ed1e30e00da8e91ff3fac386e3554ae6e9c5ee61959bf4dc9d87c0fd09c",
+    "model_fingerprint": {
+      "sha256_model_state": "b5f8c04923db938b858ef995bbc709bf02d097e6a33dd03979c3bfbb0eaf2aa7",
+      "state_elements": 1011781632
+    },
+    "wall_seconds": 11.227539949119091,
+    "cpu_threads": 2,
+    "gpu_used": false
+  },
+  "additional_encoding_calls": 1,
+  "encode_process_cpu_seconds": 170.308970664,
+  "decode_process_cpu_seconds": 47.56750828700001,
+  "verification_process_cpu_seconds": 11.53975035100001,
+  "exporter_sha256": "c93e0c1d35fe39b3d71155a126db841b76648ba6b3afd58d475be4eb9c9da853",
+  "prepared_scope_sha256": "7adb8f7f0461fd929995dd370ff2a59b2abc5c0d7750a39e745d21d5546d9de3",
+  "source_fd_five_stat_before": {
+    "device": 139,
+    "inode": 13118866992,
+    "bytes": 4047211586,
+    "mtime_ns": 1793976686699151466,
+    "ctime_ns": 1793976686699151466
+  },
+  "source_fd_five_stat_after": {
+    "device": 139,
+    "inode": 13118866992,
+    "bytes": 4047211586,
+    "mtime_ns": 1793976686699151466,
+    "ctime_ns": 1793976686699151466
+  },
+  "wall_seconds": 228.5310802347958,
+  "process_cpu_seconds": 229.45451871199998,
+  "peak_rss_bytes_process_cumulative": 8586641408,
+  "cgroup_memory_before": {
+    "memory.current": "1028039892992",
+    "memory.max": "1030792151040",
+    "memory.events": "low 0\nhigh 0\nmax 210251\noom 0\noom_kill 0\noom_group_kill 0"
+  },
+  "cgroup_memory_after": {
+    "memory.current": "1029499662336",
+    "memory.max": "1030792151040",
+    "memory.events": "low 0\nhigh 0\nmax 213288\noom 0\noom_kill 0\noom_group_kill 0"
+  },
+  "cpu_threads": 2,
+  "workers": 1,
+  "GPU_used": false,
+  "shared_storage_written": false,
+  "original_CP_ZIP_restored_retained": true,
+  "timer_scope": "Independent endpoint parent before completion JSON commit; codec/verification timers nested"
+}

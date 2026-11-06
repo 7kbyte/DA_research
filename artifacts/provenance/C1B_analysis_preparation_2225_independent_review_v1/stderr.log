@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/tmp/grad-research-20261106/worktree/artifacts/provenance/C1B_analysis_preparation_2225_independent_review_v1/executed_readonly_review.py", line 18, in <module>
+    protocol=ref(c['original_protocol']);ref(c['reader_source']);cache=ref(c['cache_snapshot']);raw(c['doc']['path']);need(sha(c['doc']['path'])==c['doc']['sha256'],'doc raw SHA');future=ref(c['future_commands']);pre=read(S/'metadata_preflight.json');need(pre['checkpoint_unique_count']==48 and pre['missing_or_changed_checkpoint_receipts']==[] and pre['checkpoint_payload_current_read_bytes']==pre['base_payload_current_read_bytes']==0,'preflight48/no payload')
+  File "/tmp/grad-research-20261106/worktree/artifacts/provenance/C1B_analysis_preparation_2225_independent_review_v1/executed_readonly_review.py", line 14, in ref
+    def ref(r):need(sha(r['path'])==r['sha256'],'bound SHA:'+r['path']);return read(r['path'])
+  File "/tmp/grad-research-20261106/worktree/artifacts/provenance/C1B_analysis_preparation_2225_independent_review_v1/executed_readonly_review.py", line 13, in read
+    def read(p):return json.loads(raw(p))
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 1 column 3 (char 2)

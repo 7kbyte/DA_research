@@ -1,0 +1,133 @@
+{
+  "status": "bound_metadata_only_no_execution_authority",
+  "at_utc": "2026-11-06T22:43:48.560187+00:00",
+  "sources": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_CPU_restore_actual_v1/2p8b/sources.json",
+    "sha256": "296246f17ef2c55fb44f87717e165f420e8b6dce7cde05f0b50f8197f5beb27a"
+  },
+  "bound_plan": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_CPU_restore_actual_v1/2p8b/bound_plan.json",
+    "sha256": "573c4f4924298408d53ef5fa7b07441549260b89dbae34c5e634dd2baf82a4f2"
+  },
+  "model": "pythia-2.8b",
+  "fixed_run_id": "extended_v2_pythia_2p8b_m8_h25m_formal_B4_s11_w0p05",
+  "qa_directory": "/tmp/grad-research-20261106/reproduction_qa/native_Cfinal_2p8b_B4s11_final_v1",
+  "qa_directory_absent": true,
+  "archive": "/data/202610/7kb/research_delivery/extended_C_2p8b_final_weights_lossless_v1.tar",
+  "archive_current_stat": {
+    "device": 106,
+    "inode": 559646871,
+    "bytes": 120382699520,
+    "uid": 11471,
+    "gid": 11471,
+    "mode": "0o600",
+    "mtime_ns": 1794004735142459154,
+    "ctime_ns": 1794004735142459154
+  },
+  "historical_full_TAR_sha256": "7ca63d1fd4aab0ae491df8577ca2f16483d1e92445e70feaff46a342c837d313",
+  "selected_members_count": 12,
+  "selected_member_bytes_known": 13325735565,
+  "tool_members_with_manifest_size_unknown": [
+    "tools/scripts/archive_model_weights.py",
+    "tools/src/replay_study/weight_archive.py",
+    "tools/src/replay_study/__init__.py"
+  ],
+  "model_raw_bytes": 11100835840,
+  "model_fingerprint": {
+    "sha256_model_state": "0a819cb2921ba45adfd57b80ddf61f10cbdfeddbc4fb0a3d8846d53a384701b2",
+    "state_elements": 2775208960
+  },
+  "tensor_count": 388,
+  "source_checkpoint_sha256": "1cd4e86e0f99c39b2fbc184584850b3fae357a34f97511678e53849bbd9d07e5",
+  "actual_exposure": {
+    "checkpoint_step": 765,
+    "target_prediction_tokens": 25000000,
+    "replay_prediction_tokens": 1250000,
+    "full_training_target_prediction_tokens": 25000000,
+    "full_training_replay_prediction_tokens": 1250000
+  },
+  "resource_policy": {
+    "required_scratch_bytes": 26574055053,
+    "required_reclaim_aware_memory_bytes": 48698310656,
+    "cpu_threads": 2,
+    "max_wall_seconds": 1200,
+    "deadline_utc": "2026-11-07T02:56:32+00:00",
+    "admission_margin_seconds": 300
+  },
+  "source_audit_summary": {
+    "actual_complete_phase_final_logical": 15,
+    "unique": 15,
+    "aliases": 0,
+    "native6": true,
+    "all15_strict_integer_rc0_no_stop_actual_argv_source_binding": true,
+    "publication_actual_passed": true,
+    "ROOT_acceptance": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C2p8B_final_publication_actual_v1/ROOT_acceptance.json",
+      "sha256": "8de7ca0da5f62645d9840c6d52d37b16ba293304d713912bb1a25218615a2f28"
+    },
+    "metadata_review": {
+      "path": "/tmp/grad-research-20261106/worktree/results/C2p8B_final_publication_metadata_acceptance_v1.json",
+      "sha256": "01e02d79a3b486fecc6b01666779e747e8f781797c55cbb5fe7c9fd2db8b6a2f"
+    }
+  },
+  "restoration_order": "1B first; this C2.8 plan is preparation only while 1B publication runs; ROOT separate actual resource/TRUE authority still required",
+  "runner": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/restore_native_final.py",
+    "sha256": "bfc748c776f18dff86c378c5c55ca72dbc63995cfc40ddfb96eb919486610db1"
+  },
+  "checker": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/check_restored.py",
+    "sha256": "6b7df26abef4ce0bd09dabbd7878a5a9585c8681d3cb97115f912dd542d3fa8d"
+  },
+  "wrapper": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/run_whole_child.py",
+    "sha256": "2a2d09daac8504b099a5cd9682dff722bbad0519922ba39beedf4e96e9498266"
+  },
+  "large_payload_bytes_read": 0,
+  "TRUE_authority_created": false,
+  "extraction_or_restore_executed": false,
+  "QA_created": false,
+  "resource_gate_or_cachehint_executed": false,
+  "whole_bind_timing": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_CPU_restore_actual_v1/2p8b/bind_whole_child_timing.json",
+    "sha256": "dbc4e428073ba84b1a8fdf6906536910a02b8f7dd315d8b28b399bd3c00026f1"
+  },
+  "manual_source_map_preparation_and_sealing_whole_seconds": null,
+  "files": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_CPU_restore_actual_v1/2p8b/bind_invocation.json",
+      "bytes": 779,
+      "sha256": "be26835b88463e48ed1eb54f345976da5df5ec6440afd09291a16e8e1390e4d0"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_CPU_restore_actual_v1/2p8b/bind_stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_CPU_restore_actual_v1/2p8b/bind_stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_CPU_restore_actual_v1/2p8b/bind_whole_child_timing.json",
+      "bytes": 396,
+      "sha256": "dbc4e428073ba84b1a8fdf6906536910a02b8f7dd315d8b28b399bd3c00026f1"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_CPU_restore_actual_v1/2p8b/bound_plan.json",
+      "bytes": 13671,
+      "sha256": "573c4f4924298408d53ef5fa7b07441549260b89dbae34c5e634dd2baf82a4f2"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_CPU_restore_actual_v1/2p8b/original_sources_FALSE_TEMPLATE.json",
+      "bytes": 1360,
+      "sha256": "12e6e4d64f709864c34421b8a582d6714cb599647c8cd3db4f6d3c55d18b873e"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_CPU_restore_actual_v1/2p8b/sources.json",
+      "bytes": 1778,
+      "sha256": "296246f17ef2c55fb44f87717e165f420e8b6dce7cde05f0b50f8197f5beb27a"
+    }
+  ]
+}
