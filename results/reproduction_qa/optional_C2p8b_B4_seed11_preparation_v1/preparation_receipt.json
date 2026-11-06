@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "status": "CPU_PREPARATION_COMPLETE_OPTIONAL_QA_BLOCKED_PENDING_DEPENDENCIES",
+  "created_at_utc": "2026-11-06T13:13:10.506366+00:00",
+  "root_authority_granted": false,
+  "GPU_scheduler_or_training_started": false,
+  "large_CP_base_or_archive_payload_bytes_read": 0,
+  "sealed_C_or_behavior_scores_read": false,
+  "actual_runtime_config_queue_state_or_expected_plan_materialized": false,
+  "actual_new_archive_copy": false,
+  "fixed_original_run": "extended_v2_pythia_2p8b_m8_h25m_formal_B4_s11_w0p05",
+  "scope": "one predetermined B4 seed11 full25M; final+best full-weight engineering QA only",
+  "final_evidence_status": "source-bound complete final draft verified, current source five-stat matched; not durable package acceptance",
+  "best_evidence_status": "summary-only step612/target20014848/replay1000742; full-state fingerprint/CP_SHA/kind/full-selection proof pending",
+  "durable_base_closure_status": "C2.8 actual persistent package unpublished, pending; live base not a substitute",
+  "source_identity_checks_passed": [
+    "registry-config-summary-snapshot SHA linkage",
+    "source completed rc0 with765steps25Mtarget1.25Mreplay",
+    "strict actual numerical policy preserved, original2.8 revision fixed",
+    "archived source C config SHA and10core hashes match snapshot",
+    "archived entrypoints prioritize their own src",
+    "final draft model fingerprint and wholeCP_SHA agree with full bytewise verification receipt",
+    "original final current five-stat matches preserved full-read receipt; no fresh CP hash claimed"
+  ],
+  "tests": {
+    "command": "pytest -q tests/test_optional_extended_qa_identity.py",
+    "passed": 5,
+    "pytest_reported_seconds": 1.32,
+    "timing_is_entire_task_wall": false,
+    "scope": [
+      "single-run two-endpoint full proof",
+      "no actual retraining rejected",
+      "missing best before CP reads rejected",
+      "best last tensor byte changed rejected",
+      "existing codec state fingerprint equals archived file convention on tiny tensors"
+    ]
+  },
+  "frozen_main4_sources_still_match": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/reproduction_qa/archive0732_seed11_2x2_v1/qa_plan.json",
+      "sha256": "f9a4077153abf1487fcd28d44f73b05be4403b9d19b45ec89b3cacafd3a98062",
+      "bytes": 49110
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/configs/reproductions/archive0732_qa_2x2_seed11_v1_queue.json",
+      "sha256": "4ec9a68ef6f78bbb5c44c2ce026e62d8deb01b6c1ae82f276a4a98f3730203b0",
+      "bytes": 5487
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/configs/reproductions/archive0732_qa_2x2_seed11_v1_registry.json",
+      "sha256": "1c587c00182e3b004f4cd35261ed111290d4881de1b7bb5f467ac0ca8c534376",
+      "bytes": 8267
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/configs/reproductions/archive0732_qa_2x2_seed11_v1/archive0732_qa_2x2_seed11_v1__formal_deterministic_B1_s11_b0p05_w0p05.json",
+      "sha256": "a321b607e1ed7259ac890d9b5cbda0257d5c1614b9aa0cf405690ab6b3269292",
+      "bytes": 2171
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/configs/reproductions/archive0732_qa_2x2_seed11_v1/archive0732_qa_2x2_seed11_v1__formal_deterministic_B2_s11_b0p05_w0p05.json",
+      "sha256": "fe62251d091ee92a20427b90c64476f959cdea53ebcac3574c71bf9dd24ceaae",
+      "bytes": 2171
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/configs/reproductions/archive0732_qa_2x2_seed11_v1/archive0732_qa_2x2_seed11_v1__formal_deterministic_B3_s11_b0p05_w0p05.json",
+      "sha256": "cb90fde9fcbdd3143d1597f9521733330b4df74059c895b466fade482e64405a",
+      "bytes": 2178
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/configs/reproductions/archive0732_qa_2x2_seed11_v1/archive0732_qa_2x2_seed11_v1__formal_deterministic_B4_s11_b0p05_w0p05.json",
+      "sha256": "7455dd43a9b8e4a6b904a8ac9dff5cf7946ae65aba228652ff207bd0e8ed60fd",
+      "bytes": 2178
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/reproduction_qa/archive0732_seed11_2x2_v1/postrun_expected_final_best_v2.json",
+      "sha256": "93da7a152e4f88968a01a8a569b1d057511474e6ccf1f04a4c336dcaafe891ce",
+      "bytes": 29649
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/verify_reproduction_qa_postrun.py",
+      "sha256": "5417fc0747d94feae828e0e53133edf66745b2fb60885cc591f84f2feceea7e2",
+      "bytes": 29696
+    }
+  ],
+  "metadata_preparation_note": {
+    "source_metadata_file_bytes": 19584,
+    "metadata_only_torch_load_invocations": 3,
+    "exact_serialized_metadata_bytes_not_instrumented": true,
+    "initial_wrapper_field_assumption_corrected": "original_checkpoint_metadata contains config/counters, no weights or optimizer; corrected before expected-review output was written",
+    "no_real_checkpoint_tensor_deserialization": true
+  },
+  "future_cost_limits": {
+    "original_scheduler_whole_slot_seconds": 2125.9341356754303,
+    "job_allowance_seconds": 2340,
+    "allowance_is_not_new_measurement": true,
+    "unallocated_seconds_after2340_allowance_with60min_start": 1260,
+    "original_best_file_bytes": 11101003630,
+    "thinnest_future_best_proof_nominal_two_pass_bytes": 22202007260,
+    "thinnest_best_proof_rule": "After separate root CPU-read authorization: one torch.load(cpu) for real metadata and existing SHA-pinned weight_archive.model_fingerprint(state), then fresh sequential CP SHA; same five-stat before/after, preserve receipt; no new archive.",
+    "new_final_plus_best_source_size_proxy_bytes": 44404031442,
+    "existing_postrun_three_pass_nominal_bytes": 133212094326,
+    "actual_postrun_serialized_bytes_and_wall_unknown": true,
+    "main4_300s_planning_is_not_2p8b_measurement": true,
+    "postrun_CPU_budget_must_be_rechecked": true,
+    "cost_category": "separate_engineering_QA_not_scientific_repeat",
+    "teacher_child_timers_nested": true
+  },
+  "root_time_gate": {
+    "all_scientific_and_evaluation_and_analysis_plus_main4_QA_must_finish_first": true,
+    "all_prior_schedulers_and_PGroups_exit_and_all4GPUs_free": true,
+    "minimum_seconds_until_qa_deadline": 3600,
+    "latest_root_launch_utc": "2026-11-07T01:56:32Z",
+    "high02h_science_finish_does_not_qualify": true,
+    "full30min_delivery_tail_preserved": true,
+    "postrun133GB_nominal_not_measured": true
+  },
+  "outputs": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/docs/optional_C2p8b_B4_seed11_QA_ROOT_FALSE_TEMPLATE.json",
+      "sha256": "05fe83d2a327c065190883774365641fac432a0546e1b13946a479ada0fc0881",
+      "bytes": 21611
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/docs/optional_C2p8b_B4_seed11_QA_expected_identity_TEMPLATE.json",
+      "sha256": "824f5a991ac496d864ade865b649f73f3a0cbd4ef0573d980da81d98a4f3e40e",
+      "bytes": 12080
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/docs/可选2p8B_B4_seed11归档QA准备.md",
+      "sha256": "b2578ae6aac395e9df762d4734236817b9a2d48e22c7b9fc85e2105486c9e9c5",
+      "bytes": 5657
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/tests/test_optional_extended_qa_identity.py",
+      "sha256": "337ccd13fc3ed13dcb10432def620893c63389e46523eec5358007acd3d50ac2",
+      "bytes": 3294
+    }
+  ],
+  "source_proofs_verified": 23,
+  "no_frozen_source_config_queue_codec_changed": true
+}
