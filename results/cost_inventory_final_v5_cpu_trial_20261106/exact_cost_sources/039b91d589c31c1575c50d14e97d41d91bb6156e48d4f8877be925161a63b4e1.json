@@ -1,0 +1,559 @@
+{
+  "schema_version": 1,
+  "status": "CPU_review_passed_with_explicit_operational_limits",
+  "created_at_utc": "2026-11-06T10:16:00.354736+00:00",
+  "sources_sha256": {
+    "/tmp/grad-research-20261106/worktree/scripts/audit_reproduction_qa.py": "b6a371567a86757e7474ca74040c9d98a651d9d96c2f745af81cf8d664dd9c51",
+    "/tmp/grad-research-20261106/worktree/scripts/reproduce_experiments.py": "ac54da86c4ae278783daf045c40f9c1cd7ed267f9be3a8fb09397f163b28eff1",
+    "/tmp/grad-research-20261106/worktree/docs/归档复现QA演练.md": "33c7527417571b14613577141662b01909c875840c1ee676b7a8f06d328490a3",
+    "/tmp/grad-research-20261106/worktree/results/reproduction_qa/archive0732_seed11_2x2_v1/qa_plan.json": "f9a4077153abf1487fcd28d44f73b05be4403b9d19b45ec89b3cacafd3a98062",
+    "/tmp/grad-research-20261106/worktree/results/reproduction_qa/archive0732_seed11_2x2_v1/preparation_receipt.json": "7522703a23ef4766743637b51dc462e9dc139fa4e4e3b99c2014c236f6cd4242",
+    "/tmp/grad-research-20261106/worktree/results/reproduction_qa/archive0732_seed11_2x2_v1/scientific_identity_audit.json": "fbfea97ab75824a26d61017a306b947c7951b2cec505f27c1061419c220d3dc1",
+    "/tmp/grad-research-20261106/worktree/results/reproduction_qa/archive0732_seed11_2x2_v1/queue_validation.json": "5a8d0474f935f8f81cf2388f5ae7fdcfe0653b1b2fecc33b5aeec4c02d6e5f15",
+    "/tmp/grad-research-20261106/worktree/docs/归档复现QA独立审阅_20261106.md": "09af5169296038ca6d24531914052f3924be3c4b4157127595b0fc9b480e4c7b",
+    "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/scripts/reproduce_experiments.py": "ac54da86c4ae278783daf045c40f9c1cd7ed267f9be3a8fb09397f163b28eff1",
+    "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/scripts/schedule_jobs.py": "c5c264b058ff655315ef896ccb0a89b471637c6612013a51999fc6f48b2d16d9",
+    "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/scripts/audit_formal_runs.py": "b2997465717ddd46b5f80924a022d6a82bafe65f5d348636852fdc10836a2362",
+    "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/src/replay_study/__init__.py": "b2dce8cc5ea80a67a90b1798232163a7684874487b5ea4102e60851c7017f520"
+  },
+  "verified_inputs": [
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/scripts/make_experiments.py",
+      "sha256": "e6997abcb3c65afcfb2fd9fc1129877b1e4afc3f80ad49be3495aa99a6764df4",
+      "bytes": 14454,
+      "five_stat": [
+        139,
+        51735875346,
+        14454,
+        1793952041373130463,
+        1793952041374130459
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/scripts/run_evaluate.py",
+      "sha256": "6d7b9cd6b311f96e94b854e8ccd15f15f92ff9eefbd6b5a0dddc67fee8989ddf",
+      "bytes": 2366,
+      "five_stat": [
+        139,
+        51735875377,
+        2366,
+        1793952041378130442,
+        1793952041378130442
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/scripts/run_train.py",
+      "sha256": "eae92291ad7d4a52717078e8764dc5a5440cba44b09dd0f1cfc46223317798de",
+      "bytes": 1036,
+      "five_stat": [
+        139,
+        51735875380,
+        1036,
+        1793952041378130442,
+        1793952041378130442
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/src/replay_study/data.py",
+      "sha256": "e43c6f859db2815ff6b7dcd1a1d65fe71a3ca2621dd6564a3b0424595ab65c24",
+      "bytes": 5331,
+      "five_stat": [
+        139,
+        56004142402,
+        5331,
+        1793952041381130430,
+        1793952041381130430
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/src/replay_study/evaluate.py",
+      "sha256": "d9648b4fbc891746a9bafe9e9639e2ee584521ba68bd949d2091484c833c3c46",
+      "bytes": 16936,
+      "five_stat": [
+        139,
+        56004142403,
+        16936,
+        1793952041382130426,
+        1793952041382130426
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/src/replay_study/execution.py",
+      "sha256": "70ed6b3d63f950ffc00f2c671f20e0d842c154f4cbf1648fe9a6511bbd077bf5",
+      "bytes": 4371,
+      "five_stat": [
+        139,
+        56004142405,
+        4371,
+        1793952041382130426,
+        1793952041382130426
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/src/replay_study/generate.py",
+      "sha256": "7415647d6d2f23e2f0e59f288dc544a21b8fb0eaa9069daf90e5ea949e607e33",
+      "bytes": 13346,
+      "five_stat": [
+        139,
+        56004142406,
+        13346,
+        1793952041382130426,
+        1793952041382130426
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/src/replay_study/objectives.py",
+      "sha256": "9e0a319965bf486ebf721e3e662b6a474046e56c44dfab0d13590a20aedd98be",
+      "bytes": 5815,
+      "five_stat": [
+        139,
+        56004142409,
+        5815,
+        1793952041383130422,
+        1793952041383130422
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/src/replay_study/selection.py",
+      "sha256": "88814e111aa5db1fb1009d90eba54c353a018fd6c1cbdda4ff4a148b57aa11b7",
+      "bytes": 13258,
+      "five_stat": [
+        139,
+        56004142411,
+        13258,
+        1793952041383130422,
+        1793952041383130422
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/src/replay_study/train.py",
+      "sha256": "fdfcf6aa12e4d9e60de48b817ce37c5646cb1169f28d971a421f91972543ab6d",
+      "bytes": 41138,
+      "five_stat": [
+        139,
+        56004142413,
+        41138,
+        1793952041384130418,
+        1793952041384130418
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/artifacts/data/finemath_train.pt",
+      "sha256": "af49c1455484f3471bf1a3569601373e2e84795849b9f59291b96ff2d637b39f",
+      "bytes": 8522303,
+      "five_stat": [
+        139,
+        58138892150,
+        8522303,
+        1793952036068152027,
+        1793952036068152027
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/artifacts/banks/c4_random_seed11.pt",
+      "sha256": "71d229c9203ba0a5579997148e1a06ab4f7d28f41bf40c63bee4513b3eda5be7",
+      "bytes": 413262,
+      "five_stat": [
+        139,
+        49583495635,
+        413262,
+        1793952035647153738,
+        1793952035648153733
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/artifacts/evaluation_v3/finemath_validation.pt",
+      "sha256": "431937e95ea9ba4f98cb19da38f53bdc1f90f57f35173a2b85dc3c3a560b4490",
+      "bytes": 2143384,
+      "five_stat": [
+        139,
+        71017993559,
+        2143384,
+        1793952037398146621,
+        1793952037400146613
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/artifacts/evaluation_v3/c4_validation.pt",
+      "sha256": "89c38a59a9985195efed818ed651d56bc00a399b3f08df4c98f5baf9380be453",
+      "bytes": 2137786,
+      "five_stat": [
+        139,
+        71017993555,
+        2137786,
+        1793952037357146787,
+        1793952037360146775
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/artifacts/evaluation_v3/wikitext103_validation.pt",
+      "sha256": "4018c33bd6e36b45aafcb5b5129ed18cbd480613ccbed0f8cdf57a02e8b0e85c",
+      "bytes": 948199,
+      "five_stat": [
+        139,
+        71017993572,
+        948199,
+        1793952037415146552,
+        1793952037416146548
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/artifacts/evaluation_v3/finemath_test.pt",
+      "sha256": "3fdea241e0bf812e772ab1789ec1e9e722fdd6a18efdf6850e5aeb18cfac63f3",
+      "bytes": 2139962,
+      "five_stat": [
+        139,
+        71017993557,
+        2139962,
+        1793952037380146694,
+        1793952037384146678
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/artifacts/evaluation_v3/c4_test.pt",
+      "sha256": "95457714af354880c92716edd99b878110e9635d70f3d0d2435dc75e9a755e61",
+      "bytes": 2136028,
+      "five_stat": [
+        139,
+        71017943743,
+        2136028,
+        1793952037339146861,
+        1793952037341146852
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/artifacts/evaluation_v3/wikitext103_test.pt",
+      "sha256": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f",
+      "bytes": 1087177,
+      "five_stat": [
+        139,
+        71017993570,
+        1087177,
+        1793952037408146580,
+        1793952037410146572
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/scratch/models/pythia-410m-final/config.json",
+      "sha256": "d4c11e84a59c8af4d88446bba53b718f7aef740daa070ded08fd6a9a3aca4fc6",
+      "bytes": 570,
+      "five_stat": [
+        139,
+        40927637339,
+        570,
+        1793952041725129032,
+        1793952041725129032
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/scratch/models/pythia-410m-final/special_tokens_map.json",
+      "sha256": "6f50ab5a5a509a1c309d6171f339b196a900dc9c99ad0408ff23bb615fdae7ad",
+      "bytes": 99,
+      "five_stat": [
+        139,
+        40927637340,
+        99,
+        1793952041725129032,
+        1793952041725129032
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/scratch/models/pythia-410m-final/tokenizer_config.json",
+      "sha256": "70e38394e494931c6f773ba41e19460dd4436526b852207367f04341b4066d3f",
+      "bytes": 396,
+      "five_stat": [
+        139,
+        40927637341,
+        396,
+        1793952041725129032,
+        1793952041725129032
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/scratch/models/pythia-410m-final/tokenizer.json",
+      "sha256": "c24618a1b3e6a38167beff1c72cffd126c3a66254347304b50547d12c5f25624",
+      "bytes": 2113710,
+      "five_stat": [
+        139,
+        40927637342,
+        2113710,
+        1793952041727129024,
+        1793952041727129024
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/scratch/models/pythia-410m-final/README.md",
+      "sha256": "d7d60ae94cb0882f19381632532a01d39247fe6f932016c39768b1f67c9f2bf9",
+      "bytes": 13593,
+      "five_stat": [
+        139,
+        40927637343,
+        13593,
+        1793952041730129012,
+        1793952041730129012
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/scratch/models/pythia-410m-final/model.safetensors",
+      "sha256": "3e09001631bb18ec8a6f4522f8e6ab26a53099e69228f9822adc91bfbe27511b",
+      "bytes": 911373632,
+      "five_stat": [
+        139,
+        40927637344,
+        911373632,
+        1793952042342126524,
+        1793952042342126524
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/artifacts/banks/generated_random_seed11.pt",
+      "sha256": "a1f0ddc372ad23d24ae0f628910881f77b22b8cb62be02f94c915c23d9155118",
+      "bytes": 411000,
+      "five_stat": [
+        139,
+        49583495676,
+        411000,
+        1793952035703153510,
+        1793952035703153510
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/artifacts/data/finemath_train.json",
+      "sha256": "c8db308e5b1d88f358b423a545fb7fae5cbcd7b9cac6474dc67c45ab98184a22",
+      "bytes": 2496450,
+      "five_stat": [
+        139,
+        58138892149,
+        2496450,
+        1793952035987152355,
+        1793952035989152348
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/artifacts/banks/c4_random_seed11.json",
+      "sha256": "6b3cca23bd3da4156a5ed544ea8a001c7ffe9e34f7d126ac19c39d068ba12212",
+      "bytes": 18137,
+      "five_stat": [
+        139,
+        49583495634,
+        18137,
+        1793952035640153766,
+        1793952035644153750
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/artifacts/evaluation_v3/finemath_validation.json",
+      "sha256": "53ab5a4cac880f015c689de64be2c9b9cb4c66104a384ff2b9c651ffa02b9a44",
+      "bytes": 922011,
+      "five_stat": [
+        139,
+        71017993558,
+        922011,
+        1793952037386146670,
+        1793952037388146661
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/artifacts/evaluation_v3/c4_validation.json",
+      "sha256": "d2e650880f85b7580a7de8d68018e93bbea282335add1b6a2513e381eab58e90",
+      "bytes": 446682,
+      "five_stat": [
+        139,
+        71017993554,
+        446682,
+        1793952037343146844,
+        1793952037343146844
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/artifacts/evaluation_v3/wikitext103_validation.json",
+      "sha256": "b2c8601519be7b2352cae00066dc9837a67338244584456b1408ff8e2393023c",
+      "bytes": 56728,
+      "five_stat": [
+        139,
+        71017993571,
+        56728,
+        1793952037410146572,
+        1793952037410146572
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/artifacts/evaluation_v3/finemath_test.json",
+      "sha256": "63b07f91703e0ab084a61e4b8ffd5a2ee8b719f0ed39ff059a94aca33eadb05c",
+      "bytes": 851499,
+      "five_stat": [
+        139,
+        71017993556,
+        851499,
+        1793952037362146767,
+        1793952037363146763
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/artifacts/evaluation_v3/c4_test.json",
+      "sha256": "272e023f73a35b3cf0324b995ce8dcd0715f92bf6a9da39eacf8eb8745e6c8ce",
+      "bytes": 424867,
+      "five_stat": [
+        139,
+        71017943742,
+        424867,
+        1793952037291147056,
+        1793952037291147056
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/artifacts/evaluation_v3/wikitext103_test.json",
+      "sha256": "d9797bc38cd4b1a2366a51522cc567e432807f6aa54163352f9a015537c24a5b",
+      "bytes": 60612,
+      "five_stat": [
+        139,
+        71017993569,
+        60612,
+        1793952037402146604,
+        1793952037402146604
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/artifacts/banks/generated_random_seed11.json",
+      "sha256": "b67a03e162d6d8fb3e3be2a40d261cb095027f16b94d6b85a0649b8a8aeb42c8",
+      "bytes": 18435,
+      "five_stat": [
+        139,
+        49583495675,
+        18435,
+        1793952035700153522,
+        1793952035700153522
+      ],
+      "full_bytes_read_now": true,
+      "resolves_in_QA_namespace": true
+    }
+  ],
+  "current_input_full_read_count": 34,
+  "current_input_full_read_bytes": 938854573,
+  "current_input_full_read_wall_seconds": 1.2841394804418087,
+  "count_decomposition": {
+    "scientific_core": 10,
+    "dataset_bank_tensors": 9,
+    "model_config_tokenizer_files": 6,
+    "adjacent_manifests": 9
+  },
+  "archived_reproduce_final_checks_count": 25,
+  "adjacent_json_not_checked_by_reproduce": [
+    "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/artifacts/banks/c4_random_seed11.json",
+    "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/artifacts/banks/generated_random_seed11.json",
+    "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/artifacts/data/finemath_train.json",
+    "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/artifacts/evaluation_v3/c4_test.json",
+    "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/artifacts/evaluation_v3/c4_validation.json",
+    "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/artifacts/evaluation_v3/finemath_test.json",
+    "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/artifacts/evaluation_v3/finemath_validation.json",
+    "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/artifacts/evaluation_v3/wikitext103_test.json",
+    "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/artifacts/evaluation_v3/wikitext103_validation.json"
+  ],
+  "current_runtime_review_copies_all_equal": true,
+  "current_all4_outputs_absent": true,
+  "current_QA_state_absent": true,
+  "actual_frozen_parameters": {
+    "seed": 11,
+    "target_prediction_tokens": 10000000,
+    "replay_prediction_tokens": 500000,
+    "replay_ratio": 0.05,
+    "replay_weight": 0.05,
+    "learning_rate": 3e-05,
+    "microbatch": 16,
+    "gradient_accumulation": 4,
+    "FP32_weights": true,
+    "autocast": "bf16",
+    "strict": true,
+    "warn_only": false,
+    "attention_backend": "auto",
+    "all4_SDP_backends": true,
+    "TF32_matmul_cudnn": true,
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false
+  },
+  "software_CPU_inspection": {
+    "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+    "cuda_build_version": "12.4",
+    "transformers_version": "4.46.3",
+    "CUDA_context_initialized": false
+  },
+  "original_helper_latest_launch_exclusive_utc": "2026-11-07T02:16:32Z",
+  "original_helper_stop_margin_start_utc": "2026-11-07T02:46:32Z",
+  "postrun_full_state_template_in_document": true,
+  "postrun_template_not_executed": true,
+  "postrun_template_does_not_claim_trajectory_comparison": true,
+  "cost_category_required": "diagnostic engineering QA, all4 physical training costs retained",
+  "root_execution_authority_granted_by_this_review": false,
+  "source_archive_modified": false,
+  "helper_or_core_modified": false,
+  "new_workflow_source_written": false,
+  "GPU_or_scheduler_launched": false,
+  "sealed_B_C_behavior_scores_read": false,
+  "new_scientific_replicates": 0
+}

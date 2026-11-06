@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/results/reproduction_qa/optional_three_model_B4_preparation_v1/assessment_tool_extraction_1415.json",
+    "sha256": "60347c771a4fe89035754cf6b12ea3c70078f8bacdc9d76c8ceb099235902201"
+  },
+  "wall_seconds": 6.68545538559556,
+  "original_wall_pointer": "/wall_seconds",
+  "CPU_components": {
+    "/user_cpu_seconds": 6.038688,
+    "/sys_cpu_seconds": 0.295733
+  },
+  "CPU_component_pointers": [
+    "/user_cpu_seconds",
+    "/sys_cpu_seconds"
+  ],
+  "recorded_inclusive_CPU_seconds": 6.334421,
+  "normalization": "Copy the explicit measured wall; sum only listed disjoint user/sys components. No timestamp inference.",
+  "scope": "Independent actual selected-tool extraction stage: streams1415 archive and writes only archived verifier plus PACKAGE_MANIFEST. Does not recompute wholeTAR SHA or repeat package QA cost. Does not relocate base or launch GPU reproduction.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false,
+  "original_source_fields_or_semantics_changed": false
+}

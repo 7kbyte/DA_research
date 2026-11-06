@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/snapshot_1415_build/whole_process_timing.json",
+    "sha256": "a67ad4dbe7b54ef44958eb3fceccf2f3fb6214f43cac9cb31f9ecb864e08f0bf"
+  },
+  "wall_seconds": 80.69716270640492,
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "CPU_components": {
+    "/whole_child_user_cpu_seconds": 78.578373,
+    "/whole_child_sys_cpu_seconds": 1.533762
+  },
+  "CPU_component_pointers": [
+    "/whole_child_user_cpu_seconds",
+    "/whole_child_sys_cpu_seconds"
+  ],
+  "recorded_inclusive_CPU_seconds": 80.112135,
+  "normalization": "Copy the explicit measured wall; sum only listed disjoint user/sys components. No timestamp inference.",
+  "scope": "Complete actual1415 package child spawn-through-exit including compression/member verification. Earlier0732/1205/1325 package operations remain separate historical work, not repeated. Nested member/compression timers not added; publication outside child.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false,
+  "original_source_fields_or_semantics_changed": false
+}

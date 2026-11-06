@@ -1,0 +1,190 @@
+{
+  "models": {
+    "pythia-410m": {
+      "status": "passed_read_only_record_and_metadata_review",
+      "model": "pythia-410m",
+      "run_id": "extended_v2_pythia_410m_m64_formal_B2_s11_w0p05",
+      "source_record": {
+        "path": "/tmp/grad-research-20261106/delivery/extended_C_final_v1/pythia-410m/records/extended_v2_pythia_410m_m64_formal_B2_s11_w0p05.json",
+        "sha256": "f97249300451a29b08850bfd593c6b618c2032bb68e753fcf478c897ccaab610"
+      },
+      "source_registry": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal_active_registry.json",
+        "sha256": "c7f5c50d6794ba0df0dc3e071198da761f084ad9347ce5d9ce4dddf867ee48bd"
+      },
+      "source_snapshot": {
+        "path": "artifacts/provenance/extended_v2_pythia_410m_m64_formal_input_snapshot.json",
+        "sha256": "5b065523d3a87235bf143ae144655589ea42591f71ef49e4dc430633954a029e"
+      },
+      "actual_exposure": {
+        "checkpoint_step": 3058,
+        "target_prediction_tokens": 100000000,
+        "replay_prediction_tokens": 5000000,
+        "full_training_target_prediction_tokens": 100000000,
+        "full_training_replay_prediction_tokens": 5000000
+      },
+      "source_checkpoint_sha256": "4d309263b93a74f5ce05e31e99c979316e0c3cd7cf6907db1755dee3e1d8c210",
+      "archive_sha256": "d04cb41a58e4841da7d324dd72383e65011d2b5ee4893428502a339e579d9c6d",
+      "model_fingerprint": {
+        "sha256_model_state": "730baceb56f0751f5dbf93aab3787acc3c26a09f1a1c22253c23b5aae6d717e1",
+        "state_elements": 405334016
+      },
+      "tensor_count": 292,
+      "fp32_model_raw_bytes": 1621336064,
+      "zip_bytes": 1229118349,
+      "zip_over_fp32_raw": 0.7580898101826223,
+      "base_sha256": "3e09001631bb18ec8a6f4522f8e6ab26a53099e69228f9822adc91bfbe27511b",
+      "timers": {
+        "encode_wall_seconds": 74.92126114666462,
+        "decode_wall_seconds": 17.117051165550947,
+        "verify_wall_seconds": 7.475983638316393,
+        "full_roundtrip_record_wall_seconds": 99.87297570332885,
+        "encode_cpu_seconds": 75.29003718000001,
+        "decode_cpu_seconds": 17.701151455,
+        "verify_cpu_seconds": 7.6033035410000025,
+        "full_record_cpu_seconds": 100.704041925
+      },
+      "peak_rss_bytes_process_cumulative": 3687493632,
+      "peak_rss_interpretation": "entire exporter process high-water mark through this record; not this model alone or an increment",
+      "producer_reported_all_tensor_bytes_equal": true,
+      "independent_metadata_roundtrip": true,
+      "independent_read_scope": "small record and ZIP metadata, source/sidecar nonweight metadata, source mmap tensor descriptors, current file stats; no repeat full CP/ZIP/restored payload hash or byte comparison",
+      "original_cp_zip_restored_retained": true,
+      "source_authority": "rc0/frozen training definition/config/inputs; source CP SHA frozen at draft encoding; fullphase gate pending"
+    },
+    "pythia-2.8b": {
+      "status": "passed_read_only_record_and_metadata_review",
+      "model": "pythia-2.8b",
+      "run_id": "extended_v2_pythia_2p8b_m8_h25m_formal_B4_s11_w0p05",
+      "source_record": {
+        "path": "/tmp/grad-research-20261106/delivery/extended_C_final_v1/pythia-2.8b/records/extended_v2_pythia_2p8b_m8_h25m_formal_B4_s11_w0p05.json",
+        "sha256": "72d24a730c7aa2396b8b798136aa64eea5520d6aaefa78773486bda6316f19bb"
+      },
+      "source_registry": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_h25m_formal_active_registry.json",
+        "sha256": "c98360002f763a98423d16bf99c866edfbec21da2668a04cb3ccfd5652888d05"
+      },
+      "source_snapshot": {
+        "path": "artifacts/provenance/extended_v2_pythia_2p8b_m8_h25m_formal_input_snapshot.json",
+        "sha256": "49d3965a7d0909b23ab5880efe3c4d8b32944c5335e802435dd92e4cec017379"
+      },
+      "actual_exposure": {
+        "checkpoint_step": 765,
+        "target_prediction_tokens": 25000000,
+        "replay_prediction_tokens": 1250000,
+        "full_training_target_prediction_tokens": 25000000,
+        "full_training_replay_prediction_tokens": 1250000
+      },
+      "source_checkpoint_sha256": "1cd4e86e0f99c39b2fbc184584850b3fae357a34f97511678e53849bbd9d07e5",
+      "archive_sha256": "90be5dc220eebfa55c1638cce690489e66358de7c01c5f4e50c0b09d5ea6ab72",
+      "model_fingerprint": {
+        "sha256_model_state": "0a819cb2921ba45adfd57b80ddf61f10cbdfeddbc4fb0a3d8846d53a384701b2",
+        "state_elements": 2775208960
+      },
+      "tensor_count": 388,
+      "fp32_model_raw_bytes": 11100835840,
+      "zip_bytes": 7638650166,
+      "zip_over_fp32_raw": 0.6881148659522921,
+      "base_sha256": "ab496f1c3fd79e3c749a9d5414136a2c8e4224f94eecb261970315cdb0f813fe",
+      "timers": {
+        "encode_wall_seconds": 509.71524342522025,
+        "decode_wall_seconds": 147.7011192291975,
+        "verify_wall_seconds": 53.53207527846098,
+        "full_roundtrip_record_wall_seconds": 712.486535537988,
+        "encode_cpu_seconds": 510.875398305,
+        "decode_cpu_seconds": 147.78467991800005,
+        "verify_cpu_seconds": 54.436277133999965,
+        "full_record_cpu_seconds": 713.1483800149999
+      },
+      "peak_rss_bytes_process_cumulative": 22755274752,
+      "peak_rss_interpretation": "entire exporter process high-water mark through this record; not this model alone or an increment",
+      "producer_reported_all_tensor_bytes_equal": true,
+      "independent_metadata_roundtrip": true,
+      "independent_read_scope": "small record and ZIP metadata, source/sidecar nonweight metadata, source mmap tensor descriptors, current file stats; no repeat full CP/ZIP/restored payload hash or byte comparison",
+      "original_cp_zip_restored_retained": true,
+      "source_authority": "rc0/frozen training definition/config/inputs; source CP SHA frozen at draft encoding; fullphase gate pending"
+    },
+    "pythia-1b": {
+      "status": "passed_read_only_record_and_metadata_review",
+      "model": "pythia-1b",
+      "run_id": "extended_v2_pythia_1b_m32_formal_B4_s11_w0p05",
+      "source_record": {
+        "path": "/tmp/grad-research-20261106/delivery/extended_C_final_v1/pythia-1b/records/extended_v2_pythia_1b_m32_formal_B4_s11_w0p05.json",
+        "sha256": "5064fbaa7c07f60d9e457077c6226c988359a6a593675b0f4e22d5a1c8fe16bc"
+      },
+      "source_registry": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal_active_registry.json",
+        "sha256": "c106330d947904447fe7c1aa42fa8dbe8a337a683520801b90653d7d6474b8d6"
+      },
+      "source_snapshot": {
+        "path": "artifacts/provenance/extended_v2_pythia_1b_m32_formal_input_snapshot.json",
+        "sha256": "8cdc78f694464d1e0ef179614e00eddfa192b600ace68f7fe044f5d34446832a"
+      },
+      "actual_exposure": {
+        "checkpoint_step": 3058,
+        "target_prediction_tokens": 100000000,
+        "replay_prediction_tokens": 5000000,
+        "full_training_target_prediction_tokens": 100000000,
+        "full_training_replay_prediction_tokens": 5000000
+      },
+      "source_checkpoint_sha256": "8619261b6559ce90c198a2f722bc00baeb52460b4b812b73e3870763fd2dda1c",
+      "archive_sha256": "168acf2a311828953bb7acb07f8442b1b19498c78586a2b93156c6705261ce9c",
+      "model_fingerprint": {
+        "sha256_model_state": "da1fe7db068d1111f973920ac59fb6c0ad70914c288cfdef434db9d7bef42d82",
+        "state_elements": 1011781632
+      },
+      "tensor_count": 196,
+      "fp32_model_raw_bytes": 4047126528,
+      "zip_bytes": 3081287516,
+      "zip_over_fp32_raw": 0.7613519109625425,
+      "base_sha256": "7e6dff44849e036a73296368e663bd9420009977f03a8d4d747b234264f37107",
+      "timers": {
+        "encode_wall_seconds": 187.7724886201322,
+        "decode_wall_seconds": 42.86239632964134,
+        "verify_wall_seconds": 19.153318267315626,
+        "full_roundtrip_record_wall_seconds": 250.42268271371722,
+        "encode_cpu_seconds": 188.20136544599995,
+        "decode_cpu_seconds": 43.601962876000016,
+        "verify_cpu_seconds": 19.48282105999988,
+        "full_record_cpu_seconds": 251.38903373000005
+      },
+      "peak_rss_bytes_process_cumulative": 22755274752,
+      "peak_rss_interpretation": "entire exporter process high-water mark through this record; not this model alone or an increment",
+      "producer_reported_all_tensor_bytes_equal": true,
+      "independent_metadata_roundtrip": true,
+      "independent_read_scope": "small record and ZIP metadata, source/sidecar nonweight metadata, source mmap tensor descriptors, current file stats; no repeat full CP/ZIP/restored payload hash or byte comparison",
+      "original_cp_zip_restored_retained": true,
+      "source_authority": "rc0/frozen training definition/config/inputs; source CP SHA frozen at draft encoding; fullphase gate pending"
+    }
+  },
+  "A_publication": {
+    "status": "passed_current_identity_stat_review",
+    "receipt": {
+      "path": "/tmp/grad-research-20261106/worktree/docs/A_selected_weights_durable_publication.json",
+      "sha256": "0391d92780c2ee7c3b3bc508b270a3322120ea6f68ece38e0e9f8d20274ca5a6"
+    },
+    "destination": "/data/202610/7kb/research_delivery/supplement_A_selected_final_weights_lossless_v1.tar",
+    "bytes": 16949309440,
+    "sha256": "0dfec20b1bf9dde38b0d0d453c821eb088490bde188dc0e19bc498cc37b04631",
+    "current_stat": {
+      "device": 106,
+      "inode": 393956795,
+      "bytes": 16949309440,
+      "mtime_ns": 1793965887290828922,
+      "ctime_ns": 1793965887290828922,
+      "uid": 11471,
+      "gid": 11471,
+      "mode": "0o600"
+    },
+    "fresh_full_tar_hash_performed_by_this_reviewer": false,
+    "verification": "publisher full source/copy/readback SHA acceptance + independent current inode/dev/owner/permissions/size/mtime/ctime; no new full TAR hash"
+  },
+  "status": "complete",
+  "observed_at_utc": "2026-11-06T12:05:20.788346+00:00",
+  "source": {
+    "path": "/tmp/grad-research-20261106/worktree/scripts/audit_C_weight_resource_records.py",
+    "sha256": "b42fe2efe4df2a8bf84d3240359295a9af5d0a937662a76a2f53ad8b3c12a806"
+  },
+  "no_model_scoring": true,
+  "large_payloads_rehashed": false
+}

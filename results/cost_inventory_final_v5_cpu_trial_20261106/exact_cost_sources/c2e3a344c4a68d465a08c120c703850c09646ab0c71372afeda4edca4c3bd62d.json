@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/optional_three_model_B4_archive_QA_CPU_preparation_receipt_v1.json",
+    "sha256": "936a20f77600692f5bef9c62396a15b07fb015583c6de689c69f290bb1f28c56"
+  },
+  "wall_seconds": 0.26709840446710587,
+  "original_wall_pointer": "/preparation_stage_timing/wall_seconds",
+  "CPU_components": {
+    "/preparation_stage_timing/user_cpu_seconds": 0.160415,
+    "/preparation_stage_timing/sys_cpu_seconds": 0.090543
+  },
+  "CPU_component_pointers": [
+    "/preparation_stage_timing/user_cpu_seconds",
+    "/preparation_stage_timing/sys_cpu_seconds"
+  ],
+  "recorded_inclusive_CPU_seconds": 0.250958,
+  "normalization": "Copy the explicit measured wall; sum only listed disjoint user/sys components. No timestamp inference.",
+  "scope": "Independent builder body region after stdlib imports through fresh0732 required payload checks and template construction only. Excludes earlier engineering, imports, separate C1B identity child and1415 selected extraction. Not a complete parent-process timer or executed GPU QA.",
+  "timing_semantics": "independent_measured_body_region_after_stdlib_imports",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false,
+  "original_source_fields_or_semantics_changed": false
+}
