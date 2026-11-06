@@ -1,0 +1,258 @@
+{
+  "status": "accepted_PRIMARY_behavior_independent_review_and_copy_only_figures",
+  "accepted_by": "ROOT",
+  "utc": "2026-11-06T23:07:12.947543+00:00",
+  "actual_complete": {
+    "status": "passed_authorized_PRIMARY_only_review_and_copy_only_presentation",
+    "created_at_utc": "2026-11-06T23:00:26.746863+00:00",
+    "original_COMPLETE": {
+      "path": "/tmp/grad-research-20261106/worktree/results/primary_behavior_analysis_execution_v1/COMPLETE.json",
+      "sha256": "9226502904b0cda672c0d6ec17a1f29e4d81e02d0220f0efdaf00155cf301c5f"
+    },
+    "review_COMPLETE": {
+      "path": "/tmp/grad-research-20261106/worktree/results/primary_behavior_independent_review_v1/COMPLETE.json",
+      "sha256": "5c3a4c7e7e162747b13117da9a35d907ec28eecf19448eaeac47fd17ab28766a"
+    },
+    "presentation_COMPLETE": {
+      "path": "/tmp/grad-research-20261106/worktree/results/primary_behavior_presented_v1/COMPLETE.json",
+      "sha256": "8ca2483000cc841163586ca14a7ed4cc82f18c048b4f7b82b966186996063eae"
+    },
+    "findings_COMPLETE": {
+      "path": "/tmp/grad-research-20261106/worktree/results/primary_behavior_findings_v2/COMPLETE.json",
+      "sha256": "0eacff5d4a9064eecba954770a6eb8d2958bfaacdca8c90299debefc30dc319b"
+    },
+    "reviewer_source": {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/review_behavioral_results.py",
+      "sha256": "bb261a20ac45fb47c690f57b7461856b5204066eade15178ca92886a9766966b"
+    },
+    "presenter_source": {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/present_behavioral_review.py",
+      "sha256": "fef5b7839629391db8188df80d729845f472fc59e2c685be5558cd9a80ef99ae"
+    },
+    "coverage": {
+      "logical_endpoints": 72,
+      "physical_inference_jobs": 67,
+      "endpoint_task_metric_rows": 288,
+      "methods_and_b_conditions": 12,
+      "training_seeds": [
+        11,
+        22,
+        33
+      ],
+      "tasks": [
+        "piqa",
+        "hellaswag"
+      ],
+      "scores": [
+        "acc_norm",
+        "acc"
+      ],
+      "checkpoint_kinds": [
+        "final",
+        "best"
+      ],
+      "existing_aggregate_rows": 384,
+      "existing_paired_seed_rows": 168,
+      "existing_paired_aggregate_rows": 56
+    },
+    "independent_checks": 21692,
+    "maximum_absolute_numeric_error": 2.220446049250313e-16,
+    "review_fresh_bytes": 1273313647,
+    "review_input_file_count": 327,
+    "review_checkpoint_payload_bytes": 0,
+    "new_model_forward_calls": 0,
+    "new_statistics_or_selection": false,
+    "other_phase_score_reads": false,
+    "whole_review_parent": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/primary_behavior_independent_review_actual_v1/whole_parent_timing.json",
+      "sha256": "c3ed729d3c30837ff7213c00aa128e9278c9a1179b81d81559d29441f00a6233"
+    },
+    "whole_presentation_parent": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/primary_behavior_presentation_actual_v1/whole_parent_timing.json",
+      "sha256": "45e162f208f3a6e6d974899466c173be8cade3dee47632b261e1d366f9d49625"
+    },
+    "script_adjacent_child_timers_are_nested": true,
+    "original_CSV_presented_copies_byte_equal": [
+      {
+        "source": "/tmp/grad-research-20261106/worktree/results/primary_behavior_independent_review_v1/endpoints.csv",
+        "presented_copy": "/tmp/grad-research-20261106/worktree/results/primary_behavior_presented_v1/endpoints.csv",
+        "sha256": "905a5b18ac26c3160cd0626d9467afdc42f6f4e56963399eb358d010fc682310",
+        "bytes": 187023
+      },
+      {
+        "source": "/tmp/grad-research-20261106/worktree/results/primary_behavior_independent_review_v1/paired_seed_aggregates.csv",
+        "presented_copy": "/tmp/grad-research-20261106/worktree/results/primary_behavior_presented_v1/paired_seed_aggregates.csv",
+        "sha256": "67a4cf3dea27643654dfab8046a2bc5cfa892baf13276a0df93e8db6ae5d03ff",
+        "bytes": 11888
+      },
+      {
+        "source": "/tmp/grad-research-20261106/worktree/results/primary_behavior_independent_review_v1/paired_seed_differences.csv",
+        "presented_copy": "/tmp/grad-research-20261106/worktree/results/primary_behavior_presented_v1/paired_seed_differences.csv",
+        "sha256": "70b7b04b4357bbe1b0a46b70b070bd6b110ec55bb497e3f0a36979f15de1e42d",
+        "bytes": 47100
+      },
+      {
+        "source": "/tmp/grad-research-20261106/worktree/results/primary_behavior_independent_review_v1/seed_aggregates.csv",
+        "presented_copy": "/tmp/grad-research-20261106/worktree/results/primary_behavior_presented_v1/seed_aggregates.csv",
+        "sha256": "f0fbaa659c5e1b729fc60eff7b8b78d655309ecf191d340cfda7000b6cef9bb2",
+        "bytes": 78357
+      }
+    ],
+    "visual_scope": "Two acc_norm actual PNGs manually inspected; no claim of new PDF/SVG raster QA",
+    "multiplicity": "All existing rowwise intervals unadjusted; no new statistical tests or multiplicity adjustment",
+    "conditional_interval_scope": "Conditional on fixed checkpoints and these IID/exchangeable questions. Shared activity/context dependence (including HellaSwag) is uncorrected; these are not training-replicate or automatic population CIs.",
+    "training_seed_scope": "Sample SD across the three fixed training seeds, separate final/best. Aliases and questions are not extra seeds; A lambda-selection variability is not resampled.",
+    "manual_total_preparation_review_interpretation_writing_wall_seconds": null
+  },
+  "fresh_small_and_figure_proofs": {
+    "/tmp/grad-research-20261106/worktree/artifacts/provenance/primary_behavior_independent_review_actual_v1/COMPLETE.json": {
+      "sha256": "a717312b491e303b4631171801981862b7ccbccd1426e1d79567160c279f997d",
+      "bytes": 5039
+    },
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_analysis_execution_v1/COMPLETE.json": {
+      "sha256": "9226502904b0cda672c0d6ec17a1f29e4d81e02d0220f0efdaf00155cf301c5f",
+      "bytes": 1545
+    },
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_independent_review_v1/COMPLETE.json": {
+      "sha256": "5c3a4c7e7e162747b13117da9a35d907ec28eecf19448eaeac47fd17ab28766a",
+      "bytes": 140247
+    },
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_presented_v1/COMPLETE.json": {
+      "sha256": "8ca2483000cc841163586ca14a7ed4cc82f18c048b4f7b82b966186996063eae",
+      "bytes": 9297
+    },
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_findings_v2/COMPLETE.json": {
+      "sha256": "0eacff5d4a9064eecba954770a6eb8d2958bfaacdca8c90299debefc30dc319b",
+      "bytes": 2659
+    },
+    "/tmp/grad-research-20261106/worktree/scripts/review_behavioral_results.py": {
+      "sha256": "bb261a20ac45fb47c690f57b7461856b5204066eade15178ca92886a9766966b",
+      "bytes": 33762
+    },
+    "/tmp/grad-research-20261106/worktree/scripts/present_behavioral_review.py": {
+      "sha256": "fef5b7839629391db8188df80d729845f472fc59e2c685be5558cd9a80ef99ae",
+      "bytes": 24634
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/provenance/primary_behavior_independent_review_actual_v1/whole_parent_timing.json": {
+      "sha256": "c3ed729d3c30837ff7213c00aa128e9278c9a1179b81d81559d29441f00a6233",
+      "bytes": 460
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/provenance/primary_behavior_presentation_actual_v1/whole_parent_timing.json": {
+      "sha256": "45e162f208f3a6e6d974899466c173be8cade3dee47632b261e1d366f9d49625",
+      "bytes": 450
+    },
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_independent_review_v1/endpoints.csv": {
+      "sha256": "905a5b18ac26c3160cd0626d9467afdc42f6f4e56963399eb358d010fc682310",
+      "bytes": 187023
+    },
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_independent_review_v1/paired_seed_aggregates.csv": {
+      "sha256": "67a4cf3dea27643654dfab8046a2bc5cfa892baf13276a0df93e8db6ae5d03ff",
+      "bytes": 11888
+    },
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_independent_review_v1/paired_seed_differences.csv": {
+      "sha256": "70b7b04b4357bbe1b0a46b70b070bd6b110ec55bb497e3f0a36979f15de1e42d",
+      "bytes": 47100
+    },
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_independent_review_v1/seed_aggregates.csv": {
+      "sha256": "f0fbaa659c5e1b729fc60eff7b8b78d655309ecf191d340cfda7000b6cef9bb2",
+      "bytes": 78357
+    },
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_presented_v1/REPORT.md": {
+      "sha256": "2c30d00f8dd08fccd61c8ce50046086680f395fad1a9e9bc5fc93e80b6ce7572",
+      "bytes": 1144
+    },
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_presented_v1/endpoints.csv": {
+      "sha256": "905a5b18ac26c3160cd0626d9467afdc42f6f4e56963399eb358d010fc682310",
+      "bytes": 187023
+    },
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_presented_v1/endpoints_acc.pdf": {
+      "sha256": "d3692a350cc702cd6814f4477e7c1a2a1c5a8798cb8b4ec4fe17dd78321d8eb1",
+      "bytes": 49161
+    },
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_presented_v1/endpoints_acc.png": {
+      "sha256": "7c88069f7d2f283467cc74ce9ea7e6a8b5d51d08e6ef2ad9f31f6af094173daf",
+      "bytes": 163636
+    },
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_presented_v1/endpoints_acc.svg": {
+      "sha256": "9ec3653a41c6505b8de2ee355e1e4ed1d3692170683f0572f7b6d2bf44bef75f",
+      "bytes": 280583
+    },
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_presented_v1/endpoints_acc_norm.pdf": {
+      "sha256": "eae2b6c043ba4ae49de929c9ad8d043b4610790fdb392658cbaeb24e6d40e3d2",
+      "bytes": 50215
+    },
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_presented_v1/endpoints_acc_norm.png": {
+      "sha256": "9d035119a09d8afceb0a0b422ab506880fe1ac9e59c8cbbcbbc88d7ba8de2883",
+      "bytes": 166870
+    },
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_presented_v1/endpoints_acc_norm.svg": {
+      "sha256": "feb0bca6348958c0e565de87d860f148e4803e085d4a258565bd9ff9cbf10903",
+      "bytes": 285974
+    },
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_presented_v1/fixed_lambda_pairs_acc.pdf": {
+      "sha256": "0c18dc54bb7d156a0341c41a71110e12e135c511cbef5222bbeb23a0aadeafcb",
+      "bytes": 23234
+    },
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_presented_v1/fixed_lambda_pairs_acc.png": {
+      "sha256": "c12ff892fb5338aea49a8983221ede1a883fdfb774ece7508dd149966b2d7efe",
+      "bytes": 80880
+    },
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_presented_v1/fixed_lambda_pairs_acc.svg": {
+      "sha256": "e5346865ef16cdc008ef0c39c1c1ebe52a94d7194303437199056c483158b631",
+      "bytes": 120330
+    },
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_presented_v1/fixed_lambda_pairs_acc_norm.pdf": {
+      "sha256": "b4c0e584f19969c363078b9aed063851c391427841207a81f5fd5ec0ad1d6261",
+      "bytes": 23435
+    },
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_presented_v1/fixed_lambda_pairs_acc_norm.png": {
+      "sha256": "168c10d82d7662e45bdce05ed001c99c302ca0d2a818285dab7e9e0685db5113",
+      "bytes": 81050
+    },
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_presented_v1/fixed_lambda_pairs_acc_norm.svg": {
+      "sha256": "c91c69012b342e7a154e08d612e7f86106f06a067d8fbe8ec3a31a10b2ea48d8",
+      "bytes": 120625
+    },
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_presented_v1/paired_seed_aggregates.csv": {
+      "sha256": "67a4cf3dea27643654dfab8046a2bc5cfa892baf13276a0df93e8db6ae5d03ff",
+      "bytes": 11888
+    },
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_presented_v1/paired_seed_differences.csv": {
+      "sha256": "70b7b04b4357bbe1b0a46b70b070bd6b110ec55bb497e3f0a36979f15de1e42d",
+      "bytes": 47100
+    },
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_presented_v1/seed_aggregates.csv": {
+      "sha256": "f0fbaa659c5e1b729fc60eff7b8b78d655309ecf191d340cfda7000b6cef9bb2",
+      "bytes": 78357
+    },
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_findings_v2/全端点可读表.md": {
+      "sha256": "4e719bdff753d6529d412382bc8b0de759e8a6b00a9eaaff3a4f36bca40acc52",
+      "bytes": 11766
+    },
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_findings_v2/全部冻结配对可读表.md": {
+      "sha256": "200c54dd5aee2641435549c4486c06dd390cb4dd6b780603106b05dcd752f017",
+      "bytes": 6001
+    },
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_findings_v2/讨论.md": {
+      "sha256": "ff791c5a47ed8fe303abaeb97da616599f5cd9bef640b444e2bf7dadfd27c0cc",
+      "bytes": 5207
+    }
+  },
+  "existing_source_five_stat_checks": 327,
+  "root_reread_original_prediction_payload": false,
+  "ROOT_visual_QA": {
+    "contact": "/tmp/grad-research-20261106/worktree/artifacts/provenance/primary_behavior_ROOT_visual_v1/four_figures_contact.png",
+    "scope": "All four actual PNG plots inspected together; labels/axes/seed marks/mean and sample SD/primary vs auxiliary score readable; no clipping seen. PDF and SVG hashes checked, not separately raster-inspected."
+  },
+  "boundaries": [
+    "Conditional item intervals are unadjusted; HellaSwag activity dependence uncorrected.",
+    "Three seed SD is not item CI or population training-seed uncertainty.",
+    "Net accuracy gains can coexist with correct-to-wrong forgetting.",
+    "Final and math-validation best kept separate with actual exposure.",
+    "No other phase scores read and no selection or model inference added."
+  ],
+  "root_body_wall_seconds": 0.008984386920928955,
+  "manual_visual_and_interpretation_total_seconds": null,
+  "root_body_user_cpu_seconds": 0.0057339999999999995,
+  "root_body_sys_cpu_seconds": 0.0021790000000000004
+}

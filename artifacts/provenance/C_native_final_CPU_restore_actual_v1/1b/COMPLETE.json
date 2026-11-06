@@ -1,0 +1,134 @@
+{
+  "status": "bound_metadata_only_no_execution_authority",
+  "at_utc": "2026-11-06T22:52:48.484880+00:00",
+  "sources": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_CPU_restore_actual_v1/1b/sources.json",
+    "sha256": "7451052206dc2dd51671adfc425939730a1564634e7d2fcacc90b98cc0953e5a"
+  },
+  "bound_plan": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_CPU_restore_actual_v1/1b/bound_plan.json",
+    "sha256": "820774f9b6bf9a2d54db73460a126cbcbf62e2a5be4cf6bb9d064340b52dd4fe"
+  },
+  "model": "pythia-1b",
+  "fixed_run_id": "extended_v2_pythia_1b_m32_formal_B4_s11_w0p05",
+  "qa_directory": "/tmp/grad-research-20261106/reproduction_qa/native_Cfinal_1b_B4s11_final_v1",
+  "qa_directory_absent": true,
+  "archive": "/data/202610/7kb/research_delivery/extended_C_1b_final_weights_lossless_v1.tar",
+  "archive_current_stat": {
+    "device": 106,
+    "inode": 663438738,
+    "bytes": 66947573760,
+    "uid": 11471,
+    "gid": 11471,
+    "mode": "0o600",
+    "mtime_ns": 1794005436170625678,
+    "ctime_ns": 1794005436170625678
+  },
+  "historical_full_TAR_sha256": "c47360c0a50d2a5a024a4dc417843aad37269567a5f7f2a602e051d127e39ac8",
+  "selected_members_count": 12,
+  "selected_member_bytes_known": 5175087743,
+  "tool_members_with_manifest_size_unknown": [
+    "tools/scripts/archive_model_weights.py",
+    "tools/src/replay_study/weight_archive.py",
+    "tools/src/replay_study/__init__.py"
+  ],
+  "model_raw_bytes": 4047126528,
+  "model_fingerprint": {
+    "sha256_model_state": "da1fe7db068d1111f973920ac59fb6c0ad70914c288cfdef434db9d7bef42d82",
+    "state_elements": 1011781632
+  },
+  "tensor_count": 196,
+  "source_checkpoint_sha256": "8619261b6559ce90c198a2f722bc00baeb52460b4b812b73e3870763fd2dda1c",
+  "actual_exposure": {
+    "checkpoint_step": 3058,
+    "target_prediction_tokens": 100000000,
+    "replay_prediction_tokens": 5000000,
+    "full_training_target_prediction_tokens": 100000000,
+    "full_training_replay_prediction_tokens": 5000000
+  },
+  "resource_policy": {
+    "required_scratch_bytes": 11369697919,
+    "required_reclaim_aware_memory_bytes": 20483473408,
+    "cpu_threads": 2,
+    "max_wall_seconds": 600,
+    "deadline_utc": "2026-11-07T02:56:32+00:00",
+    "admission_margin_seconds": 300
+  },
+  "source_audit_summary": {
+    "actual_complete_phase_final_logical": 24,
+    "unique": 21,
+    "aliases": 3,
+    "native6": true,
+    "all24_strict_integer_rc0_no_stop_actual_argv_source_binding": true,
+    "three_actual_D_B4_source_and_fingerprint_bound_pairs_in_accepted_publication_metadata": true,
+    "publication_actual_passed": true,
+    "ROOT_acceptance": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C1B_final_publication_actual_v1/ROOT_acceptance.json",
+      "sha256": "58f91602dc3e933ef8b63045c13e11ecf13e07f3226f6558dd09eedd5e515fd3"
+    },
+    "metadata_review": {
+      "path": "/tmp/grad-research-20261106/worktree/results/C1B_final_publication_metadata_acceptance_v1.json",
+      "sha256": "6cf048d7bdd0bdea4eab7965f2d68e9cc46bf603a1573609535aed591e0426c4"
+    }
+  },
+  "restoration_order": "1B first; this plan is preparation only; ROOT separate actual resource/TRUE authority still required before any execute; C2.8 remains pending later",
+  "runner": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/restore_native_final.py",
+    "sha256": "bfc748c776f18dff86c378c5c55ca72dbc63995cfc40ddfb96eb919486610db1"
+  },
+  "checker": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/check_restored.py",
+    "sha256": "6b7df26abef4ce0bd09dabbd7878a5a9585c8681d3cb97115f912dd542d3fa8d"
+  },
+  "wrapper": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/run_whole_child.py",
+    "sha256": "2a2d09daac8504b099a5cd9682dff722bbad0519922ba39beedf4e96e9498266"
+  },
+  "large_payload_bytes_read": 0,
+  "TRUE_authority_created": false,
+  "extraction_or_restore_executed": false,
+  "QA_created": false,
+  "resource_gate_or_cachehint_executed": false,
+  "whole_bind_timing": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_CPU_restore_actual_v1/1b/bind_whole_child_timing.json",
+    "sha256": "91c6d0caccd18c657c372b8ba7e7f1d3e865c673750d7d89814727fb0363b54c"
+  },
+  "manual_source_map_preparation_and_sealing_whole_seconds": null,
+  "files": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_CPU_restore_actual_v1/1b/bind_invocation.json",
+      "bytes": 773,
+      "sha256": "22a1a3b3d57adf45a3adcd4e8ea04f537acdc0997e012f6b22c4711a8f73702f"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_CPU_restore_actual_v1/1b/bind_stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_CPU_restore_actual_v1/1b/bind_stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_CPU_restore_actual_v1/1b/bind_whole_child_timing.json",
+      "bytes": 396,
+      "sha256": "91c6d0caccd18c657c372b8ba7e7f1d3e865c673750d7d89814727fb0363b54c"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_CPU_restore_actual_v1/1b/bound_plan.json",
+      "bytes": 13483,
+      "sha256": "820774f9b6bf9a2d54db73460a126cbcbf62e2a5be4cf6bb9d064340b52dd4fe"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_CPU_restore_actual_v1/1b/original_sources_FALSE_TEMPLATE.json",
+      "bytes": 1348,
+      "sha256": "a32206566232d164d16d231d8a974057f02fb6112e7ccac3d0c85bf9df103bd6"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_CPU_restore_actual_v1/1b/sources.json",
+      "bytes": 1766,
+      "sha256": "7451052206dc2dd51671adfc425939730a1564634e7d2fcacc90b98cc0953e5a"
+    }
+  ]
+}

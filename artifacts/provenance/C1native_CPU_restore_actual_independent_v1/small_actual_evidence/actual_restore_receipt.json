@@ -1,0 +1,179 @@
+{
+  "status": "passed",
+  "model": "pythia-1b",
+  "run_id": "extended_v2_pythia_1b_m32_formal_B4_s11_w0p05",
+  "plan": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_CPU_restore_actual_v1/1b/bound_plan.json",
+    "sha256": "820774f9b6bf9a2d54db73460a126cbcbf62e2a5be4cf6bb9d064340b52dd4fe"
+  },
+  "authority": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_CPU_restore_actual_v1/1b/ROOT_execution_authority.json",
+    "sha256": "12cfd458053fd02e0cd3f9e5a6a9bec1ed32ff431b7c178e3e2242b9e4a41c19"
+  },
+  "resource_admission": {
+    "disk_free_bytes": 22141388288000,
+    "memory_max_bytes": 1030792151040,
+    "memory_current_bytes": 1022991732736,
+    "anon_bytes": 11240558592,
+    "shmem_bytes": 25885483008,
+    "unevictable_bytes": 0,
+    "file_bytes": 991776043008,
+    "active_file_bytes": 940305797120,
+    "inactive_file_bytes": 25584709632,
+    "dirty_bytes": 24530944,
+    "writeback_bytes": 0,
+    "conservative_clean_inactive_credit_bytes": 25560178688,
+    "conservative_available_bytes": 33360596992,
+    "memory_events": {
+      "low": 0,
+      "high": 0,
+      "max": 226761,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0
+    },
+    "caveat": "Reclaim proxy and admission check, not a reservation or peak-RSS guarantee"
+  },
+  "stages": [
+    {
+      "name": "decode",
+      "argv": [
+        "/usr/bin/python",
+        "-I",
+        "tools/scripts/archive_model_weights.py",
+        "--threads",
+        "2",
+        "decode",
+        "--archive",
+        "weights/extended_v2_pythia_1b_m32_formal_B4_s11_w0p05.xor.zip",
+        "--base",
+        "base/pythia-1b-final/model.safetensors",
+        "--output",
+        "restored/B4_seed11_final.pt"
+      ],
+      "returncode": 0,
+      "wall_seconds": 48.18197798356414,
+      "child_user_seconds": 38.691562,
+      "child_sys_seconds": 10.617144,
+      "timer_relationship": "Sequential stage nested in whole runner wall/CPU"
+    },
+    {
+      "name": "independent_fingerprint",
+      "argv": [
+        "/usr/bin/python",
+        "-I",
+        "check_restored.py"
+      ],
+      "returncode": 0,
+      "wall_seconds": 8.375373847782612,
+      "child_user_seconds": 6.8866119999999995,
+      "child_sys_seconds": 1.5812749999999998,
+      "timer_relationship": "Sequential stage nested in whole runner wall/CPU"
+    }
+  ],
+  "network_calls_requested": false,
+  "GPU_used": false,
+  "original_checkpoint_or_livebase_opened": false,
+  "whole_source_TAR_rehash": false,
+  "extraction": {
+    "files": [
+      {
+        "member": "base/pythia-1b-final/model.safetensors",
+        "sha256": "7e6dff44849e036a73296368e663bd9420009977f03a8d4d747b234264f37107",
+        "bytes": 2090701528
+      },
+      {
+        "member": "base/pythia-1b-final/tokenizer_config.json",
+        "sha256": "70e38394e494931c6f773ba41e19460dd4436526b852207367f04341b4066d3f",
+        "bytes": 396
+      },
+      {
+        "member": "base/pythia-1b-final/special_tokens_map.json",
+        "sha256": "6f50ab5a5a509a1c309d6171f339b196a900dc9c99ad0408ff23bb615fdae7ad",
+        "bytes": 99
+      },
+      {
+        "member": "base/pythia-1b-final/config.json",
+        "sha256": "302d6702a29de1039066e41404877fb8c53b7ddc82e88f9aba277f230086cfe0",
+        "bytes": 569
+      },
+      {
+        "member": "base/pythia-1b-final/tokenizer.json",
+        "sha256": "c24618a1b3e6a38167beff1c72cffd126c3a66254347304b50547d12c5f25624",
+        "bytes": 2113710
+      },
+      {
+        "member": "base/pythia-1b-final/README.md",
+        "sha256": "eb4025893f212f2baf2fe92be87d26c028593e86b0e3572b7ac5114080bbb6dc",
+        "bytes": 13568
+      },
+      {
+        "member": "extended_C_final_manifest.json",
+        "sha256": "aadaa664c203f517b62f24b8293fb630dad732d5be12b109a4550ac8a1dfa1b3",
+        "bytes": 941529
+      },
+      {
+        "member": "weights/extended_v2_pythia_1b_m32_formal_B4_s11_w0p05.xor.zip",
+        "sha256": "168acf2a311828953bb7acb07f8442b1b19498c78586a2b93156c6705261ce9c",
+        "bytes": 3081287516
+      },
+      {
+        "member": "metadata/extended_v2_pythia_1b_m32_formal_B4_s11_w0p05.source_metadata.pt",
+        "sha256": "044972661616757ab1e0260d035c106a0bbca27116b69aff8337414b8a1a0033",
+        "bytes": 28828
+      },
+      {
+        "member": "tools/scripts/archive_model_weights.py",
+        "sha256": "28c5841cae8e7fd87d8cb62e7f756dad40ce15cb558710c31e48dfb45fde668a",
+        "bytes": 2085
+      },
+      {
+        "member": "tools/src/replay_study/weight_archive.py",
+        "sha256": "3c2bcf9e38773ae4f69c27f85f342356dbefcb53d817be4321da6e9c4e550e1a",
+        "bytes": 15264
+      },
+      {
+        "member": "tools/src/replay_study/__init__.py",
+        "sha256": "b2dce8cc5ea80a67a90b1798232163a7684874487b5ea4102e60851c7017f520",
+        "bytes": 65
+      }
+    ],
+    "selected_member_payload_bytes": 5175105157,
+    "source_TAR_bytes_returned_to_Python": 5175337756,
+    "scope": "Selected members plus TAR headers; serialized read bytes, not measured physical disk traffic",
+    "full_TAR_SHA_recomputed": false,
+    "wall_seconds": 27.711254976689816,
+    "process_cpu_seconds": 12.040081083999999,
+    "timer_relationship": "Parent region nested in whole runner"
+  },
+  "independent_check": {
+    "status": "passed",
+    "model": "pythia-1b",
+    "run_id": "extended_v2_pythia_1b_m32_formal_B4_s11_w0p05",
+    "fingerprint": {
+      "sha256_model_state": "da1fe7db068d1111f973920ac59fb6c0ad70914c288cfdef434db9d7bef42d82",
+      "state_elements": 1011781632
+    },
+    "tensor_count": 196,
+    "independent_tensor_payload_bytes_hashed": 4047126528,
+    "fresh_new_restored_file_sha256": "b9480d726b7d126c194ca8f5e23c921951a40abf696e883e3161f38c0992233d",
+    "fresh_new_restored_serialized_bytes_hashed": 4047222722,
+    "source_checkpoint_sha256": "8619261b6559ce90c198a2f722bc00baeb52460b4b812b73e3870763fd2dda1c",
+    "original_checkpoint_read": false,
+    "archive_only_native_base": true,
+    "original_CP_fresh_uint8_comparison": false,
+    "Adam_resume_verified": false,
+    "GPU_used": false,
+    "wall_seconds": 7.006565250456333,
+    "process_cpu_seconds": 7.0627382899999995,
+    "timer_scope": "Checker body after imports; nested in external checker and whole recovery child timers"
+  },
+  "runner_body_wall_seconds": 84.27170445770025,
+  "parent_self_user_seconds": 4.2502819999999994,
+  "parent_self_sys_seconds": 7.806102,
+  "children_user_seconds": 45.578174,
+  "children_sys_seconds": 12.198419,
+  "children_peak_RSS_bytes_cumulative": 6555627520,
+  "accounting": "Body timer excludes interpreter/import/preflight; external whole-child timer is inclusive. Never sum nested stages with parent.",
+  "claim": "One exact model-only recovery; no new original checkpoint uint8 comparison, optimizer recovery, Adam resume, or training"
+}

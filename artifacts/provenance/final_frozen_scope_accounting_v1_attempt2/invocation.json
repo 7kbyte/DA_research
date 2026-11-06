@@ -1,0 +1,37 @@
+{
+  "argv": [
+    "/usr/bin/python",
+    "/tmp/grad-research-20261106/worktree/scripts/describe_final_frozen_scope.py",
+    "--final-spec",
+    "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/final_spec.json",
+    "--successor-queue",
+    "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/successor/queue.json",
+    "--output-root",
+    "/tmp/grad-research-20261106/worktree/results/final_frozen_scope_v1",
+    "--registry",
+    "primary=/tmp/grad-research-20261106/worktree/configs/formal_deterministic_registry.json",
+    "--registry",
+    "A=/tmp/grad-research-20261106/worktree/configs/supplemental_v1_A_registry.json",
+    "--registry",
+    "B=/tmp/grad-research-20261106/worktree/configs/supplemental_v1/activated/B_conditional_bank_variance/executor_registry.json",
+    "--registry",
+    "C410=/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal_active_registry.json",
+    "--registry",
+    "C1B=/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal_active_registry.json",
+    "--registry",
+    "C2p8B=/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_h25m_formal_active_registry.json"
+  ],
+  "cwd": "/tmp/grad-research-20261106/worktree",
+  "env_overrides": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "OMP_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2"
+  },
+  "source": {
+    "path": "/tmp/grad-research-20261106/worktree/scripts/describe_final_frozen_scope.py",
+    "sha256": "46ac0e0e70d7275ca9a991e6f044f476da928bbc227500f3d17e94ce0c34b8bf"
+  },
+  "scope": "metadata-only frozen scope census; no result/state or model/archive payloads; no tests",
+  "prior_failed_attempt": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_frozen_scope_accounting_v1"
+}

@@ -1,0 +1,466 @@
+{
+  "complete": true,
+  "manifest": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+  "manifest_sha256": "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+  "logical_endpoints": 72,
+  "inference_jobs": 67,
+  "strata": [
+    "role",
+    "phase_name",
+    "data_family",
+    "model_tag",
+    "baseline_group"
+  ],
+  "primary_metric": "acc_norm",
+  "auxiliary_metric": "acc",
+  "bootstrap_replicates": 5000,
+  "bootstrap_seed": 20261106,
+  "conditional_uncertainty_scope": "Conditional on the fixed trained checkpoint(s); question sampling does not create training replicates.",
+  "question_assumption": "IID/exchangeable questions; same-source activity/context dependence is not corrected",
+  "training_seed_report": "individual values and sample SD ddof=1; final/best and aliases are not additional training seeds",
+  "full_training_cost": "Read the SHA-bound completed summary once per physical training run; do not scale to best exposure or sum aliases",
+  "evidence": {
+    "behavior_pythia-410m_109f59e1e08b4d91880e_initial": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/baselines/109f59e1e08b4d91880e04fc18414e3548cd0718cfb5b3fdab10b946d8639ab1.json",
+      "sha256": "4ea8e528a3badb27170cee520d4f6a5e6a4b07b18d092913315cbccdb19a05df",
+      "origin_manifest_sha256": "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934"
+    },
+    "primary__formal_deterministic_B0_s11_b0_w0__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B0_s11_b0_w0/final.json",
+      "sha256": "36c954f52652d950390ad19e17622b46aa629cf1c42364c58662555f7fd453d4",
+      "inference_job_id": "behavior_pythia-410m_0d6b70d23101acf3ab481dbd",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B0_s11_b0_w0__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B0_s11_b0_w0/best.json",
+      "sha256": "605f77eab9f8836c37e88be25aa6f873f2d5ed977c1d17b3edbc6d022c46d7ad",
+      "inference_job_id": "behavior_pythia-410m_81f5597742c6b49d379f0682",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B1_s11_b0p05_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B1_s11_b0p05_w0p05/final.json",
+      "sha256": "c8253b624fb85624b605ba0f5d5eddb13d03e847f7b180aeae044d06d4db7270",
+      "inference_job_id": "behavior_pythia-410m_03c86e340f2ce6725302a0b5",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B1_s11_b0p05_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B1_s11_b0p05_w0p05/best.json",
+      "sha256": "6768a4c63f9457ba11aaf576045014195dc6c5045089b175621002ee95a83463",
+      "inference_job_id": "behavior_pythia-410m_5754704bb9fafe29307de45c",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B2_s11_b0p05_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B2_s11_b0p05_w0p05/final.json",
+      "sha256": "442e65bf5cea0593659b6a3db4b82929ad3f9a4381bbe14cdcbc340600e397c3",
+      "inference_job_id": "behavior_pythia-410m_21d1c45e8a6cd75d4f0c9d8d",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B2_s11_b0p05_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B2_s11_b0p05_w0p05/best.json",
+      "sha256": "acbb8dbe22689a741e25903f780c7a69b47d4203d6e8fe02749eb453334d0331",
+      "inference_job_id": "behavior_pythia-410m_f1166a0ba06df14ebc75b8b3",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B3_s11_b0p05_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B3_s11_b0p05_w0p05/final.json",
+      "sha256": "b615171e46ed9e7180fd18f77bc58543c4b8f4cb3ea726445a896ca766a0a421",
+      "inference_job_id": "behavior_pythia-410m_9e3462c83fc01313314b609a",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B3_s11_b0p05_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B3_s11_b0p05_w0p05/best.json",
+      "sha256": "b4cb7a04c069e69f71d9b9ab44d0a2bc9af1048f97c4ca1ca9cfb2a55b7b2b49",
+      "inference_job_id": "behavior_pythia-410m_871e750917678769ac02e42e",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B4_s11_b0p05_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p05_w0p05/final.json",
+      "sha256": "2db7abcc241f9f761eae1f49d9bccee9d16540bb23b7aab7c54fd975b61d910c",
+      "inference_job_id": "behavior_pythia-410m_20e30088deeb14fd17faa25a",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B4_s11_b0p05_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p05_w0p05/best.json",
+      "sha256": "147f570c8621369bbab10282a198c51f21096279a812ff6504b0bc4a7d1e3252",
+      "inference_job_id": "behavior_pythia-410m_2a7b4a17bc6a7cf4ddd114af",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_D_s11_b0p05_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_D_s11_b0p05_w0p05/final.json",
+      "sha256": "1a688491ea87d6d365e52a6084ed41d38759b5cab6f30acb8e308d014110fe48",
+      "inference_job_id": "behavior_pythia-410m_20e30088deeb14fd17faa25a",
+      "inference_alias_of": "primary__formal_deterministic_B4_s11_b0p05_w0p05__final"
+    },
+    "primary__formal_deterministic_D_s11_b0p05_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_D_s11_b0p05_w0p05/best.json",
+      "sha256": "44ef5cfaf37935b618b2b9b110c563ca090e176f9c660aab6efe80df836bd5b5",
+      "inference_job_id": "behavior_pythia-410m_2a7b4a17bc6a7cf4ddd114af",
+      "inference_alias_of": "primary__formal_deterministic_B4_s11_b0p05_w0p05__best"
+    },
+    "primary__formal_deterministic_M_s11_b0p05_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p05_w0p05/final.json",
+      "sha256": "020546a30ff4863d628be19a2ac8bc66e1ca5ae3afdc59ea183c9ea2c815fed3",
+      "inference_job_id": "behavior_pythia-410m_1945578d9cf55b7983c503c2",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_M_s11_b0p05_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p05_w0p05/best.json",
+      "sha256": "c8e2bb4a1c20d02faf2c92f905d498ac44100da733328ffe04556c20a31e93b7",
+      "inference_job_id": "behavior_pythia-410m_cda0150f00f93e7901d8d64b",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_C_s11_b0p05_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_C_s11_b0p05_w0p05/final.json",
+      "sha256": "f71fe962e5d383cce1021856bf7737210a5bb98f3ec22fdf64a0640c621e1d57",
+      "inference_job_id": "behavior_pythia-410m_6098b25d2f42c2a3f4f01f13",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_C_s11_b0p05_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_C_s11_b0p05_w0p05/best.json",
+      "sha256": "764e1b790ed2e8fca4a53b72c651e743bad2352d22f0b26952ed82f438fc314e",
+      "inference_job_id": "behavior_pythia-410m_e45f3620e77bc33af648ab33",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B0_s22_b0_w0__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B0_s22_b0_w0/final.json",
+      "sha256": "470923149a87a60f8981eb88515fcbd8891010ab1b25232dcff0de0e8bf02f93",
+      "inference_job_id": "behavior_pythia-410m_239e145fe95a10f0593bae1f",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B0_s22_b0_w0__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B0_s22_b0_w0/best.json",
+      "sha256": "5b8394e68d88411c552be88645619542474589dc7730fd694629db582858bcb8",
+      "inference_job_id": "behavior_pythia-410m_c3d63d82015ebc1e6a28ab7b",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B1_s22_b0p05_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B1_s22_b0p05_w0p05/final.json",
+      "sha256": "53283c51ee8ab9e77b0ae8be6f4502edb03adecbd62e439d1ac4a7a590c558ec",
+      "inference_job_id": "behavior_pythia-410m_a3645eb603fc2812652ddba4",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B1_s22_b0p05_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B1_s22_b0p05_w0p05/best.json",
+      "sha256": "9c3a320a8454755794e9a3a6e6f63a08c51434b3c2563036f6661802ef68c312",
+      "inference_job_id": "behavior_pythia-410m_d9f9c1c4e58482a18e1e521d",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B2_s22_b0p05_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B2_s22_b0p05_w0p05/final.json",
+      "sha256": "e9666ff6cc122a37c8670ffa8886e7ed21e2ca67e28cbb330f9b3381bffc88c5",
+      "inference_job_id": "behavior_pythia-410m_6b10bd4974c7b56e491c86d0",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B2_s22_b0p05_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B2_s22_b0p05_w0p05/best.json",
+      "sha256": "b633388ace361eb20004b41fd2f0e9ae4ee194c89317b53d4a217e44aead0a0f",
+      "inference_job_id": "behavior_pythia-410m_9dabcca45c258396099ca25e",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B3_s22_b0p05_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B3_s22_b0p05_w0p05/final.json",
+      "sha256": "9ad22db05721b54768d4a30da94033cb972ed67aede0bcc2cd148039df565605",
+      "inference_job_id": "behavior_pythia-410m_679add94558c698ae4218d6e",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B3_s22_b0p05_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B3_s22_b0p05_w0p05/best.json",
+      "sha256": "dafafd408bdb80e073767a3b8d1087000b3cdca60244dc71dfbc4e0968ad77f3",
+      "inference_job_id": "behavior_pythia-410m_ef6b464c5d40261530074bec",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B4_s22_b0p05_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p05_w0p05/final.json",
+      "sha256": "8b0abe0738a1300963beb9cb56ed557f16c8b64d57980b2e4d77782935f4d6d6",
+      "inference_job_id": "behavior_pythia-410m_84cabb3e054d4d7079dba5f3",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B4_s22_b0p05_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p05_w0p05/best.json",
+      "sha256": "98ca22ea26b779741f965522c7cf9adaa724b708a6de092791517fead1485b07",
+      "inference_job_id": "behavior_pythia-410m_45a203054fb62198c8b02e36",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_D_s22_b0p05_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_D_s22_b0p05_w0p05/final.json",
+      "sha256": "1b120ba7db21ff14a72058f85b164eeec7b6406ccf187b792661608176a62760",
+      "inference_job_id": "behavior_pythia-410m_84cabb3e054d4d7079dba5f3",
+      "inference_alias_of": "primary__formal_deterministic_B4_s22_b0p05_w0p05__final"
+    },
+    "primary__formal_deterministic_D_s22_b0p05_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_D_s22_b0p05_w0p05/best.json",
+      "sha256": "01f2e39f5156ae5264937fc9f4dc3ed5fb8a09873a0f9f68120d79aab78a085c",
+      "inference_job_id": "behavior_pythia-410m_45a203054fb62198c8b02e36",
+      "inference_alias_of": "primary__formal_deterministic_B4_s22_b0p05_w0p05__best"
+    },
+    "primary__formal_deterministic_M_s22_b0p05_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p05_w0p05/final.json",
+      "sha256": "49b4868a8186d38d96582580e8b1acb458c53b6475a6a68df0618f809d3d4021",
+      "inference_job_id": "behavior_pythia-410m_edd18a7a0e91bb0cc23bf7cb",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_M_s22_b0p05_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p05_w0p05/best.json",
+      "sha256": "e046a49167b57b5a1bd28d2b7f2a22096cf0dee810bd7a137f1fb93a0b6a08c7",
+      "inference_job_id": "behavior_pythia-410m_d77f01e4021dd11113e047e3",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_C_s22_b0p05_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_C_s22_b0p05_w0p05/final.json",
+      "sha256": "9284d6fee7f3897b13dc0a6fcd747e5067ab8f7a9e7f9eb09f157a417262efd9",
+      "inference_job_id": "behavior_pythia-410m_bd039a914d840ba471d12bd7",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_C_s22_b0p05_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_C_s22_b0p05_w0p05/best.json",
+      "sha256": "5fce73b26728cecb105dc25fccd797fb21c6553617d0fb06b7203e6c40f2f56b",
+      "inference_job_id": "behavior_pythia-410m_d524a8403747f6b475f3d242",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B0_s33_b0_w0__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B0_s33_b0_w0/final.json",
+      "sha256": "e7137cdc20e79611ce7263586d550273c41c01e9ac80260c0d04c388f2168ac3",
+      "inference_job_id": "behavior_pythia-410m_7f7be88c06a9e7212e01cdfe",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B0_s33_b0_w0__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B0_s33_b0_w0/best.json",
+      "sha256": "fb60c90db347eb76924ce5e99ad5a48cb2aad8b25736d7645af9274c3be8f6b9",
+      "inference_job_id": "behavior_pythia-410m_baeaa464f9d8c39af73e14bf",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B1_s33_b0p05_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B1_s33_b0p05_w0p05/final.json",
+      "sha256": "c19d48e55a4cfb51dd5c2196cea44774ac147c74cd67bb83d9b6e3042facdf4f",
+      "inference_job_id": "behavior_pythia-410m_376a64a88c988a58d405964b",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B1_s33_b0p05_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B1_s33_b0p05_w0p05/best.json",
+      "sha256": "466e320dd6560d7bd90ce770abf5aa44f7dcd09f659a0cd3b035f248ffb7ff9d",
+      "inference_job_id": "behavior_pythia-410m_ffeb89ecb7eca94d85bc87d6",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B2_s33_b0p05_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B2_s33_b0p05_w0p05/final.json",
+      "sha256": "ff319ee316e65cb0b47cf71dce84f13b52ab3c9490574bc18aa3e9bb3de4a2ec",
+      "inference_job_id": "behavior_pythia-410m_eba3625b55d2d90f7da39f1d",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B2_s33_b0p05_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B2_s33_b0p05_w0p05/best.json",
+      "sha256": "031ef96710d1b2dd2afc746c87c397f2b3ed8c746f4a73a47fe1f1c31841448e",
+      "inference_job_id": "behavior_pythia-410m_b9ad312636fea636d20ace85",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B3_s33_b0p05_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B3_s33_b0p05_w0p05/final.json",
+      "sha256": "09d9eea93962aef77d6d5d10e875b1268c71bb9354fc87bd2abc5cc85894deaa",
+      "inference_job_id": "behavior_pythia-410m_3587c1ca60978c1e77aab9aa",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B3_s33_b0p05_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B3_s33_b0p05_w0p05/best.json",
+      "sha256": "4ae188d1c3d5caecbb19ea49c11cb6913139a5686cb1af7dc4d7d90fd39e529a",
+      "inference_job_id": "behavior_pythia-410m_ebae09af74d960687e4ab8cb",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B4_s33_b0p05_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p05_w0p05/final.json",
+      "sha256": "aad98e19f5741991568de2e5e1cb1594e10736af06f1cfe2551314b6ce80f57f",
+      "inference_job_id": "behavior_pythia-410m_f4fdcb2bf55e65af98f37b40",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B4_s33_b0p05_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p05_w0p05/best.json",
+      "sha256": "a35ef46fe0f21b41863848787ae0dd188658525e472a31f8764737f6885b503b",
+      "inference_job_id": "behavior_pythia-410m_a0e6f1bedc37d2636c9803a1",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_D_s33_b0p05_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_D_s33_b0p05_w0p05/final.json",
+      "sha256": "5c49f27997e86ed67674d5459abbec333291e89fbee6c5ed2840312adc46ddc4",
+      "inference_job_id": "behavior_pythia-410m_f4fdcb2bf55e65af98f37b40",
+      "inference_alias_of": "primary__formal_deterministic_B4_s33_b0p05_w0p05__final"
+    },
+    "primary__formal_deterministic_D_s33_b0p05_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_D_s33_b0p05_w0p05/best.json",
+      "sha256": "f202174868f8857a8b3be8639daaf5264da0576a82c5d34ff735524079dd6f23",
+      "inference_job_id": "behavior_pythia-410m_a0e6f1bedc37d2636c9803a1",
+      "inference_alias_of": "primary__formal_deterministic_B4_s33_b0p05_w0p05__best"
+    },
+    "primary__formal_deterministic_M_s33_b0p05_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p05_w0p05/final.json",
+      "sha256": "852bec73da0e45b96a2f1de8099b60d711f7f96b5a163d7c3de64eb737872ef8",
+      "inference_job_id": "behavior_pythia-410m_669888b7525d20dcddac7543",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_M_s33_b0p05_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p05_w0p05/best.json",
+      "sha256": "660030270f951f7b861f4d2052e60bbc6178e9dcda126cd612aae6b64c302a9c",
+      "inference_job_id": "behavior_pythia-410m_9c3dabaa5a97eb1e9b58e3cc",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_C_s33_b0p05_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_C_s33_b0p05_w0p05/final.json",
+      "sha256": "2df1421910a89d81fe2b4742e96eeb6d5f226b50f53787b7c66db5ddcfa5f931",
+      "inference_job_id": "behavior_pythia-410m_4b1568f51546c2dafa401967",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_C_s33_b0p05_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_C_s33_b0p05_w0p05/best.json",
+      "sha256": "09bd16bf4453b270f0f1e81907f38ed6857d21916af88a08b0b417d028deb611",
+      "inference_job_id": "behavior_pythia-410m_24d145003f678131dea93df8",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B4_s11_b0p01_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p01_w0p05/final.json",
+      "sha256": "d53ab11faca27cac0351db9bb9f3b3c80c7f8370a46627b933f0ef4a81258e95",
+      "inference_job_id": "behavior_pythia-410m_b4bfa082bc46d591812e1f4a",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B4_s11_b0p01_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p01_w0p05/best.json",
+      "sha256": "93497c564117ff5710a60c7f9d2254866c1a45887997fff0e57d6dd08229466d",
+      "inference_job_id": "behavior_pythia-410m_591b6695d9ec7667145dddb6",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B4_s22_b0p01_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p01_w0p05/final.json",
+      "sha256": "47a21f301b8abc21f1ad5073783e75192547e24b398c0868d95bb64a1747e7ea",
+      "inference_job_id": "behavior_pythia-410m_94bc686c88a124efbe36e4b8",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B4_s22_b0p01_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p01_w0p05/best.json",
+      "sha256": "e995ace1731f808b4e08639e07b05d056a27d2e2687b44aba1f6e9bc50a92711",
+      "inference_job_id": "behavior_pythia-410m_5cad0117e8db57783fb122a9",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B4_s33_b0p01_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p01_w0p05/final.json",
+      "sha256": "2ea13adbff27943ccd746076ac7e86d0daa889502e670f95b7956fdea319350e",
+      "inference_job_id": "behavior_pythia-410m_cebfac194ce8eb163e861aad",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B4_s33_b0p01_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p01_w0p05/best.json",
+      "sha256": "cf2c6a5ec9a2351c6e128c94c707b60fa28049f1b55eb324c20ae8678cd3ee38",
+      "inference_job_id": "behavior_pythia-410m_28bb6575e248ba3af09d8eaf",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B4_s11_b0p1_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p1_w0p05/final.json",
+      "sha256": "22b6e47a9f24e81c0aa40b36215f524b5c133a18244e9ed1221fbcf747ea7ecd",
+      "inference_job_id": "behavior_pythia-410m_183876307eb0f3df2a2d5001",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B4_s11_b0p1_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p1_w0p05/best.json",
+      "sha256": "faa949586aa372b67a8452e3c532de84377043565597f0851401ffa177afe94a",
+      "inference_job_id": "behavior_pythia-410m_fe935f8097dc64a134c09f75",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B4_s22_b0p1_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p1_w0p05/final.json",
+      "sha256": "d298a35912fde66d1f90837bc4f877f6de6173c0570320aef459d646fc344cd4",
+      "inference_job_id": "behavior_pythia-410m_7656c4ed208b72d9c8b5ba16",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B4_s22_b0p1_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B4_s22_b0p1_w0p05/best.json",
+      "sha256": "fb9a8eba533e1a1f7415caf4b856abc32ce0af3427f54f77affbbd2de2bac0c5",
+      "inference_job_id": "behavior_pythia-410m_a86738054fde45bdbd476aed",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B4_s33_b0p1_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p1_w0p05/final.json",
+      "sha256": "cf79904ced1919826a4b827af60be4d7519fe46152ef4ef6e0e3e98b2f115ae7",
+      "inference_job_id": "behavior_pythia-410m_689c416c93afe6919cd9d9bf",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_B4_s33_b0p1_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B4_s33_b0p1_w0p05/best.json",
+      "sha256": "3f811ee8019f6385cca06accf39686738d677c38dbf35bb90a675ab34d116a91",
+      "inference_job_id": "behavior_pythia-410m_3a43a82fea3fc55a8678e995",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_M_s11_b0p01_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p01_w0p05/final.json",
+      "sha256": "b9fc9f11d14e4ec007b196831ead97ea7edaaa2ed3567544cc0b06e426cf9d6b",
+      "inference_job_id": "behavior_pythia-410m_4d2e81e85fc594cadebf4033",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_M_s11_b0p01_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p01_w0p05/best.json",
+      "sha256": "51f55bb39c9bbf53f4885f9f07118d36db9963290fc044106b8aeee8b2042f6b",
+      "inference_job_id": "behavior_pythia-410m_ca64df5cd643d909195cf866",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_M_s22_b0p01_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p01_w0p05/final.json",
+      "sha256": "c8f595d6bab89044679af77002d797cddbdfbe03965baf1163408262acab71f4",
+      "inference_job_id": "behavior_pythia-410m_c32efa44e995caa7debb1aa3",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_M_s22_b0p01_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p01_w0p05/best.json",
+      "sha256": "7165a87656e7bb05d881457b8fad0156db6cb7c1aaa606be51eacaeddd309cd8",
+      "inference_job_id": "behavior_pythia-410m_b63bad2fbd4a56559bcf7b95",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_M_s33_b0p01_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p01_w0p05/final.json",
+      "sha256": "065e1372a3fb2d4b25712c3987389a0ee5f47dfd8973e1c3ed9d210913703bc6",
+      "inference_job_id": "behavior_pythia-410m_2f96de78bb1d829d0b062fd8",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_M_s33_b0p01_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p01_w0p05/best.json",
+      "sha256": "3c05240069eebca291418beed0d2d36fae8a602363689d3bd5df6bfbc5e88cb0",
+      "inference_job_id": "behavior_pythia-410m_0a743a113e9cf6d265b892da",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_M_s11_b0p1_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p1_w0p05/final.json",
+      "sha256": "bbc58795b687cb2bed12e45e965c7726ff5d5a1c2e2258fd4a49b8cd5eb346ea",
+      "inference_job_id": "behavior_pythia-410m_7ccbf88bf22dca629004e619",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_M_s11_b0p1_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_M_s11_b0p1_w0p05/best.json",
+      "sha256": "8ac98fe581199a0b352f291c31a5110912fe20fb1c34b2be8c6132f05b46e02b",
+      "inference_job_id": "behavior_pythia-410m_301566d5d300a56e8f37b838",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_M_s22_b0p1_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p1_w0p05/final.json",
+      "sha256": "4cd0b34bf7583da5addec9fbee690777cc9d59f9392f76794ed98e10798d7344",
+      "inference_job_id": "behavior_pythia-410m_f0359cca7774a8274c6a674d",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_M_s22_b0p1_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_M_s22_b0p1_w0p05/best.json",
+      "sha256": "ab512b67cb0f7163d6c6677c829324a8ca63df850b2cd941687e368ae9a4c305",
+      "inference_job_id": "behavior_pythia-410m_429e0669d5739d62efc0c130",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_M_s33_b0p1_w0p05__final": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p1_w0p05/final.json",
+      "sha256": "a2086a379dcbb05937499834f895e9a1bcef71184bb9862f549730091349d349",
+      "inference_job_id": "behavior_pythia-410m_07ca532683766953208e4c1c",
+      "inference_alias_of": null
+    },
+    "primary__formal_deterministic_M_s33_b0p1_w0p05__best": {
+      "output": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_M_s33_b0p1_w0p05/best.json",
+      "sha256": "6dbbe099e1fdfb18d6305b7d44eb71efc0a4fa8217a4e5164555cfda910582e9",
+      "inference_job_id": "behavior_pythia-410m_caac904e0fbef92e42445a2d",
+      "inference_alias_of": null
+    }
+  },
+  "model_inference_performed_by_analysis": false,
+  "analysis_authorization": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/primary_behavior_analysis_actual_v1/ROOT_primary_behavior_authority_v1.json",
+    "sha256": "d3db9269e4cead5c727d8bb57c5df05483787d26021bb28e87623dcf35cf2b37"
+  }
+}
