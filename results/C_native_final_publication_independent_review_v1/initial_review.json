@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "status": "initial_review_requires_binding_and_runbook_fixes_not_final_pass",
+  "created_at_utc": "2026-11-06T16:35:45.847401+00:00",
+  "source_snapshot": {
+    "path": "artifacts/provenance/C_native_final_publication_runbook_v2/initial_source_bytes/artifacts/provenance/C_native_final_publication_runbook_v1/review_metadata.py",
+    "sha256": "95e43930aca1b1f1e544b97863694047b8a1972864180e01ef3849d0a1158b73"
+  },
+  "runbook_snapshot": {
+    "path": "artifacts/provenance/C_native_final_publication_runbook_v2/initial_source_bytes/docs/C1B与C2p8B原final权重包持久发布runbook.md",
+    "sha256": "2c554067748a3460879459914768e703f9253f65533283eaa3fdaea90ee37eea"
+  },
+  "findings": [
+    "Runbook publisher argv missing required --progress; safe parser-only probe exits2",
+    "Original exact per-row AST loop accepts altered config SHA, summary SHA, unrelated CP path/size despite fixed declared source hash",
+    "Original exact per-row AST loop accepts decode fingerprint inconsistent with row/encode/verify"
+  ],
+  "positive_checks": [
+    "Original16 synthetic tests pass",
+    "Reserve actual70/140GiB dev106/inode663438738/559646871 owner11471:11471 mode0600 verified",
+    "Native exact six-file frozen closure and explicit true1B3pairs /2.8noD contracts present",
+    "Strict int0/no-stop/actualargv constraints present",
+    "Unknown original whole preparation timing honestly retained; future publisher timing independent"
+  ],
+  "scope": "Exact per-row AST and tiny fixtures only; no actual full review(), model/native/TAR/realCP/score data read or source modifications. Parser probe fails before publisher invocation.",
+  "evidence_files": [
+    {
+      "path": "original_row_gate_reproduction.json",
+      "sha256": "78190e09ab4b1509066c1b4b27c6221627ef90787e04787a0080e1dd58cb6491",
+      "bytes": 695
+    },
+    {
+      "path": "original_synthetic_tests.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "original_synthetic_tests.stdout.log",
+      "sha256": "6f5c486a6d44f50ae8c09c7ff4f1a176f37bf3c90e6fe944648ba6a2e5391ab5",
+      "bytes": 130
+    },
+    {
+      "path": "reproduce_row_gate.py",
+      "sha256": "b77a1dc528746777ae0658a57f6e16043ffe558206937d1c4bd3c2786f2a1eeb",
+      "bytes": 3972
+    },
+    {
+      "path": "runbook_missing_progress_argparse.stderr.log",
+      "sha256": "8ef28c4b2e298c0db931da7b335c400eb2fff853d8e2b1c14adbdbe1b614ddf2",
+      "bytes": 431
+    },
+    {
+      "path": "runbook_missing_progress_argparse.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "small_probes_timing.json",
+      "sha256": "a279eb7c24d3fe41f3f7b9d3b4a5eb22f2107fd41a56bac552663b6348d29b92",
+      "bytes": 1374
+    }
+  ],
+  "author_notified_all_findings": true,
+  "final_stable_revision_review_pending": true
+}

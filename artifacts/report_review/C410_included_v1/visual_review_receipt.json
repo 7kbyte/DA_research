@@ -1,0 +1,75 @@
+{
+  "status": "needs_layout_fix",
+  "reviewed_at_utc": "2026-11-06T16:34:59.253744+00:00",
+  "automated_QA": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/report_review/C410_included_v1/automated_QA.json",
+    "sha256": "0bd9ed4f15125dd19a54621430189f493296c5d15ab1aaf35a0f412654bc2bbc",
+    "bytes": 29391
+  },
+  "QA_whole_child_timing": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/report_review/C410_included_v1/whole_child_timing.json",
+    "sha256": "8209225180e854c92b6c34db18e7f3a08fbb85a4e0fbb306be5082f4435a76ec",
+    "bytes": 744
+  },
+  "render_rc0": true,
+  "new_PDF_page_count": 16,
+  "visual_review": {
+    "all16_pages_contact_sheets_reviewed": true,
+    "contact_sheets": [
+      {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/report_review/C410_included_v1/contact_01_04.png",
+        "sha256": "bf28edc9b3ed7846f0bf3934652e6523a5c88ac11543c4b74bae121483c495c0",
+        "bytes": 1080204
+      },
+      {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/report_review/C410_included_v1/contact_05_08.png",
+        "sha256": "42ab2eeb1c0444fe5030d9b9948f6e7a093e59e885b79262f6f6ff660b97b65e",
+        "bytes": 913809
+      },
+      {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/report_review/C410_included_v1/contact_09_12.png",
+        "sha256": "619906a6561ab9480a9a84fd094eb6bfb7b2257ac6b298b69bedbebbc94ed28c",
+        "bytes": 1017169
+      },
+      {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/report_review/C410_included_v1/contact_13_16.png",
+        "sha256": "43d75c589e6c987481ed08328f7e01d90bbe3fe3f4677b115e5a3e032845088a",
+        "bytes": 968425
+      }
+    ],
+    "C410_pages13_14_15_and_recovery_page16_full_resolution_reviewed": true,
+    "blank_pages": false,
+    "page_numbers_all16_found": true,
+    "C410_final8row_table_whole_on_page13": true,
+    "body_text_and_C410_recovery_paragraph_readable": true
+  },
+  "blocking_findings": [
+    {
+      "page": 14,
+      "issue": "C410 SVG font render inflated in PDF: y labels, titles and footer lines overlap; some text clipped at left/right edges. PNG source was separately inspected and is readable.",
+      "evidence": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/report_review/C410_included_v1/page_14.png",
+        "sha256": "133d414ee6dd0f3c1191c2e8c02e21cee54b59efec70b1f1b82dcb03fd182eed",
+        "bytes": 316978
+      },
+      "minimal_recommendation": "ROOT replace only this report image link from existing all_endpoints_token_7in.svg to same-data existing .png and rerender; keep source figure/statistics unchanged."
+    }
+  ],
+  "text_coverage": {
+    "HTML_blocks_total": 428,
+    "raw_nonexact_blocks": 3,
+    "all3_resolved_by_removing_page_footer_intrusions": false,
+    "unresolved_after_footer_removal": [
+      {
+        "tag": "p",
+        "text": "补充C的410M完整24个final端点也已持久发布，共21份独立权重及3个经证明的D/B4别名，归档25,948,508,160字节。每份新权重均完成逐张量字节往返校验，持久文件经完整SHA读回验证；恢复还需要主归档中的初始模型基座，C410归档单独不构成完整闭包。A剩余93个final、B全部60个final正在另行保存，尚不列为已交付；各模型best和其他C模型以其实际完成的发布记录为准。C410发布记录、交付文件与恢复容量指南。 另在全新目录中，仅从两份持久TAR实际恢复了C410的B4 seed11最终模型，292个张量、405,334,016个元素的完整指纹均匹配，整次检查耗时39.2秒。这验证该固定单例的两包恢复闭包，不等于重新训练或全部24端点再次独立恢复。实际恢复验收。"
+      }
+    ],
+    "restore_filename_keyword_false_because_link_label_is_actual_restore_acceptance": true,
+    "actual_visible_restore_link_label_found": true
+  },
+  "HTML_local_resource_anchor_checks": 48,
+  "HTML_missing_resources": 0,
+  "no_report_or_renderer_or_scientific_artifact_modified": true,
+  "not_claiming_pass_for_blocked_render": true
+}

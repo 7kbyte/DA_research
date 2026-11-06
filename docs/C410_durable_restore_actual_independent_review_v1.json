@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "status": "passed_independent_small_evidence_review_of_actual_fixed_C410_restore",
+  "reviewed_at_utc": "2026-11-06T16:29:11.102370+00:00",
+  "actual_QA_completed_at_utc": "2026-11-06T16:26:31.069329+00:00",
+  "source_QA_directory": "/tmp/grad-research-20261106/reproduction_qa/C410_external_base_B4s11_final_v1",
+  "archived_small_evidence_directory": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_durable_restore_actual_v1/qa_small_evidence",
+  "ROOT_authority": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_durable_restore_actual_v1/ROOT_authority.json",
+    "sha256": "9cb85dd48499fbd794964b2aae8e534ebf8553c1fa57610cfc288ab0249e7efc"
+  },
+  "whole_child_timing": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_durable_restore_actual_v1/whole_child_timing.json",
+    "sha256": "1a915c165c9c5065f0576051404fc5689bf98aea128453e8519f330c746c7167"
+  },
+  "expected_identity": {
+    "run_id": "extended_v2_pythia_410m_m64_formal_B4_s11_w0p05",
+    "endpoint": "final",
+    "original_logical_delivery_kind": "fixed_exposure_final",
+    "model": "pythia-410m",
+    "data_family": "extended_v1",
+    "model_fingerprint": {
+      "sha256_model_state": "84c9c9eb5e90d7c3c07b4086ca56268d55c231d9fcac5791674023efce973811",
+      "state_elements": 405334016
+    },
+    "tensor_count": 292,
+    "model_raw_bytes": 1621336064,
+    "source_checkpoint_sha256": "6a8ee71a6cea60f11348fdff414247456815ae01c7cb4669b3506e123ad24372",
+    "source_checkpoint_kind": "full_training_checkpoint",
+    "archive_member": "weights/extended_v2_pythia_410m_m64_formal_B4_s11_w0p05.xor.zip",
+    "archive_sha256": "583b352a428e6ca78f1c67bbd251f9a6dc26f60e7ad5020d97da1bc11542ff18",
+    "metadata_member": "metadata/extended_v2_pythia_410m_m64_formal_B4_s11_w0p05.source_metadata.pt",
+    "metadata_sha256": "47057f05ee050d2750613d8633c9f74c62620c9d29cab73d0dcaec74c4a647ed",
+    "actual_exposure": {
+      "checkpoint_step": 3058,
+      "target_prediction_tokens": 100000000,
+      "replay_prediction_tokens": 5000000,
+      "full_training_target_prediction_tokens": 100000000,
+      "full_training_replay_prediction_tokens": 5000000
+    },
+    "base_sha256": "3e09001631bb18ec8a6f4522f8e6ab26a53099e69228f9822adc91bfbe27511b",
+    "base_model_revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+  },
+  "fingerprint_and_decoder_and_inventory_crosschecks_passed": true,
+  "source_TARs_current_stat_unchanged": [
+    {
+      "tag": "primary",
+      "TAR": "/data/202610/7kb/research_delivery/primary_final_weights_lossless_v1.tar",
+      "current_stat": {
+        "device": 106,
+        "inode": 386615240,
+        "bytes": 24949391360,
+        "uid": 11471,
+        "gid": 11471,
+        "mode": "0o600",
+        "mtime_ns": 1793947771820470742,
+        "ctime_ns": 1793947771820470742
+      },
+      "unchanged_from_actual_QA_and_publication": true,
+      "historical_full_SHA256": "2bb090fbe7df172b31102068715143ab702087ff49f77ef7dfd5db3637c928b1",
+      "fresh_full_TAR_read": false
+    },
+    {
+      "tag": "C410",
+      "TAR": "/data/202610/7kb/research_delivery/extended_C_410m_final_weights_lossless_v1.tar",
+      "current_stat": {
+        "device": 106,
+        "inode": 484145481,
+        "bytes": 25948508160,
+        "uid": 11471,
+        "gid": 11471,
+        "mode": "0o600",
+        "mtime_ns": 1793978795836328074,
+        "ctime_ns": 1793978795836328074
+      },
+      "unchanged_from_actual_QA_and_publication": true,
+      "historical_full_SHA256": "121384161d379b518a51d2c3baf38dedab205f41ef7bd11ded2d56ea7b95e1f6",
+      "fresh_full_TAR_read": false
+    }
+  ],
+  "small_evidence_files": [
+    {
+      "path": "base/pythia-410m-final/README.md",
+      "bytes": 13593,
+      "sha256": "d7d60ae94cb0882f19381632532a01d39247fe6f932016c39768b1f67c9f2bf9"
+    },
+    {
+      "path": "base/pythia-410m-final/config.json",
+      "bytes": 570,
+      "sha256": "d4c11e84a59c8af4d88446bba53b718f7aef740daa070ded08fd6a9a3aca4fc6"
+    },
+    {
+      "path": "base/pythia-410m-final/special_tokens_map.json",
+      "bytes": 99,
+      "sha256": "6f50ab5a5a509a1c309d6171f339b196a900dc9c99ad0408ff23bb615fdae7ad"
+    },
+    {
+      "path": "base/pythia-410m-final/tokenizer.json",
+      "bytes": 2113710,
+      "sha256": "c24618a1b3e6a38167beff1c72cffd126c3a66254347304b50547d12c5f25624"
+    },
+    {
+      "path": "base/pythia-410m-final/tokenizer_config.json",
+      "bytes": 396,
+      "sha256": "70e38394e494931c6f773ba41e19460dd4436526b852207367f04341b4066d3f"
+    },
+    {
+      "path": "check_restored.py",
+      "bytes": 2430,
+      "sha256": "339fead55edaba4ca05b68d6b3d8183dad134f6d3d0a1afe58da8dd9273f51bf"
+    },
+    {
+      "path": "extended_C_final_manifest.json",
+      "bytes": 1030294,
+      "sha256": "b5f0238a260d021206e2d1367c71a4c2b88e0bcdf6495d792c1479be1010f266"
+    },
+    {
+      "path": "independent_fingerprint.json",
+      "bytes": 919,
+      "sha256": "eb767385c444670c7f117a80e9ff5b91e739bfb13dda0f9ed11341ff8ad10e63"
+    },
+    {
+      "path": "inventory_new_artifacts.py",
+      "bytes": 729,
+      "sha256": "3aa283980fe977ce365ded56cad5aea95ab0a9b710baea03349916627da2ed1f"
+    },
+    {
+      "path": "logs/01_extract_primary_base.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/01_extract_primary_base.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/02_extract_C410_members.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/02_extract_C410_members.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/03_decode_C410.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/03_decode_C410.stdout.log",
+      "bytes": 575,
+      "sha256": "db5e870f2f431b5c690169c2a5d8389e03e01a58c1859d203b6d4305d2be1589"
+    },
+    {
+      "path": "logs/04_independent_fingerprint_and_metadata.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/04_independent_fingerprint_and_metadata.stdout.log",
+      "bytes": 877,
+      "sha256": "c973dbc1960f381d4558ee3914db6988de402ed841e6818cbaec3390003c8c4a"
+    },
+    {
+      "path": "logs/05_inventory_new_artifacts.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/05_inventory_new_artifacts.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "metadata/extended_v2_pythia_410m_m64_formal_B4_s11_w0p05.source_metadata.pt",
+      "bytes": 28840,
+      "sha256": "47057f05ee050d2750613d8633c9f74c62620c9d29cab73d0dcaec74c4a647ed"
+    },
+    {
+      "path": "preparation_receipt.json",
+      "bytes": 9040,
+      "sha256": "22254780c181fcaca9ab27a1e39e2feeda4f9152362312413262bc22f25e97b7"
+    },
+    {
+      "path": "primary_final_weights_manifest.json",
+      "bytes": 239736,
+      "sha256": "4120d177c22200b0bc5ee8390e0c2e2a1f5be1acbc58ef0f6d209bd47f96e8fb"
+    },
+    {
+      "path": "restored/C410_B4_seed11_final.pt.decode.json",
+      "bytes": 611,
+      "sha256": "be18fd21a100f7410368f4c96673c48f2367a67574c665aba587f569be5692a5"
+    },
+    {
+      "path": "tools/scripts/archive_model_weights.py",
+      "bytes": 2085,
+      "sha256": "28c5841cae8e7fd87d8cb62e7f756dad40ce15cb558710c31e48dfb45fde668a"
+    },
+    {
+      "path": "tools/src/replay_study/__init__.py",
+      "bytes": 65,
+      "sha256": "b2dce8cc5ea80a67a90b1798232163a7684874487b5ea4102e60851c7017f520"
+    },
+    {
+      "path": "tools/src/replay_study/__pycache__/__init__.cpython-310.pyc",
+      "bytes": 278,
+      "sha256": "64c2577748cf0b3f9d3a2d6d5da7084b2d8c3ba8a5eaa25d5ccef41987187f5b"
+    },
+    {
+      "path": "tools/src/replay_study/__pycache__/weight_archive.cpython-310.pyc",
+      "bytes": 11623,
+      "sha256": "c4bb225a2d8620a9616ccf140842491e09df0f6ff6fa21514721ad1c0bfdfa15"
+    },
+    {
+      "path": "tools/src/replay_study/weight_archive.py",
+      "bytes": 15264,
+      "sha256": "3c2bcf9e38773ae4f69c27f85f342356dbefcb53d817be4321da6e9c4e550e1a"
+    },
+    {
+      "path": "actual_restore_receipt.json",
+      "bytes": 10261,
+      "sha256": "c673fe8d18b02d6cc84aabc8f391da97203c140dd0a48e9ca40859893985f917"
+    },
+    {
+      "path": "artifact_inventory.json",
+      "bytes": 5683,
+      "sha256": "2b542565611fc3a4c1f93a9f9f7b00157d5838a5d2aeaffa231ae5d0f52db095"
+    }
+  ],
+  "small_evidence_bytes": 3487678,
+  "large_payloads_retained_not_read_or_copied": [
+    {
+      "path": "base/pythia-410m-final/model.safetensors",
+      "bytes": 911373632,
+      "reason": "Large payload intentionally not opened or copied; original remains in QA"
+    },
+    {
+      "path": "restored/C410_B4_seed11_final.pt",
+      "bytes": 1621467050,
+      "reason": "Large payload intentionally not opened or copied; original remains in QA"
+    },
+    {
+      "path": "weights/extended_v2_pythia_410m_m64_formal_B4_s11_w0p05.xor.zip",
+      "bytes": 1229135799,
+      "reason": "Large payload intentionally not opened or copied; original remains in QA"
+    }
+  ],
+  "actual_restore_metrics": {
+    "whole_child_wall_seconds": 39.20801364630461,
+    "whole_child_user_CPU_seconds": 23.403308,
+    "whole_child_sys_CPU_seconds": 9.19073,
+    "inclusive_whole_child_CPU_seconds": 32.594038,
+    "internal_parent_wall_seconds": 39.16780564561486,
+    "child_cumulative_peak_RSS_bytes": 2855313408,
+    "cgroup_oom_delta": 0,
+    "cgroup_oom_kill_delta": 0,
+    "shared_cgroup_max_events_delta_context_only": 149
+  },
+  "timing_interpretation": "Outer whole child is inclusive; internal parent, stage, decoder and independent FP timers are nested, not additive. Shared cgroup counters cannot be attributed entirely to this QA while other workers run.",
+  "readiness": "Fixed one-condition external-base durable CPU recovery evidence is complete for ROOT review; no new work authorization granted",
+  "review_wall_seconds": 0.02014215663075447,
+  "review_process_CPU_seconds": 0.017190061999999996,
+  "scope_boundaries": [
+    "This independent review reads/hashes/copies only <=32MiB small files and stats payloads; no new model tensor, ZIP/base or TAR payload read",
+    "Actual ROOT run extracted only selected durable C410+primary members, decoded, and freshly recomputed full new-model FP",
+    "Not a fresh comparison against original latest uint8; no original optimizer CP used",
+    "Not all24 endpoints restored, no GPU training/Adam resume, no score access, no new decode/tests/export/publication"
+  ],
+  "original_CP_QA_models_ZIPs_and_TARs_retained": true
+}

@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "status": "passed_independent_CPU_metadata_engineering_review_v2_prepared_only",
+  "created_at_utc": "2026-11-06T16:39:22.249546+00:00",
+  "stable_sources": [
+    {
+      "path": "artifacts/provenance/C_native_final_publication_runbook_v2/review_metadata.py",
+      "sha256": "c596a56d70b32cedce7bc9d2e00a0923477165aac6c24ee04ed78e8680413627",
+      "snapshot": "results/C_native_final_publication_independent_review_v1/stable_v2_sources/review_metadata.py"
+    },
+    {
+      "path": "artifacts/provenance/C_native_final_publication_runbook_v2/test_review_metadata.py",
+      "sha256": "9204ad7bffa442a3436a4b83fcf03d5bc7641449685eed7a00181ac73cf68557",
+      "snapshot": "results/C_native_final_publication_independent_review_v1/stable_v2_sources/test_review_metadata.py"
+    },
+    {
+      "path": "artifacts/provenance/C_native_final_publication_runbook_v2/preparation_receipt.json",
+      "sha256": "4b3f4d934a8907d5660e3baeccfb0decd69a234d90cd559e8a95c8a3ab378f35",
+      "snapshot": "results/C_native_final_publication_independent_review_v1/stable_v2_sources/preparation_receipt.json"
+    },
+    {
+      "path": "docs/C1B与C2p8B原final权重包持久发布runbook_v2.md",
+      "sha256": "9549763add2284a760197513a249c982e1e370c06ad7a053a0e2f174d8fdc023",
+      "snapshot": "results/C_native_final_publication_independent_review_v1/stable_v2_sources/C1B与C2p8B原final权重包持久发布runbook_v2.md"
+    }
+  ],
+  "original_v1_findings_preserved": {
+    "path": "results/C_native_final_publication_independent_review_v1/initial_review.json",
+    "sha256": "557760538f4cfc4145e72220a33afae43bcc5525faea4003dd522dc7101152ae"
+  },
+  "resolved_findings": [
+    "Future publisher argv explicitly passes independent required --progress path",
+    "Config row digest now joins exact frozen snapshot config SHA/bytes,READY input SHA/current opaque fresh hash; summary joins READY/current opaque fresh hash",
+    "CP canonical path joins row, frozen registry checkpoint_path and READY; actual stat size/mtime joins frozen identity; no CP payload read",
+    "Unique row/encode/decode/bytewise full fingerprint, CP/ZIP/base SHA, archive paths/bytes, complete statuses/model-only flags and full tensor hash/count reports cross-bound"
+  ],
+  "independent_tests": {
+    "source": "artifacts/provenance/C_native_final_publication_runbook_v2/test_review_metadata.py",
+    "result": "39 passed in0.07s",
+    "whole_child_timing": {
+      "path": "results/C_native_final_publication_independent_review_v1/v2_synthetic_tests_timing.json",
+      "sha256": "6cc6ded9012aa1a69ebd0d627498b12a6d1fc48fcbcab2b1b6afe0ebcf36983e"
+    }
+  },
+  "positive_checks": [
+    "Original70GiB/140GiB physical reserve identity device106/inodes663438738/559646871 uid/gid11471/mode0600/nlink1 and bytes/blocks match",
+    "Native exact6-file model/config/tokenizer/README closure with frozen revision/SHA/bytes/member; tool/provenance/member count derived; does not import live exporter or read payloads",
+    "1B24logical/21unique only with3same-seed final source-bound explicit true D/B4 whole-state pairs and whole source audit/registry/snapshot;2.8B15logical/15unique/noD",
+    "Completed training strict type(returncode)isint and0; both stop keys absent, exact frozen definition/actualargv SHA",
+    "Checked actual frozen small registry/snapshot schema24/15 matches new source-binding helper assumptions; did not run real complete-package review",
+    "Original whole-preparation parent timing remains explicitly unknown; draft/assembly/pub/wait nesting kept separate, no invented timer"
+  ],
+  "unchanged_original_helpers": [
+    {
+      "path": "scripts/export_C_final_weights.py",
+      "sha256": "bc057d04298b91a8189dae58fb6189c19b69faf70c9c83298d7854bf1cc38390"
+    },
+    {
+      "path": "scripts/publish_reserved_archive.py",
+      "sha256": "9c194743383a16f98313f767fe2e722c309ec57c1aafc65d9b99d08e5407022e"
+    },
+    {
+      "path": "scripts/export_remaining_primary_endpoints.py",
+      "sha256": "eb7339e4224062f3d55bd0adcba467599e06035ac84172f53d954b7302a1473d"
+    },
+    {
+      "path": "src/replay_study/weight_archive.py",
+      "sha256": "3c2bcf9e38773ae4f69c27f85f342356dbefcb53d817be4321da6e9c4e550e1a"
+    }
+  ],
+  "preserved_original_C410_reviewer": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_final_publication_runbook_v1/review_metadata.py",
+    "sha256": "eb1b363933a390a90182a02c9d0b586feaee06bed211322fc5544c782ba311c4"
+  },
+  "source_review_does_not_grant_TRUE_authority": true,
+  "no_remaining_blocker_found_in_prepared_v2": true,
+  "interpretation": "Engineering preparation pass only. Future actual full READY/audit/proof/completion/whole archive/ceiling/source and reservation checks plus ROOT publication authority remain necessary; no claim that pending packages exist or are published.",
+  "not_performed": [
+    "No full review() on actual future packages",
+    "No original CP/base/ZIP/TAR/tensor payload read or SHA",
+    "No validation/test/behavior score files read",
+    "No live/author source edits",
+    "No ROOT TRUE authority, watcher, sample, batch, reservation or publication started"
+  ]
+}

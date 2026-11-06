@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-11-06T16:23:58.402770+00:00",
+  "status": "prepared_CPU_single_restore_runner_not_executed_not_ROOT_authority",
+  "ROOT_authorized": false,
+  "preparation_receipt": {
+    "path": "artifacts/provenance/C410_durable_restore_preparation_v1/preparation_receipt.json",
+    "sha256": "22254780c181fcaca9ab27a1e39e2feeda4f9152362312413262bc22f25e97b7"
+  },
+  "sources": [
+    {
+      "path": "artifacts/provenance/C410_durable_restore_preparation_v1/run_actual_restore.py",
+      "sha256": "e34eb89e3dbb379acb8ba05a5012c70654471cba16a7e7571751753dd36414c8"
+    },
+    {
+      "path": "artifacts/provenance/C410_durable_restore_preparation_v1/check_restored.py",
+      "sha256": "339fead55edaba4ca05b68d6b3d8183dad134f6d3d0a1afe58da8dd9273f51bf"
+    },
+    {
+      "path": "artifacts/provenance/durable_weight_restore_examples_v1/inventory_new_artifacts.py",
+      "sha256": "3aa283980fe977ce365ded56cad5aea95ab0a9b710baea03349916627da2ed1f"
+    }
+  ],
+  "argv_not_executed": [
+    "python",
+    "artifacts/provenance/C410_durable_restore_preparation_v1/run_actual_restore.py",
+    "--qa-dir",
+    "/tmp/grad-research-20261106/reproduction_qa/C410_external_base_B4s11_final_v1"
+  ],
+  "small_syntax_help_checks": "AST parse of runner/checker and --help passed; no actual_restore main or checker called",
+  "prior_comparable_actual_QA": {
+    "path": "artifacts/provenance/durable_weight_restore_examples_v1/actual_restore_receipt.json",
+    "sha256": "463a1217e70dcc3b9a595937b240fc3d12228f610b88786c32a9222b624c00e0",
+    "basis": "Same frozen archived codec/CLI,410M405334016FP32 elements,previous two durable model restores; different learned weights and newly measured one-model timings required"
+  },
+  "future_reading_boundary": "Only two signed durable TARs as tensor/metadata/tool sources; current small publication receipts and this prepared expected identity; clear PYTHONPATH and no original CP or scratch native model path used",
+  "future_measurement": "Parent self user/sys plus child user/sys inclusive exactly once; separate extraction/decode/independent new full FP/inventory child stages; extracted member SHA parent self-only substage. No whole source TAR SHA, no original latest uint8 compare/Adam/GPU training",
+  "current_actual_QA_directory_exists": false
+}

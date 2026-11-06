@@ -1,0 +1,77 @@
+{
+  "status": "passed_no_blocking_numerical_or_scientific_wording_issue",
+  "reviewed_at_utc": "2026-11-06T16:31:00.566912+00:00",
+  "observed_report": {
+    "path": "/tmp/grad-research-20261106/worktree/研究报告.md",
+    "sha256": "6b16bab92585b44b46653071ecd956db64b14a92f44041d1bc38e195f109a191",
+    "bytes": 44329
+  },
+  "observed_section_snapshot": {
+    "path": "/tmp/grad-research-20261106/worktree/results/C410_nll_independent_review_v1/main_report_section63_read_snapshot.md",
+    "sha256": "f79da00842022ce699a5a20225e5c3bfe3ae3186a79b14814821e7af2acb4603",
+    "bytes": 5667
+  },
+  "line_scope_at_observation": "section6.3 begins line254; section metadata may shift in later ROOT edits",
+  "final_table_metric_cells_exact_4decimal_matches": 24,
+  "all24_best_vs_own_final_favorable_counts_six_metrics": {
+    "g_new": 24,
+    "f_old_c4": 24,
+    "f_old_wikitext": 24,
+    "g_new_equal_document": 24,
+    "f_old_c4_equal_document": 24,
+    "f_old_wikitext_equal_document": 24
+  },
+  "B4_minus_B3_G_by_seed11_22_33": {
+    "final": [
+      -0.007881564138211061,
+      -0.008270157338189588,
+      -0.004377292997011395
+    ],
+    "best": [
+      0.01227150014357159,
+      0.016826459534130755,
+      0.014142411167503699
+    ]
+  },
+  "verified_best_exposure_22_plus_2_exceptions": true,
+  "cost_and_forward_alias_scope": "24 actual training runs;43 actual inferences=42adapted+1matchedinitial;6logical aliases zero extra forward",
+  "wording_checks_passed": [
+    "No p-value significance claim: 大幅上升 remains descriptive",
+    "No pooling main/C seeds or D aliases into independent repetitions",
+    "Best unequal exposures and full100M training cost retained",
+    "M/C no all-domain stable advantage; negative and token/document distinctions retained",
+    "Main/C data and optimization-path changes prevent pure-horizon or independent-population inference"
+  ],
+  "optional_clarity": [
+    "43实际评价任务可显式补42适应端点+1matchedinitial；当前表述无错误",
+    "异模型共享target/heldout family；变化的数据主要包括各teacher生成池，不宜将三模型target误读为各自独立数据"
+  ],
+  "sources": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/C410_nll_independent_review_v1/endpoint_statistics_independent.csv",
+      "sha256": "15338bf37ff99721e83121c318d0e497b796eea7070becad2b4f8a617b6c9d79",
+      "bytes": 6709
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/C410_nll_independent_review_v1/paired_statistics_independent.csv",
+      "sha256": "1a7bef99ae956ae6ed37e0299f6b575a9179c5e29320c9f549c9c44bcd216a77",
+      "bytes": 10419
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/C410_nll_independent_review_v1/actual_checkpoint_exposure.csv",
+      "sha256": "341e21ea25382f3f4fc3db3502b2f8273f07b452efa908c702bb2807f1b4bfde",
+      "bytes": 10314
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/C410_nll_independent_review_v1/cost_accounting.json",
+      "sha256": "d666df163096afce8ef276e61221088df9b084d2d20dad9040621a0a9c8753ca",
+      "bytes": 5193
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/C410_nll_independent_review_v1/explanatory_metadata_source_proofs.json",
+      "sha256": "019a85202a635a1ac2573a443a3127442a018275cb2367a8e5176aa54b7aef52",
+      "bytes": 8121
+    }
+  ],
+  "main_report_not_modified": true
+}
