@@ -10,11 +10,12 @@
 
 - [研究报告工作稿](研究报告.md)与[PDF预览](reports/研究报告_工作稿.pdf)
 - [主实验独立NLL结果](docs/主NLL测试结果讨论.md)与[补充A完整权重敏感性结果](docs/补充A_NLL完整结果.md)
-- [补充B的完整验证结果](docs/补充B_完整60run验证结果解释.md)：固定生成池和训练流下的选库波动；独立测试尚未完成。
+- [补充B的完整独立测试结果](docs/补充B_完整60run测试结果解释.md)与[验证结果](docs/补充B_完整60run验证结果解释.md)：60条件均已完成，比较固定生成池和训练流下的选库波动。
 - [文献调研](literature/文献调研.md)
 - [环境重建与移交](docs/环境重建与移交.md)
 - [已校验的共享盘快照](docs/durable_snapshot_latest.json)
 - 主36条件的final与best共72个逻辑端点均已持久保存：[best端点验收](docs/primary_best_weights_durable_publication.json)、[主比例24条件验收](docs/primary_weights_durable_publication.json)、[预算敏感性12条件验收](docs/budget_final_weights_durable_publication.json)及[恢复说明](docs/无损权重交付格式.md)
+- 补充A验证所选18个final端点已持久保存，含15份新增权重与3个主归档引用：[发布验收](docs/A_selected_weights_durable_publication.json)；[额外权重覆盖范围](docs/额外科学权重保存方案_独立覆盖审阅.md)。
 - [研究路线与时间安排](docs/研究路线与时间安排.md)
 - [工程接口与实验约定](docs/ENGINEERING_CONTRACT.md)
 - `configs/`：冻结前pilot及正式实验配置。

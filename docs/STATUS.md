@@ -1,22 +1,64 @@
 # 研究运行状态
 
-更新时间：2026-11-06T04:00:02.782423+00:00
+更新时间：2026-11-06T12:04:41.393432+00:00
 截止时间：2026-11-07 03:26:32 UTC（北京时间11:26）
-已用 0.56 小时；剩余 23.44 小时。
+已用 8.64 小时；剩余 15.36 小时。
 
 以下状态来自运行日志。配置完成不等于实验完成；正式结论以最终研究报告为准。
 
+当前阶段：主36、补充A126和B60留出集NLL测试及完整分析已完成；C长程63按冻结方案继续训练，行为评价待执行
+
+旧非确定性pilot/formal仅供诊断；主strict36为正式主结果。补充训练独立phase，截止00:00 UTC；主active_registry保留供分析与alias验证。
+
 | 调度阶段 | 完成 | 运行 | 待执行 | 失败/阻塞 |
 |---|---:|---:|---:|---:|
-| lambda_job_state | 16 | 0 | 0 | 0 |
-| lambda_v3_job_state | 6 | 3 | 7 | 0 |
-| v3_lr_eval_job_state | 4 | 0 | 0 | 0 |
+| formal_deterministic_job_state | 36 | 0 | 0 | 0 |
+| formal_job_state（已隔离） | 9 | 0 | 27 | 0 |
+| lambda_deterministic_v3_job_state | 17 | 0 | 0 | 0 |
+| lambda_job_state（已隔离） | 16 | 0 | 0 | 0 |
+| lambda_v3_job_state（已隔离） | 16 | 0 | 0 | 0 |
+| lr_deterministic_v3_job_state | 4 | 0 | 0 | 0 |
+| supplemental_job_state | 505 | 4 | 55 | 0 |
+| v3_lr_eval_job_state（已隔离） | 4 | 0 | 0 | 0 |
+
+## 当前单一调度器内的阶段
+
+以下为上述 supplemental 总行的分解，不另加为新的任务；按冻结 job ID 统计。
+
+| 阶段 | 完成 | 运行 | 待执行/尚未登记状态 | 其他状态 |
+|---|---:|---:|---:|---:|
+| batch_benchmark | 2 | 0 | 0 | 0 |
+| A_lambda | 108 | 0 | 0 | 0 |
+| extended_v2_pythia_2p8b_m8_lr | 4 | 0 | 0 | 0 |
+| B_conditional_bank_variance | 60 | 0 | 0 | 0 |
+| extended_v2_pythia_410m_m64_lr | 4 | 0 | 0 | 0 |
+| extended_v2_pythia_1b_m32_lr | 4 | 0 | 0 | 0 |
+| extended_v2_pythia_410m_m64_lambda | 16 | 0 | 0 | 0 |
+| extended_v2_pythia_1b_m32_lambda | 16 | 0 | 0 | 0 |
+| extended_v2_pythia_2p8b_m8_lambda | 16 | 0 | 0 | 0 |
+| primary_behavior_initial_timing | 1 | 0 | 0 | 0 |
+| extended_v2_pythia_410m_m64_formal | 2 | 4 | 18 | 0 |
+| extended_v2_pythia_1b_m32_formal | 1 | 0 | 23 | 0 |
+| extended_v2_pythia_2p8b_m8_h25m_formal | 1 | 0 | 14 | 0 |
+| planned_model_initial_timing_v1 | 2 | 0 | 0 | 0 |
+| replay_fit_diagnostic_v2 | 15 | 0 | 0 | 0 |
+| primary_independent_nll_test | 67 | 0 | 0 | 0 |
+| supplement_A_independent_nll_test | 126 | 0 | 0 | 0 |
+| supplement_B_independent_nll_test | 60 | 0 | 0 | 0 |
+
+## 独立评价读取状态
+
+主 NLL 首次读取时间：2026-11-06T07:14:59.369548+00:00；该授权只覆盖主 NLL，其他阶段和行为分数须各自满足解封条件。
+补充 A NLL 首次允许语义读取时间：2026-11-06T09:47:43.509501+00:00；完整126条件及固定验证选择的18条件已解封。
+补充 B NLL 首次允许语义读取时间：2026-11-06T11:49:02.974066+00:00；完整60条件及其初始基线已通过完整性门禁，全部结果已解封。
+C和行为分数仍须分别满足完整性与授权条件；任务准备完成不代表分数已解封。
 
 ## 当前数据与选参记录
 
 - `artifacts/data/VERSION`：v2
 - `artifacts/evaluation_v3/VERSION`：v3
-- [pilot_lr_selection_v3.json](../results/pilot_lr_selection_v3.json)：`{"selected_learning_rate": 3e-05, "selected_at_utc": "2026-11-06T03:56:50.711816+00:00"}`
+- [pilot_lr_selection_deterministic_v3.json](../results/pilot_lr_selection_deterministic_v3.json)：`{"selected_learning_rate": 3e-05, "selected_at_utc": "2026-11-06T04:33:28.433774+00:00"}`
+- [pilot_lambda_selection_deterministic_v3.json](../results/pilot_lambda_selection_deterministic_v3.json)：`{"selected_shared_lambda": 0.05, "selected_mean_score": -0.031109066505816907, "selected_at_utc": "2026-11-06T04:42:13.601964+00:00"}`
 
 ## 入口
 
@@ -24,4 +66,5 @@
 - [研究路线与时间安排](研究路线与时间安排.md)
 - [决策日志](决策日志.jsonl)
 - 大模型与完整checkpoint：`/tmp/grad-research-20261106`。
-- 数据、代码、结果、日志与文档保存在本工作目录；最终将注明关键权重的持久化位置。
+- 本工作目录当前链接到临时盘；已有持久快照和主权重位于同级 `research_delivery/`。
+- [持久主权重验收](primary_weights_durable_publication.json)；[快照记录](durable_snapshot_latest.json)。
