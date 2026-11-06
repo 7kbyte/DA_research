@@ -65,7 +65,25 @@ if supplement_B_complete.exists():
         receipt = json.loads(Path(complete['first_read_receipt']['path']).read_text())
         lines.append(f"补充 B NLL 首次允许语义读取时间：{receipt['semantic_access_enabled_at_utc']}；"
                      '完整60条件及其初始基线已通过完整性门禁，全部结果已解封。')
-lines.append('C和行为分数仍须分别满足完整性与授权条件；任务准备完成不代表分数已解封。')
+for contract_id, label in [
+    ('extended_pythia_410m_100m_nll', 'C：410M、100M目标暴露'),
+    ('extended_pythia_1b_100m_nll', 'C：1B、100M目标暴露'),
+    ('extended_pythia_2p8b_25m_nll', 'C：2.8B、25M目标暴露'),
+]:
+    completed = []
+    for revision in ('v2', 'v3'):
+        path = ROOT / f'results/supplemental_analysis_{revision}' / contract_id / 'COMPLETE.json'
+        if path.exists():
+            value = json.loads(path.read_text())
+            if value.get('complete') is True:
+                completed.append(value)
+    if completed:
+        receipt = json.loads(Path(completed[-1]['first_read_receipt']['path']).read_text())
+        lines.append(f"{label}首次允许语义读取时间：{receipt['semantic_access_enabled_at_utc']}；"
+                     '整模型final/best结果已通过完整性门禁并完成分析。')
+    else:
+        lines.append(f'{label}尚无完整分析收据。')
+lines.append('各行为合同及尚无完整分析收据的阶段仍须分别满足完整性与授权条件；任务准备完成不代表分数已解封。')
 lines += ['', '## 当前数据与选参记录', '']
 for rel in ['artifacts/data/VERSION', 'artifacts/evaluation_v3/VERSION']:
     path = ROOT/rel

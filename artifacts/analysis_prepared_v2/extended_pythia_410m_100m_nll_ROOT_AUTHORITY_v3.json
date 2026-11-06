@@ -1,0 +1,69 @@
+{
+  "allow_partial": false,
+  "allow_score_analysis": true,
+  "authorized_by": "root",
+  "checkpoint_verification": {
+    "cache_reader_source": {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/stat_bound_digest_cache.py",
+      "sha256": "9cc01b493b46a5bf391a7c649a379d87011fff077ddeea701eaf8a84bdb568e2"
+    },
+    "cache_snapshot": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/digest_cache_snapshot_1793978554631329113.json",
+      "sha256": "6eef94ff5280dd92bffe77c18871e6dc0cafbb439bf2d5c0b3db3f3c8550891e"
+    },
+    "mode": "v5_checkpoint_snapshot"
+  },
+  "contract_id": "extended_pythia_410m_100m_nll",
+  "expected_counts": {
+    "closure_canonical_forward_jobs": 43,
+    "closure_queue_jobs": 43,
+    "closure_reuse_materializations": 0,
+    "imported_baselines": 0,
+    "imported_canonical_forward_jobs": 0,
+    "logical_aliases": 6,
+    "logical_endpoints": 48,
+    "new_forward_jobs": 43,
+    "queue_jobs": 43,
+    "reuse_jobs": 0
+  },
+  "manifest": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_nll/manifest.json",
+    "sha256": "48f8b2235c303211e4f79a92c16c7fb1c8d3757ce5d66a97a555fba7dfcf8f32"
+  },
+  "plan": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_410m_100m_nll.json",
+    "sha256": "61f44eba006214462680f656fcb6cc3a90aae550ae506f84f2ec27446f2292fb"
+  },
+  "protocol": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_protocol_v2.json",
+    "sha256": "eed050602c368e5e4be87172ac4d208b890d9a7f7e9811ce1684ae62acc8f742"
+  },
+  "ready": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_nll/READY.json",
+    "sha256": "d776f2aa440fa303ab0807c40d988b4036176c191a52a386410c0b09a5405481"
+  },
+  "test_or_behavior_used_for_selection": false,
+  "training_methods_grid_selection_horizons_frozen": true,
+  "authorized_at_utc": "2026-11-06T16:13:55.766410+00:00",
+  "operational_repair": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C410.json",
+    "sha256": "335a332d7337b3b11cba306722173e56ed7886f40cb9fd1dab3b457f6cae7e2d"
+  },
+  "whole_phase_check": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_nll_analysis_actual_v3/check_readiness.json",
+    "sha256": "43fa8b5672687d63dadaa663dbca4e613e50b3e317e8f5355662d6130379cf2f"
+  },
+  "root_repair_acceptance": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_nll_analysis_actual_v3/ROOT_operational_repair_acceptance.json",
+    "sha256": "49a029b25e67d6d8fd9a4f34bb1ea455bd253a7b36bb11edb4d6d305eda5f18a"
+  },
+  "strict_state_at_authority": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_nll_analysis_actual_v3/state_before_authority.json",
+    "sha256": "f9b8e4102b75e8c78eb6aebf825f99599935487d26af9649418a4539c79438d2"
+  },
+  "independent_engineering_review": {
+    "path": "/tmp/grad-research-20261106/worktree/results/supplemental_guard_v3_independent_review_v1/FINAL_REVIEW.json",
+    "sha256": "87c87d05c68b31d5f3f2cf3cad9973a8af50fbef6119f2106aa5b9723244393f"
+  },
+  "scope_note": "Only complete C410 NLL: 24 final and 24 validation-best logical endpoints plus matched extended initial; all six frozen paired contrasts and six metrics, no reselection, no behavior or other C model authorization"
+}

@@ -242,3 +242,16 @@ C410全43已于15:58前正常结束，ROOT strict closure核对passed（artifact
 评价budget v6已实际成功（独立于待修的aux checker）：results/evaluation_timing_budget_v6.json SHA10b89046e19471985bcd2b0b352b9a62d0cd43e829029a650eb9705e73c36f1c，wholechild1.655318815s。真实已完成43+证明避免6一次核销旧49；剩224=80NLL+141behavior+3reuse，其余模型aliases未预支。C-only训练forecast22:58:38，remaining low/central/high98.312/125.528/162.883min，对应全评价00:36:57/01:04:10/01:41:31，距02:56:32 protectedtail139.58/112.37/75.01min。此为预算，非实际最终FIFO准入保证。来源 artifacts/provenance/evaluation_budget_v6_actual，完整执行timing在evaluation_budget_v6_execution_v1。
 
 交付指南v2已更新5weights：112.203GiB，加1415snapshot112.703GiB；114包内记录、111 actual-run+endpoint、102完整FP。proof docs/交付文件与恢复容量指南_来源核对_v2.json SHA29f02d8db4ee94f66c82290fad223e2bef2718a3866868f3fd7de2fcda2c5748。旧v1保留。
+
+
+### 16:16 UTC：C410全NLL已经真实解封并完成
+
+v3独立工程修复稳定：guard6190ded0f8c21c035a1829f0d4f451d3842af9f5f03942dcc1fceb94bdcbc4cb，CLIbd0463e34fe9373ffcb37587f6838f5f5bb1a852b6eafc023bd67923ec97ed0c，repair docs/supplemental_aux_analysis_operational_repair_v3_C410.json SHA335a332d7337b3b11cba306722173e56ed7886f40cb9fd1dab3b457f6cae7e2d；精确绑旧plan/manifest/protocol及两代代码。旧v2所有字节未改，AST统计主体等价。独立104 tests passed，FINAL_REVIEW SHA87c87d05c68b31d5f3f2cf3cad9973a8af50fbef6119f2106aa5b9723244393f。ROOT全套793 tests passed28.18s，wholechild29.389251053/user27.640012/sys5.691722，logs/tests_after_supplemental_guard_v3_full.{log,json}。
+
+真实v3操作目录 artifacts/provenance/C410_nll_analysis_actual_v3。ROOT预检查曾误用expected_outputs字段，在child启动前KeyError；旧state原字节保留，failure receipt记录parent未知。改用真实冻结outputs字段后严格43state检查通过。真实v3 check wholechild1.936519742s，ready43closure/48logical/6aliases/49attestations，48CPcachehits代表155661013136历史已读bytes、当前freshCP0，otherfresh297files1191339860bytes，guard1.880157s嵌套。
+
+ROOT authority artifacts/analysis_prepared_v2/extended_pythia_410m_100m_nll_ROOT_AUTHORITY_v3.json SHA4eaefa9b68f7ca651c46b491352fb4984eeeb5b7d2e1057bfbb713ab44a84d56；明确bind repair。原固定journal首次语义读取16:13:57.951572 UTC，journalSHA80762fce21d8ff59945b251fa136493277204a4ef44d3d5f10a2f813dbf56ece。结果 results/supplemental_analysis_v3/extended_pythia_410m_100m_nll/COMPLETE.json SHA6261401bfa0ac29ae700f17009ecc3e6acbaa5c08c7291a39d33c17adcca37e1；final24+best24全部完成，wholeanalyze11.763358913/user11.212102/sys.615608。禁止再次analyze/resetjournal。
+
+初读汇总：final B0 G/Fc/Fw .076896/.393509/.510911，B1 .079258/1.087379/.940220，B2 .089011/.181319/.286114，B3 .093875/.419255/.516845，B4=D .087032/.291661/.377083，M .088891/.292453/.369363，C .088314/.299878/.364531。best各组G均更高/F均更低，全部逐seed需独立review后入报告。eval_selection已接全48×6metric/paired/bootstrap/cost/7infigure独立审阅任务。training_engine已接cost v6实际spec+trial，需纳入所有已完成新计时，不把AB未完成batch估成实际。data_assets准备AB完成后publication+真实C410best首例清单；其发现固定SLOTS：C410_best只能slot1，须等A释放；仅B slot2释放不能运行C410，ROOT同意不绕过。
+
+16:12 C状态：41024/24、1B5/24+4running、2.8B1/15；四GPU都用于1B，AB各19/93和19/60（随后继续增长）。最新durable项目仍1415，待本C410独立报告/新PDF后做新snapshot。scripts/update_status.py已添加C v2/v3 COMPLETE的真实状态读取（只展示，不改科学协议）。

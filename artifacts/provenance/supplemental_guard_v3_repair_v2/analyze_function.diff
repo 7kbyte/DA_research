@@ -1,0 +1,19 @@
+--- v2_retained_analyze
++++ v3_analyze
+@@ -1,5 +1,5 @@
+-def analyze(plan_proof,authority_proof,state_path,output,first_receipt=None,no_plots=False):
+-    plan,_=guard.authorize(plan_proof,authority_proof);ready=guard.inspect(plan_proof,state_path)
++def analyze(plan_proof,authority_proof,state_path,output,repair_proof,first_receipt=None,no_plots=False):
++    plan,_=guard.authorize(plan_proof,authority_proof,repair_proof);ready=guard.inspect(plan_proof,state_path,repair_proof)
+     if not ready['ready']:raise PermissionError('Entire frozen phase closure is incomplete; all score parsing remains sealed')
+     journal=Path(plan['first_read_receipt_path'])
+     if first_receipt is not None and Path(first_receipt).resolve()!=journal:raise ValueError('First-read receipt path is immutable per phase manifest')
+@@ -60,7 +60,7 @@
+             aux['metadata'].update(first_read_receipt=first,whole_phase_readiness=readiness,plan=plan_proof,analysis_source_sha256=guard.read(plan['protocol']['path'])['analysis_source_sha256'])
+             write_auxiliary(aux,output/'validation_selected_policy')
+         results.append({'endpoint':'final_behavior','logical_conditions':len(manifest['records'])})
+-    guard.immutable(output/'COMPLETE.json',{'complete':True,'plan':plan_proof,'authority':authority_proof,'readiness':readiness,
++    guard.immutable(output/'COMPLETE.json',{'complete':True,'plan':plan_proof,'authority':authority_proof,'readiness':readiness,'operational_repair':repair_proof,
+         'checkpoint_verification':plan['checkpoint_verification'],'verification_work':ready['verification_work'],
+         'first_read_receipt':first,'parsed_phase':contract['phase'],'endpoints':results,'GPU_inference_started':False,'selection_recomputed':False,'frozen_primary_statistics_modified':False})
+     return {'complete':True,'contract_id':plan['contract_id'],'output':str(output),'GPU_inference_started':False}
