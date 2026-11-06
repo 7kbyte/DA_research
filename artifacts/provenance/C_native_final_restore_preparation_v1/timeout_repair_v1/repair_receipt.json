@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "status": "passed_targeted_timeout_repair_preparation_only",
+  "created_at_utc": "2026-11-06T17:46:40.085701+00:00",
+  "reason": "Original13ea1 wrapper waited only for direct runner; independent toy showed timed_out=true but rc0 and live TERM-ignoring descendant",
+  "retained_old": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/retained_before_timeout_repair_v1/RETENTION.json",
+    "sha256": "6142f38196735e4525b6cc60235f25a72b4ab05cde6e916c8f14637eeec4595a"
+  },
+  "new_wrapper": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/run_whole_child.py",
+    "sha256": "2a2d09daac8504b099a5cd9682dff722bbad0519922ba39beedf4e96e9498266"
+  },
+  "test_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/test_timeout_teardown.py",
+    "sha256": "39913e559413ab69e012b32cb1ab65043f2ea0ca96c86ec5e7e793ddb5485e9a"
+  },
+  "tests": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/timeout_repair_tests_whole_child_timing.json",
+    "sha256": "10aeb004b072fc5733bdd1423c7abcdda1289231b0d8ba1992f54c21274e8e7e"
+  },
+  "independent_original_probe": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_independent_review_v1/timeout_probe.json",
+    "sha256": "132e7b973843c8dadcdaecc6add88194842f2d7198f4857f94c649c4d3a9b58e"
+  },
+  "copied_end_to_end_toy_receipts": [
+    {
+      "path": "artifacts/provenance/C_native_final_restore_preparation_v1/timeout_repair_v1/test_end_to_end_timeout_cleans0/whole_child_timing.json",
+      "sha256": "5c66b89e11c32103fbb676a6ae97eeb7ad11cbf2ad25e1e2cd439d095a700ab9"
+    },
+    {
+      "path": "artifacts/provenance/C_native_final_restore_preparation_v1/timeout_repair_v1/test_end_to_end_timeout_cleans0/group.json",
+      "sha256": "76a86b00715c379f10d5778396a69e449c8de269158065924e0f7a748ce829f1"
+    },
+    {
+      "path": "artifacts/provenance/C_native_final_restore_preparation_v1/timeout_repair_v1/test_end_to_end_timeout_cleans0/restore_native_final.py",
+      "sha256": "ae36a3801a241ed7527324bafc4890502152e63af2424795a97e1435aa38181b"
+    },
+    {
+      "path": "artifacts/provenance/C_native_final_restore_preparation_v1/timeout_repair_v1/test_end_to_end_timeout_cleans0/launch.json",
+      "sha256": "aa26531b593360aaa3d3cbe7c76838e2226efa57a4967fc1ec5804e6b0b59269"
+    },
+    {
+      "path": "artifacts/provenance/C_native_final_restore_preparation_v1/timeout_repair_v1/test_end_to_end_timeout_cleans1/whole_child_timing.json",
+      "sha256": "c89bdd9992f739270976ae21b5df2c82706391e59f6a8825d003be77a14b7cc8"
+    },
+    {
+      "path": "artifacts/provenance/C_native_final_restore_preparation_v1/timeout_repair_v1/test_end_to_end_timeout_cleans1/group.json",
+      "sha256": "2b886689818b12fa8c9753316e4d822a2fa82bf3f5acebb3ce552358c76d141f"
+    },
+    {
+      "path": "artifacts/provenance/C_native_final_restore_preparation_v1/timeout_repair_v1/test_end_to_end_timeout_cleans1/restore_native_final.py",
+      "sha256": "bbf247a79fa5f3423c7c91724d3b9523b2080363ff5df745513af378c36b3b44"
+    },
+    {
+      "path": "artifacts/provenance/C_native_final_restore_preparation_v1/timeout_repair_v1/test_end_to_end_timeout_cleans1/launch.json",
+      "sha256": "501e704482d5834129cfebb00026594f6d2efd3baec1c8e4013fd3975d441f84"
+    }
+  ],
+  "assertions": [
+    "Timeout returns124 even if direct child exits0",
+    "Both TERM-ignoring descendant toys confirmed PG absent and adopted zombie reaped",
+    "MockedD-state cleanup explicitly returns failed/unconfirmed; run_group maps unconfirmed cleanup to125 (source); no actual D/hung payload probe",
+    "Whole timer includes PG cleanup/reaping; TERM5+KILL5+2bookkeeping fits fixed300s admission margin before protected02:56:32"
+  ],
+  "real_model_payload_read_bytes": 0,
+  "real_native_package_restore_executed": false,
+  "TRUE_authority_created": false,
+  "live_helpers_or_scientific_sources_modified": false,
+  "complete_engineering_parent_timing": null,
+  "unknown_scope": "Authoring/documentation/metadata copy/review parent wall/CPU not independently measured. Only saved test-child timers are measured."
+}

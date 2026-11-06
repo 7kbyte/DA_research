@@ -1,0 +1,120 @@
+{
+  "status": "source_schema_review_passed_operational_timeout_fix_required",
+  "actual_restore_authorized": false,
+  "reviewed_source_proofs": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/retained_before_timeout_repair_v1/restore_native_final.py",
+      "sha256": "bfc748c776f18dff86c378c5c55ca72dbc63995cfc40ddfb96eb919486610db1",
+      "bytes": 26503
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/retained_before_timeout_repair_v1/check_restored.py",
+      "sha256": "6b7df26abef4ce0bd09dabbd7878a5a9585c8681d3cb97115f912dd542d3fa8d",
+      "bytes": 4806
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/retained_before_timeout_repair_v1/run_whole_child.py",
+      "sha256": "13ea1a89c30881fea6348f414487a0dff38ed1e8a42bdcdc11cd63c40713234d",
+      "bytes": 3299
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/retained_before_timeout_repair_v1/source_manifest.json",
+      "sha256": "95a89534d4e88c32586a6da2bf1ee47b8a6faae430a52d53db93b1c5af46d824",
+      "bytes": 7740
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/retained_before_timeout_repair_v1/preparation_receipt.json",
+      "sha256": "a5fc65186ac5111ab58169f4650bedcc973c10d6879eeccc99dedabb9509b07c",
+      "bytes": 2415
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/retained_before_timeout_repair_v1/test_restore_preparation.py",
+      "sha256": "012094fad6b6446380e1648296a638e76e59af58f28110538d1227b12803643d",
+      "bytes": 15543
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/retained_before_timeout_repair_v1/synthetic_tests_whole_child_timing.json",
+      "sha256": "dc8a11b0c78cf582f96d2c57991cca0c52e7912a6379cdea47b1dbef160a41ed",
+      "bytes": 934
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/export_C_final_weights.py",
+      "sha256": "bc057d04298b91a8189dae58fb6189c19b69faf70c9c83298d7854bf1cc38390",
+      "bytes": 39556
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/src/replay_study/weight_archive.py",
+      "sha256": "3c2bcf9e38773ae4f69c27f85f342356dbefcb53d817be4321da6e9c4e550e1a",
+      "bytes": 15264
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/publish_reserved_archive.py",
+      "sha256": "9c194743383a16f98313f767fe2e722c309ec57c1aafc65d9b99d08e5407022e",
+      "bytes": 17716
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/archive_model_weights.py",
+      "sha256": "28c5841cae8e7fd87d8cb62e7f756dad40ce15cb558710c31e48dfb45fde668a",
+      "bytes": 2085
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/src/replay_study/__init__.py",
+      "sha256": "b2dce8cc5ea80a67a90b1798232163a7684874487b5ea4102e60851c7017f520",
+      "bytes": 65
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_publication_runbook_v2/review_metadata.py",
+      "sha256": "c596a56d70b32cedce7bc9d2e00a0923477165aac6c24ee04ed78e8680413627",
+      "bytes": 25228
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_independent_review_v1/probe_timeout.py",
+      "sha256": "f1274fec2b9d28465e5bd558690a05f03c7757b6db00e230cfc09d951cc42eb3",
+      "bytes": 4135
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_independent_review_v1/timeout_probe.json",
+      "sha256": "132e7b973843c8dadcdaecc6add88194842f2d7198f4857f94c649c4d3a9b58e",
+      "bytes": 1987
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/docs/Cnative_final恢复准备_独立审阅_v1.md",
+      "sha256": "cac8d4e3954b81b7bc6d3f9817078a545c21834a329392c8b2c7ce56335da201",
+      "bytes": 4039
+    }
+  ],
+  "coverage": [
+    "original exporter/metadata reviewer/publisher/acceptance schema",
+    "exact 12 selected members",
+    "archived-only base/tools and safe extraction",
+    "independent all-state FP32 fingerprint",
+    "resource/admission and nested timing"
+  ],
+  "blocking_finding": {
+    "file": "run_whole_child.py",
+    "reviewed_sha256": "13ea1a89c30881fea6348f414487a0dff38ed1e8a42bdcdc11cd63c40713234d",
+    "lines": [
+      46,
+      52,
+      61
+    ],
+    "issue": "timeout may leave active PG descendants when direct runner exits first and can exit0 despite timed_out=true",
+    "reported_to": [
+      "root",
+      "training_engine"
+    ],
+    "author_repair_pending": true
+  },
+  "toy_probe": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_independent_review_v1/timeout_probe.json",
+    "sha256": "132e7b973843c8dadcdaecc6add88194842f2d7198f4857f94c649c4d3a9b58e",
+    "bytes": 1987
+  },
+  "existing_29_tests_repeated": false,
+  "actual_bind_or_execute_called": false,
+  "real_TAR_ZIP_base_CP_payload_bytes_read": 0,
+  "real_score_outputs_parsed": false,
+  "GPU_started": false,
+  "TRUE_authority_created": false,
+  "unmeasured_engineering_review_time": "not instrumented; not represented as zero"
+}

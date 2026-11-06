@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "status": "passed_targeted_timeout_repair_preparation_only",
+  "created_at_utc": "2026-11-06T17:46:40.085701+00:00",
+  "reason": "Original13ea1 wrapper waited only for direct runner; independent toy showed timed_out=true but rc0 and live TERM-ignoring descendant",
+  "retained_old": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/retained_before_timeout_repair_v1/RETENTION.json",
+    "sha256": "6142f38196735e4525b6cc60235f25a72b4ab05cde6e916c8f14637eeec4595a"
+  },
+  "new_wrapper": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/run_whole_child.py",
+    "sha256": "2a2d09daac8504b099a5cd9682dff722bbad0519922ba39beedf4e96e9498266"
+  },
+  "test_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/test_timeout_teardown.py",
+    "sha256": "39913e559413ab69e012b32cb1ab65043f2ea0ca96c86ec5e7e793ddb5485e9a"
+  },
+  "tests": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/timeout_repair_tests_whole_child_timing.json",
+    "sha256": "10aeb004b072fc5733bdd1423c7abcdda1289231b0d8ba1992f54c21274e8e7e"
+  },
+  "independent_original_probe": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_independent_review_v1/timeout_probe.json",
+    "sha256": "132e7b973843c8dadcdaecc6add88194842f2d7198f4857f94c649c4d3a9b58e"
+  },
+  "copied_end_to_end_toy_receipts": [],
+  "assertions": [
+    "Timeout returns124 even if direct child exits0",
+    "Both TERM-ignoring descendant toys confirmed PG absent and adopted zombie reaped",
+    "Unconfirmed D-state mocked cleanup is explicitfailure125 at run_group level; no real D/hung payload probe",
+    "Whole timer includes PG cleanup/reaping; TERM5+KILL5+2bookkeeping fits fixed300s admission margin before protected02:56:32"
+  ],
+  "real_model_payload_read_bytes": 0,
+  "real_native_package_restore_executed": false,
+  "TRUE_authority_created": false,
+  "live_helpers_or_scientific_sources_modified": false,
+  "complete_engineering_parent_timing": null,
+  "unknown_scope": "Authoring/documentation/metadata copy/review parent wall/CPU not independently measured. Only saved test-child timers are measured."
+}

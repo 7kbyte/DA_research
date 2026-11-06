@@ -1,0 +1,63 @@
+{
+  "schema_version": 2,
+  "status": "passed_preparation_only_with_timeout_repair_pending_ROOT_independent_review",
+  "created_at_utc": "2026-11-06T17:47:44.062586+00:00",
+  "source_manifest": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/source_manifest_v2.json",
+    "sha256": "6655937525ecb8ec56e614b0be58578808e6038cc0c931799b7ba9c16cf227f7"
+  },
+  "old_preparation": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/retained_before_timeout_repair_v1/preparation_receipt.json",
+    "sha256": "a5fc65186ac5111ab58169f4650bedcc973c10d6879eeccc99dedabb9509b07c"
+  },
+  "timeout_repair": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/timeout_repair_v1/repair_receipt.json",
+    "sha256": "39d0d94d552d13d93455e549cf99e548092eddea2891c2f298542f952d09523b"
+  },
+  "repair_targeted_tests": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/timeout_repair_tests_whole_child_timing.json",
+    "sha256": "10aeb004b072fc5733bdd1423c7abcdda1289231b0d8ba1992f54c21274e8e7e"
+  },
+  "test_counts": {
+    "original29_complete_suite_retained": true,
+    "repair_targeted6_passed": true,
+    "new_timeout_tests": 5,
+    "old_false_authority_wrapper_test_repeated": 1
+  },
+  "toy_end_to_end": [
+    {
+      "source": "artifacts/provenance/C_native_final_restore_preparation_v1/timeout_repair_v1/test_end_to_end_timeout_cleans0/whole_child_timing.json",
+      "sha256": "5c66b89e11c32103fbb676a6ae97eeb7ad11cbf2ad25e1e2cd439d095a700ab9",
+      "returncode": 124,
+      "direct_child_returncode": 0,
+      "timed_out": true,
+      "group_absence_confirmed": true,
+      "descendant_proc_absent_at_receipt": true,
+      "whole_child_wall_seconds": 6.006857339292765
+    },
+    {
+      "source": "artifacts/provenance/C_native_final_restore_preparation_v1/timeout_repair_v1/test_end_to_end_timeout_cleans1/whole_child_timing.json",
+      "sha256": "c89bdd9992f739270976ae21b5df2c82706391e59f6a8825d003be77a14b7cc8",
+      "returncode": 124,
+      "direct_child_returncode": -9,
+      "timed_out": true,
+      "group_absence_confirmed": true,
+      "descendant_proc_absent_at_receipt": true,
+      "whole_child_wall_seconds": 6.05835498124361
+    }
+  ],
+  "actual_native_package_restore_executed": false,
+  "actual_native_payload_read_bytes": 0,
+  "actual_source_CP_or_live_native_base_read": false,
+  "GPU_started": false,
+  "TRUE_authority_created": false,
+  "current_execution_source_SHA256": {
+    "restore_native_final.py": "bfc748c776f18dff86c378c5c55ca72dbc63995cfc40ddfb96eb919486610db1",
+    "check_restored.py": "6b7df26abef4ce0bd09dabbd7878a5a9585c8681d3cb97115f912dd542d3fa8d",
+    "run_whole_child.py": "2a2d09daac8504b099a5cd9682dff722bbad0519922ba39beedf4e96e9498266"
+  },
+  "timing_boundary": "Executionwait600/1200 plus bounded TERM5+KILLconfirmation5+bookkeepingallowance2, all inside300admissionmargin and protected02:56:32; actual whole timer includes cleanup/reaping. D-state disappearance cannot be guaranteed: failed/unconfirmed125 with exact remaining members.",
+  "complete_preparation_parent_wall_seconds": null,
+  "complete_preparation_parent_CPU_seconds": null,
+  "unknown": "Authoring, documentation, source preservation and receipt work lack complete parent timers. Only explicit saved test child executions are measured; original and repair development test timers are independent, not nested."
+}
