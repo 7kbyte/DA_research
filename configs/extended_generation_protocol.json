@@ -1,0 +1,63 @@
+{
+  "status": "frozen_sampling_and_selection_protocol",
+  "frozen_at_utc": "2026-11-06T04:03:10.663830+00:00",
+  "authorization": "root explicitly authorized optional-model assets; GPU1 dedicated; no training or task inference",
+  "device": "cuda:1",
+  "seeds": [
+    101,
+    11,
+    22,
+    33
+  ],
+  "pilot_seeds": [
+    101
+  ],
+  "n_chunks": 1957,
+  "sequence_length": 512,
+  "bank_chunks": 196,
+  "prediction_tokens_per_pool": 1000027,
+  "prediction_tokens_per_bank": 100156,
+  "prompt_mode": "BOS0 only",
+  "sampling": {
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "top_k": 0,
+    "eos": "continue to fixed length; no pad token"
+  },
+  "precision": "FP32 weights plus CUDA BF16 autocast",
+  "selection": "unchanged random / exact-dedup random / five-quantile NLL proportional / dedup frozen-context mean-pool L2 MiniBatchKMeans representatives",
+  "c4_pool": "artifacts/data_extended/c4_candidate.pt",
+  "source_provenance": "artifacts/assets/extended_model_provenance.json",
+  "models": [
+    {
+      "name": "pythia-1b",
+      "model": "/tmp/grad-research-20261106/models/pythia-1b-final",
+      "revision": "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2",
+      "weights_sha256": "7e6dff44849e036a73296368e663bd9420009977f03a8d4d747b234264f37107",
+      "generation_batch_size": 256,
+      "artifact_root": "artifacts/extended/pythia-1b",
+      "config_root": "configs/extended/pythia-1b",
+      "summary": "results/extended_pythia-1b_generation_summary.json",
+      "memory_smoke_required": false,
+      "memory_smoke_seed": null,
+      "memory_smoke_n_chunks": null,
+      "maximum_smoke_allocated_bytes": null,
+      "smoke_failure_policy": "halt and report; do not silently reduce batch or change sampling"
+    },
+    {
+      "name": "pythia-2.8b",
+      "model": "/tmp/grad-research-20261106/models/pythia-2.8b-final",
+      "revision": "2a259cdd96a4beb1cdf467512e3904197345f6a9",
+      "weights_sha256": "ab496f1c3fd79e3c749a9d5414136a2c8e4224f94eecb261970315cdb0f813fe",
+      "generation_batch_size": 128,
+      "artifact_root": "artifacts/extended/pythia-2.8b",
+      "config_root": "configs/extended/pythia-2.8b",
+      "summary": "results/extended_pythia-2.8b_generation_summary.json",
+      "memory_smoke_required": true,
+      "memory_smoke_seed": 909,
+      "memory_smoke_n_chunks": 128,
+      "maximum_smoke_allocated_bytes": 77309411328,
+      "smoke_failure_policy": "halt and report; do not silently reduce batch or change sampling"
+    }
+  ]
+}

@@ -74,6 +74,7 @@ def test_partial_chunk_stream_restores_and_does_not_drop_tail(tmp_path):
     assert stream.exposure == 24
     assert stream.epoch == 1
     assert stream.offset == 3
+    assert stream.unique_prediction_tokens_exposed() == 21
 
 
 def test_resume_is_identical_to_uninterrupted_training_and_token_budgets(tmp_path):
@@ -92,8 +93,14 @@ def test_resume_is_identical_to_uninterrupted_training_and_token_budgets(tmp_pat
     resumed_config = dataclasses.replace(partial_config, max_steps=None, resume_from=partial["checkpoint_path"])
     resumed = train(resumed_config, resumed_model, copy.deepcopy(teacher))
     assert resumed["status"] == "completed"
+    assert 0 < resumed["counters"]["training_teacher_forward_seconds"] <= resumed["counters"]["training_seconds"]
+    assert resumed["timing"]["training_teacher_forward_seconds_complete"]
+    assert resumed["timing"]["training_teacher_forward_seconds_nested_in"] == "training_seconds"
     assert resumed["counters"]["target_prediction_tokens"] == 113
     assert resumed["counters"]["replay_prediction_tokens"] == 5
+    assert resumed["target_unique_prediction_tokens_exposed"] == 63
+    assert resumed["replay_unique_prediction_tokens_exposed"] == 5
+    assert resumed["coverage_accounting"]["target"]["repeated_prediction_token_exposures"] == 50
     assert resumed["target_stream"] == full["target_stream"]
     assert resumed["replay_stream"] == full["replay_stream"]
     for key, value in uninterrupted_model.state_dict().items():
@@ -122,6 +129,7 @@ def test_methods_share_target_stream_and_lr_and_validation_callback(tmp_path):
                                           replay_path=None, replay_objective="none", replay_ratio=0.)
     baseline = train(baseline_config, copy.deepcopy(initial))
     assert result["target_stream"] == baseline["target_stream"]
+    assert baseline["counters"]["training_teacher_forward_seconds"] == 0.0
     assert calls == [20, 40]
     assert len(result["validation_trajectory"]) == 2
     assert result["counters"]["validation_teacher_forward_seconds"] == .25
@@ -161,3 +169,21 @@ def test_bank_capacity_and_unique_coverage_are_separate(tmp_path):
     assert data["prediction_tokens"] == 9
     assert data["unique_prediction_tokens"] == 6
     assert data["unique_chunks"] == 2
+
+
+def test_duplicate_chunk_coverage_unions_prediction_prefixes_exactly(tmp_path):
+    path=tmp_path/"duplicates.pt"
+    torch.save({"input_ids":torch.tensor([[1,2,3,4],[1,2,3,4],[4,3,2,1]])},path)
+    stream=TokenStream(load_training_data(path),seed=11)
+    stream.order=[0,1,2]
+    list(stream.take(4,2))
+    assert stream.unique_prediction_tokens_exposed()==3
+    list(stream.take(3,2))
+    assert stream.unique_prediction_tokens_exposed()==4
+    list(stream.take(2,2))
+    assert stream.epoch==1 and stream.unique_prediction_tokens_exposed()==6
+    list(stream.take(4,2))
+    coverage=stream.coverage_accounting()
+    assert coverage["unique_prediction_tokens_exposed"]==6
+    assert coverage["repeated_prediction_token_exposures"]==7
+    assert not coverage["assumption_no_duplicate_chunks"]

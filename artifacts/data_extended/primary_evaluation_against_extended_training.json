@@ -1,0 +1,219 @@
+{
+  "scope": "diagnostic only: whether primary held-out text remains clean if training is expanded; no losses read, primary files not written",
+  "conclusion": "Use matching expanded held-out data for extended-training experiments; primary-v3 remains valid for unchanged primary training.",
+  "reports": {
+    "primary_data_v2": {
+      "finemath_validation": {
+        "finemath_train": {
+          "chunk_overlap_fraction_max": 0.818,
+          "chunks_at_or_above_point2": 5,
+          "document_ids": [
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:151",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:158",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:126"
+          ]
+        },
+        "c4_candidate": {
+          "chunk_overlap_fraction_max": 0.018,
+          "chunks_at_or_above_point2": 0,
+          "document_ids": []
+        }
+      },
+      "finemath_test": {
+        "finemath_train": {
+          "chunk_overlap_fraction_max": 0.526,
+          "chunks_at_or_above_point2": 4,
+          "document_ids": [
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:49",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:104",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:205",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:7"
+          ]
+        },
+        "c4_candidate": {
+          "chunk_overlap_fraction_max": 0.008,
+          "chunks_at_or_above_point2": 0,
+          "document_ids": []
+        }
+      },
+      "c4_validation": {
+        "finemath_train": {
+          "chunk_overlap_fraction_max": 0.0,
+          "chunks_at_or_above_point2": 0,
+          "document_ids": []
+        },
+        "c4_candidate": {
+          "chunk_overlap_fraction_max": 0.082,
+          "chunks_at_or_above_point2": 0,
+          "document_ids": []
+        }
+      },
+      "c4_test": {
+        "finemath_train": {
+          "chunk_overlap_fraction_max": 0.0,
+          "chunks_at_or_above_point2": 0,
+          "document_ids": []
+        },
+        "c4_candidate": {
+          "chunk_overlap_fraction_max": 0.048,
+          "chunks_at_or_above_point2": 0,
+          "document_ids": []
+        }
+      },
+      "wikitext103_validation": {
+        "finemath_train": {
+          "chunk_overlap_fraction_max": 0.0,
+          "chunks_at_or_above_point2": 0,
+          "document_ids": []
+        },
+        "c4_candidate": {
+          "chunk_overlap_fraction_max": 0.0,
+          "chunks_at_or_above_point2": 0,
+          "document_ids": []
+        }
+      },
+      "wikitext103_test": {
+        "finemath_train": {
+          "chunk_overlap_fraction_max": 0.0,
+          "chunks_at_or_above_point2": 0,
+          "document_ids": []
+        },
+        "c4_candidate": {
+          "chunk_overlap_fraction_max": 0.0,
+          "chunks_at_or_above_point2": 0,
+          "document_ids": []
+        }
+      }
+    },
+    "primary_evaluation_v3": {
+      "finemath_validation": {
+        "finemath_train": {
+          "chunk_overlap_fraction_max": 0.818,
+          "chunks_at_or_above_point2": 29,
+          "document_ids": [
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:1004",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:1115",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:151",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:1528",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:158",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:300",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:1686",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:308",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:373",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:1227",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:126",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:1367",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:1447",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:1710",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:304",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:538",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:679",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:911",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:1404",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:1654",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:215",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:232",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:421"
+          ]
+        },
+        "c4_candidate": {
+          "chunk_overlap_fraction_max": 0.02,
+          "chunks_at_or_above_point2": 0,
+          "document_ids": []
+        }
+      },
+      "finemath_test": {
+        "finemath_train": {
+          "chunk_overlap_fraction_max": 0.62,
+          "chunks_at_or_above_point2": 37,
+          "document_ids": [
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:1014",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:1381",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:1592",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:400",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:606",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:890",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:932",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:1514",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:1575",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:1633",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:49",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:892",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:1005",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:104",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:1077",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:1100",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:1417",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:757",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:1120",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:1190",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:270",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:380",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:404",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:467",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:642",
+            "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:7"
+          ]
+        },
+        "c4_candidate": {
+          "chunk_overlap_fraction_max": 0.028,
+          "chunks_at_or_above_point2": 0,
+          "document_ids": []
+        }
+      },
+      "c4_validation": {
+        "finemath_train": {
+          "chunk_overlap_fraction_max": 0.008,
+          "chunks_at_or_above_point2": 0,
+          "document_ids": []
+        },
+        "c4_candidate": {
+          "chunk_overlap_fraction_max": 0.122,
+          "chunks_at_or_above_point2": 0,
+          "document_ids": []
+        }
+      },
+      "c4_test": {
+        "finemath_train": {
+          "chunk_overlap_fraction_max": 0.02,
+          "chunks_at_or_above_point2": 0,
+          "document_ids": []
+        },
+        "c4_candidate": {
+          "chunk_overlap_fraction_max": 0.85,
+          "chunks_at_or_above_point2": 6,
+          "document_ids": [
+            "c4:en:validation:c4-en-validation-00000.json.gz:2028",
+            "c4:en:validation:c4-en-validation-00000.json.gz:3813",
+            "c4:en:validation:c4-en-validation-00000.json.gz:3930",
+            "c4:en:validation:c4-en-validation-00000.json.gz:4182"
+          ]
+        }
+      },
+      "wikitext103_validation": {
+        "finemath_train": {
+          "chunk_overlap_fraction_max": 0.0,
+          "chunks_at_or_above_point2": 0,
+          "document_ids": []
+        },
+        "c4_candidate": {
+          "chunk_overlap_fraction_max": 0.0,
+          "chunks_at_or_above_point2": 0,
+          "document_ids": []
+        }
+      },
+      "wikitext103_test": {
+        "finemath_train": {
+          "chunk_overlap_fraction_max": 0.0,
+          "chunks_at_or_above_point2": 0,
+          "document_ids": []
+        },
+        "c4_candidate": {
+          "chunk_overlap_fraction_max": 0.0,
+          "chunks_at_or_above_point2": 0,
+          "document_ids": []
+        }
+      }
+    }
+  }
+}

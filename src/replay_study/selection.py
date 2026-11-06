@@ -182,7 +182,7 @@ def select_bank(data: str | Path | Mapping[str, Any], method: str, seed: int,
                 "raw_input_tokens": int(mask[selected_tensor].sum().item()),
                 "sequence_length": ids.shape[1], "selected_indices": selected.tolist(),
                 "selected_chunk_hashes": selected_hashes, "wall_seconds": time.perf_counter() - begin,
-                "rng": "numpy.random.default_rng(PCG64)", **extra}
+                "rng": "numpy.random.default_rng(PCG64)", "numpy_version": np.__version__, **extra}
     if stats is not None and "teacher_nll" in stats:
         values = np.asarray(stats["teacher_nll"], dtype=np.float64)[selected]
         manifest["bank_teacher_nll"] = {"mean": float(values.mean()), "std": float(values.std()),
@@ -191,6 +191,8 @@ def select_bank(data: str | Path | Mapping[str, Any], method: str, seed: int,
         manifest["teacher_statistics"] = {key: value for key, value in stats.items()
                                           if not isinstance(value, torch.Tensor)}
         manifest["teacher_statistics_artifact"] = str(statistics) if isinstance(statistics, (str, Path)) else "in_memory"
+        if isinstance(statistics, (str, Path)):
+            manifest["teacher_statistics_sha256"] = hashlib.sha256(Path(statistics).read_bytes()).hexdigest()
     return bank, manifest
 
 

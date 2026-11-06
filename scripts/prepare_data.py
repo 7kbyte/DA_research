@@ -68,7 +68,8 @@ class Builder:
 
     def collect(self, name: str, docs, quotas: dict[str, int | None], partition,
                 source: str, revision: str, sampling: dict,
-                reject_ngram_fraction: float | None = None):
+                reject_ngram_fraction: float | None = None,
+                max_chunks_per_document: int | None = None):
         collect_started = time.monotonic()
         chunks = {s: [] for s in quotas}
         doc_ids = {s: [] for s in quotas}
@@ -104,8 +105,20 @@ class Builder:
                     continue
             limit = quotas[split]
             artifact_name = f"{name}_{split}"
+            full_chunk_count = len(rows)
+            source_indices = list(range(full_chunk_count))
+            if max_chunks_per_document is not None:
+                allowed = min(max_chunks_per_document, full_chunk_count)
+                if limit is not None:
+                    allowed = min(allowed, limit - len(chunks[split]))
+                if allowed < full_chunk_count:
+                    source_indices = sorted(np.random.default_rng(int(doc_hash, 16)).choice(
+                        full_chunk_count, size=allowed, replace=False).tolist())
+                    rows = [rows[i] for i in source_indices]
+                stats[split]["document_cap_full_chunks_discarded"] += full_chunk_count - len(rows)
             used = []
-            for row in rows:
+            used_source_indices = []
+            for source_index, row in zip(source_indices, rows):
                 if limit is not None and len(used) + len(chunks[split]) >= limit:
                     break
                 chunk_hash = token_chunk_hash(row)
@@ -115,13 +128,15 @@ class Builder:
                 self.chunk_seen[chunk_hash] = artifact_name
                 self.chunk_hashes.setdefault(artifact_name, []).append(chunk_hash)
                 used.append(row)
+                used_source_indices.append(source_index)
             if not used:
                 continue
             self.seen[doc_hash] = {"doc_id": doc.doc_id, "artifact": artifact_name}
             record = {"doc_id": doc.doc_id, "sha256": doc_hash, "artifact": artifact_name,
                       "source": doc.source, "source_split": doc.source_split,
                       "source_metadata": doc.metadata, "source_tokens": len(tokens),
-                      "chunks_used": len(used), "source_text": doc.text}
+                      "chunks_used": len(used), "available_full_chunks": full_chunk_count,
+                      "source_chunk_indices_used": used_source_indices, "source_text": doc.text}
             self.documents.append(record)
             chunks[split].extend(used)
             doc_ids[split].extend([doc.doc_id] * len(used))
@@ -154,6 +169,13 @@ class Builder:
                     "chunk_overlap_fraction_threshold": reject_ngram_fraction,
                     "action": "reject whole source document if any full chunk reaches threshold; refill from same fixed hash split",
                     "loss_based_filtering": False}
+            if max_chunks_per_document is not None:
+                manifest["preprocessing"]["document_chunk_cap"] = {
+                    "maximum_chunks": max_chunks_per_document,
+                    "sampling": "uniform without replacement, sort original source chunk indices",
+                    "rng": "NumPy default_rng PCG64, seed=int(normalized_document_SHA256,16)",
+                    "last_document": "uniformly select min(cap, remaining quota) chunks",
+                    "decontamination_order": "reject whole document using all full chunks before capped sampling"}
             self.results[key] = save_token_dataset(self.output / f"{key}.pt", chunks[split], doc_ids[split], manifest)
             print("saved", key, "chunks", len(chunks[split]), flush=True)
         self.preparation_timings.append({"dataset": name, "splits": list(quotas),

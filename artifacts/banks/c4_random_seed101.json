@@ -415,5 +415,32 @@
   "rng": "numpy.random.default_rng(PCG64)",
   "artifact_sha256": "2e44d3fd41613faf0e1f363d8a3a0913c97bf309e1b411086722fd639d4e1c86",
   "source_pool": "artifacts/data/c4_candidate.pt",
-  "source_pool_sha256": "c4206526499cdc64d370c580ba08b83c0b9a108a87b8fb2c4ca0925db36617a7"
+  "source_pool_sha256": "c4206526499cdc64d370c580ba08b83c0b9a108a87b8fb2c4ca0925db36617a7",
+  "source": "allenai/c4:en",
+  "revision": "1588ec454efa1a09f29cd18ddd04fe05fc8653a2",
+  "tokenizer": {
+    "repo": "EleutherAI/pythia-410m",
+    "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+  },
+  "tokenizer_revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+  "split": "training_replay_bank",
+  "experiment_role": "pilot",
+  "source_manifest": "artifacts/data/c4_candidate.json",
+  "source_manifest_sha256": "5dd810ef3d2f6d8b8ee34ab368c3f9aa9f60df2d457c122825c70e99263ebc94",
+  "source_preprocessing": {
+    "sequence_length": 512,
+    "document_boundary": "tokenize each document independently, append one EOS, nonoverlapping full chunks, discard suffix",
+    "cross_document_chunks": false,
+    "padding": false,
+    "duplicate_normalization": "NFKC, collapse all whitespace; SHA256",
+    "global_exact_duplicate_policy": "keep first encountered retained document; reject all subsequent matches",
+    "token_chunk_duplicate_policy": "global exact SHA256 over little-endian uint32 IDs; retain first"
+  },
+  "preprocessing": {
+    "selection": "random",
+    "deduplication": "exact_tokens_and_mask_sha256",
+    "deduplicate_before_selection": false
+  },
+  "numpy_version": "1.24.4",
+  "chunk_hash_encoding": "little_endian_int64_token_ids_then_uint8_boolean_validity_mask"
 }

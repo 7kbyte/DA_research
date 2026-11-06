@@ -1,0 +1,132 @@
+[
+  {
+    "id": "evaluate_v3_lr_initial",
+    "argv": [
+      "/usr/bin/python",
+      "/data/202610/7kb/research/scripts/run_evaluate.py",
+      "--model",
+      "/tmp/grad-research-20261106/models/pythia-410m-final",
+      "--revision",
+      "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+      "--output",
+      "/data/202610/7kb/research/results/pilots/v3_lr/initial.json",
+      "--device",
+      "cuda:0",
+      "--batch-size",
+      "16",
+      "--precision",
+      "bf16",
+      "--teacher-kl",
+      "--include-chunks",
+      "--corpus",
+      "target=/data/202610/7kb/research/artifacts/evaluation_v3/finemath_validation.pt",
+      "--corpus",
+      "c4=/data/202610/7kb/research/artifacts/evaluation_v3/c4_validation.pt",
+      "--corpus",
+      "wikitext=/data/202610/7kb/research/artifacts/evaluation_v3/wikitext103_validation.pt"
+    ],
+    "expected_seconds": 120,
+    "outputs": [
+      "/data/202610/7kb/research/results/pilots/v3_lr/initial.json"
+    ]
+  },
+  {
+    "id": "evaluate_v3_lr_lr_1e-05",
+    "argv": [
+      "/usr/bin/python",
+      "/data/202610/7kb/research/scripts/run_evaluate.py",
+      "--model",
+      "/tmp/grad-research-20261106/models/pythia-410m-final",
+      "--revision",
+      "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+      "--output",
+      "/data/202610/7kb/research/results/pilots/v3_lr/lr_1e-05.json",
+      "--device",
+      "cuda:0",
+      "--batch-size",
+      "16",
+      "--precision",
+      "bf16",
+      "--teacher-kl",
+      "--include-chunks",
+      "--checkpoint",
+      "/tmp/grad-research-20261106/runs/pilot_lr_1e-05/checkpoints/latest.pt",
+      "--corpus",
+      "target=/data/202610/7kb/research/artifacts/evaluation_v3/finemath_validation.pt",
+      "--corpus",
+      "c4=/data/202610/7kb/research/artifacts/evaluation_v3/c4_validation.pt",
+      "--corpus",
+      "wikitext=/data/202610/7kb/research/artifacts/evaluation_v3/wikitext103_validation.pt"
+    ],
+    "expected_seconds": 120,
+    "outputs": [
+      "/data/202610/7kb/research/results/pilots/v3_lr/lr_1e-05.json"
+    ]
+  },
+  {
+    "id": "evaluate_v3_lr_lr_3e-05",
+    "argv": [
+      "/usr/bin/python",
+      "/data/202610/7kb/research/scripts/run_evaluate.py",
+      "--model",
+      "/tmp/grad-research-20261106/models/pythia-410m-final",
+      "--revision",
+      "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+      "--output",
+      "/data/202610/7kb/research/results/pilots/v3_lr/lr_3e-05.json",
+      "--device",
+      "cuda:0",
+      "--batch-size",
+      "16",
+      "--precision",
+      "bf16",
+      "--teacher-kl",
+      "--include-chunks",
+      "--checkpoint",
+      "/tmp/grad-research-20261106/runs/pilot_lr_3e-05/checkpoints/latest.pt",
+      "--corpus",
+      "target=/data/202610/7kb/research/artifacts/evaluation_v3/finemath_validation.pt",
+      "--corpus",
+      "c4=/data/202610/7kb/research/artifacts/evaluation_v3/c4_validation.pt",
+      "--corpus",
+      "wikitext=/data/202610/7kb/research/artifacts/evaluation_v3/wikitext103_validation.pt"
+    ],
+    "expected_seconds": 120,
+    "outputs": [
+      "/data/202610/7kb/research/results/pilots/v3_lr/lr_3e-05.json"
+    ]
+  },
+  {
+    "id": "evaluate_v3_lr_lr_1e-04",
+    "argv": [
+      "/usr/bin/python",
+      "/data/202610/7kb/research/scripts/run_evaluate.py",
+      "--model",
+      "/tmp/grad-research-20261106/models/pythia-410m-final",
+      "--revision",
+      "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+      "--output",
+      "/data/202610/7kb/research/results/pilots/v3_lr/lr_1e-04.json",
+      "--device",
+      "cuda:0",
+      "--batch-size",
+      "16",
+      "--precision",
+      "bf16",
+      "--teacher-kl",
+      "--include-chunks",
+      "--checkpoint",
+      "/tmp/grad-research-20261106/runs/pilot_lr_1e-04/checkpoints/latest.pt",
+      "--corpus",
+      "target=/data/202610/7kb/research/artifacts/evaluation_v3/finemath_validation.pt",
+      "--corpus",
+      "c4=/data/202610/7kb/research/artifacts/evaluation_v3/c4_validation.pt",
+      "--corpus",
+      "wikitext=/data/202610/7kb/research/artifacts/evaluation_v3/wikitext103_validation.pt"
+    ],
+    "expected_seconds": 120,
+    "outputs": [
+      "/data/202610/7kb/research/results/pilots/v3_lr/lr_1e-04.json"
+    ]
+  }
+]

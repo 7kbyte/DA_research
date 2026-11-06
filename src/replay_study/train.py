@@ -142,9 +142,11 @@ def load_training_data(path: str | Path) -> dict:
     if (counts == 0).any():
         raise ValueError("Each training chunk must have at least one valid prediction token")
     seen = set()
+    chunk_hashes = []
     unique_prediction_tokens = 0
     for index in range(len(ids)):
         digest = hashlib.sha256(ids[index].numpy().tobytes() + mask[index].numpy().tobytes()).digest()
+        chunk_hashes.append(digest.hex())
         if digest not in seen:
             seen.add(digest)
             unique_prediction_tokens += int(counts[index])
@@ -155,6 +157,7 @@ def load_training_data(path: str | Path) -> dict:
             raise ValueError(f"Manifest unique_prediction_tokens disagrees with tensor chunk hashes: {path}")
     return {"input_ids": ids, "attention_mask": mask, "prediction_mask": valid,
             "unique_chunks": len(seen), "unique_prediction_tokens": unique_prediction_tokens,
+            "chunk_hashes": chunk_hashes,
             "prediction_counts": counts, "doc_ids": payload.get("doc_ids"),
             "prediction_tokens": int(counts.sum()), "raw_input_tokens": int(mask.sum()),
             "rows": int(ids.shape[0]), "sequence_length": int(ids.shape[1])}
@@ -199,6 +202,39 @@ class TokenStream:
         for name in ("epoch", "row", "offset", "exposure", "trace_hash"):
             setattr(self, name, state[name])
         self._set_order()
+
+    def unique_prediction_tokens_exposed(self) -> int:
+        """Exact coverage of chunk-context prediction positions, deduplicated by ids+mask.
+
+        Within a row, consumption is always a prefix of valid prediction positions.
+        Thus equal chunks require only the maximum exposed prefix length. A full
+        epoch covers all unique chunks, including when duplicate rows exist.
+        """
+        if self.epoch >= 1:
+            return self.data["unique_prediction_tokens"]
+        if self.data["unique_chunks"] == self.data["rows"]:
+            return min(self.exposure, self.data["unique_prediction_tokens"])
+        covered = {}
+        for index in self.order[:self.row]:
+            key = self.data["chunk_hashes"][index]
+            covered[key] = int(self.data["prediction_counts"][index])
+        if self.offset:
+            key = self.data["chunk_hashes"][self.order[self.row]]
+            covered[key] = max(covered.get(key, 0), self.offset)
+        return sum(covered.values())
+
+    def coverage_accounting(self) -> dict:
+        unique = self.unique_prediction_tokens_exposed()
+        return {"capacity_prediction_tokens":self.data["prediction_tokens"],
+                "unique_capacity_prediction_tokens":self.data["unique_prediction_tokens"],
+                "unique_prediction_tokens_exposed":unique,
+                "cumulative_prediction_tokens_exposed":self.exposure,
+                "repeated_prediction_token_exposures":self.exposure-unique,
+                "assumption_no_duplicate_chunks":self.data["unique_chunks"]==self.data["rows"],
+                "no_duplicate_chunks_verified":self.data["unique_chunks"]==self.data["rows"],
+                "identity":"exact input_ids plus attention_mask chunk hash; valid prediction positions",
+                "method":"min(exposure,unique_capacity)" if self.data["unique_chunks"]==self.data["rows"]
+                         else "exact union of valid prediction prefixes for identical chunk hashes"}
 
     def take(self, prediction_tokens: int, batch_size: int) -> Iterator[dict[str, Tensor | int]]:
         remaining = prediction_tokens
@@ -350,11 +386,13 @@ def train(config: TrainConfig, student=None, teacher=None,
                 "target_raw_input_tokens": 0, "replay_raw_input_tokens": 0,
                 "target_padded_input_tokens": 0, "replay_padded_input_tokens": 0,
                 "training_seconds": 0.0, "validation_seconds": 0.0, "checkpoint_seconds": 0.0,
-                "setup_seconds": 0.0, "validation_teacher_forward_seconds": 0.0,
+                "setup_seconds": 0.0, "training_teacher_forward_seconds": 0.0,
+                "validation_teacher_forward_seconds": 0.0,
                 "validation_kl_arithmetic_seconds": 0.0,
                 "prior_elapsed_seconds": 0.0}
     trajectory = []
     best_target_validation = None
+    teacher_timing_complete = True
     if config.resume_from:
         saved = _torch_load(config.resume_from)
         if "optimizer_state" not in saved:
@@ -395,6 +433,9 @@ def train(config: TrainConfig, student=None, teacher=None,
         student.load_state_dict(saved["model_state"])
         optimizer.load_state_dict(saved["optimizer_state"])
         counters.update(saved["counters"])
+        teacher_timing_complete = (saved.get("training_teacher_timing_complete", True) and not (
+            "training_teacher_forward_seconds" not in saved["counters"] and
+            saved["counters"]["replay_prediction_tokens"] > 0 and config.replay_objective == "kl"))
         target_stream.load_state_dict(saved["target_stream"])
         if replay_stream:
             replay_stream.load_state_dict(saved["replay_stream"])
@@ -424,7 +465,8 @@ def train(config: TrainConfig, student=None, teacher=None,
                    "counters": dict(counters), "target_stream": target_stream.state_dict(),
                    "replay_stream": replay_stream.state_dict() if replay_stream else None,
                    "rng_state": _rng_state(), "validation_trajectory": trajectory,
-                   "best_target_validation": best_target_validation}
+                   "best_target_validation": best_target_validation,
+                   "training_teacher_timing_complete": teacher_timing_complete}
         temporary = latest_path.with_suffix(".pt.tmp")
         torch.save(payload, temporary)
         os.replace(temporary, latest_path)
@@ -517,6 +559,7 @@ def train(config: TrainConfig, student=None, teacher=None,
                 group["lr"] = lr
             optimizer.zero_grad(set_to_none=True)
             target_sum, replay_sum = 0.0, 0.0
+            teacher_intervals, teacher_cpu_seconds = [], 0.0
             step_counts = {"target_prediction_tokens": 0, "replay_prediction_tokens": 0,
                            "target_raw_input_tokens": 0, "replay_raw_input_tokens": 0,
                            "target_padded_input_tokens": 0, "replay_padded_input_tokens": 0}
@@ -532,7 +575,17 @@ def train(config: TrainConfig, student=None, teacher=None,
                         student_logits = _model_logits(student, ids, attention)
                         if kind == "replay" and config.replay_objective == "kl":
                             with torch.no_grad():
-                                teacher_logits = _model_logits(teacher, ids, attention)
+                                if use_cuda:
+                                    teacher_begin = torch.cuda.Event(enable_timing=True)
+                                    teacher_end = torch.cuda.Event(enable_timing=True)
+                                    teacher_begin.record()
+                                    teacher_logits = _model_logits(teacher, ids, attention)
+                                    teacher_end.record()
+                                    teacher_intervals.append((teacher_begin, teacher_end))
+                                else:
+                                    teacher_begin_wall = time.perf_counter()
+                                    teacher_logits = _model_logits(teacher, ids, attention)
+                                    teacher_cpu_seconds += time.perf_counter() - teacher_begin_wall
                             stats = causal_forward_kl(student_logits, teacher_logits, ids, attention, mask,
                                                       chunk_size=config.loss_chunk_size)
                         else:
@@ -563,6 +616,9 @@ def train(config: TrainConfig, student=None, teacher=None,
             optimizer.step()
             if use_cuda:
                 torch.cuda.synchronize(device)
+            teacher_forward_seconds = (sum(begin.elapsed_time(end) for begin, end in teacher_intervals) / 1000.
+                                       if use_cuda else teacher_cpu_seconds)
+            counters["training_teacher_forward_seconds"] += teacher_forward_seconds
             counters["step"] += 1
             for name, value in step_counts.items():
                 counters[name] += value
@@ -574,8 +630,11 @@ def train(config: TrainConfig, student=None, teacher=None,
                          replay_weight=config.replay_weight, replay_ratio=config.replay_ratio,
                          realized_replay_ratio=counters["replay_prediction_tokens"] / counters["target_prediction_tokens"],
                          grad_norm=float(grad_norm), step_seconds=step_seconds,
+                         training_teacher_forward_seconds=teacher_forward_seconds,
                          target_prediction_tokens_per_second=wanted_target / step_seconds,
                          step_counts=step_counts, counters=counters,
+                         target_unique_prediction_tokens_exposed=target_stream.unique_prediction_tokens_exposed(),
+                         replay_unique_prediction_tokens_exposed=replay_stream.unique_prediction_tokens_exposed() if replay_stream else 0,
                          target_stream_hash=target_stream.trace_hash,
                          replay_stream_hash=replay_stream.trace_hash if replay_stream else None,
                          peak_gpu_memory_bytes=torch.cuda.max_memory_allocated(device) if use_cuda else 0)
@@ -589,6 +648,17 @@ def train(config: TrainConfig, student=None, teacher=None,
         summary = {"status": status, "config": dataclasses.asdict(config), "provenance": provenance,
                    "counters": {**counters, "elapsed_seconds": elapsed(),
                                 "total_accounted_wall_seconds": elapsed() + counters["setup_seconds"]},
+                   "timing": {"training_teacher_timing_mode": "cuda_event_elapsed" if use_cuda else "cpu_perf_counter",
+                              "training_teacher_forward_seconds_complete": teacher_timing_complete,
+                              "training_teacher_forward_seconds_nested_in": "training_seconds",
+                              "validation_teacher_forward_seconds_nested_in": "validation_seconds",
+                              "validation_kl_arithmetic_seconds_nested_in": "validation_seconds",
+                              "nested_timers_are_additive_costs": False,
+                              "note": "Teacher and KL sub-timers are already included in their parent totals; do not add twice."},
+                   "target_unique_prediction_tokens_exposed":target_stream.unique_prediction_tokens_exposed(),
+                   "replay_unique_prediction_tokens_exposed":replay_stream.unique_prediction_tokens_exposed() if replay_stream else 0,
+                   "coverage_accounting":{"target":target_stream.coverage_accounting(),
+                                          "replay":replay_stream.coverage_accounting() if replay_stream else None},
                    "target_tokens_per_step": target_per_step,
                    "replay_bank_unique_prediction_tokens": replay_data["unique_prediction_tokens"] if replay_data else 0,
                    "replay_bank_capacity_prediction_tokens": replay_data["prediction_tokens"] if replay_data else 0,

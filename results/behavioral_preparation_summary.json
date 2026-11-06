@@ -1,0 +1,81 @@
+{
+  "status": "prepared_no_model_inference",
+  "protocol": "docs/行为评估协议.md",
+  "harness_revision": "d6de81643928d653435c431bae19945d41d32520",
+  "source_files_verified": 11,
+  "official_metrics": [
+    "acc",
+    "acc_norm"
+  ],
+  "official_unique_primary_metric": null,
+  "requires_before_results": "If a single display metric is required, root must name it at freeze; official task YAML defines both metrics without one primary.",
+  "licenses": {
+    "piqa": {
+      "license": "AFL-3.0",
+      "primary_source_url": "https://yonatanbisk.com/piqa/",
+      "evidence": "Author homepage License section explicitly links Academic Free License v3.0.",
+      "mirror_license_metadata": "baber/piqa has no README/license file at pinned revision",
+      "saved_source": {
+        "url": "https://yonatanbisk.com/piqa/",
+        "path": "artifacts/behavioral/sources/piqa_author_homepage.html",
+        "bytes": 10253,
+        "sha256": "df0c230d58abe7b6a6346eb882e38ad934375f184c31d479e23b5111336c9dda",
+        "wall_seconds": 0.0026650987565517426
+      }
+    },
+    "hellaswag": {
+      "license": "MIT",
+      "primary_source_url": "https://huggingface.co/datasets/Rowan/hellaswag/blob/218ec52e09a7e7462a5400043bb9a69a41d06b76/README.md",
+      "evidence": "Author-owned HF dataset card Licensing Information states MIT.",
+      "upstream_license_file_status": "https://raw.githubusercontent.com/rowanz/hellaswag/master/LICENSE returned 404; GitHub repository page returned451 during verification",
+      "saved_source": {
+        "url": "https://hf-mirror.com/datasets/Rowan/hellaswag/resolve/218ec52e09a7e7462a5400043bb9a69a41d06b76/README.md",
+        "path": "artifacts/behavioral/sources/hellaswag_dataset_card.md",
+        "bytes": 7019,
+        "sha256": "cfe6e26e7e936a447a12f7eee50f2bffb0355c3b97459496d8c7296f65c5b353",
+        "wall_seconds": 0.002489805221557617
+      }
+    }
+  },
+  "data": {
+    "piqa": {
+      "source": "baber/piqa",
+      "revision": "142f6d7367fd9877f0fb3b5734ea6a545f54cdd1",
+      "items": 1838,
+      "artifact": "artifacts/behavioral/piqa_validation.jsonl",
+      "artifact_sha256": "1c651cd30ba15f579a2bfddfe6c92b2bdc20a01c00921693c50a620993119301",
+      "author_validation_equivalence": {
+        "author_data": {
+          "url": "https://yonatanbisk.com/piqa/data/valid.jsonl",
+          "path": "artifacts/behavioral/raw/piqa_author_valid.jsonl",
+          "bytes": 495929,
+          "sha256": "93503cc97c679e459b065c3d13e848282e44b2a25213985bed3e5d458abef72d",
+          "wall_seconds": 2.1394383907318115
+        },
+        "author_labels": {
+          "url": "https://yonatanbisk.com/piqa/data/valid-labels.lst",
+          "path": "artifacts/behavioral/raw/piqa_author_valid-labels.lst",
+          "bytes": 3676,
+          "sha256": "b4192dc3a2a0363d9d60ccf79800cbbe2f32ebb17726efdde6970e0b8131bceb",
+          "wall_seconds": 0.940655954182148
+        },
+        "verified": true,
+        "matched_items": 1838
+      }
+    },
+    "hellaswag": {
+      "source": "Rowan/hellaswag",
+      "revision": "218ec52e09a7e7462a5400043bb9a69a41d06b76",
+      "items": 10042,
+      "artifact": "artifacts/behavioral/hellaswag_validation.jsonl",
+      "artifact_sha256": "948f15fb1733acf005121510a504272a58133ee1d4a9511870176e6ff6f50d75"
+    }
+  },
+  "all_choice_tokenization_matches_official": true,
+  "audit": "results/behavioral_preparation_audit.json",
+  "cpu_scientific_tests": 8,
+  "real_model_inference_performed": false,
+  "gpu_used_for_behavioral_preparation": false,
+  "cli": "scripts/evaluate_tasks.py",
+  "whole_repository_tests_passed_at_preparation": 48
+}

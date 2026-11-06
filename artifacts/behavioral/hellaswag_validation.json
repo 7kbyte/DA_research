@@ -1,0 +1,48 @@
+{
+  "task": "hellaswag",
+  "source": "Rowan/hellaswag",
+  "revision": "218ec52e09a7e7462a5400043bb9a69a41d06b76",
+  "split": "validation",
+  "items": 10042,
+  "raw_asset": {
+    "url": "https://hf-mirror.com/datasets/Rowan/hellaswag/resolve/218ec52e09a7e7462a5400043bb9a69a41d06b76/data/validation-00000-of-00001.parquet",
+    "path": "artifacts/behavioral/raw/hellaswag_validation.parquet",
+    "bytes": 6315951,
+    "sha256": "899813071e1e95efafec90f856e1987d2150fa4d020fc005df6962c259f660cd",
+    "wall_seconds": 0.034035153687000275
+  },
+  "canonical_source_url": "https://huggingface.co/datasets/Rowan/hellaswag/resolve/218ec52e09a7e7462a5400043bb9a69a41d06b76/data/validation-00000-of-00001.parquet",
+  "artifact": "artifacts/behavioral/hellaswag_validation.jsonl",
+  "artifact_sha256": "948f15fb1733acf005121510a504272a58133ee1d4a9511870176e6ff6f50d75",
+  "ordered_example_fingerprint": "fd5101ffeaea31da9b4d911b407ef5055341958479515651357b908b6cfb38d5",
+  "harness_revision": "d6de81643928d653435c431bae19945d41d32520",
+  "task_format_version": "official_zero_shot_v1",
+  "target_delimiter": " ",
+  "fewshot": 0,
+  "apply_chat_template": false,
+  "official_metrics": [
+    "acc",
+    "acc_norm"
+  ],
+  "official_single_primary_metric": null,
+  "license": {
+    "license": "MIT",
+    "primary_source_url": "https://huggingface.co/datasets/Rowan/hellaswag/blob/218ec52e09a7e7462a5400043bb9a69a41d06b76/README.md",
+    "evidence": "Author-owned HF dataset card Licensing Information states MIT.",
+    "upstream_license_file_status": "https://raw.githubusercontent.com/rowanz/hellaswag/master/LICENSE returned 404; GitHub repository page returned451 during verification",
+    "saved_source": {
+      "url": "https://hf-mirror.com/datasets/Rowan/hellaswag/resolve/218ec52e09a7e7462a5400043bb9a69a41d06b76/README.md",
+      "path": "artifacts/behavioral/sources/hellaswag_dataset_card.md",
+      "bytes": 7019,
+      "sha256": "cfe6e26e7e936a447a12f7eee50f2bffb0355c3b97459496d8c7296f65c5b353",
+      "wall_seconds": 0.002489805221557617
+    }
+  },
+  "evaluation_role": "heldout_behavioral_supplement_not_for_tuning",
+  "label_counts": {
+    "0": 2515,
+    "1": 2485,
+    "2": 2584,
+    "3": 2458
+  }
+}

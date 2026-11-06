@@ -45,12 +45,17 @@ def main():
     p.add_argument("--data-dir", type=Path, default=Path("artifacts/data"))
     p.add_argument("--ngram", type=int, default=13)
     p.add_argument("--fraction-threshold", type=float, default=.2)
+    p.add_argument("--references", nargs="+", default=["finemath_train", "c4_candidate", "finemath_validation"])
+    p.add_argument("--reference-data-dir", type=Path)
     args = p.parse_args()
     started = time.monotonic()
-    reference_names = ["finemath_train", "c4_candidate", "finemath_validation"]
+    reference_names = args.references
     references = {}
     for name in reference_names:
-        ids = load_token_dataset(args.data_dir / f"{name}.pt")["input_ids"].numpy()
+        path = args.data_dir / f"{name}.pt"
+        if not path.exists() and args.reference_data_dir:
+            path = args.reference_data_dir / f"{name}.pt"
+        ids = load_token_dataset(path)["input_ids"].numpy()
         references[name] = np.unique(ngram_hashes(ids, args.ngram))
     reports = {}
     for path in sorted(args.data_dir.glob("*.pt")):

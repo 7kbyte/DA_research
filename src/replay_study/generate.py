@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import hashlib
+import importlib.metadata
 import json
 import platform
 import random
@@ -226,8 +227,11 @@ def generate_pool(config: GenerationConfig, model: torch.nn.Module | None = None
                 "generation_wall_seconds": elapsed,
                 "sampled_tokens_per_second": config.n_chunks * hf_config.max_new_tokens / elapsed,
                 "peak_gpu_memory_bytes": torch.cuda.max_memory_allocated(device) if device.type == "cuda" else 0,
+                "peak_gpu_memory_measurement": "torch.cuda.max_memory_allocated",
                 "gpu": torch.cuda.get_device_name(device) if device.type == "cuda" else None,
                 "torch_version": torch.__version__, "python_version": platform.python_version(),
+                "transformers_version": importlib.metadata.version("transformers"),
+                "numpy_version": np.__version__, "resolved_hf_generation_config": hf_config.to_dict(),
                 "artifact_sha256": hashlib.sha256(output.read_bytes()).hexdigest(),
                 "diagnostics": generation_diagnostics(ids, eos),
                 "text_samples": [tokenizer.decode(row.tolist()) for row in ids[:8]]}

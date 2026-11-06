@@ -1,0 +1,892 @@
+{
+  "data_version": "evaluation-v3",
+  "cross_artifact_normalized_exact_document_overlap": {
+    "c4_test :: c4_validation": 0,
+    "c4_test :: finemath_test": 0,
+    "c4_test :: finemath_validation": 0,
+    "c4_test :: primary:c4_candidate": 0,
+    "c4_test :: primary:finemath_train": 0,
+    "c4_test :: wikitext103_test": 0,
+    "c4_test :: wikitext103_validation": 0,
+    "c4_validation :: finemath_test": 0,
+    "c4_validation :: finemath_validation": 0,
+    "c4_validation :: primary:c4_candidate": 0,
+    "c4_validation :: primary:finemath_train": 0,
+    "c4_validation :: wikitext103_test": 0,
+    "c4_validation :: wikitext103_validation": 0,
+    "finemath_test :: finemath_validation": 0,
+    "finemath_test :: primary:c4_candidate": 0,
+    "finemath_test :: primary:finemath_train": 0,
+    "finemath_test :: wikitext103_test": 0,
+    "finemath_test :: wikitext103_validation": 0,
+    "finemath_validation :: primary:c4_candidate": 0,
+    "finemath_validation :: primary:finemath_train": 0,
+    "finemath_validation :: wikitext103_test": 0,
+    "finemath_validation :: wikitext103_validation": 0,
+    "primary:c4_candidate :: primary:finemath_train": 0,
+    "primary:c4_candidate :: wikitext103_test": 0,
+    "primary:c4_candidate :: wikitext103_validation": 0,
+    "primary:finemath_train :: wikitext103_test": 0,
+    "primary:finemath_train :: wikitext103_validation": 0,
+    "wikitext103_test :: wikitext103_validation": 0
+  },
+  "cross_artifact_exact_token_chunk_overlap": {
+    "c4_test :: c4_validation": 0,
+    "c4_test :: finemath_test": 0,
+    "c4_test :: finemath_validation": 0,
+    "c4_test :: primary:c4_candidate": 0,
+    "c4_test :: primary:finemath_train": 0,
+    "c4_test :: wikitext103_test": 0,
+    "c4_test :: wikitext103_validation": 0,
+    "c4_validation :: finemath_test": 0,
+    "c4_validation :: finemath_validation": 0,
+    "c4_validation :: primary:c4_candidate": 0,
+    "c4_validation :: primary:finemath_train": 0,
+    "c4_validation :: wikitext103_test": 0,
+    "c4_validation :: wikitext103_validation": 0,
+    "finemath_test :: finemath_validation": 0,
+    "finemath_test :: primary:c4_candidate": 0,
+    "finemath_test :: primary:finemath_train": 0,
+    "finemath_test :: wikitext103_test": 0,
+    "finemath_test :: wikitext103_validation": 0,
+    "finemath_validation :: primary:c4_candidate": 0,
+    "finemath_validation :: primary:finemath_train": 0,
+    "finemath_validation :: wikitext103_test": 0,
+    "finemath_validation :: wikitext103_validation": 0,
+    "primary:c4_candidate :: primary:finemath_train": 0,
+    "primary:c4_candidate :: wikitext103_test": 0,
+    "primary:c4_candidate :: wikitext103_validation": 0,
+    "primary:finemath_train :: wikitext103_test": 0,
+    "primary:finemath_train :: wikitext103_validation": 0,
+    "wikitext103_test :: wikitext103_validation": 0
+  },
+  "all_pairs_disjoint": true,
+  "duplicate_rejections": [],
+  "near_duplicate_document_rejections": [
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:3",
+      "split": "validation",
+      "sha256": "e224a326d723fee7103484eb4abd76bdeaec58a6f55bc68ce690437ae0eacb39",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.582
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:14",
+      "split": "validation",
+      "sha256": "d93ecab498e5706f1021fd5baf6cd194283063cb3804ef2cbaf1022cbe2dd9f7",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.958
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:62",
+      "split": "validation",
+      "sha256": "e1a6198ac3c34892c1f40dfdc03ecc7afb7395fd041165f35762732f4069d409",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.614
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:66",
+      "split": "validation",
+      "sha256": "cf35f5e94011ee945f73c9bf1568dc01df564ad4c0604c2bdaafe74c5c184b12",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.416
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:153",
+      "split": "validation",
+      "sha256": "e2084ce95d6e9dc60685c28a494382f0d93c355e03b24fe4319129de19b11e91",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.232
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:227",
+      "split": "validation",
+      "sha256": "d0bf8e3866f9a1ac93369eb5c7a2f4565b63965d84a92832e8dbd7b790f267dd",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.786
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:246",
+      "split": "validation",
+      "sha256": "cf38312e181d65c59f545b484c77f3f1202ab509ab50a2c6b7ce0d24cf5b37b2",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.322
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:311",
+      "split": "validation",
+      "sha256": "da44ac8805d341035e264ca598b8a0c0392af9af4ea5986fd380c5a157db6c1d",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.41
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:315",
+      "split": "validation",
+      "sha256": "d7c0e618b9161675e526976ba54cc41d12dd85a1585a8e1588466914c7404728",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.402
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:315",
+      "split": "validation",
+      "sha256": "e36bff67fc76e89a45dd7d23fff33ece08bfcbbb936f1e4302a7fc3112958dab",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.792
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:359",
+      "split": "validation",
+      "sha256": "d6084187d9c0a6340325f0071d5bac6f20c0e351c70ed50c1121fe329cafc6fd",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.718
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:389",
+      "split": "validation",
+      "sha256": "d1c0eb6d8d0f2183508187d4562feb6361072f8fbe041492e1bdd875066b15f9",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.32
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:425",
+      "split": "validation",
+      "sha256": "da04304133550b490704a8f8a0efc1aeab7d245d44a6e65cacae0a24fcae46a8",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.252
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:456",
+      "split": "validation",
+      "sha256": "cda4ad0a8ed5202e825d2d3f5e19d6ee2661838c34bd1a46db1d4eacf3a69895",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.452
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:511",
+      "split": "validation",
+      "sha256": "e1a674a34cd702a00fe19f8a932d4f70e3ef59f4c10ce0be75bf8ee0791a986f",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.338
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:534",
+      "split": "validation",
+      "sha256": "dccffd86d4a0c136848d1a6fcb20b4c75f709d8b2cb80193c76081ade389cea4",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.434
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:578",
+      "split": "validation",
+      "sha256": "dc21b63ccabe707ccfe418fcd8085a68cec2c82a8b2e5e4f5206810039034a89",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.456
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:622",
+      "split": "validation",
+      "sha256": "d5bd92e066f7fe4602b1f89dc88e6ff8d98484428d0e44bc09aace8876509aaf",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.328
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:637",
+      "split": "validation",
+      "sha256": "e5694dbad712315ee64bc95e575d97991de861c962d6a028cb982d335ee0b6bc",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.366
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:642",
+      "split": "validation",
+      "sha256": "d3f1125907d5cedb622d2d42408ff83d47ab75ab34ffdad5e8e5819944cd6305",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.296
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:774",
+      "split": "validation",
+      "sha256": "cdffe319e804f3d164b3aad08879badc2e312e3a23e744937409e2b7040ef1d1",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.332
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:794",
+      "split": "validation",
+      "sha256": "d7eb053f5be6ebc5dcf75459f1ff293c8fd7d482681eccb598fbaa6c40b9245c",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.976
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:802",
+      "split": "validation",
+      "sha256": "e136ea832d0290c08949f927f3231d563fd752b101cb8cba04d57200e3ba2339",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.426
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:820",
+      "split": "validation",
+      "sha256": "d842e52aa161b332c67c63cb1341da442fbb4cbbf8a8b9a125395bc09dcaf344",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.706
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:835",
+      "split": "validation",
+      "sha256": "d68bc2b4eda08f2dec82cd8b04d74df1285bebdf7151b0168164e4d8c4dac0ad",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.846
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:865",
+      "split": "validation",
+      "sha256": "e4192d6699a3c0bce0c7090e41e18ed46722822895694f3761c8160598fef7e5",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.216
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:881",
+      "split": "validation",
+      "sha256": "d8fc794680ac06233cfec6bf9b35454d768ef1bd4ac7521a6e06e1c0ebff92fa",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.316
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:1022",
+      "split": "validation",
+      "sha256": "e4bff7857b7f887f30b4d575f0c1cc7898d3c8a003782d164b8d2765c9b15720",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.428
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:1079",
+      "split": "validation",
+      "sha256": "df546d2c6c11173edef2708250f3a32decbc32144dc4000b4915088c51c5889b",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.29
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:1167",
+      "split": "validation",
+      "sha256": "e01b9992c03b0f35a8b7b20f6d06e78245009d1c1d20eb9721d44f97727b53ba",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.214
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:1173",
+      "split": "validation",
+      "sha256": "e296dfd67b278a72abb1f774efa6de154940c91a42bf25185f0b89536578317e",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.32
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:1193",
+      "split": "validation",
+      "sha256": "df3ad7da80cd43197289970336d844616baac70bc6b912630e3238d9ecb85ea3",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.24
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:1196",
+      "split": "validation",
+      "sha256": "d7c2ede84affada5117a6a308ec5a544127416625f459ce4d4b7dcd1ddbc3cce",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.218
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:1204",
+      "split": "validation",
+      "sha256": "d2cce172e149e8ef1137757b99d9eafd14f1710dfca1c65cb4056bdb2f6489d2",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.27
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:1274",
+      "split": "validation",
+      "sha256": "d7c158dfb49c4013083a27cb54ecc964110b146615b19bfe3661b351ee83a4b7",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.254
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:1324",
+      "split": "validation",
+      "sha256": "d1fc3d6ec94be00d103ba60487ad10f3d1bd5ac8a9324a1531eb0471a9fc0f1e",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 1.0
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:1333",
+      "split": "validation",
+      "sha256": "e5a347e6503075db1025022abf97609f5ed4cfb54b6f7c22fad90bf9dd0464d6",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.216
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:1343",
+      "split": "validation",
+      "sha256": "cf92eb408d053d002379b86e2acdfb2654ad91d81bb5d785db87d4f4c1b660ce",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.33
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:1373",
+      "split": "validation",
+      "sha256": "d4aecfe3fd62ce15e03c379bd0fa401d13bb7c51b0cd1304a1816645889059a7",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.46
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:1392",
+      "split": "validation",
+      "sha256": "e414d9a3484c53e25deb0d1139429955a62f4179303942443da70eca65030035",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.278
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:1464",
+      "split": "validation",
+      "sha256": "cd9573eb057870332f5b8a4f09506fcddfec0ea734484e3dd276d09fa39162ff",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.402
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:1539",
+      "split": "validation",
+      "sha256": "d2200d8f16a0e545297dbe0dabe04316dfa0a0e48fc88445acff7479ef904af4",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.334
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:1544",
+      "split": "validation",
+      "sha256": "de878479d24f2db1f63c2274ddcbdad0608fe150525bb43004d38167dd79741d",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.362
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:1612",
+      "split": "validation",
+      "sha256": "e31c56be7b20f1584bb21ef69ec0e3208a80939f20fb74861b021b8f8a932252",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.426
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:1637",
+      "split": "validation",
+      "sha256": "d6df751031db1b30a4de06745d4f9d6c3a17400af18bae94c79259ede954920c",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.296
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:1662",
+      "split": "validation",
+      "sha256": "e3e20a7fccc332231ac6fe8700cf5d2320026dbba8d45ae244ccd54b4713249a",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.25
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:1702",
+      "split": "validation",
+      "sha256": "dbd2d2e7d02d1a46f5602dc65c4aacf840c5cf7b164979beede0f9631e56b615",
+      "references": [
+        "primary:finemath_train"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.594
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:5",
+      "split": "test",
+      "sha256": "e7599123701593ca623a35655ddfbc0a20326ae02206363a05839dddb6e58ed3",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.74
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:40",
+      "split": "test",
+      "sha256": "ead57aefcf958b02fa4e07909580578906ab39215a3b6441867c92b31b8d2293",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.702
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:105",
+      "split": "test",
+      "sha256": "e8f37c5048d9ddefdbb13cb925f49b03a218559a0db9519444a44a9cf4665cf9",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 1.0
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:122",
+      "split": "test",
+      "sha256": "fa36871d16efc9aa4d74ae8329dad8756a9b35329deb4a9dd8ff02d3a7bc3d71",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.34
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:175",
+      "split": "test",
+      "sha256": "f2906e0cf7639f09607a6f3b1bcbe8de107143f775ef6bfb362b43063ae37220",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.4
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:197",
+      "split": "test",
+      "sha256": "ef5b081ea1e4c3ecea96aad891e5e7ee72c0d5421badf80239fe7d1eae89b3f5",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.948
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:340",
+      "split": "test",
+      "sha256": "f1ba16c7034a83d82abfc92debb129d3acf8095c09e1d46c49d1ae6478f2b790",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.714
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:389",
+      "split": "test",
+      "sha256": "ed0b83828e8084d82d6a46b477d7f14043fd78f676375491549e042e788cf62f",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.272
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:465",
+      "split": "test",
+      "sha256": "fdec31dc64daed03078f94dfcc5d1f23b3c7f6b11d54a3091a66e4e22bcde5af",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.416
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:520",
+      "split": "test",
+      "sha256": "fad17aee57f7610df2a992506a77ad37ba027dddd41ea7a5bea92061fbb69723",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.554
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:548",
+      "split": "test",
+      "sha256": "fbf41952b87c2d2b1983ff14f97d94dc001a41cdb32a4fa555e24ca5d1e7bbc2",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.37
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:561",
+      "split": "test",
+      "sha256": "e7f49e85fa6bac0df45c74d449408f9a3a43ad215c0fe12cde74f0e0e9bd88f9",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.486
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:640",
+      "split": "test",
+      "sha256": "ecc7509a28bc1478d46ef95545e692f95cbe8f295f73ba7954dcc629c1e690b8",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.23
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:701",
+      "split": "test",
+      "sha256": "eae44628f069f4a3690f76b39a433c54c33a5d650894ca08a1803abc45c4d7d7",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.594
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:718",
+      "split": "test",
+      "sha256": "fdcdfdd71070a237a0746c1ae34dee1d0bf6e32dd8b94fcc06a6fd3ec41b0722",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.342
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:748",
+      "split": "test",
+      "sha256": "ee79102a7aac8c57717275bb17bee72bc1622fd0d8c32596bc7aac578273de26",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.974
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:755",
+      "split": "test",
+      "sha256": "f8bc53b1cf16c975ea75b39cd4738716f53ba6e7d320bbb69c858cd4458803b9",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.264
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:790",
+      "split": "test",
+      "sha256": "f91dfa4e456f8f35fcbcddd4fb617c35f66ff7cd35a7fc7adc0bf63db5227dbb",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.416
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:814",
+      "split": "test",
+      "sha256": "ff6e87a4e1d99a9b589f07d50aa13b027ee9706090b81f0c008577dce05d37e1",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.926
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:839",
+      "split": "test",
+      "sha256": "fcf857446ea64721c3a802d4e2609e681d815ecf720f224d3d85f9ae2951afda",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.264
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:873",
+      "split": "test",
+      "sha256": "ef5c08335d6712b3eb9fa40aaca8f6a09d2df67ec083de66a467073baf146a4c",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.374
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:979",
+      "split": "test",
+      "sha256": "f3248c3c196cfd60fe9639706d0ad087744edadcdb84a717a6dfd993fa2fcfdd",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.278
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:992",
+      "split": "test",
+      "sha256": "f327fce840f6b8cab05a4478da66e07183ae5cb643a4d30f7fc26bc9fbd3e17b",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.44
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:1007",
+      "split": "test",
+      "sha256": "ff6de73b4ff0438e9373e46afc23dcd5bff33660e9985853c83198ae083543d2",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.22
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:1012",
+      "split": "test",
+      "sha256": "e764cfd107e7c136ce8cc4733561fc9cf621fb138165d40865f30b8fc56c7f19",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.28
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:1058",
+      "split": "test",
+      "sha256": "fec528b42bb3fe057309c02f053b81785cff71bf93b946399611eacc0dc94440",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.352
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:1115",
+      "split": "test",
+      "sha256": "fac875636f30819c77b1dd5e136334eb0b67d263c35978d2d3537f1e0fe81745",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.55
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:1201",
+      "split": "test",
+      "sha256": "f9e709e29434c06c7cef3886a51b676b67843f72310c94037aead006793b2f3a",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.284
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:1206",
+      "split": "test",
+      "sha256": "f9cd6210e54ae7d3dd472418b6e743d93f37747c34dc7a502c4bea286c6dbfa9",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.368
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:1216",
+      "split": "test",
+      "sha256": "f608b30b2ba7edd25c2803a25e7f0238cb88d32f65b2c88c640e47a41a4bc8ad",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.504
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:1231",
+      "split": "test",
+      "sha256": "fe15ba4b46074079b046058d19c5be35e275e03c05cdd220327d048b170b822c",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.976
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:1331",
+      "split": "test",
+      "sha256": "ec3fcaa449f650f324e3a35a9e8b4a41e22148209ac5d069389eb8b9972bb7d8",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.304
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:1371",
+      "split": "test",
+      "sha256": "eba860553cace5e6098ca7caf91db6db12881185ce692f8b99b0e915400ea5c9",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.282
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:1386",
+      "split": "test",
+      "sha256": "f51c8fe654fe1126c1ecb3afff08cc5c3ac9f3e303b36ee85540e1ac94b17019",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.31
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:1437",
+      "split": "test",
+      "sha256": "fea93f8959c46c6b8ae72d6e9a5b3b1b147ddc1e97643ed2245af5a02cfd105a",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.54
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:1507",
+      "split": "test",
+      "sha256": "fa53a0389d3bf456a31178103af7be8b7ddca3e3d465e80f0063e17de88ef664",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.402
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:1568",
+      "split": "test",
+      "sha256": "ec9baab3cc478d823fb392c1fdf4c83b96d07bd3f4be20ddc78a940a33ada13e",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.284
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:1621",
+      "split": "test",
+      "sha256": "fa06256170e012c03e854b5dac53ed2cd4312939991540e97ae8fab2255d04e7",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.41
+    },
+    {
+      "doc_id": "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:1651",
+      "split": "test",
+      "sha256": "fc0ea63d62ff345614e13e0ab869bf639aca4dd0d0799566b30917e1a36c8fb1",
+      "references": [
+        "primary:finemath_train",
+        "finemath_validation"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.328
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:3498",
+      "split": "validation",
+      "sha256": "3986b084ee70ee3848659c69c4fb0c46e18cecae0e4f240a9f73d20454e775e2",
+      "references": [
+        "primary:c4_candidate"
+      ],
+      "maximum_chunk_matching_13gram_fraction": 0.21
+    }
+  ],
+  "selected_documents": 4757,
+  "documents_path": "/tmp/grad-research-20261106/raw/selected_documents_evaluation_v3.jsonl.gz",
+  "documents_sha256": "f7d7d1388a790b1d6ccc4e62786d122279c48ac7e53788d9bba7cff2c0d8d320"
+}

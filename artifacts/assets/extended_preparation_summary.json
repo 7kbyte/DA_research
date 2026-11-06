@@ -1,0 +1,17 @@
+{
+  "completed_at_utc": "2026-11-06T04:00:50Z",
+  "role": "optional robustness preparation only; no GPU inference or training started by data agent",
+  "models": "artifacts/assets/extended_model_provenance.json",
+  "tokenizer_comparison": "artifacts/assets/extended_tokenizer_comparison.json",
+  "extended_data": "artifacts/data_extended/summary.json",
+  "extended_relationships": "artifacts/data_extended/primary_relationship.json",
+  "expanded_train_vs_primary_eval_audit": "artifacts/data_extended/primary_evaluation_against_extended_training.json",
+  "primary_training_and_evaluation_tensor_hashes_verified_unchanged": true,
+  "all_extended_exact_doc_and_full_chunk_split_intersections_zero": true,
+  "all_extended_eval_reference_ngram_over_point2_flags_zero": true,
+  "warnings": [
+    "Expanded 20M target training overlaps near-duplicate text in primary-v3 FineMath validation/test (29/37 flagged chunks), and expanded C4 candidate overlaps six primary-v3 C4 test chunks. Use matching expanded held-out artifacts for expanded-training experiments. Primary-v3 is valid for unchanged primary training.",
+    "Extended data are larger prefixes from the same pinned shards and hash partition, not an independent full-corpus sample or independent population replication."
+  ],
+  "formal_primary_protocol_changed": false
+}

@@ -1,0 +1,122 @@
+{
+  "data_version": "extended-v1",
+  "created_at_utc": "2026-11-06T03:58:55Z",
+  "preprocessing_seconds": 149.8630576133728,
+  "preparation_stages": [
+    {
+      "dataset": "finemath",
+      "splits": [
+        "train"
+      ],
+      "seconds": 51.41575990244746,
+      "source_documents_scanned": 19799
+    },
+    {
+      "dataset": "c4",
+      "splits": [
+        "candidate"
+      ],
+      "seconds": 50.88702816143632,
+      "source_documents_scanned": 37402
+    },
+    {
+      "dataset": "finemath",
+      "splits": [
+        "validation"
+      ],
+      "seconds": 5.019056607037783,
+      "source_documents_scanned": 7171
+    },
+    {
+      "dataset": "finemath",
+      "splits": [
+        "test"
+      ],
+      "seconds": 4.939209748059511,
+      "source_documents_scanned": 6819
+    },
+    {
+      "dataset": "c4",
+      "splits": [
+        "validation"
+      ],
+      "seconds": 4.283620808273554,
+      "source_documents_scanned": 4680
+    },
+    {
+      "dataset": "c4",
+      "splits": [
+        "test"
+      ],
+      "seconds": 4.21657432988286,
+      "source_documents_scanned": 4281
+    }
+  ],
+  "artifacts": {
+    "finemath_train": {
+      "path": "artifacts/data_extended/finemath_train.pt",
+      "sha256": "d75095a4c1847f72168d7cad1fd56da8d82ac7f5b17c43673dd70ed7eae118b0",
+      "chunks": 39140,
+      "raw_input_tokens": 20039680,
+      "prediction_tokens": 20000540,
+      "document_count": 12072
+    },
+    "c4_candidate": {
+      "path": "artifacts/data_extended/c4_candidate.pt",
+      "sha256": "c3c916aebcb185f2ea09690c51f2b37c7c4410793f95ce964e27157b9077b696",
+      "chunks": 19570,
+      "raw_input_tokens": 10019840,
+      "prediction_tokens": 10000270,
+      "document_count": 9977
+    },
+    "finemath_validation": {
+      "path": "artifacts/data_extended/finemath_validation.pt",
+      "sha256": "59b2bb2d89104652785915e08c45ad3f8815037461da5216de42408ccfbb3ea0",
+      "chunks": 979,
+      "raw_input_tokens": 501248,
+      "prediction_tokens": 500269,
+      "document_count": 487
+    },
+    "finemath_test": {
+      "path": "artifacts/data_extended/finemath_test.pt",
+      "sha256": "f19f802f985d929ecb3a623e3255785159b1fcb895c8f439bc037a7012d29718",
+      "chunks": 979,
+      "raw_input_tokens": 501248,
+      "prediction_tokens": 500269,
+      "document_count": 447
+    },
+    "c4_validation": {
+      "path": "artifacts/data_extended/c4_validation.pt",
+      "sha256": "ee0389143e28fc8d0e2e3f1107674e7a8d8a178d324c350820223937d7bcb274",
+      "chunks": 979,
+      "raw_input_tokens": 501248,
+      "prediction_tokens": 500269,
+      "document_count": 590
+    },
+    "c4_test": {
+      "path": "artifacts/data_extended/c4_test.pt",
+      "sha256": "e81744326b66513afdfc02cc3b74b9c92908cd2359f13d0eac2b1a99bf516747",
+      "chunks": 979,
+      "raw_input_tokens": 501248,
+      "prediction_tokens": 500269,
+      "document_count": 571
+    },
+    "wikitext103_validation": {
+      "path": "artifacts/data_extended/wikitext103_validation.pt",
+      "sha256": "4018c33bd6e36b45aafcb5b5129ed18cbd480613ccbed0f8cdf57a02e8b0e85c",
+      "chunks": 461,
+      "raw_input_tokens": 236032,
+      "prediction_tokens": 235571,
+      "document_count": 60
+    },
+    "wikitext103_test": {
+      "path": "artifacts/data_extended/wikitext103_test.pt",
+      "sha256": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f",
+      "chunks": 529,
+      "raw_input_tokens": 270848,
+      "prediction_tokens": 270319,
+      "document_count": 60
+    }
+  },
+  "audit": "artifacts/data_extended/split_audit.json"
+}

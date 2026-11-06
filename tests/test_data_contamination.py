@@ -23,6 +23,24 @@ def doc(start, stop, name):
 
 
 class ContaminationPolicyTests(unittest.TestCase):
+    def test_document_cap_is_reproducible_and_never_exceeds_quota(self):
+        snapshots = []
+        for _ in range(2):
+            with tempfile.TemporaryDirectory() as tmp:
+                builder = Builder(IntegerTokenizer(), Path(tmp), Path(tmp), seq_len=16)
+                builder.collect("cap", [doc(1, 161, "a"), doc(201, 361, "b")],
+                    {"validation": 6}, lambda d, h: "validation", "test", "fixed", {},
+                    max_chunks_per_document=4)
+                result = load_token_dataset(Path(tmp) / "cap_validation.pt")
+                self.assertEqual(result["doc_ids"], ["a"] * 4 + ["b"] * 2)
+                positions = [d["source_chunk_indices_used"] for d in builder.documents]
+                self.assertEqual(positions, [sorted(x) for x in positions])
+                self.assertNotEqual(positions[0], [0, 1, 2, 3])
+                for row, source_index in zip(result["input_ids"][:4], positions[0]):
+                    self.assertEqual(row.tolist(), list(range(1 + 16 * source_index, 17 + 16 * source_index)))
+                snapshots.append((result["input_ids"].tolist(), positions))
+        self.assertEqual(snapshots[0], snapshots[1])
+
     def test_shifted_duplicate_rejects_entire_document_and_refills(self):
         with tempfile.TemporaryDirectory() as tmp:
             builder = Builder(IntegerTokenizer(), Path(tmp), Path(tmp), seq_len=16)

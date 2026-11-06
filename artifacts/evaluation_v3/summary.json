@@ -1,0 +1,90 @@
+{
+  "data_version": "evaluation-v3",
+  "created_at_utc": "2026-11-06T03:54:45Z",
+  "preprocessing_seconds": 17.75103298574686,
+  "preparation_stages": [
+    {
+      "dataset": "finemath",
+      "splits": [
+        "validation"
+      ],
+      "seconds": 3.6762412898242474,
+      "source_documents_scanned": 7080
+    },
+    {
+      "dataset": "finemath",
+      "splits": [
+        "test"
+      ],
+      "seconds": 3.609075330197811,
+      "source_documents_scanned": 6653
+    },
+    {
+      "dataset": "c4",
+      "splits": [
+        "validation"
+      ],
+      "seconds": 3.2859615087509155,
+      "source_documents_scanned": 4884
+    },
+    {
+      "dataset": "c4",
+      "splits": [
+        "test"
+      ],
+      "seconds": 3.3319529592990875,
+      "source_documents_scanned": 4422
+    }
+  ],
+  "artifacts": {
+    "finemath_validation": {
+      "path": "artifacts/evaluation_v3/finemath_validation.pt",
+      "sha256": "431937e95ea9ba4f98cb19da38f53bdc1f90f57f35173a2b85dc3c3a560b4490",
+      "chunks": 1024,
+      "raw_input_tokens": 524288,
+      "prediction_tokens": 523264,
+      "document_count": 507
+    },
+    "finemath_test": {
+      "path": "artifacts/evaluation_v3/finemath_test.pt",
+      "sha256": "3fdea241e0bf812e772ab1789ec1e9e722fdd6a18efdf6850e5aeb18cfac63f3",
+      "chunks": 1024,
+      "raw_input_tokens": 524288,
+      "prediction_tokens": 523264,
+      "document_count": 466
+    },
+    "c4_validation": {
+      "path": "artifacts/evaluation_v3/c4_validation.pt",
+      "sha256": "89c38a59a9985195efed818ed651d56bc00a399b3f08df4c98f5baf9380be453",
+      "chunks": 1024,
+      "raw_input_tokens": 524288,
+      "prediction_tokens": 523264,
+      "document_count": 625
+    },
+    "c4_test": {
+      "path": "artifacts/evaluation_v3/c4_test.pt",
+      "sha256": "95457714af354880c92716edd99b878110e9635d70f3d0d2435dc75e9a755e61",
+      "chunks": 1024,
+      "raw_input_tokens": 524288,
+      "prediction_tokens": 523264,
+      "document_count": 595
+    },
+    "wikitext103_validation": {
+      "path": "artifacts/evaluation_v3/wikitext103_validation.pt",
+      "sha256": "4018c33bd6e36b45aafcb5b5129ed18cbd480613ccbed0f8cdf57a02e8b0e85c",
+      "chunks": 461,
+      "raw_input_tokens": 236032,
+      "prediction_tokens": 235571,
+      "document_count": 60
+    },
+    "wikitext103_test": {
+      "path": "artifacts/evaluation_v3/wikitext103_test.pt",
+      "sha256": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f",
+      "chunks": 529,
+      "raw_input_tokens": 270848,
+      "prediction_tokens": 270319,
+      "document_count": 60
+    }
+  },
+  "audit": "artifacts/evaluation_v3/split_audit.json"
+}

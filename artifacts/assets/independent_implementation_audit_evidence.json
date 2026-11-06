@@ -1,0 +1,53 @@
+{
+  "audit_utc": "2026-11-06T04:05:05.586607+00:00",
+  "mode": "read_only_source_and_existing_artifacts_no_gpu_no_test_likelihood",
+  "source_and_protocol_sha256": {
+    "src/replay_study/train.py": "5f25d5615c4b8042f4b07d6bc047094d0bef7703173c776955aef9f10052ef96",
+    "src/replay_study/objectives.py": "9e0a319965bf486ebf721e3e662b6a474046e56c44dfab0d13590a20aedd98be",
+    "src/replay_study/evaluate.py": "d9648b4fbc891746a9bafe9e9639e2ee584521ba68bd949d2091484c833c3c46",
+    "src/replay_study/generate.py": "7415647d6d2f23e2f0e59f288dc544a21b8fb0eaa9069daf90e5ea949e607e33",
+    "src/replay_study/selection.py": "88814e111aa5db1fb1009d90eba54c353a018fd6c1cbdda4ff4a148b57aa11b7",
+    "docs/hyperparameter_selection_protocol_v3_lr.json": "b05c3b26b157227806a145fe280d893f949e6493108f757b471d8868948a7761",
+    "docs/hyperparameter_selection_protocol_v3_lambda.json": "a4e59f734580ce0ad08073d6e54cbad910638c3709739cf4eff140c1cd7ff91e",
+    "artifacts/data/data_version.json": "96e61785b630257242478745f7b38fb22c7fbb1931a4162bcd76d407b026c88b",
+    "artifacts/evaluation_v3/version_and_relationship.json": "97af9d25fdbecb0d2a89d428a56f023c482c3ef046dc69cc0aec076c67a5329c"
+  },
+  "lambda_v3_completed": 16,
+  "target_trace_histogram": {
+    "af677c68595cc48803b3539743ec7283516ecb20f5aa8545274eacf768d058f0": 16
+  },
+  "target_exposure_histogram": {
+    "2000000": 16
+  },
+  "replay_exposure_histogram": {
+    "100000": 16
+  },
+  "formal_bank_checks": {
+    "11": {
+      "pool_duplicate_rate": 0.0,
+      "random_and_dedup_indices_identical": true,
+      "random_and_dedup_chunk_hashes_identical": true,
+      "source_pool_sha256": "9909c12dcb8b1c96650678dd9de9dfbe857aa9919bf2d6e98d44afd76baeed3d",
+      "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+    },
+    "22": {
+      "pool_duplicate_rate": 0.0,
+      "random_and_dedup_indices_identical": true,
+      "random_and_dedup_chunk_hashes_identical": true,
+      "source_pool_sha256": "fe509bfbbcd7c9da21260751834c59c9109ba0c2da9449290e34ee68768008d4",
+      "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+    },
+    "33": {
+      "pool_duplicate_rate": 0.0,
+      "random_and_dedup_indices_identical": true,
+      "random_and_dedup_chunk_hashes_identical": true,
+      "source_pool_sha256": "ab18eb638cc1d2c54facd2ac488d7a602049062c8a0ece0249e09d1eb597ed41",
+      "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+    }
+  },
+  "validation_artifact_matches_frozen_protocol": {
+    "target": true,
+    "c4": true,
+    "wikitext": true
+  }
+}
