@@ -1,0 +1,44 @@
+{
+  "reviewed_initial_exporter_sha256": "412755d5fbc0c304db5194881ebce4bc841697ce7342bfa79675277faa7bef30",
+  "reviewed_initial_tests_sha256": "39afe51552e459d3099a815cd5175bffff0a57229e43d26b2558277f14314702",
+  "initial_tests": {
+    "returncode": 0,
+    "whole_parent_wall_seconds": 1.7249216623604298,
+    "child_user_cpu_seconds": 1.526819,
+    "child_system_cpu_seconds": 0.33785499999999996,
+    "source_unchanged_across_test_process": true,
+    "stdout": "initial_pytest_stdout.txt"
+  },
+  "findings": [
+    {
+      "id": "R1",
+      "severity": "must_fix_source_gate",
+      "source_lines": [
+        164,
+        166,
+        191
+      ],
+      "problem": "frozen_inputs catalog.update overwrites overlapping bound.input_sha256 without rejecting conflict; formal snapshot self-hash is not frozen authority",
+      "synthetic_expected": "conflicting target SHA must raise before cache.bind",
+      "initial_observed": "CONFLICTING_CATALOG accepted over FROZEN_TARGET",
+      "resolved": false
+    },
+    {
+      "id": "R2",
+      "severity": "operational_boundary",
+      "problem": "02:00 stops starting operations, not ongoing codec/TAR; no automatic02:56 phase feasibility decision",
+      "root_resolution": "ROOT will explicitly authorize actual resource/time per phase, initially A/B only; do not claim automatic hard tail deadline",
+      "resolved_by_root_operational_policy": true
+    },
+    {
+      "id": "R3",
+      "severity": "accounting_boundary",
+      "problem": "whole slot wait elapsed is context only; endpoint/assembly parents exclude startup/hash rechecks; do not double count nested timers or historic reused records",
+      "root_resolution": "outer parent timing plus startup/perendpoint/assembly disjoint accounting; unknown regions remain unknown",
+      "resolved_by_root_operational_policy": true
+    }
+  ],
+  "final_passed": false,
+  "root_requested_stable_source_recheck": true,
+  "actual_encode_or_scoring_or_GPU_started": false
+}

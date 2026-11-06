@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-11-06T15:30:03.957177+00:00",
+  "status": "prepared_only_no_real_export_or_ROOT_authority",
+  "source": {
+    "path": "scripts/export_additional_endpoints.py",
+    "sha256": "c93e0c1d35fe39b3d71155a126db841b76648ba6b3afd58d475be4eb9c9da853"
+  },
+  "tests": {
+    "path": "tests/test_additional_endpoint_export.py",
+    "sha256": "0baf694c350bdf0171e0b7f267654a7ec0a73b151436083362151e650288a0d2",
+    "observed_result": "90 passed in1.40s",
+    "command": "CUDA_VISIBLE_DEVICES='' OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 PYTHONPATH=src python -m pytest -q tests/test_additional_endpoint_export.py tests/test_A_selected_weight_export.py tests/test_C_final_weight_export.py tests/test_weight_archive.py tests/test_remaining_primary_export.py",
+    "scientific_training_or_scoring_modules_changed": false
+  },
+  "scope": {
+    "path": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/scope.json",
+    "sha256": "7adb8f7f0461fd929995dd370ff2a59b2abc5c0d7750a39e745d21d5546d9de3",
+    "snapshot": "/tmp/grad-research-20261106/worktree/artifacts/provenance/additional_endpoint_export/preparation_v4/scope.json"
+  },
+  "independent_scope": {
+    "path": "results/expanded_weight_scope_review_v1/scope.json",
+    "sha256": "f7a812a535a4866aa531a2131333974ad163e22790ac63508731b487bdf80219",
+    "cohort_crosschecks": {
+      "A_remaining_final": {
+        "count": 93,
+        "exact_run_actual_run_source_CP_SHA_match": true
+      },
+      "B_all_final": {
+        "count": 60,
+        "exact_run_actual_run_source_CP_SHA_match": true
+      },
+      "C_best": {
+        "count": 63,
+        "exact_run_model_match": true,
+        "actual_full_READY_source_CP_and_best_proof_gate_still_pending": true
+      }
+    }
+  },
+  "superseded_preparations_preserved": [
+    {
+      "path": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v1/scope.json",
+      "sha256": "df2ed3ce0117d1d41ac7985f33fdf813254716f2818fff11e1639ca2ab412779",
+      "reason": "Earlier source safety gates superseded; never executed"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v2/scope.json",
+      "sha256": "a35b87e032b9bccf4527ab562e9168043013ca619c8150a8b6caf984d66d402c",
+      "reason": "Earlier source safety gates superseded; never executed"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v3/scope.json",
+      "sha256": "f8a53c821e4ec9093dcc4b49d386942f7c959abcb2d2fbf3a402083048b533fa",
+      "reason": "Earlier source safety gates superseded; never executed"
+    }
+  ],
+  "packages": {
+    "A_remaining_final": {
+      "logical": 93,
+      "limit_bytes": 123480309760,
+      "model": "pythia-410m",
+      "kind": "final",
+      "slot": "slot1"
+    },
+    "B_all_final": {
+      "logical": 60,
+      "limit_bytes": 80530636800,
+      "model": "pythia-410m",
+      "kind": "final",
+      "slot": "slot2"
+    },
+    "C410_best": {
+      "logical": 24,
+      "limit_bytes": 32212254720,
+      "model": "pythia-410m",
+      "kind": "best",
+      "slot": "slot1"
+    },
+    "C1B_best": {
+      "logical": 24,
+      "limit_bytes": 80530636800,
+      "model": "pythia-1b",
+      "kind": "best",
+      "slot": "slot1"
+    },
+    "C2p8B_best": {
+      "logical": 15,
+      "limit_bytes": 150323855360,
+      "model": "pythia-2.8b",
+      "kind": "best",
+      "slot": "slot2"
+    }
+  },
+  "fixed_extra_worker_lock_paths": {
+    "slot1": "/tmp/grad-research-20261106/delivery/.additional_endpoint_slot1.lock",
+    "slot2": "/tmp/grad-research-20261106/delivery/.additional_endpoint_slot2.lock"
+  },
+  "native_base_hash_read_operations": [
+    {
+      "path": "/tmp/grad-research-20261106/models/pythia-410m-final/model.safetensors",
+      "bytes": 911373632
+    },
+    {
+      "path": "/tmp/grad-research-20261106/models/pythia-410m-final/model.safetensors",
+      "bytes": 911373632
+    },
+    {
+      "path": "/tmp/grad-research-20261106/models/pythia-1b-final/model.safetensors",
+      "bytes": 2090701528
+    },
+    {
+      "path": "/tmp/grad-research-20261106/models/pythia-2.8b-final/model.safetensors",
+      "bytes": 5684693096
+    }
+  ],
+  "preparation": {
+    "wall_seconds": 10.175718050450087,
+    "process_cpu_seconds": 9.695836787,
+    "native_model_hash_returned_file_bytes": 9598141888,
+    "native_hash_operations": 4,
+    "original_checkpoint_payload_reads": 0,
+    "timing_scope": "Preparation function after imports; includes metadata/data/native base hash I/O; not total engineering time; native hash has no separate timer. Returned file bytes do not measure physical disk traffic.",
+    "large_durable_TAR_verification": "Historical full publication receipts plus current stat/owner/inode and freshly hashed small manifest members; no new whole TAR hash."
+  },
+  "admission": {
+    "initial_sample_authority": "Pending ROOT explicit launch; no sample started",
+    "batch_authority": "External ROOT receipt exact source/scope and actual package sample; never generated here",
+    "initial_batch_packages_expected": [
+      "A_remaining_final",
+      "B_all_final"
+    ],
+    "C_each_model_requires_separate_sample_and_batch_permission": true,
+    "projected_publication_start": "now+missing_unique*per_item+assembly_allowance must be strictly before2026-11-07T02:00:00Z",
+    "projected_complete": "projected publication start+publication allowance+margin must be at or before2026-11-07T02:56:32Z",
+    "actual_operation_rule": "No new operation at/after02:00; started operation can finish; publication is separately executed by ROOT",
+    "prediction_is_not_hard_runtime_bound": true
+  },
+  "memory": {
+    "cgroup_constraint_supplied_by_ROOT": "memory.max approximately960GiB/current956GiB mostly reclaimable clean file cache; host free RAM is not container headroom",
+    "two_new_worker_RSS_proxy_bytes_each": 22755000000,
+    "RSS_proxy_not_guarantee": true,
+    "maximum_extra_workers": 2,
+    "threads_per_worker": 2,
+    "existing_C_final_worker_separate": true,
+    "first_sample_resource_gate_required": true
+  },
+  "not_performed": {
+    "new_real_weight_encoding": true,
+    "new_original_CP_SHA_or_tensor_load": true,
+    "new_watcher": true,
+    "GPU": true,
+    "shared_storage_write": true,
+    "C_test_or_behavior_score_read": true,
+    "publication": true
+  },
+  "ROOT_authorized": false,
+  "reservation_capacity_verified_or_consumed": false,
+  "notes": [
+    "Every new package includes its own native base/config/tokenizer/README and verified codec/CLI.",
+    "A93 is an identity set difference; B60 is selection-draw variation, not60 train seeds. C D/B4 alias only explicit source-bound best proof true.",
+    "Whole mutable master queue is not a long-lived hash gate; each completed training job definition/config/argv/source/rc0/no-stop is bound.",
+    "Every successful draft and every original CP is retained on any later failure."
+  ]
+}

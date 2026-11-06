@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-11-06T15:39:19.634214+00:00",
+  "status": "readonly_ROOT_proposed_A_B_batch_plan_checked_no_blocker",
+  "ROOT_authorized": false,
+  "authority_not_generated_here": true,
+  "source": {
+    "prior_readonly_review": {
+      "path": "docs/additional_endpoint_A_B_actual_sample_review_v1.json",
+      "sha256": "daf24e35cd1c0ec8def1d2983efbae795abab3a6e1c6a9f6d4237dea987b83de"
+    },
+    "exporter_sha256": "c93e0c1d35fe39b3d71155a126db841b76648ba6b3afd58d475be4eb9c9da853",
+    "scope_sha256": "7adb8f7f0461fd929995dd370ff2a59b2abc5c0d7750a39e745d21d5546d9de3"
+  },
+  "plans": [
+    {
+      "package": "A_remaining_final",
+      "selected_packages": [
+        "A_remaining_final"
+      ],
+      "max_new_weights": 92,
+      "existing_verified_unique_weights": 1,
+      "final_expected_unique_weights": 93,
+      "estimated_seconds_per_unique": 120,
+      "assembly_allowance_seconds": 700,
+      "ROOT_publication_allowance_seconds": 1200,
+      "finish_margin_seconds": 600,
+      "projected_publication_start_utc": "2026-11-06T18:54:59.634214+00:00",
+      "projected_completion_with_margin_utc": "2026-11-06T19:24:59.634214+00:00",
+      "projected_publication_strictly_before0200": true,
+      "projected_completion_at_or_before025632": true,
+      "sample_record": {
+        "path": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/A_remaining_final/records/lambda_sweep_deterministic_B4_s11_b0p05_w0p01__final.json",
+        "sha256": "37f2d02c899003f0bee72427a39846566f1203858efc04f3fc40e387ddadbf6f"
+      },
+      "sample_times1p25": 118.8534345664084
+    },
+    {
+      "package": "B_all_final",
+      "selected_packages": [
+        "B_all_final"
+      ],
+      "max_new_weights": 59,
+      "existing_verified_unique_weights": 1,
+      "final_expected_unique_weights": 60,
+      "estimated_seconds_per_unique": 120,
+      "assembly_allowance_seconds": 450,
+      "ROOT_publication_allowance_seconds": 800,
+      "finish_margin_seconds": 600,
+      "projected_publication_start_utc": "2026-11-06T17:44:49.634214+00:00",
+      "projected_completion_with_margin_utc": "2026-11-06T18:08:09.634214+00:00",
+      "projected_publication_strictly_before0200": true,
+      "projected_completion_at_or_before025632": true,
+      "sample_record": {
+        "path": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/B_all_final/records/bankvar_B4_tr11_gen11_draw1001_k20_b0p05_w0p05__final.json",
+        "sha256": "0f74823cbb52fd90e1ebb727aec960d91f63f8918d84beeff94f70c2a1657682"
+      },
+      "sample_times1p25": 118.93618292175233
+    }
+  ],
+  "interpretation": [
+    "Existing one verified unique is resumed and not counted as a new encode;92/59 new weights complete A93/B60 exactly.",
+    "Each invocation explicitly selects only its own package; no C sample or batch is admitted by this plan.",
+    "120s/unique exceeds observed endpoint wall times1.25. Assembly700/450 and publication1200/800 are ROOT proposed engineering allowances, not fresh measurements.",
+    "No blocker found in proposed counters, phase isolation or double timing admission; future ROOT actualresource JSON remains the authority.",
+    "Original wider assembly recommendations and original sample receipts are retained; no original evidence overwritten.",
+    "Actual source SHA/metadata/per-tensor roundtrip/TAR size and completeness remain enforced; estimates do not guarantee runtime or capacity."
+  ],
+  "not_performed": [
+    "No new source checkpoint, ZIP or TAR payload reads",
+    "No encoder, watcher, GPU, resource authority or publication started",
+    "No frozen code/helpers changed"
+  ]
+}

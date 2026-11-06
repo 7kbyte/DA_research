@@ -1,0 +1,76 @@
+{
+  "status": "passed_synthetic_full_bundle_native_base_CLI",
+  "argv": [
+    "/usr/bin/python",
+    "/tmp/grad-research-20261106/worktree/results/additional_endpoint_export_independent_review_v1/tiny_bundle_stable/unpacked/tools/scripts/archive_model_weights.py",
+    "--threads",
+    "2",
+    "decode",
+    "--archive",
+    "/tmp/grad-research-20261106/worktree/results/additional_endpoint_export_independent_review_v1/tiny_bundle_stable/unpacked/weights/tiny_B4_s11__best.xor.zip",
+    "--base",
+    "/tmp/grad-research-20261106/worktree/results/additional_endpoint_export_independent_review_v1/tiny_bundle_stable/unpacked/base/tiny-final/model.safetensors",
+    "--output",
+    "/tmp/grad-research-20261106/worktree/results/additional_endpoint_export_independent_review_v1/tiny_bundle_stable/unpacked/portable.pt"
+  ],
+  "cwd": "/tmp/grad-research-20261106/worktree/results/additional_endpoint_export_independent_review_v1/tiny_bundle_stable/unpacked",
+  "PYTHONPATH_removed": true,
+  "source_exporter": {
+    "path": "/tmp/grad-research-20261106/worktree/results/additional_endpoint_export_independent_review_v1/stable_source_snapshot/scripts/export_additional_endpoints.py",
+    "sha256": "c93e0c1d35fe39b3d71155a126db841b76648ba6b3afd58d475be4eb9c9da853"
+  },
+  "source_checkpoint": "/tmp/grad-research-20261106/worktree/results/additional_endpoint_export_independent_review_v1/tiny_bundle_stable/checkpoint_best.pt",
+  "source_checkpoint_sha256": "de8ba64114001885b6670c1375879bb2280bb122ba1669c4daa87b79753ed574",
+  "base_sha256": "f41ea1b5ef61ab9afb493a3045ff0b1793725036251d55cc4fc67ee64286e859",
+  "tensor_count": 2,
+  "model_elements": 11,
+  "tensors": [
+    {
+      "key": "a.weight",
+      "dtype": "torch.float32",
+      "shape": [
+        8
+      ],
+      "elements": 8,
+      "bytes": 32,
+      "source_raw_sha256": "0571cfe42be5c7b95de9afc7c7ba1286fb7a2ef10a9035f8d6b87d21a3bc8387",
+      "portable_decoded_raw_sha256": "0571cfe42be5c7b95de9afc7c7ba1286fb7a2ef10a9035f8d6b87d21a3bc8387",
+      "all_bytes_equal": true
+    },
+    {
+      "key": "z.bits",
+      "dtype": "torch.float32",
+      "shape": [
+        3
+      ],
+      "elements": 3,
+      "bytes": 12,
+      "source_raw_sha256": "2d67d6d4ce3b6f97981bff882becf910aa0eba88d42d8c16fed8a5ae476696b8",
+      "portable_decoded_raw_sha256": "2d67d6d4ce3b6f97981bff882becf910aa0eba88d42d8c16fed8a5ae476696b8",
+      "all_bytes_equal": true
+    }
+  ],
+  "includes_NaN_and_signed_zero_bits": true,
+  "package_receipt": {
+    "tar_sha256": "05a0211322ef1ee6a6200c3a54899edd5d6bc0099579b946904a94d22767c58b",
+    "tar_bytes": 112640,
+    "verified_tar_members": 10,
+    "file_fsync_completed": true,
+    "parent_directory_fsync_completed": true,
+    "status": "passed_complete_scratch_package_not_published",
+    "tar_path": "/tmp/grad-research-20261106/worktree/results/additional_endpoint_export_independent_review_v1/tiny_bundle_stable/delivery/tiny_weights_lossless_v1.tar",
+    "package": "tiny",
+    "logical_endpoints": 1,
+    "unique_weights": 1,
+    "alias_count": 0,
+    "manifest_sha256": "239c6362ab035db092b419d7760bb25a4b56fb0cda84006987c61ddbd9936627",
+    "wall_seconds": 0.006159622222185135,
+    "process_cpu_seconds": 0.004270033999999923,
+    "timer_scope": "Independent assembly-only; endpoint codec parents and daemon waiting not added again",
+    "shared_storage_written": false,
+    "ROOT_publication_required": true,
+    "original_CP_ZIP_restored_retained": true
+  },
+  "actual_study_payload_read": false,
+  "GPU_used": false
+}

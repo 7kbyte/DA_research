@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-11-06T15:38:18.209557+00:00",
+  "status": "readonly_actual_A_B_samples_verified_batch_recommendation_only",
+  "ROOT_authorized": false,
+  "source": {
+    "scope_path": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/scope.json",
+    "scope_sha256": "7adb8f7f0461fd929995dd370ff2a59b2abc5c0d7750a39e745d21d5546d9de3",
+    "exporter_sha256": "c93e0c1d35fe39b3d71155a126db841b76648ba6b3afd58d475be4eb9c9da853",
+    "independent_review": {
+      "path": "results/additional_endpoint_export_independent_review_v1/FINAL_REVIEW.json",
+      "sha256": "6d2f88b3b314bc655ef1cf81ad84fbcc4e9da32d8b617f2324b14052106dbab9"
+    },
+    "ROOT_sample_authority": {
+      "path": "artifacts/provenance/additional_endpoint_actual_v4/ROOT_A_B_sample_authority.json",
+      "sha256": "1796fb3cdfab085a57d28a0e9f26c1a78df19cb02ced144c06e60718295a98c4"
+    },
+    "ROOT_full_capacity_acceptance": {
+      "path": "artifacts/provenance/extra_endpoint_reservations_v1/ROOT_full_capacity_acceptance.json",
+      "sha256": "a15321819901d3272a483f724e7613a8afda302ab0fe9a6e05537856a972a62b"
+    }
+  },
+  "samples": [
+    {
+      "package": "A_remaining_final",
+      "run_id": "lambda_sweep_deterministic_B4_s11_b0p05_w0p01",
+      "record": {
+        "path": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/A_remaining_final/records/lambda_sweep_deterministic_B4_s11_b0p05_w0p01__final.json",
+        "sha256": "37f2d02c899003f0bee72427a39846566f1203858efc04f3fc40e387ddadbf6f"
+      },
+      "whole_child_timing": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/additional_endpoint_actual_v4/A_remaining_final_sample/whole_child_timing.json",
+        "sha256": "8ee7f70f4857c7d96cd44d4b51fc8df49169c0f76883ced231caf2723399d636",
+        "values": {
+          "returncode": 0,
+          "wall_seconds": 104.66365860402584,
+          "user_cpu_seconds": 96.234597,
+          "sys_cpu_seconds": 9.307191,
+          "child_peak_rss_bytes": 3678380032,
+          "finished_at_utc": "2026-11-06T15:36:10.548155+00:00",
+          "timing_scope": "Whole single exporter child spawn through exit; startup/endpoint/assembly timers are nested, not additive",
+          "GPU_used": false,
+          "publication_performed": false
+        }
+      },
+      "endpoint_parent_wall_seconds": 95.08274765312672,
+      "endpoint_parent_process_CPU_seconds": 95.956879807,
+      "peak_RSS_bytes_process_cumulative": 3678380032,
+      "cgroup_before": {
+        "memory.current": "1024081281024",
+        "memory.max": "1030792151040",
+        "memory.events": "low 0\nhigh 0\nmax 154322\noom 0\noom_kill 0\noom_group_kill 0"
+      },
+      "cgroup_after": {
+        "memory.current": "1030789120000",
+        "memory.max": "1030792151040",
+        "memory.events": "low 0\nhigh 0\nmax 154489\noom 0\noom_kill 0\noom_group_kill 0"
+      },
+      "cgroup_events_delta": {
+        "low": 0,
+        "high": 0,
+        "max": 167,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "source_CP_sha256": "c562e620faef77d158e78cf0de18d18b4c995288dbadcd85c1d13bafaa997cb8",
+      "source_CP_bytes": 4864403348,
+      "base_sha256": "3e09001631bb18ec8a6f4522f8e6ab26a53099e69228f9822adc91bfbe27511b",
+      "model_fingerprint": {
+        "sha256_model_state": "a77958e62f85c8715b6685f519454e8a2bb9d579e191ba42334a18d0eee0640d",
+        "state_elements": 405334016
+      },
+      "tensor_count": 292,
+      "all_tensor_bytes_and_nonweight_metadata_verified": true,
+      "archive_sha256_from_completed_encoder": "262901c9ae0abc90c6a39ed4c9652ac201387d3da86c7509b20b5e1526ec3a7d",
+      "archive_bytes": 1143784525,
+      "model_raw_bytes": 1621336064,
+      "ZIP_over_FP32_ratio": 0.7054580172466947,
+      "current_source_CP_and_archive_stat_match": true,
+      "new_source_CP_or_ZIP_or_TAR_payload_reads": 0,
+      "small_metadata_sidecar_fresh_SHA_checked": true,
+      "conservative_timing_proposal": {
+        "exact_sample_wall_times1p25": 118.8534345664084,
+        "rounded_per_unique_seconds": 120,
+        "full_unique_weights": 93,
+        "missing_unique_weights": 92,
+        "all_weights_parent_estimate_seconds": 11160,
+        "remaining_weights_estimate_seconds": 11040,
+        "assembly_allowance_seconds": 1800,
+        "ROOT_publication_allowance_seconds": 1200,
+        "finish_margin_seconds": 120,
+        "remaining_phase_through_publication_seconds": 14160,
+        "assembly_and_publication_allowances_not_new_measurements": true
+      },
+      "capacity_projection": {
+        "sample_rate_plus_native_base_bytes_excluding_small_metadata_TAR_padding": 107285462825,
+        "GiB": 99.91737345699221,
+        "actual_limit_bytes": 123480309760,
+        "not_a_size_guarantee": true
+      }
+    },
+    {
+      "package": "B_all_final",
+      "run_id": "bankvar_B4_tr11_gen11_draw1001_k20_b0p05_w0p05",
+      "record": {
+        "path": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/B_all_final/records/bankvar_B4_tr11_gen11_draw1001_k20_b0p05_w0p05__final.json",
+        "sha256": "0f74823cbb52fd90e1ebb727aec960d91f63f8918d84beeff94f70c2a1657682"
+      },
+      "whole_child_timing": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/additional_endpoint_actual_v4/B_all_final_sample/whole_child_timing.json",
+        "sha256": "eaaa57edc1a9c666f5dd28a771d62ff19d927757da290449ac1e3f65bdd8a3c6",
+        "values": {
+          "returncode": 0,
+          "wall_seconds": 104.72573426738381,
+          "user_cpu_seconds": 96.294721,
+          "sys_cpu_seconds": 9.31857,
+          "child_peak_rss_bytes": 3676987392,
+          "finished_at_utc": "2026-11-06T15:36:10.616008+00:00",
+          "timing_scope": "Whole single exporter child spawn through exit; startup/endpoint/assembly timers are nested, not additive",
+          "GPU_used": false,
+          "publication_performed": false
+        }
+      },
+      "endpoint_parent_wall_seconds": 95.14894633740187,
+      "endpoint_parent_process_CPU_seconds": 96.055267952,
+      "peak_RSS_bytes_process_cumulative": 3676987392,
+      "cgroup_before": {
+        "memory.current": "1024081281024",
+        "memory.max": "1030792151040",
+        "memory.events": "low 0\nhigh 0\nmax 154322\noom 0\noom_kill 0\noom_group_kill 0"
+      },
+      "cgroup_after": {
+        "memory.current": "1030790426624",
+        "memory.max": "1030792151040",
+        "memory.events": "low 0\nhigh 0\nmax 154489\noom 0\noom_kill 0\noom_group_kill 0"
+      },
+      "cgroup_events_delta": {
+        "low": 0,
+        "high": 0,
+        "max": 167,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      },
+      "source_CP_sha256": "13dde87cee608d8e677e86fc91e5aaeb734865ee7a2197766dde4e69711bc951",
+      "source_CP_bytes": 4864403476,
+      "base_sha256": "3e09001631bb18ec8a6f4522f8e6ab26a53099e69228f9822adc91bfbe27511b",
+      "model_fingerprint": {
+        "sha256_model_state": "05724eda110e91eb76c8f6d45b54386b374e486662207a266166a0fde0ffb790",
+        "state_elements": 405334016
+      },
+      "tensor_count": 292,
+      "all_tensor_bytes_and_nonweight_metadata_verified": true,
+      "archive_sha256_from_completed_encoder": "b66a21ebe73bb630b48737c2201d47c96bed8a02f366d09f91cb8adb1fb09b8b",
+      "archive_bytes": 1144048546,
+      "model_raw_bytes": 1621336064,
+      "ZIP_over_FP32_ratio": 0.7056208588721061,
+      "current_source_CP_and_archive_stat_match": true,
+      "new_source_CP_or_ZIP_or_TAR_payload_reads": 0,
+      "small_metadata_sidecar_fresh_SHA_checked": true,
+      "conservative_timing_proposal": {
+        "exact_sample_wall_times1p25": 118.93618292175233,
+        "rounded_per_unique_seconds": 120,
+        "full_unique_weights": 60,
+        "missing_unique_weights": 59,
+        "all_weights_parent_estimate_seconds": 7200,
+        "remaining_weights_estimate_seconds": 7080,
+        "assembly_allowance_seconds": 1200,
+        "ROOT_publication_allowance_seconds": 900,
+        "finish_margin_seconds": 120,
+        "remaining_phase_through_publication_seconds": 9300,
+        "assembly_and_publication_allowances_not_new_measurements": true
+      },
+      "capacity_projection": {
+        "sample_rate_plus_native_base_bytes_excluding_small_metadata_TAR_padding": 69556414760,
+        "GiB": 64.77945927530527,
+        "actual_limit_bytes": 80530636800,
+        "not_a_size_guarantee": true
+      }
+    }
+  ],
+  "interpretation": [
+    "Both independent child processes returned0; all source-bound hash/fingerprint and292-tensor exact byte equality/metadata checks passed.",
+    "Endpoint/whole child CPU and wall timers are nested: whole child user+sys is inclusive; do not add endpoint or encode/decode/verification children.",
+    "RSS is each process cumulative high-water mark, not incremental stage usage or sum with its nested reports.",
+    "Both sampled the same shared cgroup interval; memory.events max increased167 while oom/oom_kill stayed0. Do not add the two copies of this shared counter. Cache reclaim/limit pressure can affect later throughput; no OOM does not guarantee later batches.",
+    "1.25*observed endpoint wall rounded up to at least120s/unique is a planning estimate, not a runtime upper bound. Assembly allowances A1800/B1200 and publication A1200/B900 are conservative unmeasured engineering allowances.",
+    "No C sample or batch is recommended under A/B permission. Each C model still needs complete READY/audit/best proof plus separate ROOT sample/resource/time approval.",
+    "Every package still enforces exact cohort/TAR ceiling/full member and whole archive verification before any ROOT publication."
+  ],
+  "not_performed": [
+    "No new full sourceCP, ZIP, restored tensor or TAR payload read in this review",
+    "No new encoder, batch, watcher, GPU or shared write",
+    "No C/test/behavior scores read",
+    "No permission or publication granted"
+  ]
+}

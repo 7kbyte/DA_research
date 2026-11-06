@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "utc": "2026-11-06T15:39:38.919422+00:00",
+  "status": "prepared_runbook_reusing_existing_C_capable_aux_v2_no_new_collector",
+  "document": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/C整模型NLL报告入口与核对清单_解封前.md",
+    "sha256": "6dc368e1a320c7c819b09572d75d137e9dd16370a417b1e11257bfb1376316e0",
+    "bytes": 6151
+  },
+  "source_receipt": {
+    "path": "/tmp/grad-research-20261106/worktree/results/C_nll_report_preparation_v1/sources.json",
+    "sha256": "5b8051795701b9bedc0b5268c99ec2a80d26c2cff7e2f00f47ee00cc639b21e9",
+    "bytes": 2762
+  },
+  "tests": {
+    "path": "/tmp/grad-research-20261106/worktree/results/C_nll_report_preparation_v1/test_receipt.json",
+    "sha256": "64ff199498550f82b67de035b2b5d6efbb3a0f3042fb09d063f459622794e3c1",
+    "bytes": 423
+  },
+  "stdout": {
+    "path": "/tmp/grad-research-20261106/worktree/results/C_nll_report_preparation_v1/pytest_stdout.txt",
+    "sha256": "2241075425eb55960afc9cf4962a6e6eea1473b1175fa3333a4179cdf38210ae",
+    "bytes": 130
+  },
+  "synthetic_hand_calculation": {
+    "path": "/tmp/grad-research-20261106/worktree/results/C_nll_report_preparation_v1/hand_calculated_fixture.json",
+    "sha256": "c85194a03676db124573e8de4375af68b87c9dacbd0d106fe42097be60198898",
+    "bytes": 7170
+  },
+  "existing_entrypoint": "scripts/analyze_supplemental_phase_v2.py analyze",
+  "report_read_gate": "explicit ROOT model COMPLETE SHA plus true complete48/30logical/full baseline+alias+prior closure, final24/24/15 and best24/24/15 independently complete; only then parse existing CSV/JSON",
+  "per_model": {
+    "pythia-410m": {
+      "contract": "extended_pythia_410m_100m_nll",
+      "logical": 48,
+      "per_endpoint": 24,
+      "methods": 8,
+      "training_seeds": [
+        11,
+        22,
+        33
+      ],
+      "paired_rows_per_endpoint": 18,
+      "six_metric_endpoint_stats": 48,
+      "six_metric_paired_stats": 36
+    },
+    "pythia-1b": {
+      "contract": "extended_pythia_1b_100m_nll",
+      "logical": 48,
+      "per_endpoint": 24,
+      "methods": 8,
+      "training_seeds": [
+        11,
+        22,
+        33
+      ],
+      "paired_rows_per_endpoint": 18,
+      "six_metric_endpoint_stats": 48,
+      "six_metric_paired_stats": 36
+    },
+    "pythia-2.8b": {
+      "contract": "extended_pythia_2p8b_25m_nll",
+      "logical": 30,
+      "per_endpoint": 15,
+      "methods": 5,
+      "training_seeds": [
+        11,
+        22,
+        33
+      ],
+      "paired_rows_per_endpoint": 9,
+      "six_metric_endpoint_stats": 30,
+      "six_metric_paired_stats": 18
+    }
+  },
+  "CPU_synthetic_tests": 55,
+  "whole_test_parent_wall_seconds": 1.705126080662012,
+  "rules_unchanged": true,
+  "real_C_test_or_behavior_or_partial_validation_scores_read": false,
+  "real_C_summary_or_analysis_csv_opened": false,
+  "real_check_analyze_prepare_or_first_read_called": false,
+  "authority_created": false,
+  "GPU_started": false,
+  "frozen_collector_helper_training_evaluation_modified": false,
+  "C_independent_raw_score_reviewer_existing": "not found; B reviewer is intentionally B60-specific, not relabeled; future ROOT-authorized independent numeric review can reuse its pure arithmetic functions without changing collector",
+  "no_real_numeric_values_or_rankings": true
+}

@@ -1,0 +1,27 @@
+{
+  "id": "R4",
+  "severity": "must_fix_resume_gate",
+  "reviewed_source_sha256": "412755d5fbc0c304db5194881ebce4bc841697ce7342bfa79675277faa7bef30",
+  "scope": "synthetic local module only; fixed live constants/files/processes unchanged",
+  "problem": "completed-package resume accepts valid status+SHA from a different package, without package/count/manifest/source-scope/cohort match",
+  "actual_progress": {
+    "status": "complete_slot_scratch_packages_not_published",
+    "done": {
+      "A_remaining_final": {
+        "status": "passed_complete_scratch_package_not_published",
+        "tar_path": "/tmp/grad-research-20261106/worktree/results/additional_endpoint_export_independent_review_v1/synthetic_wrong_completion/foreign_B_small_payload.bin",
+        "tar_sha256": "1775d7494766c732d4f27ef6980cbcd88da88d8c5d2f1980a8bd96eba22cdb56",
+        "package": "B_all_final",
+        "logical_endpoints": 60
+      }
+    },
+    "new_weights_this_invocation": 0,
+    "daemon_elapsed_wall_context_only": 0.00023417547345161438,
+    "shared_storage_written": false
+  },
+  "foreign_payload_bytes": 56,
+  "expected_behavior": "reject wrong package before marking A complete",
+  "actual_study_or_GB_payload_read": false,
+  "GPU_used": false,
+  "author_notified": true
+}

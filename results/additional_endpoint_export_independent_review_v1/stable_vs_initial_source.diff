@@ -1,0 +1,224 @@
+--- initial412755
++++ stablec93e0c
+@@ -20,6 +20,7 @@
+ 
+ OUTPUT = Path('/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v1')
+ DEADLINE = dt.datetime(2026, 11, 7, 2, 0, tzinfo=dt.timezone.utc)
++FINISH_DEADLINE = dt.datetime(2026, 11, 7, 2, 56, 32, tzinfo=dt.timezone.utc)
+ MASTER = ROOT / 'configs/supplemental_v1_queue.json'
+ STATE = ROOT / 'logs/supplemental_job_state.json'
+ SLOTS = {'slot1': ['A_remaining_final', 'C410_best', 'C1B_best'], 'slot2': ['B_all_final', 'C2p8B_best']}
+@@ -162,12 +163,19 @@
+     return dict(status='complete_model_best_source_gate_passed', identity=identity, records=identities, decisions=decisions, sources=sources, final_source_gate=final_gate)
+ 
+ def frozen_inputs(bound, cfg, catalog, cache):
+-    by_path = {str(absolute(p).resolve()): h for p, h in bound['input_sha256'].items()}
+-    by_path.update({str(absolute(p).resolve()): e['sha256'] for p, e in catalog.items()})
++    by_path = merge_digests(list(bound['input_sha256'].items()) + [(p,e['sha256']) for p,e in catalog.items()])
+     for path in [cfg['target_path'], cfg['replay_path'], *cfg['validation_paths'].values()]:
+         key = str(Path(path).resolve())
+         require(key in by_path, 'Frozen training/validation/replay file hash absent: ' + key)
+         cache.bind(path, by_path[key])
++
++def merge_digests(entries):
++    merged = {}
++    for path, digest in entries:
++        key = str(absolute(path).resolve())
++        require(key not in merged or merged[key] == digest, 'Conflicting frozen input SHA: ' + key)
++        merged[key] = digest
++    return merged
+ 
+ def prepare(output=OUTPUT):
+     """No checkpoint tensor load, no encoding, no lock acquisition, no watcher."""
+@@ -188,7 +196,11 @@
+     rowsA, excluded = remaining_A(registryA, A['records'], primary, selected)
+     rowsB = validate_B(registryB, B['records'])
+     formal_snapshot = ROOT/'artifacts/provenance/formal_deterministic_input_snapshot.json'
+-    cache.bind(formal_snapshot, file_sha256(formal_snapshot)); main_catalog = read(formal_snapshot)['data']
++    main_identity = ROOT/'docs/primary_evaluation_v2_execution_matched_nll_manifest.json'
++    cache.bind(main_identity, 'd1502bcaff5cdcd75d984a4b8776f1cb4027b596f474835bfe9ed18875d9fd18')
++    pinned = {h for p,h in read(main_identity)['records'][0]['input_sha256'].items() if absolute(p).resolve()==formal_snapshot.resolve()}
++    require(len(pinned)==1, 'Frozen main identity must bind original formal snapshot')
++    cache.bind(formal_snapshot, next(iter(pinned))); main_catalog = read(formal_snapshot)['data']
+     protocol_path = ROOT/'docs/formal_deterministic_protocol.json'; protocol = read(protocol_path)
+     cache.bind(protocol_path, read(formal_snapshot)['protocol']['docs/formal_deterministic_protocol.json']['sha256'])
+     cache.bind(protocol['initial_validation_path'], protocol['initial_validation_sha256'])
+@@ -212,7 +224,12 @@
+         base_files = [dict(path=x['source_path'], member=x['archive_member'], sha256=x['sha256']) for x in primary['base_files']]
+         for f in base_files: cache.bind(f['path'], f['sha256'])
+         phases[name] = dict(status='complete_source_metadata_preflight_no_CP_reads', rows=records, baseline_execution=baseline, base_files=base_files, base_path=next(f['path'] for f in base_files if f['path'].endswith('model.safetensors')), model_revision=primary['base_revision'])
+-    contexts, ccache = load_contexts(); cache.files.update(ccache.files)
++    native_reads = [dict(path=p,bytes=r['stat']['bytes']) for p,r in cache.files.items() if p.endswith('/model.safetensors')]
++    contexts, ccache = load_contexts()
++    native_reads += [dict(path=p,bytes=r['stat']['bytes']) for p,r in ccache.files.items() if p.endswith('/model.safetensors')]
++    for path,record in ccache.files.items():
++        require(path not in cache.files or cache.files[path]==record, 'Conflicting frozen source cache: '+path)
++        cache.files[path]=record
+     for name in ['C410_best', 'C1B_best', 'C2p8B_best']:
+         context = next(c for c in contexts if c['phase']['model'] == PACKAGES[name]['model'])
+         phases[name] = dict(status='pending_actual_full_model_READY_audit_and_best_proof', context=context, logical_run_ids=[r['id'] for r in context['rows']], base_files=[dict(path=p, member='base/'+context['phase']['model']+'-final/'+Path(p).name, sha256=v['sha256']) for p,v in context['snapshot']['model_files'].items()])
+@@ -223,6 +240,10 @@
+     cache.stable(); output.mkdir(parents=True, exist_ok=False)
+     scope = dict(schema_version=1, status='prepared_only_no_export_or_ROOT_authority', packages=PACKAGES, slots=SLOTS, output=str(output), phases=phases, excluded_A_saved_identities=[dict(run_id=r['run_id'], actual_run_id=r['actual_run_id'], checkpoint_sha256=r['checkpoint_sha256']) for r in excluded], saved_primary_manifest=primary_evidence, saved_A_selected_manifest=selected_evidence, frozen_files=cache.files, code=[proof(p) for p in code], deadline_utc=DEADLINE.isoformat(), source_checkpoint_tensor_or_fresh_SHA_reads=0, GPU_used=False, shared_storage_written=False, root_authorized=False, reservations_advisory_only=RESERVATIONS, reservation_capacity_not_verified_or_consumed=True, preparation_wall_seconds=time.monotonic()-started, preparation_process_cpu_seconds=time.process_time()-cpu, timing_scope='Read-only whole preflight including native model/data hashes; no original checkpoint payload read', alias_policy='C best only source-bound explicit true D/B4 best pair; false independently encoded', cost_policy='Every run independent parent, nested codec/verification children; assembly independent, daemon waiting is context only')
+     scope['worker_lock_paths'] = {k:str(v) for k,v in SLOT_LOCKS.items()}
++    scope['native_model_hash_read_operations'] = native_reads
++    scope['native_model_hash_read_bytes'] = sum(r['bytes'] for r in native_reads)
++    scope['native_model_hash_read_time'] = 'Included in preparation function wall/CPU; no separately measured base-only subtimer. Returned file bytes, not physical disk bytes.'
++    scope['protected_finish_deadline_utc'] = FINISH_DEADLINE.isoformat()
+     write(output/'scope.json', scope)
+     return scope
+ 
+@@ -245,6 +266,7 @@
+ def validate_resume(old, item):
+     b = item['bound']
+     require(old['run_id'] == b['run_id'] and old['kind'] == b['kind'] and old['source_checkpoint_sha256'] == b['checkpoint_sha256'] and old['source_stat'] == signature(b['checkpoint']) and old['config_sha256'] == file_sha256(item['row']['config_path']) and old['summary_sha256'] == file_sha256(item['row']['summary_path']) and old['definition_sha256'] == digest_job(item['definition']), 'Earlier verified record source changed')
++    require(all(old.get(k)==b.get(k) for k in ['actual_run_id','model_tag','data_family','role','phase','phase_name','group','training_seed','generation_seed','selection_seed','ratio','weight']), 'Earlier verified logical identity changed')
+     require(file_sha256(old['metadata_path']) == old['metadata_sha256'], 'Prior metadata changed')
+     if 'archive_path' in old: require(signature(old['archive_path']) == old['archive_stat'], 'Prior verified ZIP stat changed')
+     return old
+@@ -299,7 +321,7 @@
+             result.update(source_checkpoint_sha256=encoded['source_checkpoint_sha256'], archive_path=str(archive), archive_member='weights/'+archive.name, archive_sha256=encoded['archive_sha256'], archive_stat=signature(archive), model_fingerprint=encoded['model_fingerprint'], encode=encoded, decode=decoded, bytewise_verification=verified, additional_encoding_calls=1, encode_process_cpu_seconds=encode_cpu, decode_process_cpu_seconds=decode_cpu, verification_process_cpu_seconds=verify_cpu)
+         after = fd_signature(fd)
+         require(signature(cp) == before == after and not cp.is_symlink(), 'Source path/open FD changed during entire operation')
+-    result.update(source_fd_five_stat_before=opened, source_fd_five_stat_after=after, wall_seconds=time.monotonic()-started, process_cpu_seconds=time.process_time()-cpu, peak_rss_bytes_process_cumulative=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*1024, cgroup_memory_before=memory_before, cgroup_memory_after=cgroup_memory(), cpu_threads=2, workers=1, GPU_used=False, shared_storage_written=False, original_CP_ZIP_restored_retained=True, timer_scope='Independent endpoint parent; codec/verification child timers nested; alias has its own metadata/freshSHA cost')
++    result.update(exporter_sha256=file_sha256(__file__), prepared_scope_sha256=item.get('scope_sha256'), source_fd_five_stat_before=opened, source_fd_five_stat_after=after, wall_seconds=time.monotonic()-started, process_cpu_seconds=time.process_time()-cpu, peak_rss_bytes_process_cumulative=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*1024, cgroup_memory_before=memory_before, cgroup_memory_after=cgroup_memory(), cpu_threads=2, workers=1, GPU_used=False, shared_storage_written=False, original_CP_ZIP_restored_retained=True, timer_scope='Independent endpoint parent before completion JSON commit; codec/verification timers nested')
+     write(record_path, result)
+     return result
+ 
+@@ -339,13 +361,50 @@
+     for p, item in scope['frozen_files'].items(): cache.bind(p, item['sha256'])
+     return scope, cache
+ 
++def validate_completion(name, folder, phase, scope_path, receipt):
++    spec=PACKAGES[name]; manifest_path=folder/'additional_weights_manifest.json'
++    expected_tar=(folder/(name+'_weights_lossless_v1.tar')).resolve()
++    require(receipt.get('status')=='passed_complete_scratch_package_not_published' and receipt.get('package')==name and receipt.get('logical_endpoints')==spec['logical'] and Path(receipt['tar_path']).resolve()==expected_tar, 'Completed receipt belongs to a different package/cohort/path')
++    require(file_sha256(manifest_path)==receipt['manifest_sha256'], 'Completed manifest SHA differs')
++    manifest=read(manifest_path)
++    expected={x['bound']['run_id']:x['bound'] for x in phase['rows']} if 'rows' in phase else {r['id']:None for r in phase['context']['rows']}
++    rows=manifest['logical_runs']
++    require(manifest.get('status')=='complete_all_logical_endpoints_verified' and manifest.get('package')==name and manifest.get('model_tag')==spec['model'] and manifest.get('kind')==spec['kind'] and manifest.get('logical_endpoints')==spec['logical'] and manifest['source_scope']['sha256']==file_sha256(scope_path) and len(rows)==len(expected)==spec['logical'] and {r['run_id'] for r in rows}==set(expected), 'Completed manifest source scope or exact endpoint cohort differs')
++    require(manifest['unique_weights']==sum('alias_of' not in r for r in rows)==receipt['unique_weights'] and manifest['aliases']==sum('alias_of' in r for r in rows)==receipt['alias_count'], 'Completed unique/alias counts differ')
++    gate=manifest['fullphase_source_gate']
++    for source in gate.get('sources',[]):require(file_sha256(absolute(source['path']))==source['sha256'], 'Completed package source authority changed')
++    for r in rows:
++        require(r['kind']==spec['kind'] and r['model_tag']==spec['model'] and signature(r['source_checkpoint'])==r['source_stat'], 'Completed endpoint kind/model/source stat differs')
++        b=expected[r['run_id']] if 'rows' in phase else gate['records'][r['run_id']]
++        require(r['source_checkpoint_sha256']==b['checkpoint_sha256'], 'Completed source SHA differs from frozen identity')
++        require(all(r.get(k)==b.get(k) for k in ['actual_run_id','role','data_family','group','training_seed','generation_seed','selection_seed','ratio','weight']), 'Completed logical role/data/seed identity differs')
++        if 'alias_of' in r:require(r['group']=='D' and spec['kind']=='best' and r['alias_of'] in expected, 'Completed alias is not exact C-best null control')
++    require(expected_tar.stat().st_size==receipt['tar_bytes'] and not expected_tar.is_symlink(), 'Completed TAR identity/size differs')
++    return manifest
++
+ def validate_resource_review(path, digest, scope_sha, slot):
+     require(path is not None and digest is not None and file_sha256(path) == digest, 'ROOT resource review path/SHA required for batch')
+     r = read(path)
+     require(r.get('status') == 'accepted_cpu_resource_samples' and r.get('authorized_by') == 'root' and r.get('scope_sha256') == scope_sha and r.get('exporter_sha256') == file_sha256(__file__) and set(SLOTS[slot]).intersection(r.get('approved_packages', [])), 'Resource review does not bind this slot/scope/code')
+-    return dict(**proof(path), approved_packages=r['approved_packages'])
+-
+-def execute(scope_path, scope_sha, slot, max_new_weights=1, review_path=None, review_sha=None, poll_seconds=30):
++    require(r.get('protected_finish_deadline_utc') == '2026-11-07T02:56:32Z', 'Review must protect02:56:32 finish boundary')
++    for name in set(SLOTS[slot]).intersection(r['approved_packages']):
++        plan = r['package_plans'][name]; ref = plan['actual_sample_record']
++        require(file_sha256(ref['path']) == ref['sha256'], 'Actual resource sample SHA changed')
++        sample = read(ref['path'])
++        require(sample.get('package') == name and sample.get('status') == 'verified_additional_endpoint_not_yet_assembled' and sample.get('exporter_sha256') == file_sha256(__file__) and sample.get('prepared_scope_sha256') == scope_sha and sample.get('additional_encoding_calls') == 1 and sample.get('all_nonweight_metadata_roundtrip_verified') is True and sample.get('bytewise_verification',{}).get('all_tensor_bytes_equal') is True and plan['estimated_seconds_per_unique'] >= sample['wall_seconds'], 'Batch requires this package actual verified sample and conservative per-item estimate')
++    return dict(**proof(path), approved_packages=r['approved_packages'], package_plans=r['package_plans'])
++
++def admit_time(plan, missing_unique, now=None):
++    now = now or dt.datetime.now(dt.timezone.utc)
++    values = [plan[k] for k in ['estimated_seconds_per_unique','assembly_allowance_seconds','ROOT_publication_allowance_seconds','finish_margin_seconds']]
++    require(all(isinstance(x,(int,float)) and x >= 0 and x < float('inf') for x in values) and all(v>0 for v in values[:3]) and values[3] >= 120 and missing_unique >= 0, 'Finite conservative whole-phase timing plan required')
++    until_publication_start = missing_unique*values[0] + values[1]
++    seconds = until_publication_start + values[2] + values[3]
++    require(now < DEADLINE and now + dt.timedelta(seconds=until_publication_start) < DEADLINE, 'Whole remaining encoding+assembly must project publication start strictly before02:00 UTC')
++    require(now + dt.timedelta(seconds=seconds) <= FINISH_DEADLINE, 'Whole remaining phase+assembly+publication does not fit protected finish boundary')
++    return seconds
++
++def execute(scope_path, scope_sha, slot, max_new_weights=1, review_path=None, review_sha=None, poll_seconds=30, selected_packages=None):
+     require(os.environ.get('CUDA_VISIBLE_DEVICES') == '' and all(os.environ.get(k) == '2' for k in ['OMP_NUM_THREADS','MKL_NUM_THREADS','OPENBLAS_NUM_THREADS']), 'Empty CVD and two CPU threads required')
+     require(dt.datetime.now(dt.timezone.utc) < DEADLINE, '02:00 UTC: no new operation may start')
+     torch.set_num_threads(2); require(not torch.cuda.is_initialized(), 'CUDA must remain uninitialized')
+@@ -354,18 +413,26 @@
+     require(output == OUTPUT or output.is_relative_to(Path('/tmp/grad-research-20261106/delivery')), 'Output must be isolated scratch/delivery')
+     write(output/'operations'/(slot+'_startup_input_audit_'+str(time.time_ns())+'.json'),dict(status='passed_fresh_frozen_input_audit_only', scope_sha256=scope_sha, wall_seconds=time.monotonic()-startup_wall, process_cpu_seconds=time.process_time()-startup_cpu, timer_scope='Independent invocation input hashing after imports; excludes later codec/assembly and waiting', no_original_checkpoint_payloads_read=True))
+     review = validate_resource_review(review_path, review_sha, scope_sha, slot) if max_new_weights > 1 else None
++    selected_packages = selected_packages or [SLOTS[slot][0]]
++    require(selected_packages and set(selected_packages).issubset(SLOTS[slot]) and len(set(selected_packages))==len(selected_packages), 'Explicit packages must belong to this slot')
++    require(max_new_weights>1 or len(selected_packages)==1, 'First sample must target exactly one explicit package')
+     stop = threading.Event(); new = 0; done = {}; started = time.monotonic()
+     for sig in [signal.SIGTERM, signal.SIGINT]: signal.signal(sig, lambda *_: stop.set())
+     def stopping(): return stop.is_set() or dt.datetime.now(dt.timezone.utc) >= DEADLINE
+     lock_path = SLOT_LOCKS[slot]
+     with lock_path.open('a+b') as lock:
+         fcntl.flock(lock.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+-        for name in SLOTS[slot]:
++        for name in [p for p in SLOTS[slot] if p in selected_packages]:
+             if stopping(): break
++            if max_new_weights>1 and name not in review['approved_packages']:
++                write(output/(slot+'_progress.json'),dict(status='pending_separate_ROOT_phase_permission',package=name));return
+             phase = copy.deepcopy(scope['phases'][name]); folder = output/name; folder.mkdir(parents=True, exist_ok=True)
+             if (folder/'completion.json').exists():
++                resumed_wall,resumed_cpu=time.monotonic(),time.process_time()
+                 previous = read(folder/'completion.json')
+-                require(previous['status'] == 'passed_complete_scratch_package_not_published' and file_sha256(previous['tar_path']) == previous['tar_sha256'], 'Earlier complete package changed')
++                validate_completion(name,folder,phase,scope_path,previous)
++                require(file_sha256(previous['tar_path']) == previous['tar_sha256'], 'Earlier complete TAR bytes changed')
++                write(output/'operations'/(slot+'_existing_TAR_rehash_'+str(time.time_ns())+'.json'),dict(status='passed_existing_completed_TAR_fresh_SHA',path=previous['tar_path'],read_bytes=Path(previous['tar_path']).stat().st_size,wall_seconds=time.monotonic()-resumed_wall,process_cpu_seconds=time.process_time()-resumed_cpu,timer_scope='Independent resume-only full TAR hash; original assembly timer not repeated'))
+                 done[name] = previous; continue
+             gate = dict(status='complete_A_B_source_manifest_bound', sources=[]); decisions = {}
+             while 'context' in phase and not stopping():
+@@ -376,11 +443,17 @@
+                         b = gate['records'][row['id']]; definition, scheduler = source_definition(b, row, read(MASTER), read(STATE))
+                         phase['rows'].append(dict(bound=b, row=row, definition=definition, scheduler_record=scheduler, frozen_source_stat=signature(b['checkpoint'])))
+                     phase['base_path'] = context['base']; phase['baseline_execution'] = context['baseline']['execution_provenance']; decisions = gate['decisions']; break
+-                write(output/(slot+'_progress.json'), dict(status='waiting_complete_C_READY_audit_best_proof', phase=name, new_weights_this_invocation=new, daemon_elapsed_wall_context_only=time.monotonic()-started))
+-                stop.wait(poll_seconds)
++                write(output/(slot+'_progress.json'), dict(status='pending_actual_complete_C_READY_audit_best_proof_no_watcher', phase=name, new_weights_this_invocation=new, daemon_elapsed_wall_context_only=time.monotonic()-started));return
+             if stopping(): break
++            def missing_unique(items):
++                return sum(not (folder/'records'/(x['bound']['run_id']+'__'+x['bound']['kind']+'.json')).exists() and not (x['row']['group']=='D' and decisions[x['row']['seed']]['equal']) for x in items)
++            if review is not None:
++                admit_time(review['package_plans'][name],missing_unique(phase['rows']))
++            else:
++                sample_allowance = {'A_remaining_final':180,'B_all_final':180,'C410_best':180,'C1B_best':420,'C2p8B_best':1200}[name]
++                require(dt.datetime.now(dt.timezone.utc)+dt.timedelta(seconds=sample_allowance+120)<=FINISH_DEADLINE,'Single sample allowance does not fit protected finish boundary')
+             records = []
+-            for item in phase['rows']:
++            for index,item in enumerate(phase['rows']):
+                 if stopping(): break
+                 b, row = item['bound'], item['row']; previous_path = folder/'records'/(b['run_id']+'__'+b['kind']+'.json')
+                 alias, expected_fp = None, None
+@@ -396,26 +469,30 @@
+                     write(output/(slot+'_progress.json'), dict(status='resource_sample_limit_reached_requires_ROOT_review', phase=name, new_weights_this_invocation=new, review=review)); return
+                 current_definition, current_scheduler = source_definition(b, row, read(MASTER), read(STATE))
+                 require(current_definition == item['definition'] and current_scheduler == item['scheduler_record'], 'Completed per-job training authority changed')
++                if review is not None: admit_time(review['package_plans'][name],missing_unique(phase['rows'][index:]))
+                 cache.stable(); existed = previous_path.exists()
++                item['scope_sha256'] = scope_sha
+                 base_sha = next(f['sha256'] for f in phase['base_files'] if f['path'].endswith('model.safetensors'))
+                 result = export_one(name, item, folder, phase['base_path'], base_sha, phase['baseline_execution'], alias, expected_fp)
+                 new += int(not existed and alias is None); records.append(result)
+                 write(folder/'draft_progress.json', dict(status='verified_endpoints_only_not_complete_package', verified_logical=len(records), expected_logical=PACKAGES[name]['logical'], last_record=proof(previous_path), new_weights_this_invocation=new))
+             if not stopping() and len(records) == PACKAGES[name]['logical']:
++                if review is not None: admit_time(review['package_plans'][name],0)
+                 done[name] = assemble(name, phase, records, folder, scope_path, cache, gate)
+-        write(output/(slot+'_progress.json'), dict(status='complete_slot_scratch_packages_not_published' if len(done)==len(SLOTS[slot]) else 'stopped_between_operations', done=done, new_weights_this_invocation=new, daemon_elapsed_wall_context_only=time.monotonic()-started, shared_storage_written=False))
++        write(output/(slot+'_progress.json'), dict(status='complete_requested_scratch_packages_not_published' if len(done)==len(selected_packages) else 'stopped_between_operations', done=done, new_weights_this_invocation=new, daemon_elapsed_wall_context_only=time.monotonic()-started, shared_storage_written=False))
+ 
+ def main():
+     parser=argparse.ArgumentParser(description=__doc__); sub=parser.add_subparsers(dest='mode',required=True)
+     pre=sub.add_parser('prepare'); pre.add_argument('--output-dir',type=Path,default=OUTPUT)
+     run=sub.add_parser('execute'); run.add_argument('--scope',type=Path,required=True);run.add_argument('--scope-sha256',required=True);run.add_argument('--slot',choices=list(SLOTS),required=True);run.add_argument('--max-new-weights',type=int,default=1);run.add_argument('--resource-review',type=Path);run.add_argument('--resource-review-sha256');run.add_argument('--poll-seconds',type=float,default=30)
++    run.add_argument('--package',action='append',dest='selected_packages',choices=list(PACKAGES))
+     args=parser.parse_args()
+     if args.mode=='prepare':
+         scope=prepare(args.output_dir); print(json.dumps(dict(status=scope['status'],scope=proof(args.output_dir/'scope.json'), counts={k:v['logical'] for k,v in PACKAGES.items()})))
+     else:
+         require(args.max_new_weights>=1 and args.poll_seconds>=1,'Positive weight limit and poll required')
+         try:
+-            execute(args.scope,args.scope_sha256,args.slot,args.max_new_weights,args.resource_review,args.resource_review_sha256,args.poll_seconds)
++            execute(args.scope,args.scope_sha256,args.slot,args.max_new_weights,args.resource_review,args.resource_review_sha256,args.poll_seconds,args.selected_packages)
+         except Exception as error:
+             try:
+                 output=Path(read(args.scope)['output']).resolve()

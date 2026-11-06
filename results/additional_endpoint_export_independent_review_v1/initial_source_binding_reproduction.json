@@ -1,0 +1,38 @@
+{
+  "source_sha256": "412755d5fbc0c304db5194881ebce4bc841697ce7342bfa79675277faa7bef30",
+  "bound": {
+    "input_sha256": {
+      "/tmp/synthetic_scope_target.pt": "FROZEN_TARGET",
+      "/tmp/synthetic_scope_replay.pt": "FROZEN_REPLAY",
+      "/tmp/synthetic_scope_validation.pt": "FROZEN_VAL"
+    }
+  },
+  "config": {
+    "target_path": "/tmp/synthetic_scope_target.pt",
+    "replay_path": "/tmp/synthetic_scope_replay.pt",
+    "validation_paths": {
+      "target": "/tmp/synthetic_scope_validation.pt"
+    }
+  },
+  "catalog": {
+    "/tmp/synthetic_scope_target.pt": {
+      "sha256": "CONFLICTING_CATALOG"
+    }
+  },
+  "actual_cache_bind_calls": [
+    {
+      "path": "/tmp/synthetic_scope_target.pt",
+      "sha256": "CONFLICTING_CATALOG"
+    },
+    {
+      "path": "/tmp/synthetic_scope_replay.pt",
+      "sha256": "FROZEN_REPLAY"
+    },
+    {
+      "path": "/tmp/synthetic_scope_validation.pt",
+      "sha256": "FROZEN_VAL"
+    }
+  ],
+  "result": "reproduced_missing_conflict_rejection",
+  "actual_data_or_checkpoint_files_opened": false
+}

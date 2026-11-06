@@ -1,0 +1,156 @@
+{
+  "status": "verified_additional_endpoint_not_yet_assembled",
+  "package": "tiny",
+  "run_id": "tiny_B4_s11",
+  "actual_run_id": "tiny_B4_s11",
+  "phase": null,
+  "phase_name": null,
+  "role": null,
+  "kind": "best",
+  "model_tag": "tiny",
+  "data_family": null,
+  "group": null,
+  "training_seed": null,
+  "generation_seed": null,
+  "selection_seed": null,
+  "ratio": null,
+  "weight": null,
+  "source_checkpoint": "/tmp/grad-research-20261106/worktree/results/additional_endpoint_export_independent_review_v1/tiny_bundle_stable/checkpoint_best.pt",
+  "source_stat": {
+    "device": 139,
+    "inode": 101065968774,
+    "bytes": 2956,
+    "mtime_ns": 1793979052426449666,
+    "ctime_ns": 1793979052426449666
+  },
+  "config_sha256": "95a6c042a2fafec7f397768588c50a57c4ef7faf2d1f3e98a63ba8bd481bc47f",
+  "summary_sha256": "26b90d96e8e15b5b025184cd38e160f0e7eaebe111eec8f87be489782cab5b58",
+  "definition_sha256": "136159d34c953759b80709979d6a4d00288bbcbf03ab397475ad56d2de988f1a",
+  "definition": {
+    "id": "tiny_B4_s11",
+    "argv": [
+      "python",
+      "train"
+    ]
+  },
+  "completed_scheduler_record": {
+    "status": "completed",
+    "returncode": 0
+  },
+  "frozen_checkpoint_identity_sha256": "de8ba64114001885b6670c1375879bb2280bb122ba1669c4daa87b79753ed574",
+  "actual_exposure": {
+    "checkpoint_step": 1,
+    "target_prediction_tokens": 50,
+    "replay_prediction_tokens": 2,
+    "full_training_target_prediction_tokens": 100,
+    "full_training_replay_prediction_tokens": 5
+  },
+  "metadata_path": "/tmp/grad-research-20261106/worktree/results/additional_endpoint_export_independent_review_v1/tiny_bundle_stable/delivery/metadata/tiny_B4_s11__best.source_metadata.pt",
+  "metadata_member": "metadata/tiny_B4_s11__best.source_metadata.pt",
+  "metadata_sha256": "75cf002f00c2206180d32497dae734673322579cee021f3d13ed5c70bcc8e53e",
+  "all_nonweight_metadata_roundtrip_verified": true,
+  "source_checkpoint_sha256": "de8ba64114001885b6670c1375879bb2280bb122ba1669c4daa87b79753ed574",
+  "archive_path": "/tmp/grad-research-20261106/worktree/results/additional_endpoint_export_independent_review_v1/tiny_bundle_stable/delivery/weights/tiny_B4_s11__best.xor.zip",
+  "archive_member": "weights/tiny_B4_s11__best.xor.zip",
+  "archive_sha256": "789b2683db83ba71601a9ac3824022ebb4dbd291b2936d8e2b7ae3ffee48de88",
+  "archive_stat": {
+    "device": 139,
+    "inode": 114097093540,
+    "bytes": 1789,
+    "mtime_ns": 1793979052460449524,
+    "ctime_ns": 1793979052460449524
+  },
+  "model_fingerprint": {
+    "sha256_model_state": "ffcbcbc50c0024ed2687dc762e3c437f3da592b965d26c80b9381f961167a279",
+    "state_elements": 11
+  },
+  "encode": {
+    "status": "encoded",
+    "archive": "/tmp/grad-research-20261106/worktree/results/additional_endpoint_export_independent_review_v1/tiny_bundle_stable/delivery/weights/tiny_B4_s11__best.xor.zip",
+    "archive_sha256": "789b2683db83ba71601a9ac3824022ebb4dbd291b2936d8e2b7ae3ffee48de88",
+    "archive_bytes": 1789,
+    "model_raw_bytes": 44,
+    "compression_ratio_archive_over_model_raw": 40.65909090909091,
+    "model_fingerprint": {
+      "sha256_model_state": "ffcbcbc50c0024ed2687dc762e3c437f3da592b965d26c80b9381f961167a279",
+      "state_elements": 11
+    },
+    "base_sha256": "f41ea1b5ef61ab9afb493a3045ff0b1793725036251d55cc4fc67ee64286e859",
+    "source_checkpoint_sha256": "de8ba64114001885b6670c1375879bb2280bb122ba1669c4daa87b79753ed574",
+    "source_checkpoint_bytes_including_optimizer": 2956,
+    "wall_seconds": 0.0016154497861862183,
+    "cpu_threads": 2,
+    "model_only": true,
+    "lossless_weight_bits": true,
+    "gpu_used": false
+  },
+  "decode": {
+    "status": "decoded_and_hash_verified",
+    "archive": "/tmp/grad-research-20261106/worktree/results/additional_endpoint_export_independent_review_v1/tiny_bundle_stable/delivery/weights/tiny_B4_s11__best.xor.zip",
+    "restored": "/tmp/grad-research-20261106/worktree/results/additional_endpoint_export_independent_review_v1/tiny_bundle_stable/delivery/verification/tiny_B4_s11__best.restored.pt",
+    "model_fingerprint": {
+      "sha256_model_state": "ffcbcbc50c0024ed2687dc762e3c437f3da592b965d26c80b9381f961167a279",
+      "state_elements": 11
+    },
+    "tensor_raw_hashes_verified": 2,
+    "restored_file_sha256": "9dbae93191ea5d88b70bf09f586e4f58eb64b043afba14af9f3423acc8ab3b44",
+    "restored_bytes": 3740,
+    "wall_seconds": 0.0014315582811832428,
+    "cpu_threads": 2,
+    "gpu_used": false,
+    "model_only_evaluation_format": true
+  },
+  "bytewise_verification": {
+    "status": "passed",
+    "tensor_count": 2,
+    "all_tensor_bytes_equal": true,
+    "source_checkpoint_sha256": "de8ba64114001885b6670c1375879bb2280bb122ba1669c4daa87b79753ed574",
+    "archive_sha256": "789b2683db83ba71601a9ac3824022ebb4dbd291b2936d8e2b7ae3ffee48de88",
+    "model_fingerprint": {
+      "sha256_model_state": "ffcbcbc50c0024ed2687dc762e3c437f3da592b965d26c80b9381f961167a279",
+      "state_elements": 11
+    },
+    "wall_seconds": 0.0008975863456726074,
+    "cpu_threads": 2,
+    "gpu_used": false
+  },
+  "additional_encoding_calls": 1,
+  "encode_process_cpu_seconds": 0.0017961749999999554,
+  "decode_process_cpu_seconds": 0.0015826299999999183,
+  "verification_process_cpu_seconds": 0.0009251729999999458,
+  "exporter_sha256": "c93e0c1d35fe39b3d71155a126db841b76648ba6b3afd58d475be4eb9c9da853",
+  "prepared_scope_sha256": null,
+  "source_fd_five_stat_before": {
+    "device": 139,
+    "inode": 101065968774,
+    "bytes": 2956,
+    "mtime_ns": 1793979052426449666,
+    "ctime_ns": 1793979052426449666
+  },
+  "source_fd_five_stat_after": {
+    "device": 139,
+    "inode": 101065968774,
+    "bytes": 2956,
+    "mtime_ns": 1793979052426449666,
+    "ctime_ns": 1793979052426449666
+  },
+  "wall_seconds": 0.03618063032627106,
+  "process_cpu_seconds": 0.04885583399999982,
+  "peak_rss_bytes_process_cumulative": 404275200,
+  "cgroup_memory_before": {
+    "memory.current": "1023477571584",
+    "memory.max": "1030792151040",
+    "memory.events": "low 0\nhigh 0\nmax 154198\noom 0\noom_kill 0\noom_group_kill 0"
+  },
+  "cgroup_memory_after": {
+    "memory.current": "1023477370880",
+    "memory.max": "1030792151040",
+    "memory.events": "low 0\nhigh 0\nmax 154198\noom 0\noom_kill 0\noom_group_kill 0"
+  },
+  "cpu_threads": 2,
+  "workers": 1,
+  "GPU_used": false,
+  "shared_storage_written": false,
+  "original_CP_ZIP_restored_retained": true,
+  "timer_scope": "Independent endpoint parent before completion JSON commit; codec/verification timers nested"
+}

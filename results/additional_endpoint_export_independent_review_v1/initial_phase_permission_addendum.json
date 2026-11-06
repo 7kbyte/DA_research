@@ -1,0 +1,55 @@
+{
+  "id": "R5",
+  "source_sha256": "412755d5fbc0c304db5194881ebce4bc841697ce7342bfa79675277faa7bef30",
+  "status": "static_path_confirmed_and_author_fix_reported; no real invocation",
+  "problem": "A-only batch review can reach successor C first sample: reviewed false does not reject when phase_sample_exists false",
+  "source_excerpt": [
+    {
+      "line": 380,
+      "text": "                stop.wait(poll_seconds)"
+    },
+    {
+      "line": 381,
+      "text": "            if stopping(): break"
+    },
+    {
+      "line": 382,
+      "text": "            records = []"
+    },
+    {
+      "line": 383,
+      "text": "            for item in phase['rows']:"
+    },
+    {
+      "line": 384,
+      "text": "                if stopping(): break"
+    },
+    {
+      "line": 385,
+      "text": "                b, row = item['bound'], item['row']; previous_path = folder/'records'/(b['run_id']+'__'+b['kind']+'.json')"
+    },
+    {
+      "line": 386,
+      "text": "                alias, expected_fp = None, None"
+    },
+    {
+      "line": 387,
+      "text": "                if row['group'] == 'D':"
+    },
+    {
+      "line": 388,
+      "text": "                    decision = decisions[row['seed']]; expected_fp = decision['d']['model_state_fingerprint']"
+    },
+    {
+      "line": 389,
+      "text": "                    if decision['equal']:"
+    },
+    {
+      "line": 390,
+      "text": "                        canonical = next(r for r in records if r['run_id'] == decision['b4']['run_id'])"
+    }
+  ],
+  "root_execution_policy": "Initially only A/B; every successor phase needs explicit permission before first sample",
+  "requested_targeted_test": "A completed + C READY + A-only authority must reject before C gate/encode",
+  "author_reported_fix": "explicit per-phase packages, initial A/B only, C first sample explicit --package and max1; regression tests pending stable source"
+}

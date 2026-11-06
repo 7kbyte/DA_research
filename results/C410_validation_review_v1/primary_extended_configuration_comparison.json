@@ -1,0 +1,38 @@
+{
+  "primary": {
+    "target_path": "/tmp/grad-research-20261106/worktree/artifacts/data/finemath_train.pt",
+    "data_sha256": "af49c1455484f3471bf1a3569601373e2e84795849b9f59291b96ff2d637b39f",
+    "capacity_prediction_tokens": 2093056,
+    "chunks": 4096,
+    "target_exposure": 10000000,
+    "microbatch": 16,
+    "accumulation": 4,
+    "eval_every_steps": 50,
+    "validation_paths": {
+      "target": "/data/202610/7kb/research/artifacts/evaluation_v3/finemath_validation.pt",
+      "c4": "/data/202610/7kb/research/artifacts/evaluation_v3/c4_validation.pt",
+      "wikitext": "/data/202610/7kb/research/artifacts/evaluation_v3/wikitext103_validation.pt"
+    },
+    "nominal_eval_prediction_tokens": 1635200
+  },
+  "extended": {
+    "target_path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_train.pt",
+    "data_sha256": "d75095a4c1847f72168d7cad1fd56da8d82ac7f5b17c43673dd70ed7eae118b0",
+    "capacity_prediction_tokens": 20000540,
+    "chunks": 39140,
+    "target_exposure": 100000000,
+    "microbatch": 64,
+    "accumulation": 1,
+    "eval_every_steps": 153,
+    "validation_paths": {
+      "target": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_validation.pt",
+      "c4": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_validation.pt",
+      "wikitext": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_validation.pt"
+    },
+    "nominal_eval_prediction_tokens": 5003712
+  },
+  "both_effective_batch_chunks": 64,
+  "both_sequence_length": 512,
+  "relationship": "Extended target includes primary prefix; correlated robustness extension, not an independent replication",
+  "pure_horizon_causal_contrast": false
+}

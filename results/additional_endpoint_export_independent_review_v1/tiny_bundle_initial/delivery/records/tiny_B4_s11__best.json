@@ -1,0 +1,154 @@
+{
+  "status": "verified_additional_endpoint_not_yet_assembled",
+  "package": "tiny",
+  "run_id": "tiny_B4_s11",
+  "actual_run_id": "tiny_B4_s11",
+  "phase": null,
+  "phase_name": null,
+  "role": null,
+  "kind": "best",
+  "model_tag": "tiny",
+  "data_family": null,
+  "group": null,
+  "training_seed": null,
+  "generation_seed": null,
+  "selection_seed": null,
+  "ratio": null,
+  "weight": null,
+  "source_checkpoint": "/tmp/grad-research-20261106/worktree/results/additional_endpoint_export_independent_review_v1/tiny_bundle_initial/checkpoint_best.pt",
+  "source_stat": {
+    "device": 139,
+    "inode": 109721497383,
+    "bytes": 2956,
+    "mtime_ns": 1793978356057334252,
+    "ctime_ns": 1793978356057334252
+  },
+  "config_sha256": "95a6c042a2fafec7f397768588c50a57c4ef7faf2d1f3e98a63ba8bd481bc47f",
+  "summary_sha256": "41b7d5661197697ee418ff26c3c948be67e0d80955416cb43d316d2bd5ef08cc",
+  "definition_sha256": "136159d34c953759b80709979d6a4d00288bbcbf03ab397475ad56d2de988f1a",
+  "definition": {
+    "id": "tiny_B4_s11",
+    "argv": [
+      "python",
+      "train"
+    ]
+  },
+  "completed_scheduler_record": {
+    "status": "completed",
+    "returncode": 0
+  },
+  "frozen_checkpoint_identity_sha256": "0731359e2a4a9e834a0bf70b410114ac5016dceed0bdb1de5bec9c75d03304a9",
+  "actual_exposure": {
+    "checkpoint_step": 1,
+    "target_prediction_tokens": 50,
+    "replay_prediction_tokens": 2,
+    "full_training_target_prediction_tokens": 100,
+    "full_training_replay_prediction_tokens": 5
+  },
+  "metadata_path": "/tmp/grad-research-20261106/worktree/results/additional_endpoint_export_independent_review_v1/tiny_bundle_initial/delivery/metadata/tiny_B4_s11__best.source_metadata.pt",
+  "metadata_member": "metadata/tiny_B4_s11__best.source_metadata.pt",
+  "metadata_sha256": "66c0e35d95979401c81aceee65d196823fbd31658fdcec5cff153f4c295a5c63",
+  "all_nonweight_metadata_roundtrip_verified": true,
+  "source_checkpoint_sha256": "0731359e2a4a9e834a0bf70b410114ac5016dceed0bdb1de5bec9c75d03304a9",
+  "archive_path": "/tmp/grad-research-20261106/worktree/results/additional_endpoint_export_independent_review_v1/tiny_bundle_initial/delivery/weights/tiny_B4_s11__best.xor.zip",
+  "archive_member": "weights/tiny_B4_s11__best.xor.zip",
+  "archive_sha256": "9cc98261de850d44f4fba08cde5d6bb1ed63ef3c861f1e88072b2cc7f12ffdc6",
+  "archive_stat": {
+    "device": 139,
+    "inode": 2318519629,
+    "bytes": 1790,
+    "mtime_ns": 1793978356090334117,
+    "ctime_ns": 1793978356090334117
+  },
+  "model_fingerprint": {
+    "sha256_model_state": "ffcbcbc50c0024ed2687dc762e3c437f3da592b965d26c80b9381f961167a279",
+    "state_elements": 11
+  },
+  "encode": {
+    "status": "encoded",
+    "archive": "/tmp/grad-research-20261106/worktree/results/additional_endpoint_export_independent_review_v1/tiny_bundle_initial/delivery/weights/tiny_B4_s11__best.xor.zip",
+    "archive_sha256": "9cc98261de850d44f4fba08cde5d6bb1ed63ef3c861f1e88072b2cc7f12ffdc6",
+    "archive_bytes": 1790,
+    "model_raw_bytes": 44,
+    "compression_ratio_archive_over_model_raw": 40.68181818181818,
+    "model_fingerprint": {
+      "sha256_model_state": "ffcbcbc50c0024ed2687dc762e3c437f3da592b965d26c80b9381f961167a279",
+      "state_elements": 11
+    },
+    "base_sha256": "f41ea1b5ef61ab9afb493a3045ff0b1793725036251d55cc4fc67ee64286e859",
+    "source_checkpoint_sha256": "0731359e2a4a9e834a0bf70b410114ac5016dceed0bdb1de5bec9c75d03304a9",
+    "source_checkpoint_bytes_including_optimizer": 2956,
+    "wall_seconds": 0.0015683770179748535,
+    "cpu_threads": 2,
+    "model_only": true,
+    "lossless_weight_bits": true,
+    "gpu_used": false
+  },
+  "decode": {
+    "status": "decoded_and_hash_verified",
+    "archive": "/tmp/grad-research-20261106/worktree/results/additional_endpoint_export_independent_review_v1/tiny_bundle_initial/delivery/weights/tiny_B4_s11__best.xor.zip",
+    "restored": "/tmp/grad-research-20261106/worktree/results/additional_endpoint_export_independent_review_v1/tiny_bundle_initial/delivery/verification/tiny_B4_s11__best.restored.pt",
+    "model_fingerprint": {
+      "sha256_model_state": "ffcbcbc50c0024ed2687dc762e3c437f3da592b965d26c80b9381f961167a279",
+      "state_elements": 11
+    },
+    "tensor_raw_hashes_verified": 2,
+    "restored_file_sha256": "d5fd783510deec7d493631ddc2627ffbf059b5e3c29f2e68af2f7935e8c619cd",
+    "restored_bytes": 3740,
+    "wall_seconds": 0.001393582671880722,
+    "cpu_threads": 2,
+    "gpu_used": false,
+    "model_only_evaluation_format": true
+  },
+  "bytewise_verification": {
+    "status": "passed",
+    "tensor_count": 2,
+    "all_tensor_bytes_equal": true,
+    "source_checkpoint_sha256": "0731359e2a4a9e834a0bf70b410114ac5016dceed0bdb1de5bec9c75d03304a9",
+    "archive_sha256": "9cc98261de850d44f4fba08cde5d6bb1ed63ef3c861f1e88072b2cc7f12ffdc6",
+    "model_fingerprint": {
+      "sha256_model_state": "ffcbcbc50c0024ed2687dc762e3c437f3da592b965d26c80b9381f961167a279",
+      "state_elements": 11
+    },
+    "wall_seconds": 0.0008838027715682983,
+    "cpu_threads": 2,
+    "gpu_used": false
+  },
+  "additional_encoding_calls": 1,
+  "encode_process_cpu_seconds": 0.0017528870000000918,
+  "decode_process_cpu_seconds": 0.001544369000000101,
+  "verification_process_cpu_seconds": 0.0009086670000000296,
+  "source_fd_five_stat_before": {
+    "device": 139,
+    "inode": 109721497383,
+    "bytes": 2956,
+    "mtime_ns": 1793978356057334252,
+    "ctime_ns": 1793978356057334252
+  },
+  "source_fd_five_stat_after": {
+    "device": 139,
+    "inode": 109721497383,
+    "bytes": 2956,
+    "mtime_ns": 1793978356057334252,
+    "ctime_ns": 1793978356057334252
+  },
+  "wall_seconds": 0.03558715060353279,
+  "process_cpu_seconds": 0.048234493000000045,
+  "peak_rss_bytes_process_cumulative": 391561216,
+  "cgroup_memory_before": {
+    "memory.current": "1030759276544",
+    "memory.max": "1030792151040",
+    "memory.events": "low 0\nhigh 0\nmax 154131\noom 0\noom_kill 0\noom_group_kill 0"
+  },
+  "cgroup_memory_after": {
+    "memory.current": "1030776082432",
+    "memory.max": "1030792151040",
+    "memory.events": "low 0\nhigh 0\nmax 154131\noom 0\noom_kill 0\noom_group_kill 0"
+  },
+  "cpu_threads": 2,
+  "workers": 1,
+  "GPU_used": false,
+  "shared_storage_written": false,
+  "original_CP_ZIP_restored_retained": true,
+  "timer_scope": "Independent endpoint parent; codec/verification child timers nested; alias has its own metadata/freshSHA cost"
+}
