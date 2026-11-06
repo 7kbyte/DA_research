@@ -1,0 +1,384 @@
+{
+  "status": "passed_read_only_original_v6_forecast_refresh_not_handoff_authority",
+  "completed_at_utc": "2026-11-06T21:12:20.151750+00:00",
+  "forecast": {
+    "path": "/tmp/grad-research-20261106/worktree/results/evaluation_timing_budget_v6_refresh_2110.json",
+    "bytes": 29810,
+    "sha256": "3a771074ac991b3b4794f4922090c5a6f2c7d72b0c8ab165a143842970a8db29"
+  },
+  "doc": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/评价剩余时间2110只读刷新.md",
+    "bytes": 4407,
+    "sha256": "a1960e14145849011dacbeb9f7433c7a15eb45be8a09d51249e86fc9e5d202bb"
+  },
+  "producer_source": {
+    "path": "/tmp/grad-research-20261106/worktree/scripts/describe_remaining_evaluation_budget_v6.py",
+    "sha256": "d02d430869f5c6f91f71496b2b77ea5e0388386ed432bdcec22240270c706a50"
+  },
+  "runtime_input_utc": "2026-11-06T21:09:58.660256+00:00",
+  "master_counts": {
+    "completed": 602,
+    "running": 4,
+    "pending": 1
+  },
+  "all607_definition_strictint_completed_rc0_no_stop_and_recorded_argv_match": true,
+  "training_FIFO_finish_forecast_utc": "2026-11-06T22:22:42.375809+00:00",
+  "change_from_1925_seconds": -636.771675,
+  "evaluation_scenarios": [
+    {
+      "name": "low",
+      "wall_seconds_with_dispatch_tail_and_handoff_proxy": 5898.737880210324,
+      "from_current_training_forecast": {
+        "evaluation_finish_utc": "2026-11-07T00:01:01.113689+00:00",
+        "margin_before_30min_delivery_tail_minutes": 175.51477185000002,
+        "training_finish_utc": "2026-11-06T22:22:42.375809+00:00"
+      }
+    },
+    {
+      "name": "central",
+      "wall_seconds_with_dispatch_tail_and_handoff_proxy": 7531.667358243383,
+      "from_current_training_forecast": {
+        "evaluation_finish_utc": "2026-11-07T00:28:14.043167+00:00",
+        "margin_before_30min_delivery_tail_minutes": 148.29928055,
+        "training_finish_utc": "2026-11-06T22:22:42.375809+00:00"
+      }
+    },
+    {
+      "name": "high",
+      "wall_seconds_with_dispatch_tail_and_handoff_proxy": 9772.956604551497,
+      "from_current_training_forecast": {
+        "evaluation_finish_utc": "2026-11-07T01:05:35.332414+00:00",
+        "margin_before_30min_delivery_tail_minutes": 110.94445976666665,
+        "training_finish_utc": "2026-11-06T22:22:42.375809+00:00"
+      }
+    }
+  ],
+  "unchanged_accounting": {
+    "A_B_baselines_or_prior_completions_removed_again": 0,
+    "C410_behavior_actual_forward_jobs": 21,
+    "C410_behavior_logical_endpoints": 24,
+    "C410_proven_avoided_NLL_forwards": 6,
+    "C410_proven_avoided_behavior_forwards": 3,
+    "actual_C410_completed_forward_jobs": 43,
+    "main66_still_all_unperformed": 66,
+    "other_C_unproved_alias_discounts": 0,
+    "prior_v5_NLL_unaliased_proxy": 129,
+    "real_C410_NLL_forwards_are49": false,
+    "remaining_NLL_forward_jobs": 80,
+    "remaining_behavior_forward_jobs": 141,
+    "remaining_forward_jobs": 221,
+    "remaining_materialization_jobs": 3,
+    "remaining_queue_jobs": 224,
+    "total_compute_reduction_due_to_early_execution": 0
+  },
+  "pending_admission": [
+    {
+      "id": "extended_v2_pythia_1b_m32_formal_C_s33_w0p05",
+      "argv": [
+        "/usr/bin/python",
+        "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+        "run",
+        "--config",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_C_s33_w0p05.json",
+        "--summary-copy",
+        "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_C_s33_w0p05_summary.json"
+      ],
+      "definition_sha256": "55a21e62f5b79c0dd4f7a0f4172c4aeeaa36a28d3dc1bd54c3c8a9b621591e57",
+      "expected_seconds": 3600,
+      "forecast_start_utc": "2026-11-06T21:25:31.278262+00:00",
+      "strict_latest_launch_utc": "2026-11-06T22:30:00+00:00",
+      "strict_launch_headroom_seconds_proxy": 3868.721738,
+      "admitted_under_time_forecast_only": true
+    }
+  ],
+  "current_handoff_not_ready": {
+    "ready_phase_count": 5,
+    "all_requested_phases_ready": false,
+    "all63_audit_file_exists": false,
+    "captured_immutable_cache_snapshot": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/digest_cache_snapshot_1793999431164002607.json",
+      "sha256": "a82a6af0d15ed9f75c3b6cf6c35ef3ecb96bc12530b68501d2ce32aec5410fc4"
+    },
+    "captured_cache_is_not_final_handoff_cache": true,
+    "required_later": [
+      "all607_completed_rc0_no_stop",
+      "all63audit_passed",
+      "all9READY",
+      "execution_time_latest_immutable_cache_and_current_stats",
+      "active_jobs_empty",
+      "ROOT_terminate_old_idle_master_then_confirm_all_PIDs_PGroups_exit_and_lock_release"
+    ]
+  },
+  "safety": {
+    "source_queue_state_margin_modified": false,
+    "GPU_or_scheduler_or_handoff_started": false,
+    "authority_created": false,
+    "score_semantics_parsed": false,
+    "opaque_scored_output_SHA_allowed_and_performed_by_unchanged_producer": true,
+    "actual_opaque_read_count_and_bytes_instrumented": false,
+    "actual_opaque_read_count": null,
+    "actual_opaque_bytes": null,
+    "CP_base_TAR_ZIP_payload_opened": false
+  },
+  "timing": {
+    "producer": {
+      "argv": [
+        "/usr/bin/python",
+        "/tmp/grad-research-20261106/worktree/scripts/describe_remaining_evaluation_budget_v6.py",
+        "--output",
+        "/tmp/grad-research-20261106/worktree/results/evaluation_timing_budget_v6_refresh_2110.json",
+        "--source-root",
+        "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/sources"
+      ],
+      "cwd": "/tmp/grad-research-20261106/worktree",
+      "env": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "OMP_NUM_THREADS": "2",
+        "OPENBLAS_NUM_THREADS": "2"
+      },
+      "returncode": 0,
+      "whole_child_wall_seconds": 1.6868541203439236,
+      "user_cpu_seconds": 1.211323,
+      "sys_cpu_seconds": 0.47414599999999996,
+      "finished_at_utc": "2026-11-06T21:10:40.323062+00:00",
+      "scope": "Original unchanged budget producer; ROOT explicitly allows original opaque integrity SHA for completed C41043 plus initial1. No score semantics/CP/base/TAR/ZIP reads, GPU, or queue/source/margin changes. Internal collector timer nested."
+    },
+    "separate_description": {
+      "argv": [
+        "/usr/bin/python",
+        "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/review_refresh_metadata.py"
+      ],
+      "returncode": 0,
+      "whole_child_wall_seconds": 0.05794762820005417,
+      "user_cpu_seconds": 0.042352999999999995,
+      "sys_cpu_seconds": 0.014787,
+      "finished_at_utc": "2026-11-06T21:10:47.688464+00:00",
+      "scope": "Separate small metadata comparison/admission description only. No score output opens, payload/GPU/queue mutation."
+    },
+    "failed_attempts": 0,
+    "manual_review_and_writing_parent_whole": null,
+    "collector_internal_timing_is_nested_not_added": true
+  },
+  "files": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/cache_progress_observed.json",
+      "bytes": 997,
+      "sha256": "2928a23e59c501e80cb96e3de3247429891e0577aa39ce9e93a0bbbf3da5c670"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/comparison_and_admission.json",
+      "bytes": 87527,
+      "sha256": "c38ec8c51329a567fabf5ec91ff3d17e1fa7a9abbff947804d4180b0362280e0"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/comparison_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/comparison_stdout.txt",
+      "bytes": 276,
+      "sha256": "0729c878e39219e3a4a9877d67d7ff7bbc38ce837af9b7ab548afa84c65946be"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/comparison_whole_child_timing.json",
+      "bytes": 501,
+      "sha256": "1c2641c27eb4b38056f09e8e2d928123b65317f9e43e22e9edb24d37a4f6bf5c"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/describe_remaining_evaluation_budget_v6.py",
+      "bytes": 19484,
+      "sha256": "d02d430869f5c6f91f71496b2b77ea5e0388386ed432bdcec22240270c706a50"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/immutable_cache_snapshot_observed.json",
+      "bytes": 455220,
+      "sha256": "a82a6af0d15ed9f75c3b6cf6c35ef3ecb96bc12530b68501d2ce32aec5410fc4"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/opaque_integrity_read_scope.json",
+      "bytes": 43256,
+      "sha256": "e7368178e70ccc4b89f9f8d15f6c70cc9f63eb03486ec264fa7cc565df3307ed"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/pending_admission.csv",
+      "bytes": 709,
+      "sha256": "68b2df00d047d3379f7b4a4500a4fc0ca0279b33d64dda4dda6f5b9b493ed3fa"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/pre_run_runtime_budget_latest.json",
+      "bytes": 66029,
+      "sha256": "570912469be7de2c59cb693565e4990d73bd45048cf89f9b7b6ce9c74eb774ed"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/pre_run_supplemental_job_state.json",
+      "bytes": 624118,
+      "sha256": "df1a48531b88d8e42fc74c8cf1fa795a9451916836f7f8a6a1974108ab788be9"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/pre_run_supplemental_v1_queue.json",
+      "bytes": 588483,
+      "sha256": "37f00a8ac4af9d71aabb6b54f425e3fa222f596e25ce6e049015c0a66185e377"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/ready_index_observed.json",
+      "bytes": 31949,
+      "sha256": "b4f4d12bdd1b70cdeeb75bfc4077f86e0433453815fdc1dedd5750fb7a1795ca"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/remaining_configs/extended_v2_pythia_1b_m32_formal_B4_s33_w0p05.json",
+      "bytes": 1848,
+      "sha256": "9a80d2193fda0ff2084e5ba8a3cf9bf97dde5761ba22290cfddc189c19d20056"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/remaining_configs/extended_v2_pythia_1b_m32_formal_C_s33_w0p05.json",
+      "bytes": 1847,
+      "sha256": "b548bb6dd1591309113c2d2c9433e98a8fff2380877ca636ab34285158c3e1e1"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/remaining_configs/extended_v2_pythia_1b_m32_formal_D_s33_w0p05.json",
+      "bytes": 1852,
+      "sha256": "0c4b9aedab8fd1bd0f44d68551b73fc8561e493fb2c809c38d8f50522349a552"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/remaining_configs/extended_v2_pythia_1b_m32_formal_M_s33_w0p05.json",
+      "bytes": 1854,
+      "sha256": "8ff1adbfa5ef573f169919f1ce66b515a3fdabd7145a689fd81a8202b0be425f"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/remaining_configs/extended_v2_pythia_2p8b_m8_h25m_formal_M_s33_w0p05.json",
+      "bytes": 1867,
+      "sha256": "6bb48fd528ca8df6161933509b73056377e5583f7010a8dc8491b8bbce81817a"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/review_refresh_metadata.py",
+      "bytes": 11621,
+      "sha256": "06ac7bb0d01b18e30aa2f1d502e05573dd07cb7aae9701593ea85727c83a2f18"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/scheduler_actual_cmdline.bin",
+      "bytes": 209,
+      "sha256": "2a222ce417d4eb016ee3c0a1fb9ac4e2160ad9c3e6d427a2be189b6f052b1acb"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/sources/A_behavior_manifest.json",
+      "bytes": 370691,
+      "sha256": "31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/sources/C410_audit.json",
+      "bytes": 50036,
+      "sha256": "7f007b2a372a06c0a2ca02ee3856e5414b9f679533a348f8e5cd8841459ec472"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/sources/C410_completion.json",
+      "bytes": 21270,
+      "sha256": "67802f0080d8b1a8ff5bc6aa47a3deed13e7660d1c24b88d67b3a7cb27465d18"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/sources/C410_runtime_completion.json",
+      "bytes": 40812,
+      "sha256": "08f3074791f672093bc1a51c013514319f1255526a1612846fe8a2ebf8d5b260"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/sources/behavior_READY.json",
+      "bytes": 7369,
+      "sha256": "c2d5258fcbe127bd67af010d5950b8c862b252ecb2f5e63c62d478ca88517634"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/sources/behavior_manifest.json",
+      "bytes": 1242267,
+      "sha256": "db6bdaf2f631ffc1c97f5d9c0ae1d0521e67ee6556790eb472d74195c5fb66e1"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/sources/behavior_queue.json",
+      "bytes": 33579,
+      "sha256": "d2b733c9d91e8a1102cb5a33908058a8567db010ffe1915fe6f210d50a9e920b"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/sources/best_proof.json",
+      "bytes": 12534,
+      "sha256": "423be07d69fe5157541bd82896077cdf6de839aebde54e5deb1913843f0d4303"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/sources/cache_progress.json",
+      "bytes": 997,
+      "sha256": "2928a23e59c501e80cb96e3de3247429891e0577aa39ce9e93a0bbbf3da5c670"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/sources/catalog.json",
+      "bytes": 541219,
+      "sha256": "90163f7a77529434c872f52f41d45151bf09826ddd17ab58ea48d21d16f3d186"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/sources/final_proof.json",
+      "bytes": 12196,
+      "sha256": "aa5c1ce9a5d2797ca10ee4c60686d26ba8d9a65f99b0e8e889e3bef5d225ffa8"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/sources/master_queue.json",
+      "bytes": 588483,
+      "sha256": "37f00a8ac4af9d71aabb6b54f425e3fa222f596e25ce6e049015c0a66185e377"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/sources/nll_READY.json",
+      "bytes": 7867,
+      "sha256": "d776f2aa440fa303ab0807c40d988b4036176c191a52a386410c0b09a5405481"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/sources/nll_manifest.json",
+      "bytes": 2340545,
+      "sha256": "48f8b2235c303211e4f79a92c16c7fb1c8d3757ce5d66a97a555fba7dfcf8f32"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/sources/nll_queue.json",
+      "bytes": 48671,
+      "sha256": "d94df2358c0e2c644135b7071f95ae7adc6fd09ed74609437133a380eabb968d"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/sources/prehash_inventory.json",
+      "bytes": 262458,
+      "sha256": "17812e1dc777bc5facdf91802d29352d3bffa1007dc97bca2386863783c0bf51"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/sources/primary_behavior_manifest.json",
+      "bytes": 1092890,
+      "sha256": "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/sources/prior_v4.json",
+      "bytes": 25797,
+      "sha256": "a5154c67177e5d43bc77593c8927ebc06c330989197e8db0dc701a80da381328"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/sources/prior_v5.json",
+      "bytes": 37276,
+      "sha256": "940a0a0651cc7dd20da16d46321d8d4cac6b4dbbf7dd3e1ba6fbdd787e0b8f7d"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/sources/runtime.json",
+      "bytes": 66030,
+      "sha256": "ba22a473596724c4174fa10bebff45a39ed351bf9da53a1266dd613d838cc179"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/sources/scheduler_state.json",
+      "bytes": 624118,
+      "sha256": "36a4198ec354106493c9879691f5eb426eca75da57b3f012f96673a4cb14dfc5"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/stdout.txt",
+      "bytes": 844,
+      "sha256": "573016074a6e113ab6486735ddd1c36bcc081d9a469e1cb92049b1b2b8706288"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/whole_child_timing.json",
+      "bytes": 990,
+      "sha256": "09d8f50f9646a435630f8c97fc0c7bcd847d857b7862f4dde0d298a3e9faff94"
+    }
+  ]
+}

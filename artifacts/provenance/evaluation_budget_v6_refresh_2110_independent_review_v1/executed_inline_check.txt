@@ -1,0 +1,131 @@
+
+import collections,datetime as dt,hashlib,json,math,stat
+from pathlib import Path
+ROOT=Path.cwd().resolve(); P=ROOT/'artifacts/provenance/evaluation_budget_v6_refresh_2110_v1'
+OUT=ROOT/'artifacts/provenance/evaluation_budget_v6_refresh_2110_independent_review_v1'
+cache={};proofs={}
+def raw(path,expected=None):
+ p=Path(path).resolve()
+ if p not in cache:
+  before=p.stat();assert stat.S_ISREG(before.st_mode) and before.st_size<32<<20
+  data=p.read_bytes();after=p.stat()
+  assert (before.st_dev,before.st_ino,before.st_size,before.st_mtime_ns,before.st_ctime_ns)==(after.st_dev,after.st_ino,after.st_size,after.st_mtime_ns,after.st_ctime_ns)
+  cache[p]=data;proofs[str(p)]={'path':str(p),'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()}
+ if expected is not None:assert proofs[str(p)]['sha256']==expected
+ return cache[p]
+def read(p,expected=None):return json.loads(raw(p,expected))
+def same(a,b):assert math.isclose(a,b,rel_tol=1e-12,abs_tol=1e-7),(a,b)
+def utc(t):return dt.datetime.fromisoformat(t.replace('Z','+00:00'))
+complete=read(P/'COMPLETE.json','5831ee9d57cdc3cea426b0931854ee4734b506051ebb799a5d7a69f01b8de87d')
+new=read(ROOT/'results/evaluation_timing_budget_v6_refresh_2110.json','3a771074ac991b3b4794f4922090c5a6f2c7d72b0c8ab165a143842970a8db29')
+old=read(ROOT/'results/evaluation_timing_budget_v6_refresh_1925.json','2b505e58310d7cef34d70a7fe367b4845150d921754a913319fccccbbf09e333')
+producer_sha='d02d430869f5c6f91f71496b2b77ea5e0388386ed432bdcec22240270c706a50'
+producer=raw(ROOT/'scripts/describe_remaining_evaluation_budget_v6.py',producer_sha)
+raw(P/'describe_remaining_evaluation_budget_v6.py',producer_sha)
+assert new['producer_source']['sha256']==old['producer_source']['sha256']==complete['producer_source']['sha256']==producer_sha
+# Every sealed COMPLETE member is bounded metadata inside its own namespace.
+for row in complete['files']:
+ p=Path(row['path']).resolve();assert p.is_relative_to(P)
+ assert len(raw(p,row['sha256']))==row['bytes']
+for field in ('forecast','doc'):
+ row=complete[field];assert len(raw(row['path'],row['sha256']))==row['bytes']
+assert new['accounting']==old['accounting']==complete['unchanged_accounting']
+assert new['limitations']==old['limitations']
+scenario_keys_checked={}
+for prior,current in zip(old['sensitivity_scenarios'],new['sensitivity_scenarios']):
+ assert set(prior)==set(current)
+ keys=set(current)-{'from_current_training_forecast'}
+ assert all(prior[k]==current[k] for k in keys)
+ scenario_keys_checked[current['name']]=sorted(keys)
+assert len(scenario_keys_checked)==3
+account=new['accounting']
+assert (account['remaining_NLL_forward_jobs'],account['remaining_behavior_forward_jobs'],account['remaining_forward_jobs'],account['remaining_materialization_jobs'],account['remaining_queue_jobs'])==(80,141,221,3,224)
+assert account['actual_C410_completed_forward_jobs']==43 and account['C410_proven_avoided_NLL_forwards']==6
+assert account['other_C_unproved_alias_discounts']==0 and account['total_compute_reduction_due_to_early_execution']==0
+queue=read(P/'sources/master_queue.json',new['source_proofs']['master_queue.json']['sha256'])
+state=read(P/'sources/scheduler_state.json',new['source_proofs']['scheduler_state.json']['sha256'])
+runtime=read(P/'sources/runtime.json',new['source_proofs']['runtime.json']['sha256'])
+comparison=read(P/'comparison_and_admission.json')
+assert len(queue)==len(state['jobs'])==607 and len({j['id'] for j in queue})==607
+counts=dict(collections.Counter(v['status'] for v in state['jobs'].values()))
+assert counts=={'completed':602,'running':4,'pending':1}==runtime['master_status_counts']==complete['master_counts']==comparison['master_state_counts']
+argv_count=0
+for job in queue:
+ rec=state['jobs'][job['id']]
+ assert rec['definition_sha256']==hashlib.sha256(json.dumps(job,sort_keys=True).encode()).hexdigest()
+ assert not any(k.startswith('stop_requested') for k in rec)
+ assert rec['status'] in ('completed','running','pending')
+ if rec['status']=='completed':assert type(rec['returncode']) is int and rec['returncode']==0 and not rec.get('missing_outputs')
+ if 'argv' in rec:assert rec['argv']==job['argv'];argv_count+=1
+ else:assert rec['status']=='pending'
+assert argv_count==606
+assert state['stopping'] is False and state['scheduler_pid']==2988506 and len(state['active_jobs'])==4
+assert not runtime['failed_or_blocked_jobs'] and all(runtime['frozen_scientific_core_matches'].values())
+scheduler=raw(ROOT/'scripts/schedule_jobs.py','c5c264b058ff655315ef896ccb0a89b471637c6612013a51999fc6f48b2d16d9').decode()
+assert 'default=1800' in scheduler
+captured_argv=raw(P/'scheduler_actual_cmdline.bin').rstrip(b'\0').decode().split('\0')
+assert captured_argv==comparison['scheduler_argv']
+assert captured_argv[captured_argv.index('--deadline')+1]=='2026-11-07T00:00:00Z'
+assert '--launch-margin-seconds' not in captured_argv and '--stop-margin-seconds' not in captured_argv and '--exit-when-idle' not in captured_argv
+# Reconstruct this four-running/one-pending arithmetic directly from raw metadata;
+# do not import or execute the producer or open any scored output.
+rows={r['id']:r for model in runtime['extended_model_runtime_updates'].values() for r in model['jobs'] if r['scheduler_status']!='completed'}
+assert len(rows)==5
+for r in rows.values():same(r['total_seconds'],sum(r['costs'].values()))
+same(runtime['remaining_slot_hours']*3600,sum(r['total_seconds'] for r in rows.values()))
+running=[j for j in queue if state['jobs'][j['id']]['status']=='running']
+pending=[j for j in queue if state['jobs'][j['id']]['status']=='pending'];assert len(pending)==1
+ends=[(rows[j['id']]['total_seconds']*1.1,int(state['jobs'][j['id']]['gpu'])) for j in running]
+assert len({gpu for _,gpu in ends})==4
+first,gpu=min(ends);job=pending[0];end=first+rows[job['id']]['total_seconds']*1.1
+makespan=max(end,max(t for t,_ in ends))
+projection=new['training_forecast']['complete_C_only_FIFO']
+assert projection['all_remaining_job_durations_receive_10pct_once'] is True
+same(projection['makespan_seconds_with_10pct'],makespan)
+same(projection['unassigned_conservative_nonphase_slot_seconds'],0)
+assert len(projection['future_dispatch_timing_rows'])==1
+launch=projection['future_dispatch_timing_rows'][0]
+assert launch['id']==job['id'] and launch['slot']==gpu
+same(launch['start_seconds'],first);same(launch['end_seconds'],end)
+anchor=utc(runtime['updated_at_utc']);train_finish=anchor+dt.timedelta(seconds=makespan)
+assert train_finish==utc(new['training_forecast']['finish_utc'])==utc(complete['training_FIFO_finish_forecast_utc'])
+limit=utc('2026-11-07T02:56:32Z')
+for case in new['sensitivity_scenarios']:
+ finish=train_finish+dt.timedelta(seconds=case['wall_seconds_with_dispatch_tail_and_handoff_proxy'])
+ assert finish==utc(case['from_current_training_forecast']['evaluation_finish_utc'])
+ same((limit-finish).total_seconds()/60,case['from_current_training_forecast']['margin_before_30min_delivery_tail_minutes'])
+high=next(c for c in new['sensitivity_scenarios'] if c['name']=='high')['from_current_training_forecast']
+assert high['evaluation_finish_utc']=='2026-11-07T01:05:35.332414+00:00'
+same(high['margin_before_30min_delivery_tail_minutes'],110.94445976666665)
+assert type(job['expected_seconds']) is int and job['expected_seconds']==3600
+latest=utc('2026-11-06T23:30:00Z')-dt.timedelta(seconds=job['expected_seconds'])
+start=anchor+dt.timedelta(seconds=first)
+assert latest==utc('2026-11-06T22:30:00Z') and start<latest
+admit=comparison['pending_actual_argv_admission'];assert len(admit)==1 and admit==complete['pending_admission']
+assert admit[0]['id']==job['id'] and admit[0]['argv']==job['argv'] and utc(admit[0]['forecast_start_utc'])==start
+assert utc(admit[0]['strict_latest_launch_utc'])==latest
+same(admit[0]['strict_launch_headroom_seconds_proxy'],(latest-start).total_seconds())
+opaque=read(P/'opaque_integrity_read_scope.json')
+assert opaque['successfully_bound_output_hash_targets']==len(opaque['bound_output_targets_stat_only'])==52
+assert sum(r['current_metadata_bytes'] for r in opaque['bound_output_targets_stat_only'])==opaque['output_sizes_from_metadata_only_sum_bytes']==73012261
+assert opaque['instrumented_actual_opaque_output_open_count'] is None and opaque['instrumented_actual_opaque_bytes_read'] is None
+assert complete['safety']['actual_opaque_read_count_and_bytes_instrumented'] is False
+assert complete['safety']['actual_opaque_read_count'] is None and complete['safety']['actual_opaque_bytes'] is None
+assert complete['safety']['opaque_scored_output_SHA_allowed_and_performed_by_unchanged_producer'] is True
+assert comparison['current_handoff_not_ready']['all_requested_phases_ready'] is False
+result={'status':'passed_lightweight_2110_metadata_review_not_handoff_or_launch_authority',
+ 'producer_SHA256':producer_sha,'unchanged_scenario_keys_checked':scenario_keys_checked,
+ 'workload':account,'snapshot_master_counts':counts,'strict_completed_int_rc0':602,
+ 'recorded_actual_argv_equal_definition_count':argv_count,'pending_argv_is_frozen_plan_not_executed':1,
+ 'training_plus_10pct_exactly_once_seconds':makespan,'training_finish_utc':train_finish.isoformat(),
+ 'high_finish_utc':high['evaluation_finish_utc'],'high_margin_minutes':high['margin_before_30min_delivery_tail_minutes'],
+ 'pending_start_utc':start.isoformat(),'pending_strict_latest_launch_utc':latest.isoformat(),
+ 'opaque_producer_IO':{'actual_reads_occurred_under_ROOT_permission':True,'actual_read_count':None,'actual_bytes':None,
+ 'metadata_enumeration_only_targets':52,'metadata_enumeration_only_bytes':73012261,
+ 'not_physical_or_logical_instrumented_IO_count':True},
+ 'this_review_read_scope':{'bounded_metadata_source_file_count':len(proofs),'logical_metadata_bytes_returned':sum(x['bytes'] for x in proofs.values()),
+ 'producer_rerun':False,'score_output_semantics_or_hash_reads':False,'CP_base_TAR_ZIP_reads':False,'GPU_or_queue_operation':False},
+ 'captured_forecast_is_not_final_handoff':True,'manual_review_writing_whole_seconds':None,
+ 'source_proofs':list(proofs.values())}
+with (OUT/'review.json').open('x') as stream:json.dump(result,stream,indent=2,ensure_ascii=False);stream.write('\n')
+print(json.dumps({k:v for k,v in result.items() if k not in ('source_proofs','unchanged_scenario_keys_checked','workload')},ensure_ascii=False))

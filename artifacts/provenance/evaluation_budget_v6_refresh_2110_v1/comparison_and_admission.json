@@ -1,0 +1,1944 @@
+{
+  "status": "score_blind_original_producer_refresh_and_admission_description_only",
+  "observed_at_utc": "2026-11-06T21:10:47.680059+00:00",
+  "new_forecast": {
+    "path": "/tmp/grad-research-20261106/worktree/results/evaluation_timing_budget_v6_refresh_2110.json",
+    "sha256": "3a771074ac991b3b4794f4922090c5a6f2c7d72b0c8ab165a143842970a8db29",
+    "bytes": 29810
+  },
+  "comparison_baseline": {
+    "path": "/tmp/grad-research-20261106/worktree/results/evaluation_timing_budget_v6_refresh_1925.json",
+    "sha256": "2b505e58310d7cef34d70a7fe367b4845150d921754a913319fccccbbf09e333",
+    "bytes": 32230
+  },
+  "unchanged_accounting": {
+    "A_B_baselines_or_prior_completions_removed_again": 0,
+    "C410_behavior_actual_forward_jobs": 21,
+    "C410_behavior_logical_endpoints": 24,
+    "C410_proven_avoided_NLL_forwards": 6,
+    "C410_proven_avoided_behavior_forwards": 3,
+    "actual_C410_completed_forward_jobs": 43,
+    "main66_still_all_unperformed": 66,
+    "other_C_unproved_alias_discounts": 0,
+    "prior_v5_NLL_unaliased_proxy": 129,
+    "real_C410_NLL_forwards_are49": false,
+    "remaining_NLL_forward_jobs": 80,
+    "remaining_behavior_forward_jobs": 141,
+    "remaining_forward_jobs": 221,
+    "remaining_materialization_jobs": 3,
+    "remaining_queue_jobs": 224,
+    "total_compute_reduction_due_to_early_execution": 0
+  },
+  "low_central_high_comparison": [
+    {
+      "name": "low",
+      "unchanged_remaining_evaluation_seconds": 5898.737880210324,
+      "old_finish_utc": "2026-11-07T00:11:37.885364+00:00",
+      "new_finish_utc": "2026-11-07T00:01:01.113689+00:00",
+      "forecast_finish_change_seconds": -636.771675,
+      "new_margin_before_025632_minutes": 175.51477185000002
+    },
+    {
+      "name": "central",
+      "unchanged_remaining_evaluation_seconds": 7531.667358243383,
+      "old_finish_utc": "2026-11-07T00:38:50.814842+00:00",
+      "new_finish_utc": "2026-11-07T00:28:14.043167+00:00",
+      "forecast_finish_change_seconds": -636.771675,
+      "new_margin_before_025632_minutes": 148.29928055
+    },
+    {
+      "name": "high",
+      "unchanged_remaining_evaluation_seconds": 9772.956604551497,
+      "old_finish_utc": "2026-11-07T01:16:12.104089+00:00",
+      "new_finish_utc": "2026-11-07T01:05:35.332414+00:00",
+      "forecast_finish_change_seconds": -636.771675,
+      "new_margin_before_025632_minutes": 110.94445976666665
+    }
+  ],
+  "old_training_finish_utc": "2026-11-06T22:33:19.147484+00:00",
+  "new_training_finish_utc": "2026-11-06T22:22:42.375809+00:00",
+  "master_state_counts": {
+    "completed": 602,
+    "running": 4,
+    "pending": 1
+  },
+  "all_607_definition_bindings_and_completed_strict_integer_rc0_verified": true,
+  "scheduler_argv": [
+    "/usr/bin/python",
+    "/tmp/grad-research-20261106/worktree/scripts/schedule_jobs.py",
+    "--queue",
+    "configs/supplemental_v1_queue.json",
+    "--state",
+    "logs/supplemental_job_state.json",
+    "--gpus",
+    "0,1,2,3",
+    "--deadline",
+    "2026-11-07T00:00:00Z"
+  ],
+  "pending_actual_argv_admission": [
+    {
+      "id": "extended_v2_pythia_1b_m32_formal_C_s33_w0p05",
+      "argv": [
+        "/usr/bin/python",
+        "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+        "run",
+        "--config",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_C_s33_w0p05.json",
+        "--summary-copy",
+        "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_C_s33_w0p05_summary.json"
+      ],
+      "definition_sha256": "55a21e62f5b79c0dd4f7a0f4172c4aeeaa36a28d3dc1bd54c3c8a9b621591e57",
+      "expected_seconds": 3600,
+      "forecast_start_utc": "2026-11-06T21:25:31.278262+00:00",
+      "strict_latest_launch_utc": "2026-11-06T22:30:00+00:00",
+      "strict_launch_headroom_seconds_proxy": 3868.721738,
+      "admitted_under_time_forecast_only": true
+    }
+  ],
+  "latest_pending_forecast_start_utc": "2026-11-06T21:25:31.278262+00:00",
+  "minimum_strict_2230_launch_headroom_seconds_proxy": 3868.721738,
+  "future_actual_queues": [
+    {
+      "source_queue": "/tmp/grad-research-20261106/worktree/configs/primary_evaluation_v2_execution_matched_behavior_queue.json",
+      "actual_unenqueued_jobs": 66,
+      "expected_seconds": 300,
+      "strict_latest_launch_utc": "2026-11-07T02:44:42+00:00",
+      "jobs": [
+        {
+          "id": "behavior_pythia-410m_0d6b70d23101acf3ab481dbd",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_0d6b70d23101acf3ab481dbd",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "d2911f26fd71e10d2c2adc601b6c96334d6a98d0766a63e8d9ec43c9a773e71b"
+        },
+        {
+          "id": "behavior_pythia-410m_81f5597742c6b49d379f0682",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_81f5597742c6b49d379f0682",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "d6b2cfcb726eef3b9d439edcbd905b5498c6727604549cc23152dfdd6b5b1377"
+        },
+        {
+          "id": "behavior_pythia-410m_03c86e340f2ce6725302a0b5",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_03c86e340f2ce6725302a0b5",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "463b1c75ae332b9d0b462849a8e6028d9c502dd6df67fe0c20818e0ad461a1b3"
+        },
+        {
+          "id": "behavior_pythia-410m_5754704bb9fafe29307de45c",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_5754704bb9fafe29307de45c",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "1e52b73f0c12260ef6ebab26ae7d1b4a4a158a5a0ad7b713a70b1b20fcca081a"
+        },
+        {
+          "id": "behavior_pythia-410m_21d1c45e8a6cd75d4f0c9d8d",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_21d1c45e8a6cd75d4f0c9d8d",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "c056856dbf7851b71000852348ad2cddf81f05de606f83e236d460e96c72f331"
+        },
+        {
+          "id": "behavior_pythia-410m_f1166a0ba06df14ebc75b8b3",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_f1166a0ba06df14ebc75b8b3",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "e4b5a72ef219e4f4a5462253fdc0dc826690cffe04a1daedfa831ac9c76d3de0"
+        },
+        {
+          "id": "behavior_pythia-410m_9e3462c83fc01313314b609a",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_9e3462c83fc01313314b609a",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "6c41d523b8e0a7611b75623a39ea143d1849a3f0b17239f329af414c2367f851"
+        },
+        {
+          "id": "behavior_pythia-410m_871e750917678769ac02e42e",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_871e750917678769ac02e42e",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "1e12c16b0d6da735a5db53e408803661c70c03a22b64ca3126dfc22c230ebead"
+        },
+        {
+          "id": "behavior_pythia-410m_20e30088deeb14fd17faa25a",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_20e30088deeb14fd17faa25a",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "36fdc5f8f72208472edae89aa69448448fa064a3783353f7f7977ec5862b2911"
+        },
+        {
+          "id": "behavior_pythia-410m_2a7b4a17bc6a7cf4ddd114af",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_2a7b4a17bc6a7cf4ddd114af",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "32e1d27d1c93c2e80f0ef93c82b37d4545c5ad8934d4178d6058e96049af392e"
+        },
+        {
+          "id": "behavior_pythia-410m_1945578d9cf55b7983c503c2",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_1945578d9cf55b7983c503c2",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "1b26bd1dd10205026f99f40a2e2c0a32cbb810022ba05c493671f22116144e88"
+        },
+        {
+          "id": "behavior_pythia-410m_cda0150f00f93e7901d8d64b",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_cda0150f00f93e7901d8d64b",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "f520518914090380ce788f00e8ec40a8dce63369c24018d1f81900a20caedaca"
+        },
+        {
+          "id": "behavior_pythia-410m_6098b25d2f42c2a3f4f01f13",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_6098b25d2f42c2a3f4f01f13",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "f5af45da39c42cf318bf3a0b2ec2e2930c86cd740238cc0b996ae335a629213c"
+        },
+        {
+          "id": "behavior_pythia-410m_e45f3620e77bc33af648ab33",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_e45f3620e77bc33af648ab33",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "121a04a1e0ca727a48799c976c197d6bcb441940ffda4e070a401c932ad9f296"
+        },
+        {
+          "id": "behavior_pythia-410m_239e145fe95a10f0593bae1f",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_239e145fe95a10f0593bae1f",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "84a11044249e99f9886dce405df494f66b0379671c2a597f1d4511f86ff35db9"
+        },
+        {
+          "id": "behavior_pythia-410m_c3d63d82015ebc1e6a28ab7b",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_c3d63d82015ebc1e6a28ab7b",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "b479844ed30b654438def9adcdf9c1f35a0309696aa34ccb184ecbe8db2751e3"
+        },
+        {
+          "id": "behavior_pythia-410m_a3645eb603fc2812652ddba4",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_a3645eb603fc2812652ddba4",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "d875f8e9b97394193d644e90181b6029b096cba1e73fbc1b434e06c1705d9400"
+        },
+        {
+          "id": "behavior_pythia-410m_d9f9c1c4e58482a18e1e521d",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_d9f9c1c4e58482a18e1e521d",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "483b000db93eb2931144e96fbbf303a292651c1c4b8556fcd18346ec7d0bf68f"
+        },
+        {
+          "id": "behavior_pythia-410m_6b10bd4974c7b56e491c86d0",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_6b10bd4974c7b56e491c86d0",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "b1db2f81cb2343af1136e02226d3a2fd27e418960eb5992b3d57007ca9b231b5"
+        },
+        {
+          "id": "behavior_pythia-410m_9dabcca45c258396099ca25e",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_9dabcca45c258396099ca25e",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "ad80b5d310333beee5af3be3085812974dd28e07653e4ea7a885b9c6ecd3ecd4"
+        },
+        {
+          "id": "behavior_pythia-410m_679add94558c698ae4218d6e",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_679add94558c698ae4218d6e",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "2aebaf648e4c7930b57393c36108c63fe33fba4ea24fb299fc9066fe5d4542ed"
+        },
+        {
+          "id": "behavior_pythia-410m_ef6b464c5d40261530074bec",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_ef6b464c5d40261530074bec",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "487a90dc9cad2d6a223b4cedc0ffe1a36d9b3703efc5e44ceabf77404f36286c"
+        },
+        {
+          "id": "behavior_pythia-410m_84cabb3e054d4d7079dba5f3",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_84cabb3e054d4d7079dba5f3",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "02586a7109959a0329b5f118211939a6c64fe6fdae75b6dfa1729833232f1eb0"
+        },
+        {
+          "id": "behavior_pythia-410m_45a203054fb62198c8b02e36",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_45a203054fb62198c8b02e36",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "d98c5d1458dc73eaf9956edce0b541707e51565f84d046871148aa536eeb33ae"
+        },
+        {
+          "id": "behavior_pythia-410m_edd18a7a0e91bb0cc23bf7cb",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_edd18a7a0e91bb0cc23bf7cb",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "57d0bea63f796bac737539b33de1c884a4d130c9581defbc6b2beb09453955e6"
+        },
+        {
+          "id": "behavior_pythia-410m_d77f01e4021dd11113e047e3",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_d77f01e4021dd11113e047e3",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "b4976353ea62006bc5a9a0198295428d1abd14eddacaa51afef70a475e07634e"
+        },
+        {
+          "id": "behavior_pythia-410m_bd039a914d840ba471d12bd7",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_bd039a914d840ba471d12bd7",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "e43cb78df51b35aaffa5fd2ac7dc5624ccb4d940060fe203d6d20b478dde47bf"
+        },
+        {
+          "id": "behavior_pythia-410m_d524a8403747f6b475f3d242",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_d524a8403747f6b475f3d242",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "aac2abc8fd6f84fc1ba0f49929da9493506acd2c630434e12f9acff1ab87157a"
+        },
+        {
+          "id": "behavior_pythia-410m_7f7be88c06a9e7212e01cdfe",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_7f7be88c06a9e7212e01cdfe",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "fce1496b8832c61e59071436331b467cbe9930bcc3523484ad0818a0f475e920"
+        },
+        {
+          "id": "behavior_pythia-410m_baeaa464f9d8c39af73e14bf",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_baeaa464f9d8c39af73e14bf",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "d378aeda2067bc6a2afcc7b990c2931345bfa96353a3077bd411b73e621f8347"
+        },
+        {
+          "id": "behavior_pythia-410m_376a64a88c988a58d405964b",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_376a64a88c988a58d405964b",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "546fd7d71e5314b02d15ff770b5968933a602134b0a022e5d944bc3f53fae6b8"
+        },
+        {
+          "id": "behavior_pythia-410m_ffeb89ecb7eca94d85bc87d6",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_ffeb89ecb7eca94d85bc87d6",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "d11bd64d8aecdc97c0d2ef4f0ee077c5fcda853d105620fa4ab70e9d4af25455"
+        },
+        {
+          "id": "behavior_pythia-410m_eba3625b55d2d90f7da39f1d",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_eba3625b55d2d90f7da39f1d",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "2f30a7eb6a0b5c4726728421c226230683705c25c6f36e8f968aeb390a64ccb8"
+        },
+        {
+          "id": "behavior_pythia-410m_b9ad312636fea636d20ace85",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_b9ad312636fea636d20ace85",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "60066c36c9f119699dd620927992e82d2e06677c5f693a9611b3d1e362f5348a"
+        },
+        {
+          "id": "behavior_pythia-410m_3587c1ca60978c1e77aab9aa",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_3587c1ca60978c1e77aab9aa",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "1ad7e85e3c5d3ddc9b2af70c74b4c19716effc34fb4aad4144a6656f7c42a324"
+        },
+        {
+          "id": "behavior_pythia-410m_ebae09af74d960687e4ab8cb",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_ebae09af74d960687e4ab8cb",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "3ca13a10a341bd3176863d4722e3dbd700c3572bee854db779187d5ef112b0db"
+        },
+        {
+          "id": "behavior_pythia-410m_f4fdcb2bf55e65af98f37b40",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_f4fdcb2bf55e65af98f37b40",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "70bdd99b599d6947cf2df3ded78eac255fb63b317563de5170ef745f3d56c0f9"
+        },
+        {
+          "id": "behavior_pythia-410m_a0e6f1bedc37d2636c9803a1",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_a0e6f1bedc37d2636c9803a1",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "62e512648d6e1c07bd48a4f7957a423c01e0b52c5f44952cb93e9ec656bfde7c"
+        },
+        {
+          "id": "behavior_pythia-410m_669888b7525d20dcddac7543",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_669888b7525d20dcddac7543",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "e37071dea9d3d862179b5648726d1ddbb3a746a062b9d89b8e6244403262371c"
+        },
+        {
+          "id": "behavior_pythia-410m_9c3dabaa5a97eb1e9b58e3cc",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_9c3dabaa5a97eb1e9b58e3cc",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "2bec74187e9e5852da27452d6cd01c56f6fc7479bcade350a530dd5451a8ddbd"
+        },
+        {
+          "id": "behavior_pythia-410m_4b1568f51546c2dafa401967",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_4b1568f51546c2dafa401967",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "0c259f4ce3b09c4562b4408ba32519d699ed66ff0139fb24310069bd907af62b"
+        },
+        {
+          "id": "behavior_pythia-410m_24d145003f678131dea93df8",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_24d145003f678131dea93df8",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "eb1e2a13608258a8d334b50745f6f53fcefd90c4a690ff98866fc69e0c84c258"
+        },
+        {
+          "id": "behavior_pythia-410m_b4bfa082bc46d591812e1f4a",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_b4bfa082bc46d591812e1f4a",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "a6bbc6d705563e410f2553865d3a0cc293642b389f1cb2da7c4a15e5e52d803a"
+        },
+        {
+          "id": "behavior_pythia-410m_591b6695d9ec7667145dddb6",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_591b6695d9ec7667145dddb6",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "d9e2d097652fab58bab84cd0641419c23dee5c82e2d7d19c137afd21bcf427a3"
+        },
+        {
+          "id": "behavior_pythia-410m_94bc686c88a124efbe36e4b8",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_94bc686c88a124efbe36e4b8",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "949e6df84217bb5c67ed600ea8a5fa768aea88f9d72088e238519f0634e49f1f"
+        },
+        {
+          "id": "behavior_pythia-410m_5cad0117e8db57783fb122a9",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_5cad0117e8db57783fb122a9",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "e69d2f69bb842c175e1aad439db409514471d03d4dda23b8ec85f3803dadee16"
+        },
+        {
+          "id": "behavior_pythia-410m_cebfac194ce8eb163e861aad",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_cebfac194ce8eb163e861aad",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "077f655ba2d07c6b72443bc6dbf16fb49787e195a768bbb7e01127313b7f3f44"
+        },
+        {
+          "id": "behavior_pythia-410m_28bb6575e248ba3af09d8eaf",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_28bb6575e248ba3af09d8eaf",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "10c0a5784810dcdc5fe57a9761561b5712af92ae4feef375525121e3334fc692"
+        },
+        {
+          "id": "behavior_pythia-410m_183876307eb0f3df2a2d5001",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_183876307eb0f3df2a2d5001",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "de48ee96ce78cd812fb9364cf48bea74776fdaf9b10c8aa5e33a81146c54d10d"
+        },
+        {
+          "id": "behavior_pythia-410m_fe935f8097dc64a134c09f75",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_fe935f8097dc64a134c09f75",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "db980883999b619e9ed314d81ab97815821f9e32a3a8c9455e1b3f6cad5625e8"
+        },
+        {
+          "id": "behavior_pythia-410m_7656c4ed208b72d9c8b5ba16",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_7656c4ed208b72d9c8b5ba16",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "e5d9df86d08c16b3136ad84e67924638743665a6d0d6e126a4c49072fdb132a2"
+        },
+        {
+          "id": "behavior_pythia-410m_a86738054fde45bdbd476aed",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_a86738054fde45bdbd476aed",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "8f7517595ce67dcddb311dd8ca09491d0ef7956725122572aba9a8ac7eefc7d7"
+        },
+        {
+          "id": "behavior_pythia-410m_689c416c93afe6919cd9d9bf",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_689c416c93afe6919cd9d9bf",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "34c7872fff516e72b6f870d7451c6f4edc7cfbc9920c715497353a8bfaa4cc9c"
+        },
+        {
+          "id": "behavior_pythia-410m_3a43a82fea3fc55a8678e995",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_3a43a82fea3fc55a8678e995",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "9e0065666c06f69d8981a12793f1bf290a56b043cb5a249d57eac042b9292de0"
+        },
+        {
+          "id": "behavior_pythia-410m_4d2e81e85fc594cadebf4033",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_4d2e81e85fc594cadebf4033",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "245f1690dd954aa51b9f281b87313bbcfe889604ddc277b2ceb7b0e8aa292f06"
+        },
+        {
+          "id": "behavior_pythia-410m_ca64df5cd643d909195cf866",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_ca64df5cd643d909195cf866",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "ec9311a6789be842d1c70839b857da4ad06c0485f029ae39e074c48446025d31"
+        },
+        {
+          "id": "behavior_pythia-410m_c32efa44e995caa7debb1aa3",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_c32efa44e995caa7debb1aa3",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "20e98be2c7fb88a257482b0d2924eb3b059d915156540b3ceb9eed7532e794a8"
+        },
+        {
+          "id": "behavior_pythia-410m_b63bad2fbd4a56559bcf7b95",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_b63bad2fbd4a56559bcf7b95",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "b33e52433732134ea91b8153ef777f7937cab48deeb7b44f995ccee5128d3f55"
+        },
+        {
+          "id": "behavior_pythia-410m_2f96de78bb1d829d0b062fd8",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_2f96de78bb1d829d0b062fd8",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "ea29bee817c42eb4e02fc42e3f0d8cc2eab90de02a134e948898e0ce15ba379c"
+        },
+        {
+          "id": "behavior_pythia-410m_0a743a113e9cf6d265b892da",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_0a743a113e9cf6d265b892da",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "a290a18ca2a1b916f63fa5118b149d689594631a557e76788bb33c9a7000b294"
+        },
+        {
+          "id": "behavior_pythia-410m_7ccbf88bf22dca629004e619",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_7ccbf88bf22dca629004e619",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "63f9a05909391240c8e5b4915623c42b4559641748290fe7fef1993ff10fb79b"
+        },
+        {
+          "id": "behavior_pythia-410m_301566d5d300a56e8f37b838",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_301566d5d300a56e8f37b838",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "abc512894557bc635f004a5aacb9e7ceaf7e54038961f3ba278a01a984c84fce"
+        },
+        {
+          "id": "behavior_pythia-410m_f0359cca7774a8274c6a674d",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_f0359cca7774a8274c6a674d",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "c58bbf6dafb40b1c32d66ad8b56062da67e3e648137000ff22b6646c7e2825ea"
+        },
+        {
+          "id": "behavior_pythia-410m_429e0669d5739d62efc0c130",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_429e0669d5739d62efc0c130",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "81cf9ee1d79bfd896e2582a31a3ad2f15e863ea60a08b6f89cc3c6bb15d23cd7"
+        },
+        {
+          "id": "behavior_pythia-410m_07ca532683766953208e4c1c",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_07ca532683766953208e4c1c",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "8de400680bc704b8079f7eddd934f9dfbecb6bb81ef0b4b6857eb52994d6a66c"
+        },
+        {
+          "id": "behavior_pythia-410m_caac904e0fbef92e42445a2d",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+            "--manifest-sha256",
+            "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+            "--job-id",
+            "behavior_pythia-410m_caac904e0fbef92e42445a2d",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "262fcee8ace51b2de0ed9feb6060c9442da892ff79faf0cb33e337619e0d2ec9"
+        }
+      ]
+    },
+    {
+      "source_queue": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/queue.json",
+      "actual_unenqueued_jobs": 18,
+      "expected_seconds": 600,
+      "strict_latest_launch_utc": "2026-11-07T02:39:42+00:00",
+      "jobs": [
+        {
+          "id": "behavior_pythia-410m_de72e337447a51d43155c46b",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/manifest.json",
+            "--manifest-sha256",
+            "31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa",
+            "--job-id",
+            "behavior_pythia-410m_de72e337447a51d43155c46b",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "d38df2b1b9ac32166dfb6e9e78495d18f06d55c27c5c07ab5518cbf26564e6b4"
+        },
+        {
+          "id": "behavior_pythia-410m_8f5f151b47ac7d58cc2ab3c1",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/manifest.json",
+            "--manifest-sha256",
+            "31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa",
+            "--job-id",
+            "behavior_pythia-410m_8f5f151b47ac7d58cc2ab3c1",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "bf2014b6e140810b430d2f8345acd142c033a9c0a99dd2cc49aff48daeb51a9b"
+        },
+        {
+          "id": "behavior_pythia-410m_8271cbc27fc4769b6340ac08",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/manifest.json",
+            "--manifest-sha256",
+            "31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa",
+            "--job-id",
+            "behavior_pythia-410m_8271cbc27fc4769b6340ac08",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "97e8d1ac72ecfb97ed834087c0e53b946744bab410be86499e03f5048cf10283"
+        },
+        {
+          "id": "behavior_pythia-410m_c5de9d9db36206d1012625e6",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/manifest.json",
+            "--manifest-sha256",
+            "31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa",
+            "--job-id",
+            "behavior_pythia-410m_c5de9d9db36206d1012625e6",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "5e0c9067c374697657fca354367be246cad0cc52ccb9961d7023c299e257cf77"
+        },
+        {
+          "id": "behavior_pythia-410m_f7a14869958b2043d6c6edac",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/manifest.json",
+            "--manifest-sha256",
+            "31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa",
+            "--job-id",
+            "behavior_pythia-410m_f7a14869958b2043d6c6edac",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "85703c82e84ad18fd404b5eb279968556e7fa33ad6f702199fca54623f4e4f50"
+        },
+        {
+          "id": "behavior_pythia-410m_5c8c137233dd76eafac1d0bf",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/manifest.json",
+            "--manifest-sha256",
+            "31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa",
+            "--job-id",
+            "behavior_pythia-410m_5c8c137233dd76eafac1d0bf",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "0b9bd79eb9dfd1c4b8858ee706e9777d14a93e21f618877a75ce501d7e2fd622"
+        },
+        {
+          "id": "behavior_pythia-410m_reuse_03c86e340f2ce672_2001c061b184",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/manifest.json",
+            "--manifest-sha256",
+            "31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa",
+            "--job-id",
+            "behavior_pythia-410m_reuse_03c86e340f2ce672_2001c061b184",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "1761fdc5a57cc46962913f854ce3c8e71d2fd0e7645854e227d8fcee4cf78952"
+        },
+        {
+          "id": "behavior_pythia-410m_reuse_a3645eb603fc2812_2001c061b184",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/manifest.json",
+            "--manifest-sha256",
+            "31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa",
+            "--job-id",
+            "behavior_pythia-410m_reuse_a3645eb603fc2812_2001c061b184",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "472cbcb2a2f5bb73139c41112f5c1ec507e5f974a0710d6913a255ab3b86c98a"
+        },
+        {
+          "id": "behavior_pythia-410m_reuse_376a64a88c988a58_2001c061b184",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/manifest.json",
+            "--manifest-sha256",
+            "31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa",
+            "--job-id",
+            "behavior_pythia-410m_reuse_376a64a88c988a58_2001c061b184",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "be69e53be19afaa0d34239dca24a207a7f8e5f83b9e251251317f5cf66a0f0da"
+        },
+        {
+          "id": "behavior_pythia-410m_5d461cae319f1ce976b919ec",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/manifest.json",
+            "--manifest-sha256",
+            "31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa",
+            "--job-id",
+            "behavior_pythia-410m_5d461cae319f1ce976b919ec",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "f704ddf03566a62192dfc864ed0662aea3a69a178057ec33c529f3b08c36801a"
+        },
+        {
+          "id": "behavior_pythia-410m_9c19d83671227bc5b0cb00d6",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/manifest.json",
+            "--manifest-sha256",
+            "31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa",
+            "--job-id",
+            "behavior_pythia-410m_9c19d83671227bc5b0cb00d6",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "e257f8592292d424d4cd11aeb8200ec05d54109da47692141a5dc39700fe8ad9"
+        },
+        {
+          "id": "behavior_pythia-410m_e1248de2e17bf140a65e50ae",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/manifest.json",
+            "--manifest-sha256",
+            "31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa",
+            "--job-id",
+            "behavior_pythia-410m_e1248de2e17bf140a65e50ae",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "f37cb25f5e3be004b97fc66c62350f4b994aa7937aad0ee569b24cfdb28d254d"
+        },
+        {
+          "id": "behavior_pythia-410m_73f95ed1322e2c32cc467df1",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/manifest.json",
+            "--manifest-sha256",
+            "31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa",
+            "--job-id",
+            "behavior_pythia-410m_73f95ed1322e2c32cc467df1",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "82ac69df3d7dc6ba071476f539f6c721560dcfcaec5c7fe4b616e0f01c199414"
+        },
+        {
+          "id": "behavior_pythia-410m_b7ca07924add0a231f74fabe",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/manifest.json",
+            "--manifest-sha256",
+            "31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa",
+            "--job-id",
+            "behavior_pythia-410m_b7ca07924add0a231f74fabe",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "0d89100b041277f17b0d65cf62f9d29876df91dd5a79d4618fbea1105da5ce93"
+        },
+        {
+          "id": "behavior_pythia-410m_63bebe1d7b0f9303f2b47595",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/manifest.json",
+            "--manifest-sha256",
+            "31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa",
+            "--job-id",
+            "behavior_pythia-410m_63bebe1d7b0f9303f2b47595",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "9219732d572e07cc8791ea423086268384bc3c087fdefe11a7314c98ed934bbc"
+        },
+        {
+          "id": "behavior_pythia-410m_5e7cfe8b013067775182d2a2",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/manifest.json",
+            "--manifest-sha256",
+            "31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa",
+            "--job-id",
+            "behavior_pythia-410m_5e7cfe8b013067775182d2a2",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "2334f460818a3145875075ade7f14b3da5c09aaeb1573e0eecedaa297691d2c0"
+        },
+        {
+          "id": "behavior_pythia-410m_2e1b7709e1982f31b644159d",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/manifest.json",
+            "--manifest-sha256",
+            "31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa",
+            "--job-id",
+            "behavior_pythia-410m_2e1b7709e1982f31b644159d",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "0a01ac0614431cca952766770230b00afde142769f3400d1d373c5cd48b9df28"
+        },
+        {
+          "id": "behavior_pythia-410m_562f530452b1a95e8b9600a2",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/manifest.json",
+            "--manifest-sha256",
+            "31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa",
+            "--job-id",
+            "behavior_pythia-410m_562f530452b1a95e8b9600a2",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "4de9d199a428bf3911fb70ec83fd134a0b449e89cd18b24c213e3a48817b60f1"
+        }
+      ]
+    },
+    {
+      "source_queue": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/queue.json",
+      "actual_unenqueued_jobs": 21,
+      "expected_seconds": 600,
+      "strict_latest_launch_utc": "2026-11-07T02:39:42+00:00",
+      "jobs": [
+        {
+          "id": "behavior_pythia-410m_cab7269fec06d74db7ec7e24",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/manifest.json",
+            "--manifest-sha256",
+            "db6bdaf2f631ffc1c97f5d9c0ae1d0521e67ee6556790eb472d74195c5fb66e1",
+            "--job-id",
+            "behavior_pythia-410m_cab7269fec06d74db7ec7e24",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "f571e4b9ec8e9dc79a4900a7cf558027af45e75ec7b3a613a91398077ae88c81"
+        },
+        {
+          "id": "behavior_pythia-410m_69cedef1ecb74ee361b49c37",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/manifest.json",
+            "--manifest-sha256",
+            "db6bdaf2f631ffc1c97f5d9c0ae1d0521e67ee6556790eb472d74195c5fb66e1",
+            "--job-id",
+            "behavior_pythia-410m_69cedef1ecb74ee361b49c37",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "e6c582c4ba3e44b1a76627d8a29dcf74f7f900c6e26fba6aa425201d27d11caa"
+        },
+        {
+          "id": "behavior_pythia-410m_fe48af9f4b79d7200c3e168a",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/manifest.json",
+            "--manifest-sha256",
+            "db6bdaf2f631ffc1c97f5d9c0ae1d0521e67ee6556790eb472d74195c5fb66e1",
+            "--job-id",
+            "behavior_pythia-410m_fe48af9f4b79d7200c3e168a",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "944a177dfd481839c9977858393261dfc3ca6bb9a8cf775bef3dd205921156c8"
+        },
+        {
+          "id": "behavior_pythia-410m_0959c3ecd4bd8c13332765b4",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/manifest.json",
+            "--manifest-sha256",
+            "db6bdaf2f631ffc1c97f5d9c0ae1d0521e67ee6556790eb472d74195c5fb66e1",
+            "--job-id",
+            "behavior_pythia-410m_0959c3ecd4bd8c13332765b4",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "6969cf77e1c7faa457c717c205b2390251710fec60eaf6a9d478eac1daca472b"
+        },
+        {
+          "id": "behavior_pythia-410m_885a4599d58bde1763db173f",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/manifest.json",
+            "--manifest-sha256",
+            "db6bdaf2f631ffc1c97f5d9c0ae1d0521e67ee6556790eb472d74195c5fb66e1",
+            "--job-id",
+            "behavior_pythia-410m_885a4599d58bde1763db173f",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "e4ae5a1452de9eefe290300d452bdf6aed608e156ab83ff38be177d5f3b1aa52"
+        },
+        {
+          "id": "behavior_pythia-410m_3e24282276b3a798d99db0ad",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/manifest.json",
+            "--manifest-sha256",
+            "db6bdaf2f631ffc1c97f5d9c0ae1d0521e67ee6556790eb472d74195c5fb66e1",
+            "--job-id",
+            "behavior_pythia-410m_3e24282276b3a798d99db0ad",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "df31df7a932aa8fd3ab618351f9bd223517f58f6f89560106c00ff59a5aeb6e1"
+        },
+        {
+          "id": "behavior_pythia-410m_b3676c81d15099fc7e36345b",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/manifest.json",
+            "--manifest-sha256",
+            "db6bdaf2f631ffc1c97f5d9c0ae1d0521e67ee6556790eb472d74195c5fb66e1",
+            "--job-id",
+            "behavior_pythia-410m_b3676c81d15099fc7e36345b",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "b286990f6e109a1b7163810abefee12e4f479b50fa08c777b9f3a0d9a6dd30c7"
+        },
+        {
+          "id": "behavior_pythia-410m_9b450ff8864ada2878f9d095",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/manifest.json",
+            "--manifest-sha256",
+            "db6bdaf2f631ffc1c97f5d9c0ae1d0521e67ee6556790eb472d74195c5fb66e1",
+            "--job-id",
+            "behavior_pythia-410m_9b450ff8864ada2878f9d095",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "98669fe6d15911d5ab533b74584ee0c7403c0a385cb37820ba504cd9640ab45b"
+        },
+        {
+          "id": "behavior_pythia-410m_f03da3558af7ef42b61f23f9",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/manifest.json",
+            "--manifest-sha256",
+            "db6bdaf2f631ffc1c97f5d9c0ae1d0521e67ee6556790eb472d74195c5fb66e1",
+            "--job-id",
+            "behavior_pythia-410m_f03da3558af7ef42b61f23f9",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "265924ecfadde587fae6a8f73864f09e8bc8b982211c0a533229ac729e712b75"
+        },
+        {
+          "id": "behavior_pythia-410m_bef4e20d0d4f4f04d4148849",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/manifest.json",
+            "--manifest-sha256",
+            "db6bdaf2f631ffc1c97f5d9c0ae1d0521e67ee6556790eb472d74195c5fb66e1",
+            "--job-id",
+            "behavior_pythia-410m_bef4e20d0d4f4f04d4148849",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "8275481148c4380473ac10486ea21ef288b769dd7f0cea329e02e9d955c9c7be"
+        },
+        {
+          "id": "behavior_pythia-410m_effe3e18f485a987bac30c63",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/manifest.json",
+            "--manifest-sha256",
+            "db6bdaf2f631ffc1c97f5d9c0ae1d0521e67ee6556790eb472d74195c5fb66e1",
+            "--job-id",
+            "behavior_pythia-410m_effe3e18f485a987bac30c63",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "dec00897aa0688b39603df4416d3f7c7148d723b681f977aa9893d2111c7e4f4"
+        },
+        {
+          "id": "behavior_pythia-410m_637f6fcc8dae47efd1cc9894",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/manifest.json",
+            "--manifest-sha256",
+            "db6bdaf2f631ffc1c97f5d9c0ae1d0521e67ee6556790eb472d74195c5fb66e1",
+            "--job-id",
+            "behavior_pythia-410m_637f6fcc8dae47efd1cc9894",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "1edf526c9f79d5ca71e6dd4687070e65e21bfa45fa8fa765909fb9764fad1bdf"
+        },
+        {
+          "id": "behavior_pythia-410m_86429f827b7d596df41a52b5",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/manifest.json",
+            "--manifest-sha256",
+            "db6bdaf2f631ffc1c97f5d9c0ae1d0521e67ee6556790eb472d74195c5fb66e1",
+            "--job-id",
+            "behavior_pythia-410m_86429f827b7d596df41a52b5",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "afb4b463fb78dde16fa2d797572f92b4e89759526cbe311e1e36903f29a0cf30"
+        },
+        {
+          "id": "behavior_pythia-410m_a1d346dbf0cab5e9428c7124",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/manifest.json",
+            "--manifest-sha256",
+            "db6bdaf2f631ffc1c97f5d9c0ae1d0521e67ee6556790eb472d74195c5fb66e1",
+            "--job-id",
+            "behavior_pythia-410m_a1d346dbf0cab5e9428c7124",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "b40b77b7e335402b8aa391204646ceba393da98d61e66b12a3bae0c95ae16516"
+        },
+        {
+          "id": "behavior_pythia-410m_b832b763213cd59b29d0eab8",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/manifest.json",
+            "--manifest-sha256",
+            "db6bdaf2f631ffc1c97f5d9c0ae1d0521e67ee6556790eb472d74195c5fb66e1",
+            "--job-id",
+            "behavior_pythia-410m_b832b763213cd59b29d0eab8",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "69b4a908f6be1789446a4831cb51d9041bcdfb0c89a911c6b0c34545fb6219b9"
+        },
+        {
+          "id": "behavior_pythia-410m_c6db882141015432dac8ad76",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/manifest.json",
+            "--manifest-sha256",
+            "db6bdaf2f631ffc1c97f5d9c0ae1d0521e67ee6556790eb472d74195c5fb66e1",
+            "--job-id",
+            "behavior_pythia-410m_c6db882141015432dac8ad76",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "15a2a17ac533af5ce8b68b46138910a9266b44a74456a19ba87967b7b3cc1bff"
+        },
+        {
+          "id": "behavior_pythia-410m_dd43e069fc6ecc107932f9b5",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/manifest.json",
+            "--manifest-sha256",
+            "db6bdaf2f631ffc1c97f5d9c0ae1d0521e67ee6556790eb472d74195c5fb66e1",
+            "--job-id",
+            "behavior_pythia-410m_dd43e069fc6ecc107932f9b5",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "2e04d5a109bc4f77f9a2366c282c402e5ce3b246dec3fdaaf11975963093c4a5"
+        },
+        {
+          "id": "behavior_pythia-410m_4e66fe9d9c1a661bf1d677d0",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/manifest.json",
+            "--manifest-sha256",
+            "db6bdaf2f631ffc1c97f5d9c0ae1d0521e67ee6556790eb472d74195c5fb66e1",
+            "--job-id",
+            "behavior_pythia-410m_4e66fe9d9c1a661bf1d677d0",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "d32bbfe28f5a8dadf13f8cba3bccdb0b058c550b65927ada8baae21a01e46c1a"
+        },
+        {
+          "id": "behavior_pythia-410m_863ea309d05f5e1c88e1180e",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/manifest.json",
+            "--manifest-sha256",
+            "db6bdaf2f631ffc1c97f5d9c0ae1d0521e67ee6556790eb472d74195c5fb66e1",
+            "--job-id",
+            "behavior_pythia-410m_863ea309d05f5e1c88e1180e",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "e586a8cf16cda67feffcedcad6579e3eb00482d6f46df5e513a1ad1f40ca3cfd"
+        },
+        {
+          "id": "behavior_pythia-410m_519b7e2e0db0bb07093f5cbf",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/manifest.json",
+            "--manifest-sha256",
+            "db6bdaf2f631ffc1c97f5d9c0ae1d0521e67ee6556790eb472d74195c5fb66e1",
+            "--job-id",
+            "behavior_pythia-410m_519b7e2e0db0bb07093f5cbf",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "029643859d61de93a38285ed3c1038b10864944079767c156eeb51e41ae6ba7b"
+        },
+        {
+          "id": "behavior_pythia-410m_65d3b3db561b797b1be93fd8",
+          "argv": [
+            "/usr/bin/python",
+            "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+            "--manifest",
+            "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/manifest.json",
+            "--manifest-sha256",
+            "db6bdaf2f631ffc1c97f5d9c0ae1d0521e67ee6556790eb472d74195c5fb66e1",
+            "--job-id",
+            "behavior_pythia-410m_65d3b3db561b797b1be93fd8",
+            "--device",
+            "cuda:0"
+          ],
+          "definition_sha256": "0c65413555f9bef68a19b5200fa38378d0e4e64d4abdf9440ef07dd4b5b8be7e"
+        }
+      ]
+    }
+  ],
+  "future_not_READY_NLL_and_behavior": {
+    "NLL_expected_seconds_from_unchanged_builder": 180,
+    "behavior_expected_seconds_from_unchanged_builder": 600,
+    "not_actual_final_queues_until_READY": true,
+    "no_future_alias_discount": true
+  },
+  "protected_deadlines": {
+    "hard_deadline_utc": "2026-11-07T03:26:32Z",
+    "protected_delivery_tail_begins_utc": "2026-11-07T02:56:32Z",
+    "successor_stop_margin_seconds": 1910,
+    "successor_launch_margin_seconds": 2210,
+    "successor_TERM_window_begins_utc": "2026-11-07T02:54:42Z",
+    "strict_start_plus_expected_seconds_before_utc": "2026-11-07T02:49:42Z",
+    "strict_latest_start_by_expected_seconds": {
+      "180": "2026-11-07T02:46:42Z",
+      "300": "2026-11-07T02:44:42Z",
+      "600": "2026-11-07T02:39:42Z"
+    }
+  },
+  "current_handoff_not_ready": {
+    "ready_phase_count": 5,
+    "all_requested_phases_ready": false,
+    "all63_audit_file_exists": false,
+    "captured_immutable_cache_snapshot": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/digest_cache_snapshot_1793999431164002607.json",
+      "sha256": "a82a6af0d15ed9f75c3b6cf6c35ef3ecb96bc12530b68501d2ce32aec5410fc4"
+    },
+    "captured_cache_is_not_final_handoff_cache": true,
+    "required_later": [
+      "all607_completed_rc0_no_stop",
+      "all63audit_passed",
+      "all9READY",
+      "execution_time_latest_immutable_cache_and_current_stats",
+      "active_jobs_empty",
+      "ROOT_terminate_old_idle_master_then_confirm_all_PIDs_PGroups_exit_and_lock_release"
+    ]
+  },
+  "interpretation": [
+    "Training10pct is applied exactly once by original FIFO producer.",
+    "All low/central/high remaining workloads, rates, sensitivity factors and dispatch tails equal19:25.",
+    "Evaluation includes existing whole-slot/scorer/inputverification cost once; nested timers are not added.",
+    "300s handoff preflight is an unmeasured allowance, not full audit/statistics/publication guarantee.",
+    "Forward forecast is LPT proxy, not actual final successor FIFO/admission, success, or launch authorization.",
+    "Actual old master is idle-persistent; forecast completion does not terminate it.",
+    "No score/prediction parsing, GPU, source/queue/state/margin mutation, or payload read by this description."
+  ],
+  "source_proofs": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/evaluation_timing_budget_v6_refresh_2110.json",
+      "sha256": "3a771074ac991b3b4794f4922090c5a6f2c7d72b0c8ab165a143842970a8db29",
+      "bytes": 29810
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/evaluation_timing_budget_v6_refresh_1925.json",
+      "sha256": "2b505e58310d7cef34d70a7fe367b4845150d921754a913319fccccbbf09e333",
+      "bytes": 32230
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/describe_remaining_evaluation_budget_v6.py",
+      "sha256": "d02d430869f5c6f91f71496b2b77ea5e0388386ed432bdcec22240270c706a50",
+      "bytes": 19484
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/sources/master_queue.json",
+      "sha256": "37f00a8ac4af9d71aabb6b54f425e3fa222f596e25ce6e049015c0a66185e377",
+      "bytes": 588483
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/sources/scheduler_state.json",
+      "sha256": "36a4198ec354106493c9879691f5eb426eca75da57b3f012f96673a4cb14dfc5",
+      "bytes": 624118
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/sources/runtime.json",
+      "sha256": "ba22a473596724c4174fa10bebff45a39ed351bf9da53a1266dd613d838cc179",
+      "bytes": 66030
+    },
+    {
+      "path": "/proc/2988506/cmdline",
+      "sha256": "2a222ce417d4eb016ee3c0a1fb9ac4e2160ad9c3e6d427a2be189b6f052b1acb",
+      "bytes": 209
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/schedule_jobs.py",
+      "sha256": "c5c264b058ff655315ef896ccb0a89b471637c6612013a51999fc6f48b2d16d9",
+      "bytes": 8743
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/handoff_evaluation.py",
+      "sha256": "bbe5a14e16bde55362aa3a7edc044b35ed8a7e2d0966a8b40692513b6c3a748a",
+      "bytes": 21645
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/prepare_supplemental_evaluations.py",
+      "sha256": "dd641ed5d5d0ab750fb400e1fc2add313b4ea72a38d01aa4a7f3272fc8fee26d",
+      "bytes": 31927
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_C_s33_w0p05.json",
+      "sha256": "b548bb6dd1591309113c2d2c9433e98a8fff2380877ca636ab34285158c3e1e1",
+      "bytes": 1847
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/ready_index.json",
+      "sha256": "b4f4d12bdd1b70cdeeb75bfc4077f86e0433453815fdc1dedd5750fb7a1795ca",
+      "bytes": 31949
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/cache_progress.json",
+      "sha256": "2928a23e59c501e80cb96e3de3247429891e0577aa39ce9e93a0bbbf3da5c670",
+      "bytes": 997
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/digest_cache_snapshot_1793999431164002607.json",
+      "sha256": "a82a6af0d15ed9f75c3b6cf6c35ef3ecb96bc12530b68501d2ce32aec5410fc4",
+      "bytes": 455220
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/configs/primary_evaluation_v2_execution_matched_behavior_queue.json",
+      "sha256": "393f3df2f0213e2e4e4d2387109b750825c797b909f4b05d16cd3cb739f6aaa9",
+      "bytes": 101444
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/queue.json",
+      "sha256": "cc9226e32515d08dc9ff12055b66e620d98fa4b544d51adde7eb1c386cdd0be2",
+      "bytes": 25473
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/queue.json",
+      "sha256": "d2b733c9d91e8a1102cb5a33908058a8567db010ffe1915fe6f210d50a9e920b",
+      "bytes": 33579
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/review_refresh_metadata.py",
+      "sha256": "06ac7bb0d01b18e30aa2f1d502e05573dd07cb7aae9701593ea85727c83a2f18",
+      "bytes": 11621
+    }
+  ]
+}

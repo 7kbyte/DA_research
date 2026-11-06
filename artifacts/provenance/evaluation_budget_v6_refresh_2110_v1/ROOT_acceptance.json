@@ -1,0 +1,84 @@
+{
+  "status": "accepted_read_only_forecast_refresh_not_handoff_or_execution_authority",
+  "accepted_by": "root",
+  "accepted_at_utc": "2026-11-06T21:20:31.996645+00:00",
+  "completion": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/COMPLETE.json",
+    "sha256": "5831ee9d57cdc3cea426b0931854ee4734b506051ebb799a5d7a69f01b8de87d",
+    "bytes": 18508
+  },
+  "forecast": {
+    "path": "/tmp/grad-research-20261106/worktree/results/evaluation_timing_budget_v6_refresh_2110.json",
+    "sha256": "3a771074ac991b3b4794f4922090c5a6f2c7d72b0c8ab165a143842970a8db29",
+    "bytes": 29810
+  },
+  "independent_review": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_independent_review_v1/COMPLETE.json",
+    "sha256": "d702dd00a42b21eb337f2365ef4da16542a42d62099f0a02f47b6e775290576a",
+    "bytes": 2643
+  },
+  "independent_proofs": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_independent_review_v1/review.json",
+      "sha256": "820390c44a9b1938a595050e829d8ced3a030c68a11de7ae397d240dcdf03323",
+      "bytes": 16987
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_independent_review_v1/whole_child_timing.json",
+      "sha256": "fa40ad3f26406bb0e5bef9f124d2a368720a361698291210b07ee6a0fa1dfd2e",
+      "bytes": 626
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_independent_review_v1/executed_inline_check.txt",
+      "sha256": "60a4fb0885d026a8309c6027ea4f9313b0b39d872103525e07d52298c16b5874",
+      "bytes": 10268
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_independent_review_v1/stdout.txt",
+      "sha256": "3fe197fe566c183895eebfbfa7cf2d7143e91be6d7413cf2a72ce7499eb59d5e",
+      "bytes": 1332
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_independent_review_v1/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  ],
+  "ROOT_previous_fresh_bound_small_proof_pass": {
+    "proof_checks": 47,
+    "returned_bytes": 9422287,
+    "score_output_or_model_payload_reads": 0
+  },
+  "unchanged_method_and_workload_rechecked": true,
+  "calendar_end_and_protected_margin_arithmetic_rechecked": true,
+  "forecast_training_finish_utc": "2026-11-06T22:22:42.375809+00:00",
+  "high_evaluation_finish_utc": "2026-11-07T01:05:35.332414+00:00",
+  "high_protected_margin_minutes": 110.94445976666665,
+  "current_handoff_not_ready": {
+    "ready_phase_count": 5,
+    "all_requested_phases_ready": false,
+    "all63_audit_file_exists": false,
+    "captured_immutable_cache_snapshot": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/digest_cache_snapshot_1793999431164002607.json",
+      "sha256": "a82a6af0d15ed9f75c3b6cf6c35ef3ecb96bc12530b68501d2ce32aec5410fc4"
+    },
+    "captured_cache_is_not_final_handoff_cache": true,
+    "required_later": [
+      "all607_completed_rc0_no_stop",
+      "all63audit_passed",
+      "all9READY",
+      "execution_time_latest_immutable_cache_and_current_stats",
+      "active_jobs_empty",
+      "ROOT_terminate_old_idle_master_then_confirm_all_PIDs_PGroups_exit_and_lock_release"
+    ]
+  },
+  "producer_opaque_IO_scope": {
+    "authorized_existing_integrity_hashes_performed": true,
+    "exact_actual_read_count": null,
+    "exact_actual_bytes": null,
+    "metadata_enumeration_is_not_actual_IO": true,
+    "score_semantics_read": false
+  },
+  "ROOT_whole_manual_review_timing_seconds": null,
+  "new_execution_or_score_authority_granted": false
+}
