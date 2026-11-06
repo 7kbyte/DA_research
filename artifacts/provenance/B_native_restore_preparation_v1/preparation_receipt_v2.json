@@ -1,0 +1,62 @@
+{
+  "schema_version": 2,
+  "status": "prepared_only_after_shared_native_restore_lock_fix",
+  "created_at_utc": "2026-11-06T18:46:30.720643+00:00",
+  "ROOT_authorized": false,
+  "files": {
+    "run_B_restore.py": {
+      "bytes": 11272,
+      "sha256": "6d7245e78e225c3879eaf931b85e7be073b4ba9777d7263b7e0e1c39b1630a02"
+    },
+    "bound_plan_v2.json": {
+      "bytes": 16311,
+      "sha256": "61c19ee07d69936da329846fcb8aa8bd67ea8d8fe1ff8cd6b3084c032c3fa3c7"
+    },
+    "ROOT_execution_authority_v2_FALSE_TEMPLATE.json": {
+      "bytes": 922,
+      "sha256": "c6cbf2c88b5d4f4daa2749f6a9b6606cac94133c84c80afa83ca031858c51d53"
+    },
+    "README.md": {
+      "bytes": 7042,
+      "sha256": "b7d139c3059116552d2bbf602eecb183411045268e8990a77b51a6c31d3f21ef"
+    },
+    "test_B_sequential_lock.py": {
+      "bytes": 1581,
+      "sha256": "4cf5307c2d429362066cf70ac8a30121dffc8284521ff164aeb4f38a734a973f"
+    },
+    "lock_regression_tests/whole_child_timing.json": {
+      "bytes": 419,
+      "sha256": "7ed746d253528e8b7cdd9cab3c404c66e4a1d96bb16cc3e385102ea257bc6574"
+    },
+    "lock_regression_tests/stdout.log": {
+      "bytes": 128,
+      "sha256": "25ca30af31e1f70aa90ec772aca4f90132c4e50890b30a5d29996d3708e30d3b"
+    },
+    "preparation_receipt.json": {
+      "bytes": 4258,
+      "sha256": "f13b3c054ea14959df2e26ae98df116adf90404df3a3d8a0204fd3dbd893f50d"
+    },
+    "delivery_receipt.json": {
+      "bytes": 3013,
+      "sha256": "6e3b9763e403c5d8fbe400194b27518bec14a4e98978e5a13e7b2fe33072151f"
+    }
+  },
+  "plan": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_preparation_v1/bound_plan_v2.json",
+    "sha256": "61c19ee07d69936da329846fcb8aa8bd67ea8d8fe1ff8cd6b3084c032c3fa3c7"
+  },
+  "old_bytes_retained": "retained_before_shared_sequential_lock",
+  "new_qa_or_actual_directory_created": false,
+  "shared_nonblocking_lock_acquired_before_QA_creation_and_held_through_body": true,
+  "sequential_lock_path": "/tmp/grad-research-20261106/reproduction_qa/.native_Cfinal_restore.lock",
+  "testing": {
+    "old_schema_pure_guards_passed": 7,
+    "new_flock_cases_passed": 2,
+    "new_test_whole_wall_seconds": 0.3846968971192837
+  },
+  "timer_boundary": "ROOT future external Popen actual_parent_v1 is full spawn-to-process-exit parent. Internal main-entry timer excludes Python startup/top-level imports/final serialization; all internal/stage metrics nested, not summed.",
+  "source_payload_bytes_read": 0,
+  "original_C_native_helpers_changed": false,
+  "actual_restore_executed": false,
+  "actual_authority_is_true": false
+}

@@ -1,0 +1,71 @@
+{
+  "status": "prepared_for_ROOT_review_only_no_actual_restore",
+  "created_at_utc": "2026-11-06T18:37:33.689906+00:00",
+  "ROOT_authorized": false,
+  "files": {
+    "README.md": {
+      "bytes": 6152,
+      "sha256": "3e3bb51e2d851d76aa664e1422c56129d6d36468de4bc23b6b30803ca4b1aea3"
+    },
+    "ROOT_execution_authority_FALSE_TEMPLATE.json": {
+      "bytes": 919,
+      "sha256": "76e0bf79c51c1ebda8e73bded24442480c17913ebbe3534cda6bd64fc6aaa86d"
+    },
+    "bound_plan.json": {
+      "bytes": 16207,
+      "sha256": "903baac7f57172387bbda7d8f31785d3ac5cd29fe52739b5c856e12d6e74663b"
+    },
+    "preparation_receipt.json": {
+      "bytes": 4258,
+      "sha256": "f13b3c054ea14959df2e26ae98df116adf90404df3a3d8a0204fd3dbd893f50d"
+    },
+    "run_B_restore.py": {
+      "bytes": 10899,
+      "sha256": "e3aa2b08e5361ab7fee92ef7a2f20042df80c1dd57f4d64a58e7285127f37d41"
+    },
+    "schema_guard_checks.json": {
+      "bytes": 797,
+      "sha256": "e02c32ce5838e3cf9bda825a884c131dc8cba0af86a1c2428ef171dc02a1da71"
+    },
+    "small_evidence/ROOT_acceptance.json": {
+      "bytes": 5601,
+      "sha256": "653cb92aa198420d45dbda82778fa869dc2f97bf4e3c18e9fc456f54547ed572"
+    },
+    "small_evidence/adjacent_receipt.json": {
+      "bytes": 9908,
+      "sha256": "e5c8a138a9cb5d082f697a02b92bfb0295c6bee881f4d83ab11deb652379c990"
+    },
+    "small_evidence/completion.json": {
+      "bytes": 909,
+      "sha256": "e49535b7fa156ca270d72d42559fedd73f3f330bb96b8b0cf56e357de452096c"
+    },
+    "small_evidence/manifest.json": {
+      "bytes": 561665,
+      "sha256": "25ee332b1e42b66b84db4463ca6d3b615a8172d903f3d1309ed80eab71e8462c"
+    },
+    "small_evidence/metadata_review.json": {
+      "bytes": 230034,
+      "sha256": "9860340cbd4ac31eadb273afeb2407d5da531b133e819d8c8194388cf62fb751"
+    },
+    "small_evidence/publication.json": {
+      "bytes": 3016,
+      "sha256": "46ef4b8e8f2a60812deffee8c1effb8c6ac89f9f0d0b2a3ebc5e29450b3a8627"
+    },
+    "small_evidence/scope.json": {
+      "bytes": 6463686,
+      "sha256": "7adb8f7f0461fd929995dd370ff2a59b2abc5c0d7750a39e745d21d5546d9de3"
+    }
+  },
+  "exact_selected_members": 12,
+  "QA_directory": "/tmp/grad-research-20261106/reproduction_qa/B_native_B4_tr11_gen11_draw1001_k20_final_v1",
+  "actual_evidence_directory": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_actual_v1",
+  "current_directories_absent": true,
+  "schema_guard_checks": {
+    "path": "schema_guard_checks.json",
+    "sha256": "e02c32ce5838e3cf9bda825a884c131dc8cba0af86a1c2428ef171dc02a1da71",
+    "passed": 7
+  },
+  "imported_native_checker_and_safe_extraction_and_PG_timer_are_unchanged": true,
+  "source_byte_counter_clarification": "preparation_receipt.timing.small_metadata_and_code_bytes_read counts the primary metadata loop and archived-tool source reads only; helper source hash/import/AST reads are additional bounded small reads, not included in that counter. No GB payload was read.",
+  "no_TAR_headers_ZIP_native_base_or_original_CP_opened": true
+}

@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "status": "prepared_metadata_stat_only_no_restore_executed",
+  "created_at_utc": "2026-11-06T18:35:16.365723+00:00",
+  "ROOT_authorized": false,
+  "plan": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_preparation_v1/bound_plan.json",
+    "sha256": "903baac7f57172387bbda7d8f31785d3ac5cd29fe52739b5c856e12d6e74663b"
+  },
+  "runner": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_preparation_v1/run_B_restore.py",
+    "sha256": "e3aa2b08e5361ab7fee92ef7a2f20042df80c1dd57f4d64a58e7285127f37d41"
+  },
+  "checker": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/check_restored.py",
+    "sha256": "6b7df26abef4ce0bd09dabbd7878a5a9585c8681d3cb97115f912dd542d3fa8d"
+  },
+  "helper_pins": {
+    "restore_native_final.py": "bfc748c776f18dff86c378c5c55ca72dbc63995cfc40ddfb96eb919486610db1",
+    "run_whole_child.py": "2a2d09daac8504b099a5cd9682dff722bbad0519922ba39beedf4e96e9498266",
+    "check_restored.py": "6b7df26abef4ce0bd09dabbd7878a5a9585c8681d3cb97115f912dd542d3fa8d"
+  },
+  "archive_current_stat": {
+    "device": 106,
+    "inode": 411787337,
+    "bytes": 69578864640,
+    "uid": 11471,
+    "gid": 11471,
+    "mode": "0o600",
+    "mtime_ns": 1793986149949270332,
+    "ctime_ns": 1793986149949270332
+  },
+  "source_metadata_evidence": {
+    "publication": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_preparation_v1/small_evidence/publication.json",
+      "sha256": "46ef4b8e8f2a60812deffee8c1effb8c6ac89f9f0d0b2a3ebc5e29450b3a8627"
+    },
+    "ROOT_acceptance": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_preparation_v1/small_evidence/ROOT_acceptance.json",
+      "sha256": "653cb92aa198420d45dbda82778fa869dc2f97bf4e3c18e9fc456f54547ed572"
+    },
+    "metadata_review": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_preparation_v1/small_evidence/metadata_review.json",
+      "sha256": "9860340cbd4ac31eadb273afeb2407d5da531b133e819d8c8194388cf62fb751"
+    },
+    "completion": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_preparation_v1/small_evidence/completion.json",
+      "sha256": "e49535b7fa156ca270d72d42559fedd73f3f330bb96b8b0cf56e357de452096c"
+    },
+    "manifest": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_preparation_v1/small_evidence/manifest.json",
+      "sha256": "25ee332b1e42b66b84db4463ca6d3b615a8172d903f3d1309ed80eab71e8462c"
+    },
+    "scope": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_preparation_v1/small_evidence/scope.json",
+      "sha256": "7adb8f7f0461fd929995dd370ff2a59b2abc5c0d7750a39e745d21d5546d9de3"
+    },
+    "adjacent_receipt": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_preparation_v1/small_evidence/adjacent_receipt.json",
+      "sha256": "e5c8a138a9cb5d082f697a02b92bfb0295c6bee881f4d83ab11deb652379c990"
+    }
+  },
+  "selected_member_count": 12,
+  "selected_member_bytes": 2058150693,
+  "scratch_policy_bytes": 8589934592,
+  "memory_admission_proxy_bytes": 8589934592,
+  "max_execution_seconds": 600,
+  "admission_margin_seconds": 300,
+  "current_QA_directory_exists": false,
+  "actual_evidence_directory_exists": false,
+  "no_TAR_ZIP_native_base_or_original_CP_opened": true,
+  "no_new_encoding_or_decode_or_fingerprint_executed": true,
+  "schema_check": {
+    "reused_checker_plan_keys": [
+      "model",
+      "model_raw_bytes",
+      "run_id",
+      "selected",
+      "tensor_count"
+    ],
+    "all_present": true,
+    "checker_output": "restored/B4_seed11_final.pt",
+    "training_seed11_selection_draw1001_not_same_uncertainty_unit": true
+  },
+  "timing": {
+    "scope": "Metadata/stat plan assembly and source/helper AST checks only; authoring excluded; no child process",
+    "wall_seconds": 0.11657911539077759,
+    "process_cpu_seconds": 0.073548285,
+    "self_user_seconds": 0.05734299999999999,
+    "self_sys_seconds": 0.016051,
+    "small_metadata_and_code_bytes_read": 7292233
+  }
+}

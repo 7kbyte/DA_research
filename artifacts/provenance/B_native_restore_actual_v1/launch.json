@@ -1,0 +1,37 @@
+{
+  "argv": [
+    "/usr/bin/python",
+    "-I",
+    "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_preparation_v1/run_B_restore.py",
+    "_body",
+    "--plan",
+    "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_preparation_v1/bound_plan_v2.json",
+    "--plan-sha256",
+    "61c19ee07d69936da329846fcb8aa8bd67ea8d8fe1ff8cd6b3084c032c3fa3c7",
+    "--authority",
+    "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_actual_parent_v1/ROOT_execution_authority.json",
+    "--authority-sha256",
+    "93c7456bbcfd01cc0d86000e459a9a37604c03944281c398372ffae6aa0ee009"
+  ],
+  "admission": {
+    "cap_seconds": 600,
+    "TERM_grace_seconds": 5.0,
+    "KILL_grace_seconds": 5.0,
+    "teardown_overhead_allowance_seconds": 2.0,
+    "teardown_budget_seconds": 12.0,
+    "admission_margin_seconds": 300,
+    "required_remaining_seconds": 900,
+    "deadline_utc": "2026-11-07T02:56:32+00:00"
+  },
+  "runner": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_preparation_v1/run_B_restore.py",
+    "sha256": "6d7245e78e225c3879eaf931b85e7be073b4ba9777d7263b7e0e1c39b1630a02"
+  },
+  "plan_sha256": "61c19ee07d69936da329846fcb8aa8bd67ea8d8fe1ff8cd6b3084c032c3fa3c7",
+  "checker": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/check_restored.py",
+    "sha256": "6b7df26abef4ce0bd09dabbd7878a5a9585c8681d3cb97115f912dd542d3fa8d"
+  },
+  "env_policy": "isolated -I, no PYTHONPATH, CVD empty, CPU2, offline",
+  "publication_performed": false
+}

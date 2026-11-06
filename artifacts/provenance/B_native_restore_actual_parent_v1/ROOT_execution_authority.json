@@ -1,0 +1,55 @@
+{
+  "authorized": true,
+  "authorized_by": "root",
+  "scope": "one_fixed_B_native_final_CPU_recovery",
+  "run_id": "bankvar_B4_tr11_gen11_draw1001_k20_b0p05_w0p05",
+  "model": "pythia-410m",
+  "sequential_only": true,
+  "plan": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_preparation_v1/bound_plan_v2.json",
+    "sha256": "61c19ee07d69936da329846fcb8aa8bd67ea8d8fe1ff8cd6b3084c032c3fa3c7"
+  },
+  "runner": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_preparation_v1/run_B_restore.py",
+    "sha256": "6d7245e78e225c3879eaf931b85e7be073b4ba9777d7263b7e0e1c39b1630a02"
+  },
+  "checker": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/check_restored.py",
+    "sha256": "6b7df26abef4ce0bd09dabbd7878a5a9585c8681d3cb97115f912dd542d3fa8d"
+  },
+  "not_ROOT_authority": false,
+  "authorized_at_utc": "2026-11-06T18:49:58.757264+00:00",
+  "independent_preparation_review": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_independent_review_v1/COMPLETE.json",
+    "sha256": "294c812ba4661f325121cf3655ba1c098cc7cdb11d691fcfd0ed4c32488236e8"
+  },
+  "ROOT_current_resource_precheck": {
+    "disk_free_bytes": 23561045295104,
+    "memory_max_bytes": 1030792151040,
+    "memory_current_bytes": 1030790983680,
+    "anon_bytes": 13547761664,
+    "shmem_bytes": 25885483008,
+    "unevictable_bytes": 0,
+    "file_bytes": 1000157245440,
+    "active_file_bytes": 958512685056,
+    "inactive_file_bytes": 15759024128,
+    "dirty_bytes": 1143377920,
+    "writeback_bytes": 0,
+    "conservative_clean_inactive_credit_bytes": 14615646208,
+    "conservative_available_bytes": 14616813568,
+    "memory_events": {
+      "low": 0,
+      "high": 0,
+      "max": 178572,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0
+    },
+    "caveat": "Reclaim proxy and admission check, not a reservation or peak-RSS guarantee"
+  },
+  "ROOT_small_sources_fresh_SHA_verified": 46,
+  "ROOT_read_new_runner_and_reused_full_checker": true,
+  "original_large_payload_rehashed_in_precheck": false,
+  "external_whole_process_timing_directory": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_actual_parent_v1",
+  "budget_note": "600s runner process-group cap plus bounded cleanup within 300s margin; no GPU and no new scientific evaluation"
+}

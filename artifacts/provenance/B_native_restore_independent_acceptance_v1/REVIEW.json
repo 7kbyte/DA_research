@@ -1,0 +1,125 @@
+{
+  "status": "passed_independent_metadata_review_of_actual_fixed_B_restore",
+  "observed_at_utc": "2026-11-06T18:53:55.892939+00:00",
+  "ROOT_acceptance": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_actual_parent_v1/ROOT_acceptance.json",
+    "sha256": "0194effe57624ce7ffac21396c57383cce5cbc067e93451738f755325eb25071",
+    "bytes": 6942
+  },
+  "authority": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_actual_parent_v1/ROOT_execution_authority.json",
+    "sha256": "93c7456bbcfd01cc0d86000e459a9a37604c03944281c398372ffae6aa0ee009",
+    "bytes": 2435
+  },
+  "plan": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_preparation_v1/bound_plan_v2.json",
+    "sha256": "61c19ee07d69936da329846fcb8aa8bd67ea8d8fe1ff8cd6b3084c032c3fa3c7",
+    "bytes": 16311
+  },
+  "source_manifest": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_independent_acceptance_v1/source_manifest.json",
+    "sha256": "0b6755387f757fd808f9a5affa6410669ea047c1cc502c89321942f60230d68a",
+    "bytes": 10806
+  },
+  "selected_member_count": 12,
+  "all_reported_fresh_member_SHA_and_size_match_plan": true,
+  "native_base_files": 6,
+  "fixed_sample": {
+    "run_id": "bankvar_B4_tr11_gen11_draw1001_k20_b0p05_w0p05",
+    "group": "B4",
+    "training_seed": 11,
+    "generation_seed": 11,
+    "selection_seed": 1001,
+    "bank_chunks": 20,
+    "kind": "final",
+    "actual_exposure": {
+      "checkpoint_step": 306,
+      "target_prediction_tokens": 10000000,
+      "replay_prediction_tokens": 500000,
+      "full_training_target_prediction_tokens": 10000000,
+      "full_training_replay_prediction_tokens": 500000
+    }
+  },
+  "model_fingerprint": {
+    "sha256_model_state": "05724eda110e91eb76c8f6d45b54386b374e486662207a266166a0fde0ffb790",
+    "state_elements": 405334016
+  },
+  "tensor_count": 292,
+  "new_serialized_model_sha256": "e3b026cfe90176462f56f734fb45f30ee6777f2f7bbb192a756958f66c60932d",
+  "full_parent_wall_seconds": 36.18444097042084,
+  "full_parent_user_seconds": 22.3447,
+  "full_parent_sys_seconds": 7.730223,
+  "full_parent_peak_RSS_bytes": 2881683456,
+  "all_inner_PG_body_stages_nested_not_additive": true,
+  "PG_current_exists": false,
+  "PG_cleanup_receipt": {
+    "status": "group_absent_no_cleanup_needed",
+    "whole_group_absence_confirmed": true,
+    "pgid": 3356096,
+    "subreaper_enabled": true,
+    "signals": [],
+    "snapshots": [
+      {
+        "since_cleanup_start_seconds": 3.22684645652771e-05,
+        "killpg_0_exists": false,
+        "members": []
+      }
+    ],
+    "adopted_zombies_reaped": [],
+    "final_observation": {
+      "since_cleanup_start_seconds": 3.22684645652771e-05,
+      "killpg_0_exists": false,
+      "members": []
+    },
+    "cleanup_wall_seconds": 3.5468488931655884e-05,
+    "boundary": "SIGKILL cannot guarantee immediate removal of uninterruptible D-state tasks; unresolved groups are explicit failures, never success"
+  },
+  "shared_lock_current_proc_locks_matches": [],
+  "lock_observation_is_not_a_lease": true,
+  "TAR_current_stat": {
+    "device": 106,
+    "inode": 411787337,
+    "bytes": 69578864640,
+    "allocated_bytes": 69578866688,
+    "uid": 11471,
+    "gid": 11471,
+    "mode": "0o600",
+    "mtime_ns": 1793986149949270332,
+    "ctime_ns": 1793986149949270332
+  },
+  "new_restored_model_current_stat": {
+    "device": 139,
+    "inode": 60307777940,
+    "bytes": 1621450850,
+    "allocated_bytes": 1621454848,
+    "uid": 0,
+    "gid": 0,
+    "mode": "0o644",
+    "mtime_ns": 1793991029022748796,
+    "ctime_ns": 1793991029022748796
+  },
+  "memory_events_current": {
+    "low": 0,
+    "high": 0,
+    "max": 178749,
+    "oom": 0,
+    "oom_kill": 0,
+    "oom_group_kill": 0
+  },
+  "memory_event_delta_since_body_admission": {
+    "low": 0,
+    "high": 0,
+    "max": 177,
+    "oom": 0,
+    "oom_kill": 0,
+    "oom_group_kill": 0
+  },
+  "memory_pressure_cannot_be_attributed_to_QA": true,
+  "independent_reviewer_payload_bytes_read": 0,
+  "independent_reviewer_payload_hashes_recomputed": 0,
+  "independent_reviewer_did_not_run_decode_or_tensor_fingerprint": true,
+  "review_checks_existing_fresh_recovery_evidence_not_fresh_original_CP_uint8": true,
+  "manual_review_parent_wall_seconds": null,
+  "manual_review_parent_timing_status": "unknown; automated review child timer is separate",
+  "claim": "One preselected actual B final model recovered using durable native archive. No all60 restore, original CP recompare, Adam resume, GPU training or scientific score inference."
+}

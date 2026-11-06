@@ -1,0 +1,53 @@
+{
+  "returncode": 0,
+  "direct_child_returncode": 0,
+  "timed_out": false,
+  "inclusive_execution_cap_seconds": 600,
+  "execution_plus_cleanup_budget_seconds": 610.0,
+  "process_group_cleanup": {
+    "status": "group_absent_no_cleanup_needed",
+    "whole_group_absence_confirmed": true,
+    "pgid": 3356096,
+    "subreaper_enabled": true,
+    "signals": [],
+    "snapshots": [
+      {
+        "since_cleanup_start_seconds": 3.22684645652771e-05,
+        "killpg_0_exists": false,
+        "members": []
+      }
+    ],
+    "adopted_zombies_reaped": [],
+    "final_observation": {
+      "since_cleanup_start_seconds": 3.22684645652771e-05,
+      "killpg_0_exists": false,
+      "members": []
+    },
+    "cleanup_wall_seconds": 3.5468488931655884e-05,
+    "boundary": "SIGKILL cannot guarantee immediate removal of uninterruptible D-state tasks; unresolved groups are explicit failures, never success"
+  },
+  "whole_child_process_wall_seconds": 36.06286020949483,
+  "whole_child_user_cpu_seconds": 22.254699,
+  "whole_child_sys_cpu_seconds": 7.692013,
+  "child_peak_RSS_bytes": 2881683456,
+  "accounting": "Inclusive child spawn-to-exit plus full process-group cleanup/reaping. Descendant CPU is attributed when reaped; failed unresolved groups may have incomplete CPU totals. Body/stages are nested.",
+  "outer_wrapper_parent_wall_seconds": 36.1385917365551,
+  "outer_wrapper_self_user_seconds": 0.0558,
+  "outer_wrapper_self_sys_seconds": 0.027318999999999996,
+  "outer_wrapper_children_user_seconds": 22.254699,
+  "outer_wrapper_children_sys_seconds": 7.692013,
+  "outer_wrapper_accounting": "Internal main-entry region before CLI/preflight/helper imports through child/group cleanup; excludes Python startup, top-level stdlib imports and final receipt serialization. Nested in the future ROOT external Popen whole-process timer; do not add the two.",
+  "admission": {
+    "cap_seconds": 600,
+    "TERM_grace_seconds": 5.0,
+    "KILL_grace_seconds": 5.0,
+    "teardown_overhead_allowance_seconds": 2.0,
+    "teardown_budget_seconds": 12.0,
+    "admission_margin_seconds": 300,
+    "required_remaining_seconds": 900,
+    "deadline_utc": "2026-11-07T02:56:32+00:00"
+  },
+  "GPU_used": false,
+  "new_encoding": false,
+  "publication_performed": false
+}
