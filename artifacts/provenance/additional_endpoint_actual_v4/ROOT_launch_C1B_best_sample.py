@@ -1,0 +1,29 @@
+import pathlib,json,hashlib,datetime as dt,os,stat,fcntl,subprocess,sys,shutil
+R=pathlib.Path.cwd().resolve();O=R/'artifacts/provenance/additional_endpoint_actual_v4';sys.path.insert(0,str(R/'scripts'))
+from schedule_jobs import digest_job
+P=R/'artifacts/provenance/C1B_best_metadata_precheck_actual_v1/metadata_precheck.json';raw=P.read_bytes();assert hashlib.sha256(raw).hexdigest()=='cbe6bef1de6916d6f01180967b76998e0b7bd431551bc8826de6fec4cd6e5f3d';p=json.loads(raw)
+checks=[]
+for proof in p['source_proofs']:
+ q=pathlib.Path(proof['path']);assert q.stat().st_size<16*2**20 and '/checkpoints/'not in str(q)and '/models/'not in str(q);b=q.read_bytes();assert hashlib.sha256(b).hexdigest()==proof['sha256'],str(q);checks.append(proof)
+s=json.loads((R/'logs/supplemental_job_state.json').read_text());q={j['id']:j for j in json.loads((R/'configs/supplemental_v1_queue.json').read_text())};selected={}
+for row in p['actual24training']:
+ n=row['run_id'];v=s['jobs'][n];assert v['status']=='completed'and type(v['returncode'])is int and v['returncode']==0 and not v.get('missing_outputs')and not any('stop'in k.lower()for k in v)and v['argv']==q[n]['argv']and v['definition_sha256']==row['definition_sha256']==digest_job(q[n]);selected[n]=v
+assert len(selected)==24 and len(p['all48_CP_identity_current5stat'])==48
+for x in p['all48_CP_identity_current5stat']:
+ st=pathlib.Path(x['path']).stat();actual={'device':st.st_dev,'inode':st.st_ino,'bytes':st.st_size,'mtime_ns':st.st_mtime_ns,'ctime_ns':st.st_ctime_ns};assert actual==x['current_stat5']
+ rp=x['historical_full_read_receipt'];b=pathlib.Path(rp['path']).read_bytes();assert hashlib.sha256(b).hexdigest()==rp['sha256'];v=json.loads(b);assert v['sha256']==x['expected_sha256'] and v['complete_to_eof']is True and v['read_bytes']==st.st_size
+assert len(p['proof_pairs'])==6 and all(x['bitwise_model_state_equal']is True for x in p['proof_pairs'])
+for pid in p['predecessor']['checked_PIDs_absent']:assert not pathlib.Path('/proc',str(pid)).exists()
+reserve=pathlib.Path(p['reserve']['path']);st=reserve.stat();r=p['reserve']['stat'];assert (st.st_dev,st.st_ino,st.st_size,st.st_blocks*512,st.st_uid,st.st_gid,stat.S_IMODE(st.st_mode),st.st_nlink)==(106,375195308,80530636800,80530636800,11471,11471,0o600,1)
+with pathlib.Path(p['slot_lock_observation']['path']).open('r')as f:fcntl.flock(f,fcntl.LOCK_EX|fcntl.LOCK_NB);fcntl.flock(f,fcntl.LOCK_UN)
+c=pathlib.Path('/sys/fs/cgroup');ms={k:int(v)for k,v in(x.split()for x in(c/'memory.stat').read_text().splitlines())};cur=int((c/'memory.current').read_text());mx=int((c/'memory.max').read_text());clean=max(0,min(ms['inactive_file'],ms['file']-ms['shmem'])-ms['file_dirty']-ms['file_writeback']-ms['unevictable']);available=max(0,mx-cur)+clean;events={k:int(v)for k,v in(x.split()for x in(c/'memory.events').read_text().splitlines())};assert available>=24*2**30 and events['oom']==events['oom_kill']==0
+now=dt.datetime.now(dt.timezone.utc);assert now<dt.datetime.fromisoformat('2026-11-07T02:00:00+00:00') and now+dt.timedelta(seconds=540)<=dt.datetime.fromisoformat('2026-11-07T02:56:32+00:00')
+assert not(O/'C1B_best_sample').exists()
+a={'status':'authorized_first_sample_only','authorized':True,'authorized_by':'ROOT','created_at_utc':now.isoformat(),'package':'C1B_best','slot':'slot1','max_new_weights':1,'first_sample':p['fixed_sample'],'selection':'Frozen(group==D,seed,group)order first B0seed11 best','metadata_precheck':{'path':str(P),'sha256':hashlib.sha256(raw).hexdigest()},'metadata_SHA_checks':checks,'selected_completed_records':selected,'CP_identity_receipts_current_stat':p['all48_CP_identity_current5stat'],'proof_pairs':p['proof_pairs'],'source_code':p['source_code'],'predecessor':p['predecessor'],'reserve':p['reserve'],'resource_observation':{'cgroup_limit':mx,'current':cur,'memory_stat':ms,'conservative_clean_inactive_credit':clean,'conservative_available':available,'required_sample_memory_allowance':24*2**30,'allowance_origin':'ROOT independent actual firstsample admission judgment, not original scope or peak guarantee','memory_events':events,'scratch_free':shutil.disk_usage('/tmp/grad-research-20261106').free},'CPU_threads':2,'CUDA_VISIBLE_DEVICES':'','maximum_extra_encoding_workers':2,'maximum_encoding_workers_including_original_Cfinal':3,'publication_authorized':False,'batch_authorized':False,'source_CP_base_TAR_ZIP_payload_bytes_read_in_ROOT_precheck':0,'sample_allowance_seconds':420,'finish_margin_seconds':120,'allowance_is_hard_timeout':False,'phase_audit_boundary':'Original exporter startup performs fresh nativebase/data checks and its fullphasegate before encoding; not metadata-only. Whole actual child includes startup and endpoint.'}
+def write(path,x):
+ with path.open('x')as f:json.dump(x,f,ensure_ascii=False,indent=2);f.write('\n');f.flush();os.fsync(f.fileno())
+ap=O/'ROOT_C1B_best_sample_authority.json';write(ap,a)
+spec=json.loads((O/'C2p8B_best_sample_spec.json').read_text());spec['argv'][spec['argv'].index('--slot')+1]='slot1';spec['argv'][spec['argv'].index('--package')+1]='C1B_best';spec['logs']=str(O/'C1B_best_sample');spec['authority']={'path':str(ap),'sha256':hashlib.sha256(ap.read_bytes()).hexdigest()};spec['package']='C1B_best';spec['slot']='slot1';sp=O/'C1B_best_sample_spec.json';write(sp,spec)
+with(O/'C1B_best_sample_wrapper.stdout.log').open('x')as out,(O/'C1B_best_sample_wrapper.stderr.log').open('x')as err:
+ child=subprocess.Popen([sys.executable,str(O/'run_one.py'),str(sp)],cwd=R,env=dict(os.environ,**spec['env']),stdout=out,stderr=err,start_new_session=True)
+launch={'status':'launched_first_sample_only','wrapper_pid':child.pid,'at_utc':dt.datetime.now(dt.timezone.utc).isoformat(),'spec':{'path':str(sp),'sha256':hashlib.sha256(sp.read_bytes()).hexdigest()},'authority':spec['authority'],'resource_available_GiB':available/2**30};write(O/'ROOT_C1B_best_sample_launch.json',launch);print(json.dumps(launch))
