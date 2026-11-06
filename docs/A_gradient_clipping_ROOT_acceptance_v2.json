@@ -1,0 +1,61 @@
+{
+  "created_at_utc": "2026-11-06T13:53:26.501613+00:00",
+  "reviewer": "ROOT",
+  "status": "accepted_descriptive_posttest_appendix",
+  "evidence": [
+    {
+      "path": "docs/A_gradient_clipping_posttest_protocol_v1.json",
+      "bytes": 3107,
+      "sha256": "9f29285144a71c38fc804c29f2f3e378198693ae38b5b7e1e38af18579acc986"
+    },
+    {
+      "path": "scripts/analyze_A_gradient_clipping_posttest.py",
+      "bytes": 22248,
+      "sha256": "870abd09b26a957d9ca44c2de8d99dfb0f8c87aabc3202bab89b022373609942"
+    },
+    {
+      "path": "scripts/plot_A_gradient_diagnostic_presentation_v2.py",
+      "bytes": 8659,
+      "sha256": "889fa2c1ecfefa15f82ba3efefa245efe0031415bf38ef4bdaf354358503ff00"
+    },
+    {
+      "path": "results/A_gradient_clipping_posttest_v1/analysis/COMPLETE.json",
+      "bytes": 7534,
+      "sha256": "d424e859a4857c6f2050b6036a3c34c6540f68568e3dcd69398249a4a42a9c5b"
+    },
+    {
+      "path": "results/A_gradient_clipping_posttest_v1/presentation_v2/change_receipt.json",
+      "bytes": 5357,
+      "sha256": "55b78a682bd5a0e4665ade294a7e4367b8c7ca1c7569d3db6495fe498696eda7"
+    },
+    {
+      "path": "results/A_gradient_clipping_posttest_v1/presentation_v2/figure/gradient_diagnostic_v2.png",
+      "bytes": 317436,
+      "sha256": "c1a98ddef7be8165e66d37294676d0b811f0162f2cae33a7d469f4af994ea5e9"
+    },
+    {
+      "path": "docs/A梯度裁剪_事后描述性诊断.md",
+      "bytes": 8185,
+      "sha256": "ba311d1799b3938e06ee290d8a30371490dd108e94c7917ebe4033a8fb066dac"
+    }
+  ],
+  "review": {
+    "original_analysis_source_read": true,
+    "root_independent_targeted_tests_passed": 14,
+    "presentation_v2_source_read": true,
+    "png_visual_review_passed": true,
+    "scope": "126 original A runs, 38556 logged training updates, 378 run/window summaries; no new training or inference",
+    "visual_checks": [
+      "shared 100 percent threshold exceedance information readable",
+      "all six methods, seven lambdas and three pipeline seeds shown",
+      "common log y limits across all/early/late panels",
+      "mean/sample-SD bars and seed points fit limits",
+      "post-test status and Adam-update/causal limitation visible"
+    ],
+    "interpretive_limits": [
+      "all logged updates exceed actual configured threshold 1; this does not support only-large-lambda clipping onset",
+      "gradient norms do not determine Adam parameter updates or causal retention mechanisms",
+      "lambda/window summaries reuse random sources and steps; not independent replications"
+    ]
+  }
+}

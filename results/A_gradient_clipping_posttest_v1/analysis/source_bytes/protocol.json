@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "status": "declared_post_test_exploratory_before_gradient_log_analysis",
+  "declared_at_utc": "2026-11-06T13:34:48.933265+00:00",
+  "reason": "After observing the complete previously unsealed A lambda curves, examine whether logged total pre-clipping gradient norms differ with lambda. This is a descriptive optimization diagnostic, not a new confirmatory mechanism test.",
+  "manifest": {
+    "path": "artifacts/evaluation_ready_v5/supplement_A_nll/manifest.json",
+    "sha256": "88dc927c9b4909cca66901608216290e1e435022e4ff925c00875f5099077a90"
+  },
+  "scope": {
+    "logical_conditions": 126,
+    "methods": [
+      "B1",
+      "B2",
+      "B3",
+      "B4",
+      "M",
+      "C"
+    ],
+    "lambdas": [
+      0.01,
+      0.05,
+      0.1,
+      0.5,
+      1,
+      5,
+      10
+    ],
+    "pipeline_seeds": [
+      11,
+      22,
+      33
+    ],
+    "endpoint": "final_10M",
+    "expected_steps_per_run": 306,
+    "target_prediction_tokens": 10000000,
+    "replay_prediction_tokens": 500000,
+    "existing_main_training_aliases": 18,
+    "new_training_or_inference": false
+  },
+  "source_semantics": {
+    "train_source": {
+      "path": "src/replay_study/train.py",
+      "sha256": "fdfcf6aa12e4d9e60de48b817ce37c5646cb1169f28d971a421f91972543ab6d"
+    },
+    "installed_torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+    "clip_source": {
+      "path": "artifacts/provenance/A_gradient_clipping_posttest_v1/installed_torch_clip_grad_norm_source.py",
+      "sha256": "b6f1b066e87ead2acaa9728ce569084e9dd607b5290ca17d5032f8614a5bee26"
+    },
+    "logged_grad_norm": "Return value of clip_grad_norm_, total norm before clipping; confirm from captured installed source.",
+    "primary_diagnostic": "Fraction of train steps where logged grad_norm is strictly above the configured max_grad_norm. Call it threshold-exceedance fraction; do not claim exact floating-point clip activation at the epsilon boundary.",
+    "additional_per_run_descriptions": [
+      "mean",
+      "median",
+      "90th_percentile",
+      "maximum"
+    ],
+    "fixed_exposure_windows": {
+      "all": "all306steps",
+      "early": "step target_prediction_tokens after update <=2000000",
+      "late": "step target_prediction_tokens after update >8000000"
+    },
+    "threshold": "Read actual per-run config.max_grad_norm, expected1.0; fail on unexplained differences."
+  },
+  "aggregation": "Individual run values and method/lambda mean plus sample SD over the same3pipeline seeds; correlated steps are not independent experimental samples. Report every declared cell, including null/contradictory patterns.",
+  "exclusions": [
+    "No C or behavior score access",
+    "No new scoring/training/bank selection/parameter choice",
+    "No bootstrap/p values or causal gradient-direction claim",
+    "No inference of Adam update magnitudes from total gradient norm alone",
+    "No added physical training cost for reused existing logs"
+  ],
+  "timing": "Measure whole analysis subprocess wall/user/sys separately from nested verification/plot regions; snapshot source bytes and preserve immutable new namespace."
+}
