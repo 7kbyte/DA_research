@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "example_only": true,
+  "root_finalization_and_launch_authorization_required": true,
+  "old_master_queue": "/tmp/grad-research-20261106/worktree/configs/supplemental_v1_queue.json",
+  "old_master_state": "/tmp/grad-research-20261106/worktree/logs/supplemental_job_state.json",
+  "hard_deadline_utc": "2026-11-07T03:26:32Z",
+  "tail_seconds": 1800,
+  "gpus": "0,1,2,3",
+  "evaluation_sources": [
+    {
+      "manifests": [
+        {
+          "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_nll_manifest.json",
+          "sha256": "d1502bcaff5cdcd75d984a4b8776f1cb4027b596f474835bfe9ed18875d9fd18"
+        }
+      ],
+      "queue_path": "/tmp/grad-research-20261106/worktree/configs/primary_evaluation_v2_execution_matched_nll_queue.json",
+      "queue_sha256": "1428e024f710873a09138ccd47742e2897a6eb25fe3d9b35523153d43e7df346"
+    },
+    {
+      "manifests": [
+        {
+          "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+          "sha256": "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934"
+        }
+      ],
+      "queue_path": "/tmp/grad-research-20261106/worktree/configs/primary_evaluation_v2_execution_matched_behavior_queue.json",
+      "queue_sha256": "393f3df2f0213e2e4e4d2387109b750825c797b909f4b05d16cd3cb739f6aaa9"
+    },
+    {
+      "queue_path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_nll/queue.json",
+      "queue_sha256": "a882a80a5728723fbf5a3001f1940562018622a54ed4d5e28f12bed5ff1dd59c",
+      "manifests": [
+        {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_nll/manifest.json",
+          "sha256": "88dc927c9b4909cca66901608216290e1e435022e4ff925c00875f5099077a90"
+        }
+      ]
+    },
+    {
+      "queue_path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/queue.json",
+      "queue_sha256": "cc9226e32515d08dc9ff12055b66e620d98fa4b544d51adde7eb1c386cdd0be2",
+      "manifests": [
+        {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/manifest.json",
+          "sha256": "31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa"
+        }
+      ]
+    },
+    {
+      "queue_path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_B_nll/queue.json",
+      "queue_sha256": "d166e2f4aaee69870328952274c471a804a2aec387b9838deaf653a9fe353240",
+      "manifests": [
+        {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_B_nll/manifest.json",
+          "sha256": "ffa3304307004d4e013b7414a841c5cdc54df619dd5f0376b276491ab2c515b4"
+        }
+      ]
+    }
+  ],
+  "prior_sources": [
+    {
+      "manifests": [
+        {
+          "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_nll_manifest.json",
+          "sha256": "d1502bcaff5cdcd75d984a4b8776f1cb4027b596f474835bfe9ed18875d9fd18"
+        }
+      ],
+      "queue_path": "/tmp/grad-research-20261106/worktree/configs/primary_evaluation_v2_execution_matched_nll_queue.json",
+      "queue_sha256": "1428e024f710873a09138ccd47742e2897a6eb25fe3d9b35523153d43e7df346"
+    },
+    {
+      "manifests": [
+        {
+          "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+          "sha256": "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934"
+        }
+      ],
+      "queue_path": "/tmp/grad-research-20261106/worktree/configs/primary_evaluation_v2_execution_matched_behavior_queue.json",
+      "queue_sha256": "393f3df2f0213e2e4e4d2387109b750825c797b909f4b05d16cd3cb739f6aaa9"
+    },
+    {
+      "manifests": [
+        {
+          "path": "/tmp/grad-research-20261106/worktree/docs/planned_model_behavioral_timing_v1_manifest.json",
+          "sha256": "062c170687f7e86c61f247fc6c46c99352faeca25306923c223e28ab81d45c20"
+        }
+      ],
+      "queue_path": "/tmp/grad-research-20261106/worktree/configs/planned_model_behavioral_timing_v1_queue.json",
+      "queue_sha256": "427f2e212cce083aad7aa80ccf543240d3928c5e1957c2fed613a0542655d2c6"
+    }
+  ],
+  "pending_plan_ids": [
+    "extended_pythia_410m_100m_nll",
+    "extended_pythia_410m_100m_behavior",
+    "extended_pythia_1b_100m_nll",
+    "extended_pythia_1b_100m_behavior",
+    "extended_pythia_2p8b_25m_nll",
+    "extended_pythia_2p8b_25m_behavior"
+  ],
+  "scope_rule": "All science and endpoint scopes remain frozen; preparation never launches or analyzes scores"
+}

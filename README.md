@@ -14,7 +14,7 @@
 - [文献调研](literature/文献调研.md)与[三篇近邻工作的定位复核](docs/三篇近邻文献_实验定位复核备忘录_20261106.md)
 - [环境重建与移交](docs/环境重建与移交.md)
 - [已校验的共享盘快照](docs/durable_snapshot_latest.json)
-- 主36条件的final与best共72个逻辑端点均已持久保存：[best端点验收](docs/primary_best_weights_durable_publication.json)、[主比例24条件验收](docs/primary_weights_durable_publication.json)、[预算敏感性12条件验收](docs/budget_final_weights_durable_publication.json)及[恢复说明](docs/无损权重交付格式.md)
+- 主36条件的final与best共72个逻辑端点均已持久保存：[best端点验收](docs/primary_best_weights_durable_publication.json)、[主比例24条件验收](docs/primary_weights_durable_publication.json)、[预算敏感性12条件验收](docs/budget_final_weights_durable_publication.json)及[恢复说明](docs/无损权重交付格式.md)；[按需恢复两个指定模型](docs/已交付权重恢复示例.md)
 - 补充A验证所选18个final端点已持久保存，含15份新增权重与3个主归档引用：[发布验收](docs/A_selected_weights_durable_publication.json)；[额外权重覆盖范围](docs/额外科学权重保存方案_独立覆盖审阅.md)。
 - [研究路线与时间安排](docs/研究路线与时间安排.md)
 - [工程接口与实验约定](docs/ENGINEERING_CONTRACT.md)

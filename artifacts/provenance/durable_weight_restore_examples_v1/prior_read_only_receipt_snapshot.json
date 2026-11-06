@@ -1,0 +1,306 @@
+{
+  "status": "passed_header_small_metadata_and_syntax_review",
+  "reviewed_at_utc": "2026-11-06T13:01:26.114530+00:00",
+  "documentation": "docs/已交付权重恢复示例.md",
+  "documentation_sha256": "d329e58e8cb5586acf1232bf8a93c0624be94b5a90c53db4a8952f2653b78207",
+  "archives": [
+    {
+      "tar": "/data/202610/7kb/research_delivery/primary_final_weights_lossless_v1.tar",
+      "tar_stat": {
+        "bytes": 24949391360,
+        "device": 106,
+        "inode": 386615240
+      },
+      "headers_read": 33,
+      "members": [
+        {
+          "name": "primary_final_weights_manifest.json",
+          "bytes": 239736,
+          "ordinary_file": true,
+          "safe_relative_path": true
+        },
+        {
+          "name": "base/pythia-410m-final/model.safetensors",
+          "bytes": 911373632,
+          "ordinary_file": true,
+          "safe_relative_path": true
+        },
+        {
+          "name": "base/pythia-410m-final/config.json",
+          "bytes": 570,
+          "ordinary_file": true,
+          "safe_relative_path": true
+        },
+        {
+          "name": "base/pythia-410m-final/tokenizer.json",
+          "bytes": 2113710,
+          "ordinary_file": true,
+          "safe_relative_path": true
+        },
+        {
+          "name": "base/pythia-410m-final/tokenizer_config.json",
+          "bytes": 396,
+          "ordinary_file": true,
+          "safe_relative_path": true
+        },
+        {
+          "name": "base/pythia-410m-final/special_tokens_map.json",
+          "bytes": 99,
+          "ordinary_file": true,
+          "safe_relative_path": true
+        },
+        {
+          "name": "base/pythia-410m-final/README.md",
+          "bytes": 13593,
+          "ordinary_file": true,
+          "safe_relative_path": true
+        },
+        {
+          "name": "tools/src/replay_study/weight_archive.py",
+          "bytes": 15264,
+          "ordinary_file": true,
+          "safe_relative_path": true
+        },
+        {
+          "name": "tools/src/replay_study/__init__.py",
+          "bytes": 65,
+          "ordinary_file": true,
+          "safe_relative_path": true
+        },
+        {
+          "name": "tools/scripts/archive_model_weights.py",
+          "bytes": 2085,
+          "ordinary_file": true,
+          "safe_relative_path": true
+        },
+        {
+          "name": "weights/formal_deterministic_B4_s11_b0p05_w0p05.xor.zip",
+          "bytes": 1143733212,
+          "ordinary_file": true,
+          "safe_relative_path": true
+        }
+      ],
+      "manifest_sha256": "4120d177c22200b0bc5ee8390e0c2e2a1f5be1acbc58ef0f6d209bd47f96e8fb",
+      "example_run_id": "formal_deterministic_B4_s11_b0p05_w0p05",
+      "fingerprint": {
+        "sha256_model_state": "63069435cb5ea77931a58d7b00b573bcc4b517fdea283f7b551345997508c28c",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "19bf6f08e0c34d3334973a17142c7801f1be89f8fb20e49fc37f5b194303d014",
+      "original_explicit_checkpoint_kind": null,
+      "source_kind_recorded_in_zip": null,
+      "existing_bytewise_verification": {
+        "status": "passed",
+        "tensor_count": 292,
+        "all_tensor_bytes_equal": true,
+        "source_checkpoint_sha256": "19bf6f08e0c34d3334973a17142c7801f1be89f8fb20e49fc37f5b194303d014",
+        "archive_sha256": "2b1df38b3b32006df8b187c7ee5cf7f495dbbb82835dc66e02a16cd187a028a7",
+        "model_fingerprint": {
+          "sha256_model_state": "63069435cb5ea77931a58d7b00b573bcc4b517fdea283f7b551345997508c28c",
+          "state_elements": 405334016
+        },
+        "wall_seconds": 7.3216142281889915,
+        "cpu_threads": 2,
+        "gpu_used": false
+      },
+      "small_manifest_matches_prior_acceptance": true,
+      "small_manifest_authority": {
+        "path": "artifacts/assets/primary_weight_delivery_acceptance.json",
+        "sha256": "20b596999920993a6da248a739f915ea1c0ae903f718d3fd552620e7dd799b0c"
+      },
+      "current_identity_stat_matches_durable_publication": true,
+      "current_identity_stat": {
+        "device": 106,
+        "inode": 386615240,
+        "bytes": 24949391360,
+        "uid": 11471,
+        "gid": 11471,
+        "mode": "0o600",
+        "mtime_ns": 1793947771820470742,
+        "ctime_ns": 1793947771820470742
+      },
+      "publication_receipt": {
+        "path": "docs/primary_weights_durable_publication.json",
+        "sha256": "7eb5cab2d3c76aba6424923819c903afae0870c9a12c203f20143f2509ba9b2b",
+        "tar_sha256": "2bb090fbe7df172b31102068715143ab702087ff49f77ef7dfd5db3637c928b1"
+      },
+      "integrity_scope": "historical publisher full source/copy/readback SHA + current stat + accepted small manifest SHA; no fresh entire TAR hash"
+    },
+    {
+      "tar": "/data/202610/7kb/research_delivery/supplement_A_selected_final_weights_lossless_v1.tar",
+      "tar_stat": {
+        "bytes": 16949309440,
+        "device": 106,
+        "inode": 393956795
+      },
+      "headers_read": 41,
+      "members": [
+        {
+          "name": "supplement_A_selected_final_manifest.json",
+          "bytes": 305438,
+          "ordinary_file": true,
+          "safe_relative_path": true
+        },
+        {
+          "name": "metadata/lambda_sweep_deterministic_B4_s11_b0p05_w5__validation_selected_lambda_final.source_metadata.pt",
+          "bytes": 21078,
+          "ordinary_file": true,
+          "safe_relative_path": true
+        },
+        {
+          "name": "weights/lambda_sweep_deterministic_B4_s11_b0p05_w5__validation_selected_lambda_final.xor.zip",
+          "bytes": 1120910679,
+          "ordinary_file": true,
+          "safe_relative_path": true
+        }
+      ],
+      "manifest_sha256": "98c70968a733f6436ee47be1ddeb0a76162bce1f7fb5cc3271e75fa6bb27c129",
+      "example_run_id": "lambda_sweep_deterministic_B4_s11_b0p05_w5",
+      "fingerprint": {
+        "sha256_model_state": "ffc55075d0e8c14e77548752bd0de648858f75eeef98b8bffef88b160cb1c374",
+        "state_elements": 405334016
+      },
+      "source_checkpoint_sha256": "df9aa60ca4be0b8e51432362304adf97ea5b6a5450f7ebbbc1fd8392eded6fd6",
+      "original_explicit_checkpoint_kind": null,
+      "source_kind_recorded_in_zip": "full_training_checkpoint",
+      "existing_bytewise_verification": {
+        "status": "passed",
+        "tensor_count": 292,
+        "all_tensor_bytes_equal": true,
+        "source_checkpoint_sha256": "df9aa60ca4be0b8e51432362304adf97ea5b6a5450f7ebbbc1fd8392eded6fd6",
+        "archive_sha256": "a86fdc4ce9478b074d2e6a12c9a8d5a56e9306cb08a6c2ae781d47d587331ff6",
+        "model_fingerprint": {
+          "sha256_model_state": "ffc55075d0e8c14e77548752bd0de648858f75eeef98b8bffef88b160cb1c374",
+          "state_elements": 405334016
+        },
+        "wall_seconds": 7.227995913475752,
+        "cpu_threads": 2,
+        "gpu_used": false
+      },
+      "small_manifest_matches_prior_acceptance": true,
+      "small_manifest_authority": {
+        "path": "docs/A_selected_weights_ROOT_publication_acceptance.json",
+        "sha256": "53d4d6bf864efc4452b6cbc245b3a8efbedb962436d852b38a3a75e87c9cccd9"
+      },
+      "current_identity_stat_matches_durable_publication": true,
+      "current_identity_stat": {
+        "device": 106,
+        "inode": 393956795,
+        "bytes": 16949309440,
+        "uid": 11471,
+        "gid": 11471,
+        "mode": "0o600",
+        "mtime_ns": 1793965887290828922,
+        "ctime_ns": 1793965887290828922
+      },
+      "publication_receipt": {
+        "path": "docs/A_selected_weights_durable_publication.json",
+        "sha256": "0391d92780c2ee7c3b3bc508b270a3322120ea6f68ece38e0e9f8d20274ca5a6",
+        "tar_sha256": "0dfec20b1bf9dde38b0d0d453c821eb088490bde188dc0e19bc498cc37b04631"
+      },
+      "integrity_scope": "historical publisher full source/copy/readback SHA + current stat + accepted small manifest SHA; no fresh entire TAR hash"
+    }
+  ],
+  "shell_syntax_checked": true,
+  "python_syntax_checked": true,
+  "decode_flags_checked_from_archived_source": true,
+  "large_tar_payloads_rehashed": false,
+  "actual_extraction_or_new_model_restore": false,
+  "live_codec_exporter_helper_modified": false,
+  "actual_roundtrip_evidence": "existing frozen manifest bytewise_verification receipts; not a new reviewer decode",
+  "archived_decoder_A_compatibility": {
+    "status": "passed_direct_archived_source_and_actual_A_metadata_review",
+    "reviewed_at_utc": "2026-11-06T13:04:26.589460+00:00",
+    "primary_decoder": {
+      "tar": "/data/202610/7kb/research_delivery/primary_final_weights_lossless_v1.tar",
+      "member": "tools/src/replay_study/weight_archive.py",
+      "sha256": "3c2bcf9e38773ae4f69c27f85f342356dbefcb53d817be4321da6e9c4e550e1a",
+      "bytes": 15264
+    },
+    "A_archived_decoder": {
+      "tar": "/data/202610/7kb/research_delivery/supplement_A_selected_final_weights_lossless_v1.tar",
+      "member": "tools/src/replay_study/weight_archive.py",
+      "sha256": "3c2bcf9e38773ae4f69c27f85f342356dbefcb53d817be4321da6e9c4e550e1a"
+    },
+    "decoders_byte_identical": true,
+    "archived_CLI_byte_identical": true,
+    "archived_CLI_sha256": "28c5841cae8e7fd87d8cb62e7f756dad40ce15cb558710c31e48dfb45fde668a",
+    "A_ZIP_metadata": {
+      "member": "weights/lambda_sweep_deterministic_B4_s11_b0p05_w5__validation_selected_lambda_final.xor.zip",
+      "metadata_member": "metadata.json",
+      "metadata_sha256": "1e4ca90cd763738c7c995ef5b55fe7c34db9417b411f27a07e4e7efd4c4a371b",
+      "encoder_source_sha256": "3c2bcf9e38773ae4f69c27f85f342356dbefcb53d817be4321da6e9c4e550e1a",
+      "format": "replay_study_fp32_xor_byteplanes_zip_v1",
+      "byte_order": "little",
+      "source_checkpoint_kind": "full_training_checkpoint",
+      "model_fingerprint": {
+        "sha256_model_state": "ffc55075d0e8c14e77548752bd0de648858f75eeef98b8bffef88b160cb1c374",
+        "state_elements": 405334016
+      },
+      "checkpoint_metadata_keys": [
+        "format_version",
+        "config",
+        "counters",
+        "provenance",
+        "validation_trajectory",
+        "best_target_validation"
+      ],
+      "tensor_count": 292
+    },
+    "decoder_format_from_archived_AST": "replay_study_fp32_xor_byteplanes_zip_v1",
+    "A_encoder_SHA_equals_primary_decoder_SHA": true,
+    "required_top_fields_checked": [
+      "format",
+      "byte_order",
+      "base",
+      "tensors",
+      "model_fingerprint",
+      "checkpoint_metadata",
+      "source_checkpoint"
+    ],
+    "required_tensor_fields_checked": [
+      "name",
+      "shape",
+      "dtype",
+      "elements",
+      "raw_bytes",
+      "raw_sha256",
+      "base_fp32_raw_sha256",
+      "chunks"
+    ],
+    "all_chunk_headers_present_and_contiguous": true,
+    "original_checkpoint_kind_explicitly_present": false,
+    "exact_archived_source_evidence": [
+      {
+        "line": 207,
+        "source": "    saved = {**metadata[\"checkpoint_metadata\"], \"format_version\": 1,"
+      },
+      {
+        "line": 208,
+        "source": "             \"checkpoint_kind\": \"model_only_lossless_xor_restored\", \"model_state\": state,"
+      },
+      {
+        "line": 209,
+        "source": "             \"lossless_delivery_provenance\": {\"format\": FORMAT, \"archive_sha256\": file_sha256(archive_path),"
+      },
+      {
+        "line": 211,
+        "source": "                 \"source_checkpoint_kind\": metadata.get(\"source_checkpoint_kind\", \"unspecified_in_legacy_v1_archive\"),"
+      },
+      {
+        "line": 214,
+        "source": "                 \"model_fingerprint\": fingerprint}}"
+      },
+      {
+        "line": 226,
+        "source": "              \"model_fingerprint\": fingerprint, \"tensor_raw_hashes_verified\": len(state),"
+      }
+    ],
+    "extra_metadata_behavior": "Archived decode expands checkpoint_metadata into saved dict, then explicitly sets model_only_lossless_xor_restored and lossless_delivery_provenance. source_checkpoint_kind is read by metadata.get; model_fingerprint is checked and saved. Other top-level metadata keys are not rejected.",
+    "primary_tools_remain_compatible": true,
+    "live_source_used_as_authority": false,
+    "new_model_decode": false,
+    "large_TAR_hash": false,
+    "live_code_modified": false
+  }
+}

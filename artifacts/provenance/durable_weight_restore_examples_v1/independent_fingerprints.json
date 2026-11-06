@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "scope": "Fresh reload and complete new model-state fingerprint; no original latest or optimizer CP",
+  "models": [
+    {
+      "model": "main_B4_seed11_final",
+      "fingerprint": {
+        "sha256_model_state": "63069435cb5ea77931a58d7b00b573bcc4b517fdea283f7b551345997508c28c",
+        "state_elements": 405334016
+      },
+      "tensor_count": 292,
+      "source_checkpoint_kind": "unspecified_in_legacy_v1_archive",
+      "checkpoint_kind": "model_only_lossless_xor_restored",
+      "actual_target_prediction_tokens": 10000000,
+      "actual_replay_prediction_tokens": 500000,
+      "source_checkpoint_sha256": "19bf6f08e0c34d3334973a17142c7801f1be89f8fb20e49fc37f5b194303d014",
+      "new_restored_file_sha256_from_decoder": "463e63bd294446e752bb93f66abc9740af2d6cca8e46a69d099617bd2f871f2f",
+      "raw_model_bytes_read_for_independent_fingerprint": 1621336064,
+      "wall_seconds": 1.2381242252886295
+    },
+    {
+      "model": "A_B4_lambda5_seed11_final",
+      "fingerprint": {
+        "sha256_model_state": "ffc55075d0e8c14e77548752bd0de648858f75eeef98b8bffef88b160cb1c374",
+        "state_elements": 405334016
+      },
+      "tensor_count": 292,
+      "source_checkpoint_kind": "full_training_checkpoint",
+      "checkpoint_kind": "model_only_lossless_xor_restored",
+      "actual_target_prediction_tokens": 10000000,
+      "actual_replay_prediction_tokens": 500000,
+      "source_checkpoint_sha256": "df9aa60ca4be0b8e51432362304adf97ea5b6a5450f7ebbbc1fd8392eded6fd6",
+      "new_restored_file_sha256_from_decoder": "38ddb8e415a22d22a54fc3c5a5bfd5fdf207375a4191fb299504af0100663cac",
+      "raw_model_bytes_read_for_independent_fingerprint": 1621336064,
+      "wall_seconds": 1.2439859993755817
+    }
+  ]
+}

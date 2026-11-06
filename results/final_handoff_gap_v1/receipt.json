@@ -1,0 +1,675 @@
+{
+  "schema_version": 1,
+  "status": "read_only_final_handoff_gap_review_not_authority",
+  "utc": "2026-11-06T13:02:32.743857+00:00",
+  "sources": {
+    "v5_execution.json": {
+      "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_evaluation_preparation_v5_execution.json",
+      "sha256": "b1e8d66ad0ed8074064cf5c587725d4da2314869e95237e2c354d91e4268bcc9",
+      "bytes": 4386
+    },
+    "code_1_handoff_evaluation.py": {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/handoff_evaluation.py",
+      "sha256": "bbe5a14e16bde55362aa3a7edc044b35ed8a7e2d0966a8b40692513b6c3a748a",
+      "bytes": 21645
+    },
+    "code_2_prepare_supplemental_evaluations_v5.py": {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/prepare_supplemental_evaluations_v5.py",
+      "sha256": "f533a7e4b0104c7ab422d5a6836b740dd56ba04982907db091b7e2df03efa191",
+      "bytes": 12042
+    },
+    "code_3_stat_bound_digest_cache.py": {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/stat_bound_digest_cache.py",
+      "sha256": "9cc01b493b46a5bf391a7c649a379d87011fff077ddeea701eaf8a84bdb568e2",
+      "bytes": 9777
+    },
+    "code_4_evaluate_tasks.py": {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/evaluate_tasks.py",
+      "sha256": "cfc4f149b021740f90245e3fa822f801f30c82f6ba580d43aeec4857cbab9981",
+      "bytes": 6410
+    },
+    "code_5_evaluation_plan.py": {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/evaluation_plan.py",
+      "sha256": "1f68bab77a0e4d9953bcfa85306702dbc21d3ce5c85691218e06ea15df75196f",
+      "bytes": 40509
+    },
+    "code_6_make_behavioral_queue.py": {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/make_behavioral_queue.py",
+      "sha256": "14076e3bfbf9ad4d5665e9e943ce72b55bf74414a416d3465a050fefdbd8d340",
+      "bytes": 19576
+    },
+    "code_7_run_evaluate.py": {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/run_evaluate.py",
+      "sha256": "6d7b9cd6b311f96e94b854e8ccd15f15f92ff9eefbd6b5a0dddc67fee8989ddf",
+      "bytes": 2366
+    },
+    "code_8_run_frozen_evaluation.py": {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "sha256": "1f691de8da574c671a8822b5999292fd601f31f83d3794f1a603eaa8c79bef8d",
+      "bytes": 12283
+    },
+    "code_9_evaluate.py": {
+      "path": "/tmp/grad-research-20261106/worktree/src/replay_study/evaluate.py",
+      "sha256": "d9648b4fbc891746a9bafe9e9639e2ee584521ba68bd949d2091484c833c3c46",
+      "bytes": 16936
+    },
+    "code_10_execution.py": {
+      "path": "/tmp/grad-research-20261106/worktree/src/replay_study/execution.py",
+      "sha256": "70ed6b3d63f950ffc00f2c671f20e0d842c154f4cbf1648fe9a6511bbd077bf5",
+      "bytes": 4371
+    },
+    "code_11_tasks.py": {
+      "path": "/tmp/grad-research-20261106/worktree/src/replay_study/tasks.py",
+      "sha256": "c631b1c81386193b645b59a3a82eb73dfacc6d9d1302b95e997f0de4afc47a51",
+      "bytes": 12569
+    },
+    "catalog.json": {
+      "path": "/tmp/grad-research-20261106/worktree/configs/supplemental_evaluation_preparation_v5.json",
+      "sha256": "90163f7a77529434c872f52f41d45151bf09826ddd17ab58ea48d21d16f3d186",
+      "bytes": 541219
+    },
+    "preparer_v4_source.py": {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/prepare_supplemental_evaluations.py",
+      "sha256": "dd641ed5d5d0ab750fb400e1fc2add313b4ea72a38d01aa4a7f3272fc8fee26d",
+      "bytes": 31927
+    },
+    "ready_index.json": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/ready_index.json",
+      "sha256": "398ee6c37b9a4572d440dec7d84505883a22fa14fd423dc2c2605274c80fbcd5",
+      "bytes": 27359
+    },
+    "handoff_draft.json": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/handoff_draft.json",
+      "sha256": "c1149330e09b099c1aabb6c3b57ab6b744b828fb4a9d04d4f50f227ad3edc22f",
+      "bytes": 4678
+    },
+    "cache_progress.json": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/cache_progress.json",
+      "sha256": "c0bc86f77da9613a3232e8d9443a248dcc2d7ffc212ac85b6041530b32224c10",
+      "bytes": 998
+    },
+    "cache_snapshot.json": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/digest_cache_snapshot_1793970146222929314.json",
+      "sha256": "deb05a5259b7977b8b0b3ca8424686246705cc32980c053b43070eceb88fff55",
+      "bytes": 382113
+    },
+    "latest_published_C_only_receipt.json": {
+      "path": "/tmp/grad-research-20261106/worktree/results/C_pending_order_postpublication_v1/receipt.json",
+      "sha256": "3ae983665892813f2ce050e1e93dfef8448705198d8be5b4cda59147d8b72f50",
+      "bytes": 35277
+    },
+    "budget_v5.json": {
+      "path": "/tmp/grad-research-20261106/worktree/results/evaluation_timing_budget_v5.json",
+      "sha256": "940a0a0651cc7dd20da16d46321d8d4cac6b4dbbf7dd3e1ba6fbdd787e0b8f7d",
+      "bytes": 37276
+    },
+    "master_cmdline.bin": {
+      "path": "/proc/2988506/cmdline",
+      "sha256": "2a222ce417d4eb016ee3c0a1fb9ac4e2160ad9c3e6d427a2be189b6f052b1acb",
+      "bytes": 209
+    },
+    "producer.py": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_handoff_gap_v1/collect.py",
+      "sha256": "1bce76acc0f39364e313cf31f7b68c0b3b5ae3e767e0fc4f75d06de3429833a3",
+      "bytes": 14057
+    },
+    "main_nll_queue.json": {
+      "path": "/tmp/grad-research-20261106/worktree/configs/primary_evaluation_v2_execution_matched_nll_queue.json",
+      "sha256": "1428e024f710873a09138ccd47742e2897a6eb25fe3d9b35523153d43e7df346",
+      "bytes": 72920
+    },
+    "main_nll_manifest_0.json": {
+      "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_nll_manifest.json",
+      "sha256": "d1502bcaff5cdcd75d984a4b8776f1cb4027b596f474835bfe9ed18875d9fd18",
+      "bytes": 887166
+    },
+    "main_behavior_queue.json": {
+      "path": "/tmp/grad-research-20261106/worktree/configs/primary_evaluation_v2_execution_matched_behavior_queue.json",
+      "sha256": "393f3df2f0213e2e4e4d2387109b750825c797b909f4b05d16cd3cb739f6aaa9",
+      "bytes": 101444
+    },
+    "main_behavior_manifest_0.json": {
+      "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+      "sha256": "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+      "bytes": 1092890
+    },
+    "supplement_A_nll_queue.json": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_nll/queue.json",
+      "sha256": "a882a80a5728723fbf5a3001f1940562018622a54ed4d5e28f12bed5ff1dd59c",
+      "bytes": 131301
+    },
+    "supplement_A_nll_manifest_0.json": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_nll/manifest.json",
+      "sha256": "88dc927c9b4909cca66901608216290e1e435022e4ff925c00875f5099077a90",
+      "bytes": 2016095
+    },
+    "supplement_A_behavior_queue.json": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/queue.json",
+      "sha256": "cc9226e32515d08dc9ff12055b66e620d98fa4b544d51adde7eb1c386cdd0be2",
+      "bytes": 25473
+    },
+    "supplement_A_behavior_manifest_0.json": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/manifest.json",
+      "sha256": "31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa",
+      "bytes": 370691
+    },
+    "supplement_B_nll_queue.json": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_B_nll/queue.json",
+      "sha256": "d166e2f4aaee69870328952274c471a804a2aec387b9838deaf653a9fe353240",
+      "bytes": 62683
+    },
+    "supplement_B_nll_manifest_0.json": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_B_nll/manifest.json",
+      "sha256": "ffa3304307004d4e013b7414a841c5cdc54df619dd5f0376b276491ab2c515b4",
+      "bytes": 989003
+    },
+    "prior_0_queue.json": {
+      "path": "/tmp/grad-research-20261106/worktree/configs/primary_evaluation_v2_execution_matched_nll_queue.json",
+      "sha256": "1428e024f710873a09138ccd47742e2897a6eb25fe3d9b35523153d43e7df346",
+      "bytes": 72920
+    },
+    "prior_0_manifest_0.json": {
+      "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_nll_manifest.json",
+      "sha256": "d1502bcaff5cdcd75d984a4b8776f1cb4027b596f474835bfe9ed18875d9fd18",
+      "bytes": 887166
+    },
+    "prior_1_queue.json": {
+      "path": "/tmp/grad-research-20261106/worktree/configs/primary_evaluation_v2_execution_matched_behavior_queue.json",
+      "sha256": "393f3df2f0213e2e4e4d2387109b750825c797b909f4b05d16cd3cb739f6aaa9",
+      "bytes": 101444
+    },
+    "prior_1_manifest_0.json": {
+      "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+      "sha256": "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+      "bytes": 1092890
+    },
+    "prior_2_queue.json": {
+      "path": "/tmp/grad-research-20261106/worktree/configs/planned_model_behavioral_timing_v1_queue.json",
+      "sha256": "427f2e212cce083aad7aa80ccf543240d3928c5e1957c2fed613a0542655d2c6",
+      "bytes": 2777
+    },
+    "prior_2_manifest_0.json": {
+      "path": "/tmp/grad-research-20261106/worktree/docs/planned_model_behavioral_timing_v1_manifest.json",
+      "sha256": "062c170687f7e86c61f247fc6c46c99352faeca25306923c223e28ab81d45c20",
+      "bytes": 36233
+    }
+  },
+  "final_evaluation_source_count": 11,
+  "actual_frozen_or_READY_sources": 5,
+  "not_READY_C_plans": 6,
+  "eleven_sources": [
+    {
+      "source_id": "main_nll",
+      "status": "actual_frozen_primary_source",
+      "queue": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/primary_evaluation_v2_execution_matched_nll_queue.json",
+        "sha256": "1428e024f710873a09138ccd47742e2897a6eb25fe3d9b35523153d43e7df346"
+      },
+      "manifests": [
+        {
+          "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_nll_manifest.json",
+          "sha256": "d1502bcaff5cdcd75d984a4b8776f1cb4027b596f474835bfe9ed18875d9fd18"
+        }
+      ],
+      "actual_queue_jobs": 67,
+      "allowance_by_actual_job_kind": [
+        {
+          "kind": "adapted",
+          "expected_seconds": 180,
+          "actual_jobs": 66
+        },
+        {
+          "kind": "initial",
+          "expected_seconds": 180,
+          "actual_jobs": 1
+        }
+      ],
+      "maximum_expected_seconds": 180
+    },
+    {
+      "source_id": "main_behavior",
+      "status": "actual_frozen_primary_source",
+      "queue": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/primary_evaluation_v2_execution_matched_behavior_queue.json",
+        "sha256": "393f3df2f0213e2e4e4d2387109b750825c797b909f4b05d16cd3cb739f6aaa9"
+      },
+      "manifests": [
+        {
+          "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+          "sha256": "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934"
+        }
+      ],
+      "actual_queue_jobs": 67,
+      "allowance_by_actual_job_kind": [
+        {
+          "kind": "adapted",
+          "expected_seconds": 300,
+          "actual_jobs": 66
+        },
+        {
+          "kind": "initial",
+          "expected_seconds": 300,
+          "actual_jobs": 1
+        }
+      ],
+      "maximum_expected_seconds": 300
+    },
+    {
+      "source_id": "supplement_A_nll",
+      "status": "actual_READY_frozen_source",
+      "queue": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_nll/queue.json",
+        "sha256": "a882a80a5728723fbf5a3001f1940562018622a54ed4d5e28f12bed5ff1dd59c"
+      },
+      "manifests": [
+        {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_nll/manifest.json",
+          "sha256": "88dc927c9b4909cca66901608216290e1e435022e4ff925c00875f5099077a90"
+        }
+      ],
+      "actual_queue_jobs": 126,
+      "allowance_by_actual_job_kind": [
+        {
+          "kind": "adapted",
+          "expected_seconds": 180,
+          "actual_jobs": 108
+        },
+        {
+          "kind": "reuse",
+          "expected_seconds": 180,
+          "actual_jobs": 18
+        }
+      ],
+      "maximum_expected_seconds": 180
+    },
+    {
+      "source_id": "supplement_A_behavior",
+      "status": "actual_READY_frozen_source",
+      "queue": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/queue.json",
+        "sha256": "cc9226e32515d08dc9ff12055b66e620d98fa4b544d51adde7eb1c386cdd0be2"
+      },
+      "manifests": [
+        {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/manifest.json",
+          "sha256": "31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa"
+        }
+      ],
+      "actual_queue_jobs": 18,
+      "allowance_by_actual_job_kind": [
+        {
+          "kind": "adapted",
+          "expected_seconds": 600,
+          "actual_jobs": 15
+        },
+        {
+          "kind": "reuse",
+          "expected_seconds": 600,
+          "actual_jobs": 3
+        }
+      ],
+      "maximum_expected_seconds": 600
+    },
+    {
+      "source_id": "supplement_B_nll",
+      "status": "actual_READY_frozen_source",
+      "queue": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_B_nll/queue.json",
+        "sha256": "d166e2f4aaee69870328952274c471a804a2aec387b9838deaf653a9fe353240"
+      },
+      "manifests": [
+        {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_B_nll/manifest.json",
+          "sha256": "ffa3304307004d4e013b7414a841c5cdc54df619dd5f0376b276491ab2c515b4"
+        }
+      ],
+      "actual_queue_jobs": 60,
+      "allowance_by_actual_job_kind": [
+        {
+          "kind": "adapted",
+          "expected_seconds": 180,
+          "actual_jobs": 60
+        }
+      ],
+      "maximum_expected_seconds": 180
+    },
+    {
+      "source_id": "extended_pythia_410m_100m_nll",
+      "status": "not_READY_frozen_plan_only_no_actual_queue",
+      "mode": "nll",
+      "model_tag": "pythia-410m",
+      "checkpoints": [
+        "final",
+        "best"
+      ],
+      "actual_queue_jobs": null,
+      "queue": null,
+      "manifests": null,
+      "expected_per_job_seconds_from_frozen_producer": 180,
+      "applicable_job_kinds_if_materialized": [
+        "initial",
+        "adapted",
+        "reuse"
+      ],
+      "allowance_evidence": {
+        "source": {
+          "path": "/tmp/grad-research-20261106/worktree/scripts/prepare_supplemental_evaluations.py",
+          "sha256": "dd641ed5d5d0ab750fb400e1fc2add313b4ea72a38d01aa4a7f3272fc8fee26d",
+          "bytes": 31927
+        },
+        "line": 282,
+        "expression": "600 if mode == 'behavior' else 180"
+      },
+      "maximum_expected_seconds": 180,
+      "future_actual_manifest_queue_and_kind_counts_must_be_checked": true
+    },
+    {
+      "source_id": "extended_pythia_410m_100m_behavior",
+      "status": "not_READY_frozen_plan_only_no_actual_queue",
+      "mode": "behavior",
+      "model_tag": "pythia-410m",
+      "checkpoints": [
+        "final"
+      ],
+      "actual_queue_jobs": null,
+      "queue": null,
+      "manifests": null,
+      "expected_per_job_seconds_from_frozen_producer": 600,
+      "applicable_job_kinds_if_materialized": [
+        "initial",
+        "adapted",
+        "reuse"
+      ],
+      "allowance_evidence": {
+        "source": {
+          "path": "/tmp/grad-research-20261106/worktree/scripts/prepare_supplemental_evaluations.py",
+          "sha256": "dd641ed5d5d0ab750fb400e1fc2add313b4ea72a38d01aa4a7f3272fc8fee26d",
+          "bytes": 31927
+        },
+        "line": 282,
+        "expression": "600 if mode == 'behavior' else 180"
+      },
+      "maximum_expected_seconds": 600,
+      "future_actual_manifest_queue_and_kind_counts_must_be_checked": true
+    },
+    {
+      "source_id": "extended_pythia_1b_100m_nll",
+      "status": "not_READY_frozen_plan_only_no_actual_queue",
+      "mode": "nll",
+      "model_tag": "pythia-1b",
+      "checkpoints": [
+        "final",
+        "best"
+      ],
+      "actual_queue_jobs": null,
+      "queue": null,
+      "manifests": null,
+      "expected_per_job_seconds_from_frozen_producer": 180,
+      "applicable_job_kinds_if_materialized": [
+        "initial",
+        "adapted",
+        "reuse"
+      ],
+      "allowance_evidence": {
+        "source": {
+          "path": "/tmp/grad-research-20261106/worktree/scripts/prepare_supplemental_evaluations.py",
+          "sha256": "dd641ed5d5d0ab750fb400e1fc2add313b4ea72a38d01aa4a7f3272fc8fee26d",
+          "bytes": 31927
+        },
+        "line": 282,
+        "expression": "600 if mode == 'behavior' else 180"
+      },
+      "maximum_expected_seconds": 180,
+      "future_actual_manifest_queue_and_kind_counts_must_be_checked": true
+    },
+    {
+      "source_id": "extended_pythia_1b_100m_behavior",
+      "status": "not_READY_frozen_plan_only_no_actual_queue",
+      "mode": "behavior",
+      "model_tag": "pythia-1b",
+      "checkpoints": [
+        "final"
+      ],
+      "actual_queue_jobs": null,
+      "queue": null,
+      "manifests": null,
+      "expected_per_job_seconds_from_frozen_producer": 600,
+      "applicable_job_kinds_if_materialized": [
+        "initial",
+        "adapted",
+        "reuse"
+      ],
+      "allowance_evidence": {
+        "source": {
+          "path": "/tmp/grad-research-20261106/worktree/scripts/prepare_supplemental_evaluations.py",
+          "sha256": "dd641ed5d5d0ab750fb400e1fc2add313b4ea72a38d01aa4a7f3272fc8fee26d",
+          "bytes": 31927
+        },
+        "line": 282,
+        "expression": "600 if mode == 'behavior' else 180"
+      },
+      "maximum_expected_seconds": 600,
+      "future_actual_manifest_queue_and_kind_counts_must_be_checked": true
+    },
+    {
+      "source_id": "extended_pythia_2p8b_25m_nll",
+      "status": "not_READY_frozen_plan_only_no_actual_queue",
+      "mode": "nll",
+      "model_tag": "pythia-2.8b",
+      "checkpoints": [
+        "final",
+        "best"
+      ],
+      "actual_queue_jobs": null,
+      "queue": null,
+      "manifests": null,
+      "expected_per_job_seconds_from_frozen_producer": 180,
+      "applicable_job_kinds_if_materialized": [
+        "initial",
+        "adapted",
+        "reuse"
+      ],
+      "allowance_evidence": {
+        "source": {
+          "path": "/tmp/grad-research-20261106/worktree/scripts/prepare_supplemental_evaluations.py",
+          "sha256": "dd641ed5d5d0ab750fb400e1fc2add313b4ea72a38d01aa4a7f3272fc8fee26d",
+          "bytes": 31927
+        },
+        "line": 282,
+        "expression": "600 if mode == 'behavior' else 180"
+      },
+      "maximum_expected_seconds": 180,
+      "future_actual_manifest_queue_and_kind_counts_must_be_checked": true
+    },
+    {
+      "source_id": "extended_pythia_2p8b_25m_behavior",
+      "status": "not_READY_frozen_plan_only_no_actual_queue",
+      "mode": "behavior",
+      "model_tag": "pythia-2.8b",
+      "checkpoints": [
+        "final"
+      ],
+      "actual_queue_jobs": null,
+      "queue": null,
+      "manifests": null,
+      "expected_per_job_seconds_from_frozen_producer": 600,
+      "applicable_job_kinds_if_materialized": [
+        "initial",
+        "adapted",
+        "reuse"
+      ],
+      "allowance_evidence": {
+        "source": {
+          "path": "/tmp/grad-research-20261106/worktree/scripts/prepare_supplemental_evaluations.py",
+          "sha256": "dd641ed5d5d0ab750fb400e1fc2add313b4ea72a38d01aa4a7f3272fc8fee26d",
+          "bytes": 31927
+        },
+        "line": 282,
+        "expression": "600 if mode == 'behavior' else 180"
+      },
+      "maximum_expected_seconds": 600,
+      "future_actual_manifest_queue_and_kind_counts_must_be_checked": true
+    }
+  ],
+  "three_explicit_prior_sources": [
+    {
+      "source_id": "prior_0",
+      "status": "explicit_frozen_prior_closure_source",
+      "queue": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/primary_evaluation_v2_execution_matched_nll_queue.json",
+        "sha256": "1428e024f710873a09138ccd47742e2897a6eb25fe3d9b35523153d43e7df346"
+      },
+      "manifests": [
+        {
+          "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_nll_manifest.json",
+          "sha256": "d1502bcaff5cdcd75d984a4b8776f1cb4027b596f474835bfe9ed18875d9fd18"
+        }
+      ],
+      "actual_queue_jobs": 67,
+      "allowance_by_actual_job_kind": [
+        {
+          "kind": "adapted",
+          "expected_seconds": 180,
+          "actual_jobs": 66
+        },
+        {
+          "kind": "initial",
+          "expected_seconds": 180,
+          "actual_jobs": 1
+        }
+      ],
+      "maximum_expected_seconds": 180
+    },
+    {
+      "source_id": "prior_1",
+      "status": "explicit_frozen_prior_closure_source",
+      "queue": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/primary_evaluation_v2_execution_matched_behavior_queue.json",
+        "sha256": "393f3df2f0213e2e4e4d2387109b750825c797b909f4b05d16cd3cb739f6aaa9"
+      },
+      "manifests": [
+        {
+          "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+          "sha256": "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934"
+        }
+      ],
+      "actual_queue_jobs": 67,
+      "allowance_by_actual_job_kind": [
+        {
+          "kind": "adapted",
+          "expected_seconds": 300,
+          "actual_jobs": 66
+        },
+        {
+          "kind": "initial",
+          "expected_seconds": 300,
+          "actual_jobs": 1
+        }
+      ],
+      "maximum_expected_seconds": 300
+    },
+    {
+      "source_id": "prior_2",
+      "status": "explicit_frozen_prior_closure_source",
+      "queue": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/planned_model_behavioral_timing_v1_queue.json",
+        "sha256": "427f2e212cce083aad7aa80ccf543240d3928c5e1957c2fed613a0542655d2c6"
+      },
+      "manifests": [
+        {
+          "path": "/tmp/grad-research-20261106/worktree/docs/planned_model_behavioral_timing_v1_manifest.json",
+          "sha256": "062c170687f7e86c61f247fc6c46c99352faeca25306923c223e28ab81d45c20"
+        }
+      ],
+      "actual_queue_jobs": 2,
+      "allowance_by_actual_job_kind": [
+        {
+          "kind": "initial",
+          "expected_seconds": 600,
+          "actual_jobs": 2
+        }
+      ],
+      "maximum_expected_seconds": 600
+    }
+  ],
+  "maximum_actual_allowance_seconds": 600,
+  "maximum_actual_or_frozen_projected_allowance_seconds": 600,
+  "handoff_settings_for1800second_tail": {
+    "hard_deadline_utc": "2026-11-07T03:26:32Z",
+    "tail_seconds": 1800.0,
+    "terminate_grace_seconds": 90.0,
+    "poll_seconds": 10.0,
+    "stop_margin_seconds": 1910.0,
+    "launch_margin_seconds": 2210.0,
+    "gpus": "0,1,2,3"
+  },
+  "actual_stop_threshold_utc": "2026-11-07T02:54:42+00:00",
+  "delivery_tail_boundary_utc": "2026-11-07T02:56:32+00:00",
+  "strict_launch_rule": "now + frozen_job.expected_seconds < hard_deadline - launch_margin_seconds",
+  "strict_equality_is_rejected": true,
+  "base_launch_threshold_before_expected_seconds_utc": "2026-11-07T02:49:42+00:00",
+  "per_allowance_strict_launch_cutoffs": [
+    {
+      "expected_seconds": 180,
+      "strict_latest_launch_utc": "2026-11-07T02:46:42+00:00",
+      "coarse_envelope_end_before_this_launch_cutoff_seconds": 2783.378716
+    },
+    {
+      "expected_seconds": 300,
+      "strict_latest_launch_utc": "2026-11-07T02:44:42+00:00",
+      "coarse_envelope_end_before_this_launch_cutoff_seconds": 2663.378716
+    },
+    {
+      "expected_seconds": 600,
+      "strict_latest_launch_utc": "2026-11-07T02:39:42+00:00",
+      "coarse_envelope_end_before_this_launch_cutoff_seconds": 2363.378716
+    }
+  ],
+  "coarse_conservative_envelope_not_final_FIFO": {
+    "published_C_only_runtime_utc": "2026-11-06T12:57:16.729154+00:00",
+    "published_C_only_finish_utc": "2026-11-06T23:03:30.600664+00:00",
+    "full_unchanged_v5_high_remaining_evaluation_seconds": 10608.02062046576,
+    "v5_already_contains_its_sensitivity_and_dispatch_tail_and_handoff_proxy": true,
+    "additional10percent_or_sensitivity_multiplier_applied": false,
+    "envelope_completion_utc": "2026-11-07T02:00:18.621284+00:00",
+    "completion_before_actual_stop_seconds": 3263.378716,
+    "completion_before_delivery_tail_seconds": 3373.378716,
+    "sufficient_coarse_latest_start_bound_assuming_all_starts_no_later_than_envelope_end": true,
+    "minimum_margin_to_all_allowance_launch_cutoffs_seconds": 2363.378716,
+    "final_real_FIFO_done": false,
+    "new_actual_C_queues_or_equivalence_discounts_assumed": false,
+    "unmeasured_phase_audit_READY_or_transfer_delay_not_a_guarantee": true
+  },
+  "cache_now": {
+    "snapshot": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/digest_cache_snapshot_1793970146222929314.json",
+      "sha256": "deb05a5259b7977b8b0b3ca8424686246705cc32980c053b43070eceb88fff55"
+    },
+    "snapshot_entries": 991,
+    "not_the_final_cache_binding": true,
+    "future_final_spec_must_bind_latest_complete_immutable_snapshot": true,
+    "current_draft_digest_cache_missing": true,
+    "must_retain_receipt_JSON_paths_and_checkpoint_canonical_paths_and_stat": true,
+    "cache_hit_is_historical_full_read_plus_current_stat_not_current_bytes": true,
+    "prepare_and_start_each_create_verifier_and_default_to_full_SHA_without_explicit_binding": true,
+    "worker_per_job_fresh_complete_input_SHA_unchanged": true
+  },
+  "final_ROOT_checklist": [
+    "All9 supplemental plans actual READY with scope/source/full-phase gates; helper does not enforce catalog completeness or pending_plan_ids.",
+    "Finalize11 explicit evaluation sources plus3 prior sources, each actual queue/manifest SHA; same-ID definitions must be identical.",
+    "Set example_only=false only in a separately finalized immutable spec; keep original draft. Bind digest_cache={path,sha256} to latest immutable snapshot, not mutable index/directory.",
+    "Stat/check selected-input receipt coverage before handoff. Missing/changed evidence falls back to fresh full SHA; do not silently budget it as a hit.",
+    "Old master must be exited/reaped, all recorded child PIDs/PGs absent and old state.lock exclusively acquired; no overlap.",
+    "Prepare in a new namespace. Inherit only rc0 completed identical definitions with all current outputs and canonical/alias attestation SHA; otherwise pending.",
+    "Inspect inherited completion counts, full-input/hit counters and actual finalized queue. Check real FIFO/each job allowance against strict launch gates as well as completion and30minute reserve.",
+    "ROOT separately authorizes start. Start rechecks source/spec, old queue/state snapshots, all inherited output attestations, and launch.lock; old state lock passes to new4GPU detached scheduler.",
+    "Only frozen run_frozen_evaluation.py argv/env accepted. No training jobs; no changed science, scoring policy, horizon or fallback truncation."
+  ],
+  "master_still_alive_at_review": true,
+  "handoff_or_prepare_or_start_or_final_evaluation_plan_called": false,
+  "large_checkpoint_or_score_payload_read": false,
+  "live_sources_changed": false,
+  "new_GPU_scheduler_or_watcher": false,
+  "wall_seconds": 0.06337135285139084,
+  "process_cpu_seconds": 0.06298593100000005
+}

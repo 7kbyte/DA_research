@@ -1,0 +1,290 @@
+{
+  "status": "passed",
+  "started_at_utc": "2026-11-06T13:09:59.090514+00:00",
+  "qa_directory": "/tmp/grad-research-20261106/reproduction_qa/durable_weight_restore_examples_v1",
+  "CPU_threads": 2,
+  "CUDA_VISIBLE_DEVICES": "",
+  "stages": [
+    {
+      "stage": "01_extract_common",
+      "argv": [
+        "tar",
+        "--extract",
+        "--file=/data/202610/7kb/research_delivery/primary_final_weights_lossless_v1.tar",
+        "--keep-old-files",
+        "primary_final_weights_manifest.json",
+        "base/pythia-410m-final/model.safetensors",
+        "base/pythia-410m-final/config.json",
+        "base/pythia-410m-final/tokenizer.json",
+        "base/pythia-410m-final/tokenizer_config.json",
+        "base/pythia-410m-final/special_tokens_map.json",
+        "base/pythia-410m-final/README.md",
+        "tools/src/replay_study/weight_archive.py",
+        "tools/src/replay_study/__init__.py",
+        "tools/scripts/archive_model_weights.py"
+      ],
+      "started_at_utc": "2026-11-06T13:09:59.093062+00:00",
+      "completed_at_utc": "2026-11-06T13:10:03.409032+00:00",
+      "wall_seconds": 4.315988216549158,
+      "child_user_seconds": 0.013519999999999999,
+      "child_sys_seconds": 0.8124159999999999,
+      "returncode": 0,
+      "read_scope": "Only named primary members copied: pinned base/config/tokenizer/README, archived tools, small manifest; TAR headers skipped, entire TAR not hashed",
+      "stdout": "logs/01_extract_common.stdout.log",
+      "stderr": "logs/01_extract_common.stderr.log",
+      "timer_relationship": "Independent sequential child stage; child CPU nested under parent inclusive child total, wall nested under parent wall"
+    },
+    {
+      "stage": "02_extract_main_zip",
+      "argv": [
+        "tar",
+        "--extract",
+        "--file=/data/202610/7kb/research_delivery/primary_final_weights_lossless_v1.tar",
+        "--keep-old-files",
+        "weights/formal_deterministic_B4_s11_b0p05_w0p05.xor.zip"
+      ],
+      "started_at_utc": "2026-11-06T13:10:03.409308+00:00",
+      "completed_at_utc": "2026-11-06T13:10:08.999696+00:00",
+      "wall_seconds": 5.590409949421883,
+      "child_user_seconds": 0.018293000000000004,
+      "child_sys_seconds": 1.454936,
+      "returncode": 0,
+      "read_scope": "Only one named compressed main B4 weight member copied; no original latest/optimizer checkpoint read",
+      "stdout": "logs/02_extract_main_zip.stdout.log",
+      "stderr": "logs/02_extract_main_zip.stderr.log",
+      "timer_relationship": "Independent sequential child stage; child CPU nested under parent inclusive child total, wall nested under parent wall"
+    },
+    {
+      "stage": "03_decode_main",
+      "argv": [
+        "/usr/bin/python",
+        "tools/scripts/archive_model_weights.py",
+        "--threads",
+        "2",
+        "decode",
+        "--archive",
+        "weights/formal_deterministic_B4_s11_b0p05_w0p05.xor.zip",
+        "--base",
+        "base/pythia-410m-final/model.safetensors",
+        "--output",
+        "restored/main_B4_seed11_final.pt"
+      ],
+      "started_at_utc": "2026-11-06T13:10:08.999825+00:00",
+      "completed_at_utc": "2026-11-06T13:10:30.864934+00:00",
+      "wall_seconds": 21.86513427644968,
+      "child_user_seconds": 16.596964,
+      "child_sys_seconds": 5.923463000000001,
+      "returncode": 0,
+      "read_scope": "Archived decoder reads extracted pinned base + selected ZIP; verifies base/FP32 base tensor/raw tensor/full model hashes and writes a new model-only checkpoint/report",
+      "stdout": "logs/03_decode_main.stdout.log",
+      "stderr": "logs/03_decode_main.stderr.log",
+      "timer_relationship": "Independent sequential child stage; child CPU nested under parent inclusive child total, wall nested under parent wall"
+    },
+    {
+      "stage": "04_extract_A_members",
+      "argv": [
+        "tar",
+        "--extract",
+        "--file=/data/202610/7kb/research_delivery/supplement_A_selected_final_weights_lossless_v1.tar",
+        "--keep-old-files",
+        "supplement_A_selected_final_manifest.json",
+        "metadata/lambda_sweep_deterministic_B4_s11_b0p05_w5__validation_selected_lambda_final.source_metadata.pt",
+        "weights/lambda_sweep_deterministic_B4_s11_b0p05_w5__validation_selected_lambda_final.xor.zip"
+      ],
+      "started_at_utc": "2026-11-06T13:10:30.865064+00:00",
+      "completed_at_utc": "2026-11-06T13:10:35.611813+00:00",
+      "wall_seconds": 4.746770482510328,
+      "child_user_seconds": 0.010695000000001897,
+      "child_sys_seconds": 0.9930889999999994,
+      "returncode": 0,
+      "read_scope": "Only named A manifest, own full nonoptimizer metadata sidecar and selected B4 lambda5 ZIP copied; A uses primary fixed base",
+      "stdout": "logs/04_extract_A_members.stdout.log",
+      "stderr": "logs/04_extract_A_members.stderr.log",
+      "timer_relationship": "Independent sequential child stage; child CPU nested under parent inclusive child total, wall nested under parent wall"
+    },
+    {
+      "stage": "05_decode_A",
+      "argv": [
+        "/usr/bin/python",
+        "tools/scripts/archive_model_weights.py",
+        "--threads",
+        "2",
+        "decode",
+        "--archive",
+        "weights/lambda_sweep_deterministic_B4_s11_b0p05_w5__validation_selected_lambda_final.xor.zip",
+        "--base",
+        "base/pythia-410m-final/model.safetensors",
+        "--output",
+        "restored/A_B4_lambda5_seed11_final.pt"
+      ],
+      "started_at_utc": "2026-11-06T13:10:35.611943+00:00",
+      "completed_at_utc": "2026-11-06T13:10:57.392600+00:00",
+      "wall_seconds": 21.780675396323204,
+      "child_user_seconds": 16.714738,
+      "child_sys_seconds": 5.776263999999999,
+      "returncode": 0,
+      "read_scope": "Same archived primary decoder and fixed base; selected A ZIP only; no original latest/optimizer checkpoint read",
+      "stdout": "logs/05_decode_A.stdout.log",
+      "stderr": "logs/05_decode_A.stderr.log",
+      "timer_relationship": "Independent sequential child stage; child CPU nested under parent inclusive child total, wall nested under parent wall"
+    },
+    {
+      "stage": "06_literal_document_metadata_example",
+      "argv": [
+        "/usr/bin/python",
+        "metadata_example.py"
+      ],
+      "started_at_utc": "2026-11-06T13:10:57.392719+00:00",
+      "completed_at_utc": "2026-11-06T13:10:58.735141+00:00",
+      "wall_seconds": 1.34245078638196,
+      "child_user_seconds": 1.1228619999999978,
+      "child_sys_seconds": 0.2583770000000012,
+      "returncode": 0,
+      "read_scope": "Exact Python block from pre-QA user document: only new restored model-only metadata, small main manifest and A own metadata sidecar; mmap CPU",
+      "stdout": "logs/06_literal_document_metadata_example.stdout.log",
+      "stderr": "logs/06_literal_document_metadata_example.stderr.log",
+      "timer_relationship": "Independent sequential child stage; child CPU nested under parent inclusive child total, wall nested under parent wall"
+    },
+    {
+      "stage": "07_independent_restored_model_fingerprints",
+      "argv": [
+        "/usr/bin/python",
+        "independent_fingerprint_check.py"
+      ],
+      "started_at_utc": "2026-11-06T13:10:58.735433+00:00",
+      "completed_at_utc": "2026-11-06T13:11:02.635611+00:00",
+      "wall_seconds": 3.900196772068739,
+      "child_user_seconds": 3.4243570000000005,
+      "child_sys_seconds": 0.6012349999999991,
+      "returncode": 0,
+      "read_scope": "Fresh mmap reload of two NEW restored checkpoints and full sorted tensor-byte model_fingerprint over 2 x1,621,336,064B; no original checkpoints or GPU",
+      "stdout": "logs/07_independent_restored_model_fingerprints.stdout.log",
+      "stderr": "logs/07_independent_restored_model_fingerprints.stderr.log",
+      "timer_relationship": "Independent sequential child stage; child CPU nested under parent inclusive child total, wall nested under parent wall"
+    },
+    {
+      "stage": "08_new_artifact_SHA_inventory",
+      "argv": [
+        "/usr/bin/python",
+        "inventory_new_artifacts.py"
+      ],
+      "started_at_utc": "2026-11-06T13:11:02.635962+00:00",
+      "completed_at_utc": "2026-11-06T13:11:08.573862+00:00",
+      "wall_seconds": 5.9379256926476955,
+      "child_user_seconds": 4.588484000000001,
+      "child_sys_seconds": 1.324326000000001,
+      "returncode": 0,
+      "read_scope": "Fresh SHA of only new selected/extracted/restored QA artifacts and completed logs; no original TAR or original optimizer checkpoint hashed",
+      "stdout": "logs/08_new_artifact_SHA_inventory.stdout.log",
+      "stderr": "logs/08_new_artifact_SHA_inventory.stderr.log",
+      "timer_relationship": "Independent sequential child stage; child CPU nested under parent inclusive child total, wall nested under parent wall"
+    }
+  ],
+  "parent_timer_scope": "Runtime preflight, extraction, two decode calls, literal document metadata example, fresh restored-state fingerprints, and new-artifact inventory; excludes initial directory creation/source preparation",
+  "source_TARs_preserved": true,
+  "original_optimizer_checkpoints_read": false,
+  "new_encoding": false,
+  "GPU_used": false,
+  "whole_TAR_rehash": false,
+  "prior_read_only_receipt_preserved": {
+    "path": "prior_read_only_receipt_snapshot.json",
+    "sha256": "0972a43b26f1b4fde8ec90197000ee422af98707f423e4bda065081378f179e5"
+  },
+  "documentation_snapshot": {
+    "path": "documentation_snapshot.md",
+    "sha256": "d329e58e8cb5586acf1232bf8a93c0624be94b5a90c53db4a8952f2653b78207"
+  },
+  "source_authorities": [
+    {
+      "tar": "/data/202610/7kb/research_delivery/primary_final_weights_lossless_v1.tar",
+      "publication_receipt": "/tmp/grad-research-20261106/worktree/docs/primary_weights_durable_publication.json",
+      "publication_receipt_sha256": "7eb5cab2d3c76aba6424923819c903afae0870c9a12c203f20143f2509ba9b2b",
+      "current_stat": {
+        "device": 106,
+        "inode": 386615240,
+        "bytes": 24949391360,
+        "uid": 11471,
+        "gid": 11471,
+        "mode": "0o600",
+        "mtime_ns": 1793947771820470742,
+        "ctime_ns": 1793947771820470742
+      },
+      "historical_full_TAR_sha256": "2bb090fbe7df172b31102068715143ab702087ff49f77ef7dfd5db3637c928b1",
+      "fresh_whole_TAR_hash": false
+    },
+    {
+      "tar": "/data/202610/7kb/research_delivery/supplement_A_selected_final_weights_lossless_v1.tar",
+      "publication_receipt": "/tmp/grad-research-20261106/worktree/docs/A_selected_weights_durable_publication.json",
+      "publication_receipt_sha256": "0391d92780c2ee7c3b3bc508b270a3322120ea6f68ece38e0e9f8d20274ca5a6",
+      "current_stat": {
+        "device": 106,
+        "inode": 393956795,
+        "bytes": 16949309440,
+        "uid": 11471,
+        "gid": 11471,
+        "mode": "0o600",
+        "mtime_ns": 1793965887290828922,
+        "ctime_ns": 1793965887290828922
+      },
+      "historical_full_TAR_sha256": "0dfec20b1bf9dde38b0d0d453c821eb088490bde188dc0e19bc498cc37b04631",
+      "fresh_whole_TAR_hash": false
+    }
+  ],
+  "archived_tool_sha256": {
+    "decoder": "3c2bcf9e38773ae4f69c27f85f342356dbefcb53d817be4321da6e9c4e550e1a",
+    "CLI": "28c5841cae8e7fd87d8cb62e7f756dad40ce15cb558710c31e48dfb45fde668a"
+  },
+  "independent_model_checks": {
+    "status": "passed",
+    "scope": "Fresh reload and complete new model-state fingerprint; no original latest or optimizer CP",
+    "models": [
+      {
+        "model": "main_B4_seed11_final",
+        "fingerprint": {
+          "sha256_model_state": "63069435cb5ea77931a58d7b00b573bcc4b517fdea283f7b551345997508c28c",
+          "state_elements": 405334016
+        },
+        "tensor_count": 292,
+        "source_checkpoint_kind": "unspecified_in_legacy_v1_archive",
+        "checkpoint_kind": "model_only_lossless_xor_restored",
+        "actual_target_prediction_tokens": 10000000,
+        "actual_replay_prediction_tokens": 500000,
+        "source_checkpoint_sha256": "19bf6f08e0c34d3334973a17142c7801f1be89f8fb20e49fc37f5b194303d014",
+        "new_restored_file_sha256_from_decoder": "463e63bd294446e752bb93f66abc9740af2d6cca8e46a69d099617bd2f871f2f",
+        "raw_model_bytes_read_for_independent_fingerprint": 1621336064,
+        "wall_seconds": 1.2381242252886295
+      },
+      {
+        "model": "A_B4_lambda5_seed11_final",
+        "fingerprint": {
+          "sha256_model_state": "ffc55075d0e8c14e77548752bd0de648858f75eeef98b8bffef88b160cb1c374",
+          "state_elements": 405334016
+        },
+        "tensor_count": 292,
+        "source_checkpoint_kind": "full_training_checkpoint",
+        "checkpoint_kind": "model_only_lossless_xor_restored",
+        "actual_target_prediction_tokens": 10000000,
+        "actual_replay_prediction_tokens": 500000,
+        "source_checkpoint_sha256": "df9aa60ca4be0b8e51432362304adf97ea5b6a5450f7ebbbc1fd8392eded6fd6",
+        "new_restored_file_sha256_from_decoder": "38ddb8e415a22d22a54fc3c5a5bfd5fdf207375a4191fb299504af0100663cac",
+        "raw_model_bytes_read_for_independent_fingerprint": 1621336064,
+        "wall_seconds": 1.2439859993755817
+      }
+    ]
+  },
+  "completed_at_utc": "2026-11-06T13:11:08.582113+00:00",
+  "artifact_inventory": {
+    "path": "artifact_inventory.json",
+    "sha256": "571cf6af628142211d2862ec1bc8c6f9d722db32fc7659cc756010f356a182ce",
+    "files": 43
+  },
+  "actual_doc_metadata_example_passed": true,
+  "all_new_output_SHA_verified": true,
+  "interpretation": "Durable selected-member extraction + archived CPU decoder usability + new restored-model fingerprints; not another uint8 comparison with original latest, not full Adam resume, no GPU retraining QA",
+  "parent_wall_seconds": 69.49171555042267,
+  "parent_self_user_seconds": 0.006261999999999997,
+  "parent_self_sys_seconds": 0.003981999999999999,
+  "children_user_seconds": 42.489913,
+  "children_sys_seconds": 17.144106,
+  "accounting": "Parent wall includes all sequential child stages and parent overhead. Child user/sys are sums of disjoint stages; their CPU is nested under inclusive process-tree CPU, not added to a pre-existing inclusive total. Parent self CPU excludes children. Per-model fingerprint wall and decoder internal wall are nested in their child stage wall."
+}

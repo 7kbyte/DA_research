@@ -77,15 +77,27 @@ def main():
         start = min(s[0]["epoch"] for s in samples.values())
         fig, axes = plt.subplots(2, 1, figsize=(10, 6), sharex=True)
         for index, data in sorted(samples.items()):
-            hours = [(s["epoch"] - start) / 3600 for s in data]
-            axes[0].plot(hours, [s["utilization_percent"] for s in data], label=f"GPU {index}", lw=.8)
-            axes[1].plot(hours, [s["power_w"] for s in data], label=f"GPU {index}", lw=.8)
+            hours, utilization, power = [], [], []
+            previous = None
+            for sample in data:
+                if previous is not None:
+                    duration = sample["epoch"] - previous["epoch"]
+                    if duration <= 0 or duration > args.maximum_gap_seconds or sample["uuid"] != previous["uuid"]:
+                        hours.append(float("nan"))
+                        utilization.append(float("nan"))
+                        power.append(float("nan"))
+                hours.append((sample["epoch"] - start) / 3600)
+                utilization.append(sample["utilization_percent"])
+                power.append(sample["power_w"])
+                previous = sample
+            axes[0].plot(hours, utilization, label=f"GPU {index}", lw=.8)
+            axes[1].plot(hours, power, label=f"GPU {index}", lw=.8)
         axes[0].set(ylabel="Sampled GPU utilization (%)", ylim=(-2, 102))
         axes[0].legend(ncol=4)
         axes[1].set(ylabel="GPU power (W)", xlabel="Hours since first telemetry sample")
         for ax in axes:
             ax.grid(alpha=.2)
-        fig.suptitle("Observed GPU activity (sampled; not FLOPs or process attribution)")
+        fig.suptitle("Observed GPU activity (sampled; gaps omitted, not FLOPs)")
         fig.tight_layout()
         for suffix in ("png", "pdf", "svg"):
             fig.savefig(args.output / f"gpu_activity.{suffix}", dpi=160)
