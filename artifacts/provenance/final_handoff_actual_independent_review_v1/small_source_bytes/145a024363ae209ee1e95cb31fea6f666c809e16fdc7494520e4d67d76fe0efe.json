@@ -1,0 +1,805 @@
+[
+  {
+    "id": "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/baselines/f0816d9f4c49d5c3a67b139e5e047a6363ac39174fd5a058c76da5d6a293fe55.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/baselines/f0816d9f4c49d5c3a67b139e5e047a6363ac39174fd5a058c76da5d6a293fe55_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    }
+  },
+  {
+    "id": "nll_pythia-2.8b_a3682edb06910d6b2fd33161",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_a3682edb06910d6b2fd33161",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B0_s11_w0/final.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B0_s11_w0/final_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_ef214cea5830a65126a83bea",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_ef214cea5830a65126a83bea",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B0_s11_w0/best.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B0_s11_w0/best_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_029947fb2873df7764becea8",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_029947fb2873df7764becea8",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B1_s11_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B1_s11_w0p05/final_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_cb886ecc183acfdbbc2d59ea",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_cb886ecc183acfdbbc2d59ea",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B1_s11_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B1_s11_w0p05/best_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_1e394d1544e8043c41643238",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_1e394d1544e8043c41643238",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B2_s11_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B2_s11_w0p05/final_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_d4681c6ea111a32b2e5cb8eb",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_d4681c6ea111a32b2e5cb8eb",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B2_s11_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B2_s11_w0p05/best_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_c5c5a66ea1355ec324dd9cf2",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_c5c5a66ea1355ec324dd9cf2",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B4_s11_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B4_s11_w0p05/final_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_a14595ebae5a0918b0b1057c",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_a14595ebae5a0918b0b1057c",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B4_s11_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B4_s11_w0p05/best_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_ad80ce1b591c645aad527652",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_ad80ce1b591c645aad527652",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_M_s11_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_M_s11_w0p05/final_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_ee107cc3230fc589240bb716",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_ee107cc3230fc589240bb716",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_M_s11_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_M_s11_w0p05/best_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_3a4183188bacaddf0b996bf2",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_3a4183188bacaddf0b996bf2",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B0_s22_w0/final.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B0_s22_w0/final_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_d585dfe43f6a43d26fd5183e",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_d585dfe43f6a43d26fd5183e",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B0_s22_w0/best.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B0_s22_w0/best_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_44689d11d2b0d9c104dd10f7",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_44689d11d2b0d9c104dd10f7",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B1_s22_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B1_s22_w0p05/final_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_a12b5155679776a3f83c69d4",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_a12b5155679776a3f83c69d4",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B1_s22_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B1_s22_w0p05/best_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_29f27dd2511f0ee8c7b38dc4",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_29f27dd2511f0ee8c7b38dc4",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B2_s22_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B2_s22_w0p05/final_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_02083b777632cc10e3876478",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_02083b777632cc10e3876478",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B2_s22_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B2_s22_w0p05/best_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_cf36937e586e0c75c9063fb2",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_cf36937e586e0c75c9063fb2",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B4_s22_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B4_s22_w0p05/final_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_9859ea587c8890298cb0a80f",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_9859ea587c8890298cb0a80f",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B4_s22_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B4_s22_w0p05/best_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_14cc0bc4402d30085db92c46",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_14cc0bc4402d30085db92c46",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_M_s22_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_M_s22_w0p05/final_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_05a046f8ada50c1dc9911490",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_05a046f8ada50c1dc9911490",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_M_s22_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_M_s22_w0p05/best_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_13b21629c941975ded7f8af9",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_13b21629c941975ded7f8af9",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B0_s33_w0/final.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B0_s33_w0/final_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_d0a149144cdb0724197424cc",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_d0a149144cdb0724197424cc",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B0_s33_w0/best.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B0_s33_w0/best_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_321ae3e8b60f211744f2e260",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_321ae3e8b60f211744f2e260",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B1_s33_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B1_s33_w0p05/final_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_69bd93376ed81c8bc0b077d4",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_69bd93376ed81c8bc0b077d4",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B1_s33_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B1_s33_w0p05/best_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_29decc727ffcb31e53f27f34",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_29decc727ffcb31e53f27f34",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B2_s33_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B2_s33_w0p05/final_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_2bb0aced983394918f8e8b19",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_2bb0aced983394918f8e8b19",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B2_s33_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B2_s33_w0p05/best_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_5c6ffca43b1ef32c0dd4a82f",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_5c6ffca43b1ef32c0dd4a82f",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B4_s33_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B4_s33_w0p05/final_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_46c300202c56a39496cde6bf",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_46c300202c56a39496cde6bf",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B4_s33_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_B4_s33_w0p05/best_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_63108fe940b5258cfcc14ef6",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_63108fe940b5258cfcc14ef6",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_M_s33_w0p05/final.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_M_s33_w0p05/final_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  },
+  {
+    "id": "nll_pythia-2.8b_e77e55524dc491451cf5e040",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "--manifest",
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "--manifest-sha256",
+      "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "--job-id",
+      "nll_pythia-2.8b_e77e55524dc491451cf5e040",
+      "--device",
+      "cuda:0"
+    ],
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_M_s33_w0p05/best.json",
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/nll/pythia-2.8b/extended_pythia_2p8b_25m/extended_v2_pythia_2p8b_m8_h25m_formal_M_s33_w0p05/best_execution.json"
+    ],
+    "expected_seconds": 180,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "depends_on": [
+      "nll_pythia-2.8b_f0816d9f4c49d5c3a67b_initial"
+    ]
+  }
+]

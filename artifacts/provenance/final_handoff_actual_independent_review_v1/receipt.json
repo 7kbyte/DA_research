@@ -1,0 +1,419 @@
+{
+  "schema_version": 1,
+  "status": "accepted_readonly_actual_handoff_review",
+  "observed_at_utc": "2026-11-06T22:24:54.231919+00:00",
+  "actual": {
+    "successor_pid": 3443910,
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/schedule_jobs.py",
+      "--queue",
+      "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/successor/queue.json",
+      "--state",
+      "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/successor/state.json",
+      "--gpus",
+      "0,1,2,3",
+      "--deadline",
+      "2026-11-07T03:26:32Z",
+      "--launch-margin-seconds",
+      "2210.0",
+      "--stop-margin-seconds",
+      "1910.0",
+      "--terminate-grace-seconds",
+      "90.0",
+      "--poll-seconds",
+      "10.0",
+      "--exit-when-idle"
+    ],
+    "state_snapshot_sha256": "a6de91bad0abd0f79f99c69b6b85ff7767e771dcd9ed970248dfa15a77fd7599",
+    "state_counts": {
+      "completed": 303,
+      "running": 4,
+      "pending": 207
+    },
+    "active_jobs": [
+      "behavior_pythia-410m_21d1c45e8a6cd75d4f0c9d8d",
+      "behavior_pythia-410m_f1166a0ba06df14ebc75b8b3",
+      "behavior_pythia-410m_9e3462c83fc01313314b609a",
+      "behavior_pythia-410m_871e750917678769ac02e42e"
+    ],
+    "old_master_absent": true,
+    "all514_definitions_exactly_frozen": true,
+    "inherited299": true,
+    "new215": true,
+    "new_forward_jobs": 212,
+    "alias_materialization_jobs": 3
+  },
+  "input_verification": {
+    "prepare": {
+      "mode": "stat_bound_historical_digest_with_fresh_fallback",
+      "scope": "selected inference input files; small manifest/queue/output-attestation verification remains fresh",
+      "counters": {
+        "full_reads": 38,
+        "full_read_bytes": 11914634,
+        "cache_hits": 1063,
+        "invalidations": 0
+      },
+      "cache_snapshot": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/digest_cache_snapshot_1794003609611862274.json",
+        "sha256": "bba05b10faab3f3ed3c808f64949fbdd57e31237f122e856c77ffbe2a5b87d4f"
+      },
+      "cache_reader_source": {
+        "path": "/tmp/grad-research-20261106/worktree/scripts/stat_bound_digest_cache.py",
+        "sha256": "9cc01b493b46a5bf391a7c649a379d87011fff077ddeea701eaf8a84bdb568e2"
+      },
+      "cache_hits_are_current_byte_reads": false,
+      "frozen_worker_always_fresh_full_input_hash": true
+    },
+    "start": {
+      "mode": "stat_bound_historical_digest_with_fresh_fallback",
+      "scope": "selected inference input files; small manifest/queue/output-attestation verification remains fresh",
+      "counters": {
+        "full_reads": 38,
+        "full_read_bytes": 11914634,
+        "cache_hits": 1063,
+        "invalidations": 0
+      },
+      "cache_snapshot": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/digest_cache_snapshot_1794003609611862274.json",
+        "sha256": "bba05b10faab3f3ed3c808f64949fbdd57e31237f122e856c77ffbe2a5b87d4f"
+      },
+      "cache_reader_source": {
+        "path": "/tmp/grad-research-20261106/worktree/scripts/stat_bound_digest_cache.py",
+        "sha256": "9cc01b493b46a5bf391a7c649a379d87011fff077ddeea701eaf8a84bdb568e2"
+      },
+      "cache_hits_are_current_byte_reads": false,
+      "frozen_worker_always_fresh_full_input_hash": true
+    },
+    "fresh_small_paths_statted_not_reread": 38
+  },
+  "FIFO": [
+    {
+      "name": "low",
+      "jobs": 215,
+      "phase_counts": {
+        "main_behavior_adapted": 66,
+        "A_selected_behavior": 15,
+        "A_selected_behavior_materialization": 3,
+        "C_pythia_410m_behavior_final": 21,
+        "C_pythia_1b_nll_initial": 1,
+        "C_pythia_1b_behavior_final": 21,
+        "C_pythia_1b_nll_final": 21,
+        "C_pythia_1b_nll_best": 21,
+        "C_pythia_2p8b_nll_initial": 1,
+        "C_pythia_2p8b_behavior_final": 15,
+        "C_pythia_2p8b_nll_final": 15,
+        "C_pythia_2p8b_nll_best": 15
+      },
+      "FIFO_seconds": 5740,
+      "finish_from_actual_launch_plus300s_allowance": "2026-11-07T00:03:26.449784+00:00",
+      "rates_used_directly_from_bound_v6": true,
+      "extra_rate_multipliers": 1,
+      "all_job_admission_proxy_passes": true
+    },
+    {
+      "name": "central",
+      "jobs": 215,
+      "phase_counts": {
+        "main_behavior_adapted": 66,
+        "A_selected_behavior": 15,
+        "A_selected_behavior_materialization": 3,
+        "C_pythia_410m_behavior_final": 21,
+        "C_pythia_1b_nll_initial": 1,
+        "C_pythia_1b_behavior_final": 21,
+        "C_pythia_1b_nll_final": 21,
+        "C_pythia_1b_nll_best": 21,
+        "C_pythia_2p8b_nll_initial": 1,
+        "C_pythia_2p8b_behavior_final": 15,
+        "C_pythia_2p8b_nll_final": 15,
+        "C_pythia_2p8b_nll_best": 15
+      },
+      "FIFO_seconds": 7340,
+      "finish_from_actual_launch_plus300s_allowance": "2026-11-07T00:30:06.449784+00:00",
+      "rates_used_directly_from_bound_v6": true,
+      "extra_rate_multipliers": 1,
+      "all_job_admission_proxy_passes": true
+    },
+    {
+      "name": "high",
+      "jobs": 215,
+      "phase_counts": {
+        "main_behavior_adapted": 66,
+        "A_selected_behavior": 15,
+        "A_selected_behavior_materialization": 3,
+        "C_pythia_410m_behavior_final": 21,
+        "C_pythia_1b_nll_initial": 1,
+        "C_pythia_1b_behavior_final": 21,
+        "C_pythia_1b_nll_final": 21,
+        "C_pythia_1b_nll_best": 21,
+        "C_pythia_2p8b_nll_initial": 1,
+        "C_pythia_2p8b_behavior_final": 15,
+        "C_pythia_2p8b_nll_final": 15,
+        "C_pythia_2p8b_nll_best": 15
+      },
+      "FIFO_seconds": 9370,
+      "finish_from_actual_launch_plus300s_allowance": "2026-11-07T01:03:56.449784+00:00",
+      "rates_used_directly_from_bound_v6": true,
+      "extra_rate_multipliers": 1,
+      "all_job_admission_proxy_passes": true
+    }
+  ],
+  "helper_whole_cost": {
+    "prepare_seconds": 2.8036602921783924,
+    "start_seconds": 2.6795268170535564,
+    "detached_scheduler_lifetime_excluded": true,
+    "nested_input_verification_not_added": true,
+    "failed_inline_parent_wall_unknown": true
+  },
+  "limits": [
+    "No score/opaque output payload was read or rehashed by this independent reviewer.",
+    "Inherited output SHA/attestation verification is evidence from the frozen actual helper, not rerun here.",
+    "FIFO times are proxy scenarios, not actual completion or scoring authority.",
+    "Observed live successor state is preserved as an immutable byte snapshot in small_source_bytes; active state itself must not be committed."
+  ],
+  "source_proofs": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/ROOT_preflight.json",
+      "sha256": "04fafac47a049670774bb9cba691079e721b6081d510afe405c98aab2167237d",
+      "bytes": 224303
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/final_spec.json",
+      "sha256": "ae8840946a0c4aa935bd08bc1c66a4e6a4c17fa11391e8cafa65b730bb20875d",
+      "bytes": 7922
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/old_master_stop_receipt.json",
+      "sha256": "87d62932dbf89e952f4a0c31602f72daad1e78c7d65e6c5e9fed9b2502ddea23",
+      "bytes": 914
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/ROOT_start_authority.json",
+      "sha256": "dc18f45cdc8c315c69f2cafd33e9638872d90ea098dc65d75d685c9154000e8a",
+      "bytes": 10002
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/ROOT_inline_review_attempt1_failure.json",
+      "sha256": "391c0d6441aa5b31ccad4fda1fe0daeac661f5e9b8cd00861931908880491d98",
+      "bytes": 348
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/successor/handoff.json",
+      "sha256": "9154832de559db0d04025f84b21e199a04a43a0e358f4cd3ec1525f53d6fa27b",
+      "bytes": 377939
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/successor/launch.json",
+      "sha256": "9df19ce3688b7dd19d68e74c8cc2361cce5604703a480ff3bce665de0d34ebe5",
+      "bytes": 1838
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/successor/queue.json",
+      "sha256": "5468a5641cfcc097f2c84c2224df78bdf94fea92a42411b8ef077b951772b8f7",
+      "bytes": 615602
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/successor/old_queue_snapshot.json",
+      "sha256": "37f00a8ac4af9d71aabb6b54f425e3fa222f596e25ce6e049015c0a66185e377",
+      "bytes": 588483
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/successor/old_state_snapshot.json",
+      "sha256": "4753b1c3fd13b51e36cedcce62117aef27307eb2040e96b862a4d7c31ff4124f",
+      "bytes": 625361
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/successor/source_spec.json",
+      "sha256": "ae8840946a0c4aa935bd08bc1c66a4e6a4c17fa11391e8cafa65b730bb20875d",
+      "bytes": 7922
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/prepare_timing/whole_child_timing.json",
+      "sha256": "c87dac417ba3039c0ed6b293aeae0ba7e86929637272d97b87742abb19f029c0",
+      "bytes": 756
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/start_timing/whole_child_timing.json",
+      "sha256": "b9d52d45ca24ecd89f997a037c00db4ee07dac2e447892896532245e73db6bdd",
+      "bytes": 684
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/configs/primary_evaluation_v2_execution_matched_nll_queue.json",
+      "sha256": "1428e024f710873a09138ccd47742e2897a6eb25fe3d9b35523153d43e7df346",
+      "bytes": 72920
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_nll_manifest.json",
+      "sha256": "d1502bcaff5cdcd75d984a4b8776f1cb4027b596f474835bfe9ed18875d9fd18",
+      "bytes": 887166
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/evaluation_plan.py",
+      "sha256": "1f68bab77a0e4d9953bcfa85306702dbc21d3ce5c85691218e06ea15df75196f",
+      "bytes": 40509
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+      "sha256": "1f691de8da574c671a8822b5999292fd601f31f83d3794f1a603eaa8c79bef8d",
+      "bytes": 12283
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/src/replay_study/evaluate.py",
+      "sha256": "d9648b4fbc891746a9bafe9e9639e2ee584521ba68bd949d2091484c833c3c46",
+      "bytes": 16936
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/src/replay_study/execution.py",
+      "sha256": "70ed6b3d63f950ffc00f2c671f20e0d842c154f4cbf1648fe9a6511bbd077bf5",
+      "bytes": 4371
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/run_evaluate.py",
+      "sha256": "6d7b9cd6b311f96e94b854e8ccd15f15f92ff9eefbd6b5a0dddc67fee8989ddf",
+      "bytes": 2366
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/configs/primary_evaluation_v2_execution_matched_behavior_queue.json",
+      "sha256": "393f3df2f0213e2e4e4d2387109b750825c797b909f4b05d16cd3cb739f6aaa9",
+      "bytes": 101444
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+      "sha256": "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+      "bytes": 1092890
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/evaluate_tasks.py",
+      "sha256": "cfc4f149b021740f90245e3fa822f801f30c82f6ba580d43aeec4857cbab9981",
+      "bytes": 6410
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/src/replay_study/tasks.py",
+      "sha256": "c631b1c81386193b645b59a3a82eb73dfacc6d9d1302b95e997f0de4afc47a51",
+      "bytes": 12569
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/make_behavioral_queue.py",
+      "sha256": "14076e3bfbf9ad4d5665e9e943ce72b55bf74414a416d3465a050fefdbd8d340",
+      "bytes": 19576
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_nll/queue.json",
+      "sha256": "a882a80a5728723fbf5a3001f1940562018622a54ed4d5e28f12bed5ff1dd59c",
+      "bytes": 131301
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_nll/manifest.json",
+      "sha256": "88dc927c9b4909cca66901608216290e1e435022e4ff925c00875f5099077a90",
+      "bytes": 2016095
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/queue.json",
+      "sha256": "cc9226e32515d08dc9ff12055b66e620d98fa4b544d51adde7eb1c386cdd0be2",
+      "bytes": 25473
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/manifest.json",
+      "sha256": "31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa",
+      "bytes": 370691
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_B_nll/queue.json",
+      "sha256": "d166e2f4aaee69870328952274c471a804a2aec387b9838deaf653a9fe353240",
+      "bytes": 62683
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_B_nll/manifest.json",
+      "sha256": "ffa3304307004d4e013b7414a841c5cdc54df619dd5f0376b276491ab2c515b4",
+      "bytes": 989003
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_nll/queue.json",
+      "sha256": "d94df2358c0e2c644135b7071f95ae7adc6fd09ed74609437133a380eabb968d",
+      "bytes": 48671
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_nll/manifest.json",
+      "sha256": "48f8b2235c303211e4f79a92c16c7fb1c8d3757ce5d66a97a555fba7dfcf8f32",
+      "bytes": 2340545
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/queue.json",
+      "sha256": "d2b733c9d91e8a1102cb5a33908058a8567db010ffe1915fe6f210d50a9e920b",
+      "bytes": 33579
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/manifest.json",
+      "sha256": "db6bdaf2f631ffc1c97f5d9c0ae1d0521e67ee6556790eb472d74195c5fb66e1",
+      "bytes": 1242267
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_1b_100m_nll/queue.json",
+      "sha256": "fc47934e5e39d5cd3776d87171d064b19359cb6bfabeb677217ef7b6d5b5303b",
+      "bytes": 47749
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_1b_100m_nll/manifest.json",
+      "sha256": "e1e71c5d22b4750a7f1a1e9ea278b6fe93296108812ebd0ba71b6130f8d078d7",
+      "bytes": 2312431
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_1b_100m_behavior/queue.json",
+      "sha256": "61ca9094876a97851c0d9780d8390d1d5921504013ccc2503e95df1607b65e2a",
+      "bytes": 32835
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_1b_100m_behavior/manifest.json",
+      "sha256": "e56a85f0c1d1eb2c375f863873fbeed7efc3c934f05b61d77b63ae7a7744fe6d",
+      "bytes": 1227844
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/queue.json",
+      "sha256": "145a024363ae209ee1e95cb31fea6f666c809e16fdc7494520e4d67d76fe0efe",
+      "bytes": 33658
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+      "sha256": "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb",
+      "bytes": 467072
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_behavior/queue.json",
+      "sha256": "2adf0ae18b300e4fa253e86cbc3a653bf2abe0b32e12e761a1d4378da00cfcaf",
+      "bytes": 22545
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_behavior/manifest.json",
+      "sha256": "0170c8aa27ba3bcbf8b9b9c51616ac99cea0f3d806986a645a48372bd8734b0e",
+      "bytes": 287230
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/configs/planned_model_behavioral_timing_v1_queue.json",
+      "sha256": "427f2e212cce083aad7aa80ccf543240d3928c5e1957c2fed613a0542655d2c6",
+      "bytes": 2777
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/docs/planned_model_behavioral_timing_v1_manifest.json",
+      "sha256": "062c170687f7e86c61f247fc6c46c99352faeca25306923c223e28ab81d45c20",
+      "bytes": 36233
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/make_planned_model_initial_queue.py",
+      "sha256": "f18963a8b78f25304f110c0ff92c6c968f6f89e65e664fd72fa32c4556ada920",
+      "bytes": 7425
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/evaluation_timing_budget_v6_refresh_2110.json",
+      "sha256": "3a771074ac991b3b4794f4922090c5a6f2c7d72b0c8ab165a143842970a8db29",
+      "bytes": 29810
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/successor/state.json",
+      "sha256": "a6de91bad0abd0f79f99c69b6b85ff7767e771dcd9ed970248dfa15a77fd7599",
+      "bytes": 370681
+    }
+  ],
+  "payload_bytes_read": 0,
+  "score_semantics_parsed": false,
+  "no_scheduler_actions_performed": true
+}
