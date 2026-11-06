@@ -1,0 +1,294 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-11-06T12:49:22.949641+00:00",
+  "task": "targeted three-nearest-primary-source literature positioning recheck",
+  "status": "completed_with_explicit_fetch_limitations",
+  "scores_read": [],
+  "gpu_work": false,
+  "existing_report_or_frozen_literature_modified": false,
+  "scope_includes": [
+    "models and adaptation task",
+    "original pretraining data access",
+    "generation conditions",
+    "unique bank versus cumulative replay",
+    "CE/KL normalization and coefficient",
+    "selection and ablation"
+  ],
+  "sources": [
+    {
+      "id": "marek_paper_v1",
+      "url": "https://arxiv.org/html/2605.26097v1",
+      "primary": true,
+      "version": "arXiv v1",
+      "locators": [
+        "section 2",
+        "Figure 4",
+        "Appendix A.1",
+        "Appendix B.2"
+      ],
+      "evidence": [
+        "205M; FineWeb-Edu 30B; Nemotron-CC-Math 10M; validation early stopping; lambda 10",
+        "frozen reference; trained corpus identifier; temperature 1; fixed length",
+        "default context 256; default replay batch one quarter downstream batch"
+      ]
+    },
+    {
+      "id": "marek_official_code",
+      "url": "https://github.com/martin-marek/forgetting/tree/5cde463965ff9a9a4f07620703ea884fdea9f622",
+      "primary": true,
+      "commit": "5cde463965ff9a9a4f07620703ea884fdea9f622",
+      "commit_time": "2026-05-27T13:21:52Z",
+      "historical_paper_run_byte_identity_verified": false,
+      "locators": [
+        "train_single.py:78-81",
+        "train_single.py:130-132",
+        "train_single.py:281-323",
+        "loss.py:13-29"
+      ],
+      "evidence": [
+        "separately reduced target and replay loss; replay coefficient multiplied after reduction",
+        "new PRNG key and regenerated synthetic buffer after exhaustion",
+        "last position zeroed; means retain full B*T denominator"
+      ]
+    },
+    {
+      "id": "bethune_published_identity",
+      "url": "https://proceedings.mlr.press/v267/bethune25a.html",
+      "primary": true,
+      "version": "PMLR 267:4020-4042, ICML 2025",
+      "publication_identity_verified": true,
+      "published_pdf_full_bytes_verified": false
+    },
+    {
+      "id": "bethune_author_fulltext",
+      "url": "https://arxiv.org/html/2502.06042v2",
+      "primary": true,
+      "version": "arXiv v2, 2025-05-26",
+      "byte_equivalence_to_published_pdf_verified": false,
+      "locators": [
+        "section 2.3, mixture equation",
+        "section 3.1 and Table 1",
+        "section 4.4 and Figure 6"
+      ],
+      "evidence": [
+        "self-pretrained GPT-style 41M-1.27B; RedPajamaV2 original pretraining data available",
+        "target unique 300K-30M; validation minimum endpoint",
+        "usual nonrepeating pretraining stream; separate tiny/arxiv/p=1% capped-bank ablation 32K/96K/320K/920K/3.2M",
+        "mixture weight p differs from independent replay coefficient and replay/target exposure ratio"
+      ]
+    },
+    {
+      "id": "ssr_paper",
+      "url": "https://aclanthology.org/2024.acl-long.77.pdf",
+      "primary": true,
+      "version": "ACL 2024, pp.1416-1428",
+      "locators": [
+        "section 4",
+        "section 5.1",
+        "Figure 5",
+        "Figure 8; SSR ratio definition"
+      ],
+      "evidence": [
+        "Llama-2-7B/chat and Alpaca-7B; sequential SuperNI instruction tasks",
+        "1% real SuperNI training demonstrations, K=2; base model synthesis; latest model output refinement",
+        "20 clusters for SuperNI; centroid-near selection; previous synthetic sets reused",
+        "default synthetic/original instance ratio 10%, not prediction-token exposure ratio",
+        "random synthetic selection can outperform unsupervised clustering in ablation"
+      ]
+    },
+    {
+      "id": "ssr_official_code",
+      "url": "https://github.com/XMUDeepLIT/SSR/tree/38d2a067ff250f5c1b8967edb14c872c8b5182fc",
+      "primary": true,
+      "commit": "38d2a067ff250f5c1b8967edb14c872c8b5182fc",
+      "commit_time": "2024-10-21T01:49:37Z",
+      "original_repository_redirect": "https://github.com/DeepLearnXMU/SSR",
+      "scope": "official repository identity and documented workflow, not a complete trainer normalization audit"
+    }
+  ],
+  "local_evidence_files": [
+    {
+      "path": "artifacts/provenance/literature_three_paper_recheck_20261106/bounded_retrieval_receipts.json",
+      "sha256": "135818d1e8f221705e3301bb8bc6615155f86a9683eb2bb2077bc6df5aa10cd7",
+      "bytes": 2187,
+      "stat_after": {
+        "st_dev": 139,
+        "st_ino": 92462924689,
+        "st_size": 2187,
+        "st_mtime_ns": 1793969212179768215,
+        "st_ctime_ns": 1793969212179768215
+      }
+    },
+    {
+      "path": "artifacts/provenance/literature_three_paper_recheck_20261106/marek2605.26097v1.html",
+      "sha256": "7b30d073d9e0665af5483f1e3fa190ffa8118d1ae7ecf7d599a7fc79859d17ad",
+      "bytes": 159008,
+      "stat_after": {
+        "st_dev": 139,
+        "st_ino": 92462922895,
+        "st_size": 159008,
+        "st_mtime_ns": 1793968974464752876,
+        "st_ctime_ns": 1793968974464752876
+      }
+    },
+    {
+      "path": "artifacts/provenance/literature_three_paper_recheck_20261106/marek_loss.py",
+      "sha256": "1c128c5a422a4f9dfde8ce716fb5cd175a52bd75cfd4682b8e6174fe46344f0a",
+      "bytes": 1566,
+      "stat_after": {
+        "st_dev": 139,
+        "st_ino": 92462924687,
+        "st_size": 1566,
+        "st_mtime_ns": 1793969189175863517,
+        "st_ctime_ns": 1793969189175863517
+      }
+    },
+    {
+      "path": "artifacts/provenance/literature_three_paper_recheck_20261106/marek_repo_commit.json",
+      "sha256": "ed8fdf99fb9b0e8cf5f627dd22d9efa29157764e360a9a5e5a6f5e59ffa04b16",
+      "bytes": 4953,
+      "stat_after": {
+        "st_dev": 139,
+        "st_ino": 92462922893,
+        "st_size": 4953,
+        "st_mtime_ns": 1793968969539773253,
+        "st_ctime_ns": 1793968969539773253
+      }
+    },
+    {
+      "path": "artifacts/provenance/literature_three_paper_recheck_20261106/marek_train_single.py",
+      "sha256": "61987b079d8bbe99a2fdb6f371420926724162d672906ee401b40c51075e4ae4",
+      "bytes": 18990,
+      "stat_after": {
+        "st_dev": 139,
+        "st_ino": 92462924675,
+        "st_size": 18990,
+        "st_mtime_ns": 1793969188216867490,
+        "st_ctime_ns": 1793969188216867490
+      }
+    },
+    {
+      "path": "artifacts/provenance/literature_three_paper_recheck_20261106/ssr_acl2024.pdf",
+      "sha256": "500ca545ec9b1016fbb781364e4750dbcbaa7d7c85d276fc0b3f026cfa445fa5",
+      "bytes": 692116,
+      "stat_after": {
+        "st_dev": 139,
+        "st_ino": 92462922898,
+        "st_size": 692116,
+        "st_mtime_ns": 1793969008006614079,
+        "st_ctime_ns": 1793969008006614079
+      }
+    },
+    {
+      "path": "artifacts/provenance/literature_three_paper_recheck_20261106/ssr_repo_commit.json",
+      "sha256": "38127b5d885ca990eff0a75cbf3a50ed42d4d039665b8c9d32f82dc3e6e808e5",
+      "bytes": 10560,
+      "stat_after": {
+        "st_dev": 139,
+        "st_ino": 92462922894,
+        "st_size": 10560,
+        "st_mtime_ns": 1793968969857771938,
+        "st_ctime_ns": 1793968969857771938
+      }
+    }
+  ],
+  "reviewed_local_files": [
+    {
+      "path": "literature/文献调研.md",
+      "sha256": "a769ef602b21f0357c6f350a0314f1e964d61f8cc2b31d371532596494574ac7",
+      "bytes": 9398,
+      "stat_after": {
+        "st_dev": 139,
+        "st_ino": 114029388426,
+        "st_size": 9398,
+        "st_mtime_ns": 1793942117939953514,
+        "st_ctime_ns": 1793942117939953514
+      }
+    },
+    {
+      "path": "研究报告.md",
+      "sha256": "b8570b842b78eee6410069537c5fd893e667f4208d4bcc1c6e5bea2224a2efe1",
+      "bytes": 38229,
+      "stat_after": {
+        "st_dev": 139,
+        "st_ino": 53896796131,
+        "st_size": 38229,
+        "st_mtime_ns": 1793966598225622877,
+        "st_ctime_ns": 1793966598225622877
+      }
+    },
+    {
+      "path": "docs/方法推导与解释边界.md",
+      "sha256": "a0c67b334c0601bb549af8af766c0c99b620a0f20d3550d11eba61ea5c29d54b",
+      "bytes": 11592,
+      "stat_after": {
+        "st_dev": 139,
+        "st_ino": 111806888176,
+        "st_size": 11592,
+        "st_mtime_ns": 1793957980962247094,
+        "st_ctime_ns": 1793957980962247094
+      }
+    },
+    {
+      "path": "docs/论文写作与答辩提纲.md",
+      "sha256": "4799b453f5c2fbadf156693084ebef0b11b731bb51a67abfc909cce93e64b4c9",
+      "bytes": 10680,
+      "stat_after": {
+        "st_dev": 139,
+        "st_ino": 111852645290,
+        "st_size": 10680,
+        "st_mtime_ns": 1793967854184414579,
+        "st_ctime_ns": 1793967854184414579
+      }
+    }
+  ],
+  "output": {
+    "path": "docs/三篇近邻文献_实验定位复核备忘录_20261106.md",
+    "sha256": "104d63c053a414bba864f8c063b5162cb40baec14078243214af9ecf9c8e10a6",
+    "bytes": 5674,
+    "stat_after": {
+      "st_dev": 139,
+      "st_ino": 111852798944,
+      "st_size": 5674,
+      "st_mtime_ns": 1793969323391307270,
+      "st_ctime_ns": 1793969323391307270
+    }
+  },
+  "conclusion": "Existing local claims have adequate qualifications; no mandatory conclusion correction. Optional clarification: Marek uses a corpus identifier and regenerating synthetic buffers, unlike an immutable finite bank. SSR uses real ICL demonstrations and output refinement; C is inspired control only.",
+  "unknowns": [
+    "Marek per-point historical unique and cumulative synthetic counts were not reconstructed",
+    "current official code commit is not certified identical to historical v1 runs",
+    "SSR prediction-token accounting, exact cumulative exposure, and trainer CE mask/normalization were not audited",
+    "Bethune arXiv v2 versus published PDF byte equality not certified; official code endpoint not verified"
+  ],
+  "retrieval_limitations": {
+    "web_primary_pages_read": true,
+    "download_receipt": "bounded_retrieval_receipts.json",
+    "published_bethune_pdf": "Full raw PMLR PDF fetch exceeded 25-second bound; partial bytes were removed. Web tool could read PMLR metadata and author arXiv v2. OpenReview required browser verification.",
+    "first_download_batch": "Four completed files retained. Supervisor interrupted while one slow transfer remained; no all-success batch receipt exists. Individual retained files are hashed here, not assigned invented HTTP status or exact retrieval start.",
+    "pdf_local_text_extraction": "pdftotext absent; official SSR PDF was read using web PDF extraction. No dependency installed."
+  },
+  "stat_and_hash_policy": "fresh bytes for small evidence/local documents only, stable dev/inode/size/mtime_ns/ctime_ns before and after each read",
+  "review_line_references": {
+    "literature/文献调研.md": [
+      9,
+      15,
+      16,
+      18
+    ],
+    "研究报告.md": [
+      11,
+      15,
+      17,
+      46,
+      50,
+      54
+    ],
+    "docs/方法推导与解释边界.md": [
+      15,
+      24,
+      35,
+      73
+    ]
+  }
+}
