@@ -1,0 +1,14 @@
+{
+  "status": "preparation_gate_assertion_failed_but_shell_continued_to_bounded_operation",
+  "utc": "2026-11-06T22:23:41.458645+00:00",
+  "failure": "The immediately refreshed available memory was no longer below24GiB, so the proposed trigger assertion failed before trigger.json creation. The shell did not use set-e and continued to the already-written bounded hint child.",
+  "prior_observation": "22:21 observed18.361541748GiB available, below24GiB; no fresh exact value from failed preparation was persisted.",
+  "actual_operation_whole_returncode": 0,
+  "actual_operation_receipt": "receipt.json",
+  "all_three_completed_output_guards_passed": true,
+  "large_payload_bytes_read": 0,
+  "bytes_modified_or_deleted": false,
+  "limitation": "Hint was unnecessary under the latest recovered memory observation; do not claim it was required at execution or caused all observed cgroup change.",
+  "corrective_action": "Dependent shell operations henceforth use set-e or a single checked Python control flow. No further cache hint unless a fresh failure is persisted before invocation.",
+  "failed_preparation_wall_seconds": null
+}

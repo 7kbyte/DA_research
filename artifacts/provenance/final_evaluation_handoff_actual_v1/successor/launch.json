@@ -1,0 +1,49 @@
+{
+  "pid": 3443910,
+  "launched_at_utc": "2026-11-06T22:22:46.449784+00:00",
+  "argv": [
+    "/usr/bin/python",
+    "/tmp/grad-research-20261106/worktree/scripts/schedule_jobs.py",
+    "--queue",
+    "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/successor/queue.json",
+    "--state",
+    "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/successor/state.json",
+    "--gpus",
+    "0,1,2,3",
+    "--deadline",
+    "2026-11-07T03:26:32Z",
+    "--launch-margin-seconds",
+    "2210.0",
+    "--stop-margin-seconds",
+    "1910.0",
+    "--terminate-grace-seconds",
+    "90.0",
+    "--poll-seconds",
+    "10.0",
+    "--exit-when-idle"
+  ],
+  "handoff_sha256": "9154832de559db0d04025f84b21e199a04a43a0e358f4cd3ec1525f53d6fa27b",
+  "old_master_lock_inherited_by_new_scheduler": true,
+  "input_verification": {
+    "mode": "stat_bound_historical_digest_with_fresh_fallback",
+    "scope": "selected inference input files; small manifest/queue/output-attestation verification remains fresh",
+    "counters": {
+      "full_reads": 38,
+      "full_read_bytes": 11914634,
+      "cache_hits": 1063,
+      "invalidations": 0
+    },
+    "cache_snapshot": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/digest_cache_snapshot_1794003609611862274.json",
+      "sha256": "bba05b10faab3f3ed3c808f64949fbdd57e31237f122e856c77ffbe2a5b87d4f"
+    },
+    "cache_reader_source": {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/stat_bound_digest_cache.py",
+      "sha256": "9cc01b493b46a5bf391a7c649a379d87011fff077ddeea701eaf8a84bdb568e2"
+    },
+    "cache_hits_are_current_byte_reads": false,
+    "frozen_worker_always_fresh_full_input_hash": true
+  },
+  "training_jobs_present": false,
+  "score_files_deserialized": false
+}

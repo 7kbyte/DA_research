@@ -1,12 +1,12 @@
 # 研究运行状态
 
-更新时间：2026-11-06T21:35:53.141284+00:00
+更新时间：2026-11-06T22:24:48.365197+00:00
 截止时间：2026-11-07 03:26:32 UTC（北京时间11:26）
-已用 18.16 小时；剩余 5.84 小时。
+已用 18.97 小时；剩余 5.03 小时。
 
 以下状态来自运行日志。配置完成不等于实验完成；正式结论以最终研究报告为准。
 
-当前阶段：正式训练263/267完成；主36、A108、B60、C410长程24已分析，C2.8B15/15训练于21:24完成，C1B20/24完成、最后4组运行且无待启动项。v5实际7/9 READY；21:26已启动C2.8B best固定首个CPU导出样例，批量与持久发布尚未授权。C2.8两分析plan/FALSE/v3 repair已准备，等待评价完整闭包；剩余C模型与行为分数均未解封。八权重包、19:18项目快照、B单例恢复及成本v8已验收；16页报告和最终树v2准备保持。预测训练22:22:42/high评价01:05:35只是估计，尚不满足最终handoff。
+当前阶段：正式训练267/267全部完成（主36+A108+B60+C63，累计7.215B目标预测token）；完整C审计63/63通过，v5九项READY齐备。旧607项master于22:21正常退出，22:22启动唯一四GPU评价后继：514项闭包，299项已核输出并继承、215项待执行。C1B/C2.8B NLL及所有行为结果仍封存至各自完整闭包后首次分析；不凭部分结果改方法。C2.8原final整包通过元数据检查，持久发布运行中；C2.8best批量运行、C1Bbest待首样例。最终报告、归档重训练QA与最终持久工作树仍在后续执行范围。
 
 旧非确定性pilot/formal仅供诊断；主strict36为正式主结果。补充训练独立phase，截止00:00 UTC；主active_registry保留供分析与alias验证。
 
@@ -18,10 +18,11 @@
 | lambda_job_state（已隔离） | 16 | 0 | 0 | 0 |
 | lambda_v3_job_state（已隔离） | 16 | 0 | 0 | 0 |
 | lr_deterministic_v3_job_state | 4 | 0 | 0 | 0 |
-| supplemental_job_state | 603 | 4 | 0 | 0 |
+| supplemental_job_state | 607 | 0 | 0 | 0 |
 | v3_lr_eval_job_state（已隔离） | 4 | 0 | 0 | 0 |
+| final_evaluation_successor（含299项继承） | 303 | 4 | 207 | 0 |
 
-## 当前单一调度器内的阶段
+## 已退出旧master内的阶段
 
 以下为上述 supplemental 总行的分解，不另加为新的任务；按冻结 job ID 统计。
 
@@ -38,7 +39,7 @@
 | extended_v2_pythia_2p8b_m8_lambda | 16 | 0 | 0 | 0 |
 | primary_behavior_initial_timing | 1 | 0 | 0 | 0 |
 | extended_v2_pythia_410m_m64_formal | 24 | 0 | 0 | 0 |
-| extended_v2_pythia_1b_m32_formal | 20 | 4 | 0 | 0 |
+| extended_v2_pythia_1b_m32_formal | 24 | 0 | 0 | 0 |
 | extended_v2_pythia_2p8b_m8_h25m_formal | 15 | 0 | 0 | 0 |
 | planned_model_initial_timing_v1 | 2 | 0 | 0 | 0 |
 | replay_fit_diagnostic_v2 | 15 | 0 | 0 | 0 |
