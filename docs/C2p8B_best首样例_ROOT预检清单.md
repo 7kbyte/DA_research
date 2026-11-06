@@ -15,6 +15,8 @@
 
 既有`C_best_gate`再调用`complete_phase_gate`，对2.8B运行`audit_phase(...allow_incomplete=False,compare_weights=False)`，须passed/15 completed/无violations，输出`/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/C2p8B_best/fullphase_source_audit.json`。本模型没有D，`decisions={}`，不需要也不伪造D/B4 best等价证明，不预支alias；15 best均为独立端点。
 
+注意：`audit_phase(compare_weights=False)`仍会fresh SHA读取`snapshot.model_files`（含2.8B base大载荷），不是metadata-only；ROOT首样预检不重复运行该audit，完整audit由exporter在编码前执行并计入同次whole-child parent，gate失败则保留失败、不续跑。
+
 **固定首行及CP身份。** exporter按`(group=='D', seed, group)`排序，首样固定为`extended_v2_pythia_2p8b_m8_h25m_formal_B0_s11_w0`的`checkpoints/checkpoint_best.pt`，不按成绩选择。21:18:27的只读stat为dev139/inode6654340097/bytes11101003246/mtime_ns与ctime_ns均1793991550157645441；这是观察值，不能替代未来READY中的期望身份。配置当前SHA `d7c5898135d5d9c33164bf2266ceef4f1fcc57394bce5b79b3b2746eb15f4d5c`；`results/extended/pythia-2.8b/<run_id>_summary.json`当前SHA `56b96f7418e98040d4fa496aa996b1151ae84379d50c9fb68084d82431369b6e`，只做字节SHA，未解析评分。
 
 ROOT未来重比canonical路径、非symlink、五stat及READY的CP SHA/size/mtime；exporter实际操作将核path/open-fd前后五stat、fresh CP SHA、实际best kind/selection/曝光和严格policy。首样metadata另写`C2p8B_best/metadata/<run_id>__best.source_metadata.pt`并记录SHA，record写`C2p8B_best/records/<run_id>__best.json`。事前不生成这些结果，不把final曝光替代best。
