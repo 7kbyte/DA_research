@@ -1,0 +1,1688 @@
+{
+  "schema_version": 1,
+  "status": "pending_cost_v8_source_candidates_only",
+  "created_at_utc": "2026-11-06T19:00:55.276269+00:00",
+  "collector_executed": false,
+  "ROOT_collection_authority": false,
+  "active_cost_configs_modified": false,
+  "GPU_used": false,
+  "score_semantics_read": false,
+  "large_payload_bytes_read": 0,
+  "existing_v7_specification": {
+    "path": "configs/cost_inventory_final_sources_v7.json",
+    "sha256": "0cab816da531e857ded88a004624d9a946a1bd3dae75f295ed68e1e4f40b1f0e",
+    "bytes": 191626,
+    "stat": {
+      "st_dev": 139,
+      "st_ino": 86098392278,
+      "st_size": 191626,
+      "st_mtime_ns": 1793988529958961929,
+      "st_ctime_ns": 1793988529958961929
+    },
+    "retained_bytes": "source_bytes/0cab816da531e857ded88a004624d9a946a1bd3dae75f295ed68e1e4f40b1f0e.json"
+  },
+  "candidate_count": 36,
+  "classification_counts": {
+    "pending_measured_independent_parent": 29,
+    "pending_measured_region_parent_unknown": 7
+  },
+  "candidates": [
+    {
+      "id": "cost_v6_successful_collection",
+      "source": {
+        "path": "artifacts/provenance/cost_sources_v6/trial_whole_child_timing.json",
+        "sha256": "eabe8cd7322677e912234071ee9bd8fd98ec6e4e5f9286f91b0b9bb99597ee40",
+        "bytes": 1532,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 19520345913,
+          "st_size": 1532,
+          "st_mtime_ns": 1793981858142845072,
+          "st_ctime_ns": 1793981858142845072
+        },
+        "retained_bytes": "source_bytes/eabe8cd7322677e912234071ee9bd8fd98ec6e4e5f9286f91b0b9bb99597ee40.json"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 6.833468526601791,
+      "cpu_component_pointers": [
+        "/whole_child_user_cpu_seconds",
+        "/whole_child_sys_cpu_seconds"
+      ],
+      "cpu_component_values": {
+        "/whole_child_user_cpu_seconds": 5.413159,
+        "/whole_child_sys_cpu_seconds": 1.282629
+      },
+      "recorded_CPU_seconds": 6.695788,
+      "CPU_scope": "whole_child_process_tree",
+      "returncode_pointer": "/returncode",
+      "returncode": 0,
+      "original_status": null,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Successful v6 collector spawn-to-exit; not previously charged to its own ledger.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "cost_v7_successful_collection",
+      "source": {
+        "path": "artifacts/provenance/cost_sources_v7/collection_whole_child_timing.json",
+        "sha256": "29f8d5d4013c9e801ea07a5c7ee8e7566baebb22d8595d8d74f2a886a5971a6b",
+        "bytes": 751,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 25910076414,
+          "st_size": 751,
+          "st_mtime_ns": 1793988561861832327,
+          "st_ctime_ns": 1793988561861832327
+        },
+        "retained_bytes": "source_bytes/29f8d5d4013c9e801ea07a5c7ee8e7566baebb22d8595d8d74f2a886a5971a6b.json"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 8.851966518908739,
+      "cpu_component_pointers": [
+        "/whole_child_user_seconds",
+        "/whole_child_sys_seconds"
+      ],
+      "cpu_component_values": {
+        "/whole_child_user_seconds": 6.488174,
+        "/whole_child_sys_seconds": 2.186305
+      },
+      "recorded_CPU_seconds": 8.674479,
+      "CPU_scope": "whole_child_process_tree",
+      "returncode_pointer": "/returncode",
+      "returncode": 0,
+      "original_status": null,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Successful v7 collector plus IO-audit child; its internal collector timer is nested.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "A_remaining93_batch",
+      "source": {
+        "path": "artifacts/provenance/additional_endpoint_actual_v4/A_remaining_final_batch/whole_child_timing.json",
+        "sha256": "c6d6ee7f817cd2bafe0ea93734a4710644b91da55e8964a60c56930ab0770d86",
+        "bytes": 405,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 49584105935,
+          "st_size": 405,
+          "st_mtime_ns": 1793989026935916483,
+          "st_ctime_ns": 1793989026935916483
+        },
+        "retained_bytes": "source_bytes/c6d6ee7f817cd2bafe0ea93734a4710644b91da55e8964a60c56930ab0770d86.json"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 9397.590868961066,
+      "cpu_component_pointers": [
+        "/user_cpu_seconds",
+        "/sys_cpu_seconds"
+      ],
+      "cpu_component_values": {
+        "/user_cpu_seconds": 8422.386734,
+        "/sys_cpu_seconds": 1058.206539
+      },
+      "recorded_CPU_seconds": 9480.593273,
+      "CPU_scope": "whole_child_process_tree",
+      "returncode_pointer": "/returncode",
+      "returncode": 0,
+      "original_status": null,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Actual A batch: startup/resume verification, 92 new encodes and whole TAR assembly. The original first-sample encode was a separate earlier v7-registered operation; reused sample metadata does not re-charge it.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "A_remaining93_metadata_review",
+      "source": {
+        "path": "artifacts/provenance/A_remaining_final_publication_metadata_review_actual_v1/whole_child_timing.json",
+        "sha256": "3e4a6c5ce98bad365916e1f5da9a3c81d433d1dde9892e65d375b3d7774b2ecb",
+        "bytes": 2023,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 90420856761,
+          "st_size": 2023,
+          "st_mtime_ns": 1793989122575523977,
+          "st_ctime_ns": 1793989122575523977
+        },
+        "retained_bytes": "source_bytes/3e4a6c5ce98bad365916e1f5da9a3c81d433d1dde9892e65d375b3d7774b2ecb.json"
+      },
+      "wall_pointer": "/whole_parent_wall_seconds",
+      "wall_seconds": 1.5158360935747623,
+      "cpu_component_pointers": [
+        "/parent_self_user_seconds",
+        "/parent_self_system_seconds",
+        "/children_user_seconds",
+        "/children_system_seconds"
+      ],
+      "cpu_component_values": {
+        "/parent_self_user_seconds": 0.010987,
+        "/parent_self_system_seconds": 0.006000999999999999,
+        "/children_user_seconds": 1.14668,
+        "/children_system_seconds": 0.384691
+      },
+      "recorded_CPU_seconds": 1.548359,
+      "CPU_scope": "parent_self_plus_children",
+      "returncode_pointer": "/returncode",
+      "returncode": 0,
+      "original_status": "completed_metadata_review_child",
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Independent full outer Popen metadata review parent; child/reviewer-region timers nested.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "A_remaining93_publication",
+      "source": {
+        "path": "artifacts/provenance/A_remaining_final_publication_actual_v1/whole_child_timing.json",
+        "sha256": "8b835cbbdd245e698d00db26925d4b8bf2130b159e63ef88dddae86a6147fde4",
+        "bytes": 390,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 8741430080,
+          "st_size": 390,
+          "st_mtime_ns": 1793990016827872308,
+          "st_ctime_ns": 1793990016827872308
+        },
+        "retained_bytes": "source_bytes/8b835cbbdd245e698d00db26925d4b8bf2130b159e63ef88dddae86a6147fde4.json"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 820.2060375325382,
+      "cpu_component_pointers": [
+        "/user_cpu_seconds",
+        "/sys_cpu_seconds"
+      ],
+      "cpu_component_values": {
+        "/user_cpu_seconds": 228.851439,
+        "/sys_cpu_seconds": 192.703514
+      },
+      "recorded_CPU_seconds": 421.554953,
+      "CPU_scope": "whole_child_process_tree",
+      "returncode_pointer": "/returncode",
+      "returncode": 0,
+      "original_status": null,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Actual publisher spawn-to-exit; source/full-prefix reads, copy and durable commit included; publisher internal timer nested.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "A_remaining93_independent_metadata_region",
+      "source": {
+        "path": "docs/A_remaining_final_durable_publication_independent_review_v1.json",
+        "sha256": "307324a400159d85a046bdc6766721c7984e0d9296d74d02b98bf3c64500bc27",
+        "bytes": 5992,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 111852694369,
+          "st_size": 5992,
+          "st_mtime_ns": 1793990897051291626,
+          "st_ctime_ns": 1793990897051291626
+        },
+        "retained_bytes": "source_bytes/307324a400159d85a046bdc6766721c7984e0d9296d74d02b98bf3c64500bc27.json"
+      },
+      "wall_pointer": "/timing/wall_seconds",
+      "wall_seconds": 0.013571098446846008,
+      "cpu_component_pointers": [
+        "/timing/self_user_seconds",
+        "/timing/self_sys_seconds"
+      ],
+      "cpu_component_values": {
+        "/timing/self_user_seconds": 0.005548000000000001,
+        "/timing/self_sys_seconds": 0.0037879999999999997
+      },
+      "recorded_CPU_seconds": 0.009336,
+      "CPU_scope": "self_region",
+      "returncode_pointer": null,
+      "returncode": null,
+      "original_status": "passed_independent_small_metadata_and_current_stat_review_of_A_remaining_final_durable_publication",
+      "classification": "pending_measured_region_parent_unknown",
+      "timing_semantics": "partial_region_parent_unknown_not_additive",
+      "proposed_primary_parent": false,
+      "previous_v7_matches": [],
+      "scope": "Small-metadata/stat independent post-publication audit region only; manual review/authoring whole unknown.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "C410_best_first_sample",
+      "source": {
+        "path": "artifacts/provenance/additional_endpoint_actual_v4/C410_best_sample/whole_child_timing.json",
+        "sha256": "24b41e8a361a0e1341005151f107406a2bd43c59f33011dae82e5605fb4f7de3",
+        "bytes": 402,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 79770776004,
+          "st_size": 402,
+          "st_mtime_ns": 1793989221924118580,
+          "st_ctime_ns": 1793989221924118580
+        },
+        "retained_bytes": "source_bytes/24b41e8a361a0e1341005151f107406a2bd43c59f33011dae82e5605fb4f7de3.json"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 105.16866958141327,
+      "cpu_component_pointers": [
+        "/user_cpu_seconds",
+        "/sys_cpu_seconds"
+      ],
+      "cpu_component_values": {
+        "/user_cpu_seconds": 95.059167,
+        "/sys_cpu_seconds": 11.064906
+      },
+      "recorded_CPU_seconds": 106.12407300000001,
+      "CPU_scope": "whole_child_process_tree",
+      "returncode_pointer": "/returncode",
+      "returncode": 0,
+      "original_status": null,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Completed first sample spawn-to-exit only; encode/decode/uint8 verification endpoint timer nested. No future batch/publication registered here.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "C410_best_sample_independent_region",
+      "source": {
+        "path": "artifacts/provenance/C410_best_sample_independent_review_v1/REVIEW.json",
+        "sha256": "a80ff86c1e3976bf30f04e2e59c04c6373399c99e97849dbfa11fc282162c3d9",
+        "bytes": 19737,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 73149158551,
+          "st_size": 19737,
+          "st_mtime_ns": 1793989479885065876,
+          "st_ctime_ns": 1793989479885065876
+        },
+        "retained_bytes": "source_bytes/a80ff86c1e3976bf30f04e2e59c04c6373399c99e97849dbfa11fc282162c3d9.json"
+      },
+      "wall_pointer": "/audit_region_wall_seconds",
+      "wall_seconds": 0.0795803852379322,
+      "cpu_component_pointers": [
+        "/audit_region_user_seconds",
+        "/audit_region_system_seconds"
+      ],
+      "cpu_component_values": {
+        "/audit_region_user_seconds": 0.046375,
+        "/audit_region_system_seconds": 0.032596
+      },
+      "recorded_CPU_seconds": 0.078971,
+      "CPU_scope": "self_region",
+      "returncode_pointer": null,
+      "returncode": null,
+      "original_status": "passed_small_evidence_and_resource_review_not_batch_authority",
+      "classification": "pending_measured_region_parent_unknown",
+      "timing_semantics": "partial_region_parent_unknown_not_additive",
+      "proposed_primary_parent": false,
+      "previous_v7_matches": [],
+      "scope": "Completed independent sample small-metadata/stat audit region; embedded sample and collector timer copies excluded.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "B_native_preparation_region",
+      "source": {
+        "path": "artifacts/provenance/B_native_restore_preparation_v1/preparation_receipt.json",
+        "sha256": "f13b3c054ea14959df2e26ae98df116adf90404df3a3d8a0204fd3dbd893f50d",
+        "bytes": 4258,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 94594941282,
+          "st_size": 4258,
+          "st_mtime_ns": 1793990116364466710,
+          "st_ctime_ns": 1793990116364466710
+        },
+        "retained_bytes": "source_bytes/f13b3c054ea14959df2e26ae98df116adf90404df3a3d8a0204fd3dbd893f50d.json"
+      },
+      "wall_pointer": "/timing/wall_seconds",
+      "wall_seconds": 0.11657911539077759,
+      "cpu_component_pointers": [
+        "/timing/self_user_seconds",
+        "/timing/self_sys_seconds"
+      ],
+      "cpu_component_values": {
+        "/timing/self_user_seconds": 0.05734299999999999,
+        "/timing/self_sys_seconds": 0.016051
+      },
+      "recorded_CPU_seconds": 0.07339399999999999,
+      "CPU_scope": "self_region",
+      "returncode_pointer": null,
+      "returncode": null,
+      "original_status": "prepared_metadata_stat_only_no_restore_executed",
+      "classification": "pending_measured_region_parent_unknown",
+      "timing_semantics": "partial_region_parent_unknown_not_additive",
+      "proposed_primary_parent": false,
+      "previous_v7_matches": [],
+      "scope": "Measured small-source preparation region only; manual authoring whole unknown. The recorded read counter covers the metadata/tool loop, not every helper hash/import read.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "B_native_schema_guard_region",
+      "source": {
+        "path": "artifacts/provenance/B_native_restore_preparation_v1/schema_guard_checks.json",
+        "sha256": "e02c32ce5838e3cf9bda825a884c131dc8cba0af86a1c2428ef171dc02a1da71",
+        "bytes": 797,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 94594941283,
+          "st_size": 797,
+          "st_mtime_ns": 1793990212942074202,
+          "st_ctime_ns": 1793990212942074202
+        },
+        "retained_bytes": "source_bytes/e02c32ce5838e3cf9bda825a884c131dc8cba0af86a1c2428ef171dc02a1da71.json"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 0.0015232190489768982,
+      "cpu_component_pointers": [
+        "/process_cpu_seconds"
+      ],
+      "cpu_component_values": {
+        "/process_cpu_seconds": 0.0015158470000000007
+      },
+      "recorded_CPU_seconds": 0.0015158470000000007,
+      "CPU_scope": "process_clock_region",
+      "returncode_pointer": null,
+      "returncode": null,
+      "original_status": "passed_metadata_schema_and_pure_guard_checks_only",
+      "classification": "pending_measured_region_parent_unknown",
+      "timing_semantics": "partial_region_parent_unknown_not_additive",
+      "proposed_primary_parent": false,
+      "previous_v7_matches": [],
+      "scope": "Seven pure schema-guard cases; only local region measured, not a whole engineering task.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "B_native_shared_lock_regression",
+      "source": {
+        "path": "artifacts/provenance/B_native_restore_preparation_v1/lock_regression_tests/whole_child_timing.json",
+        "sha256": "7ed746d253528e8b7cdd9cab3c404c66e4a1d96bb16cc3e385102ea257bc6574",
+        "bytes": 419,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 101068767616,
+          "st_size": 419,
+          "st_mtime_ns": 1793990768154816814,
+          "st_ctime_ns": 1793990768154816814
+        },
+        "retained_bytes": "source_bytes/7ed746d253528e8b7cdd9cab3c404c66e4a1d96bb16cc3e385102ea257bc6574.json"
+      },
+      "wall_pointer": "/whole_wall_seconds",
+      "wall_seconds": 0.3846968971192837,
+      "cpu_component_pointers": [
+        "/children_user_seconds",
+        "/children_sys_seconds"
+      ],
+      "cpu_component_values": {
+        "/children_user_seconds": 0.334289,
+        "/children_sys_seconds": 0.044522
+      },
+      "recorded_CPU_seconds": 0.378811,
+      "CPU_scope": "whole_child_process_tree",
+      "returncode_pointer": "/returncode",
+      "returncode": 0,
+      "original_status": null,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Independent actual two-test child; known CPU covers children only, wrapper self CPU unrecorded.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "B_native_independent_identity_probe",
+      "source": {
+        "path": "artifacts/provenance/B_native_restore_independent_review_v1/whole_bound_identity_probe_timing.json",
+        "sha256": "3e9761cc6aed38290f875bff53dc0cd68dae575b65c7617082bc2daaced0de02",
+        "bytes": 332,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 56004171467,
+          "st_size": 332,
+          "st_mtime_ns": 1793990754927870707,
+          "st_ctime_ns": 1793990754927870707
+        },
+        "retained_bytes": "source_bytes/3e9761cc6aed38290f875bff53dc0cd68dae575b65c7617082bc2daaced0de02.json"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 0.10084423795342445,
+      "cpu_component_pointers": [
+        "/user_cpu_seconds",
+        "/system_cpu_seconds"
+      ],
+      "cpu_component_values": {
+        "/user_cpu_seconds": 0.071238,
+        "/system_cpu_seconds": 0.026032999999999997
+      },
+      "recorded_CPU_seconds": 0.097271,
+      "CPU_scope": "whole_child_process_tree",
+      "returncode_pointer": "/returncode",
+      "returncode": 0,
+      "original_status": null,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Independent actual preparation probe child; manual review/authoring whole unknown.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "B_native_independent_lock_probe",
+      "source": {
+        "path": "artifacts/provenance/B_native_restore_independent_review_v1/whole_lock_revision_probe_timing.json",
+        "sha256": "0cf9f13c442feb25da22754918f3de35b8ff3fe18d23aea7626424c9beace7ad",
+        "bytes": 340,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 56004171499,
+          "st_size": 340,
+          "st_mtime_ns": 1793990856953455005,
+          "st_ctime_ns": 1793990856953455005
+        },
+        "retained_bytes": "source_bytes/0cf9f13c442feb25da22754918f3de35b8ff3fe18d23aea7626424c9beace7ad.json"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 0.056663382798433304,
+      "cpu_component_pointers": [
+        "/user_cpu_seconds",
+        "/system_cpu_seconds"
+      ],
+      "cpu_component_values": {
+        "/user_cpu_seconds": 0.049427,
+        "/system_cpu_seconds": 0.005937
+      },
+      "recorded_CPU_seconds": 0.055364,
+      "CPU_scope": "whole_child_process_tree",
+      "returncode_pointer": "/returncode",
+      "returncode": 0,
+      "original_status": null,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Independent actual preparation probe child; manual review/authoring whole unknown.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "B_native_actual_restore",
+      "source": {
+        "path": "artifacts/provenance/B_native_restore_actual_parent_v1/whole_child_timing.json",
+        "sha256": "367522dfd3fc966a8ba33eaa2a60705f26d71d62f7e5642f5d88dfef17144018",
+        "bytes": 1153,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 96810065202,
+          "st_size": 1153,
+          "st_mtime_ns": 1793991034941724427,
+          "st_ctime_ns": 1793991034941724427
+        },
+        "retained_bytes": "source_bytes/367522dfd3fc966a8ba33eaa2a60705f26d71d62f7e5642f5d88dfef17144018.json"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 36.18444097042084,
+      "cpu_component_pointers": [
+        "/user_cpu_seconds",
+        "/sys_cpu_seconds"
+      ],
+      "cpu_component_values": {
+        "/user_cpu_seconds": 22.3447,
+        "/sys_cpu_seconds": 7.730223
+      },
+      "recorded_CPU_seconds": 30.074923,
+      "CPU_scope": "whole_child_process_tree",
+      "returncode_pointer": "/returncode",
+      "returncode": 0,
+      "original_status": null,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Actual fixed B first-sample durable native restore: complete outer Python spawn-to-exit including imports, admission, extraction, decode, independent full tensor fingerprint, receipt and process-group cleanup. All internal wrapper/body/stage timers are nested.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "B_native_independent_actual_metadata_review",
+      "source": {
+        "path": "artifacts/provenance/B_native_restore_independent_acceptance_v1/whole_child_timing.json",
+        "sha256": "76a163da74be821515431a7134c329c671237381015862316a971fa310383b4a",
+        "bytes": 448,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 118245916118,
+          "st_size": 448,
+          "st_mtime_ns": 1793991235902897050,
+          "st_ctime_ns": 1793991235902897050
+        },
+        "retained_bytes": "source_bytes/76a163da74be821515431a7134c329c671237381015862316a971fa310383b4a.json"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 0.12979328632354736,
+      "cpu_component_pointers": [
+        "/child_user_seconds",
+        "/child_system_seconds"
+      ],
+      "cpu_component_values": {
+        "/child_user_seconds": 0.083467,
+        "/child_system_seconds": 0.026157999999999997
+      },
+      "recorded_CPU_seconds": 0.109625,
+      "CPU_scope": "whole_child_process_tree",
+      "returncode_pointer": "/returncode",
+      "returncode": 0,
+      "original_status": null,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Separate automated small-metadata/stat post-restoration child; not nested inside the prior ROOT restore. Manual reading/doc writing whole unknown.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "Cbest_preparation_collection_failure",
+      "source": {
+        "path": "artifacts/provenance/C_best_publication_runbook_v1/preparation_tests/whole_child_timing.json",
+        "sha256": "e844c11ca99bcfe2f075f5607e063491adc84b05cb9fabdb8b84f022f25f226f",
+        "bytes": 1170,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 38975444093,
+          "st_size": 1170,
+          "st_mtime_ns": 1793989630631449864,
+          "st_ctime_ns": 1793989630631449864
+        },
+        "retained_bytes": "source_bytes/e844c11ca99bcfe2f075f5607e063491adc84b05cb9fabdb8b84f022f25f226f.json"
+      },
+      "wall_pointer": "/whole_wall_seconds",
+      "wall_seconds": 1.723019003868103,
+      "cpu_component_pointers": [
+        "/parent_user_seconds",
+        "/parent_sys_seconds",
+        "/children_user_seconds",
+        "/children_sys_seconds"
+      ],
+      "cpu_component_values": {
+        "/parent_user_seconds": 0.00040699999999999764,
+        "/parent_sys_seconds": 0.0,
+        "/children_user_seconds": 1.480739,
+        "/children_sys_seconds": 0.271987
+      },
+      "recorded_CPU_seconds": 1.753133,
+      "CPU_scope": "parent_self_plus_children",
+      "returncode_pointer": "/returncode",
+      "returncode": 2,
+      "original_status": null,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Actual failed pytest collection child, rc2; cost retained despite failure.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "Cbest_preparation_importlib171_tests",
+      "source": {
+        "path": "artifacts/provenance/C_best_publication_runbook_v1/preparation_tests_importlib/whole_child_timing.json",
+        "sha256": "e67ca0be4ac2fd1fe00c8786825b17e168c52b5864d26b4b30b12651af306718",
+        "bytes": 1201,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 68831778506,
+          "st_size": 1201,
+          "st_mtime_ns": 1793989703337152622,
+          "st_ctime_ns": 1793989703337152622
+        },
+        "retained_bytes": "source_bytes/e67ca0be4ac2fd1fe00c8786825b17e168c52b5864d26b4b30b12651af306718.json"
+      },
+      "wall_pointer": "/whole_wall_seconds",
+      "wall_seconds": 2.1369420550763607,
+      "cpu_component_pointers": [
+        "/parent_user_seconds",
+        "/parent_sys_seconds",
+        "/children_user_seconds",
+        "/children_sys_seconds"
+      ],
+      "cpu_component_values": {
+        "/parent_user_seconds": 0.0,
+        "/parent_sys_seconds": 0.0006549999999999993,
+        "/children_user_seconds": 1.796094,
+        "/children_sys_seconds": 0.485064
+      },
+      "recorded_CPU_seconds": 2.281813,
+      "CPU_scope": "parent_self_plus_children",
+      "returncode_pointer": "/returncode",
+      "returncode": 0,
+      "original_status": null,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Actual 171-test rerun child: 113 new +39 native-v2 +19 frozen-export tests. This is a distinct rerun, not a copy of an earlier registered test invocation.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "Cbest_explicit_permission_tests",
+      "source": {
+        "path": "artifacts/provenance/C_best_publication_runbook_v1/permission_gate_tests/whole_child_timing.json",
+        "sha256": "9bd75c3cf6cdc1a1765207a39cc0e19b9c37e1ef54fac0b3dd94d1a572d9224c",
+        "bytes": 584,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 53927041096,
+          "st_size": 584,
+          "st_mtime_ns": 1793990141199365511,
+          "st_ctime_ns": 1793990141199365511
+        },
+        "retained_bytes": "source_bytes/9bd75c3cf6cdc1a1765207a39cc0e19b9c37e1ef54fac0b3dd94d1a572d9224c.json"
+      },
+      "wall_pointer": "/whole_wall_seconds",
+      "wall_seconds": 0.3765859715640545,
+      "cpu_component_pointers": [
+        "/children_user_seconds",
+        "/children_sys_seconds"
+      ],
+      "cpu_component_values": {
+        "/children_user_seconds": 0.33669099999999996,
+        "/children_sys_seconds": 0.037876
+      },
+      "recorded_CPU_seconds": 0.374567,
+      "CPU_scope": "whole_child_process_tree",
+      "returncode_pointer": "/returncode",
+      "returncode": 0,
+      "original_status": null,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Actual five-case explicit-authority guard child; wrapper self CPU unrecorded.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "Cbest_preparation_region",
+      "source": {
+        "path": "artifacts/provenance/C_best_publication_runbook_v1/preparation_receipt.json",
+        "sha256": "626a8fb0542ad9eca8d79cbee48901aad874aaf4c62a96960ffe49b5911ab091",
+        "bytes": 8256,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 40927666062,
+          "st_size": 8256,
+          "st_mtime_ns": 1793989760727917950,
+          "st_ctime_ns": 1793989760727917950
+        },
+        "retained_bytes": "source_bytes/626a8fb0542ad9eca8d79cbee48901aad874aaf4c62a96960ffe49b5911ab091.json"
+      },
+      "wall_pointer": "/timer/wall_seconds",
+      "wall_seconds": 0.06986260414123535,
+      "cpu_component_pointers": [
+        "/timer/self_user_seconds",
+        "/timer/self_sys_seconds"
+      ],
+      "cpu_component_values": {
+        "/timer/self_user_seconds": 0.034439,
+        "/timer/self_sys_seconds": 0.034777999999999996
+      },
+      "recorded_CPU_seconds": 0.069217,
+      "CPU_scope": "self_region",
+      "returncode_pointer": null,
+      "returncode": null,
+      "original_status": "prepared_metadata_reviewer_only_not_actual_package_acceptance",
+      "classification": "pending_measured_region_parent_unknown",
+      "timing_semantics": "partial_region_parent_unknown_not_additive",
+      "proposed_primary_parent": false,
+      "previous_v7_matches": [],
+      "scope": "Small-source/scope/preparation receipt region only; manual authoring whole unknown.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "Cbest_independent_original_probe",
+      "source": {
+        "path": "artifacts/provenance/C_best_publication_independent_review_v1/whole_probe_timing.json",
+        "sha256": "a13acd7fb1216da04b8ec314dd30ac80cca5c280e3361a20a6d6f46f5ed9e38b",
+        "bytes": 385,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 60307778855,
+          "st_size": 385,
+          "st_mtime_ns": 1793989972113054514,
+          "st_ctime_ns": 1793989972113054514
+        },
+        "retained_bytes": "source_bytes/a13acd7fb1216da04b8ec314dd30ac80cca5c280e3361a20a6d6f46f5ed9e38b.json"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 0.10777314379811287,
+      "cpu_component_pointers": [
+        "/user_cpu_seconds",
+        "/system_cpu_seconds"
+      ],
+      "cpu_component_values": {
+        "/user_cpu_seconds": 0.08591599999999999,
+        "/system_cpu_seconds": 0.020707
+      },
+      "recorded_CPU_seconds": 0.106623,
+      "CPU_scope": "whole_child_process_tree",
+      "returncode_pointer": "/returncode",
+      "returncode": 0,
+      "original_status": null,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Independent actual small-metadata/synthetic probe child; manual review whole unknown.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "Cbest_independent_explicit_permission_probe",
+      "source": {
+        "path": "artifacts/provenance/C_best_publication_independent_review_v1/whole_explicit_authority_v2_probe_timing.json",
+        "sha256": "13700b6bf8685233725fdf1d49b3c1aab24239cd63e1e48deebec8cc6211b5f3",
+        "bytes": 364,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 60307778862,
+          "st_size": 364,
+          "st_mtime_ns": 1793990114277475214,
+          "st_ctime_ns": 1793990114277475214
+        },
+        "retained_bytes": "source_bytes/13700b6bf8685233725fdf1d49b3c1aab24239cd63e1e48deebec8cc6211b5f3.json"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 0.06256147474050522,
+      "cpu_component_pointers": [
+        "/user_cpu_seconds",
+        "/system_cpu_seconds"
+      ],
+      "cpu_component_values": {
+        "/user_cpu_seconds": 0.053824,
+        "/system_cpu_seconds": 0.007982999999999999
+      },
+      "recorded_CPU_seconds": 0.061806999999999994,
+      "CPU_scope": "whole_child_process_tree",
+      "returncode_pointer": "/returncode",
+      "returncode": 0,
+      "original_status": null,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Independent actual small-metadata/synthetic probe child; manual review whole unknown.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "behavioral_presentation_synthetic_smoke_v1",
+      "source": {
+        "path": "artifacts/provenance/behavioral_presentation_preparation_v1/whole_smoke_timing.json",
+        "sha256": "87a07c84f7926b41f62c958a961ad6cd406a8348bbc196131059be34a47fbb98",
+        "bytes": 729,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 98913488688,
+          "st_size": 729,
+          "st_mtime_ns": 1793988530459959893,
+          "st_ctime_ns": 1793988530459959893
+        },
+        "retained_bytes": "source_bytes/87a07c84f7926b41f62c958a961ad6cd406a8348bbc196131059be34a47fbb98.json"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 20.95235274359584,
+      "cpu_component_pointers": [
+        "/user_cpu_seconds",
+        "/system_cpu_seconds"
+      ],
+      "cpu_component_values": {
+        "/user_cpu_seconds": 21.799479,
+        "/system_cpu_seconds": 8.151203
+      },
+      "recorded_CPU_seconds": 29.950682,
+      "CPU_scope": "whole_child_process_tree",
+      "returncode_pointer": "/returncode",
+      "returncode": 0,
+      "original_status": null,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Actual whole synthetic five-phase presentation smoke child; fixture values are not study measurements. Per-phase presentation/plot timers nested; no real behavior scores were read by this catalog.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "behavioral_presentation_synthetic_smoke_v2",
+      "source": {
+        "path": "artifacts/provenance/behavioral_presentation_preparation_v2/whole_smoke_timing.json",
+        "sha256": "0a87c09fc315ea245356a2aa0e720267c9eec646b687a42eaf1afed6b6bcdb55",
+        "bytes": 512,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 45296074909,
+          "st_size": 512,
+          "st_mtime_ns": 1793988699864265020,
+          "st_ctime_ns": 1793988699864265020
+        },
+        "retained_bytes": "source_bytes/0a87c09fc315ea245356a2aa0e720267c9eec646b687a42eaf1afed6b6bcdb55.json"
+      },
+      "wall_pointer": "/wall_seconds",
+      "wall_seconds": 21.449059471488,
+      "cpu_component_pointers": [
+        "/user_cpu_seconds",
+        "/system_cpu_seconds"
+      ],
+      "cpu_component_values": {
+        "/user_cpu_seconds": 21.766271,
+        "/system_cpu_seconds": 8.786617
+      },
+      "recorded_CPU_seconds": 30.552888,
+      "CPU_scope": "whole_child_process_tree",
+      "returncode_pointer": "/returncode",
+      "returncode": 0,
+      "original_status": null,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Actual whole synthetic five-phase presentation smoke child; fixture values are not study measurements. Per-phase presentation/plot timers nested; no real behavior scores were read by this catalog.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "delivery_guide_v5_manifest_union_region",
+      "source": {
+        "path": "results/delivery_capacity_guide_v5/metadata_calculation.json",
+        "sha256": "722c5a6fe02b772c722772174e817fcfa213d3e2fbbe31913ba1db82fcea00e9",
+        "bytes": 202030,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 56004153569,
+          "st_size": 202030,
+          "st_mtime_ns": 1793990979942950862,
+          "st_ctime_ns": 1793990979942950862
+        },
+        "retained_bytes": "source_bytes/722c5a6fe02b772c722772174e817fcfa213d3e2fbbe31913ba1db82fcea00e9.json"
+      },
+      "wall_pointer": "/timing/wall_seconds",
+      "wall_seconds": 0.03128630667924881,
+      "cpu_component_pointers": [
+        "/timing/self_user_seconds",
+        "/timing/self_sys_seconds"
+      ],
+      "cpu_component_values": {
+        "/timing/self_user_seconds": 0.015170999999999997,
+        "/timing/self_sys_seconds": 0.008837999999999999
+      },
+      "recorded_CPU_seconds": 0.024008999999999996,
+      "CPU_scope": "self_region",
+      "returncode_pointer": null,
+      "returncode": null,
+      "original_status": "passed_seven_small_manifest_fresh_reparse_and_current_archive_stat_only",
+      "classification": "pending_measured_region_parent_unknown",
+      "timing_semantics": "partial_region_parent_unknown_not_additive",
+      "proposed_primary_parent": false,
+      "previous_v7_matches": [],
+      "scope": "Actual seven-small-manifest reparse/union/stat calculation region; manual engineering whole unknown. The copy in guide source receipt is excluded.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "delivery_guide_v5_navigation_region",
+      "source": {
+        "path": "docs/交付文件与恢复容量指南_来源核对_v5.json",
+        "sha256": "bb51825b0bc47ac20306a85228346ac0d8c35ab14f83a50b85a7f210331b28ef",
+        "bytes": 22561,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 111852694371,
+          "st_size": 22561,
+          "st_mtime_ns": 1793991030436742974,
+          "st_ctime_ns": 1793991030436742974
+        },
+        "retained_bytes": "source_bytes/bb51825b0bc47ac20306a85228346ac0d8c35ab14f83a50b85a7f210331b28ef.json"
+      },
+      "wall_pointer": "/measured_regions/guide_and_navigation_region/wall_seconds",
+      "wall_seconds": 0.003734264522790909,
+      "cpu_component_pointers": [
+        "/measured_regions/guide_and_navigation_region/self_user_seconds",
+        "/measured_regions/guide_and_navigation_region/self_sys_seconds"
+      ],
+      "cpu_component_values": {
+        "/measured_regions/guide_and_navigation_region/self_user_seconds": 0.0011469999999999987,
+        "/measured_regions/guide_and_navigation_region/self_sys_seconds": 0.002064999999999999
+      },
+      "recorded_CPU_seconds": 0.003211999999999998,
+      "CPU_scope": "self_region",
+      "returncode_pointer": null,
+      "returncode": null,
+      "original_status": "passed_seven_durable_weight_packages_plus_1640_project_small_metadata_and_stat_only",
+      "classification": "pending_measured_region_parent_unknown",
+      "timing_semantics": "partial_region_parent_unknown_not_additive",
+      "proposed_primary_parent": false,
+      "previous_v7_matches": [],
+      "scope": "Actual separate small metadata/navigation writing region only; manual engineering whole unknown.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "Cmodel_review_tests_attempt1",
+      "source": {
+        "path": "artifacts/provenance/C_model_nll_review_v2_preparation/tests_attempt1/whole_child_timing.json",
+        "sha256": "cf32ae0004bc84a0f2b531423065f3fbd921d042b02bbf0fbd0adae62b231109",
+        "bytes": 400,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 90420856704,
+          "st_size": 400,
+          "st_mtime_ns": 1793989571782690344,
+          "st_ctime_ns": 1793989571782690344
+        },
+        "retained_bytes": "source_bytes/cf32ae0004bc84a0f2b531423065f3fbd921d042b02bbf0fbd0adae62b231109.json"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 7.624306183308363,
+      "cpu_component_pointers": [
+        "/child_user_seconds",
+        "/child_system_seconds"
+      ],
+      "cpu_component_values": {
+        "/child_user_seconds": 23.806972,
+        "/child_system_seconds": 56.829814999999996
+      },
+      "recorded_CPU_seconds": 80.636787,
+      "CPU_scope": "whole_child_process_tree",
+      "returncode_pointer": "/returncode",
+      "returncode": 1,
+      "original_status": null,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Failed first synthetic development test child, rc1.",
+      "source_version_limitations": "Separate actual child invocations. Not every development iteration's source bytes were snapshotted; the final stable source is frozen. Synthetic fixture timers must never be charged as actual operations.",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "Cmodel_review_tests_attempt2",
+      "source": {
+        "path": "artifacts/provenance/C_model_nll_review_v2_preparation/tests_attempt2/whole_child_timing.json",
+        "sha256": "131decbd82ec501898866e6c3b6d6f056913e32d0173bdf5263de36cb834d306",
+        "bytes": 489,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 40927640534,
+          "st_size": 489,
+          "st_mtime_ns": 1793989593747600587,
+          "st_ctime_ns": 1793989593747600587
+        },
+        "retained_bytes": "source_bytes/131decbd82ec501898866e6c3b6d6f056913e32d0173bdf5263de36cb834d306.json"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 7.077109880745411,
+      "cpu_component_pointers": [
+        "/child_user_seconds",
+        "/child_system_seconds"
+      ],
+      "cpu_component_values": {
+        "/child_user_seconds": 7.705547,
+        "/child_system_seconds": 3.497271
+      },
+      "recorded_CPU_seconds": 11.202818,
+      "CPU_scope": "whole_child_process_tree",
+      "returncode_pointer": "/returncode",
+      "returncode": 0,
+      "original_status": null,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Second independent synthetic development test child.",
+      "source_version_limitations": "Separate actual child invocations. Not every development iteration's source bytes were snapshotted; the final stable source is frozen. Synthetic fixture timers must never be charged as actual operations.",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "Cmodel_review_tests_attempt3",
+      "source": {
+        "path": "artifacts/provenance/C_model_nll_review_v2_preparation/tests_attempt3/whole_child_timing.json",
+        "sha256": "8962793f7f032521b770e61664691e442e9d00979245309310783d09dd159723",
+        "bytes": 386,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 90418004753,
+          "st_size": 386,
+          "st_mtime_ns": 1793989660215328947,
+          "st_ctime_ns": 1793989660215328947
+        },
+        "retained_bytes": "source_bytes/8962793f7f032521b770e61664691e442e9d00979245309310783d09dd159723.json"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 7.728532120585442,
+      "cpu_component_pointers": [
+        "/child_user_seconds",
+        "/child_system_seconds"
+      ],
+      "cpu_component_values": {
+        "/child_user_seconds": 8.207967,
+        "/child_system_seconds": 4.008227
+      },
+      "recorded_CPU_seconds": 12.216194,
+      "CPU_scope": "whole_child_process_tree",
+      "returncode_pointer": "/returncode",
+      "returncode": 0,
+      "original_status": null,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Third independent synthetic development test child.",
+      "source_version_limitations": "Separate actual child invocations. Not every development iteration's source bytes were snapshotted; the final stable source is frozen. Synthetic fixture timers must never be charged as actual operations.",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "Cmodel_review_tests_final",
+      "source": {
+        "path": "artifacts/provenance/C_model_nll_review_v2_preparation/tests_final/tests_whole_child_timing.json",
+        "sha256": "a5526810470aa47b34748fa338ceafc94d25848b32c420aa8c2bb82464051f94",
+        "bytes": 427,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 94594941258,
+          "st_size": 427,
+          "st_mtime_ns": 1793989725861060521,
+          "st_ctime_ns": 1793989725861060521
+        },
+        "retained_bytes": "source_bytes/a5526810470aa47b34748fa338ceafc94d25848b32c420aa8c2bb82464051f94.json"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 7.931991785764694,
+      "cpu_component_pointers": [
+        "/child_user_seconds",
+        "/child_system_seconds"
+      ],
+      "cpu_component_values": {
+        "/child_user_seconds": 8.321419,
+        "/child_system_seconds": 4.007135
+      },
+      "recorded_CPU_seconds": 12.328554,
+      "CPU_scope": "whole_child_process_tree",
+      "returncode_pointer": "/returncode",
+      "returncode": 0,
+      "original_status": null,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Independent final targeted synthetic test child.",
+      "source_version_limitations": "Separate actual child invocations. Not every development iteration's source bytes were snapshotted; the final stable source is frozen. Synthetic fixture timers must never be charged as actual operations.",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "Cmodel_review_tests_stable_source",
+      "source": {
+        "path": "artifacts/provenance/C_model_nll_review_v2_preparation/tests_stable_source/whole_child_timing.json",
+        "sha256": "c7c7995920c05f50d46c5f4cf985bacea143592a6009180792beaaf48de37877",
+        "bytes": 411,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 23782482624,
+          "st_size": 411,
+          "st_mtime_ns": 1793989796489771719,
+          "st_ctime_ns": 1793989796489771719
+        },
+        "retained_bytes": "source_bytes/c7c7995920c05f50d46c5f4cf985bacea143592a6009180792beaaf48de37877.json"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 7.948721818625927,
+      "cpu_component_pointers": [
+        "/child_user_seconds",
+        "/child_system_seconds"
+      ],
+      "cpu_component_values": {
+        "/child_user_seconds": 8.230565,
+        "/child_system_seconds": 4.0825
+      },
+      "recorded_CPU_seconds": 12.313065,
+      "CPU_scope": "whole_child_process_tree",
+      "returncode_pointer": "/returncode",
+      "returncode": 0,
+      "original_status": null,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Independent stable-source targeted 36-test child.",
+      "source_version_limitations": "Separate actual child invocations. Not every development iteration's source bytes were snapshotted; the final stable source is frozen. Synthetic fixture timers must never be charged as actual operations.",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "Cmodel_review_toy_cli",
+      "source": {
+        "path": "artifacts/provenance/C_model_nll_review_v2_preparation/toy_cli_whole_child_timing.json",
+        "sha256": "d4a308d672a315291c368a9310f0517acd33106c673e776533b467fbf8ea4e53",
+        "bytes": 442,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 62448008165,
+          "st_size": 442,
+          "st_mtime_ns": 1793989739007006767,
+          "st_ctime_ns": 1793989739007006767
+        },
+        "retained_bytes": "source_bytes/d4a308d672a315291c368a9310f0517acd33106c673e776533b467fbf8ea4e53.json"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 13.144849460572004,
+      "cpu_component_pointers": [
+        "/child_user_seconds",
+        "/child_system_seconds"
+      ],
+      "cpu_component_values": {
+        "/child_user_seconds": 14.409619999999999,
+        "/child_system_seconds": 6.233627
+      },
+      "recorded_CPU_seconds": 20.643247,
+      "CPU_scope": "whole_child_process_tree",
+      "returncode_pointer": "/returncode",
+      "returncode": 0,
+      "original_status": null,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Whole synthetic CLI smoke child includes both nested CLI/plot/bootstrap executions.",
+      "source_version_limitations": "Separate actual child invocations. Not every development iteration's source bytes were snapshotted; the final stable source is frozen. Synthetic fixture timers must never be charged as actual operations.",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "Cmodel_review_toy_cli_stable_source",
+      "source": {
+        "path": "artifacts/provenance/C_model_nll_review_v2_preparation/toy_cli_stable_source/whole_child_timing.json",
+        "sha256": "6c3086cd03aff034c2dd9b2057c3fa0f9bdc8a9100b4e9b33f2bb8d45e33bbf5",
+        "bytes": 507,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 81759271500,
+          "st_size": 507,
+          "st_mtime_ns": 1793989826705648165,
+          "st_ctime_ns": 1793989826705648165
+        },
+        "retained_bytes": "source_bytes/6c3086cd03aff034c2dd9b2057c3fa0f9bdc8a9100b4e9b33f2bb8d45e33bbf5.json"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 13.317339926958084,
+      "cpu_component_pointers": [
+        "/child_user_seconds",
+        "/child_system_seconds"
+      ],
+      "cpu_component_values": {
+        "/child_user_seconds": 14.554175,
+        "/child_system_seconds": 6.304313
+      },
+      "recorded_CPU_seconds": 20.858488,
+      "CPU_scope": "whole_child_process_tree",
+      "returncode_pointer": "/returncode",
+      "returncode": 0,
+      "original_status": null,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Independent stable-source synthetic CLI smoke child includes both nested CLI/plot/bootstrap executions.",
+      "source_version_limitations": "Separate actual child invocations. Not every development iteration's source bytes were snapshotted; the final stable source is frozen. Synthetic fixture timers must never be charged as actual operations.",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "Cmodel_review_regression_failed",
+      "source": {
+        "path": "artifacts/provenance/C_model_nll_review_v2_schema_repair_v1/regression_whole_child_timing.json",
+        "sha256": "df373c04d80b673c649e3ca19d3737aee9deca11373bbc4a4fdbda861844cf3e",
+        "bytes": 455,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 43084607597,
+          "st_size": 455,
+          "st_mtime_ns": 1793990840521521957,
+          "st_ctime_ns": 1793990840521521957
+        },
+        "retained_bytes": "source_bytes/df373c04d80b673c649e3ca19d3737aee9deca11373bbc4a4fdbda861844cf3e.json"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 8.435614384710789,
+      "cpu_component_pointers": [
+        "/child_user_seconds",
+        "/child_system_seconds"
+      ],
+      "cpu_component_values": {
+        "/child_user_seconds": 8.701008,
+        "/child_system_seconds": 4.233037
+      },
+      "recorded_CPU_seconds": 12.934045000000001,
+      "CPU_scope": "whole_child_process_tree",
+      "returncode_pointer": "/returncode",
+      "returncode": 1,
+      "original_status": null,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Actual failed synthetic regression child (four failures), rc1.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "Cmodel_review_regression_fixed41",
+      "source": {
+        "path": "artifacts/provenance/C_model_nll_review_v2_schema_repair_v1/regression_attempt2_whole_child_timing.json",
+        "sha256": "e12b7166f2a9d110f870cbd0bc11c224319629041053b9698c5a923b4e469640",
+        "bytes": 464,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 43084607552,
+          "st_size": 464,
+          "st_mtime_ns": 1793990867705411196,
+          "st_ctime_ns": 1793990867705411196
+        },
+        "retained_bytes": "source_bytes/e12b7166f2a9d110f870cbd0bc11c224319629041053b9698c5a923b4e469640.json"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 8.049041021615267,
+      "cpu_component_pointers": [
+        "/child_user_seconds",
+        "/child_system_seconds"
+      ],
+      "cpu_component_values": {
+        "/child_user_seconds": 8.387383,
+        "/child_system_seconds": 4.164752
+      },
+      "recorded_CPU_seconds": 12.552135,
+      "CPU_scope": "whole_child_process_tree",
+      "returncode_pointer": "/returncode",
+      "returncode": 0,
+      "original_status": null,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Actual corrected 41-test synthetic regression child.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "Cmodel_review_schema_audit_syntax_failure",
+      "source": {
+        "path": "artifacts/provenance/C_model_nll_review_v2_schema_repair_v1/actual_schema_audit_whole_child_timing.json",
+        "sha256": "0b68faee9791fe9e5ac8840d588e6a023145028158bf8ba954c4f37b81531151",
+        "bytes": 503,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 43084607556,
+          "st_size": 503,
+          "st_mtime_ns": 1793990867725411115,
+          "st_ctime_ns": 1793990867725411115
+        },
+        "retained_bytes": "source_bytes/0b68faee9791fe9e5ac8840d588e6a023145028158bf8ba954c4f37b81531151.json"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 0.019942771643400192,
+      "cpu_component_pointers": [
+        "/child_user_seconds",
+        "/child_system_seconds"
+      ],
+      "cpu_component_values": {
+        "/child_user_seconds": 0.013669999999999405,
+        "/child_system_seconds": 0.00586199999999959
+      },
+      "recorded_CPU_seconds": 0.019531999999998995,
+      "CPU_scope": "whole_child_process_tree",
+      "returncode_pointer": "/returncode",
+      "returncode": 1,
+      "original_status": null,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Actual schema-audit child failed with syntax error, rc1.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    },
+    {
+      "id": "Cmodel_review_schema_audit_actual_metadata",
+      "source": {
+        "path": "artifacts/provenance/C_model_nll_review_v2_schema_repair_v1/actual_schema_audit_attempt2_whole_child_timing.json",
+        "sha256": "1e836e0199fb8b3142e9d649978f78f5709740ffa02251938d3d36ccb22cfdc1",
+        "bytes": 448,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 43084607562,
+          "st_size": 448,
+          "st_mtime_ns": 1793990890273319243,
+          "st_ctime_ns": 1793990890273319243
+        },
+        "retained_bytes": "source_bytes/1e836e0199fb8b3142e9d649978f78f5709740ffa02251938d3d36ccb22cfdc1.json"
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 0.3026620037853718,
+      "cpu_component_pointers": [
+        "/child_user_seconds",
+        "/child_system_seconds"
+      ],
+      "cpu_component_values": {
+        "/child_user_seconds": 0.272742,
+        "/child_system_seconds": 0.139009
+      },
+      "recorded_CPU_seconds": 0.411751,
+      "CPU_scope": "whole_child_process_tree",
+      "returncode_pointer": "/returncode",
+      "returncode": 0,
+      "original_status": null,
+      "classification": "pending_measured_independent_parent",
+      "timing_semantics": "independent_measured_operation",
+      "proposed_primary_parent": true,
+      "previous_v7_matches": [],
+      "scope": "Actual corrected small C410 metadata/schema audit child only; no score payload hash/semantics, no model payloads.",
+      "source_version_limitations": "",
+      "nested_subtimers_added": false,
+      "registered_in_active_spec": false
+    }
+  ],
+  "nested_or_copied_context_exclusions": [
+    {
+      "source": {
+        "path": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/A_remaining_final/completion.json",
+        "sha256": "0b79a1b870644304a2d671b1f8cc1ed12c8dfb24cd3c86bf52a53baf18a2bb6b",
+        "bytes": 925,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 4436072955,
+          "st_size": 925,
+          "st_mtime_ns": 1793989026726917340,
+          "st_ctime_ns": 1793989026726917340
+        },
+        "retained_bytes": "source_bytes/0b79a1b870644304a2d671b1f8cc1ed12c8dfb24cd3c86bf52a53baf18a2bb6b.json"
+      },
+      "pointer": "/wall_seconds",
+      "parent_candidate_id": "A_remaining93_batch",
+      "classification": "nested_or_copied_context_excluded",
+      "reason": "Assembly-only timer is inside the actual A batch parent."
+    },
+    {
+      "source": {
+        "path": "docs/A_remaining_final_weights_durable_publication.json",
+        "sha256": "449fcd5a88991473f4fbd042b633382718450c975b4e4c2811c66a542e7720cb",
+        "bytes": 3054,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 111852694379,
+          "st_size": 3054,
+          "st_mtime_ns": 1793990016819872340,
+          "st_ctime_ns": 1793990016819872340
+        },
+        "retained_bytes": "source_bytes/449fcd5a88991473f4fbd042b633382718450c975b4e4c2811c66a542e7720cb.json"
+      },
+      "pointer": "/wall_seconds",
+      "parent_candidate_id": "A_remaining93_publication",
+      "classification": "nested_or_copied_context_excluded",
+      "reason": "Internal publisher timer is nested; no second publication occurred."
+    },
+    {
+      "source": {
+        "path": "artifacts/provenance/A_remaining_final_publication_actual_v1/ROOT_acceptance.json",
+        "sha256": "2a526309fa8f23d02e2f06eda0e37980d0283b4a376dcc7ca9844f3f04eeb8b5",
+        "bytes": 5672,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 8741430081,
+          "st_size": 5672,
+          "st_mtime_ns": 1793990707841062562,
+          "st_ctime_ns": 1793990707841062562
+        },
+        "retained_bytes": "source_bytes/2a526309fa8f23d02e2f06eda0e37980d0283b4a376dcc7ca9844f3f04eeb8b5.json"
+      },
+      "pointer": "/whole_child_cost",
+      "parent_candidate_id": "A_remaining93_publication",
+      "classification": "nested_or_copied_context_excluded",
+      "reason": "Acceptance contains copies/references to the publication timing, not a new measured publication."
+    },
+    {
+      "source": {
+        "path": "artifacts/provenance/C410_best_sample_independent_review_v1/REVIEW.json",
+        "sha256": "a80ff86c1e3976bf30f04e2e59c04c6373399c99e97849dbfa11fc282162c3d9",
+        "bytes": 19737,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 73149158551,
+          "st_size": 19737,
+          "st_mtime_ns": 1793989479885065876,
+          "st_ctime_ns": 1793989479885065876
+        },
+        "retained_bytes": "source_bytes/a80ff86c1e3976bf30f04e2e59c04c6373399c99e97849dbfa11fc282162c3d9.json"
+      },
+      "pointer": "/sample_cost",
+      "parent_candidate_id": "C410_best_first_sample",
+      "classification": "nested_or_copied_context_excluded",
+      "reason": "Copied sample whole timer, not independent work; collector copies in the same receipt are also context only."
+    },
+    {
+      "source": {
+        "path": "artifacts/provenance/B_native_restore_actual_v1/whole_child_timing.json",
+        "sha256": "d73b9b58a9fa9e34d817ff8775a923aa9e5483728a3b132742624ab08b4bdaa4",
+        "bytes": 2249,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 98913515401,
+          "st_size": 2249,
+          "st_mtime_ns": 1793991034934724456,
+          "st_ctime_ns": 1793991034934724456
+        },
+        "retained_bytes": "source_bytes/d73b9b58a9fa9e34d817ff8775a923aa9e5483728a3b132742624ab08b4bdaa4.json"
+      },
+      "pointer": "/outer_wrapper_parent_wall_seconds",
+      "parent_candidate_id": "B_native_actual_restore",
+      "classification": "nested_or_copied_context_excluded",
+      "reason": "Inner main-entry wrapper, process-group child and all extraction/decode/fingerprint stages are nested under the actual outer spawn-to-exit parent."
+    },
+    {
+      "source": {
+        "path": "artifacts/provenance/B_native_restore_actual_parent_v1/small_QA_evidence/actual_restore_receipt.json",
+        "sha256": "f8f98da813feeeb4e2d7dd9a6178295faf4c83b8beec8ccf2413c5d1b85be982",
+        "bytes": 6875,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 90420856744,
+          "st_size": 6875,
+          "st_mtime_ns": 1793991103529442044,
+          "st_ctime_ns": 1793991103529442044
+        },
+        "retained_bytes": "source_bytes/f8f98da813feeeb4e2d7dd9a6178295faf4c83b8beec8ccf2413c5d1b85be982.json"
+      },
+      "pointer": "/runner_body_wall_seconds",
+      "parent_candidate_id": "B_native_actual_restore",
+      "classification": "nested_or_copied_context_excluded",
+      "reason": "Inner body and extraction/decode/full-fingerprint timers are nested."
+    },
+    {
+      "source": {
+        "path": "artifacts/provenance/B_native_restore_actual_parent_v1/ROOT_acceptance.json",
+        "sha256": "0194effe57624ce7ffac21396c57383cce5cbc067e93451738f755325eb25071",
+        "bytes": 6942,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 96810065203,
+          "st_size": 6942,
+          "st_mtime_ns": 1793991103531442036,
+          "st_ctime_ns": 1793991103531442036
+        },
+        "retained_bytes": "source_bytes/0194effe57624ce7ffac21396c57383cce5cbc067e93451738f755325eb25071.json"
+      },
+      "pointer": "/whole_process_cost",
+      "parent_candidate_id": "B_native_actual_restore",
+      "classification": "nested_or_copied_context_excluded",
+      "reason": "Copied original timing in ROOT acceptance, not a new restore call."
+    },
+    {
+      "source": {
+        "path": "artifacts/provenance/B_native_restore_preparation_v1/preparation_receipt_v2.json",
+        "sha256": "6403053c3d224aa0e6b8db82aeee3751946dc65a082022e01df53b48093b1a1e",
+        "bytes": 2580,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 94594941289,
+          "st_size": 2580,
+          "st_mtime_ns": 1793990790719724874,
+          "st_ctime_ns": 1793990790719724874
+        },
+        "retained_bytes": "source_bytes/6403053c3d224aa0e6b8db82aeee3751946dc65a082022e01df53b48093b1a1e.json"
+      },
+      "pointer": "/timer_boundary",
+      "parent_candidate_id": null,
+      "classification": "nested_or_copied_context_excluded",
+      "reason": "Revision receipt references existing original preparation and independent lock test; does not record a new whole engineering parent."
+    },
+    {
+      "source": {
+        "path": "artifacts/provenance/C_best_publication_runbook_v1/preparation_receipt_v2.json",
+        "sha256": "510fcf9f7e03bc805235b17a91ab3470ac5051e2d575dd39b94257738349d53b",
+        "bytes": 3323,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 40927640562,
+          "st_size": 3323,
+          "st_mtime_ns": 1793990141200365507,
+          "st_ctime_ns": 1793990141200365507
+        },
+        "retained_bytes": "source_bytes/510fcf9f7e03bc805235b17a91ab3470ac5051e2d575dd39b94257738349d53b.json"
+      },
+      "pointer": "/validation",
+      "parent_candidate_id": null,
+      "classification": "nested_or_copied_context_excluded",
+      "reason": "Revision receipt copies/references original preparation and guard-test timers, not another test invocation."
+    },
+    {
+      "source": {
+        "path": "artifacts/provenance/C_model_nll_review_v2_preparation/toy_cli_smoke.json",
+        "sha256": "293b69698a4be0f6e4db167b1d5ca368795f7dd77fae11b1dafe312ad580cc53",
+        "bytes": 4630,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 62448008164,
+          "st_size": 4630,
+          "st_mtime_ns": 1793989738975006898,
+          "st_ctime_ns": 1793989738975006898
+        },
+        "retained_bytes": "source_bytes/293b69698a4be0f6e4db167b1d5ca368795f7dd77fae11b1dafe312ad580cc53.json"
+      },
+      "pointer": "/nested_cli_timers",
+      "parent_candidate_id": "Cmodel_review_toy_cli",
+      "classification": "nested_or_copied_context_excluded",
+      "reason": "Both actual nested CLI timers belong to the single toy CLI smoke whole parent."
+    },
+    {
+      "source": {
+        "path": "artifacts/provenance/C_model_nll_review_v2_preparation/toy_cli_stable_source/toy_cli_smoke.json",
+        "sha256": "f6712ae3cf3531b1a8030feec80d3d63ea03ad127b1e4853a2ed4c0a72e1e501",
+        "bytes": 4920,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 81759271499,
+          "st_size": 4920,
+          "st_mtime_ns": 1793989826674648292,
+          "st_ctime_ns": 1793989826674648292
+        },
+        "retained_bytes": "source_bytes/f6712ae3cf3531b1a8030feec80d3d63ea03ad127b1e4853a2ed4c0a72e1e501.json"
+      },
+      "pointer": "/nested_cli_timers",
+      "parent_candidate_id": "Cmodel_review_toy_cli_stable_source",
+      "classification": "nested_or_copied_context_excluded",
+      "reason": "Both actual nested CLI timers belong to the stable toy CLI smoke whole parent."
+    },
+    {
+      "source": {
+        "path": "docs/交付文件与恢复容量指南_来源核对_v5.json",
+        "sha256": "bb51825b0bc47ac20306a85228346ac0d8c35ab14f83a50b85a7f210331b28ef",
+        "bytes": 22561,
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 111852694371,
+          "st_size": 22561,
+          "st_mtime_ns": 1793991030436742974,
+          "st_ctime_ns": 1793991030436742974
+        },
+        "retained_bytes": "source_bytes/bb51825b0bc47ac20306a85228346ac0d8c35ab14f83a50b85a7f210331b28ef.json"
+      },
+      "pointer": "/measured_regions/seven_manifest_reparse_and_union",
+      "parent_candidate_id": "delivery_guide_v5_manifest_union_region",
+      "classification": "nested_or_copied_context_excluded",
+      "reason": "Same measured region copied from metadata_calculation.json; register only its canonical source."
+    }
+  ],
+  "unknown_manual_and_scope_limitations": [
+    "This is a source candidate catalog only; no v8 collector run, no normalized active v8 specification, and no change to v6/v7 accounting.",
+    "Wall times of overlapping operations are not calendar elapsed time; do not sum concurrent worker times and call the result study elapsed duration.",
+    "Failure attempts are real measured CPU operations and are retained with their original nonzero returncodes, not relabeled successful.",
+    "A first sample is already charged in v7; the batch parent includes only later actual work plus sample resume verification, not a repeated initial encode.",
+    "Two behavioral-presentation smoke whole times total 42.40141221508384 seconds; per-phase synthetic outputs are nested, and fixture values are not actual measured scientific scores.",
+    "Cmodel toy input analyze/check timing JSONs contain deliberately fake 1.0-second fixture values and must never be treated as actual cost receipts; only measured outer smoke parents listed here are candidates.",
+    "The standalone first 89-test Cbest run lacks an independent parent JSON timer; its process whole is unknown, not inferred from pytest internal duration or wall-clock timestamps.",
+    "Manual literature/review/coding/receipt writing full task durations are unknown; local measured preparation regions do not repair this missing parent evidence.",
+    "RUSAGE_CHILDREN CPU values cover child process trees only unless explicit parent-self components are listed; unknown wrapper self CPU must not be manufactured.",
+    "Cbest batch/publication and any new project snapshot are explicitly outside this preparation; no incomplete or future timer is pre-registered."
+  ],
+  "future_registration_requires_ROOT_authorization": true
+}

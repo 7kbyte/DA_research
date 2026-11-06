@@ -1,0 +1,91 @@
+{
+  "status": "accepted_cpu_resource_samples",
+  "authorized_by": "root",
+  "authorized": true,
+  "utc": "2026-11-06T18:27:01.248696+00:00",
+  "scope_sha256": "7adb8f7f0461fd929995dd370ff2a59b2abc5c0d7750a39e745d21d5546d9de3",
+  "exporter_sha256": "c93e0c1d35fe39b3d71155a126db841b76648ba6b3afd58d475be4eb9c9da853",
+  "approved_packages": [
+    "C410_best"
+  ],
+  "protected_finish_deadline_utc": "2026-11-07T02:56:32Z",
+  "package_plans": {
+    "C410_best": {
+      "actual_sample_record": {
+        "path": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/C410_best/records/extended_v2_pythia_410m_m64_formal_B0_s11_w0__best.json",
+        "sha256": "777be48ebc51d3185d1ba0e3a764e31aca2e245c6ad841aadac0c0d1428f1b2c"
+      },
+      "estimated_seconds_per_unique": 120,
+      "assembly_allowance_seconds": 960,
+      "ROOT_publication_allowance_seconds": 900,
+      "finish_margin_seconds": 600,
+      "missing_unique_at_ROOT_review": 20,
+      "remaining_alias_source_metadata_verifications": 3,
+      "allowance_breakdown": {
+        "startup_and_resume_seconds": 60,
+        "three_alias_source_metadata_verifications_seconds": 360,
+        "TAR_assembly_and_verification_seconds": 540
+      },
+      "actual_sample_endpoint_wall_seconds": 92.7903116196394,
+      "actual_sample_whole_child_wall_seconds": 105.16866958141327,
+      "sample_peak_rss_bytes": 3686518784,
+      "expected_publication_start_UTC": "2026-11-06T19:23:01.248696+00:00",
+      "conservative_finish_with_margin_UTC": "2026-11-06T19:48:01.248696+00:00",
+      "timing_allowances_are_forecast_not_actual_cost": true
+    }
+  },
+  "independent_sample_review": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_best_sample_independent_review_v1/COMPLETE.json",
+    "sha256": "7e2bf5c94c627a44f3882ffece5e610686600948cfdc57a7d368b7392a92af2d"
+  },
+  "sample_authority": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/additional_endpoint_actual_v4/ROOT_C410_best_sample_authority.json",
+    "sha256": "f4e2f428167089cab0ce423b49dbf6691b35abb348b1a7a19b815dd7f0e0c154"
+  },
+  "sample_whole_child": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/additional_endpoint_actual_v4/C410_best_sample/whole_child_timing.json",
+    "sha256": "24b41e8a361a0e1341005151f107406a2bd43c59f33011dae82e5605fb4f7de3"
+  },
+  "resource_observation": {
+    "memory_max": 1030792151040,
+    "current": 1006356721664,
+    "anon": 11459596288,
+    "shmem": 25885483008,
+    "active_file": 935281500160,
+    "inactive_file": 16941879296,
+    "dirty": 188416,
+    "writeback": 0,
+    "unevictable": 0,
+    "conservative_clean_inactive_credit": 16941690880,
+    "conservative_available": 41377120256,
+    "required_memory_allowance": 8589934592,
+    "memory_events": {
+      "low": 0,
+      "high": 0,
+      "max": 176418,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0
+    },
+    "scratch_free_bytes": 23696806842368,
+    "not_a_reservation_or_peak_guarantee": true
+  },
+  "original_reserve_stat": {
+    "device": 106,
+    "inode": 467366543,
+    "uid": 11471,
+    "gid": 11471,
+    "mode": 384,
+    "bytes": 32212254720,
+    "allocated_bytes": 32212254720,
+    "links": 1
+  },
+  "max_extra_workers": 2,
+  "CPU_threads_each": 2,
+  "maximum_total_encoding_workers_including_Cfinal": 3,
+  "slot": "slot1",
+  "publication_requires_separate_ROOT_execution": true,
+  "C1B_or_C2p8B_not_authorized": true,
+  "original_CP_and_verified_sample_retained": true,
+  "ROOT_added_startup_resume_margin_seconds": 60
+}

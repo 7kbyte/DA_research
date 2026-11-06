@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/snapshot_1325_build/whole_process_timing.json",
+    "sha256": "b5998ca797135e437d648b5e0239362be93b8d1b1fb5b403254f1d9cd8273c16"
+  },
+  "wall_seconds": 74.57377971708775,
+  "original_wall_pointer": "/package_child_wall_seconds",
+  "CPU_components": {
+    "package_child_user_seconds": 72.87812,
+    "package_child_sys_seconds": 1.317831
+  },
+  "CPU_component_pointers": [
+    "/package_child_user_seconds",
+    "/package_child_sys_seconds"
+  ],
+  "recorded_inclusive_CPU_seconds": 74.195951,
+  "normalization": "Wall copied verbatim; CPU is sum of only the explicitly listed disjoint user/sys components.",
+  "scope": "Full repository code/data snapshot package subprocess including compression and all member verification. Excludes later shared publication. This category is archive creation, not model-weight encoding or GPU training. Nested compression/member timers are not additional operations.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false,
+  "original_source_fields_or_semantics_changed": false
+}

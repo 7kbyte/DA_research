@@ -1,0 +1,27 @@
+{
+  "status": "outer_publication_timing_receipt_write_failed_after_publisher_completed",
+  "observed_at_utc": "2026-11-06T19:07:02.735133+00:00",
+  "outer_exec_session_id": 47405,
+  "outer_script_returncode_observed": 1,
+  "exception": "FileExistsError: whole_child_timing.json already existed because the batch timing had been copied under that basename before publication",
+  "failed_step": "Exclusive creation of whole publisher child timing after Popen.wait returned; publisher receipt already exists",
+  "retained_misplaced_batch_timing": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_best_publication_actual_v1/batch_whole_child_timing.json",
+    "sha256": "c24ba9a50917cf88478bdccd71c79feb2f0541fe4a2572afa155b68c99f74d5a",
+    "bytes": 405
+  },
+  "original_batch_timing": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/additional_endpoint_actual_v4/C410_best_batch/whole_child_timing.json",
+    "sha256": "c24ba9a50917cf88478bdccd71c79feb2f0541fe4a2572afa155b68c99f74d5a",
+    "bytes": 405
+  },
+  "no_existing_file_was_overwritten": true,
+  "publisher_returncode_not_persisted": null,
+  "exact_publisher_spawn_to_exit_wall_seconds_not_persisted": null,
+  "publisher_whole_user_CPU_seconds_not_persisted": null,
+  "publisher_whole_system_CPU_seconds_not_persisted": null,
+  "publisher_peak_RSS_not_persisted": null,
+  "accounting": "Only publisher internal wall is available from completed publication receipt. Do not substitute batch wall, infer an exact whole wall, invent a child rc or sum internal region with an unknown outer parent.",
+  "archive_payload_modified_by_repair": false,
+  "publication_rerun": false
+}

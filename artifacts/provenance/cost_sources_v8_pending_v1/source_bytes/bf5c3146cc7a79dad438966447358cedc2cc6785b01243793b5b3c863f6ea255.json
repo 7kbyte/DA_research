@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/results/reproduction_qa/optional_C1b_original_best_identity_v1/whole_process_timing.json",
+    "sha256": "4a9a9a8e54e85843c777569ddd077bb3e82987d65dccd4a0e2e1faade650577e"
+  },
+  "wall_seconds": 11.109551299363375,
+  "original_wall_pointer": "/whole_child_process_wall_seconds",
+  "CPU_components": {
+    "/whole_child_user_cpu_seconds": 6.9942329999999995,
+    "/whole_child_sys_cpu_seconds": 4.19583
+  },
+  "CPU_component_pointers": [
+    "/whole_child_user_cpu_seconds",
+    "/whole_child_sys_cpu_seconds"
+  ],
+  "recorded_inclusive_CPU_seconds": 11.190062999999999,
+  "normalization": "Copy the explicit measured wall; sum only listed disjoint user/sys components. No timestamp inference.",
+  "scope": "Complete fixed original1B-best identity child spawn-through-exit, including imports, originalCP loading/full-state fingerprint/fresh fileSHA and proof serialization. Worker parent/read_operations are nested. CPU identity work is not GPU reproduction, a new scientific seed, or score analysis.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false,
+  "original_source_fields_or_semantics_changed": false
+}

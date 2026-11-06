@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/logs/tests_after_additional_export_v4_full_timing.json",
+    "sha256": "428d7698f7eb32bd14de4712d9ee744d074f04439034ddac25c362349d1118d6"
+  },
+  "original_wall_pointer": "/wall_seconds",
+  "wall_seconds": 28.265095628798008,
+  "CPU_component_pointers": [
+    "/user_cpu_seconds",
+    "/sys_cpu_seconds"
+  ],
+  "CPU_components": {
+    "/user_cpu_seconds": 27.173379,
+    "/sys_cpu_seconds": 5.221468
+  },
+  "recorded_inclusive_CPU_seconds": 32.394847,
+  "original_returncode": 0,
+  "scope": "Complete ROOT743 CPU test-suite child; its own pytest display is nested. Earlier separate90test invocation has only a pytest display, not a measured whole-parent source, and is not imputed here.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall and sum only explicitly listed disjoint CPU components; never infer from UTC/bytes.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false,
+  "original_source_fields_or_semantics_changed": false
+}

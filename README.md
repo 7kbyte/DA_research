@@ -14,14 +14,14 @@
 - [主实验独立NLL结果](docs/主NLL测试结果讨论.md)与[补充A完整权重敏感性结果](docs/补充A_NLL完整结果.md)
 - [A梯度日志的事后描述性诊断](docs/A梯度裁剪_事后描述性诊断.md)：完整126次训练的裁剪阈值超出率与梯度范数，保留事后分析及因果解释边界。
 - [补充B的完整独立测试结果](docs/补充B_完整60run测试结果解释.md)与[验证结果](docs/补充B_完整60run验证结果解释.md)：60条件均已完成，比较固定生成池和训练流下的选库波动。
-- [410M／100M完整长程结果](docs/C410_100M_NLL完整结果与正文素材.md)：24项训练、48个final/best逻辑端点与完整配对；[最终权重持久发布](docs/C410_final_weights_durable_publication.json)。
+- [410M／100M完整长程结果](docs/C410_100M_NLL完整结果与正文素材.md)：24项训练、48个final/best逻辑端点与完整配对；[final权重持久发布](docs/C410_final_weights_durable_publication.json)与[全部24项best权重持久发布](docs/C410_best_weights_durable_publication.json)（best包native基座自带；尚未另做单例durable恢复）。
 - [文献调研](literature/文献调研.md)与[三篇近邻工作的定位复核](docs/三篇近邻文献_实验定位复核备忘录_20261106.md)
 - [环境重建与移交](docs/环境重建与移交.md)
 - [交付文件与恢复容量指南](docs/交付文件与恢复容量指南.md)：已发布文件、基座依赖、按需恢复空间与操作顺序。
 - [已校验的共享盘快照](docs/durable_snapshot_latest.json)
 - 主36条件的final与best共72个逻辑端点均已持久保存：[best端点验收](docs/primary_best_weights_durable_publication.json)、[主比例24条件验收](docs/primary_weights_durable_publication.json)、[预算敏感性12条件验收](docs/budget_final_weights_durable_publication.json)及[恢复说明](docs/无损权重交付格式.md)；[按需恢复两个指定模型](docs/已交付权重恢复示例.md)
 - 补充A全部126个λ网格final端点现已跨包持久覆盖：主包18项引用、[验证所选包15份新增权重](docs/A_selected_weights_durable_publication.json)，以及[其余93项native包发布验收](docs/A_remaining_final_weights_durable_publication.json)／[ROOT接受](artifacts/provenance/A_remaining_final_publication_actual_v1/ROOT_acceptance.json)；来源与容量见[交付指南](docs/交付文件与恢复容量指南.md)。
-- 补充B全部60个final端点已持久保存（固定训练/pool seed11的选库变异）：[发布验收](docs/B_all_final_weights_durable_publication.json)、[包旁独立收据](/data/202610/7kb/research_delivery/B_all_final_weights_lossless_v1.tar.receipt.json)；native基座与恢复工具自带，见[容量指南](docs/交付文件与恢复容量指南.md)。
+- 补充B全部60个final端点已持久保存（固定训练/pool seed11的选库变异）：[发布验收](docs/B_all_final_weights_durable_publication.json)、[包旁独立收据](/data/202610/7kb/research_delivery/B_all_final_weights_lossless_v1.tar.receipt.json)；native基座与恢复工具自带，已完成[固定draw1001/B4单例实际CPU恢复](docs/B固定首例native持久包实际恢复验收.md)；见[容量指南](docs/交付文件与恢复容量指南.md)。
 - [研究路线与时间安排](docs/研究路线与时间安排.md)
 - [工程接口与实验约定](docs/ENGINEERING_CONTRACT.md)
 - `configs/`：冻结前pilot及正式实验配置。

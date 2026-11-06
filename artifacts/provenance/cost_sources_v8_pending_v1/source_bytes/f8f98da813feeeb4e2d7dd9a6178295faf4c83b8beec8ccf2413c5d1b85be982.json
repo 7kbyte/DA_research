@@ -1,0 +1,179 @@
+{
+  "status": "passed",
+  "model": "pythia-410m",
+  "run_id": "bankvar_B4_tr11_gen11_draw1001_k20_b0p05_w0p05",
+  "plan": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_preparation_v1/bound_plan_v2.json",
+    "sha256": "61c19ee07d69936da329846fcb8aa8bd67ea8d8fe1ff8cd6b3084c032c3fa3c7"
+  },
+  "authority": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_actual_parent_v1/ROOT_execution_authority.json",
+    "sha256": "93c7456bbcfd01cc0d86000e459a9a37604c03944281c398372ffae6aa0ee009"
+  },
+  "resource_admission": {
+    "disk_free_bytes": 23561045282816,
+    "memory_max_bytes": 1030792151040,
+    "memory_current_bytes": 1030763925504,
+    "anon_bytes": 13571063808,
+    "shmem_bytes": 25885483008,
+    "unevictable_bytes": 0,
+    "file_bytes": 1000107188224,
+    "active_file_bytes": 958512689152,
+    "inactive_file_bytes": 15708962816,
+    "dirty_bytes": 1143377920,
+    "writeback_bytes": 0,
+    "conservative_clean_inactive_credit_bytes": 14565584896,
+    "conservative_available_bytes": 14593810432,
+    "memory_events": {
+      "low": 0,
+      "high": 0,
+      "max": 178572,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0
+    },
+    "caveat": "Reclaim proxy and admission check, not a reservation or peak-RSS guarantee"
+  },
+  "stages": [
+    {
+      "stage": "decode",
+      "argv": [
+        "/usr/bin/python",
+        "-I",
+        "tools/scripts/archive_model_weights.py",
+        "--threads",
+        "2",
+        "decode",
+        "--archive",
+        "weights/bankvar_B4_tr11_gen11_draw1001_k20_b0p05_w0p05__final.xor.zip",
+        "--base",
+        "base/pythia-410m-final/model.safetensors",
+        "--output",
+        "restored/B4_seed11_final.pt"
+      ],
+      "returncode": 0,
+      "wall_seconds": 19.59401237592101,
+      "child_user_seconds": 16.712686,
+      "child_sys_seconds": 3.787937,
+      "timer_relationship": "Sequential child nested in runner and inclusive process-group timer"
+    },
+    {
+      "stage": "independent_fingerprint",
+      "argv": [
+        "/usr/bin/python",
+        "-I",
+        "check_restored.py"
+      ],
+      "returncode": 0,
+      "wall_seconds": 4.136238548904657,
+      "child_user_seconds": 3.7792209999999997,
+      "child_sys_seconds": 0.8132759999999997,
+      "timer_relationship": "Sequential child nested in runner and inclusive process-group timer"
+    }
+  ],
+  "original_checkpoint_or_live_base_opened": false,
+  "whole_source_TAR_rehash": false,
+  "new_encoding": false,
+  "GPU_used": false,
+  "extraction": {
+    "files": [
+      {
+        "member": "base/pythia-410m-final/model.safetensors",
+        "sha256": "3e09001631bb18ec8a6f4522f8e6ab26a53099e69228f9822adc91bfbe27511b",
+        "bytes": 911373632
+      },
+      {
+        "member": "base/pythia-410m-final/config.json",
+        "sha256": "d4c11e84a59c8af4d88446bba53b718f7aef740daa070ded08fd6a9a3aca4fc6",
+        "bytes": 570
+      },
+      {
+        "member": "base/pythia-410m-final/tokenizer.json",
+        "sha256": "c24618a1b3e6a38167beff1c72cffd126c3a66254347304b50547d12c5f25624",
+        "bytes": 2113710
+      },
+      {
+        "member": "base/pythia-410m-final/tokenizer_config.json",
+        "sha256": "70e38394e494931c6f773ba41e19460dd4436526b852207367f04341b4066d3f",
+        "bytes": 396
+      },
+      {
+        "member": "base/pythia-410m-final/special_tokens_map.json",
+        "sha256": "6f50ab5a5a509a1c309d6171f339b196a900dc9c99ad0408ff23bb615fdae7ad",
+        "bytes": 99
+      },
+      {
+        "member": "base/pythia-410m-final/README.md",
+        "sha256": "d7d60ae94cb0882f19381632532a01d39247fe6f932016c39768b1f67c9f2bf9",
+        "bytes": 13593
+      },
+      {
+        "member": "additional_weights_manifest.json",
+        "sha256": "25ee332b1e42b66b84db4463ca6d3b615a8172d903f3d1309ed80eab71e8462c",
+        "bytes": 561665
+      },
+      {
+        "member": "weights/bankvar_B4_tr11_gen11_draw1001_k20_b0p05_w0p05__final.xor.zip",
+        "sha256": "b66a21ebe73bb630b48737c2201d47c96bed8a02f366d09f91cb8adb1fb09b8b",
+        "bytes": 1144048546
+      },
+      {
+        "member": "metadata/bankvar_B4_tr11_gen11_draw1001_k20_b0p05_w0p05__final.source_metadata.pt",
+        "sha256": "2828e7923cc732eb6258720fa758a1586db4ac29fa61e6ee24879b57f0228b8e",
+        "bytes": 21068
+      },
+      {
+        "member": "tools/scripts/archive_model_weights.py",
+        "sha256": "28c5841cae8e7fd87d8cb62e7f756dad40ce15cb558710c31e48dfb45fde668a",
+        "bytes": 2085
+      },
+      {
+        "member": "tools/src/replay_study/weight_archive.py",
+        "sha256": "3c2bcf9e38773ae4f69c27f85f342356dbefcb53d817be4321da6e9c4e550e1a",
+        "bytes": 15264
+      },
+      {
+        "member": "tools/src/replay_study/__init__.py",
+        "sha256": "b2dce8cc5ea80a67a90b1798232163a7684874487b5ea4102e60851c7017f520",
+        "bytes": 65
+      }
+    ],
+    "selected_member_payload_bytes": 2058150693,
+    "source_TAR_bytes_returned_to_Python": 2058355626,
+    "scope": "Selected members plus TAR headers; serialized read bytes, not measured physical disk traffic",
+    "full_TAR_SHA_recomputed": false,
+    "wall_seconds": 12.182013310492039,
+    "process_cpu_seconds": 4.748999356,
+    "timer_relationship": "Parent region nested in whole runner"
+  },
+  "independent_check": {
+    "status": "passed",
+    "model": "pythia-410m",
+    "run_id": "bankvar_B4_tr11_gen11_draw1001_k20_b0p05_w0p05",
+    "fingerprint": {
+      "sha256_model_state": "05724eda110e91eb76c8f6d45b54386b374e486662207a266166a0fde0ffb790",
+      "state_elements": 405334016
+    },
+    "tensor_count": 292,
+    "independent_tensor_payload_bytes_hashed": 1621336064,
+    "fresh_new_restored_file_sha256": "e3b026cfe90176462f56f734fb45f30ee6777f2f7bbb192a756958f66c60932d",
+    "fresh_new_restored_serialized_bytes_hashed": 1621450850,
+    "source_checkpoint_sha256": "13dde87cee608d8e677e86fc91e5aaeb734865ee7a2197766dde4e69711bc951",
+    "original_checkpoint_read": false,
+    "archive_only_native_base": true,
+    "original_CP_fresh_uint8_comparison": false,
+    "Adam_resume_verified": false,
+    "GPU_used": false,
+    "wall_seconds": 2.8655684664845467,
+    "process_cpu_seconds": 3.2798690440000002,
+    "timer_scope": "Checker body after imports; nested in external checker and whole recovery child timers"
+  },
+  "runner_body_wall_seconds": 35.9165333211422,
+  "parent_self_user_seconds": 1.6866649999999999,
+  "parent_self_sys_seconds": 3.0646050000000002,
+  "children_user_seconds": 20.491907,
+  "children_sys_seconds": 4.6012129999999996,
+  "children_peak_RSS_bytes_cumulative": 2881683456,
+  "accounting": "Body/stages nested in outer inclusive process-group timer; parent self CPU plus child CPU once",
+  "claim": "One fixed B durable native-package model-only recovery, not all60, original CP recompare, Adam resume or GPU training"
+}

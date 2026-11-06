@@ -1,0 +1,187 @@
+{
+  "status": "verified_additional_endpoint_not_yet_assembled",
+  "package": "C410_best",
+  "run_id": "extended_v2_pythia_410m_m64_formal_B0_s11_w0",
+  "actual_run_id": "extended_v2_pythia_410m_m64_formal_B0_s11_w0",
+  "phase": "formal",
+  "phase_name": "extended_pythia_410m_100m",
+  "role": "extended",
+  "kind": "best",
+  "model_tag": "pythia-410m",
+  "data_family": "extended_v1",
+  "group": "B0",
+  "training_seed": 11,
+  "generation_seed": null,
+  "selection_seed": null,
+  "ratio": 0.0,
+  "weight": 0.0,
+  "source_checkpoint": "/tmp/grad-research-20261106/runs/extended_v2_pythia_410m_m64_formal_B0_s11_w0/checkpoints/checkpoint_best.pt",
+  "source_stat": {
+    "device": 139,
+    "inode": 88222867911,
+    "bytes": 1621460834,
+    "mtime_ns": 1793966408039411517,
+    "ctime_ns": 1793966408039411517
+  },
+  "config_sha256": "05b6a2b298e25f0e22ab2a1233cd8f3a763c932f8695c7c5cfbf9e95a6f2881e",
+  "summary_sha256": "f6009093abd96a74c4eaa9716c4d6e09e41d89ea823673cd3c47469cc22f3156",
+  "definition_sha256": "77c35f7c8e9cb9b3156b353b12c37af9b8583874b53ef08db53fb84d88b10588",
+  "definition": {
+    "id": "extended_v2_pythia_410m_m64_formal_B0_s11_w0",
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+      "run",
+      "--config",
+      "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal/extended_v2_pythia_410m_m64_formal_B0_s11_w0.json",
+      "--summary-copy",
+      "/tmp/grad-research-20261106/worktree/results/extended/pythia-410m/extended_v2_pythia_410m_m64_formal_B0_s11_w0_summary.json"
+    ],
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "expected_seconds": 3600,
+    "outputs": [
+      "/tmp/grad-research-20261106/worktree/results/extended/pythia-410m/extended_v2_pythia_410m_m64_formal_B0_s11_w0_summary.json",
+      "/tmp/grad-research-20261106/runs/extended_v2_pythia_410m_m64_formal_B0_s11_w0/summary.json"
+    ]
+  },
+  "completed_scheduler_record": {
+    "status": "completed",
+    "definition_sha256": "77c35f7c8e9cb9b3156b353b12c37af9b8583874b53ef08db53fb84d88b10588",
+    "pid": 3172704,
+    "gpu": "3",
+    "log": "logs/jobs/extended_v2_pythia_410m_m64_formal_B0_s11_w0.log",
+    "started_at_utc": "2026-11-06T11:47:29.869547+00:00",
+    "started_at_epoch": 1793965649.8695512,
+    "argv": [
+      "/usr/bin/python",
+      "/tmp/grad-research-20261106/worktree/scripts/make_experiments.py",
+      "run",
+      "--config",
+      "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal/extended_v2_pythia_410m_m64_formal_B0_s11_w0.json",
+      "--summary-copy",
+      "/tmp/grad-research-20261106/worktree/results/extended/pythia-410m/extended_v2_pythia_410m_m64_formal_B0_s11_w0_summary.json"
+    ],
+    "returncode": 0,
+    "ended_at_utc": "2026-11-06T12:18:45.681596+00:00",
+    "elapsed_seconds": 1875.8024446964264,
+    "missing_outputs": []
+  },
+  "frozen_checkpoint_identity_sha256": "dd25db838ede6d137cd630818e5ecb3ad8f9100ef47eba86740a48f04a260bf4",
+  "actual_exposure": {
+    "checkpoint_step": 1224,
+    "target_prediction_tokens": 40029696,
+    "replay_prediction_tokens": 0,
+    "full_training_target_prediction_tokens": 100000000,
+    "full_training_replay_prediction_tokens": 0
+  },
+  "metadata_path": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/C410_best/metadata/extended_v2_pythia_410m_m64_formal_B0_s11_w0__best.source_metadata.pt",
+  "metadata_member": "metadata/extended_v2_pythia_410m_m64_formal_B0_s11_w0__best.source_metadata.pt",
+  "metadata_sha256": "a2048d3607521657869f2d21274caa2ea76a8e8df9f33dbcc8fda32134883aad",
+  "all_nonweight_metadata_roundtrip_verified": true,
+  "source_checkpoint_sha256": "dd25db838ede6d137cd630818e5ecb3ad8f9100ef47eba86740a48f04a260bf4",
+  "archive_path": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/C410_best/weights/extended_v2_pythia_410m_m64_formal_B0_s11_w0__best.xor.zip",
+  "archive_member": "weights/extended_v2_pythia_410m_m64_formal_B0_s11_w0__best.xor.zip",
+  "archive_sha256": "80b171ed202e87d6e65114e86be9eeba44d4961b1ff9846d24120a25d9497318",
+  "archive_stat": {
+    "device": 139,
+    "inode": 116107996490,
+    "bytes": 1211143248,
+    "mtime_ns": 1793989197610217730,
+    "ctime_ns": 1793989197633217636
+  },
+  "model_fingerprint": {
+    "sha256_model_state": "d9be7b307cf922d7399cd4aee405c1ca2368c19b45c32423684ff76a4b08b9fd",
+    "state_elements": 405334016
+  },
+  "encode": {
+    "status": "encoded",
+    "archive": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/C410_best/weights/extended_v2_pythia_410m_m64_formal_B0_s11_w0__best.xor.zip",
+    "archive_sha256": "80b171ed202e87d6e65114e86be9eeba44d4961b1ff9846d24120a25d9497318",
+    "archive_bytes": 1211143248,
+    "model_raw_bytes": 1621336064,
+    "compression_ratio_archive_over_model_raw": 0.7470032122840635,
+    "model_fingerprint": {
+      "sha256_model_state": "d9be7b307cf922d7399cd4aee405c1ca2368c19b45c32423684ff76a4b08b9fd",
+      "state_elements": 405334016
+    },
+    "base_sha256": "3e09001631bb18ec8a6f4522f8e6ab26a53099e69228f9822adc91bfbe27511b",
+    "source_checkpoint_sha256": "dd25db838ede6d137cd630818e5ecb3ad8f9100ef47eba86740a48f04a260bf4",
+    "source_checkpoint_bytes_including_optimizer": 1621460834,
+    "wall_seconds": 69.78013578802347,
+    "cpu_threads": 2,
+    "model_only": true,
+    "lossless_weight_bits": true,
+    "gpu_used": false
+  },
+  "decode": {
+    "status": "decoded_and_hash_verified",
+    "archive": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/C410_best/weights/extended_v2_pythia_410m_m64_formal_B0_s11_w0__best.xor.zip",
+    "restored": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/C410_best/verification/extended_v2_pythia_410m_m64_formal_B0_s11_w0__best.restored.pt",
+    "model_fingerprint": {
+      "sha256_model_state": "d9be7b307cf922d7399cd4aee405c1ca2368c19b45c32423684ff76a4b08b9fd",
+      "state_elements": 405334016
+    },
+    "tensor_raw_hashes_verified": 292,
+    "restored_file_sha256": "a9fe558dba088989659e493eedd806b0013117cba860ce1f766083dd62a5d806",
+    "restored_bytes": 1621450946,
+    "wall_seconds": 18.20394718274474,
+    "cpu_threads": 2,
+    "gpu_used": false,
+    "model_only_evaluation_format": true
+  },
+  "bytewise_verification": {
+    "status": "passed",
+    "tensor_count": 292,
+    "all_tensor_bytes_equal": true,
+    "source_checkpoint_sha256": "dd25db838ede6d137cd630818e5ecb3ad8f9100ef47eba86740a48f04a260bf4",
+    "archive_sha256": "80b171ed202e87d6e65114e86be9eeba44d4961b1ff9846d24120a25d9497318",
+    "model_fingerprint": {
+      "sha256_model_state": "d9be7b307cf922d7399cd4aee405c1ca2368c19b45c32423684ff76a4b08b9fd",
+      "state_elements": 405334016
+    },
+    "wall_seconds": 4.4947297014296055,
+    "cpu_threads": 2,
+    "gpu_used": false
+  },
+  "additional_encoding_calls": 1,
+  "encode_process_cpu_seconds": 70.217205904,
+  "decode_process_cpu_seconds": 18.851180115000005,
+  "verification_process_cpu_seconds": 4.63248544999999,
+  "exporter_sha256": "c93e0c1d35fe39b3d71155a126db841b76648ba6b3afd58d475be4eb9c9da853",
+  "prepared_scope_sha256": "7adb8f7f0461fd929995dd370ff2a59b2abc5c0d7750a39e745d21d5546d9de3",
+  "source_fd_five_stat_before": {
+    "device": 139,
+    "inode": 88222867911,
+    "bytes": 1621460834,
+    "mtime_ns": 1793966408039411517,
+    "ctime_ns": 1793966408039411517
+  },
+  "source_fd_five_stat_after": {
+    "device": 139,
+    "inode": 88222867911,
+    "bytes": 1621460834,
+    "mtime_ns": 1793966408039411517,
+    "ctime_ns": 1793966408039411517
+  },
+  "wall_seconds": 92.7903116196394,
+  "process_cpu_seconds": 93.752822735,
+  "peak_rss_bytes_process_cumulative": 3686518784,
+  "cgroup_memory_before": {
+    "memory.current": "1030790766592",
+    "memory.max": "1030792151040",
+    "memory.events": "low 0\nhigh 0\nmax 176345\noom 0\noom_kill 0\noom_group_kill 0"
+  },
+  "cgroup_memory_after": {
+    "memory.current": "1029150208000",
+    "memory.max": "1030792151040",
+    "memory.events": "low 0\nhigh 0\nmax 176403\noom 0\noom_kill 0\noom_group_kill 0"
+  },
+  "cpu_threads": 2,
+  "workers": 1,
+  "GPU_used": false,
+  "shared_storage_written": false,
+  "original_CP_ZIP_restored_retained": true,
+  "timer_scope": "Independent endpoint parent before completion JSON commit; codec/verification timers nested"
+}

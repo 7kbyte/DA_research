@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v2/scope.json",
+    "sha256": "a35b87e032b9bccf4527ab562e9168043013ca619c8150a8b6caf984d66d402c"
+  },
+  "original_wall_pointer": "/preparation_wall_seconds",
+  "wall_seconds": 10.11905338615179,
+  "CPU_component_pointers": [
+    "/preparation_process_cpu_seconds"
+  ],
+  "CPU_components": {
+    "/preparation_process_cpu_seconds": 9.648970669999999
+  },
+  "recorded_inclusive_CPU_seconds": 9.648970669999999,
+  "original_returncode": null,
+  "scope": "One actual preflight function region after imports, although its prepared scope was never encoded. Includes native/data/small-input hashes; do not add native hash children.",
+  "timing_semantics": "independent_measured_body_region_after_imports",
+  "normalization": "Copy measured wall and sum only explicitly listed disjoint CPU components; never infer from UTC/bytes.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false,
+  "original_source_fields_or_semantics_changed": false
+}

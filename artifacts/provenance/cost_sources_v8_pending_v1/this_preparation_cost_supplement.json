@@ -1,0 +1,63 @@
+{
+  "status": "measured_preparation_calls_for_future_registration_only",
+  "parents": [
+    {
+      "source": {
+        "path": "artifacts/provenance/cost_sources_v8_pending_v1/preparation_whole_child_timing.json",
+        "sha256": "0d6b1664b4fd68ed6ca5ee6ed9e10303729c538298775c1bdf851633990d5911",
+        "bytes": 668,
+        "retained_bytes": "artifacts/provenance/cost_sources_v8_pending_v1/source_bytes/0d6b1664b4fd68ed6ca5ee6ed9e10303729c538298775c1bdf851633990d5911.json",
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 60307764989,
+          "st_size": 668,
+          "st_mtime_ns": 1793991635332323093,
+          "st_ctime_ns": 1793991635332323093
+        }
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 0.07484787330031395,
+      "cpu_component_pointers": [
+        "/child_user_seconds",
+        "/child_system_seconds"
+      ],
+      "cpu_component_values": {
+        "/child_user_seconds": 0.051966,
+        "/child_system_seconds": 0.021970999999999997
+      },
+      "returncode": 1,
+      "nested_regions_excluded": true,
+      "note": "This source-list preparation call is a newly measured parent candidate, separate from the 38 historical candidates. Failed attempt source/log bytes retained; manual preceding inventory and authoring whole unknown."
+    },
+    {
+      "source": {
+        "path": "artifacts/provenance/cost_sources_v8_pending_v1/preparation_attempt2_whole_child_timing.json",
+        "sha256": "d3548ff773b8e03fe4a4e7520f47803538ef8f43c7e579d86043801d2c83bb44",
+        "bytes": 668,
+        "retained_bytes": "artifacts/provenance/cost_sources_v8_pending_v1/source_bytes/d3548ff773b8e03fe4a4e7520f47803538ef8f43c7e579d86043801d2c83bb44.json",
+        "stat": {
+          "st_dev": 139,
+          "st_ino": 60307791813,
+          "st_size": 668,
+          "st_mtime_ns": 1793991655286247576,
+          "st_ctime_ns": 1793991655286247576
+        }
+      },
+      "wall_pointer": "/whole_child_wall_seconds",
+      "wall_seconds": 0.07413392513990402,
+      "cpu_component_pointers": [
+        "/child_user_seconds",
+        "/child_system_seconds"
+      ],
+      "cpu_component_values": {
+        "/child_user_seconds": 0.056552,
+        "/child_system_seconds": 0.016867999999999998
+      },
+      "returncode": 0,
+      "nested_regions_excluded": true,
+      "note": "This source-list preparation call is a newly measured parent candidate, separate from the 38 historical candidates. Failed attempt source/log bytes retained; manual preceding inventory and authoring whole unknown."
+    }
+  ],
+  "failure": "First preparation attempt failed only because an excluded A acceptance copy used whole_child_cost rather than whole_process_cost; corrected source and original source/log/receipt retained.",
+  "unknown_manual_engineering_parent_seconds": null
+}

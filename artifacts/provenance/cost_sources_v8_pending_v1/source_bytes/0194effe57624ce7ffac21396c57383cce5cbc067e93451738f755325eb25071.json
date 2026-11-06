@@ -1,0 +1,147 @@
+{
+  "status": "ROOT_accepted_one_fixed_B_native_durable_package_actual_CPU_restore",
+  "accepted_at_utc": "2026-11-06T18:51:43.531981+00:00",
+  "run_id": "bankvar_B4_tr11_gen11_draw1001_k20_b0p05_w0p05",
+  "whole_process_timing": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_actual_parent_v1/whole_child_timing.json",
+    "sha256": "367522dfd3fc966a8ba33eaa2a60705f26d71d62f7e5642f5d88dfef17144018",
+    "bytes": 1153
+  },
+  "internal_timing": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_actual_v1/whole_child_timing.json",
+    "sha256": "d73b9b58a9fa9e34d817ff8775a923aa9e5483728a3b132742624ab08b4bdaa4",
+    "bytes": 2249
+  },
+  "execution_authority": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_actual_parent_v1/ROOT_execution_authority.json",
+    "sha256": "93c7456bbcfd01cc0d86000e459a9a37604c03944281c398372ffae6aa0ee009",
+    "bytes": 2435
+  },
+  "prepared_plan": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_preparation_v1/bound_plan_v2.json",
+    "sha256": "61c19ee07d69936da329846fcb8aa8bd67ea8d8fe1ff8cd6b3084c032c3fa3c7",
+    "bytes": 16311
+  },
+  "small_QA_evidence": {
+    "bound_plan.json": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_actual_parent_v1/small_QA_evidence/bound_plan.json",
+      "sha256": "61c19ee07d69936da329846fcb8aa8bd67ea8d8fe1ff8cd6b3084c032c3fa3c7",
+      "bytes": 16311
+    },
+    "actual_restore_receipt.json": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_actual_parent_v1/small_QA_evidence/actual_restore_receipt.json",
+      "sha256": "f8f98da813feeeb4e2d7dd9a6178295faf4c83b8beec8ccf2413c5d1b85be982",
+      "bytes": 6875
+    },
+    "independent_fingerprint.json": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_actual_parent_v1/small_QA_evidence/independent_fingerprint.json",
+      "sha256": "9f426b702c5f93cef1da161c269fd7f028ae1ed9ca35b8ffe85a99411c8425b7",
+      "bytes": 969
+    },
+    "check_restored.py": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_actual_parent_v1/small_QA_evidence/check_restored.py",
+      "sha256": "6b7df26abef4ce0bd09dabbd7878a5a9585c8681d3cb97115f912dd542d3fa8d",
+      "bytes": 4806
+    },
+    "restored/B4_seed11_final.pt.decode.json": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_actual_parent_v1/small_QA_evidence/restored/B4_seed11_final.pt.decode.json",
+      "sha256": "d80c99b51386ff99214f87734f15800e53f2db84b26edceedf210110b2ad42c2",
+      "bytes": 613
+    },
+    "logs/decode.stdout.log": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_actual_parent_v1/small_QA_evidence/logs/decode.stdout.log",
+      "sha256": "99f4f3299da16559189257dd9f89d1984752e9c0c4078c504f2cc7f7d6aba58c",
+      "bytes": 577
+    },
+    "logs/decode.stderr.log": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_actual_parent_v1/small_QA_evidence/logs/decode.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "logs/independent_fingerprint.stdout.log": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_actual_parent_v1/small_QA_evidence/logs/independent_fingerprint.stdout.log",
+      "sha256": "78a197625478552518684baade444895c2624cc846c26336d5c560770b15bafe",
+      "bytes": 921
+    },
+    "logs/independent_fingerprint.stderr.log": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_actual_parent_v1/small_QA_evidence/logs/independent_fingerprint.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  },
+  "whole_process_cost": {
+    "returncode": 0,
+    "argv": [
+      "python",
+      "-I",
+      "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_preparation_v1/run_B_restore.py",
+      "execute",
+      "--plan",
+      "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_preparation_v1/bound_plan_v2.json",
+      "--plan-sha256",
+      "61c19ee07d69936da329846fcb8aa8bd67ea8d8fe1ff8cd6b3084c032c3fa3c7",
+      "--authority",
+      "/tmp/grad-research-20261106/worktree/artifacts/provenance/B_native_restore_actual_parent_v1/ROOT_execution_authority.json",
+      "--authority-sha256",
+      "93c7456bbcfd01cc0d86000e459a9a37604c03944281c398372ffae6aa0ee009"
+    ],
+    "wall_seconds": 36.18444097042084,
+    "user_cpu_seconds": 22.3447,
+    "sys_cpu_seconds": 7.730223,
+    "child_peak_rss_bytes": 2881683456,
+    "finished_at_utc": "2026-11-06T18:50:34.942724+00:00",
+    "GPU_used": false,
+    "timing_scope": "Whole B restore execute child spawn through exit, including interpreter imports, preflight, internal process-group lifecycle/cleanup, extraction, decode, full independent fingerprint and final receipt serialization; all inner timers nested and not additive"
+  },
+  "whole_model_fingerprint": {
+    "sha256_model_state": "05724eda110e91eb76c8f6d45b54386b374e486662207a266166a0fde0ffb790",
+    "state_elements": 405334016
+  },
+  "tensor_count": 292,
+  "new_restored_file_SHA256": "e3b026cfe90176462f56f734fb45f30ee6777f2f7bbb192a756958f66c60932d",
+  "new_restored_file_current_stat": {
+    "device": 139,
+    "inode": 60307777940,
+    "bytes": 1621450850,
+    "uid": 0,
+    "gid": 0,
+    "mode": "0o644",
+    "mtime_ns": 1793991029022748796,
+    "ctime_ns": 1793991029022748796
+  },
+  "published_B_TAR_current_stat": {
+    "device": 106,
+    "inode": 411787337,
+    "bytes": 69578864640,
+    "uid": 11471,
+    "gid": 11471,
+    "mode": "0o600",
+    "mtime_ns": 1793986149949270332,
+    "ctime_ns": 1793986149949270332
+  },
+  "source_TAR_bytes_returned_to_Python": 2058355626,
+  "selected_payload_bytes": 2058150693,
+  "independent_full_tensor_bytes_hashed": 1621336064,
+  "fresh_serialized_restored_bytes_hashed": 1621450850,
+  "memory_events_after": {
+    "low": 0,
+    "high": 0,
+    "max": 178695,
+    "oom": 0,
+    "oom_kill": 0,
+    "oom_group_kill": 0
+  },
+  "memory_events_delta_since_body_admission": {
+    "low": 0,
+    "high": 0,
+    "max": 123,
+    "oom": 0,
+    "oom_kill": 0,
+    "oom_group_kill": 0
+  },
+  "memory_event_boundary": "Shared cgroup; max increments indicate limit/reclaim pressure and cannot be attributed solely to this QA",
+  "process_group_absent_and_shared_lock_free_observed": true,
+  "ROOT_payload_bytes_rehashed": 0,
+  "all_internal_timers_nested_in_whole_parent": true,
+  "claim": "One preselected B final model recovered from durable native package. No original CP fresh byte compare, all60 restore, optimizer resume, GPU retraining or new score."
+}
