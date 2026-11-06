@@ -1,0 +1,15 @@
+{
+  "status": "failed_staging_retained_do_not_switch_workspace",
+  "namespace": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_independent_review_v1/synthetic_temporary_files_v2/test_non_gzip_trailing_bytes_f0/delivery/new_namespace",
+  "staging": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_independent_review_v1/synthetic_temporary_files_v2/test_non_gzip_trailing_bytes_f0/delivery/new_namespace/research.staging",
+  "destination": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_independent_review_v1/synthetic_temporary_files_v2/test_non_gzip_trailing_bytes_f0/delivery/new_namespace/research",
+  "reserve_consumed": true,
+  "directory_published": false,
+  "workspace_symlink_modified": false,
+  "compressed_stream_bytes_read": null,
+  "error_type": "BadGzipFile",
+  "error": "Not a gzipped file (b'no')",
+  "traceback": "Traceback (most recent call last):\n  File \"/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_independent_review_v1/restore_tree.py\", line 220, in restore\n    result=extract_and_check(source_fd,archive,plan['archive_stat5'],staging,plan)\n  File \"/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_independent_review_v1/restore_tree.py\", line 151, in extract_and_check\n    with tarfile.open(fileobj=compressed,mode='r|',bufsize=BLOCK,ignore_zeros=True) as tar:\n  File \"/usr/lib/python3.10/tarfile.py\", line 1829, in open\n    t = cls(name, filemode, stream, **kwargs)\n  File \"/usr/lib/python3.10/tarfile.py\", line 1707, in __init__\n    self.firstmember = self.next()\n  File \"/usr/lib/python3.10/tarfile.py\", line 2622, in next\n    raise e\n  File \"/usr/lib/python3.10/tarfile.py\", line 2595, in next\n    tarinfo = self.tarinfo.fromtarfile(self)\n  File \"/usr/lib/python3.10/tarfile.py\", line 1285, in fromtarfile\n    buf = tarfile.fileobj.read(BLOCKSIZE)\n  File \"/usr/lib/python3.10/tarfile.py\", line 526, in read\n    buf = self._read(size)\n  File \"/usr/lib/python3.10/tarfile.py\", line 534, in _read\n    return self.__read(size)\n  File \"/usr/lib/python3.10/tarfile.py\", line 564, in __read\n    buf = self.fileobj.read(self.bufsize)\n  File \"/usr/lib/python3.10/gzip.py\", line 301, in read\n    return self._buffer.read(size)\n  File \"/usr/lib/python3.10/_compression.py\", line 68, in readinto\n    data = self.read(len(byte_view))\n  File \"/usr/lib/python3.10/gzip.py\", line 488, in read\n    if not self._read_gzip_header():\n  File \"/usr/lib/python3.10/gzip.py\", line 436, in _read_gzip_header\n    raise BadGzipFile('Not a gzipped file (%r)' % magic)\ngzip.BadGzipFile: Not a gzipped file (b'no')\n",
+  "wall_seconds": 0.002636052668094635,
+  "instruction": "Keep staging/source/logs. Released capacity is not recreated; original tree/symlink untouched."
+}

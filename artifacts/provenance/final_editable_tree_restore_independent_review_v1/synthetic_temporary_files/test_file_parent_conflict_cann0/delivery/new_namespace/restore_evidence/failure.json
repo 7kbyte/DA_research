@@ -1,0 +1,15 @@
+{
+  "status": "failed_staging_retained_do_not_switch_workspace",
+  "namespace": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_independent_review_v1/synthetic_temporary_files/test_file_parent_conflict_cann0/delivery/new_namespace",
+  "staging": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_independent_review_v1/synthetic_temporary_files/test_file_parent_conflict_cann0/delivery/new_namespace/research.staging",
+  "destination": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_independent_review_v1/synthetic_temporary_files/test_file_parent_conflict_cann0/delivery/new_namespace/research",
+  "reserve_consumed": true,
+  "directory_published": false,
+  "workspace_symlink_modified": false,
+  "compressed_stream_bytes_read": null,
+  "error_type": "NotADirectoryError",
+  "error": "[Errno 20] Not a directory: 'a'",
+  "traceback": "Traceback (most recent call last):\n  File \"/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_independent_review_v1/restore_tree.py\", line 220, in restore\n    result=extract_and_check(source_fd,archive,plan['archive_stat5'],staging,plan)\n  File \"/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_independent_review_v1/restore_tree.py\", line 161, in extract_and_check\n    fd=create_member(root_fd,name,member.mode);hashed,copied,pieces=hashlib.sha256(),0,[]\n  File \"/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_independent_review_v1/restore_tree.py\", line 138, in create_member\n    child=os.open(name,os.O_RDONLY|os.O_DIRECTORY|os.O_NOFOLLOW|os.O_CLOEXEC,dir_fd=directory)\nNotADirectoryError: [Errno 20] Not a directory: 'a'\n",
+  "wall_seconds": 0.002666659653186798,
+  "instruction": "Keep staging/source/logs. Released capacity is not recreated; original tree/symlink untouched."
+}

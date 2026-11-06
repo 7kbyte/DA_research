@@ -1,0 +1,90 @@
+{
+  "status": "prepared_tool_independent_review_passed_not_real_restore_authority",
+  "at_utc": "2026-11-06T20:01:40.997962+00:00",
+  "source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_preparation_v1/restore_tree.py",
+    "sha256": "046f74609068ec425c704fdb04d85015d1944b8e04a630e06dcc82ce06a0679e"
+  },
+  "tests": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_preparation_v1/test_final_tree_restore.py",
+    "sha256": "d3832d4a949367de7d1c0d73c472c6a214f3da62e07796436276daa295210ee2"
+  },
+  "runbook": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_preparation_v1/RUNBOOK.md",
+    "sha256": "8978ccb634ae3644de72f43e9eebf1f969b100b2f7061dfb207e82086be2c76d"
+  },
+  "FALSE_plan": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_preparation_v1/plan.FALSE.template.json",
+    "sha256": "2262a35acff75e5491a36850a208334fa4063662b572ffcd26281456baa37880"
+  },
+  "FALSE_authority": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_preparation_v1/authority.FALSE.template.json",
+    "sha256": "46ad945e18d6d1c06226ea02a16e2b7986707a6018c1d985e19a3d1276000dfe"
+  },
+  "author40_tests_receipt": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_preparation_v1/tests_final_fixed_status/whole_child_timing.json",
+    "sha256": "fbf4f7090dd96010e5baa69212258a919e256d6ed82c15532ee3d60bee2b444a"
+  },
+  "independent_checks": {
+    "path_parent_conflicts_both_orders": "reject_without_publication_staging_retained",
+    "empty_concatenated_gzip_member": "all_compressed_bytes_and_SHA_counted",
+    "invalid_non_gzip_suffix": "rejected_even_if_toy_authority_hashes_full_suffix",
+    "four_probe_source": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_independent_review_v1/restore_tree.py",
+      "sha256": "eb54a7a52b39b2d7e13968644ee372ac77542649ab6f09292449335250219e69"
+    },
+    "four_probe_stdout": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_independent_review_v1/stdout_attempt2.log",
+      "sha256": "83e93988ab9285b3e32d2b12e93b29d617fc995fbb9b774d99d617a8affc8f6a"
+    },
+    "four_probe_timer": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_independent_review_v1/whole_child_timing_attempt2.json",
+      "sha256": "cc61173da05d431059eec1d21516c5d89bc4b76fcec56a7df98ef31d15b98570"
+    },
+    "fixed_failed_and_intermediate_status": "2pass_against_final046_source_38deselected",
+    "fixed_status_stdout": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_independent_review_v1/stdout_fixed_final_status.log",
+      "sha256": "a7faca439b8b9382554c4aa5f6ce54a187e4b4fc08b2503b2c6b95e0c0c58d95"
+    },
+    "fixed_status_timer": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_independent_review_v1/whole_fixed_final_status_timing.json",
+      "sha256": "b09f6383c4554cdb567d821bd60ea5b9df23aace939376e6088655eb2a350a97"
+    }
+  },
+  "accepted_minimal_repairs": [
+    "source_fd_and_path_stat_rechecked_immediately_before_reserve_release",
+    "admitted_plan_and_authority_SHA_saved_from_actual_admitted_bytes",
+    "plan_and_acceptance_must_both_equal_accepted_durable_final_snapshot"
+  ],
+  "static_review": {
+    "ROOT_source_proof_stat_and_reserve_binding": true,
+    "exclusive_new_namespace_staging_only": true,
+    "research_single_root_canonical_paths_regular_members": true,
+    "manifest_final_and_exact_file_set_SHA_bytes": true,
+    "full_gzip_single_stream_hash_and_source_stat": true,
+    "chown_fsync_atomic_noreplace_directory_publish": true,
+    "failures_retained_no_old_directory_or_workspace_mutation": true
+  },
+  "retained_own_probe_fixture_failure": {
+    "source": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_independent_review_v1/test_targeted_paths.py",
+      "sha256": "07ae188f48f72f5db9825770d96c7320939f5e09060c7240ff5775bf60141155"
+    },
+    "timer": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_independent_review_v1/whole_child_timing.json",
+      "sha256": "44f7e0e6669edab8fc7b95eeb7411a3749e69288abbe9e2b4aa520ed17ed36ea"
+    },
+    "stderr_and_pytest_output": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_independent_review_v1/stdout.log",
+      "sha256": "27a84c418a09279f33c63e1d0fd28fd98f854135e8bd93d321e089cf67472a2e"
+    },
+    "note": "Own first probe passed strings to Path-only toy save; retained then fixed only new test_targeted_paths_v2.py. Not a restore tool failure."
+  },
+  "real_project_archive_model_payload_bytes_read": 0,
+  "real_reserve_consumed": false,
+  "shared_delivery_written": false,
+  "workspace_symlink_changed": false,
+  "true_authority_created": false,
+  "manual_engineering_whole_seconds": null,
+  "future_ROOT_actual_final_publication_and_explicit_execution_authority_still_required": true
+}

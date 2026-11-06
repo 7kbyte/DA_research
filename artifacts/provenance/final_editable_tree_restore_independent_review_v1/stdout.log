@@ -1,0 +1,49 @@
+Running 4 items in this shard
+..FF                                                                     [100%]
+=================================== FAILURES ===================================
+________ test_concatenated_empty_gzip_member_is_in_full_compressed_hash ________
+
+fixture = <function fixture.<locals>.build at 0x7fc5ce6eb010>
+
+    def test_concatenated_empty_gzip_member_is_in_full_compressed_hash(fixture):
+>       f = fixture(); append_and_rebind_toy(f, gzip.compress(b''))
+
+artifacts/provenance/final_editable_tree_restore_independent_review_v1/test_targeted_paths.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+artifacts/provenance/final_editable_tree_restore_independent_review_v1/test_targeted_paths.py:26: in append_and_rebind_toy
+    pub_ref = save(f['plan']['publication']['path'], pub)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = '/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_independent_review_v1/synthetic_temporary_files/test_concatenated_empty_gzip_m0/publication.json'
+value = {'atomic_destination_commit_noreplace': True, 'bytes': 409, 'destination': '/tmp/grad-research-20261106/worktree/artif...ynthetic_future.tar.gz', 'destination_sha256': 'ad335ac8bd08159bfd203e9fbee3bfdf479da3290d139665240e0641b1a2d407', ...}
+
+    def save(path, value):
+>       path.write_text(json.dumps(value, indent=2) + '\n')
+E       AttributeError: 'str' object has no attribute 'write_text'
+
+artifacts/provenance/final_editable_tree_restore_independent_review_v1/fixture_source.py:25: AttributeError
+_____ test_non_gzip_trailing_bytes_fail_even_if_toy_authority_hashes_them ______
+
+fixture = <function fixture.<locals>.build at 0x7fc5cdd612d0>
+
+    def test_non_gzip_trailing_bytes_fail_even_if_toy_authority_hashes_them(fixture):
+>       f = fixture(); append_and_rebind_toy(f, b'not-a-gzip-member')
+
+artifacts/provenance/final_editable_tree_restore_independent_review_v1/test_targeted_paths.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+artifacts/provenance/final_editable_tree_restore_independent_review_v1/test_targeted_paths.py:26: in append_and_rebind_toy
+    pub_ref = save(f['plan']['publication']['path'], pub)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = '/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_independent_review_v1/synthetic_temporary_files/test_non_gzip_trailing_bytes_f0/publication.json'
+value = {'atomic_destination_commit_noreplace': True, 'bytes': 406, 'destination': '/tmp/grad-research-20261106/worktree/artif...ynthetic_future.tar.gz', 'destination_sha256': '1ce6d4965032d78ba677d53d1b211db2b90a18b474626237a6099faa7d5c81ed', ...}
+
+    def save(path, value):
+>       path.write_text(json.dumps(value, indent=2) + '\n')
+E       AttributeError: 'str' object has no attribute 'write_text'
+
+artifacts/provenance/final_editable_tree_restore_independent_review_v1/fixture_source.py:25: AttributeError
+=========================== short test summary info ============================
+FAILED artifacts/provenance/final_editable_tree_restore_independent_review_v1/test_targeted_paths.py::test_concatenated_empty_gzip_member_is_in_full_compressed_hash
+FAILED artifacts/provenance/final_editable_tree_restore_independent_review_v1/test_targeted_paths.py::test_non_gzip_trailing_bytes_fail_even_if_toy_authority_hashes_them
+2 failed, 2 passed in 0.10s

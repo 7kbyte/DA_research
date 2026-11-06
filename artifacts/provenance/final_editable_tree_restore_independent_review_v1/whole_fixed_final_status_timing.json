@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "/usr/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "artifacts/provenance/final_editable_tree_restore_preparation_v1/test_final_tree_restore.py",
+    "-k",
+    "only_fixed_final_acceptance_status",
+    "--basetemp",
+    "artifacts/provenance/final_editable_tree_restore_independent_review_v1/fixed_final_status_toys"
+  ],
+  "returncode": 0,
+  "whole_child_wall_seconds": 0.4036461338400841,
+  "user_cpu_seconds": 0.342479,
+  "sys_cpu_seconds": 0.057582999999999995,
+  "completed_at_utc": "2026-11-06T20:01:24.196464+00:00",
+  "source_sha256": "046f74609068ec425c704fdb04d85015d1944b8e04a630e06dcc82ce06a0679e",
+  "scope": "Only two fixed final status negative toy cases; no real archive/reserve/shared write"
+}
