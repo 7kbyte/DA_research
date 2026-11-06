@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v7/run_collection_with_IO_audit.py", line 57, in <module>
+    main()
+  File "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v7/run_collection_with_IO_audit.py", line 31, in main
+    runpy.run_path(str(source),run_name='__main__')
+  File "/usr/lib/python3.10/runpy.py", line 289, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/usr/lib/python3.10/runpy.py", line 96, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/tmp/grad-research-20261106/worktree/scripts/inventory_study_costs_final_v2.py", line 270, in <module>
+    main()
+  File "/tmp/grad-research-20261106/worktree/scripts/inventory_study_costs_final_v2.py", line 240, in main
+    result = collect(spec, args.output)
+  File "/tmp/grad-research-20261106/worktree/scripts/inventory_study_costs_final_v2.py", line 195, in collect
+    result = v1.collect(effective, output, reader)
+  File "/tmp/grad-research-20261106/worktree/scripts/inventory_study_costs_final.py", line 250, in collect
+    operations, duplicates = operation_rows(spec, reader)
+  File "/tmp/grad-research-20261106/worktree/scripts/inventory_study_costs_final.py", line 115, in operation_rows
+    raise ValueError('Unsupported operational category')
+ValueError: Unsupported operational category

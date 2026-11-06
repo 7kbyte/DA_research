@@ -1,0 +1,31 @@
+{
+  "synthetic_only": true,
+  "actual_restore_runner_or_bind_execute_called": false,
+  "actual_payload_bytes_read": 0,
+  "wrapper_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/run_whole_child.py",
+    "sha256": "13ea1a89c30881fea6348f414487a0dff38ed1e8a42bdcdc11cd63c40713234d"
+  },
+  "fake_runner_source": "import os,signal,subprocess,sys,time\nfrom pathlib import Path\np=Path(__file__).resolve().parent\nsignal.signal(signal.SIGTERM,lambda *_:sys.exit(0))\nchild_code=\"import os,signal,time;from pathlib import Path;signal.signal(signal.SIGTERM,signal.SIG_IGN);Path(\"+repr(str(p/'child_ready.json'))+\").write_text(str(os.getpid()));time.sleep(30)\"\nchild=subprocess.Popen([sys.executable,'-c',child_code])\n(p/'group.json').write_text(__import__('json').dumps({'pgid':os.getpgrp(),'child_pid':child.pid}))\nwhile not (p/'child_ready.json').exists():time.sleep(.01)\ntime.sleep(30)\n",
+  "wrapper_returncode": 0,
+  "whole_child_timing": {
+    "returncode": 0,
+    "inclusive_wall_cap_seconds": 1,
+    "timed_out": true,
+    "whole_child_process_wall_seconds": 1.008048914372921,
+    "whole_child_user_cpu_seconds": 0.018434,
+    "whole_child_sys_cpu_seconds": 0.009211,
+    "child_peak_RSS_bytes": 15642624,
+    "accounting": "Inclusive recovery child spawn-to-exit, including its imports and descendants; runner body/stages/checker/decode are nested. Wrapper preparation excluded."
+  },
+  "descendant_state_after_wrapper_return": "S",
+  "descendant_survived": true,
+  "observation": "SIGTERM-exiting runner can leave a SIGTERM-ignoring descendant alive after wrapper returns; current timeout exit can also be zero.",
+  "probe_cleanup_descendant_state": "absent",
+  "whole_probe_parent_timing": {
+    "wall_seconds": 1.0568947419524193,
+    "user_cpu_seconds": 0.047349999999999996,
+    "system_cpu_seconds": 0.017894,
+    "scope": "Complete synthetic wrapper process and cleanup; no actual recovery"
+  }
+}

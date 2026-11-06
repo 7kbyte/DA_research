@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/optional_weight_expansion_cutoff_corrigendum_v1/completion_receipt.json",
+    "sha256": "c8384f7581ab496d9b3a64780409bef73596e6be341ad869d966b171cc332c44"
+  },
+  "original_wall_pointer": "/wall_seconds",
+  "wall_seconds": 0.006069846451282501,
+  "CPU_component_pointers": [
+    "/user_cpu_seconds",
+    "/sys_cpu_seconds"
+  ],
+  "CPU_components": {
+    "/user_cpu_seconds": 0.0039920000000000025,
+    "/sys_cpu_seconds": 0.0019979999999999998
+  },
+  "recorded_inclusive_CPU_seconds": 0.005990000000000002,
+  "original_returncode": null,
+  "scope": "Post-import correction body/writes only; not whole process, actual exporter or original planning time.",
+  "timing_semantics": "independent_measured_body_region_after_imports",
+  "normalization": "Copy measured wall and sum only explicitly listed disjoint CPU components; never infer from UTC/bytes.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false,
+  "original_source_fields_or_semantics_changed": false
+}

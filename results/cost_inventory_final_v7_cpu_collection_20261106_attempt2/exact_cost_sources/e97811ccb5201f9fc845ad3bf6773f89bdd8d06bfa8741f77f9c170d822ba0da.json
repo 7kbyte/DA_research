@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/extra_endpoint_reservations_v1/sequence.json",
+    "sha256": "8fe366e175b789494ea606377ab9393868747672a5262293f503acf91ff08e27"
+  },
+  "original_wall_pointer": "/initial_allocation_timing/wall_seconds",
+  "wall_seconds": 82.5746856071055,
+  "CPU_component_pointers": [
+    "/initial_allocation_timing/process_cpu_seconds"
+  ],
+  "CPU_components": {
+    "/initial_allocation_timing/process_cpu_seconds": 11.874083209
+  },
+  "recorded_inclusive_CPU_seconds": 11.874083209,
+  "original_returncode": null,
+  "scope": "Independent five1GiB initial allocation/fallocate/fsync body; growers separate.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall and sum only explicitly listed disjoint CPU components; never infer from UTC/bytes.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false,
+  "original_source_fields_or_semantics_changed": false
+}

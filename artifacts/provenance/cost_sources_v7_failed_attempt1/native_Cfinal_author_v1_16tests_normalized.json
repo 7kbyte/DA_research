@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_publication_runbook_v1/synthetic_tests_whole_child_timing.json",
+    "sha256": "11598fa1ee2d66e613c1690259079c11b0395e7a308fbde35e8fa24cf25de751"
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 0.42175716534256935,
+  "CPU_component_pointers": [
+    "/whole_child_user_cpu_seconds",
+    "/whole_child_sys_cpu_seconds"
+  ],
+  "CPU_components": {
+    "/whole_child_user_cpu_seconds": 0.325168,
+    "/whole_child_sys_cpu_seconds": 0.070149
+  },
+  "recorded_inclusive_CPU_seconds": 0.39531700000000003,
+  "original_returncode": 0,
+  "scope": "Original reviewer synthetic test child; no real package review/publication",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Measured wall copied; only named disjoint CPU components summed. No UTC estimates.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/logs/tests_after_supplemental_guard_v3_full.json",
+    "sha256": "edaf305e794f4080c184107d9cea4a4895339e9eb520b6500d3c7e58e09e0cdf"
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 29.389251053333282,
+  "CPU_component_pointers": [
+    "/user_cpu_seconds",
+    "/sys_cpu_seconds"
+  ],
+  "CPU_components": {
+    "/user_cpu_seconds": 27.640012,
+    "/sys_cpu_seconds": 5.691722
+  },
+  "recorded_inclusive_CPU_seconds": 33.331734,
+  "original_returncode": 0,
+  "scope": "ROOT complete793-test child spawn-through-exit; overlaps test content but is a genuinely separate execution, not nested in previous pytest children.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall and sum only explicitly listed disjoint CPU components; never infer from UTC/bytes.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false,
+  "original_source_fields_or_semantics_changed": false
+}

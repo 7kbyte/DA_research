@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/report_C410_render_actual_v1/whole_child_timing.json",
+    "sha256": "70b5dda012bd080e7a6eb3bbd9ad94bb27a10a2f588105c07cacb8ddc63de670"
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 12.816532764583826,
+  "CPU_component_pointers": [
+    "/whole_child_user_cpu_seconds",
+    "/whole_child_sys_cpu_seconds"
+  ],
+  "CPU_components": {
+    "/whole_child_user_cpu_seconds": 12.386193,
+    "/whole_child_sys_cpu_seconds": 0.374718
+  },
+  "recorded_inclusive_CPU_seconds": 12.760911,
+  "original_returncode": 0,
+  "scope": "First actual render child; later SVG typography rejection does not erase cost",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Measured wall copied; only named disjoint CPU components summed. No UTC estimates.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}
