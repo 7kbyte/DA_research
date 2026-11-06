@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/已交付权重恢复示例_实际恢复收据.json",
+    "sha256": "bdfd417aeb76612a824107d70882367a242243897ce088723ee5fc6d3d634d8f"
+  },
+  "wall_seconds": 69.49171555042267,
+  "original_wall_pointer": "/parent_wall_seconds",
+  "CPU_components": {
+    "parent_self_user_seconds": 0.006261999999999997,
+    "parent_self_sys_seconds": 0.003981999999999999,
+    "children_user_seconds": 42.489913,
+    "children_sys_seconds": 17.144106
+  },
+  "CPU_component_pointers": [
+    "/parent_self_user_seconds",
+    "/parent_self_sys_seconds",
+    "/children_user_seconds",
+    "/children_sys_seconds"
+  ],
+  "recorded_inclusive_CPU_seconds": 59.644263,
+  "normalization": "Wall copied verbatim; CPU is sum of only the explicitly listed disjoint user/sys components.",
+  "scope": "Actual CPU durable-example parent operation: extraction, two archived decodes, literal doc metadata example, fresh restored-state fingerprints and new-artifact inventory. Inclusive CPU=self+children once. Stages nested. Excludes initial driver/directory preparation and later doc/evidence copying. No GPU, original optimizerCP or wholeTAR hash.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false,
+  "original_source_fields_or_semantics_changed": false
+}

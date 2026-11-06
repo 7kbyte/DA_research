@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "status": "passed_targeted_revision4_and_snapshot_delta_checks",
+  "utc": "2026-11-06T13:57:26.669719+00:00",
+  "inventory": {
+    "path": "/tmp/grad-research-20261106/worktree/results/cost_inventory_final_v4_cpu_trial_20261106/inventory.json",
+    "sha256": "e9984cde3102a4b5a22c6f7f4b045077205932fba39d683afe4b40927bf7ec39"
+  },
+  "source_spec": {
+    "path": "/tmp/grad-research-20261106/worktree/configs/cost_inventory_final_sources_v4.json",
+    "sha256": "a1b56243519aa3a649859b88351156e8ce9b8006d139114635c55fdbef85c959"
+  },
+  "preserved_old_source_and_trial_SHA": {
+    "scripts/inventory_study_costs_final.py": "c0c9d4605da8809e48aa24bdbeca664c86cdf613fe4aef4a0fc35614d17f8b95",
+    "scripts/inventory_study_costs_final_v2.py": "864effb89f20dbfce3ba6ce51db8eb8351b087c2ac92d255274fe6267753f6ae",
+    "configs/cost_inventory_final_sources_v1.json": "3b9986f853a656b7dd16cc4adc8a8b5d7194bf6f8db478ed4785ffb84167847c",
+    "configs/cost_inventory_final_sources_v2.json": "3c0286f39fb19f386bbb09a68143c80cd4fe45677efaf360309b032712b14ce7",
+    "configs/cost_inventory_final_sources_v3.json": "4fdc24ea2c5995e76b032d29803de1e038114d667b9dd7ef7753b220abf7ea2a",
+    "results/cost_inventory_final_v3_cpu_trial_20261106/inventory.json": "2af4855e2990e8dc5df4bfd2b491a21a17e3fb1d9231934ba299a1db6fd40ed0",
+    "results/cost_inventory_final_v2_cpu_trial_20261106/inventory.json": "009c70654649936a78045234129a739ed52e95923162b6f122771019785b904f"
+  },
+  "revision4_new_explicit_operations": [
+    {
+      "id": "durable_weight_restore_example_actual",
+      "wall_seconds": 69.49171555042267,
+      "known_CPU_seconds": 59.644263
+    },
+    {
+      "id": "optional_C2p8b_original_best_identity_actual",
+      "wall_seconds": 36.585372153669596,
+      "known_CPU_seconds": 36.448201
+    },
+    {
+      "id": "optional_C2p8b_identity_independent_binding_check_actual",
+      "wall_seconds": 0.008839495480060577,
+      "known_CPU_seconds": 0.008702000000000001
+    },
+    {
+      "id": "snapshot1325_whole_package_child",
+      "wall_seconds": 74.57377971708775,
+      "known_CPU_seconds": 74.195951
+    },
+    {
+      "id": "snapshot1325_actual_allocation",
+      "wall_seconds": 0.6842707693576813,
+      "known_CPU_seconds": 0.19609718399999998
+    },
+    {
+      "id": "snapshot1325_durable_publication",
+      "wall_seconds": 3.647838544100523,
+      "known_CPU_seconds": null
+    },
+    {
+      "id": "A_gradient_clipping_whole_analysis_child",
+      "wall_seconds": 4.423582695424557,
+      "known_CPU_seconds": 5.105308
+    },
+    {
+      "id": "A_gradient_clipping_independent_numeric_child",
+      "wall_seconds": 0.36319026723504066,
+      "known_CPU_seconds": 0.47254799999999997
+    },
+    {
+      "id": "A_gradient_clipping_presentation_v2_child",
+      "wall_seconds": 1.9236859194934368,
+      "known_CPU_seconds": 2.457542
+    }
+  ],
+  "revision4_new_measured_wall_sum_seconds": 191.7022751122713,
+  "revision4_known_CPU_sum_seconds_publication_CPU_not_measured": 178.528612184,
+  "requested_eight_operations_excluding_extra_independent_binding_check_wall_seconds": 191.69343561679125,
+  "dynamic_live_C_draft_additions_separate_from_revision4_registration": [
+    {
+      "id": "C_draft:pythia-410m:extended_v2_pythia_410m_m64_formal_B2_s22_w0p05",
+      "wall_seconds": 100.071303807199
+    },
+    {
+      "id": "C_draft:pythia-410m:extended_v2_pythia_410m_m64_formal_B3_s22_w0p05",
+      "wall_seconds": 99.92775362357497
+    },
+    {
+      "id": "C_draft:pythia-410m:extended_v2_pythia_410m_m64_formal_B4_s22_w0p05",
+      "wall_seconds": 100.39111630618572
+    }
+  ],
+  "dynamic_C_draft_measured_wall_sum_seconds": 300.3901737369597,
+  "new_historical_opaque_receipts_count": 12,
+  "historical_opaque_wall_delta_seconds": 25.009855967015028,
+  "new_opaque_receipts_are_C410_only_and_not_optional2p8_identity_nested_reads": true,
+  "current_collector_checkpoint_payload_reads": 0,
+  "total_operational_recorded_wall_snapshot_delta_seconds": 517.102304816246,
+  "delta_is_not_elapsed_study_time_or_revision4_only_or_pure_CPU_work": true,
+  "C_daemon_changed_wall_is_nonadditive_waiting_context": true,
+  "B_original_parent_remains_unknown": true,
+  "nested_children_not_added": true,
+  "C_assembly_or_publication_imputed": false,
+  "score_semantics_read": false,
+  "new_GPU_or_training_launched": false,
+  "validator": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v4/validate_trial.py",
+    "sha256": "72fcf289fc5ed1018f9a494135296c12fc0c3d96dc315833ca6621f5436a3e12"
+  }
+}
