@@ -1,0 +1,76 @@
+{
+  "physical_training_runs": 24,
+  "training_parent_sums": {
+    "setup_seconds": 24.0,
+    "training_seconds": 48.0,
+    "validation_seconds": 72.0,
+    "checkpoint_seconds": 96.0
+  },
+  "training_target_prediction_tokens": 2400000000,
+  "training_replay_prediction_tokens": 105000000,
+  "physical_inferences": 43,
+  "physical_adapted_inferences": 42,
+  "physical_initial_inferences": 1,
+  "zero_forward_aliases": 6,
+  "inference_scheduler_whole_slot_sum_seconds": 21.5,
+  "scorer_subprocess_wall_sum_seconds_nested": 12.90000000000001,
+  "worker_verification_sum_seconds_nested": 4.300000000000001,
+  "teacher_forward_sum_seconds_nested": 1.290000000000001,
+  "whole_slot_is_not_exclusive_calendar_or_pure_GPU_time": true,
+  "training_best_and_final_count_once": true,
+  "shared_bank_preparation_reused_no_new_generation_assumed": [
+    "/toy/bank.pt",
+    "B0:none"
+  ],
+  "training_committed_parent_sum_seconds": 240.0,
+  "ROOT_check_whole_child": {
+    "returncode": 0,
+    "argv": [
+      "python",
+      "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/toy_cli_inputs/pythia-1b/six/analyze_supplemental_phase_v3.py",
+      "check",
+      "--plan",
+      "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/toy_cli_inputs/pythia-1b/six/plan.json",
+      "--plan-sha256",
+      "0c5475372da7e248430338fb4246ab775bdd8c710b5a813fd427da9cff2d9904",
+      "--operational-repair",
+      "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/toy_cli_inputs/pythia-1b/six/repair.json",
+      "--operational-repair-sha256",
+      "d3d8b778a1272d532bb107e7b46188e1e7407bf7cf7ac37bacc4d14f6961155d",
+      "--state",
+      "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/toy_cli_inputs/pythia-1b/six/actual_executor_state_snapshot.json",
+      "--output",
+      "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/toy_cli_inputs/pythia-1b/six/analysis"
+    ],
+    "wall_seconds": 1.0,
+    "user_cpu_seconds": 0.5,
+    "sys_cpu_seconds": 0.1
+  },
+  "ROOT_analyze_whole_child": {
+    "returncode": 0,
+    "argv": [
+      "python",
+      "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/toy_cli_inputs/pythia-1b/six/analyze_supplemental_phase_v3.py",
+      "analyze",
+      "--plan",
+      "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/toy_cli_inputs/pythia-1b/six/plan.json",
+      "--plan-sha256",
+      "0c5475372da7e248430338fb4246ab775bdd8c710b5a813fd427da9cff2d9904",
+      "--operational-repair",
+      "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/toy_cli_inputs/pythia-1b/six/repair.json",
+      "--operational-repair-sha256",
+      "d3d8b778a1272d532bb107e7b46188e1e7407bf7cf7ac37bacc4d14f6961155d",
+      "--state",
+      "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/toy_cli_inputs/pythia-1b/six/actual_executor_state_snapshot.json",
+      "--output",
+      "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/toy_cli_inputs/pythia-1b/six/analysis",
+      "--authority",
+      "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/toy_cli_inputs/pythia-1b/six/authority.json",
+      "--authority-sha256",
+      "54c39db272054b181efac79413376f525021de7f3d4a2c796edfcc099b2cf882"
+    ],
+    "wall_seconds": 1.0,
+    "user_cpu_seconds": 0.5,
+    "sys_cpu_seconds": 0.1
+  }
+}

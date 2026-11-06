@@ -1,0 +1,239 @@
+{
+  "status": "passed_metadata_schema_only",
+  "checks": [
+    {
+      "name": "real authority identity is exact lowercase root",
+      "passed": true,
+      "details": {
+        "actual": "root"
+      }
+    },
+    {
+      "name": "whole phase root authority booleans",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "authority binds plan",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "authority binds operational_repair",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "authority manifest and READY",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "readiness plan and repair",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "actual C410 closure metadata shape",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "source integrity precedes score parse",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "firstread binds plan",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "firstread binds authority",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "firstread binds readiness",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "firstread path and semantic permission declaration",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "repair binds retained_plan",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "repair binds retained_manifest",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "repair binds retained_protocol",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "repair does not authorize score or statistical changes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "repair preserves journal",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "actual READY manifest proof",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "contract identity and endpoint field shapes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "phase identity fields exist with expected types",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "one manifest phase shape",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "one baseline shape",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "baseline matched test paths and hashes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "real 48 records have expected final/best grid",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "record identity, config/summary small SHA, full-training counter schema",
+      "passed": true,
+      "details": {
+        "logical_records": 48,
+        "physical_training": 24
+      }
+    },
+    {
+      "name": "historical state snapshot bytes exactly match original readiness SHA",
+      "passed": true,
+      "details": {
+        "original_analysis_state_path": "/tmp/grad-research-20261106/worktree/logs/supplemental_job_state.json",
+        "historical_byte_copy": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_nll_analysis_actual_v3/state_before_authority.json",
+        "same_original_bytes": true,
+        "paths_are_different": true
+      }
+    },
+    {
+      "name": "actual original queue and historical state closure satisfy strict new validator",
+      "passed": true,
+      "details": {
+        "closure": 43,
+        "integer_rc0": true,
+        "no_stop": true,
+        "actual_wrapper_argv": true,
+        "definition_SHA": true,
+        "metadata_exists_stat_only": true
+      }
+    },
+    {
+      "name": "one matched initial actual job",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "complete physical and logical attestation path schema",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "all actual attestation argv/proof/hash-map fields match new schema",
+      "passed": true,
+      "details": {
+        "attestations": 49,
+        "score_payload_hashes_recomputed": false
+      }
+    },
+    {
+      "name": "actual full-model proof and opaque producer source schema",
+      "passed": true,
+      "details": {
+        "validated_actual_C410_aliases": 6,
+        "checkpoint_payload_reads": 0
+      }
+    },
+    {
+      "name": "actual check/analyze timers bind plan repair authority output original state argv",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "actual analysis_manifest schema and firstread/readiness links",
+      "passed": true,
+      "details": {
+        "numerical_CSV_or_bootstrap_rows_read": false
+      }
+    },
+    {
+      "name": "production source has exactly one literal substitution",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "all seven numerical AST nodes unchanged",
+      "passed": true,
+      "details": {
+        "nodes": [
+          "stats",
+          "favorable",
+          "documents",
+          "delta_vectors",
+          "raw_metrics",
+          "Resampling",
+          "validate_grid"
+        ]
+      }
+    },
+    {
+      "name": "audit performed no score or binary payload reads",
+      "passed": true,
+      "details": {
+        "open_denials": [],
+        "scores_hashed": false,
+        "score_semantics_parsed": false,
+        "new_model_metadata_or_scores_read": false
+      }
+    }
+  ],
+  "source_inventory": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_schema_repair_v1/actual_C410_metadata_source_manifest.json",
+    "sha256": "932d15bcf95f8fd8b570a9b2ec2a97024d7d6023ee29b68e1988b01f53c217b4"
+  },
+  "real_authority_identity": "root",
+  "legacy_C410_state_note": "Original check/analyze used the same live path. state_before_authority bytes equal the historical readiness SHA. This audit did not read today's live state, does not relabel the byte-copy path, and does not claim a passing invocation of new reviewer for unsupported C410. Future actual 1B/2.8B check/analyze must originally use the explicitly bound immutable successor state path.",
+  "scope_exclusions": [
+    "No numerical rerun or actual reviewer gate invocation",
+    "No check/analyze invocation",
+    "No score/CSV/bootstrap payload read or hash",
+    "No 1B/2.8B score or metadata input",
+    "No checkpoint/base/TAR/ZIP read",
+    "No GPU"
+  ]
+}

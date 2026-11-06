@@ -1,0 +1,409 @@
+Running 29 items in this shard
+FFFF.........................                                            [100%]
+=================================== FAILURES ===================================
+________________ test_full_toy_review[pythia-1b-none-48-49-0-6] ________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-1490/test_full_toy_review_pythia_1b0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7fb61058ada0>
+model = 'pythia-1b', mode = 'none', logical = 48, physical = 49, aliases = 0
+pairs = 6
+
+    @pytest.mark.parametrize('model,mode,logical,physical,aliases,pairs',[
+        ('pythia-1b','none',48,49,0,6),('pythia-1b','three',48,46,3,6),('pythia-1b','six',48,43,6,6),('pythia-2.8b','none',30,31,0,3)])
+    def test_full_toy_review(tmp_path,monkeypatch,model,mode,logical,physical,aliases,pairs):
+>       args=fixture(tmp_path,model,mode);monkeypatch.setattr(M,'plot',lambda *a:None);M.run(args)
+
+tests/test_C_model_nll_review_v2.py:160: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = Namespace(model='pythia-1b', complete=PosixPath('/tmp/pytest-of-root/pytest-1490/test_full_toy_review_pythia_1b0/pythi...b/none/analyze_timing.json'), analyze_timing_sha256='35a642c9727903e0cfb5b9119a2b2fa47c5b770cba2fc50ede350e7cf6e7a08f')
+
+    def run(args):
+        start=time.perf_counter();complete_path=Path(args.complete);out=Path(args.output)
+        gate=gate_inputs(args);complete=gate['complete'];plan=gate['plan'];ready=gate['ready']
+        manifest=gate['manifest'];group=gate['group'];profile=gate['profile'];groups=profile['groups'];pairs=profile['pairs']
+        n=len(groups)*len(SEEDS);physical_count=len(manifest['jobs']);alias_count=gate['aliases']
+        endpoints=[];old_pairs=[];sources={};bundles={};base=complete_path.parent
+        for kind in ('final','best'):
+            folder=base/kind;analysis=read(folder/'analysis_manifest.json')
+            require(analysis['complete'] is True and analysis['completed_conditions']==analysis['expected_conditions']==n and analysis['identity']['checkpoint']==kind and analysis['replicate_unit']=='training_seed','Incomplete/wrong endpoint analysis')
+            require(analysis['identity']=={'role':'extended','phase_name':profile['phase'],'model_tag':args.model,'data_family':'extended_v1','checkpoint':kind},'Foreign model analysis identity')
+            require(exact_proof(analysis['whole_phase_first_read_receipt'],complete['first_read_receipt']) and exact_proof(analysis['whole_phase_readiness'],complete['readiness']),'Analysis output journal/readiness differs')
+            require(analysis['bootstrap_replicates']==5000 and analysis['bootstrap_seed']==20261106,'Frozen bootstrap differs')
+            for p,d in analysis['sources_sha256'].items():
+                if p not in sources:require(sha(p)==d,'Changed analysis source '+p);sources[p]=d
+                else:require(sources[p]==d,'Contradictory source proof')
+            endpoints.extend(rows(folder/'endpoints.csv'));old_pairs.extend(rows(folder/'paired_effects.csv'));bundles[kind]=analysis
+        validate_grid(endpoints,groups);validate_pairs(old_pairs,groups,pairs)
+        records={r['id']:r for r in manifest['records']};bykey={(r['checkpoint'],r['run_id']):r for r in endpoints};cache={}
+        def score(path):
+            if path not in cache:cache[path]=read(path)
+            return cache[path]
+        initial=score(group['initial_output'])['corpora'];contexts={}
+        for c in ('target','c4','wikitext'):
+            names,n,d=delta_vectors(initial[c],initial[c]);contexts[c]=Resampling(names,n)
+        errors=[]
+        def same(a,b):
+            error=abs(float(a)-float(b));errors.append(error);require(math.isfinite(error) and error<1e-10,f'Independent numerical mismatch: {a} vs {b}')
+        rebuilt=[];exposure=[];raw_corpora=[]
+        for r in endpoints:
+            record=records[r['record_id']];require(record['kind']==r['checkpoint'] and record['run_id']==r['run_id'],'Endpoint manifest identity differs')
+            for csvkey,mkey in [('target_prediction_tokens','target_prediction_tokens_at_checkpoint'),('replay_prediction_tokens','replay_prediction_tokens_at_checkpoint')]:require(int(r[csvkey])==record[mkey],'Actual checkpoint exposure differs')
+            current=score(record['output'])['corpora'];values=raw_metrics(current,initial)
+            for metric,v in values.items():same(v,r[metric])
+            rebuilt.append({**r,**values})
+            exposure.append({k:r[k] for k in ('checkpoint','group','training_seed','run_id','actual_run_id','target_prediction_tokens','replay_prediction_tokens','full_training_target_prediction_tokens','full_training_replay_prediction_tokens')}|{'step':record['step'],'checkpoint_sha256':record['checkpoint_sha256']})
+            for c in ('target','c4','wikitext'):
+                corpus=current[c];docs,_=documents(corpus);n=corpus['valid_prediction_tokens'];value=math.fsum(v[0] for v in docs.values())/n;same(value,corpus['nll'])
+                raw_corpora.append({'checkpoint':r['checkpoint'],'group':r['group'],'training_seed':r['training_seed'],'run_id':r['run_id'],'corpus':c,'prediction_tokens':n,'documents':len(docs),'nll':value,'ppl':math.exp(value),'kl':corpus['kl'],'equal_document_nll':statistics.mean(v[0]/v[1] for v in docs.values())})
+        endpoint_stats=[];paired_stats=[];paired=[];rankings=[]
+        for kind in ('final','best'):
+            old={(r['group'],r['metric']):r for r in rows(base/kind/'endpoint_statistics.csv')}
+            for g in groups:
+                for metric in SIX:
+                    ss=stats([float(r[metric]) for r in rebuilt if r['checkpoint']==kind and r['group']==g]);same(ss['mean'],old[g,metric]['mean']);same(ss['std_ddof1'],old[g,metric]['std_ddof1'])
+                    endpoint_stats.append({'checkpoint':kind,'group':g,'metric':metric,**ss})
+            for metric in SIX:
+                ordered=sorted([r for r in endpoint_stats if r['checkpoint']==kind and r['metric']==metric],key=lambda r:r['mean'],reverse=metric.startswith('g_new'))
+                rankings.append({'checkpoint':kind,'metric':metric,'better_to_worse_mean':'>'.join(r['group'] for r in ordered),'rank_is_descriptive_no_new_inference':True})
+        for p in old_pairs:
+            a=bykey[p['checkpoint'],p['run_a']];b=bykey[p['checkpoint'],p['run_b']];require(p['comparison']==a['group']+'-'+b['group'],'Pair label/run identity differs')
+            require(a['training_seed']==b['training_seed']==p['training_seed'],'Unmatched training seeds')
+            item={**p}
+            for metric in SIX:item[metric]=float(a[metric])-float(b[metric]);same(item[metric],p[metric])
+            paired.append(item)
+        for kind in ('final','best'):
+            old={(r['comparison'],r['metric']):r for r in rows(base/kind/'paired_statistics.csv')}
+            for comparison in pairs:
+                for metric in SIX:
+                    rr=sorted([r for r in paired if r['checkpoint']==kind and r['comparison']==comparison],key=lambda r:int(r['training_seed']));vals=[r[metric] for r in rr];ss=stats(vals)
+                    same(ss['mean'],old[comparison,metric]['mean']);same(ss['std_ddof1'],old[comparison,metric]['std_ddof1'])
+                    paired_stats.append({'checkpoint':kind,'comparison':comparison,'metric':metric,**ss,'favorable_seeds':sum(favorable(metric,v)>0 for v in vals),'unfavorable_seeds':sum(favorable(metric,v)<0 for v in vals),'tied_seeds':sum(v==0 for v in vals),'seed11':vals[0],'seed22':vals[1],'seed33':vals[2]})
+        endpoint_ci=[];paired_ci=[]
+        for kind in ('final','best'):
+            for is_pair,filename in [(False,'endpoint_document_bootstrap.json'),(True,'document_bootstrap.json')]:
+                for old in read(base/kind/filename):
+                    if old['field']!='sum_nll':continue
+                    c=old['corpus'];metric=METRICS[('target','c4','wikitext').index(c)];sign=-1 if c=='target' else 1
+                    if is_pair:
+                        a=bykey[kind,old['run_a']];b=bykey[kind,old['run_b']];av=score(records[a['record_id']]['output'])['corpora'][c];bv=score(records[b['record_id']]['output'])['corpora'][c]
+                        identity={k:old[k] for k in ('comparison','training_seed','run_a','run_b','target_tokens_a','target_tokens_b','equal_checkpoint_exposure')}
+                    else:
+                        a=bykey[kind,old['run_id']];av=score(records[a['record_id']]['output'])['corpora'][c];bv=initial[c]
+                        identity={k:old[k] for k in ('run_id','training_seed','target_prediction_tokens','replay_prediction_tokens')};identity['group']=a['group']
+                    names,n,d=delta_vectors(av,bv);rebuilt_ci=contexts[c].interval(names,n,d,sign)
+                    for weighting,suffix in [('token_weighted',''),('equal_document','_equal_document')]:
+                        original=old[weighting]
+                        if is_pair and sign==-1:original={'estimate':-original['estimate'],'ci_low':-original['ci_high'],'ci_high':-original['ci_low']}
+                        for key in ('estimate','ci_low','ci_high'):same(rebuilt_ci[weighting][key],original[key])
+                        (paired_ci if is_pair else endpoint_ci).append({'checkpoint':kind,**identity,'metric':metric+suffix,**rebuilt_ci[weighting],'documents':len(names),'prediction_tokens':int(n.sum()),'bootstrap_replicates':5000,'bootstrap_seed':20261106,'scope':'conditional on fixed checkpoints and independent/exchangeable documents; not training-seed CI'})
+>       require(len(endpoint_ci)==2*n*6 and len(paired_ci)==2*len(pairs)*len(SEEDS)*6,'Complete six-metric conditional CI coverage required')
+E       ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+
+scripts/review_C_model_nll_results_v2.py:376: ValueError
+_______________ test_full_toy_review[pythia-1b-three-48-46-3-6] ________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-1490/test_full_toy_review_pythia_1b1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7fb61053a4d0>
+model = 'pythia-1b', mode = 'three', logical = 48, physical = 46, aliases = 3
+pairs = 6
+
+    @pytest.mark.parametrize('model,mode,logical,physical,aliases,pairs',[
+        ('pythia-1b','none',48,49,0,6),('pythia-1b','three',48,46,3,6),('pythia-1b','six',48,43,6,6),('pythia-2.8b','none',30,31,0,3)])
+    def test_full_toy_review(tmp_path,monkeypatch,model,mode,logical,physical,aliases,pairs):
+>       args=fixture(tmp_path,model,mode);monkeypatch.setattr(M,'plot',lambda *a:None);M.run(args)
+
+tests/test_C_model_nll_review_v2.py:160: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = Namespace(model='pythia-1b', complete=PosixPath('/tmp/pytest-of-root/pytest-1490/test_full_toy_review_pythia_1b1/pythi.../three/analyze_timing.json'), analyze_timing_sha256='dc343316e55b05d4da9551836b3dfea27401fda9262d7faea978847229660dbd')
+
+    def run(args):
+        start=time.perf_counter();complete_path=Path(args.complete);out=Path(args.output)
+        gate=gate_inputs(args);complete=gate['complete'];plan=gate['plan'];ready=gate['ready']
+        manifest=gate['manifest'];group=gate['group'];profile=gate['profile'];groups=profile['groups'];pairs=profile['pairs']
+        n=len(groups)*len(SEEDS);physical_count=len(manifest['jobs']);alias_count=gate['aliases']
+        endpoints=[];old_pairs=[];sources={};bundles={};base=complete_path.parent
+        for kind in ('final','best'):
+            folder=base/kind;analysis=read(folder/'analysis_manifest.json')
+            require(analysis['complete'] is True and analysis['completed_conditions']==analysis['expected_conditions']==n and analysis['identity']['checkpoint']==kind and analysis['replicate_unit']=='training_seed','Incomplete/wrong endpoint analysis')
+            require(analysis['identity']=={'role':'extended','phase_name':profile['phase'],'model_tag':args.model,'data_family':'extended_v1','checkpoint':kind},'Foreign model analysis identity')
+            require(exact_proof(analysis['whole_phase_first_read_receipt'],complete['first_read_receipt']) and exact_proof(analysis['whole_phase_readiness'],complete['readiness']),'Analysis output journal/readiness differs')
+            require(analysis['bootstrap_replicates']==5000 and analysis['bootstrap_seed']==20261106,'Frozen bootstrap differs')
+            for p,d in analysis['sources_sha256'].items():
+                if p not in sources:require(sha(p)==d,'Changed analysis source '+p);sources[p]=d
+                else:require(sources[p]==d,'Contradictory source proof')
+            endpoints.extend(rows(folder/'endpoints.csv'));old_pairs.extend(rows(folder/'paired_effects.csv'));bundles[kind]=analysis
+        validate_grid(endpoints,groups);validate_pairs(old_pairs,groups,pairs)
+        records={r['id']:r for r in manifest['records']};bykey={(r['checkpoint'],r['run_id']):r for r in endpoints};cache={}
+        def score(path):
+            if path not in cache:cache[path]=read(path)
+            return cache[path]
+        initial=score(group['initial_output'])['corpora'];contexts={}
+        for c in ('target','c4','wikitext'):
+            names,n,d=delta_vectors(initial[c],initial[c]);contexts[c]=Resampling(names,n)
+        errors=[]
+        def same(a,b):
+            error=abs(float(a)-float(b));errors.append(error);require(math.isfinite(error) and error<1e-10,f'Independent numerical mismatch: {a} vs {b}')
+        rebuilt=[];exposure=[];raw_corpora=[]
+        for r in endpoints:
+            record=records[r['record_id']];require(record['kind']==r['checkpoint'] and record['run_id']==r['run_id'],'Endpoint manifest identity differs')
+            for csvkey,mkey in [('target_prediction_tokens','target_prediction_tokens_at_checkpoint'),('replay_prediction_tokens','replay_prediction_tokens_at_checkpoint')]:require(int(r[csvkey])==record[mkey],'Actual checkpoint exposure differs')
+            current=score(record['output'])['corpora'];values=raw_metrics(current,initial)
+            for metric,v in values.items():same(v,r[metric])
+            rebuilt.append({**r,**values})
+            exposure.append({k:r[k] for k in ('checkpoint','group','training_seed','run_id','actual_run_id','target_prediction_tokens','replay_prediction_tokens','full_training_target_prediction_tokens','full_training_replay_prediction_tokens')}|{'step':record['step'],'checkpoint_sha256':record['checkpoint_sha256']})
+            for c in ('target','c4','wikitext'):
+                corpus=current[c];docs,_=documents(corpus);n=corpus['valid_prediction_tokens'];value=math.fsum(v[0] for v in docs.values())/n;same(value,corpus['nll'])
+                raw_corpora.append({'checkpoint':r['checkpoint'],'group':r['group'],'training_seed':r['training_seed'],'run_id':r['run_id'],'corpus':c,'prediction_tokens':n,'documents':len(docs),'nll':value,'ppl':math.exp(value),'kl':corpus['kl'],'equal_document_nll':statistics.mean(v[0]/v[1] for v in docs.values())})
+        endpoint_stats=[];paired_stats=[];paired=[];rankings=[]
+        for kind in ('final','best'):
+            old={(r['group'],r['metric']):r for r in rows(base/kind/'endpoint_statistics.csv')}
+            for g in groups:
+                for metric in SIX:
+                    ss=stats([float(r[metric]) for r in rebuilt if r['checkpoint']==kind and r['group']==g]);same(ss['mean'],old[g,metric]['mean']);same(ss['std_ddof1'],old[g,metric]['std_ddof1'])
+                    endpoint_stats.append({'checkpoint':kind,'group':g,'metric':metric,**ss})
+            for metric in SIX:
+                ordered=sorted([r for r in endpoint_stats if r['checkpoint']==kind and r['metric']==metric],key=lambda r:r['mean'],reverse=metric.startswith('g_new'))
+                rankings.append({'checkpoint':kind,'metric':metric,'better_to_worse_mean':'>'.join(r['group'] for r in ordered),'rank_is_descriptive_no_new_inference':True})
+        for p in old_pairs:
+            a=bykey[p['checkpoint'],p['run_a']];b=bykey[p['checkpoint'],p['run_b']];require(p['comparison']==a['group']+'-'+b['group'],'Pair label/run identity differs')
+            require(a['training_seed']==b['training_seed']==p['training_seed'],'Unmatched training seeds')
+            item={**p}
+            for metric in SIX:item[metric]=float(a[metric])-float(b[metric]);same(item[metric],p[metric])
+            paired.append(item)
+        for kind in ('final','best'):
+            old={(r['comparison'],r['metric']):r for r in rows(base/kind/'paired_statistics.csv')}
+            for comparison in pairs:
+                for metric in SIX:
+                    rr=sorted([r for r in paired if r['checkpoint']==kind and r['comparison']==comparison],key=lambda r:int(r['training_seed']));vals=[r[metric] for r in rr];ss=stats(vals)
+                    same(ss['mean'],old[comparison,metric]['mean']);same(ss['std_ddof1'],old[comparison,metric]['std_ddof1'])
+                    paired_stats.append({'checkpoint':kind,'comparison':comparison,'metric':metric,**ss,'favorable_seeds':sum(favorable(metric,v)>0 for v in vals),'unfavorable_seeds':sum(favorable(metric,v)<0 for v in vals),'tied_seeds':sum(v==0 for v in vals),'seed11':vals[0],'seed22':vals[1],'seed33':vals[2]})
+        endpoint_ci=[];paired_ci=[]
+        for kind in ('final','best'):
+            for is_pair,filename in [(False,'endpoint_document_bootstrap.json'),(True,'document_bootstrap.json')]:
+                for old in read(base/kind/filename):
+                    if old['field']!='sum_nll':continue
+                    c=old['corpus'];metric=METRICS[('target','c4','wikitext').index(c)];sign=-1 if c=='target' else 1
+                    if is_pair:
+                        a=bykey[kind,old['run_a']];b=bykey[kind,old['run_b']];av=score(records[a['record_id']]['output'])['corpora'][c];bv=score(records[b['record_id']]['output'])['corpora'][c]
+                        identity={k:old[k] for k in ('comparison','training_seed','run_a','run_b','target_tokens_a','target_tokens_b','equal_checkpoint_exposure')}
+                    else:
+                        a=bykey[kind,old['run_id']];av=score(records[a['record_id']]['output'])['corpora'][c];bv=initial[c]
+                        identity={k:old[k] for k in ('run_id','training_seed','target_prediction_tokens','replay_prediction_tokens')};identity['group']=a['group']
+                    names,n,d=delta_vectors(av,bv);rebuilt_ci=contexts[c].interval(names,n,d,sign)
+                    for weighting,suffix in [('token_weighted',''),('equal_document','_equal_document')]:
+                        original=old[weighting]
+                        if is_pair and sign==-1:original={'estimate':-original['estimate'],'ci_low':-original['ci_high'],'ci_high':-original['ci_low']}
+                        for key in ('estimate','ci_low','ci_high'):same(rebuilt_ci[weighting][key],original[key])
+                        (paired_ci if is_pair else endpoint_ci).append({'checkpoint':kind,**identity,'metric':metric+suffix,**rebuilt_ci[weighting],'documents':len(names),'prediction_tokens':int(n.sum()),'bootstrap_replicates':5000,'bootstrap_seed':20261106,'scope':'conditional on fixed checkpoints and independent/exchangeable documents; not training-seed CI'})
+>       require(len(endpoint_ci)==2*n*6 and len(paired_ci)==2*len(pairs)*len(SEEDS)*6,'Complete six-metric conditional CI coverage required')
+E       ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+
+scripts/review_C_model_nll_results_v2.py:376: ValueError
+________________ test_full_toy_review[pythia-1b-six-48-43-6-6] _________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-1490/test_full_toy_review_pythia_1b2')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7fb6135aa110>
+model = 'pythia-1b', mode = 'six', logical = 48, physical = 43, aliases = 6
+pairs = 6
+
+    @pytest.mark.parametrize('model,mode,logical,physical,aliases,pairs',[
+        ('pythia-1b','none',48,49,0,6),('pythia-1b','three',48,46,3,6),('pythia-1b','six',48,43,6,6),('pythia-2.8b','none',30,31,0,3)])
+    def test_full_toy_review(tmp_path,monkeypatch,model,mode,logical,physical,aliases,pairs):
+>       args=fixture(tmp_path,model,mode);monkeypatch.setattr(M,'plot',lambda *a:None);M.run(args)
+
+tests/test_C_model_nll_review_v2.py:160: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = Namespace(model='pythia-1b', complete=PosixPath('/tmp/pytest-of-root/pytest-1490/test_full_toy_review_pythia_1b2/pythi...1b/six/analyze_timing.json'), analyze_timing_sha256='42a9ce1056f566cb29bd719b174a5b811e12cc3ad46af105e942ece28b9084cf')
+
+    def run(args):
+        start=time.perf_counter();complete_path=Path(args.complete);out=Path(args.output)
+        gate=gate_inputs(args);complete=gate['complete'];plan=gate['plan'];ready=gate['ready']
+        manifest=gate['manifest'];group=gate['group'];profile=gate['profile'];groups=profile['groups'];pairs=profile['pairs']
+        n=len(groups)*len(SEEDS);physical_count=len(manifest['jobs']);alias_count=gate['aliases']
+        endpoints=[];old_pairs=[];sources={};bundles={};base=complete_path.parent
+        for kind in ('final','best'):
+            folder=base/kind;analysis=read(folder/'analysis_manifest.json')
+            require(analysis['complete'] is True and analysis['completed_conditions']==analysis['expected_conditions']==n and analysis['identity']['checkpoint']==kind and analysis['replicate_unit']=='training_seed','Incomplete/wrong endpoint analysis')
+            require(analysis['identity']=={'role':'extended','phase_name':profile['phase'],'model_tag':args.model,'data_family':'extended_v1','checkpoint':kind},'Foreign model analysis identity')
+            require(exact_proof(analysis['whole_phase_first_read_receipt'],complete['first_read_receipt']) and exact_proof(analysis['whole_phase_readiness'],complete['readiness']),'Analysis output journal/readiness differs')
+            require(analysis['bootstrap_replicates']==5000 and analysis['bootstrap_seed']==20261106,'Frozen bootstrap differs')
+            for p,d in analysis['sources_sha256'].items():
+                if p not in sources:require(sha(p)==d,'Changed analysis source '+p);sources[p]=d
+                else:require(sources[p]==d,'Contradictory source proof')
+            endpoints.extend(rows(folder/'endpoints.csv'));old_pairs.extend(rows(folder/'paired_effects.csv'));bundles[kind]=analysis
+        validate_grid(endpoints,groups);validate_pairs(old_pairs,groups,pairs)
+        records={r['id']:r for r in manifest['records']};bykey={(r['checkpoint'],r['run_id']):r for r in endpoints};cache={}
+        def score(path):
+            if path not in cache:cache[path]=read(path)
+            return cache[path]
+        initial=score(group['initial_output'])['corpora'];contexts={}
+        for c in ('target','c4','wikitext'):
+            names,n,d=delta_vectors(initial[c],initial[c]);contexts[c]=Resampling(names,n)
+        errors=[]
+        def same(a,b):
+            error=abs(float(a)-float(b));errors.append(error);require(math.isfinite(error) and error<1e-10,f'Independent numerical mismatch: {a} vs {b}')
+        rebuilt=[];exposure=[];raw_corpora=[]
+        for r in endpoints:
+            record=records[r['record_id']];require(record['kind']==r['checkpoint'] and record['run_id']==r['run_id'],'Endpoint manifest identity differs')
+            for csvkey,mkey in [('target_prediction_tokens','target_prediction_tokens_at_checkpoint'),('replay_prediction_tokens','replay_prediction_tokens_at_checkpoint')]:require(int(r[csvkey])==record[mkey],'Actual checkpoint exposure differs')
+            current=score(record['output'])['corpora'];values=raw_metrics(current,initial)
+            for metric,v in values.items():same(v,r[metric])
+            rebuilt.append({**r,**values})
+            exposure.append({k:r[k] for k in ('checkpoint','group','training_seed','run_id','actual_run_id','target_prediction_tokens','replay_prediction_tokens','full_training_target_prediction_tokens','full_training_replay_prediction_tokens')}|{'step':record['step'],'checkpoint_sha256':record['checkpoint_sha256']})
+            for c in ('target','c4','wikitext'):
+                corpus=current[c];docs,_=documents(corpus);n=corpus['valid_prediction_tokens'];value=math.fsum(v[0] for v in docs.values())/n;same(value,corpus['nll'])
+                raw_corpora.append({'checkpoint':r['checkpoint'],'group':r['group'],'training_seed':r['training_seed'],'run_id':r['run_id'],'corpus':c,'prediction_tokens':n,'documents':len(docs),'nll':value,'ppl':math.exp(value),'kl':corpus['kl'],'equal_document_nll':statistics.mean(v[0]/v[1] for v in docs.values())})
+        endpoint_stats=[];paired_stats=[];paired=[];rankings=[]
+        for kind in ('final','best'):
+            old={(r['group'],r['metric']):r for r in rows(base/kind/'endpoint_statistics.csv')}
+            for g in groups:
+                for metric in SIX:
+                    ss=stats([float(r[metric]) for r in rebuilt if r['checkpoint']==kind and r['group']==g]);same(ss['mean'],old[g,metric]['mean']);same(ss['std_ddof1'],old[g,metric]['std_ddof1'])
+                    endpoint_stats.append({'checkpoint':kind,'group':g,'metric':metric,**ss})
+            for metric in SIX:
+                ordered=sorted([r for r in endpoint_stats if r['checkpoint']==kind and r['metric']==metric],key=lambda r:r['mean'],reverse=metric.startswith('g_new'))
+                rankings.append({'checkpoint':kind,'metric':metric,'better_to_worse_mean':'>'.join(r['group'] for r in ordered),'rank_is_descriptive_no_new_inference':True})
+        for p in old_pairs:
+            a=bykey[p['checkpoint'],p['run_a']];b=bykey[p['checkpoint'],p['run_b']];require(p['comparison']==a['group']+'-'+b['group'],'Pair label/run identity differs')
+            require(a['training_seed']==b['training_seed']==p['training_seed'],'Unmatched training seeds')
+            item={**p}
+            for metric in SIX:item[metric]=float(a[metric])-float(b[metric]);same(item[metric],p[metric])
+            paired.append(item)
+        for kind in ('final','best'):
+            old={(r['comparison'],r['metric']):r for r in rows(base/kind/'paired_statistics.csv')}
+            for comparison in pairs:
+                for metric in SIX:
+                    rr=sorted([r for r in paired if r['checkpoint']==kind and r['comparison']==comparison],key=lambda r:int(r['training_seed']));vals=[r[metric] for r in rr];ss=stats(vals)
+                    same(ss['mean'],old[comparison,metric]['mean']);same(ss['std_ddof1'],old[comparison,metric]['std_ddof1'])
+                    paired_stats.append({'checkpoint':kind,'comparison':comparison,'metric':metric,**ss,'favorable_seeds':sum(favorable(metric,v)>0 for v in vals),'unfavorable_seeds':sum(favorable(metric,v)<0 for v in vals),'tied_seeds':sum(v==0 for v in vals),'seed11':vals[0],'seed22':vals[1],'seed33':vals[2]})
+        endpoint_ci=[];paired_ci=[]
+        for kind in ('final','best'):
+            for is_pair,filename in [(False,'endpoint_document_bootstrap.json'),(True,'document_bootstrap.json')]:
+                for old in read(base/kind/filename):
+                    if old['field']!='sum_nll':continue
+                    c=old['corpus'];metric=METRICS[('target','c4','wikitext').index(c)];sign=-1 if c=='target' else 1
+                    if is_pair:
+                        a=bykey[kind,old['run_a']];b=bykey[kind,old['run_b']];av=score(records[a['record_id']]['output'])['corpora'][c];bv=score(records[b['record_id']]['output'])['corpora'][c]
+                        identity={k:old[k] for k in ('comparison','training_seed','run_a','run_b','target_tokens_a','target_tokens_b','equal_checkpoint_exposure')}
+                    else:
+                        a=bykey[kind,old['run_id']];av=score(records[a['record_id']]['output'])['corpora'][c];bv=initial[c]
+                        identity={k:old[k] for k in ('run_id','training_seed','target_prediction_tokens','replay_prediction_tokens')};identity['group']=a['group']
+                    names,n,d=delta_vectors(av,bv);rebuilt_ci=contexts[c].interval(names,n,d,sign)
+                    for weighting,suffix in [('token_weighted',''),('equal_document','_equal_document')]:
+                        original=old[weighting]
+                        if is_pair and sign==-1:original={'estimate':-original['estimate'],'ci_low':-original['ci_high'],'ci_high':-original['ci_low']}
+                        for key in ('estimate','ci_low','ci_high'):same(rebuilt_ci[weighting][key],original[key])
+                        (paired_ci if is_pair else endpoint_ci).append({'checkpoint':kind,**identity,'metric':metric+suffix,**rebuilt_ci[weighting],'documents':len(names),'prediction_tokens':int(n.sum()),'bootstrap_replicates':5000,'bootstrap_seed':20261106,'scope':'conditional on fixed checkpoints and independent/exchangeable documents; not training-seed CI'})
+>       require(len(endpoint_ci)==2*n*6 and len(paired_ci)==2*len(pairs)*len(SEEDS)*6,'Complete six-metric conditional CI coverage required')
+E       ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+
+scripts/review_C_model_nll_results_v2.py:376: ValueError
+_______________ test_full_toy_review[pythia-2.8b-none-30-31-0-3] _______________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-1490/test_full_toy_review_pythia_2_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7fb61053b4c0>
+model = 'pythia-2.8b', mode = 'none', logical = 30, physical = 31, aliases = 0
+pairs = 3
+
+    @pytest.mark.parametrize('model,mode,logical,physical,aliases,pairs',[
+        ('pythia-1b','none',48,49,0,6),('pythia-1b','three',48,46,3,6),('pythia-1b','six',48,43,6,6),('pythia-2.8b','none',30,31,0,3)])
+    def test_full_toy_review(tmp_path,monkeypatch,model,mode,logical,physical,aliases,pairs):
+>       args=fixture(tmp_path,model,mode);monkeypatch.setattr(M,'plot',lambda *a:None);M.run(args)
+
+tests/test_C_model_nll_review_v2.py:160: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = Namespace(model='pythia-2.8b', complete=PosixPath('/tmp/pytest-of-root/pytest-1490/test_full_toy_review_pythia_2_0/pyt...b/none/analyze_timing.json'), analyze_timing_sha256='59eeac3cd0c587882ee745afa4c3f1211e45272dfc80954940304cf0517bd8bb')
+
+    def run(args):
+        start=time.perf_counter();complete_path=Path(args.complete);out=Path(args.output)
+        gate=gate_inputs(args);complete=gate['complete'];plan=gate['plan'];ready=gate['ready']
+        manifest=gate['manifest'];group=gate['group'];profile=gate['profile'];groups=profile['groups'];pairs=profile['pairs']
+        n=len(groups)*len(SEEDS);physical_count=len(manifest['jobs']);alias_count=gate['aliases']
+        endpoints=[];old_pairs=[];sources={};bundles={};base=complete_path.parent
+        for kind in ('final','best'):
+            folder=base/kind;analysis=read(folder/'analysis_manifest.json')
+            require(analysis['complete'] is True and analysis['completed_conditions']==analysis['expected_conditions']==n and analysis['identity']['checkpoint']==kind and analysis['replicate_unit']=='training_seed','Incomplete/wrong endpoint analysis')
+            require(analysis['identity']=={'role':'extended','phase_name':profile['phase'],'model_tag':args.model,'data_family':'extended_v1','checkpoint':kind},'Foreign model analysis identity')
+            require(exact_proof(analysis['whole_phase_first_read_receipt'],complete['first_read_receipt']) and exact_proof(analysis['whole_phase_readiness'],complete['readiness']),'Analysis output journal/readiness differs')
+            require(analysis['bootstrap_replicates']==5000 and analysis['bootstrap_seed']==20261106,'Frozen bootstrap differs')
+            for p,d in analysis['sources_sha256'].items():
+                if p not in sources:require(sha(p)==d,'Changed analysis source '+p);sources[p]=d
+                else:require(sources[p]==d,'Contradictory source proof')
+            endpoints.extend(rows(folder/'endpoints.csv'));old_pairs.extend(rows(folder/'paired_effects.csv'));bundles[kind]=analysis
+        validate_grid(endpoints,groups);validate_pairs(old_pairs,groups,pairs)
+        records={r['id']:r for r in manifest['records']};bykey={(r['checkpoint'],r['run_id']):r for r in endpoints};cache={}
+        def score(path):
+            if path not in cache:cache[path]=read(path)
+            return cache[path]
+        initial=score(group['initial_output'])['corpora'];contexts={}
+        for c in ('target','c4','wikitext'):
+            names,n,d=delta_vectors(initial[c],initial[c]);contexts[c]=Resampling(names,n)
+        errors=[]
+        def same(a,b):
+            error=abs(float(a)-float(b));errors.append(error);require(math.isfinite(error) and error<1e-10,f'Independent numerical mismatch: {a} vs {b}')
+        rebuilt=[];exposure=[];raw_corpora=[]
+        for r in endpoints:
+            record=records[r['record_id']];require(record['kind']==r['checkpoint'] and record['run_id']==r['run_id'],'Endpoint manifest identity differs')
+            for csvkey,mkey in [('target_prediction_tokens','target_prediction_tokens_at_checkpoint'),('replay_prediction_tokens','replay_prediction_tokens_at_checkpoint')]:require(int(r[csvkey])==record[mkey],'Actual checkpoint exposure differs')
+            current=score(record['output'])['corpora'];values=raw_metrics(current,initial)
+            for metric,v in values.items():same(v,r[metric])
+            rebuilt.append({**r,**values})
+            exposure.append({k:r[k] for k in ('checkpoint','group','training_seed','run_id','actual_run_id','target_prediction_tokens','replay_prediction_tokens','full_training_target_prediction_tokens','full_training_replay_prediction_tokens')}|{'step':record['step'],'checkpoint_sha256':record['checkpoint_sha256']})
+            for c in ('target','c4','wikitext'):
+                corpus=current[c];docs,_=documents(corpus);n=corpus['valid_prediction_tokens'];value=math.fsum(v[0] for v in docs.values())/n;same(value,corpus['nll'])
+                raw_corpora.append({'checkpoint':r['checkpoint'],'group':r['group'],'training_seed':r['training_seed'],'run_id':r['run_id'],'corpus':c,'prediction_tokens':n,'documents':len(docs),'nll':value,'ppl':math.exp(value),'kl':corpus['kl'],'equal_document_nll':statistics.mean(v[0]/v[1] for v in docs.values())})
+        endpoint_stats=[];paired_stats=[];paired=[];rankings=[]
+        for kind in ('final','best'):
+            old={(r['group'],r['metric']):r for r in rows(base/kind/'endpoint_statistics.csv')}
+            for g in groups:
+                for metric in SIX:
+                    ss=stats([float(r[metric]) for r in rebuilt if r['checkpoint']==kind and r['group']==g]);same(ss['mean'],old[g,metric]['mean']);same(ss['std_ddof1'],old[g,metric]['std_ddof1'])
+                    endpoint_stats.append({'checkpoint':kind,'group':g,'metric':metric,**ss})
+            for metric in SIX:
+                ordered=sorted([r for r in endpoint_stats if r['checkpoint']==kind and r['metric']==metric],key=lambda r:r['mean'],reverse=metric.startswith('g_new'))
+                rankings.append({'checkpoint':kind,'metric':metric,'better_to_worse_mean':'>'.join(r['group'] for r in ordered),'rank_is_descriptive_no_new_inference':True})
+        for p in old_pairs:
+            a=bykey[p['checkpoint'],p['run_a']];b=bykey[p['checkpoint'],p['run_b']];require(p['comparison']==a['group']+'-'+b['group'],'Pair label/run identity differs')
+            require(a['training_seed']==b['training_seed']==p['training_seed'],'Unmatched training seeds')
+            item={**p}
+            for metric in SIX:item[metric]=float(a[metric])-float(b[metric]);same(item[metric],p[metric])
+            paired.append(item)
+        for kind in ('final','best'):
+            old={(r['comparison'],r['metric']):r for r in rows(base/kind/'paired_statistics.csv')}
+            for comparison in pairs:
+                for metric in SIX:
+                    rr=sorted([r for r in paired if r['checkpoint']==kind and r['comparison']==comparison],key=lambda r:int(r['training_seed']));vals=[r[metric] for r in rr];ss=stats(vals)
+                    same(ss['mean'],old[comparison,metric]['mean']);same(ss['std_ddof1'],old[comparison,metric]['std_ddof1'])
+                    paired_stats.append({'checkpoint':kind,'comparison':comparison,'metric':metric,**ss,'favorable_seeds':sum(favorable(metric,v)>0 for v in vals),'unfavorable_seeds':sum(favorable(metric,v)<0 for v in vals),'tied_seeds':sum(v==0 for v in vals),'seed11':vals[0],'seed22':vals[1],'seed33':vals[2]})
+        endpoint_ci=[];paired_ci=[]
+        for kind in ('final','best'):
+            for is_pair,filename in [(False,'endpoint_document_bootstrap.json'),(True,'document_bootstrap.json')]:
+                for old in read(base/kind/filename):
+                    if old['field']!='sum_nll':continue
+                    c=old['corpus'];metric=METRICS[('target','c4','wikitext').index(c)];sign=-1 if c=='target' else 1
+                    if is_pair:
+                        a=bykey[kind,old['run_a']];b=bykey[kind,old['run_b']];av=score(records[a['record_id']]['output'])['corpora'][c];bv=score(records[b['record_id']]['output'])['corpora'][c]
+                        identity={k:old[k] for k in ('comparison','training_seed','run_a','run_b','target_tokens_a','target_tokens_b','equal_checkpoint_exposure')}
+                    else:
+                        a=bykey[kind,old['run_id']];av=score(records[a['record_id']]['output'])['corpora'][c];bv=initial[c]
+                        identity={k:old[k] for k in ('run_id','training_seed','target_prediction_tokens','replay_prediction_tokens')};identity['group']=a['group']
+                    names,n,d=delta_vectors(av,bv);rebuilt_ci=contexts[c].interval(names,n,d,sign)
+                    for weighting,suffix in [('token_weighted',''),('equal_document','_equal_document')]:
+                        original=old[weighting]
+                        if is_pair and sign==-1:original={'estimate':-original['estimate'],'ci_low':-original['ci_high'],'ci_high':-original['ci_low']}
+                        for key in ('estimate','ci_low','ci_high'):same(rebuilt_ci[weighting][key],original[key])
+                        (paired_ci if is_pair else endpoint_ci).append({'checkpoint':kind,**identity,'metric':metric+suffix,**rebuilt_ci[weighting],'documents':len(names),'prediction_tokens':int(n.sum()),'bootstrap_replicates':5000,'bootstrap_seed':20261106,'scope':'conditional on fixed checkpoints and independent/exchangeable documents; not training-seed CI'})
+>       require(len(endpoint_ci)==2*n*6 and len(paired_ci)==2*len(pairs)*len(SEEDS)*6,'Complete six-metric conditional CI coverage required')
+E       ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+
+scripts/review_C_model_nll_results_v2.py:376: ValueError
+=========================== short test summary info ============================
+FAILED tests/test_C_model_nll_review_v2.py::test_full_toy_review[pythia-1b-none-48-49-0-6]
+FAILED tests/test_C_model_nll_review_v2.py::test_full_toy_review[pythia-1b-three-48-46-3-6]
+FAILED tests/test_C_model_nll_review_v2.py::test_full_toy_review[pythia-1b-six-48-43-6-6]
+FAILED tests/test_C_model_nll_review_v2.py::test_full_toy_review[pythia-2.8b-none-30-31-0-3]
+4 failed, 25 passed in 6.74s

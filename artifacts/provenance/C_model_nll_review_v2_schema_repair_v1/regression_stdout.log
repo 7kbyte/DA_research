@@ -1,0 +1,177 @@
+Running 41 items in this shard
+....................................FFFF.                                [100%]
+=================================== FAILURES ===================================
+________ test_authority_identity_matches_actual_lowercase_schema[ROOT] _________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-1497/test_authority_identity_matche0')
+identity = 'ROOT'
+
+    @pytest.mark.parametrize('identity',['ROOT','Root','foreign',None])
+    def test_authority_identity_matches_actual_lowercase_schema(tmp_path,identity):
+        args=fixture(tmp_path,'pythia-2.8b');complete=json.loads(args.complete.read_text())
+        path=Path(complete['authority']['path']);authority=json.loads(path.read_text());authority['authorized_by']=identity
+        complete['authority']=put(path,authority);args.complete_sha256=put(args.complete,complete)['sha256']
+>       with pytest.raises(ValueError,match='ROOT score authority'):M.gate_inputs(args)
+
+tests/test_C_model_nll_review_v2.py:265: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/review_C_model_nll_results_v2.py:229: in gate_inputs
+    require(complete['authority']['sha256']==args.authority_sha256,'Explicit ROOT authority SHA differs')
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+test = False, message = 'Explicit ROOT authority SHA differs'
+
+    def require(test, message):
+>       if not test: raise ValueError(message)
+E       ValueError: Explicit ROOT authority SHA differs
+
+scripts/review_C_model_nll_results_v2.py:26: ValueError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-1497/test_authority_identity_matche0')
+identity = 'ROOT'
+
+    @pytest.mark.parametrize('identity',['ROOT','Root','foreign',None])
+    def test_authority_identity_matches_actual_lowercase_schema(tmp_path,identity):
+        args=fixture(tmp_path,'pythia-2.8b');complete=json.loads(args.complete.read_text())
+        path=Path(complete['authority']['path']);authority=json.loads(path.read_text());authority['authorized_by']=identity
+        complete['authority']=put(path,authority);args.complete_sha256=put(args.complete,complete)['sha256']
+>       with pytest.raises(ValueError,match='ROOT score authority'):M.gate_inputs(args)
+E       AssertionError: Regex pattern did not match.
+E        Regex: 'ROOT score authority'
+E        Input: 'Explicit ROOT authority SHA differs'
+
+tests/test_C_model_nll_review_v2.py:265: AssertionError
+________ test_authority_identity_matches_actual_lowercase_schema[Root] _________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-1497/test_authority_identity_matche1')
+identity = 'Root'
+
+    @pytest.mark.parametrize('identity',['ROOT','Root','foreign',None])
+    def test_authority_identity_matches_actual_lowercase_schema(tmp_path,identity):
+        args=fixture(tmp_path,'pythia-2.8b');complete=json.loads(args.complete.read_text())
+        path=Path(complete['authority']['path']);authority=json.loads(path.read_text());authority['authorized_by']=identity
+        complete['authority']=put(path,authority);args.complete_sha256=put(args.complete,complete)['sha256']
+>       with pytest.raises(ValueError,match='ROOT score authority'):M.gate_inputs(args)
+
+tests/test_C_model_nll_review_v2.py:265: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/review_C_model_nll_results_v2.py:229: in gate_inputs
+    require(complete['authority']['sha256']==args.authority_sha256,'Explicit ROOT authority SHA differs')
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+test = False, message = 'Explicit ROOT authority SHA differs'
+
+    def require(test, message):
+>       if not test: raise ValueError(message)
+E       ValueError: Explicit ROOT authority SHA differs
+
+scripts/review_C_model_nll_results_v2.py:26: ValueError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-1497/test_authority_identity_matche1')
+identity = 'Root'
+
+    @pytest.mark.parametrize('identity',['ROOT','Root','foreign',None])
+    def test_authority_identity_matches_actual_lowercase_schema(tmp_path,identity):
+        args=fixture(tmp_path,'pythia-2.8b');complete=json.loads(args.complete.read_text())
+        path=Path(complete['authority']['path']);authority=json.loads(path.read_text());authority['authorized_by']=identity
+        complete['authority']=put(path,authority);args.complete_sha256=put(args.complete,complete)['sha256']
+>       with pytest.raises(ValueError,match='ROOT score authority'):M.gate_inputs(args)
+E       AssertionError: Regex pattern did not match.
+E        Regex: 'ROOT score authority'
+E        Input: 'Explicit ROOT authority SHA differs'
+
+tests/test_C_model_nll_review_v2.py:265: AssertionError
+_______ test_authority_identity_matches_actual_lowercase_schema[foreign] _______
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-1497/test_authority_identity_matche2')
+identity = 'foreign'
+
+    @pytest.mark.parametrize('identity',['ROOT','Root','foreign',None])
+    def test_authority_identity_matches_actual_lowercase_schema(tmp_path,identity):
+        args=fixture(tmp_path,'pythia-2.8b');complete=json.loads(args.complete.read_text())
+        path=Path(complete['authority']['path']);authority=json.loads(path.read_text());authority['authorized_by']=identity
+        complete['authority']=put(path,authority);args.complete_sha256=put(args.complete,complete)['sha256']
+>       with pytest.raises(ValueError,match='ROOT score authority'):M.gate_inputs(args)
+
+tests/test_C_model_nll_review_v2.py:265: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/review_C_model_nll_results_v2.py:229: in gate_inputs
+    require(complete['authority']['sha256']==args.authority_sha256,'Explicit ROOT authority SHA differs')
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+test = False, message = 'Explicit ROOT authority SHA differs'
+
+    def require(test, message):
+>       if not test: raise ValueError(message)
+E       ValueError: Explicit ROOT authority SHA differs
+
+scripts/review_C_model_nll_results_v2.py:26: ValueError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-1497/test_authority_identity_matche2')
+identity = 'foreign'
+
+    @pytest.mark.parametrize('identity',['ROOT','Root','foreign',None])
+    def test_authority_identity_matches_actual_lowercase_schema(tmp_path,identity):
+        args=fixture(tmp_path,'pythia-2.8b');complete=json.loads(args.complete.read_text())
+        path=Path(complete['authority']['path']);authority=json.loads(path.read_text());authority['authorized_by']=identity
+        complete['authority']=put(path,authority);args.complete_sha256=put(args.complete,complete)['sha256']
+>       with pytest.raises(ValueError,match='ROOT score authority'):M.gate_inputs(args)
+E       AssertionError: Regex pattern did not match.
+E        Regex: 'ROOT score authority'
+E        Input: 'Explicit ROOT authority SHA differs'
+
+tests/test_C_model_nll_review_v2.py:265: AssertionError
+________ test_authority_identity_matches_actual_lowercase_schema[None] _________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-1497/test_authority_identity_matche3')
+identity = None
+
+    @pytest.mark.parametrize('identity',['ROOT','Root','foreign',None])
+    def test_authority_identity_matches_actual_lowercase_schema(tmp_path,identity):
+        args=fixture(tmp_path,'pythia-2.8b');complete=json.loads(args.complete.read_text())
+        path=Path(complete['authority']['path']);authority=json.loads(path.read_text());authority['authorized_by']=identity
+        complete['authority']=put(path,authority);args.complete_sha256=put(args.complete,complete)['sha256']
+>       with pytest.raises(ValueError,match='ROOT score authority'):M.gate_inputs(args)
+
+tests/test_C_model_nll_review_v2.py:265: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/review_C_model_nll_results_v2.py:229: in gate_inputs
+    require(complete['authority']['sha256']==args.authority_sha256,'Explicit ROOT authority SHA differs')
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+test = False, message = 'Explicit ROOT authority SHA differs'
+
+    def require(test, message):
+>       if not test: raise ValueError(message)
+E       ValueError: Explicit ROOT authority SHA differs
+
+scripts/review_C_model_nll_results_v2.py:26: ValueError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-1497/test_authority_identity_matche3')
+identity = None
+
+    @pytest.mark.parametrize('identity',['ROOT','Root','foreign',None])
+    def test_authority_identity_matches_actual_lowercase_schema(tmp_path,identity):
+        args=fixture(tmp_path,'pythia-2.8b');complete=json.loads(args.complete.read_text())
+        path=Path(complete['authority']['path']);authority=json.loads(path.read_text());authority['authorized_by']=identity
+        complete['authority']=put(path,authority);args.complete_sha256=put(args.complete,complete)['sha256']
+>       with pytest.raises(ValueError,match='ROOT score authority'):M.gate_inputs(args)
+E       AssertionError: Regex pattern did not match.
+E        Regex: 'ROOT score authority'
+E        Input: 'Explicit ROOT authority SHA differs'
+
+tests/test_C_model_nll_review_v2.py:265: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_C_model_nll_review_v2.py::test_authority_identity_matches_actual_lowercase_schema[ROOT]
+FAILED tests/test_C_model_nll_review_v2.py::test_authority_identity_matches_actual_lowercase_schema[Root]
+FAILED tests/test_C_model_nll_review_v2.py::test_authority_identity_matches_actual_lowercase_schema[foreign]
+FAILED tests/test_C_model_nll_review_v2.py::test_authority_identity_matches_actual_lowercase_schema[None]
+4 failed, 37 passed in 7.95s

@@ -1,0 +1,70 @@
+{
+  "status": "passed",
+  "original_C410_files_preserved": 37,
+  "scientific_core_files_unchanged": 10,
+  "core_reference": {
+    "path": "/tmp/grad-research-20261106/worktree/logs/tests_after_behavior_native_restore_v1_full.json",
+    "sha256": "7be870817caf96994a942fa89ffc596fde52cdb653b5591b99c3cb87ce813ea4"
+  },
+  "identical_numerical_AST": [
+    "stats",
+    "favorable",
+    "documents",
+    "delta_vectors",
+    "raw_metrics",
+    "Resampling",
+    "validate_grid"
+  ],
+  "toy_models": [
+    {
+      "model": "pythia-1b",
+      "receipt": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/toy_cli_stable_source/toy_cli_inputs/pythia-1b/six/review/independent_review_receipt.json",
+        "sha256": "dd251082457cc1db57a05cb73be75535564f49afb4ec75e3d3fd3edb9272210e"
+      },
+      "cost_accounting": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/toy_cli_stable_source/toy_cli_inputs/pythia-1b/six/review/cost_accounting.json",
+        "sha256": "af13208c25dcb75b95b7c81177905cb8cf427d8488aaf4e115d66e7190ea29f6"
+      },
+      "logical_endpoints": 48,
+      "physical_inferences": 43,
+      "proven_aliases": 6,
+      "paired_records": 36,
+      "max_abs_numerical_error": 4.440892098500626e-16,
+      "semantic_inputs_are_synthetic_only": true,
+      "CSV_files": 13,
+      "figures": {
+        "png": 4,
+        "pdf": 4,
+        "svg": 4
+      }
+    },
+    {
+      "model": "pythia-2.8b",
+      "receipt": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/toy_cli_stable_source/toy_cli_inputs/pythia-2.8b/none/review/independent_review_receipt.json",
+        "sha256": "e3c3476c04deaccb29e78357d8c1a383042574463142a050a2ce5284af22766c"
+      },
+      "cost_accounting": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_model_nll_review_v2_preparation/toy_cli_stable_source/toy_cli_inputs/pythia-2.8b/none/review/cost_accounting.json",
+        "sha256": "7af28699c1925757f5b5f0be8dc29923092a5c3183623f226a318a8dfaedcacb"
+      },
+      "logical_endpoints": 30,
+      "physical_inferences": 31,
+      "proven_aliases": 0,
+      "paired_records": 18,
+      "max_abs_numerical_error": 4.440892098500626e-16,
+      "semantic_inputs_are_synthetic_only": true,
+      "CSV_files": 13,
+      "figures": {
+        "png": 4,
+        "pdf": 4,
+        "svg": 4
+      }
+    }
+  ],
+  "actual_1B_2p8B_score_semantics_read": false,
+  "actual_guard_check_analyze_invoked": false,
+  "checkpoint_base_archive_payload_reads": 0,
+  "GPU_invoked": false
+}
