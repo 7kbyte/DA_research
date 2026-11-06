@@ -4,7 +4,7 @@
 
 - 研究时段：2026-11-06 03:26:32 至 2026-11-07 03:26:32 UTC。
 - 主模型：Pythia-410M；目标域：FineMath finemath-4plus；替代通用回放：C4；通用评估：独立C4与WikiText-103。
-- 实测硬件：4×H100 80GB。大型缓存/完整优化器checkpoint位于`/tmp/grad-research-20261106`；代码、配置、日志与报告保存在本目录。
+- 实测硬件：4×H100 80GB。大型缓存/完整优化器checkpoint位于`/tmp/grad-research-20261106`。因共享盘曾写满，本目录当前链接到该临时盘工作树；已经核验的持久快照及主最终权重另存于同级`research_delivery/`，见下面交付记录。
 
 ## 导航
 
@@ -12,6 +12,7 @@
 - [文献调研](literature/文献调研.md)
 - [环境重建与移交](docs/环境重建与移交.md)
 - [已校验的共享盘快照](docs/durable_snapshot_latest.json)
+- [主24条件最终模型的共享盘无损权重包验收](docs/primary_weights_durable_publication.json)与[恢复说明](docs/无损权重交付格式.md)
 - [研究路线与时间安排](docs/研究路线与时间安排.md)
 - [工程接口与实验约定](docs/ENGINEERING_CONTRACT.md)
 - `configs/`：冻结前pilot及正式实验配置。
