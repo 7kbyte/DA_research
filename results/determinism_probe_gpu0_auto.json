@@ -1,0 +1,76 @@
+{
+  "gpu": "0",
+  "backend": "auto",
+  "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+  "torch_git_version": "Unknown",
+  "cublas_workspace_config": ":4096:8",
+  "gradient_repeats": [
+    {
+      "repeat": 1,
+      "nll": 2.639164447784424,
+      "grad_norm": 16.606531143188477,
+      "gradient_sha256": "fbacdb5959cae4c38186f3b78821cde49771f919a30ccc351e85038f3f474caa",
+      "seconds": 2.0353367552161217
+    },
+    {
+      "repeat": 2,
+      "nll": 2.639164447784424,
+      "grad_norm": 16.606531143188477,
+      "gradient_sha256": "fbacdb5959cae4c38186f3b78821cde49771f919a30ccc351e85038f3f474caa",
+      "seconds": 1.7560455836355686
+    }
+  ],
+  "three_step_repeats": [
+    {
+      "repeat": 1,
+      "model_sha256": "63bc81e02ffe71288ca20506a3fe91dd654544a0ffca4ab8b3a4e5fe78464288",
+      "summary_path": "/tmp/grad-research-20261106/runs/diagnostic_deterministic_auto_gpu0_r1/summary.json",
+      "counters": {
+        "step": 3,
+        "target_prediction_tokens": 98112,
+        "replay_prediction_tokens": 4905,
+        "target_raw_input_tokens": 98304,
+        "replay_raw_input_tokens": 5223,
+        "target_padded_input_tokens": 98304,
+        "replay_padded_input_tokens": 6144,
+        "training_seconds": 2.001973107457161,
+        "validation_seconds": 0.0,
+        "checkpoint_seconds": 5.375863708555698,
+        "setup_seconds": 1.5741160959005356,
+        "training_teacher_forward_seconds": 0.05885036849975586,
+        "validation_teacher_forward_seconds": 0.0,
+        "validation_kl_arithmetic_seconds": 0.0,
+        "prior_elapsed_seconds": 2.004744306206703,
+        "elapsed_seconds": 7.381120529025793,
+        "total_accounted_wall_seconds": 8.95523713156581
+      }
+    },
+    {
+      "repeat": 2,
+      "model_sha256": "63bc81e02ffe71288ca20506a3fe91dd654544a0ffca4ab8b3a4e5fe78464288",
+      "summary_path": "/tmp/grad-research-20261106/runs/diagnostic_deterministic_auto_gpu0_r2/summary.json",
+      "counters": {
+        "step": 3,
+        "target_prediction_tokens": 98112,
+        "replay_prediction_tokens": 4905,
+        "target_raw_input_tokens": 98304,
+        "replay_raw_input_tokens": 5223,
+        "target_padded_input_tokens": 98304,
+        "replay_padded_input_tokens": 6144,
+        "training_seconds": 1.9841893054544926,
+        "validation_seconds": 0.0,
+        "checkpoint_seconds": 4.492575261741877,
+        "setup_seconds": 1.6394314169883728,
+        "training_teacher_forward_seconds": 0.0589995174407959,
+        "validation_teacher_forward_seconds": 0.0,
+        "validation_kl_arithmetic_seconds": 0.0,
+        "prior_elapsed_seconds": 1.9870238229632378,
+        "elapsed_seconds": 6.480107508599758,
+        "total_accounted_wall_seconds": 8.119539387524128
+      }
+    }
+  ],
+  "gradient_bitwise_equal": true,
+  "three_step_bitwise_equal": true,
+  "status": "complete"
+}

@@ -1,0 +1,66 @@
+{
+  "strict_algorithms_warn_only": false,
+  "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+  "torch_git_version": "Unknown",
+  "synthetic_sdpa_backward": [
+    {
+      "deterministic_algorithms": false,
+      "repeats": [
+        {
+          "repeat": 0,
+          "bitwise_equal_first": true,
+          "max_abs_gradient_difference": 0.0
+        },
+        {
+          "repeat": 1,
+          "bitwise_equal_first": false,
+          "max_abs_gradient_difference": 0.00048828125
+        },
+        {
+          "repeat": 2,
+          "bitwise_equal_first": false,
+          "max_abs_gradient_difference": 0.0009765625
+        }
+      ]
+    },
+    {
+      "deterministic_algorithms": true,
+      "repeats": [
+        {
+          "repeat": 0,
+          "bitwise_equal_first": true,
+          "max_abs_gradient_difference": 0.0
+        },
+        {
+          "repeat": 1,
+          "bitwise_equal_first": true,
+          "max_abs_gradient_difference": 0.0
+        },
+        {
+          "repeat": 2,
+          "bitwise_equal_first": true,
+          "max_abs_gradient_difference": 0.0
+        }
+      ]
+    }
+  ],
+  "independent_gradient_sha256": [
+    "fbacdb5959cae4c38186f3b78821cde49771f919a30ccc351e85038f3f474caa",
+    "fbacdb5959cae4c38186f3b78821cde49771f919a30ccc351e85038f3f474caa",
+    "fbacdb5959cae4c38186f3b78821cde49771f919a30ccc351e85038f3f474caa",
+    "fbacdb5959cae4c38186f3b78821cde49771f919a30ccc351e85038f3f474caa"
+  ],
+  "independent_three_step_model_sha256": [
+    "63bc81e02ffe71288ca20506a3fe91dd654544a0ffca4ab8b3a4e5fe78464288",
+    "63bc81e02ffe71288ca20506a3fe91dd654544a0ffca4ab8b3a4e5fe78464288",
+    "63bc81e02ffe71288ca20506a3fe91dd654544a0ffca4ab8b3a4e5fe78464288",
+    "63bc81e02ffe71288ca20506a3fe91dd654544a0ffca4ab8b3a4e5fe78464288"
+  ],
+  "gradient_cross_gpu_bitwise_equal": true,
+  "three_step_cross_gpu_bitwise_equal": true,
+  "source_sha256": {
+    "/opt/pytorch/pytorch/aten/src/ATen/native/transformers/cuda/attention_backward.cu": "57115a21463a9a9e976cfe154e92df9c5be2e93c7e542247b8438b178531f2ac",
+    "/opt/pytorch/pytorch/aten/src/ATen/native/transformers/cuda/flash_attn/flash_api.cpp": "49e8538383bd3af0949cc9f184a2f0ee731944f73320f2d3e29f1e087eaaa083"
+  },
+  "fix": "strict torch.use_deterministic_algorithms(True,warn_only=False), CUBLAS_WORKSPACE_CONFIG=:4096:8, SDPA auto; no package changes"
+}

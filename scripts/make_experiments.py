@@ -74,6 +74,8 @@ def build_experiments(phase: str, root: Path, scratch: Path, shared_lr: float,
             replay_objective=objective, replay_ratio=ratio, replay_weight=weight,
             microbatch_size=16, gradient_accumulation_steps=4, learning_rate=shared_lr,
             precision="bf16", device="cuda:0", eval_every_steps=eval_every, save_every_steps=0,
+            deterministic_algorithms=bool((protocol or {}).get("deterministic_algorithms", False)),
+            attention_backend=(protocol or {}).get("attention_backend", "auto"),
             evaluate_at_start=False, evaluate_at_end=True, evaluate_teacher_kl=True,
             evaluation_batch_size=16, keep_step_checkpoints=False,
             validation_paths=(protocol.get("validation_paths") if protocol else None) or {
@@ -85,11 +87,12 @@ def build_experiments(phase: str, root: Path, scratch: Path, shared_lr: float,
         configs[str(config_path)] = dataclasses.asdict(cfg)
         record = {"id":run_id, "group":group, "seed":seed, "ratio":ratio, "weight":weight,
                   "learning_rate":shared_lr, "phase":phase, "config_path":str(config_path),
-                  "output_dir":str(output_dir), "summary_path":str(summary_copy),
+                  "output_dir":str(output_dir), "summary_path":str(summary_copy), "active":True,
                   "test_paths":protocol.get("test_paths",{}) if protocol else {}}
         registry.append(record)
         queue.append({"id":run_id, "argv":[sys.executable,str(root/"scripts/make_experiments.py"),
                     "run","--config",str(config_path),"--summary-copy",str(summary_copy)],
+                    "env":{"CUBLAS_WORKSPACE_CONFIG":":4096:8"} if cfg.deterministic_algorithms else {},
                     "expected_seconds":180 if phase=="lambda" else 600,
                     "outputs":[str(output_dir/"summary.json"),str(summary_copy)]})
     return configs, registry, queue
@@ -102,7 +105,12 @@ def capture_snapshot(root: Path, scratch: Path) -> dict:
         "data": sorted(path for directory in ["artifacts/data", "artifacts/evaluation_v3", "artifacts/banks", "artifacts/generated"]
                        for path in (root / directory).rglob("*") if path.is_file()),
         "configs": sorted(root.glob("configs/**/*.json")),
-        "protocol": sorted([*root.glob("docs/hyperparameter_selection_protocol*.json"), *root.glob("docs/超参数选择协议*.md")]),
+        "protocol": sorted([*root.glob("docs/hyperparameter_selection_protocol*.json"),
+                            *root.glob("docs/formal*protocol*.json"), *root.glob("docs/超参数选择协议*.md"),
+                            *root.glob("docs/数值复现审查.md")]),
+        "execution_evidence": sorted([*root.glob("results/determinism*.json"),
+                            *root.glob("results/evaluation_execution_policy_amendment.json"),
+                            *root.glob("artifacts/assets/model_provenance.json")]),
         "selection": sorted([*root.glob("results/pilot*selection*.json"), *root.glob("results/pilots/*amendment_reason.json")]),
     }
     result = {"created_at_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
@@ -156,7 +164,7 @@ def generate(args) -> None:
     atomic_json(ROOT/"configs"/f"{namespace}_registry.json", registry)
     atomic_json(ROOT/"configs"/f"{namespace}_queue.json", queue)
     if args.phase == "formal":
-        atomic_json(ROOT/"artifacts/provenance/formal_input_snapshot.json", capture_snapshot(ROOT, args.scratch))
+        atomic_json(ROOT/"artifacts/provenance"/f"{namespace}_input_snapshot.json", capture_snapshot(ROOT, args.scratch))
     print(json.dumps({"phase":args.phase,"configs":len(configs),
                       "registry":str(ROOT/"configs"/f"{namespace}_registry.json"),
                       "queue":str(ROOT/"configs"/f"{namespace}_queue.json")}))

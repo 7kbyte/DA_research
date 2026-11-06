@@ -40,6 +40,15 @@ def test_formal_grid_has_36_matched_configs_without_generating_files(tmp_path):
         assert config['precision']=='bf16' and config['evaluate_teacher_kl']
         assert all('validation' in Path(p).name and 'test' not in Path(p).name for p in config['validation_paths'].values())
 
+def test_strict_determinism_is_preserved_in_all_configs_and_queue_environment(tmp_path):
+    p=protocol();p.update(deterministic_algorithms=True,attention_backend='auto')
+    for phase in ['lambda','formal']:
+        configs,registry,queue=make.build_experiments(phase,tmp_path,tmp_path/'scratch',1e-5,.05,p,
+                                                    namespace=f'{phase}_deterministic')
+        assert all(c['deterministic_algorithms'] and c['attention_backend']=='auto' for c in configs.values())
+        assert all(q['env']['CUBLAS_WORKSPACE_CONFIG']==':4096:8' for q in queue)
+        assert all(r['active'] for r in registry)
+
 
 def fake_grid(tmp_path):
     p=protocol()

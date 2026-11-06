@@ -1,0 +1,128 @@
+{
+  "utc": "2026-11-06T04:39:46.246238+00:00",
+  "status": "passed_exact_baseline_equivalence",
+  "reason": "NVIDIA Torch 2.3 vendor build includes a fourth cuDNN SDP backend. Evaluation auto policy must explicitly match training rather than inherit the fresh default False.",
+  "change": {
+    "auto": {
+      "flash": true,
+      "memory_efficient": true,
+      "math": true,
+      "cudnn_sdp": true
+    },
+    "flash": {
+      "flash": true,
+      "memory_efficient": false,
+      "math": false,
+      "cudnn_sdp": false
+    },
+    "math": {
+      "flash": false,
+      "memory_efficient": false,
+      "math": true,
+      "cudnn_sdp": false
+    },
+    "optional_API_guard": "hasattr on cuDNN SDP setter/getter",
+    "behavior_baseline_adapted_matching": "requires recorded cudnn_sdp_enabled equality"
+  },
+  "generation_environment_changed": false,
+  "training_core_changed_by_this_amendment": false,
+  "regression_tests": {
+    "command": "PYTHONPATH=src OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 python -m pytest tests/test_eval_selection.py tests/test_generation.py tests/test_behavioral_tasks.py tests/test_eval_cli_protocol.py -q",
+    "passed": 23,
+    "scope": "CPU synthetic models and genuine tiny HF generation; no pretrained behavioral inference"
+  },
+  "source_sha256": {
+    "src/replay_study/execution.py": "70ed6b3d63f950ffc00f2c671f20e0d842c154f4cbf1648fe9a6511bbd077bf5",
+    "scripts/run_evaluate.py": "6d7b9cd6b311f96e94b854e8ccd15f15f92ff9eefbd6b5a0dddc67fee8989ddf",
+    "scripts/evaluate_tasks.py": "cfc4f149b021740f90245e3fa822f801f30c82f6ba580d43aeec4857cbab9981",
+    "tests/test_eval_cli_protocol.py": "0be743faf1ab845339463c9b69cb7a5fa05fdd2cc7a16f9ecd6bee91f5266c71"
+  },
+  "before_baseline": "results/pilots/lr_deterministic_v3/initial.json",
+  "matched_baseline": "results/pilots/lr_deterministic_v3/initial_cudnn_matched.json",
+  "comparison_policy": "exact equality for all non-timing corpus metrics, per-chunk rows and per-document rows; exclude execution provenance and timing only",
+  "comparison_utc": "2026-11-06T04:41:56.427282+00:00",
+  "before_baseline_sha256": "a6aa27b20bbc417f33c946d781557fb6d2f13e3842410ba08027300deed625c2",
+  "matched_baseline_sha256": "99d4dc36d5a02dd2cb7f2f078654868c8ca8bca36a526537106c9f498daab446",
+  "old_execution_provenance": {
+    "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+    "cuda_version": "12.4",
+    "precision": "bf16",
+    "attention_implementation": "sdpa",
+    "attention_backend_requested": "auto",
+    "flash_sdp_enabled": true,
+    "mem_efficient_sdp_enabled": true,
+    "math_sdp_enabled": true,
+    "deterministic_algorithms": true,
+    "deterministic_warn_only": false,
+    "allow_tf32_matmul": true,
+    "allow_tf32_cudnn": true,
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false,
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "model_weight_dtype": "torch.float32"
+  },
+  "matched_execution_provenance": {
+    "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+    "cuda_version": "12.4",
+    "precision": "bf16",
+    "attention_implementation": "sdpa",
+    "device_type": "cuda",
+    "effective_precision": "cuda_bfloat16_autocast",
+    "gpu_name": "NVIDIA H100 80GB HBM3",
+    "attention_backend_requested": "auto",
+    "flash_sdp_enabled": true,
+    "mem_efficient_sdp_enabled": true,
+    "math_sdp_enabled": true,
+    "cudnn_sdp_enabled": true,
+    "deterministic_algorithms": true,
+    "deterministic_warn_only": false,
+    "allow_tf32_matmul": true,
+    "allow_tf32_cudnn": true,
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false,
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "model_weight_dtype": "torch.float32"
+  },
+  "corpora_comparison": {
+    "c4": {
+      "exact_all_non_timing_metrics_equal": true,
+      "nll_before": 3.068727817590529,
+      "nll_after": 3.068727817590529,
+      "kl_before": 0.0,
+      "kl_after": 0.0,
+      "prediction_tokens": 523264,
+      "chunk_rows_compared": 1024,
+      "document_rows_compared": 625,
+      "differences": []
+    },
+    "target": {
+      "exact_all_non_timing_metrics_equal": true,
+      "nll_before": 2.4206741857557708,
+      "nll_after": 2.4206741857557708,
+      "kl_before": 0.0,
+      "kl_after": 0.0,
+      "prediction_tokens": 523264,
+      "chunk_rows_compared": 1024,
+      "document_rows_compared": 507,
+      "differences": []
+    },
+    "wikitext": {
+      "exact_all_non_timing_metrics_equal": true,
+      "nll_before": 3.1299843643461203,
+      "nll_after": 3.1299843643461203,
+      "kl_before": 0.0,
+      "kl_after": 0.0,
+      "prediction_tokens": 235571,
+      "chunk_rows_compared": 461,
+      "document_rows_compared": 60,
+      "differences": []
+    }
+  },
+  "all_corpora_exact_equal": true,
+  "timing_keys_excluded": [
+    "kl_arithmetic_seconds",
+    "teacher_forward_seconds",
+    "wall_seconds"
+  ],
+  "interpretation": "Explicit evaluation cuDNN SDP policy matches training; no numerical corpus metric changed; this evidence alone does not require retraining."
+}

@@ -47,6 +47,7 @@ class TrainConfig:
     precision: str = "bf16"
     device: str = "cuda"
     attention_implementation: str = "sdpa"
+    attention_backend: str = "auto"
     gradient_checkpointing: bool = False
     loss_chunk_size: int = 128
     fused_adamw: bool = True
@@ -86,6 +87,10 @@ class TrainConfig:
             raise ValueError("none objective requires replay_ratio=0")
         if self.replay_objective != "none" and (not self.replay_path or self.replay_ratio <= 0):
             raise ValueError("replay objective needs replay_path and positive ratio")
+        if self.attention_backend not in {"auto", "flash", "math"}:
+            raise ValueError("attention_backend must be auto, flash, or math")
+        if self.attention_implementation != "sdpa" and self.attention_backend != "auto":
+            raise ValueError("Explicit SDPA backend requires attention_implementation=sdpa")
         if self.precision not in {"bf16", "fp32"}:
             raise ValueError("precision must be bf16 or fp32")
         if not 0 <= self.warmup_ratio < 1 or not 0 <= self.min_lr_ratio <= 1:
@@ -326,6 +331,13 @@ def train(config: TrainConfig, student=None, teacher=None,
     """
     invocation_started = time.monotonic()
     config.validate()
+    if config.deterministic_algorithms:
+        os.environ.setdefault("CUBLAS_WORKSPACE_CONFIG", ":4096:8")
+    torch.backends.cuda.enable_flash_sdp(config.attention_backend in {"auto", "flash"})
+    torch.backends.cuda.enable_mem_efficient_sdp(config.attention_backend == "auto")
+    torch.backends.cuda.enable_math_sdp(config.attention_backend in {"auto", "math"})
+    if hasattr(torch.backends.cuda, "enable_cudnn_sdp"):
+        torch.backends.cuda.enable_cudnn_sdp(config.attention_backend == "auto")
     output = Path(config.output_dir)
     output.mkdir(parents=True, exist_ok=True)
     checkpoints = output / "checkpoints"
@@ -338,7 +350,9 @@ def train(config: TrainConfig, student=None, teacher=None,
     torch.manual_seed(config.seed)
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(config.seed)
-    torch.use_deterministic_algorithms(config.deterministic_algorithms)
+    torch.use_deterministic_algorithms(config.deterministic_algorithms, warn_only=False)
+    torch.backends.cudnn.deterministic = config.deterministic_algorithms
+    torch.backends.cudnn.benchmark = False
     if torch.cuda.is_available():
         torch.backends.cuda.matmul.allow_tf32 = config.allow_tf32
         torch.backends.cudnn.allow_tf32 = config.allow_tf32
@@ -356,11 +370,28 @@ def train(config: TrainConfig, student=None, teacher=None,
                   "torch_version": torch.__version__, "cuda_version": torch.version.cuda,
                   "source_sha256": {name: hashlib.sha256(Path(__file__).with_name(name).read_bytes()).hexdigest()
                                     for name in ("train.py", "objectives.py")},
-                  "device": str(device), "gpu": torch.cuda.get_device_name(device) if use_cuda else None}
+                  "device": str(device), "gpu": torch.cuda.get_device_name(device) if use_cuda else None,
+                  "attention_backend_policy": config.attention_backend,
+                  "attention_implementation": config.attention_implementation,
+                  "precision": config.precision,
+                  "deterministic_algorithms": torch.are_deterministic_algorithms_enabled(),
+                  "cublas_workspace_config": os.environ.get("CUBLAS_WORKSPACE_CONFIG"),
+                  "allow_tf32": config.allow_tf32,
+                  "allow_tf32_matmul": torch.backends.cuda.matmul.allow_tf32,
+                  "allow_tf32_cudnn": torch.backends.cudnn.allow_tf32,
+                  "cudnn_deterministic": torch.backends.cudnn.deterministic,
+                  "cudnn_benchmark": torch.backends.cudnn.benchmark,
+                  "deterministic_warn_only": torch.is_deterministic_algorithms_warn_only_enabled(),
+                  "sdpa_backends_enabled": {"flash":torch.backends.cuda.flash_sdp_enabled(),
+                                            "math":torch.backends.cuda.math_sdp_enabled(),
+                                            "memory_efficient":torch.backends.cuda.mem_efficient_sdp_enabled(),
+                                            "cudnn":torch.backends.cuda.cudnn_sdp_enabled()
+                                                if hasattr(torch.backends.cuda,"cudnn_sdp_enabled") else None}}
     target_stream = TokenStream(target_data, config.seed)
     replay_stream = TokenStream(replay_data, config.seed + 1_000_003) if replay_data else None
     student = _model_load(config) if student is None else student
     student = student.to(device=device, dtype=torch.float32)
+    provenance["model_weight_dtype"] = str(next(student.parameters()).dtype)
     for parameter in student.parameters():
         parameter.requires_grad_(True)
     student.config.use_cache = False
@@ -374,6 +405,7 @@ def train(config: TrainConfig, student=None, teacher=None,
         teacher.requires_grad_(False)
     else:
         teacher = None
+    provenance["teacher_weight_dtype"] = str(next(teacher.parameters()).dtype) if teacher is not None else None
     decay, no_decay = [], []
     for name, parameter in student.named_parameters():
         (no_decay if parameter.ndim < 2 or name.endswith("bias") else decay).append(parameter)
