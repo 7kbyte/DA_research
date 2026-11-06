@@ -233,3 +233,12 @@ Master2988506 actualargv deadline00:00, no margins passed; schedule_jobs default
 - 最后已见commit9c3ac71；最新durable项目快照仍1415，SHA0a563a30764d3e6ed9a604bf974402198073c748eb4b290ac19958e00f389dac，不含本轮新材料。建议C410全NLL分析/报告/PDF完成后16:10–16:20做新verified snapshot。
 
 下一步：等待C41043/43→ROOT额外state检查+timed aux check/analyze→独立全C410报告复核、预算v6/成本v6、报告PDF及新durable snapshot。eval_selection当前更新交付指南（仅小metadata），之后可接C410报告；training_engine已完成预算准备，data_assets完成sample review。所有C test/behavior首次解封仍按原完整合同；main67 behavior、新archive main4 QA、optional3model≥80min/单2.8≥60min门禁和finalhandoff保持原计划。硬deadline不变。
+
+
+### 16:03 UTC重要更新：C410评分全完成，但分析前guard需要独立修正
+
+C410全43已于15:58前正常结束，ROOT strict closure核对passed（artifacts/provenance/C410_nll_analysis_actual_v1/ROOT_state_precheck.json，保存完整state原字节）。第一次aux-v2 check rc1，完整child1.507972553s，stderr同目录：weights_evidence把proof.producer_source的Python文件经v.proof解析JSON，JSONDecodeError。没有TRUE分析authority，没有first-read journal，没有score语义解析，readiness输出未写。保留原v2所有字节；training_engine正开发独立guard_v3/CLI_v3及operational repair，复用旧load_plan/prepare/Verifier及原统计主体/shared journal，只将producer_source改opaque SHA绑定，其他JSON证明仍解析，同时补严格integer rc0/no-stop/实际wrapperargv。eval_selection独立review，新源码/repair须ROOT验收后，才能新的timed check及TRUEauthority/analyze。
+
+评价budget v6已实际成功（独立于待修的aux checker）：results/evaluation_timing_budget_v6.json SHA10b89046e19471985bcd2b0b352b9a62d0cd43e829029a650eb9705e73c36f1c，wholechild1.655318815s。真实已完成43+证明避免6一次核销旧49；剩224=80NLL+141behavior+3reuse，其余模型aliases未预支。C-only训练forecast22:58:38，remaining low/central/high98.312/125.528/162.883min，对应全评价00:36:57/01:04:10/01:41:31，距02:56:32 protectedtail139.58/112.37/75.01min。此为预算，非实际最终FIFO准入保证。来源 artifacts/provenance/evaluation_budget_v6_actual，完整执行timing在evaluation_budget_v6_execution_v1。
+
+交付指南v2已更新5weights：112.203GiB，加1415snapshot112.703GiB；114包内记录、111 actual-run+endpoint、102完整FP。proof docs/交付文件与恢复容量指南_来源核对_v2.json SHA29f02d8db4ee94f66c82290fad223e2bef2718a3866868f3fd7de2fcda2c5748。旧v1保留。

@@ -1,0 +1,960 @@
+{
+  "C410_completion": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_actual/C410_runtime_completion.json",
+    "sha256": "08f3074791f672093bc1a51c013514319f1255526a1612846fe8a2ebf8d5b260"
+  },
+  "accounting": {
+    "A_B_baselines_or_prior_completions_removed_again": 0,
+    "C410_behavior_actual_forward_jobs": 21,
+    "C410_behavior_logical_endpoints": 24,
+    "C410_proven_avoided_NLL_forwards": 6,
+    "C410_proven_avoided_behavior_forwards": 3,
+    "actual_C410_completed_forward_jobs": 43,
+    "main66_still_all_unperformed": 66,
+    "other_C_unproved_alias_discounts": 0,
+    "prior_v5_NLL_unaliased_proxy": 129,
+    "real_C410_NLL_forwards_are49": false,
+    "remaining_NLL_forward_jobs": 80,
+    "remaining_behavior_forward_jobs": 141,
+    "remaining_forward_jobs": 221,
+    "remaining_materialization_jobs": 3,
+    "remaining_queue_jobs": 224,
+    "total_compute_reduction_due_to_early_execution": 0
+  },
+  "collector_process_cpu_seconds": 0.29227807299999986,
+  "collector_wall_seconds": 0.29600217193365097,
+  "limitations": [
+    "C41043 actual completed plus6 proven avoided reconcile49 old unaliased proxy; no phantom6 remain.",
+    "C410 future behavior24 logical use21 actual jobs; other model aliases unspent until complete evidence.",
+    "All remaining v5 rates and1/1.25/1.5 factors stay unchanged; completed C410 times reported separately, never used selectively to lower large-model extrapolations.",
+    "Training FIFO adds10pct exactly once; early evaluation moves existing work and does not save total compute.",
+    "No repeated full CP hash assumed in handoff; actual immutable snapshot/stat checks still required; worker fresh SHA unchanged.",
+    "This budget is not final scheduler admission or permission; real per-job expected_seconds launch cutoff and30min tail must also pass."
+  ],
+  "no_GPU_or_scheduler_started": true,
+  "no_science_or_queue_changes": true,
+  "no_score_fields_read": true,
+  "prehash_inventory": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_actual/prehash_inventory.json",
+    "sha256": "69caa6b6846bda64ebbce1df18e30b2157560117d97c10a32a51a48d993cb9e3"
+  },
+  "prior_v5": {
+    "path": "/tmp/grad-research-20261106/worktree/results/evaluation_timing_budget_v5.json",
+    "sha256": "940a0a0651cc7dd20da16d46321d8d4cac6b4dbbf7dd3e1ba6fbdd787e0b8f7d",
+    "stat_dev_ino_size_mtime_ns_ctime_ns": [
+      139,
+      4436033451,
+      37276,
+      1793965773178040462,
+      1793965773178040462
+    ]
+  },
+  "producer_source": {
+    "path": "/tmp/grad-research-20261106/worktree/scripts/describe_remaining_evaluation_budget_v6.py",
+    "sha256": "d02d430869f5c6f91f71496b2b77ea5e0388386ed432bdcec22240270c706a50"
+  },
+  "schema_version": 6,
+  "sensitivity_scenarios": [
+    {
+      "four_slot_dispatch": {
+        "LPT_imbalance_and_dependency_tail_seconds_proxy": 4.983232828634755,
+        "baseline_first_LPT_wall_seconds_proxy": 5598.737880210324,
+        "ideal_four_slot_wall_seconds_proxy": 5593.754647381689,
+        "job_count": 224,
+        "largest_job_seconds_proxy": 249.95685102189836,
+        "sum_whole_job_slot_seconds_proxy": 22375.018589526757
+      },
+      "from_current_training_forecast": {
+        "evaluation_finish_utc": "2026-11-07T00:36:57.071431+00:00",
+        "margin_before_30min_delivery_tail_minutes": 139.58214281666667,
+        "training_finish_utc": "2026-11-06T22:58:38.333551+00:00"
+      },
+      "handoff_preflight_allowance_seconds_unmeasured": 300.0,
+      "latest_feasible_start_utc_proxy": "2026-11-07T01:18:13.262120+00:00",
+      "name": "low",
+      "other_model_rates_and_unproved_alias_scope_unchanged": true,
+      "per_phase": [
+        {
+          "id": "main_behavior_adapted",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 104.98685227659621,
+          "remaining_forward_jobs": 66,
+          "sum_slot_seconds_proxy": 6929.13225025535
+        },
+        {
+          "id": "C_pythia_410m_behavior_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 104.98685227659621,
+          "remaining_forward_jobs": 21,
+          "sum_slot_seconds_proxy": 2204.7238978085206
+        },
+        {
+          "id": "C_pythia_1b_nll_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 49.37299152584776,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 1184.9517966203462
+        },
+        {
+          "id": "C_pythia_1b_nll_best",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 37.02777696018988,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 888.6666470445572
+        },
+        {
+          "id": "C_pythia_1b_nll_initial",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 37.04982503540411,
+          "remaining_forward_jobs": 1,
+          "sum_slot_seconds_proxy": 37.04982503540411
+        },
+        {
+          "id": "C_pythia_1b_behavior_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 100.85534981597789,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 2420.5283955834693
+        },
+        {
+          "id": "C_pythia_2p8b_nll_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 124.28923507840987,
+          "remaining_forward_jobs": 15,
+          "sum_slot_seconds_proxy": 1864.3385261761482
+        },
+        {
+          "id": "C_pythia_2p8b_nll_best",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 93.21197547097483,
+          "remaining_forward_jobs": 15,
+          "sum_slot_seconds_proxy": 1398.1796320646226
+        },
+        {
+          "id": "C_pythia_2p8b_nll_initial",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 93.26747825333901,
+          "remaining_forward_jobs": 1,
+          "sum_slot_seconds_proxy": 93.26747825333901
+        },
+        {
+          "id": "C_pythia_2p8b_behavior_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 249.95685102189836,
+          "remaining_forward_jobs": 15,
+          "sum_slot_seconds_proxy": 3749.3527653284755
+        },
+        {
+          "id": "A_selected_behavior",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 104.98685227659621,
+          "remaining_forward_jobs": 15,
+          "sum_slot_seconds_proxy": 1574.8027841489431
+        },
+        {
+          "id": "A_selected_behavior_materialization",
+          "materialization_jobs": 3,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 10.00819706916809,
+          "remaining_forward_jobs": 0,
+          "sum_slot_seconds_proxy": 30.024591207504272
+        }
+      ],
+      "remaining_NLL_forward_jobs": 80,
+      "remaining_behavior_forward_jobs": 141,
+      "remaining_forward_jobs": 221,
+      "remaining_materialization_jobs": 3,
+      "starts": {
+        "from_2350": {
+          "finish_utc": "2026-11-07T01:28:18.737880+00:00",
+          "margin_before_30min_delivery_tail_minutes": 88.22103533333333,
+          "start_utc": "2026-11-06T23:50:00+00:00"
+        },
+        "from_midnight": {
+          "finish_utc": "2026-11-07T01:38:18.737880+00:00",
+          "margin_before_30min_delivery_tail_minutes": 78.22103533333333,
+          "start_utc": "2026-11-07T00:00:00+00:00"
+        }
+      },
+      "v5_C41049_unaliased_proxy_removed_with43_completed_plus6_proof": [
+        {
+          "id": "C_pythia_410m_nll_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 38.94772026431083,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 934.74528634346
+        },
+        {
+          "id": "C_pythia_410m_nll_best",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 29.19575581209905,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 700.6981394903772
+        },
+        {
+          "id": "C_pythia_410m_nll_initial",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 29.213140334555625,
+          "remaining_forward_jobs": 1,
+          "sum_slot_seconds_proxy": 29.213140334555625
+        }
+      ],
+      "wall_minutes_with_dispatch_tail_and_handoff_proxy": 98.3122980035054,
+      "wall_seconds_with_dispatch_tail_and_handoff_proxy": 5898.737880210324,
+      "whole_wall_sensitivity_factor": 1.0
+    },
+    {
+      "four_slot_dispatch": {
+        "LPT_imbalance_and_dependency_tail_seconds_proxy": 8.306230778722238,
+        "baseline_first_LPT_wall_seconds_proxy": 7231.667358243383,
+        "ideal_four_slot_wall_seconds_proxy": 7223.361127464661,
+        "job_count": 224,
+        "largest_job_seconds_proxy": 336.06981812934333,
+        "sum_whole_job_slot_seconds_proxy": 28893.444509858644
+      },
+      "from_current_training_forecast": {
+        "evaluation_finish_utc": "2026-11-07T01:04:10.000909+00:00",
+        "margin_before_30min_delivery_tail_minutes": 112.36665151666666,
+        "training_finish_utc": "2026-11-06T22:58:38.333551+00:00"
+      },
+      "handoff_preflight_allowance_seconds_unmeasured": 300.0,
+      "latest_feasible_start_utc_proxy": "2026-11-07T00:51:00.332642+00:00",
+      "name": "central",
+      "other_model_rates_and_unproved_alias_scope_unchanged": true,
+      "per_phase": [
+        {
+          "id": "main_behavior_adapted",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 134.55208415490665,
+          "remaining_forward_jobs": 66,
+          "sum_slot_seconds_proxy": 8880.43755422384
+        },
+        {
+          "id": "C_pythia_410m_behavior_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 134.55208415490665,
+          "remaining_forward_jobs": 21,
+          "sum_slot_seconds_proxy": 2825.59376725304
+        },
+        {
+          "id": "C_pythia_1b_nll_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 61.733848193877286,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 1481.6123566530548
+        },
+        {
+          "id": "C_pythia_1b_nll_best",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 46.30140635916213,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 1111.2337526198912
+        },
+        {
+          "id": "C_pythia_1b_nll_initial",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 46.31228129425514,
+          "remaining_forward_jobs": 1,
+          "sum_slot_seconds_proxy": 46.31228129425514
+        },
+        {
+          "id": "C_pythia_1b_behavior_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 134.70413619053193,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 3232.8992685727662
+        },
+        {
+          "id": "C_pythia_2p8b_nll_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 155.40587137497613,
+          "remaining_forward_jobs": 15,
+          "sum_slot_seconds_proxy": 2331.088070624642
+        },
+        {
+          "id": "C_pythia_2p8b_nll_best",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 116.55697176911282,
+          "remaining_forward_jobs": 15,
+          "sum_slot_seconds_proxy": 1748.3545765366923
+        },
+        {
+          "id": "C_pythia_2p8b_nll_initial",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 116.58434781667376,
+          "remaining_forward_jobs": 1,
+          "sum_slot_seconds_proxy": 116.58434781667376
+        },
+        {
+          "id": "C_pythia_2p8b_behavior_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 336.06981812934333,
+          "remaining_forward_jobs": 15,
+          "sum_slot_seconds_proxy": 5041.04727194015
+        },
+        {
+          "id": "A_selected_behavior",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 134.55208415490665,
+          "remaining_forward_jobs": 15,
+          "sum_slot_seconds_proxy": 2018.2812623235998
+        },
+        {
+          "id": "A_selected_behavior_materialization",
+          "materialization_jobs": 3,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 20.0,
+          "remaining_forward_jobs": 0,
+          "sum_slot_seconds_proxy": 60.0
+        }
+      ],
+      "remaining_NLL_forward_jobs": 80,
+      "remaining_behavior_forward_jobs": 141,
+      "remaining_forward_jobs": 221,
+      "remaining_materialization_jobs": 3,
+      "starts": {
+        "from_2350": {
+          "finish_utc": "2026-11-07T01:55:31.667358+00:00",
+          "margin_before_30min_delivery_tail_minutes": 61.00554403333333,
+          "start_utc": "2026-11-06T23:50:00+00:00"
+        },
+        "from_midnight": {
+          "finish_utc": "2026-11-07T02:05:31.667358+00:00",
+          "margin_before_30min_delivery_tail_minutes": 51.00554403333333,
+          "start_utc": "2026-11-07T00:00:00+00:00"
+        }
+      },
+      "v5_C41049_unaliased_proxy_removed_with43_completed_plus6_proof": [
+        {
+          "id": "C_pythia_410m_nll_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 48.71704708700424,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 1169.2091300881018
+        },
+        {
+          "id": "C_pythia_410m_nll_best",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 36.50785072169603,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 876.1884173207047
+        },
+        {
+          "id": "C_pythia_410m_nll_initial",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 36.51642541819453,
+          "remaining_forward_jobs": 1,
+          "sum_slot_seconds_proxy": 36.51642541819453
+        }
+      ],
+      "wall_minutes_with_dispatch_tail_and_handoff_proxy": 125.52778930405638,
+      "wall_seconds_with_dispatch_tail_and_handoff_proxy": 7531.667358243383,
+      "whole_wall_sensitivity_factor": 1.25
+    },
+    {
+      "four_slot_dispatch": {
+        "LPT_imbalance_and_dependency_tail_seconds_proxy": 26.510894219140027,
+        "baseline_first_LPT_wall_seconds_proxy": 9472.956604551497,
+        "ideal_four_slot_wall_seconds_proxy": 9446.445710332357,
+        "job_count": 224,
+        "largest_job_seconds_proxy": 453.1986432648724,
+        "sum_whole_job_slot_seconds_proxy": 37785.78284132943
+      },
+      "from_current_training_forecast": {
+        "evaluation_finish_utc": "2026-11-07T01:41:31.290156+00:00",
+        "margin_before_30min_delivery_tail_minutes": 75.01183073333333,
+        "training_finish_utc": "2026-11-06T22:58:38.333551+00:00"
+      },
+      "handoff_preflight_allowance_seconds_unmeasured": 300.0,
+      "latest_feasible_start_utc_proxy": "2026-11-07T00:13:39.043395+00:00",
+      "name": "high",
+      "other_model_rates_and_unproved_alias_scope_unchanged": true,
+      "per_phase": [
+        {
+          "id": "main_behavior_adapted",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 168.6476446832446,
+          "remaining_forward_jobs": 66,
+          "sum_slot_seconds_proxy": 11130.744549094145
+        },
+        {
+          "id": "C_pythia_410m_behavior_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 168.6476446832446,
+          "remaining_forward_jobs": 21,
+          "sum_slot_seconds_proxy": 3541.600538348137
+        },
+        {
+          "id": "C_pythia_1b_nll_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 74.10513821851961,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 1778.5233172444707
+        },
+        {
+          "id": "C_pythia_1b_nll_best",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 74.10676571285833,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 1778.5623771086
+        },
+        {
+          "id": "C_pythia_1b_nll_initial",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 55.57473755310617,
+          "remaining_forward_jobs": 1,
+          "sum_slot_seconds_proxy": 55.57473755310617
+        },
+        {
+          "id": "C_pythia_1b_behavior_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 179.86071530875392,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 4316.657167410094
+        },
+        {
+          "id": "C_pythia_2p8b_nll_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 186.54877211031,
+          "remaining_forward_jobs": 15,
+          "sum_slot_seconds_proxy": 2798.23158165465
+        },
+        {
+          "id": "C_pythia_2p8b_nll_best",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 186.55286908762903,
+          "remaining_forward_jobs": 15,
+          "sum_slot_seconds_proxy": 2798.2930363144355
+        },
+        {
+          "id": "C_pythia_2p8b_nll_initial",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 139.90121738000852,
+          "remaining_forward_jobs": 1,
+          "sum_slot_seconds_proxy": 139.90121738000852
+        },
+        {
+          "id": "C_pythia_2p8b_behavior_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 453.1986432648724,
+          "remaining_forward_jobs": 15,
+          "sum_slot_seconds_proxy": 6797.979648973085
+        },
+        {
+          "id": "A_selected_behavior",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 168.6476446832446,
+          "remaining_forward_jobs": 15,
+          "sum_slot_seconds_proxy": 2529.714670248669
+        },
+        {
+          "id": "A_selected_behavior_materialization",
+          "materialization_jobs": 3,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 40.0,
+          "remaining_forward_jobs": 0,
+          "sum_slot_seconds_proxy": 120.0
+        }
+      ],
+      "remaining_NLL_forward_jobs": 80,
+      "remaining_behavior_forward_jobs": 141,
+      "remaining_forward_jobs": 221,
+      "remaining_materialization_jobs": 3,
+      "starts": {
+        "from_2350": {
+          "finish_utc": "2026-11-07T02:32:52.956605+00:00",
+          "margin_before_30min_delivery_tail_minutes": 23.65072325,
+          "start_utc": "2026-11-06T23:50:00+00:00"
+        },
+        "from_midnight": {
+          "finish_utc": "2026-11-07T02:42:52.956605+00:00",
+          "margin_before_30min_delivery_tail_minutes": 13.65072325,
+          "start_utc": "2026-11-07T00:00:00+00:00"
+        }
+      },
+      "v5_C41049_unaliased_proxy_removed_with43_completed_plus6_proof": [
+        {
+          "id": "C_pythia_410m_nll_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 58.4935918628835,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 1403.846204709204
+        },
+        {
+          "id": "C_pythia_410m_nll_best",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 58.431891228664014,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 1402.3653894879362
+        },
+        {
+          "id": "C_pythia_410m_nll_initial",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 43.81971050183344,
+          "remaining_forward_jobs": 1,
+          "sum_slot_seconds_proxy": 43.81971050183344
+        }
+      ],
+      "wall_minutes_with_dispatch_tail_and_handoff_proxy": 162.88261007585828,
+      "wall_seconds_with_dispatch_tail_and_handoff_proxy": 9772.956604551497,
+      "whole_wall_sensitivity_factor": 1.5
+    }
+  ],
+  "source_proofs": {
+    "A_behavior_manifest.json": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/manifest.json",
+      "sha256": "31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa",
+      "stat_dev_ino_size_mtime_ns_ctime_ns": [
+        139,
+        23764730382,
+        370691,
+        1793956940299598725,
+        1793956940300598721
+      ]
+    },
+    "C410_audit.json": {
+      "path": "/tmp/grad-research-20261106/worktree/results/extended_phase_equivalence/extended_v2_pythia_410m_m64_formal/audit.json",
+      "sha256": "7f007b2a372a06c0a2ca02ee3856e5414b9f679533a348f8e5cd8841459ec472",
+      "stat_dev_ino_size_mtime_ns_ctime_ns": [
+        139,
+        114097093514,
+        50036,
+        1793978249272772958,
+        1793978249272772958
+      ]
+    },
+    "C410_completion.json": {
+      "path": "/tmp/grad-research-20261106/worktree/results/extended_phase_equivalence/extended_v2_pythia_410m_m64_formal/completion.json",
+      "sha256": "67802f0080d8b1a8ff5bc6aa47a3deed13e7660d1c24b88d67b3a7cb27465d18",
+      "stat_dev_ino_size_mtime_ns_ctime_ns": [
+        139,
+        114097093524,
+        21270,
+        1793978325183461092,
+        1793978325184461088
+      ]
+    },
+    "behavior_READY.json": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/READY.json",
+      "sha256": "c2d5258fcbe127bd67af010d5950b8c862b252ecb2f5e63c62d478ca88517634",
+      "stat_dev_ino_size_mtime_ns_ctime_ns": [
+        139,
+        58139033769,
+        7369,
+        1793978369266279986,
+        1793978369266279986
+      ]
+    },
+    "behavior_manifest.json": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/manifest.json",
+      "sha256": "db6bdaf2f631ffc1c97f5d9c0ae1d0521e67ee6556790eb472d74195c5fb66e1",
+      "stat_dev_ino_size_mtime_ns_ctime_ns": [
+        139,
+        58139033767,
+        1242267,
+        1793978369263279998,
+        1793978369263279998
+      ]
+    },
+    "behavior_queue.json": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/queue.json",
+      "sha256": "d2b733c9d91e8a1102cb5a33908058a8567db010ffe1915fe6f210d50a9e920b",
+      "stat_dev_ino_size_mtime_ns_ctime_ns": [
+        139,
+        58139033768,
+        33579,
+        1793978369264279994,
+        1793978369264279994
+      ]
+    },
+    "best_proof.json": {
+      "path": "/tmp/grad-research-20261106/worktree/results/extended_phase_equivalence/extended_v2_pythia_410m_m64_formal/best_model_equivalence_proofs.json",
+      "sha256": "423be07d69fe5157541bd82896077cdf6de839aebde54e5deb1913843f0d4303",
+      "stat_dev_ino_size_mtime_ns_ctime_ns": [
+        139,
+        114097093523,
+        12534,
+        1793978325060461598,
+        1793978325060461598
+      ]
+    },
+    "cache_progress.json": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/cache_progress.json",
+      "sha256": "debd3b4257a4a6fb9ad0ea571c40cf809e4246ad81e97f96edeb9979de8f4663",
+      "stat_dev_ino_size_mtime_ns_ctime_ns": [
+        139,
+        109690565150,
+        998,
+        1793980899004812381,
+        1793980899004812381
+      ]
+    },
+    "catalog.json": {
+      "path": "/tmp/grad-research-20261106/worktree/configs/supplemental_evaluation_preparation_v5.json",
+      "sha256": "90163f7a77529434c872f52f41d45151bf09826ddd17ab58ea48d21d16f3d186",
+      "stat_dev_ino_size_mtime_ns_ctime_ns": [
+        139,
+        86049586460,
+        541219,
+        1793955600545152496,
+        1793955600547152488
+      ]
+    },
+    "final_proof.json": {
+      "path": "/tmp/grad-research-20261106/worktree/results/extended_phase_equivalence/extended_v2_pythia_410m_m64_formal/final_model_equivalence_proofs.json",
+      "sha256": "aa5c1ce9a5d2797ca10ee4c60686d26ba8d9a65f99b0e8e889e3bef5d225ffa8",
+      "stat_dev_ino_size_mtime_ns_ctime_ns": [
+        139,
+        114097093515,
+        12196,
+        1793978303175551508,
+        1793978303175551508
+      ]
+    },
+    "master_queue.json": {
+      "path": "/tmp/grad-research-20261106/worktree/configs/supplemental_v1_queue.json",
+      "sha256": "37f00a8ac4af9d71aabb6b54f425e3fa222f596e25ce6e049015c0a66185e377",
+      "stat_dev_ino_size_mtime_ns_ctime_ns": [
+        139,
+        86052141315,
+        588483,
+        1793978443861973522,
+        1793978443862973518
+      ]
+    },
+    "nll_READY.json": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_nll/READY.json",
+      "sha256": "d776f2aa440fa303ab0807c40d988b4036176c191a52a386410c0b09a5405481",
+      "stat_dev_ino_size_mtime_ns_ctime_ns": [
+        139,
+        68893676467,
+        7867,
+        1793978338109407989,
+        1793978338109407989
+      ]
+    },
+    "nll_manifest.json": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_nll/manifest.json",
+      "sha256": "48f8b2235c303211e4f79a92c16c7fb1c8d3757ce5d66a97a555fba7dfcf8f32",
+      "stat_dev_ino_size_mtime_ns_ctime_ns": [
+        139,
+        68893676465,
+        2340545,
+        1793978338104408009,
+        1793978338105408005
+      ]
+    },
+    "nll_queue.json": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_nll/queue.json",
+      "sha256": "d94df2358c0e2c644135b7071f95ae7adc6fd09ed74609437133a380eabb968d",
+      "stat_dev_ino_size_mtime_ns_ctime_ns": [
+        139,
+        68893676466,
+        48671,
+        1793978338106408001,
+        1793978338106408001
+      ]
+    },
+    "primary_behavior_manifest.json": {
+      "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+      "sha256": "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+      "stat_dev_ino_size_mtime_ns_ctime_ns": [
+        139,
+        111852672985,
+        1092890,
+        1793945089516020987,
+        1793945089516020987
+      ]
+    },
+    "prior_v4.json": {
+      "path": "/tmp/grad-research-20261106/worktree/results/evaluation_timing_budget_v4.json",
+      "sha256": "a5154c67177e5d43bc77593c8927ebc06c330989197e8db0dc701a80da381328",
+      "stat_dev_ino_size_mtime_ns_ctime_ns": [
+        139,
+        4436033439,
+        25797,
+        1793959026662961325,
+        1793959026663961321
+      ]
+    },
+    "prior_v5.json": {
+      "path": "/tmp/grad-research-20261106/worktree/results/evaluation_timing_budget_v5.json",
+      "sha256": "940a0a0651cc7dd20da16d46321d8d4cac6b4dbbf7dd3e1ba6fbdd787e0b8f7d",
+      "stat_dev_ino_size_mtime_ns_ctime_ns": [
+        139,
+        4436033451,
+        37276,
+        1793965773178040462,
+        1793965773178040462
+      ]
+    },
+    "runtime.json": {
+      "path": "/tmp/grad-research-20261106/worktree/results/runtime_budget_latest.json",
+      "sha256": "c1bb519293f5f39c1c0cb8e0170173ed5e6a8e91fdec45f16452e25c99276d2a",
+      "stat_dev_ino_size_mtime_ns_ctime_ns": [
+        139,
+        4436059534,
+        56438,
+        1793980901004804073,
+        1793980901004804073
+      ]
+    },
+    "scheduler_state.json": {
+      "path": "/tmp/grad-research-20261106/worktree/logs/supplemental_job_state.json",
+      "sha256": "d18c1a5277cb8bfb312d4f36d002160dc584074903295c9217b8eec9e0ccca22",
+      "stat_dev_ino_size_mtime_ns_ctime_ns": [
+        139,
+        116107855735,
+        598615,
+        1793980907212778286,
+        1793980907212778286
+      ]
+    }
+  },
+  "status": "score_blind_remaining_evaluation_forecast",
+  "training_forecast": {
+    "complete_C_only_FIFO": {
+      "actual_running_children_not_preempted": true,
+      "all_remaining_job_durations_receive_10pct_once": true,
+      "future_dispatch_timing_rows": [
+        {
+          "end_seconds": 3730.298327275853,
+          "id": "extended_v2_pythia_1b_m32_formal_C_s11_w0p05",
+          "slot": 3,
+          "start_seconds": 310.0778785643351
+        },
+        {
+          "end_seconds": 3414.76834319351,
+          "id": "extended_v2_pythia_1b_m32_formal_B0_s22_w0",
+          "slot": 2,
+          "start_seconds": 323.4897734418926
+        },
+        {
+          "end_seconds": 6523.908326339536,
+          "id": "extended_v2_pythia_1b_m32_formal_B1_s22_w0p05",
+          "slot": 0,
+          "start_seconds": 3158.852898365193
+        },
+        {
+          "end_seconds": 6607.58363691321,
+          "id": "extended_v2_pythia_1b_m32_formal_B2_s22_w0p05",
+          "slot": 1,
+          "start_seconds": 3160.084799804105
+        },
+        {
+          "end_seconds": 6780.451426924541,
+          "id": "extended_v2_pythia_1b_m32_formal_B3_s22_w0p05",
+          "slot": 2,
+          "start_seconds": 3414.76834319351
+        },
+        {
+          "end_seconds": 7166.717696232396,
+          "id": "extended_v2_pythia_1b_m32_formal_B4_s22_w0p05",
+          "slot": 3,
+          "start_seconds": 3730.298327275853
+        },
+        {
+          "end_seconds": 9951.641372968146,
+          "id": "extended_v2_pythia_1b_m32_formal_D_s22_w0p05",
+          "slot": 0,
+          "start_seconds": 6523.908326339536
+        },
+        {
+          "end_seconds": 10021.155272203418,
+          "id": "extended_v2_pythia_1b_m32_formal_M_s22_w0p05",
+          "slot": 1,
+          "start_seconds": 6607.58363691321
+        },
+        {
+          "end_seconds": 10200.671875636059,
+          "id": "extended_v2_pythia_1b_m32_formal_C_s22_w0p05",
+          "slot": 2,
+          "start_seconds": 6780.451426924541
+        },
+        {
+          "end_seconds": 10257.996265984013,
+          "id": "extended_v2_pythia_1b_m32_formal_B0_s33_w0",
+          "slot": 3,
+          "start_seconds": 7166.717696232396
+        },
+        {
+          "end_seconds": 13316.696800942489,
+          "id": "extended_v2_pythia_1b_m32_formal_B1_s33_w0p05",
+          "slot": 0,
+          "start_seconds": 9951.641372968146
+        },
+        {
+          "end_seconds": 13468.654109312523,
+          "id": "extended_v2_pythia_1b_m32_formal_B2_s33_w0p05",
+          "slot": 1,
+          "start_seconds": 10021.155272203418
+        },
+        {
+          "end_seconds": 13566.35495936709,
+          "id": "extended_v2_pythia_1b_m32_formal_B3_s33_w0p05",
+          "slot": 2,
+          "start_seconds": 10200.671875636059
+        },
+        {
+          "end_seconds": 12441.138094449954,
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B0_s11_w0",
+          "slot": 3,
+          "start_seconds": 10257.996265984013
+        },
+        {
+          "end_seconds": 14754.153096581502,
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B1_s11_w0p05",
+          "slot": 3,
+          "start_seconds": 12441.138094449954
+        },
+        {
+          "end_seconds": 15668.037922134607,
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B2_s11_w0p05",
+          "slot": 0,
+          "start_seconds": 13316.696800942489
+        },
+        {
+          "end_seconds": 15815.457797006307,
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_M_s11_w0p05",
+          "slot": 1,
+          "start_seconds": 13468.654109312523
+        },
+        {
+          "end_seconds": 15749.496787833032,
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B0_s22_w0",
+          "slot": 2,
+          "start_seconds": 13566.35495936709
+        },
+        {
+          "end_seconds": 17067.16809871305,
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B1_s22_w0p05",
+          "slot": 3,
+          "start_seconds": 14754.153096581502
+        },
+        {
+          "end_seconds": 18019.379043326724,
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B2_s22_w0p05",
+          "slot": 0,
+          "start_seconds": 15668.037922134607
+        },
+        {
+          "end_seconds": 18096.300475526816,
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B4_s22_w0p05",
+          "slot": 2,
+          "start_seconds": 15749.496787833032
+        },
+        {
+          "end_seconds": 18162.26148470009,
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_M_s22_w0p05",
+          "slot": 1,
+          "start_seconds": 15815.457797006307
+        },
+        {
+          "end_seconds": 19250.30992717899,
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B0_s33_w0",
+          "slot": 3,
+          "start_seconds": 17067.16809871305
+        },
+        {
+          "end_seconds": 20332.39404545827,
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B1_s33_w0p05",
+          "slot": 0,
+          "start_seconds": 18019.379043326724
+        },
+        {
+          "end_seconds": 20447.641596718935,
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B2_s33_w0p05",
+          "slot": 2,
+          "start_seconds": 18096.300475526816
+        },
+        {
+          "end_seconds": 20509.065172393875,
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B4_s33_w0p05",
+          "slot": 1,
+          "start_seconds": 18162.26148470009
+        },
+        {
+          "end_seconds": 21597.113614872775,
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_M_s33_w0p05",
+          "slot": 3,
+          "start_seconds": 19250.30992717899
+        },
+        {
+          "end_seconds": 23768.813414414813,
+          "id": "extended_v2_pythia_1b_m32_formal_B4_s33_w0p05",
+          "slot": 0,
+          "start_seconds": 20332.39404545827
+        },
+        {
+          "end_seconds": 23875.374643347546,
+          "id": "extended_v2_pythia_1b_m32_formal_D_s33_w0p05",
+          "slot": 2,
+          "start_seconds": 20447.641596718935
+        },
+        {
+          "end_seconds": 23922.63680768408,
+          "id": "extended_v2_pythia_1b_m32_formal_M_s33_w0p05",
+          "slot": 1,
+          "start_seconds": 20509.065172393875
+        },
+        {
+          "end_seconds": 25017.33406358429,
+          "id": "extended_v2_pythia_1b_m32_formal_C_s33_w0p05",
+          "slot": 3,
+          "start_seconds": 21597.113614872775
+        }
+      ],
+      "hypothetical_phase_priority_before_pending": true,
+      "ideal_four_slot_seconds_with_10pct": 24146.039732257686,
+      "longrun_FIFO_imbalance_seconds_above_ideal": 871.2943313266042,
+      "makespan_seconds_with_10pct": 25017.33406358429,
+      "status": "complete_time_simulation",
+      "unassigned_conservative_nonphase_slot_seconds": 0.0
+    },
+    "finish_utc": "2026-11-06T22:58:38.333551+00:00",
+    "updated_at_utc": "2026-11-06T16:01:40.999487+00:00"
+  },
+  "utc": "2026-11-06T16:01:54.447754+00:00"
+}
