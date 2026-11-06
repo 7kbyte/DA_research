@@ -1,0 +1,480 @@
+{
+  "collection_contract": {
+    "future_handoff_states_require_explicit_append_and_definition_consistency": true,
+    "no_recursive_timer_discovery": true,
+    "old_source_and_collector_must_remain_unchanged": true,
+    "ready_manifests_are_not_proof_of_executed_forward": true,
+    "score_JSON_semantics_forbidden": true
+  },
+  "created_at_utc": "2026-11-06T10:23:32.173598+00:00",
+  "evaluation_ready_indexes": [
+    {
+      "catalog": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/supplemental_evaluation_preparation_v5.json",
+        "sha256": "90163f7a77529434c872f52f41d45151bf09826ddd17ab58ea48d21d16f3d186"
+      },
+      "optional": false,
+      "path": "artifacts/evaluation_ready_v5/ready_index.json"
+    }
+  ],
+  "evaluation_scheduler_states": [
+    {
+      "optional": false,
+      "path": "logs/supplemental_job_state.json"
+    }
+  ],
+  "legacy_collector_dependencies": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/inventory_study_costs.py",
+      "sha256": "5a1936e4366864f3d39ce0e88556cf779f50caa7845a74897830997023d68219"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/src/replay_study/evaluation_cost_inventory.py",
+      "sha256": "0046281e937ec2d917f3c41b3fc27d75c88ef1e52022515989f1581fe3d6220f"
+    }
+  ],
+  "legacy_source_spec": {
+    "path": "/tmp/grad-research-20261106/worktree/configs/cost_inventory_sources_with_evaluations_v3.json",
+    "sha256": "ff922135fa72230bacc5146b0e980ad5e9362282d8a9880b47e574b8013f461f"
+  },
+  "opaque_digest_caches": [
+    {
+      "directory": "artifacts/evaluation_digest_cache_v1",
+      "progress": "artifacts/evaluation_ready_v5/cache_progress.json",
+      "reader_sha256": "9cc01b493b46a5bf391a7c649a379d87011fff077ddeea701eaf8a84bdb568e2"
+    }
+  ],
+  "operations": [
+    {
+      "accepted_statuses": [
+        "completed"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "calendar_end_pointer": null,
+      "calendar_start_pointer": null,
+      "category": "cpu_analysis",
+      "id": "A_nll_CPU_analysis",
+      "parent_id": null,
+      "process_cpu_pointer": null,
+      "scope": "One successful complete guard+statistics+figures subprocess; no score files read by this collector.",
+      "source": {
+        "path": "artifacts/provenance/supplement_A_nll_authorized_watch_v1/COMPLETED.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/analysis_wall_seconds"
+    },
+    {
+      "accepted_statuses": [],
+      "add_to_recorded_wall_totals": false,
+      "calendar_end_pointer": null,
+      "calendar_start_pointer": null,
+      "category": "cpu_analysis",
+      "id": "A_nll_guard_child",
+      "parent_id": "A_nll_CPU_analysis",
+      "process_cpu_pointer": null,
+      "scope": "Nested within A_nll_CPU_analysis, never added again.",
+      "source": {
+        "path": "results/supplemental_analysis_v2/supplement_A_nll/whole_phase_readiness.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "nested_measured_child",
+      "wall_pointer": "/score_blind_verification_wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "passed"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "calendar_end_pointer": null,
+      "calendar_start_pointer": null,
+      "category": "lossless_export",
+      "id": "primary24_lossless_export",
+      "parent_id": null,
+      "process_cpu_pointer": null,
+      "scope": "Original24 logical final endpoints: lossless encoding, archive and complete roundtrip; no shared publication included.",
+      "source": {
+        "path": "artifacts/assets/primary_weight_delivery_acceptance.json"
+      },
+      "status_pointer": "/receipt/status",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/receipt/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "passed"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "calendar_end_pointer": null,
+      "calendar_start_pointer": null,
+      "category": "lossless_export",
+      "id": "remaining48_export_parent",
+      "parent_id": null,
+      "process_cpu_pointer": "/process_cpu_seconds",
+      "scope": "One process exports12 budget final+36 best; both completed_packages clocks are cumulative samples from this same process start.",
+      "source": {
+        "path": "results/primary_remaining_endpoints_export_state.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "single_process_cumulative_total",
+      "wall_pointer": "/elapsed_wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "passed"
+      ],
+      "add_to_recorded_wall_totals": false,
+      "calendar_end_pointer": null,
+      "calendar_start_pointer": null,
+      "category": "lossless_export",
+      "id": "budget12_package_cumulative_child",
+      "parent_id": "remaining48_export_parent",
+      "process_cpu_pointer": "/completed_packages/0/process_cpu_seconds",
+      "scope": "Cumulative package completion clock; not a separate disjoint package stage.",
+      "source": {
+        "path": "results/primary_remaining_endpoints_export_state.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "cumulative_parent_sample",
+      "wall_pointer": "/completed_packages/0/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "passed"
+      ],
+      "add_to_recorded_wall_totals": false,
+      "calendar_end_pointer": null,
+      "calendar_start_pointer": null,
+      "category": "lossless_export",
+      "id": "best36_package_cumulative_child",
+      "parent_id": "remaining48_export_parent",
+      "process_cpu_pointer": "/completed_packages/1/process_cpu_seconds",
+      "scope": "Cumulative package completion clock; not a separate disjoint package stage.",
+      "source": {
+        "path": "results/primary_remaining_endpoints_export_state.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "cumulative_parent_sample",
+      "wall_pointer": "/completed_packages/1/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "passed"
+      ],
+      "add_to_recorded_wall_totals": false,
+      "calendar_end_pointer": "/finished_at_utc",
+      "calendar_start_pointer": "/started_at_utc",
+      "category": "storage_publication",
+      "id": "primary24_publication_calendar",
+      "parent_id": null,
+      "process_cpu_pointer": null,
+      "scope": "Whole publication calendar envelope only; unknown active work and initial failed attempt. Do not infer whole publication work from endpoints.",
+      "source": {
+        "path": "docs/primary_weights_durable_publication.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "calendar_envelope",
+      "wall_pointer": null
+    },
+    {
+      "accepted_statuses": [
+        "passed"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "calendar_end_pointer": null,
+      "calendar_start_pointer": null,
+      "category": "storage_publication",
+      "id": "primary24_publication_recovery_only",
+      "parent_id": "primary24_publication_calendar",
+      "process_cpu_pointer": null,
+      "scope": "Only explicitly timed recovery128.688892s; initial copy/failure/coordination unknown.",
+      "source": {
+        "path": "docs/primary_weights_durable_publication.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/recovery_wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "passed"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "calendar_end_pointer": "/finished_at_utc",
+      "calendar_start_pointer": "/started_at_utc",
+      "category": "storage_publication",
+      "id": "budget12_publication",
+      "parent_id": null,
+      "process_cpu_pointer": null,
+      "scope": "Recorded verified source-read/copy/destination-read/fsync/publication wall; archive construction is separate.",
+      "source": {
+        "path": "docs/budget_final_weights_durable_publication.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "passed"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "calendar_end_pointer": "/finished_at_utc",
+      "calendar_start_pointer": "/started_at_utc",
+      "category": "storage_publication",
+      "id": "best36_publication",
+      "parent_id": null,
+      "process_cpu_pointer": null,
+      "scope": "Recorded verified source-read/copy/destination-read/fsync/publication wall; archive construction is separate.",
+      "source": {
+        "path": "docs/primary_best_weights_durable_publication.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "passed"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "calendar_end_pointer": "/finished_at_utc",
+      "calendar_start_pointer": "/started_at_utc",
+      "category": "storage_publication",
+      "id": "snapshot0838_publication",
+      "parent_id": null,
+      "process_cpu_pointer": null,
+      "scope": "Recorded verified source-read/copy/destination-read/fsync/publication wall; archive construction is separate.",
+      "source": {
+        "path": "docs/snapshot_0838_durable_publication.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "passed"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "calendar_end_pointer": "/finished_at_utc",
+      "calendar_start_pointer": "/started_at_utc",
+      "category": "storage_publication",
+      "id": "snapshot1010_publication",
+      "parent_id": null,
+      "process_cpu_pointer": null,
+      "scope": "Recorded verified source-read/copy/destination-read/fsync/publication wall; archive construction is separate.",
+      "source": {
+        "path": "docs/snapshot_1010_durable_publication.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "complete"
+      ],
+      "add_to_recorded_wall_totals": false,
+      "calendar_end_pointer": "/finished_at_utc",
+      "calendar_start_pointer": "/started_at_utc",
+      "category": "storage_wait_and_reservation",
+      "id": "best_reservation_grower_including_waiting",
+      "parent_id": null,
+      "process_cpu_pointer": null,
+      "scope": "456.376669s observer/process wall includes polling and disk-availability waits; neither CPU work nor GPU time. No split active-write timer exists.",
+      "source": {
+        "path": "docs/primary_best_storage_growth_receipt.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "wall_including_waiting",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "dry_run_passed_training_not_started"
+      ],
+      "add_to_recorded_wall_totals": false,
+      "calendar_end_pointer": "/prepare_completed_at_utc",
+      "calendar_start_pointer": "/prepare_started_at_utc",
+      "category": "archive_qa",
+      "id": "archive_QA_prepare_calendar",
+      "parent_id": null,
+      "process_cpu_pointer": null,
+      "scope": "Calendar preparation envelope includes coordination; four full trainings were not started and cannot be counted as reproduction success.",
+      "source": {
+        "path": "results/reproduction_qa/archive0732_seed11_2x2_v1/preparation_receipt.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "calendar_envelope",
+      "wall_pointer": "/prepare_elapsed_wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "archive_and_base_restored_verified"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "calendar_end_pointer": null,
+      "calendar_start_pointer": null,
+      "category": "archive_qa",
+      "id": "archive_QA_extraction",
+      "parent_id": "archive_QA_prepare_calendar",
+      "process_cpu_pointer": null,
+      "scope": "Measured restore and input SHA stage only.",
+      "source": {
+        "path": "results/reproduction_qa/archive0732_seed11_2x2_v1/extraction_receipt.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/prepare_seconds"
+    },
+    {
+      "accepted_statuses": [
+        0
+      ],
+      "add_to_recorded_wall_totals": true,
+      "calendar_end_pointer": null,
+      "calendar_start_pointer": null,
+      "category": "archive_qa",
+      "id": "archive_QA_relocate",
+      "parent_id": "archive_QA_prepare_calendar",
+      "process_cpu_pointer": null,
+      "scope": "Actual archived helper relocation subprocess; no GPU training.",
+      "source": {
+        "path": "results/reproduction_qa/archive0732_seed11_2x2_v1/relocate_attempt_original.json"
+      },
+      "status_pointer": "/returncode",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        0
+      ],
+      "add_to_recorded_wall_totals": true,
+      "calendar_end_pointer": null,
+      "calendar_start_pointer": null,
+      "category": "archive_qa",
+      "id": "archive_QA_dry_run",
+      "parent_id": "archive_QA_prepare_calendar",
+      "process_cpu_pointer": null,
+      "scope": "Actual reproduce helper verified-not-started subprocess; no GPU training.",
+      "source": {
+        "path": "results/reproduction_qa/archive0732_seed11_2x2_v1/reproduce_dry_run.json"
+      },
+      "status_pointer": "/returncode",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "CPU_review_passed_with_explicit_operational_limits"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "calendar_end_pointer": null,
+      "calendar_start_pointer": null,
+      "category": "archive_qa",
+      "id": "archive_QA_independent_input_SHA",
+      "parent_id": null,
+      "process_cpu_pointer": null,
+      "scope": "Separate full input SHA diagnostic1.284139s; not complete review or preparation wall.",
+      "source": {
+        "path": "results/reproduction_qa/archive0732_seed11_2x2_v1/independent_review_v1.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/current_input_full_read_wall_seconds"
+    }
+  ],
+  "purpose": "Repeatable final-collection entry, currently an intermediate observed snapshot. Never a whole-study-complete claim.",
+  "runs_root": "/tmp/grad-research-20261106/runs",
+  "schema_version": 1,
+  "training_cohorts": [
+    {
+      "expected_logical_rows": 36,
+      "expected_physical_runs": 36,
+      "expected_training_aliases": 0,
+      "id": "primary36",
+      "registry": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/formal_deterministic_registry.json",
+        "sha256": "284fa9dd939dab75195afe3f968e0eb6411501b26b8a5caa1962b4ee5e9f372b"
+      }
+    },
+    {
+      "expected_logical_rows": 126,
+      "expected_physical_runs": 108,
+      "expected_training_aliases": 18,
+      "id": "A108_additional_plus18_training_aliases",
+      "registry": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/supplemental_v1_A_registry.json",
+        "sha256": "0f43c49530b79d09c18113e8c50239b640e99bbbdcb26b890e805d71cf291310"
+      }
+    },
+    {
+      "expected_logical_rows": 60,
+      "expected_physical_runs": 60,
+      "expected_training_aliases": 0,
+      "id": "B60",
+      "registry": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/supplemental_v1/activated/B_conditional_bank_variance/executor_registry.json",
+        "sha256": "841c8f86a6b6bc6c098ca5f3540b1ac3c758f6cc5cb0d48fc5f4083759b517cc"
+      }
+    },
+    {
+      "expected_logical_rows": 24,
+      "expected_physical_runs": 24,
+      "expected_training_aliases": 0,
+      "id": "C410m24",
+      "registry": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal_active_registry.json",
+        "sha256": "c7f5c50d6794ba0df0dc3e071198da761f084ad9347ce5d9ce4dddf867ee48bd"
+      }
+    },
+    {
+      "expected_logical_rows": 24,
+      "expected_physical_runs": 24,
+      "expected_training_aliases": 0,
+      "id": "C1b24",
+      "registry": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal_active_registry.json",
+        "sha256": "c106330d947904447fe7c1aa42fa8dbe8a337a683520801b90653d7d6474b8d6"
+      }
+    },
+    {
+      "expected_logical_rows": 15,
+      "expected_physical_runs": 15,
+      "expected_training_aliases": 0,
+      "id": "C2p8b15_h25m",
+      "registry": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_h25m_formal_active_registry.json",
+        "sha256": "c98360002f763a98423d16bf99c866edfbec21da2668a04cb3ccfd5652888d05"
+      }
+    }
+  ],
+  "unmeasured_activity_gaps": [
+    {
+      "category": "cpu_analysis",
+      "scope": "Other validation/report/bootstrap/plotting/audits and coordination have no complete structured timer; missing work unknown."
+    },
+    {
+      "category": "opaque_prehash",
+      "scope": "Only stable complete-read receipts count. Failed/interrupted reads and preparation metadata/stat-check overhead are unknown."
+    },
+    {
+      "category": "lossless_export",
+      "scope": "Only registered process receipts. Snapshot TAR construction and other future exports not automatically guessed."
+    },
+    {
+      "category": "storage_publication",
+      "scope": "Primary24 initial copy attempt not explicitly timed; recovery only is included. Downloads/environment/source acquisition still partial."
+    },
+    {
+      "category": "archive_qa",
+      "scope": "Actual CPU dry-run stages only. Four full-run QA trainings unstarted; future execution needs explicit scheduler state/registry/receipt extension."
+    },
+    {
+      "category": "rollback_and_failed_attempts",
+      "scope": "Committed-path training counters, last attested evaluation attempts, explicit ENOSPC lower bound; unknown failures never imputed zero."
+    }
+  ]
+}

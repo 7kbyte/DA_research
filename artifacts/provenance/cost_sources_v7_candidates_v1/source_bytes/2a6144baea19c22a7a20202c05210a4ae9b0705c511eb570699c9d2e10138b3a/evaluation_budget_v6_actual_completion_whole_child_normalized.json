@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_execution_v1/whole_child_timing.json",
+    "sha256": "d0f4de512280f490a875ae3d9c466343d6e4291feacf2c362c2b71677daafbf7"
+  },
+  "original_wall_pointer": "/wall_seconds",
+  "wall_seconds": 1.6553188152611256,
+  "CPU_component_pointers": [
+    "/user_cpu_seconds",
+    "/sys_cpu_seconds"
+  ],
+  "CPU_components": {
+    "/user_cpu_seconds": 1.272901,
+    "/sys_cpu_seconds": 0.39180899999999996
+  },
+  "recorded_inclusive_CPU_seconds": 1.66471,
+  "original_returncode": 0,
+  "scope": "Actual-completion score-blind evaluation budgetv6 child. Internal budget collector/verification timers are nested, not new operations.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall and sum only explicitly listed disjoint CPU components; never infer from UTC/bytes.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false,
+  "original_source_fields_or_semantics_changed": false
+}

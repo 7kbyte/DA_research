@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_validation_review_v1/whole_process_timing.json",
+    "sha256": "483372eddb9d858ede0a177699b81a0d43d59f1821e8cfad2a3d789790283605"
+  },
+  "original_wall_pointer": "/whole_child_process_wall_seconds",
+  "wall_seconds": 1.571703962981701,
+  "CPU_component_pointers": [
+    "/whole_child_user_cpu_seconds",
+    "/whole_child_sys_cpu_seconds"
+  ],
+  "CPU_components": {
+    "/whole_child_user_cpu_seconds": 1.40084,
+    "/whole_child_sys_cpu_seconds": 0.16424
+  },
+  "recorded_inclusive_CPU_seconds": 1.56508,
+  "original_returncode": 0,
+  "scope": "Complete independent validation review child; its own CSV/summary/event/hash gates and output writes included.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall and sum only explicitly listed disjoint CPU components; never infer from UTC/bytes.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false,
+  "original_source_fields_or_semantics_changed": false
+}

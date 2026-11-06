@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_final_publication_actual_v1/parent_timing.json",
+    "sha256": "9ae8e965352ad5f96157cdd9c4db38a247558df43c9fa4cce31a92a88a2d2597"
+  },
+  "original_wall_pointer": "/wall_seconds",
+  "wall_seconds": 191.49669512361288,
+  "CPU_component_pointers": [
+    "/user_cpu_seconds",
+    "/sys_cpu_seconds"
+  ],
+  "CPU_components": {
+    "/user_cpu_seconds": 55.493025,
+    "/sys_cpu_seconds": 36.457025
+  },
+  "recorded_inclusive_CPU_seconds": 91.95005,
+  "original_returncode": 0,
+  "scope": "Whole publisher child spawn-to-exit; internal publisher wall/readback/copy/fsync are nested.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall and sum only explicitly listed disjoint CPU components; never infer from UTC/bytes.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false,
+  "original_source_fields_or_semantics_changed": false
+}

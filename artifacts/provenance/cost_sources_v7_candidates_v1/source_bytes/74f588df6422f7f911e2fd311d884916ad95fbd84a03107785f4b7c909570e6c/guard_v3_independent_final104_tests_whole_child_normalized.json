@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/results/supplemental_guard_v3_independent_review_v1/final_stable/test_receipt.json",
+    "sha256": "ff9fc38afc935706d5c8e0629236bf582722c078b9fff74c13fb491c3848430a"
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 2.708947416394949,
+  "CPU_component_pointers": [
+    "/whole_child_user_cpu_seconds",
+    "/whole_child_sys_cpu_seconds"
+  ],
+  "CPU_components": {
+    "/whole_child_user_cpu_seconds": 2.192399,
+    "/whole_child_sys_cpu_seconds": 0.518208
+  },
+  "recorded_inclusive_CPU_seconds": 2.710607,
+  "original_returncode": 0,
+  "scope": "Separate reviewer final104-test child; source/AST review engineering outside child remains unknown.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall and sum only explicitly listed disjoint CPU components; never infer from UTC/bytes.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false,
+  "original_source_fields_or_semantics_changed": false
+}

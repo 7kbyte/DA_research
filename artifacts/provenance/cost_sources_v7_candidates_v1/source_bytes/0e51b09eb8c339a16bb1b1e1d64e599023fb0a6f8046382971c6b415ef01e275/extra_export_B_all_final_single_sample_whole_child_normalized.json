@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/additional_endpoint_actual_v4/B_all_final_sample/whole_child_timing.json",
+    "sha256": "eaaa57edc1a9c666f5dd28a771d62ff19d927757da290449ac1e3f65bdd8a3c6"
+  },
+  "original_wall_pointer": "/wall_seconds",
+  "wall_seconds": 104.72573426738381,
+  "CPU_component_pointers": [
+    "/user_cpu_seconds",
+    "/sys_cpu_seconds"
+  ],
+  "CPU_components": {
+    "/user_cpu_seconds": 96.294721,
+    "/sys_cpu_seconds": 9.31857
+  },
+  "recorded_inclusive_CPU_seconds": 105.61329099999999,
+  "original_returncode": 0,
+  "scope": "Inclusive one actual single-sample exporter child. Startup hashing+endpoint codec+verification/receipt nested; no publication. Future full batch reuses this first record without re-encoding and has a separate future timer.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall and sum only explicitly listed disjoint CPU components; never infer from UTC/bytes.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false,
+  "original_source_fields_or_semantics_changed": false
+}
