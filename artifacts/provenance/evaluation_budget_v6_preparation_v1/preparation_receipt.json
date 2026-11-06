@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "status": "prepared_only_no_actual_completion_collection_or_budget_credit",
+  "utc": "2026-11-06T15:51:13.693016+00:00",
+  "inputs_and_producer": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/describe_remaining_evaluation_budget_v6.py",
+      "sha256": "d02d430869f5c6f91f71496b2b77ea5e0388386ed432bdcec22240270c706a50",
+      "bytes": 19484
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_preparation_v1/test_budget_v6.py",
+      "sha256": "11a4da257bd561f82df485e0e104978bd7b3b042ba63afa377ed500f2daa0104",
+      "bytes": 5689
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/docs/评价预算v6_C410完成后更新准备.md",
+      "sha256": "23aab5fb3b2a0a2c0f77dbc80400614d768edde1abeea495a70d671b458fda95",
+      "bytes": 4342
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/evaluation_timing_budget_v5.json",
+      "sha256": "940a0a0651cc7dd20da16d46321d8d4cac6b4dbbf7dd3e1ba6fbdd787e0b8f7d",
+      "bytes": 37276
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_nll/manifest.json",
+      "sha256": "48f8b2235c303211e4f79a92c16c7fb1c8d3757ce5d66a97a555fba7dfcf8f32",
+      "bytes": 2340545
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/manifest.json",
+      "sha256": "db6bdaf2f631ffc1c97f5d9c0ae1d0521e67ee6556790eb472d74195c5fb66e1",
+      "bytes": 1242267
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/reconcile_main_behavior_runtime.py",
+      "sha256": "17d9b7839aef14e8c073124489c455d67512033f6de7658029411e88047a6f17",
+      "bytes": 21861
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/schedule_jobs.py",
+      "sha256": "c5c264b058ff655315ef896ccb0a89b471637c6612013a51999fc6f48b2d16d9",
+      "bytes": 8743
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/handoff_evaluation.py",
+      "sha256": "bbe5a14e16bde55362aa3a7edc044b35ed8a7e2d0966a8b40692513b6c3a748a",
+      "bytes": 21645
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/describe_remaining_evaluation_budget_v5.py",
+      "sha256": "5185a6a17cb00bd7d431dba03027df967a48ada994e5efb6e100fdef9fa3cedf",
+      "bytes": 25240
+    }
+  ],
+  "synthetic_tests": {
+    "passed": 5,
+    "pytest_reported_region_seconds": 1.1,
+    "not_a_complete_process_parent_timer": true,
+    "real_scored_outputs_or_state_not_inputs": true
+  },
+  "actual_metadata_scope_check": {
+    "NLL_physical_forward_jobs": 43,
+    "NLL_logical_endpoints": 48,
+    "NLL_proven_avoided": 6,
+    "behavior_future_physical": 21,
+    "behavior_logical": 24,
+    "no_actual_completion_gate_invoked": true
+  },
+  "conditional_future_counts_not_current_deductions": {
+    "NLL": 80,
+    "behavior": 141,
+    "materialization": 3,
+    "total": 224
+  },
+  "actual_budget_v6_exists": false,
+  "collector_started": false,
+  "GPU_or_queue_or_live_helper_changed": false,
+  "score_semantics_or_GB_payload_read": false,
+  "whole_preparation_parent_wall_and_CPU_unknown": true,
+  "future_command": "CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 python scripts/describe_remaining_evaluation_budget_v6.py --output results/evaluation_timing_budget_v6.json --source-root artifacts/provenance/evaluation_budget_v6_actual"
+}
