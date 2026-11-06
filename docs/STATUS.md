@@ -1,12 +1,12 @@
 # 研究运行状态
 
-更新时间：2026-11-06T13:04:34.709563+00:00
+更新时间：2026-11-06T15:29:20.124479+00:00
 截止时间：2026-11-07 03:26:32 UTC（北京时间11:26）
-已用 9.63 小时；剩余 14.37 小时。
+已用 12.05 小时；剩余 11.95 小时。
 
 以下状态来自运行日志。配置完成不等于实验完成；正式结论以最终研究报告为准。
 
-当前阶段：主36、补充A108及B60训练和独立NLL已完成；C完成12/63，四卡持续长程训练；C与行为测试仍封存。
+当前阶段：主NLL及补充A/B完整分析已完成；C410全24训练与六对权重等价证明通过，43项NLL评价正在执行，尚未解封分数；C410 final 24逻辑/21独立权重约25.95GB已持久发布；1B与2.8B训练继续，新增权重导出准备中，归档重训练QA仍为有条件准备。最近全套CPU测试724项通过。
 
 旧非确定性pilot/formal仅供诊断；主strict36为正式主结果。补充训练独立phase，截止00:00 UTC；主active_registry保留供分析与alias验证。
 
@@ -18,7 +18,7 @@
 | lambda_job_state（已隔离） | 16 | 0 | 0 | 0 |
 | lambda_v3_job_state（已隔离） | 16 | 0 | 0 | 0 |
 | lr_deterministic_v3_job_state | 4 | 0 | 0 | 0 |
-| supplemental_job_state | 513 | 4 | 47 | 0 |
+| supplemental_job_state | 529 | 4 | 74 | 0 |
 | v3_lr_eval_job_state（已隔离） | 4 | 0 | 0 | 0 |
 
 ## 当前单一调度器内的阶段
@@ -37,14 +37,15 @@
 | extended_v2_pythia_1b_m32_lambda | 16 | 0 | 0 | 0 |
 | extended_v2_pythia_2p8b_m8_lambda | 16 | 0 | 0 | 0 |
 | primary_behavior_initial_timing | 1 | 0 | 0 | 0 |
-| extended_v2_pythia_410m_m64_formal | 10 | 4 | 10 | 0 |
-| extended_v2_pythia_1b_m32_formal | 1 | 0 | 23 | 0 |
+| extended_v2_pythia_410m_m64_formal | 24 | 0 | 0 | 0 |
+| extended_v2_pythia_1b_m32_formal | 2 | 3 | 19 | 0 |
 | extended_v2_pythia_2p8b_m8_h25m_formal | 1 | 0 | 14 | 0 |
 | planned_model_initial_timing_v1 | 2 | 0 | 0 | 0 |
 | replay_fit_diagnostic_v2 | 15 | 0 | 0 | 0 |
 | primary_independent_nll_test | 67 | 0 | 0 | 0 |
 | supplement_A_independent_nll_test | 126 | 0 | 0 | 0 |
 | supplement_B_independent_nll_test | 60 | 0 | 0 | 0 |
+| C410_NLL_early_actual_v1 | 1 | 1 | 41 | 0 |
 
 ## 独立评价读取状态
 
