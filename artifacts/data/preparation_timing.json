@@ -1,0 +1,109 @@
+{
+  "measurement": "full cold-process reproducibility preparation from pinned local raw files, tokenizer loaded locally",
+  "data_version": "v2",
+  "wall_seconds": 17.57453714311123,
+  "peak_child_rss_kib": 807692,
+  "gpu_used": false,
+  "stages": [
+    {
+      "dataset": "finemath",
+      "splits": [
+        "train"
+      ],
+      "seconds": 5.103998202830553,
+      "source_documents_scanned": 2369
+    },
+    {
+      "dataset": "finemath",
+      "splits": [
+        "validation"
+      ],
+      "seconds": 0.49687162786722183,
+      "source_documents_scanned": 771
+    },
+    {
+      "dataset": "finemath",
+      "splits": [
+        "test"
+      ],
+      "seconds": 0.6089827790856361,
+      "source_documents_scanned": 1018
+    },
+    {
+      "dataset": "c4",
+      "splits": [
+        "validation",
+        "test"
+      ],
+      "seconds": 1.229756012558937,
+      "source_documents_scanned": 1020
+    },
+    {
+      "dataset": "wikitext103",
+      "splits": [
+        "validation"
+      ],
+      "seconds": 0.6108074821531773,
+      "source_documents_scanned": 60
+    },
+    {
+      "dataset": "wikitext103",
+      "splits": [
+        "test"
+      ],
+      "seconds": 0.6667835041880608,
+      "source_documents_scanned": 62
+    },
+    {
+      "dataset": "c4",
+      "splits": [
+        "candidate"
+      ],
+      "seconds": 4.534291446208954,
+      "source_documents_scanned": 3793
+    }
+  ],
+  "builder_seconds": 15.594212930649519,
+  "reproducibility_checks": [
+    {
+      "artifact": "c4_candidate",
+      "identical_input_ids_and_doc_ids": true,
+      "identical_pt_sha256": true
+    },
+    {
+      "artifact": "c4_test",
+      "identical_input_ids_and_doc_ids": true,
+      "identical_pt_sha256": true
+    },
+    {
+      "artifact": "c4_validation",
+      "identical_input_ids_and_doc_ids": true,
+      "identical_pt_sha256": true
+    },
+    {
+      "artifact": "finemath_test",
+      "identical_input_ids_and_doc_ids": true,
+      "identical_pt_sha256": true
+    },
+    {
+      "artifact": "finemath_train",
+      "identical_input_ids_and_doc_ids": true,
+      "identical_pt_sha256": true
+    },
+    {
+      "artifact": "finemath_validation",
+      "identical_input_ids_and_doc_ids": true,
+      "identical_pt_sha256": true
+    },
+    {
+      "artifact": "wikitext103_test",
+      "identical_input_ids_and_doc_ids": true,
+      "identical_pt_sha256": true
+    },
+    {
+      "artifact": "wikitext103_validation",
+      "identical_input_ids_and_doc_ids": true,
+      "identical_pt_sha256": true
+    }
+  ]
+}

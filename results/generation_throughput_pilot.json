@@ -1,0 +1,79 @@
+{
+  "protocol": "BOS0 plus 511 sampled tokens; full softmax; EOS continues; FP32 weights with CUDA BF16 autocast",
+  "invalid_pilot_glob": "generated_bs*_seed911.json",
+  "valid_pilots": [
+    {
+      "path": "artifacts/pilot/generated_eos_continue_bs32_seed911.json",
+      "batch_size": 32,
+      "tokens_per_second": 2592.963764999981,
+      "wall_seconds": 6.3062971495091915,
+      "peak_gpu_memory_bytes": 4287910912,
+      "diagnostics": {
+        "exact_duplicate_chunk_rate": 0.0,
+        "mean_adjacent_repeated_token_rate": 0.01678921568627451,
+        "mean_within_chunk_repeated_4gram_rate": 0.029835137795275572,
+        "mean_most_common_token_fraction": 0.060481898238747556,
+        "chunks_with_repeated_4gram_rate_above_0_5": 0,
+        "diagnostic_policy": "descriptive_only_no_filtering",
+        "sampled_eos_tokens": 24,
+        "sampled_eos_rate": 0.0014677103608846664,
+        "chunks_containing_sampled_eos": 17
+      }
+    },
+    {
+      "path": "artifacts/pilot/generated_eos_continue_bs64_seed911.json",
+      "batch_size": 64,
+      "tokens_per_second": 4887.47879392719,
+      "wall_seconds": 6.69138453155756,
+      "peak_gpu_memory_bytes": 6746877952,
+      "diagnostics": {
+        "exact_duplicate_chunk_rate": 0.0,
+        "mean_adjacent_repeated_token_rate": 0.017279411764705883,
+        "mean_within_chunk_repeated_4gram_rate": 0.050350639763779535,
+        "mean_most_common_token_fraction": 0.06506849315068493,
+        "chunks_with_repeated_4gram_rate_above_0_5": 1,
+        "diagnostic_policy": "descriptive_only_no_filtering",
+        "sampled_eos_tokens": 51,
+        "sampled_eos_rate": 0.001559442258439958,
+        "chunks_containing_sampled_eos": 38
+      }
+    },
+    {
+      "path": "artifacts/pilot/generated_eos_continue_bs128_seed911.json",
+      "batch_size": 128,
+      "tokens_per_second": 6517.730623487843,
+      "wall_seconds": 10.035394798964262,
+      "peak_gpu_memory_bytes": 11737126912,
+      "diagnostics": {
+        "exact_duplicate_chunk_rate": 0.0,
+        "mean_adjacent_repeated_token_rate": 0.014522058823529412,
+        "mean_within_chunk_repeated_4gram_rate": 0.04229207677165354,
+        "mean_most_common_token_fraction": 0.0610475782778865,
+        "chunks_with_repeated_4gram_rate_above_0_5": 0,
+        "diagnostic_policy": "descriptive_only_no_filtering",
+        "sampled_eos_tokens": 92,
+        "sampled_eos_rate": 0.001406555762514472,
+        "chunks_containing_sampled_eos": 74
+      }
+    },
+    {
+      "path": "artifacts/pilot/generated_eos_continue_bs256_seed911.json",
+      "batch_size": 256,
+      "tokens_per_second": 7795.5291826453995,
+      "wall_seconds": 16.780900556594133,
+      "peak_gpu_memory_bytes": 21717100544,
+      "diagnostics": {
+        "exact_duplicate_chunk_rate": 0.0,
+        "mean_adjacent_repeated_token_rate": 0.01519607843137255,
+        "mean_within_chunk_repeated_4gram_rate": 0.04952786663385826,
+        "mean_most_common_token_fraction": 0.0645869006849315,
+        "chunks_with_repeated_4gram_rate_above_0_5": 0,
+        "diagnostic_policy": "descriptive_only_no_filtering",
+        "sampled_eos_tokens": 163,
+        "sampled_eos_rate": 0.001246024970896542,
+        "chunks_containing_sampled_eos": 129
+      }
+    }
+  ],
+  "recommended_batch_size": 256
+}

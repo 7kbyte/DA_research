@@ -1,0 +1,40 @@
+{
+  "version": "v2",
+  "published_at_utc": "2026-11-06T03:40:29Z",
+  "previous_version": "v1",
+  "previous_version_archive": "artifacts/data_versions/v1",
+  "reason": "Remove near-duplicate FineMath evaluation documents before any validation-based model choice",
+  "policy": {
+    "ngram_tokens": 13,
+    "document_rejection_if_any_chunk_overlap_fraction_at_least": 0.2,
+    "validation_references": [
+      "finemath_train"
+    ],
+    "test_references": [
+      "finemath_train",
+      "finemath_validation"
+    ],
+    "retain_validation_before_test": true,
+    "refill": "subsequent documents in the same immutable normalized-SHA256 partition",
+    "loss_measurements_used": false
+  },
+  "changed_tensors": [
+    "finemath_validation",
+    "finemath_test"
+  ],
+  "unchanged_tensors": [
+    "finemath_train",
+    "c4_candidate",
+    "c4_validation",
+    "c4_test",
+    "wikitext103_validation",
+    "wikitext103_test"
+  ],
+  "unchanged_verified_by": "exact torch.equal(input_ids), identical ordered doc_ids; v1 reproduced from pinned source files",
+  "removed_evaluation_documents": {
+    "validation": 5,
+    "test": 6
+  },
+  "before_audit": "artifacts/data_versions/v1/ngram_overlap_audit.json",
+  "after_audit": "artifacts/data/ngram_overlap_audit.json"
+}

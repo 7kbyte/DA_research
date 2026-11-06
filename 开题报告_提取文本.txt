@@ -1,0 +1,187 @@
+--- 第1页 ---
+Forgetting and Retention in Language Model
+Domain Adaptation under a Fixed Replay Budget
+Liuqing Wang 2023010762 online_wlq@foxmail.com
+October 8, 2026
+Abstract
+Domain adaptation can improve a language model on new text while degrading its performance
+on earlier distributions. This project will investigate how replay sources, replay objectives, and
+sample selection affect this trade-off under a fixed replay budget. A controlled study will com-
+pare substitute general-domain text and self-generated text, cross-entropy and teacher–student
+KL constraints, and random, stratified, and cluster-based selection. Experiments will use Pythia-
+410M, mathematical domain text, and independent general-domain evaluation sets. Unique replay
+coverage, cumulative replay exposure, and actual computation will be recorded separately. The
+intended contribution is a reproducible comparison and an analysis of when lightweight selection
+helps or fails. Main experiments are planned for eight weeks, followed by thesis preparation. No
+training results are claimed in this proposal.
+1 Background and Related Work
+Continued training on a specialized corpus is a practical way to adapt a pretrained language model.
+However, updates that fit the new distribution may interfere with capabilities supported by its existing
+parameters. This resembles catastrophic forgetting in computer vision continual learning: both face a
+stability–plasticity trade-off and employ parameter constraints, output distillation, or replay. Elastic
+weight consolidation, Learning without Forgetting, and deep generative replay provide foundational
+examples [ 5, 6, 7]. Here, domain adaptation means continued next-token prediction training, and
+forgetting means unintended performance degradation, distinct from deliberate machine unlearning.
+Recent language-model studies examine different aspects of this problem. Chang et al. [ 1] inject
+fictional facts during pretraining and track acquisition and subsequent decay using answer-span log
+probabilities. Such probes measure controlled knowledge retention; they are not equivalent to free-
+generation accuracy. Bethune et al. [ 2] study pretraining-data injection during fine-tuning. Small
+injection rates, around 1% in their settings, substantially mitigate forgetting, while repeatedly using
+a small replay bank can cause overfitting. These rates should not be assumed optimal for a different
+model or domain. Marek et al. [ 3] show that self-generated replay can substitute for original data
+in some settings, with KL constraints often more stable than cross-entropy, but outcomes depend on
+capacity and optimization.
+Replay selection is already an established idea. Self-Synthesized Rehearsal (SSR) combines in-
+struction synthesis, output refinement, and representative selection through clustering [ 8]. Kotha
+and Liang [ 9] show that replay can also improve target performance, so its effect cannot be de-
+scribed solely as sacrificing adaptation for retention. Wu et al. [ 4] explain benefits of data mixtures
+under specific high-dimensional regression assumptions; this does not guarantee retention in lan-
+guage models. Broader surveys and empirical continual fine-tuning studies further motivate explicit
+evaluation choices [10, 11].
+1
+
+--- 第2页 ---
+2 Research Questions and Scope
+The central question is: How do replay source, objective, and sample selection influence domain
+adaptation and retention when replay resources are limited?
+1. Source and objective: How do substitute general-domain and self-generated replay compare
+under cross-entropy (CE) and a frozen-teacher KL constraint?
+2. Selection: At equal replay-bank size, do teacher-NLL stratification or cluster representatives
+improve the retention–adaptation trade-off relative to random selection?
+3. Budget and cost: How sensitive are results to cumulative replay exposure, and do any benefits
+justify generation, teacher inference, and selection costs?
+The contribution will be a controlled empirical comparison, rather than a claim that generated replay,
+KL distillation, or clustering is novel. A plausible hypothesis is that selection reduces finite-bank
+variability; another is that KL improves retention by preserving the teacher’s soft predictions. Both
+may fail when generated text poorly covers evaluation distributions. The required scope is one main
+model, one target domain, and three seeds. Full pretraining, broad scaling-law fitting, and a new
+general-purpose continual-learning framework are excluded.
+3 Methodology
+3.1 Model and Data
+The main model will be the final checkpoint of Pythia-410M [ 12], with a 160M model available for
+debugging. Full-parameter continued training will use English mathematical text from FineMath’s
+finemath-4plus subset. C4 English will supply substitute general-domain replay. Held-out C4
+documents and WikiText-103 will provide separate general-domain evaluations. C4 is not claimed
+to be Pythia’s actual pretraining corpus, and mathematical text likelihood is not a direct measure of
+mathematical reasoning.
+Public model and dataset cards have been checked. FineMath provides only a training split, so
+document-level training, validation, and test partitions must be constructed before token chunking.
+General-domain evaluation documents will be disjoint from replay, with cross-split duplicate checks.
+V ersions, document identifiers, tokenization, and subset construction will be recorded. Budgets will
+be measured using the model’s tokenizer rather than dataset-card token counts.
+3.2 Replay Objectives
+Let θ0 denote the frozen initial model and DR a replay bank. The target-domain objective Lnew is
+next-token negative log-likelihood (NLL). Replay uses either token CE or forward KL from teacher
+to student:
+LKL = Ex∼DR
+1
+Tx
+Tx∑
+t=1
+DKL[pθ0 (· | x<t) ∥ pθ(· | x<t)] , L = Lnew + λLR. (1)
+CE uses the actual replay tokens; KL uses the teacher’s predictive distribution. Each loss will be
+normalized over valid tokens. The teacher remains fixed, and loss weight λ is recorded separately
+from the data budget. Relations between generated-token CE and KL require assumptions about the
+sampling distribution; equivalence will not be assumed for filtered samples.
+3.3 Controlled Comparisons
+Table 1 defines eight groups. B0–B4 isolate the source–objective comparison; M, C, and D exam-
+ine selection and deduplication. Generated text will come from the initial model under recorded
+prompts, sampling settings, and seeds. Generated-replay methods within each seed will share the
+same candidate pool.
+2
+
+--- 第3页 ---
+Group Replay source and selection Objective / role
+B0 None Target CE; forgetting baseline
+B1 / B2 Substitute general-domain text Replay CE / KL
+B3 / B4 Self-generated, random selection Replay CE / KL
+M Self-generated, deduplicated and stratified KL; lightweight selection
+C Self-generated, cluster representatives KL; established selection idea
+D Self-generated, deduplicated and random KL; deduplication ablation
+Table 1: Planned groups. B1/B2 and B3/B4 are separate runs.
+M will deduplicate equal-length chunks, divide them into five equal-frequency strata by teacher mean
+NLL, and sample proportionally. This does not necessarily change the marginal NLL distribution;
+it tests finite-bank representation and variability. D separates the effect of deduplication from strat-
+ification. C will select representatives using frozen-teacher chunk features and clustering. It is an
+SSR-inspired selection control, not a replication of the complete SSR instruction framework. Candi-
+date pools and selected token budgets will be matched across selection comparisons; duplicate rates,
+feature extraction, and selection costs will be logged. Test data will never guide selection.
+4 Evaluation, Budgets, and Feasibility
+4.1 Retention and Adaptation
+For the adapted checkpoint θft, the primary quantities are
+Fold = Lold(θft) − Lold(θ0), G new = Lnew(θ0) − Lnew(θft). (2)
+Larger Fold indicates greater degradation on a specified old distribution; larger Gnew indicates better
+target adaptation. Results for C4 and WikiText-103 will be reported separately. Teacher–student
+KL on held-out data will serve as an output-drift diagnostic, not a replacement for performance
+evaluation.
+Methods will be compared at equal target-token exposure and, where feasible, within a common
+achieved target-validation-loss range. This helps distinguish effective retention from simply learning
+the new domain less. Checkpoints and hyperparameters will be selected using validation data; final
+results will use independent tests. Three seeds will yield means, standard deviations, individual runs,
+and retention–adaptation trajectories. Conclusions will be limited to the evaluated distributions,
+without claiming retention of all pretrained knowledge.
+4.2 Resource Accounting and Risk Control
+Unique replay-bank size K will be distinguished from cumulative replay ratio b = TR/Tnew, where
+TR and Tnew count processed replay and target tokens. The fraction of replay among all processed
+tokens is p = b/(1+ b). Initial settings are approximately 2M unique target tokens, 10M target-token
+exposures, a 1M-token generated candidate pool, a 0.1M-token replay bank, and b = 0 .05. Pilots
+will check feasibility and then freeze these settings before formal comparisons.
+Eight groups with three seeds give 24 main runs. Additional b = 0 .01 and 0.10 runs for B4 and M
+add 12, for 36 planned formal runs. Pilot and tuning runs will be counted separately. A small shared
+learning-rate and λ search will be specified in advance, with equal tuning allowances for comparable
+methods. Target training schedules and preprocessing will be held fixed where applicable.
+Four RTX 5090 GPUs are available for independent runs; throughput and memory use will be mea-
+sured rather than inferred from GPU count. Costs will include generation, teacher inference, feature
+extraction, selection, training, and evaluation. Equal token budgets will not be described as equal
+compute. The five core baselines take priority if the schedule becomes tight. Main risks are weak
+generated coverage, mismatch between substitute replay and old evaluations, or no gain from se-
+lection. Negative results will still support useful ablations and failure-condition analysis. A second
+domain, a roughly 1B model, or LoRA [ 13] is optional and outside the required scope.
+3
+
+--- 第4页 ---
+5 Schedule and Expected Outcomes
+The main study is planned for six to eight weeks within a three-month thesis schedule. The one-day
+proposal deadline covers literature synthesis and planning, not completed experiments.
+Period Milestone
+Weeks 1–2 Complete core reading; fix splits; validate evaluation and short runs; measure costs.
+Weeks 3–4 Run source–objective baselines; plot trajectories; draft methods.
+Weeks 5–6 Evaluate selection, deduplication, and replay-budget sensitivity.
+Weeks 7–8 Complete three seeds; finalize figures and freeze main experiments.
+Weeks 9–12 Write and revise the thesis; prepare defense; add only necessary checks.
+Deliverables will include reproducible code and configurations, split and budget records, retention–
+adaptation plots, a cost comparison, and the undergraduate thesis. Six core or closely related papers
+and public resource cards have been collected; model weights and training subsets have not yet been
+validated through training. The goal is a defensible answer to the research questions, with no prior
+promise of improvement or publication.
+Declaration of AI usage
+During the preparation of this work, the author used ChatGPT to assist with literature research and
+report writing. After using AI, the author reviewed and edited the content as needed and takes full
+responsibility for the content of the publication.
+References
+[1] H. Chang, J. Park, S. Y e, et al. How Do Large Language Models Acquire Factual Knowledge During
+Pretraining? NeurIPS, 2024. arXiv:2406.11813.
+[2] L. Bethune, D. Grangier, D. Busbridge, et al. Scaling Laws for Forgetting during Finetuning with Pre-
+training Data Injection. ICML, PMLR 267, 2025. arXiv:2502.06042.
+[3] M. Marek, D. Cho, S. Qiu, et al. Forgetting in Language Models: Capacity, Optimization, and Self-
+Generated Replay. Preprint, 2026. arXiv:2605.26097.
+[4] D. Wu, L. Chen, T. Misiakiewicz, and M. Mondelli. When do data mixtures improve scaling laws? Insights
+from high-dimensional regression. Preprint, 2026. arXiv:2609.38011.
+[5] J. Kirkpatrick, R. Pascanu, N. Rabinowitz, et al. Overcoming catastrophic forgetting in neural networks.
+PNAS, 114(13):3521–3526, 2017. doi:10.1073/pnas.1611835114.
+[6] Z. Li and D. Hoiem. Learning without Forgetting. Preprint, 2016. arXiv:1606.09282.
+[7] H. Shin, J. K. Lee, J. Kim, and J. Kim. Continual Learning with Deep Generative Replay. NeurIPS, 2017.
+arXiv:1705.08690.
+[8] J. Huang, L. Cui, A. Wang, et al. Mitigating Catastrophic Forgetting in Large Language Models with
+Self-Synthesized Rehearsal. Preprint, 2024. arXiv:2403.01244.
+[9] S. Kotha and P . Liang. Replaying pre-training data improves fine-tuning. Preprint, 2026.
+arXiv:2603.04964.
+[10] Z. Wang, E. Y ang, L. Shen, and H. Huang. A Comprehensive Survey of Forgetting in Deep Learning
+Beyond Continual Learning. Preprint, 2023. arXiv:2307.09218.
+[11] Y . Luo, Z. Y ang, F. Meng, et al. An Empirical Study of Catastrophic Forgetting in Large Language Models
+During Continual Fine-tuning. Preprint, 2023. arXiv:2308.08747.
+[12] S. Biderman, H. Schoelkopf, Q. Anthony, et al. Pythia: A Suite for Analyzing Large Language Models
+Across Training and Scaling. Preprint, 2023. arXiv:2304.01373.
+[13] E. J. Hu, Y . Shen, P . Wallis, et al. LoRA: Low-Rank Adaptation of Large Language Models. Preprint,
+2021. arXiv:2106.09685.
+4

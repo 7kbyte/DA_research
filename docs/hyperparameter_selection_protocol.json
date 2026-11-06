@@ -1,0 +1,60 @@
+{
+  "protocol_version": 1,
+  "lambda_grid_frozen_at_utc": "2026-11-06T03:45:41.238121+00:00",
+  "phase": "lambda_calibration",
+  "data_version": "v2",
+  "seed": 101,
+  "groups": [
+    "B1",
+    "B2",
+    "B3",
+    "B4"
+  ],
+  "lambda_grid": [
+    0.05,
+    0.5,
+    1.0,
+    5.0
+  ],
+  "learning_rate_grid_completed": [
+    1e-05,
+    3e-05,
+    0.0001
+  ],
+  "shared_learning_rate": 1e-05,
+  "learning_rate_selection_rule": "minimum target validation NLL among B0 pilots after exactly 2000000 target prediction tokens",
+  "learning_rate_selection_record": "results/pilot_lr_selection.json",
+  "target_prediction_tokens": 2000000,
+  "replay_ratio": 0.05,
+  "replay_prediction_tokens": 100000,
+  "microbatch_size": 16,
+  "gradient_accumulation_steps": 4,
+  "precision": "FP32 weights with BF16 autocast; FP32 full-vocabulary loss arithmetic",
+  "lambda_group_score": "(Ltarget-Ltarget_initial)+0.5*((Lc4-Lc4_initial)+(Lwikitext-Lwikitext_initial))",
+  "lambda_aggregate": "unweighted arithmetic mean across B1,B2,B3,B4 at each lambda",
+  "lambda_selection_rule": "minimum aggregate score; only strictly equal floating-point aggregate scores tie, then select smaller lambda",
+  "validation_uses": "validation only; final fixed-exposure checkpoint of each pilot; no test access; no method-specific lambda tuning",
+  "validation_paths": {
+    "target": "/data/202610/7kb/research/artifacts/data/finemath_validation.pt",
+    "c4": "/data/202610/7kb/research/artifacts/data/c4_validation.pt",
+    "wikitext": "/data/202610/7kb/research/artifacts/data/wikitext103_validation.pt"
+  },
+  "validation_sha256": {
+    "target": "323dc8d68dd5174cd304cccc59f29f5fa68036d74328429d147ed8b5234c0e2f",
+    "c4": "e888cdd26077d4886b9f7294c9b4aafed981ed6f06beef9ff139950879b5bfb2",
+    "wikitext": "4018c33bd6e36b45aafcb5b5129ed18cbd480613ccbed0f8cdf57a02e8b0e85c"
+  },
+  "initial_validation_path": "results/pilots/lr_validation_initial.json",
+  "initial_validation_sha256": "82b0e7c2c80104bc168b043327827db95d1316413b52588b734a34384dd79df1",
+  "bank_paths": {
+    "c4": "/data/202610/7kb/research/artifacts/banks/c4_random_seed101.pt",
+    "generated": "/data/202610/7kb/research/artifacts/banks/generated_random_seed101.pt"
+  },
+  "bank_tensor_sha256": {
+    "c4": "2e44d3fd41613faf0e1f363d8a3a0913c97bf309e1b411086722fd639d4e1c86",
+    "generated": "aea3850b28f30cc32d15b1ecf5f96af92cfbe96e4bc992bdb609841e5aae790b"
+  },
+  "model_revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+  "deadline_utc": "2026-11-07T03:26:32Z",
+  "formal_generation_status": "capability implementation authorized; real formal configs and execution require root authorization"
+}

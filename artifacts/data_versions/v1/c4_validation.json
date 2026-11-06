@@ -1,0 +1,1908 @@
+{
+  "source": "allenai/c4:en",
+  "revision": "1588ec454efa1a09f29cd18ddd04fe05fc8653a2",
+  "split": "validation",
+  "tokenizer": {
+    "repo": "EleutherAI/pythia-410m",
+    "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+  },
+  "sampling": {
+    "shards": [
+      "en/c4-validation.00000-of-00008.json.gz"
+    ],
+    "split_policy": "official validation shard; SHA256 normalized doc first64bits, 50/50 validation/test",
+    "selection_bias": "source-order bounded subset of one of eight official validation shards",
+    "source_documents_scanned": 1020
+  },
+  "preprocessing": {
+    "sequence_length": 512,
+    "document_boundary": "tokenize each document independently, append one EOS, nonoverlapping full chunks, discard suffix",
+    "cross_document_chunks": false,
+    "padding": false,
+    "duplicate_normalization": "NFKC, collapse all whitespace; SHA256",
+    "global_exact_duplicate_policy": "keep first encountered retained document; reject all subsequent matches",
+    "token_chunk_duplicate_policy": "global exact SHA256 over little-endian uint32 IDs; retain first"
+  },
+  "statistics": {
+    "short_documents_dropped": 386,
+    "short_document_tokens_dropped": 78386,
+    "source_document_tokens": 167804,
+    "suffix_tokens_dropped": 24567,
+    "quota_chunks_discarded": 16
+  },
+  "documents": [
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:10",
+      "sha256": "28923fa4dade2848d4f7fbf6a8968334b8becb3761063e37acf493be9daa4f68",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-25T10:18:53Z",
+        "url": "http://www.hollistonreporter.com/article/14259/bocce-ball-is-alive-and-well-in-holliston.html"
+      },
+      "source_tokens": 1315,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:12",
+      "sha256": "22e784c846517153e56cd255b4feea209fd85b1561b8c486dac2e30cacc2231a",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-19T17:12:50Z",
+        "url": "https://triciaannemitchell.com/2013/03/12/the-blue-skies-of-trogir-croatia/"
+      },
+      "source_tokens": 1036,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:18",
+      "sha256": "141a61181e205c2ac5204c6c8d27d59764dff0aa635f09d13d31ee1b114567d3",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-23T14:04:48Z",
+        "url": "https://www.surebetbuilders.com/nc/builder-in-mc-leansville/"
+      },
+      "source_tokens": 592,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:22",
+      "sha256": "425fc7c4272ca1a43e095b627288e81eca0d8eac26969b2c7ea7e029ecc789b1",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-18T15:49:24Z",
+        "url": "https://www.farmmade.com/meet-the-farmers-of-farmgirlrosepetals/"
+      },
+      "source_tokens": 1229,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:37",
+      "sha256": "114389264f1a0e82f366d2bb22d6ab5c3a0f1759afce70249c28cac4e381e02f",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-25T15:46:40Z",
+        "url": "https://biography.jrank.org/pages/199/Wheeler-Jody-1952.html"
+      },
+      "source_tokens": 1499,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:38",
+      "sha256": "080542392d70517c3cfe53049ece4769359c077892146abb175d61f374410d2a",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-19T18:35:24Z",
+        "url": "https://www.eweek.com/networking/ibm-takes-wraps-off-opteron-based-cluster"
+      },
+      "source_tokens": 961,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:69",
+      "sha256": "1569339897d687772002ac20e03f6322e54fcac6ba3f119d0d538567af31d71b",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-23T06:26:53Z",
+        "url": "https://www.franklindowntownpartnership.org/2013/11/2013-food-elves-press-release.html"
+      },
+      "source_tokens": 805,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:81",
+      "sha256": "14bc179caac48201a853f51e7a6e6f816b2f51331bc70b758a20f542917de80e",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-21T17:12:43Z",
+        "url": "https://www.booktopia.com.au/disequilibrium-and-self-organisation-c-w-kilmister/prod9789027723000.html"
+      },
+      "source_tokens": 598,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:86",
+      "sha256": "567ea21ba31534bd538cf5f94f0f886eb4768c283d52ce6df695beddd0a7a9fa",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-22T16:47:12Z",
+        "url": "http://benheide.com/sandisk-16gb-extreme-pro-compactflash-review/"
+      },
+      "source_tokens": 1899,
+      "chunks_used": 3
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:92",
+      "sha256": "475bd109e7ee14e080d9eacdf593061d34535f0faa05c80fde9053d5657d3655",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-23T04:01:21Z",
+        "url": "https://www.goldn.co.uk/product/palladium-tank-plating-kit-1-litre/"
+      },
+      "source_tokens": 730,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:94",
+      "sha256": "39e7aa4c08894f6e66338754446c58d92ddb76ea4f9971324039897352061f8e",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-22T16:52:01Z",
+        "url": "http://www.bathroommakeoverauthority.com/tx/bathroom-makeovers-in-iowa-park/"
+      },
+      "source_tokens": 518,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:104",
+      "sha256": "5a9eda422e193a2a1128dbc5e97e379e2225c05c5094381d253bceec3d60009f",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-25T06:07:38Z",
+        "url": "https://gamewith.net/kingdomhearts3/article/show/5245"
+      },
+      "source_tokens": 1556,
+      "chunks_used": 3
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:109",
+      "sha256": "06c3eab8d64e768aad4e81044a3ab0025cbfb5cbaed1617fa29966267dc4e2d5",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-20T18:47:58Z",
+        "url": "https://blogs.msf.org/de/node/15186"
+      },
+      "source_tokens": 966,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:114",
+      "sha256": "29ff7a7cb736723ffae0204bf9088fcbe96a61d257ebfe1e6f94b505dbdb5309",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-20T10:56:07Z",
+        "url": "http://www.paperbackstash.com/2016/12/2016-end-of-year-survey.html"
+      },
+      "source_tokens": 2280,
+      "chunks_used": 4
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:129",
+      "sha256": "1415345889ddcdf6265a8630030f40d17eb4a2485b7f9221dc82f5e3a2b05ed4",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-24T22:46:03Z",
+        "url": "http://yoomken.com/badges/personalities"
+      },
+      "source_tokens": 1039,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:150",
+      "sha256": "3d01ae9653dc5ce09daea3b9736ec63f6a88f483ad8018908d42d3b8c7ecb646",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-22T06:16:32Z",
+        "url": "https://jewishfunerals.org.au/arranging-the-funeral/"
+      },
+      "source_tokens": 3090,
+      "chunks_used": 6
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:177",
+      "sha256": "2abb46f2819306852eb01e6c3c55e3c53253c5956ad565052bd5ccb2f4d0aa66",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-20T02:53:46Z",
+        "url": "http://crystlechawla.hatenablog.com/?page=1435254071"
+      },
+      "source_tokens": 1650,
+      "chunks_used": 3
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:200",
+      "sha256": "0b9b42c0f5884e8ba7d4bc47fc10ab7aae11057b07287eb843530804572be0c4",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-25T00:08:46Z",
+        "url": "https://www.skipjackhub.com/benefits-of-encrypcurrency/"
+      },
+      "source_tokens": 1310,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:226",
+      "sha256": "115ca21ad570718aafd97d644c4f164dcbeba3c8b043cafa94d1a26b88e8f57d",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-24T00:02:30Z",
+        "url": "http://caas.rxwiki.com/gemfibrozil"
+      },
+      "source_tokens": 758,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:227",
+      "sha256": "2ce779c046273a684990b0c3bac75ea17fe6af57dede166ee7409ced538bf851",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-25T02:16:58Z",
+        "url": "https://casinobonusca.com/50-free-spins/"
+      },
+      "source_tokens": 2531,
+      "chunks_used": 4
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:229",
+      "sha256": "00803d1af93bdc58768782f71acde258d0164d94f3688b98f618e2f74b376ef7",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-25T06:33:23Z",
+        "url": "https://orthoaspen.org/condition/foot-fractures/"
+      },
+      "source_tokens": 635,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:232",
+      "sha256": "432063b1d04a6b4da6d5173b74f0ea46c3dd92efc046e9e5fbab7dd678855166",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-19T14:14:36Z",
+        "url": "https://vinyl.org.au/component/k2/itemlist/tag/Recycling"
+      },
+      "source_tokens": 1380,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:246",
+      "sha256": "2cb29c6857eb7f29a2cfaa28f2ae7ee79b5ed1493928e347be733f81a7e815a2",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-23T16:40:48Z",
+        "url": "http://wiki.sabirding.co.za/(X(1)S(dvan5dvgnrxq2g55m3yp4gny))/Bronkhorstspruit.ashx"
+      },
+      "source_tokens": 1356,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:250",
+      "sha256": "468782b0e281280987f661cc2d9409db168fb4a4119a2e9efd9925d03a95c89a",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-19T08:24:26Z",
+        "url": "https://ipfs.io/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Bufori.html"
+      },
+      "source_tokens": 849,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:251",
+      "sha256": "1b817293c731763208b3655cd9f362aa36ad1e516f0d2d72b5991992b680ddc4",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-25T02:39:20Z",
+        "url": "http://blogs.coventry.ac.uk/uncovered/2016/10/14/6-student-budget-places-to-eat-in-coventry-2/"
+      },
+      "source_tokens": 666,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:258",
+      "sha256": "393b59ecd8a211f651ebab7cfaea918c4d5273c59aaecde5f00c7b942d96fec7",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-25T05:43:36Z",
+        "url": "http://blog.whooosreading.org/amplify-student-voice-with-technology/"
+      },
+      "source_tokens": 1273,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:270",
+      "sha256": "1c9ec94b816ef0401acb745b9b7040f322fdfdd398792cde742911e4da60c2f2",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-25T18:27:36Z",
+        "url": "https://www.healthforcega.com/health-force-of-georgia-terms-of-service/"
+      },
+      "source_tokens": 1699,
+      "chunks_used": 3
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:274",
+      "sha256": "2a03a8ffac8bf167231f7b8a943bf90fd7acab35080ea85c626ba4bcc4e014a5",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-25T11:57:36Z",
+        "url": "https://mg.co.za/article/2014-05-29-nathi-mthethwa-on-patrol-for-the-nations-artistic-soul"
+      },
+      "source_tokens": 1227,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:294",
+      "sha256": "7b72f2009a8efb20d9203737bdaff6831106e5fec8e72a30a7a69eb67de967a0",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-19T08:36:38Z",
+        "url": "https://craighill.net/2013/07/31/australians-face-perils-by-doing-business-in-china/"
+      },
+      "source_tokens": 676,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:295",
+      "sha256": "4d236395a489b892a2d7dce0f15915b83d8c1de7b3a3171b0fccb7ab89dbe310",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-23T08:23:12Z",
+        "url": "https://hax.iimarckus.org/topic/7014/4/"
+      },
+      "source_tokens": 952,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:302",
+      "sha256": "54d2bb5c5fecd35dc53ef2229ff57f8d7c9b235982081a9ccfd61da674cc38a0",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-20T12:15:53Z",
+        "url": "http://www.honolulumagazine.com/Honolulu-Magazine/October-2017/7-Absolutely-Free-Honolulu-Events-to-Check-Out-in-October-2017/"
+      },
+      "source_tokens": 698,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:320",
+      "sha256": "37e0d82e8e8e2d370b4f8c137d1bea5d5230c709ae93d5f07929e93c296141db",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-20T04:45:56Z",
+        "url": "https://www.pcgamer.com/uk/how-to-stink-up-the-road-to-a-victory-royale-with-fortnites-stink-bomb/"
+      },
+      "source_tokens": 742,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:321",
+      "sha256": "4f0b5c022f712a8b38b13431f1f8db3fc17f84ac25cdebccdb7f591e8a34cf01",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-19T08:31:09Z",
+        "url": "http://airtycoon2.forumotion.com/t35-historical-mode"
+      },
+      "source_tokens": 724,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:328",
+      "sha256": "2ee10ff8895484e7da8cfd21a9bd3fff8fc3f80f1994ad5a47fd909d3b500768",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-20T15:08:04Z",
+        "url": "https://tvseriesfinale.com/tv-show/greek-last-episode-19291/comment-page-1/"
+      },
+      "source_tokens": 572,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:331",
+      "sha256": "72a7f48295410d0357e4b37f43078bfa504c193d75cc447f2466e86e868b4f56",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-22T18:44:20Z",
+        "url": "https://discussion.roadscholar.org/road-scholar-general/f/health-special-considerations/174/when-the-activity-level-is-too-high"
+      },
+      "source_tokens": 1179,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:361",
+      "sha256": "2175d26c4a934fd81b6d75446564c51b8f5b15869d15059bc7157378ff6c2711",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-18T16:16:39Z",
+        "url": "https://mrtony19.wordpress.com/about/"
+      },
+      "source_tokens": 643,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:368",
+      "sha256": "235d9d481bebc84794b49d5d0f0ada3c3de2b3fc4f4fe67b2fbd5385d7c6b87a",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-19T00:47:45Z",
+        "url": "https://www.dailycomet.com/entertainment/20091125/tv-retailer-qvc-joins-black-friday-frenzy"
+      },
+      "source_tokens": 574,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:375",
+      "sha256": "78df06f0a1a647456f582952caad674d5fd6cbd98d21c9e81f00535b0ae1f1e7",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-21T10:29:47Z",
+        "url": "http://www.berkeleydailyplanet.com/issue/2002-10-16/article/15413?headline=David-Letterman-gets-his-wish---By-David-Bauder-The-Associated-Press-"
+      },
+      "source_tokens": 731,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:376",
+      "sha256": "1af20fdc823d7917bbd895ff01154ced7b4aabe4dc077d2ab089a975aa416c46",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-21T08:29:22Z",
+        "url": "https://demafirm.com/holiday-buy-flash-furniture-hercules-series-fan-back-metal-chair-black-vinyl-seat-uj3wm27s3n-T04827-kitchen_furniture.aspx"
+      },
+      "source_tokens": 1607,
+      "chunks_used": 3
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:389",
+      "sha256": "0e0682f61eed46a8bf801eb5fa348e10d6610ba6d7bafa216f2792963c8c3509",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-26T09:50:22Z",
+        "url": "https://www.lds.org/scriptures/bofm/alma/5.27-29?lang=eng"
+      },
+      "source_tokens": 3062,
+      "chunks_used": 5
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:395",
+      "sha256": "6e21bdfbfce74c6faf015e9fb40bc64d059e65887557e14a4f1a97813e325c7a",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-25T08:28:21Z",
+        "url": "http://webfoundations.com/showcase.html"
+      },
+      "source_tokens": 1247,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:399",
+      "sha256": "4f30c5e329f24254cd9a886fab022be89a7a77bbab90991b9d0e20146bc85373",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-25T18:21:46Z",
+        "url": "https://www.couponchaska.com/best-smart-fitness-bands-india/"
+      },
+      "source_tokens": 931,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:401",
+      "sha256": "1f1dd3229a52bef5ebf1aa6fffe4bc1e2c39223e535049d86a1278e78b9b13a3",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-23T22:51:00Z",
+        "url": "https://www.amybucklesbookshelf.co.uk/2018/05/we-never-asked-for-wings-book-review.html"
+      },
+      "source_tokens": 696,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:409",
+      "sha256": "57b39939a5ad6d2e668c3034c9276b208601d36d98acf7ef25d56ae5d4402e45",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-23T14:30:14Z",
+        "url": "http://www.chicagonow.com/media-tech-connection/2011/08/weekly-tech-events-for-week-of-august-22-socialdevcamp-hackathon-and-more/"
+      },
+      "source_tokens": 571,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:429",
+      "sha256": "6b9ea898ccbff2f412e1a7c0311469c77c3b0f879a47c4a4a1f4d0b4431d27d8",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-24T04:01:33Z",
+        "url": "https://alpost10nc.org/oratorical-contest/"
+      },
+      "source_tokens": 622,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:440",
+      "sha256": "5957fe60908b411d4a47a238398971a7e098e298b124ed78614ba6836ef7bb59",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-21T02:33:20Z",
+        "url": "https://www.brighthub.com/office/entrepreneurs/articles/128217.aspx"
+      },
+      "source_tokens": 1047,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:441",
+      "sha256": "67b6fa3c7ff2859b1f5e7ebf0ad0e41afc3284eb121a038401f95137a5fdba67",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-20T00:22:35Z",
+        "url": "http://outsideoftheboot.com/2017/11/28/scout-report-panagiotis-retsos/"
+      },
+      "source_tokens": 1438,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:449",
+      "sha256": "2ca3f032cff66a6099827a68110d4db23d02f054a1c1b8a1b3cdfefb60438292",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-22T10:49:36Z",
+        "url": "https://www.blueoregon.com/2008/10/yes-on-56-the-s/"
+      },
+      "source_tokens": 1397,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:450",
+      "sha256": "3dc2fc7a2b5092314bb7812ab312a38f04b00a9eb39c1652b5559b5ef462bbef",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-25T10:35:48Z",
+        "url": "http://opus1journal.org/articles/article.asp?docID=173&keywords=expected+value&type=1&chapterID=0"
+      },
+      "source_tokens": 525,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:458",
+      "sha256": "05c5fa8ae60b0a117ffad7e225978c35c8f0dd043caec36f966afa24a899fc01",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-20T02:51:50Z",
+        "url": "http://www.vipulgrover.com/2012/02/panda-chameleon-cats-or-dark-horse.html"
+      },
+      "source_tokens": 706,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:459",
+      "sha256": "02a80904bae3087fd4d5a575973287d98b262551a66e4f03c4d7b65a3626c037",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-21T01:14:49Z",
+        "url": "https://jknewsservice.com/heres-how-smartphones-damage-your-productivity-and-health/"
+      },
+      "source_tokens": 528,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:477",
+      "sha256": "288dcaf0ad4fb558955dde593ebf3d61d56514f9a950a67e2d9ce2b8890bee0d",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-19T04:44:00Z",
+        "url": "https://www.orlandosentinel.com/news/os-xpm-1997-06-03-9706020278-story.html"
+      },
+      "source_tokens": 657,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:487",
+      "sha256": "2087e6ac266b5c9c7148831c16472f34636da46ba2a5870c6e879501b64100fa",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-22T14:24:42Z",
+        "url": "https://www.trinityp3.com/2013/09/kpis-agency-performance/"
+      },
+      "source_tokens": 1125,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:499",
+      "sha256": "1ddcb40fdec535cf3ebdff103d0895f4e6c22faa521266c53f5d2a2d55f7ec2d",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-23T13:04:39Z",
+        "url": "http://ralf-wetzel.info/?option=com_content&view=article&id=11779"
+      },
+      "source_tokens": 870,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:501",
+      "sha256": "18d611d3435f00ca9b2b89b7e09733502ec6bbd81b1988d67f19a0efc86a5333",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-21T20:21:23Z",
+        "url": "http://dwse.org/index.php/terms"
+      },
+      "source_tokens": 2157,
+      "chunks_used": 4
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:514",
+      "sha256": "2f34793193466f8bd9df26f644797a5f53909eccf1f7aa803835d209387d5765",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-20T23:06:00Z",
+        "url": "https://www.seacoastonline.com/article/20100128/NEWS/100129784"
+      },
+      "source_tokens": 1177,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:527",
+      "sha256": "478c2c23503ba8b17773197aa281b6e88dfa6220fd859e5a0ddf3e34cabc511c",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-24T00:11:46Z",
+        "url": "https://bookshelvesofdoom.blogs.com/bookshelves_of_doom/books_poetry/"
+      },
+      "source_tokens": 675,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:544",
+      "sha256": "28524f2b08076a172ef5b6c95923e296af7aa2b3ab3b54789b696e5f6d099f84",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-24T10:21:19Z",
+        "url": "https://www.stmarytx.edu/2008/shimek-freeman-earn-heartland-honors/"
+      },
+      "source_tokens": 540,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:556",
+      "sha256": "4524f3e7403811c4cc0b06716f9ae6a5fe98e5f5d4fdeed463276b74757880e9",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-19T05:16:30Z",
+        "url": "https://www.resolver.co.uk/companies/brightbingo-complaints"
+      },
+      "source_tokens": 533,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:569",
+      "sha256": "65ccb3afd7281317ea6dd5b581c454d731b2c93f2cce56cf190acdbbdd7f7aa8",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-22T16:51:34Z",
+        "url": "https://bangkokshootingrange.com/2018/12/17/basic-safety-rules/"
+      },
+      "source_tokens": 1018,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:580",
+      "sha256": "19bb2f0d3e3065aa9175a6b323ce2152b7cb8a7fe3d5d3f716e6960683be22d1",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-23T04:47:04Z",
+        "url": "http://www.healthyourwayonline.com/tag/parenting/"
+      },
+      "source_tokens": 1282,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:584",
+      "sha256": "7e1098381897ea3cd032f71047f84928b660e911f4cc6fbde9e7ac9138bef180",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-24T12:34:21Z",
+        "url": "http://phogezmc.angelfire.com/huge/furniture-60657.html"
+      },
+      "source_tokens": 687,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:592",
+      "sha256": "5a2a46b4810d5edb25edaddded224c37abea921362a63d383e5ca397e3790ce1",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-22T18:23:18Z",
+        "url": "http://shahsightshop.blogspot.com/2012/01/shah-sight-suzanne-tyrpak-thanks-for.html"
+      },
+      "source_tokens": 1045,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:595",
+      "sha256": "038d5da3f7bbda6abd982b9124d302c22e212c6134d8681e5f5b7307b576c990",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-20T19:03:08Z",
+        "url": "https://www.cantravelwilltravel.com/puerto-morelos-snorkelling-tour-mexico/"
+      },
+      "source_tokens": 1982,
+      "chunks_used": 3
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:600",
+      "sha256": "54ba759659d550d2a41a28299881431e308d93ebbe03381d7f06d5369f8323dc",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-26T15:44:19Z",
+        "url": "https://mfidie.com/buy-mtn-shares-ghana/"
+      },
+      "source_tokens": 602,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:605",
+      "sha256": "68de8a5f7d872cc8b5bf5453f9dd9494fe39cacf51afd6e78c60c1435fc688ba",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-26T04:09:51Z",
+        "url": "https://www.gpwih.com/furniture/dining-room/89909/glasses-dining-tables/attachment/ideal-home-3/"
+      },
+      "source_tokens": 553,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:612",
+      "sha256": "17729201d8b04826203d398c5afeb7435d5814a23095fdc2f8d8d384c0e64098",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-26T00:41:12Z",
+        "url": "http://philashipguild.org/category/volunteers/"
+      },
+      "source_tokens": 1158,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:617",
+      "sha256": "398ce30ccdfa91aeae49206444cfd98896acdeabb7240ad038fe56ad9079b52c",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-21T15:22:48Z",
+        "url": "https://www.fromroses.co.uk/blog/omroses.co.uk/2014/07/introducing-advertisers-on-from-roses-5.html"
+      },
+      "source_tokens": 711,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:618",
+      "sha256": "2f60116b3ab9ff9da229ca23db7c4ca8f5e41c89b520227486a545ac33f15b48",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-21T18:09:12Z",
+        "url": "https://www.lilyelement.com/2017/06/review-stone-cold-bastards-by-jake-bible.html"
+      },
+      "source_tokens": 606,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:636",
+      "sha256": "70a3ffc6f940e647f81e362d19bb389da4243acd39c28c15e8195feae6681a06",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-25T12:30:43Z",
+        "url": "https://earthclinic.com/ailments/flu/apple-cider-vinegar-remedy/"
+      },
+      "source_tokens": 8821,
+      "chunks_used": 17
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:640",
+      "sha256": "77b658f4976653a5ad88dbcda1fdbc29bbc5837aeabf6a6e4c23f97d516afab9",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-19T14:21:05Z",
+        "url": "http://battlhammer.tripod.com/tradeskills/alchemy.htm"
+      },
+      "source_tokens": 795,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:657",
+      "sha256": "337a796b4ca8db4790bfc7408e7d6be3560d9babdacd6e9c7963c545c39ff3d9",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-24T03:50:45Z",
+        "url": "https://thewinesnob.net/2015/01/06/thirty-oregon-wines-in-thirty-days-day-5-fun-with-deponte/"
+      },
+      "source_tokens": 839,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:660",
+      "sha256": "0e945e3b3fd44c91b0a1675e4bedca0966dc676cd48fb7899e25ba3d0723eb4e",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-21T06:54:52Z",
+        "url": "https://blog.ceb.com/2013/04/26/exiting-gracefully-the-termination-letter/"
+      },
+      "source_tokens": 602,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:663",
+      "sha256": "7694d3cd02940976d2330d418cd8ecf4140b0b69c9b69fc26ddc012bfee1a65f",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-19T10:56:26Z",
+        "url": "https://lessons.lerntipp.at/4/lesson-plan-2-project-planning-concepts"
+      },
+      "source_tokens": 568,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:668",
+      "sha256": "3ca81b4b3063af1e30d9f2a5d5bf8c2bdbd7d3a013519ec76d8051955b77eb47",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-19T14:20:06Z",
+        "url": "https://www.dulux.com.my/en/inspiration/creative-nursery-schemes-parents-stuck-colour-rut"
+      },
+      "source_tokens": 685,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:677",
+      "sha256": "580041453b134b7d039634c8d4103b4cabae91db4f2c6e079c82472e6c4d2d23",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-19T09:13:12Z",
+        "url": "https://oldjewstellingjokesonstage.com/clickfunnels-best-deals/"
+      },
+      "source_tokens": 6844,
+      "chunks_used": 13
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:679",
+      "sha256": "2399b08c082dfbc4b79f69e7ddb3efc22635878b57509b4645ba732d3c9e27e0",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-18T19:11:08Z",
+        "url": "https://bereid.com/creative/"
+      },
+      "source_tokens": 538,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:699",
+      "sha256": "2242b62214415ce9bc2978973b3bed3bd824f7451cee81c9b2b154e98c0daddf",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-21T18:27:00Z",
+        "url": "http://www.thecapeverdean.com/news/?m=201302"
+      },
+      "source_tokens": 4178,
+      "chunks_used": 8
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:705",
+      "sha256": "1873c3dbba2197604d4484f6fd976c1fe375962df9fe07a46d38403112b0950a",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-25T12:48:10Z",
+        "url": "http://shopdogshopcat.com/privacy/"
+      },
+      "source_tokens": 652,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:706",
+      "sha256": "17ecff1e33d5f8f61956fd27c375f4c08db697b7574e705a86721eee2dd9268a",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-18T12:20:21Z",
+        "url": "https://annaraccoon.com/2011/02/03/public-libraries-censoring-bloggers/"
+      },
+      "source_tokens": 801,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:711",
+      "sha256": "54cbd4b503df26b15ad46bd37fee5328e57c12d3e914c7c5c305c5b6c56a9a8d",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-18T20:48:18Z",
+        "url": "http://c2withoutprescription.com/category/computers-and-technology/page/2/"
+      },
+      "source_tokens": 7346,
+      "chunks_used": 14
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:730",
+      "sha256": "170a1e1913c065ad6343c8de6c54e6b7351da56d6f213370efb98fae3556b0da",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-23T09:03:18Z",
+        "url": "https://faveable.com/best-bald-fade-haircut-styles"
+      },
+      "source_tokens": 2236,
+      "chunks_used": 4
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:737",
+      "sha256": "0da4f353c6335efaefb6acf3a67580767c11e32084bcedd7c5dea4c4e9cb49c0",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-26T10:21:41Z",
+        "url": "https://nerdparadise.com/puzzles/3pieceshuffle"
+      },
+      "source_tokens": 709,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:739",
+      "sha256": "271224bce6f398adaec3053f9e1c1a59d209195aeafd091c5e4ebcda6d227e34",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-19T07:17:36Z",
+        "url": "http://healthyhormones.com/news/news44.htm"
+      },
+      "source_tokens": 678,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:740",
+      "sha256": "1579ce6d4dc89a66430f0115365a7696a2dbbc8a140a82f2bf085dc6f0b2b533",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-26T06:04:20Z",
+        "url": "https://scfh.ru/en/news/athens-on-the-spree-a-center-for-art-and-culture-in-berlin/"
+      },
+      "source_tokens": 945,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:756",
+      "sha256": "77d89c3c69ff11ffd05dd07c7ce7d2cdee37709e2ffb30d39ade819e98fd5251",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-24T11:52:25Z",
+        "url": "https://www.masterresource.org/debate-issues/2009-predictions-and-pause/"
+      },
+      "source_tokens": 1338,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:768",
+      "sha256": "1615e70dae88e1866c63df076333603c417b593e782f19f78d27804e23673d71",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-23T12:31:22Z",
+        "url": "https://www.jkt48stuff.com/2015/06/assessing-jkt48s-leadership-shuffle/"
+      },
+      "source_tokens": 2736,
+      "chunks_used": 5
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:770",
+      "sha256": "5749df2d574ec41d728e4f4f791e7358899da41e69853873b2d7b66ad039b80b",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-22T20:02:33Z",
+        "url": "https://forestlakecamp.com/meet-flcs-girls-camp-head-counselors/"
+      },
+      "source_tokens": 644,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:773",
+      "sha256": "4864a7e6da680b025bc445ac00693a001d9bbb1f2061950ad783e957b04deb21",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-26T10:29:58Z",
+        "url": "https://www.omm.com/resources/alerts-and-publications/publications/libyan-sanctions-update-the-european-union-the-united-states-and-other-jurisdictions-expand-and-clarify-sanctions-rules/"
+      },
+      "source_tokens": 1050,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:774",
+      "sha256": "7efc80a8f21389887e12b3bdd0264f6c29abf35bf301b4c6ab998935a64db680",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-24T06:18:52Z",
+        "url": "http://right.degregoristore.com/who-invented-essay-writing.html"
+      },
+      "source_tokens": 1382,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:790",
+      "sha256": "71f548faab1fe3ef79df06355f60cc2e093396949d8f31b2b31f309c8cd91aae",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-22T10:37:41Z",
+        "url": "https://www.alllaw.com/articles/nolo/bankruptcy/debts-discharged-chapter-13-not-7.html"
+      },
+      "source_tokens": 748,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:797",
+      "sha256": "203b7a061a5d1069b4741050601f736f491cb4f5852f07e0e60698108e7f592b",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-20T22:19:07Z",
+        "url": "https://carriefroese.wordpress.com/tag/melody-ludski/"
+      },
+      "source_tokens": 1468,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:801",
+      "sha256": "18e585760bbf9314836564c1bf6a0a3a9d695c543720ac71b5d59f9394ff7100",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-22T22:44:27Z",
+        "url": "http://gadgetzine.net/contemporary-chandelier/"
+      },
+      "source_tokens": 610,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:803",
+      "sha256": "1bdea71ec0135487df08da8529780699a148829e001ecaab5778f5f2dbaf12c4",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-23T00:20:06Z",
+        "url": "https://www.barkerhedges.com/calhoun-isle-100000-to-200000/"
+      },
+      "source_tokens": 512,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:813",
+      "sha256": "5181ccf204333ad7acb63c51b10bcdce50882fe155fa1e2cf23f4c8b7015fc5f",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-20T04:17:06Z",
+        "url": "http://sports-kings.com/nfl-news-channel/eagles-dont-stop-and-saints-slide-another-big-fella-into-town"
+      },
+      "source_tokens": 688,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:819",
+      "sha256": "7cc6637cd02f8774a1d95b171c86218173d6c3c00530081318377e070f000269",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-25T17:00:33Z",
+        "url": "http://www.whitneyzone.com/wz/ubbthreads.php/topics/33259/Rim_Fire_Tioga_Road_Closure"
+      },
+      "source_tokens": 642,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:824",
+      "sha256": "7d05237479a9e9b02b730fb11142d86746acfd7713bae871afd39003b94d9e77",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-20T20:43:22Z",
+        "url": "http://nofearofthefuture.blogspot.com/2010/12/memory-42.html"
+      },
+      "source_tokens": 2166,
+      "chunks_used": 4
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:833",
+      "sha256": "674459d8a0399e01b939f2fc545a0d5bd5147e82de520d714a483450869911da",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-19T08:14:09Z",
+        "url": "https://consumerwatchdogbw.blogspot.com/2017/12/progress.html"
+      },
+      "source_tokens": 1100,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:838",
+      "sha256": "7dde8970a6999aa72d6dbcfe56c58b4d49e87d143096b145f488d80ca3d7faba",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-19T15:26:38Z",
+        "url": "https://www.blockchaindevelopers.org/2018/02/26/get-answers-to-your-top-questions-about-ether/"
+      },
+      "source_tokens": 600,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:839",
+      "sha256": "1ad00521b0942d252850d20c8386789e6c913edffdc287d03d4023c7c23efb3c",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-26T04:47:42Z",
+        "url": "http://www.mandarinfilm.com/en/blog/documentary"
+      },
+      "source_tokens": 2572,
+      "chunks_used": 5
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:844",
+      "sha256": "1acf4ae6a4171b036419d3c4cb4e65751db5e9f2e5399d46c1303e3ba6ce15f4",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-20T17:01:24Z",
+        "url": "http://www.siyahistanbul.com/how-to-publish-an-outstanding-undergraduate-thesis.html"
+      },
+      "source_tokens": 835,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:847",
+      "sha256": "7bf23e893aa7b4b2bd709378cf3dc62d2d1043f7938212a8301301e49fd1ea69",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-26T06:16:42Z",
+        "url": "http://icouponeme.info/online-dating-site/"
+      },
+      "source_tokens": 1717,
+      "chunks_used": 3
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:850",
+      "sha256": "6bbfb3c4e1773dbd4b149c0ad942c6252c0300b1c06cf0d55766b53528288fbf",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-23T23:59:00Z",
+        "url": "http://www.iamodules.com/WSW/QuickBooks-Integrated-Shopping-Cart-Design.jsp"
+      },
+      "source_tokens": 925,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:872",
+      "sha256": "1a5f86c1fc36562cfa30e9d720f95476c64753f7c43cbec4fc9bd20d2f417dec",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-22T18:22:32Z",
+        "url": "http://cj750.com.au/Alternator_system.html"
+      },
+      "source_tokens": 907,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:874",
+      "sha256": "50414504aa178e51eea7dd45e2942a9a4949a7135ebd27d33ea5e3adaf439d5f",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-21T14:15:30Z",
+        "url": "http://www.transformers-universe.com/include.php?path=content/articles.php&contentid=2800"
+      },
+      "source_tokens": 633,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:876",
+      "sha256": "7cd3ab6291d05b692bf055fdadfeb9285e18213b9620f1343ac9230437e83ad2",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-20T04:47:38Z",
+        "url": "https://www.nlpfamily.com/blog/category/training"
+      },
+      "source_tokens": 2833,
+      "chunks_used": 5
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:888",
+      "sha256": "7e93ddf86ca7b4a26785612f14669f65329997250df6242942c9840d000ec19c",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-23T02:27:34Z",
+        "url": "http://antalyaescortbayanlar.info/pissing/alexa-may-in-multiple-position-sucking-fat-cock&p=212.php"
+      },
+      "source_tokens": 810,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:890",
+      "sha256": "5c38e3087cbdde4a92d65e942292cfeccbd1a94332fff53f6db9a695f2ff7e4b",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-26T01:57:23Z",
+        "url": "https://www.got2bwireless.com/financial-resume-template/"
+      },
+      "source_tokens": 640,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:911",
+      "sha256": "2008689f3acfe6fd8645b5a659002590e8c6686e4791981d154d5d99f79cdab0",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-26T13:57:40Z",
+        "url": "https://www.belmarrahealth.com/essential-oils-menopause-usage-risks-recipes/"
+      },
+      "source_tokens": 1181,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:917",
+      "sha256": "79e54eb79dac7c5dfa13656cd1a959499eb9d6b819e7815624170fc59acdbcb3",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-19T07:02:44Z",
+        "url": "https://ir.comstockcompanies.com/governance/board-of-directors/default.aspx"
+      },
+      "source_tokens": 1690,
+      "chunks_used": 3
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:921",
+      "sha256": "7d6d5e932fbe41107ff59ad4b42bcd51293d9c92c09c46793ddfba3f541230d6",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-20T22:52:04Z",
+        "url": "http://gorgeousbrownskin.com/2015/07/how-i-managed-to-get-my-acne-under-control/"
+      },
+      "source_tokens": 2760,
+      "chunks_used": 5
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:934",
+      "sha256": "34c11d1767bd964dd567a2a589381ff11f21fc4a70c1615bae238713e2b69682",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-26T16:22:36Z",
+        "url": "https://lesleysbooknook.blogspot.com/2019/02/texas-road-trip-day-nineteen.html"
+      },
+      "source_tokens": 1106,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:938",
+      "sha256": "1a7bb5873927bdf984bf7abf140ab969ebeecacce6cba97dd8105e32de32b7bf",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-18T18:19:46Z",
+        "url": "https://brightoncollege.com/programs/accounting-office/computerized-accounting-and-bookkeeping-diploma/"
+      },
+      "source_tokens": 874,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:946",
+      "sha256": "22f5c782d5df5bf26cad891ad269a6974f4117defb8213cf1320313578761271",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-20T02:48:09Z",
+        "url": "http://www.red-bottoms.us.com/choosing-invention-ideas-is-simple/"
+      },
+      "source_tokens": 587,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:967",
+      "sha256": "4a7897bd7ea74eec3306154214781973f0f632a8ea5e708b4ff699fc2e2dab87",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-23T23:00:56Z",
+        "url": "https://www.helis.com/database/news/aw159_ff/"
+      },
+      "source_tokens": 629,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:969",
+      "sha256": "296ca68f8dac6005ab8b886a29050ad54b79051ed9e5aa3b547445b3924a2cbb",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-24T06:10:35Z",
+        "url": "https://careertrend.com/how-2063499-become-tightrope-walker.html"
+      },
+      "source_tokens": 589,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:975",
+      "sha256": "435ded507fbb58062dadbb91ed4e2bc60cbe7086b30f0a812ac11a76e6a40088",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-24T20:19:45Z",
+        "url": "https://eveonline-japanwiki.com/backstory/amarr-succession"
+      },
+      "source_tokens": 766,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:985",
+      "sha256": "74c76c7abba90b08b7f9a994239321ab38a336ab1aa71dfe47f7e15e9afc42e2",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-18T18:36:50Z",
+        "url": "https://www.averagesalarysurvey.com/it-telecommunication-ii/norway"
+      },
+      "source_tokens": 1448,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:1000",
+      "sha256": "6f117b38e28d4729573d749765a1d209f4a03ff4d674f758ee3c9f40d85d80f4",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-23T18:13:07Z",
+        "url": "http://www.d2messageboard.com/showthread.php?t=94010&amp;s=9b3a30e7f44ebca6bdc3a1b43888f6d8"
+      },
+      "source_tokens": 906,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:1001",
+      "sha256": "7b8a9b35b31da6cba787e24dbe711c8589e7d638ad688f5ad2c0540923a18ee0",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-25T09:42:51Z",
+        "url": "https://thejournal.com/articles/1997/01/01/new-technology-training-method-brings-ga-educators-out-of-the-dark.aspx"
+      },
+      "source_tokens": 803,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:1016",
+      "sha256": "170d21a69551cbc424092c52f577905c652bee26e28ab36ece9fa8bd798b2167",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-23T22:19:15Z",
+        "url": "https://www.theravive.com/cities/il/christian-counseling-lincolnwood.aspx"
+      },
+      "source_tokens": 1195,
+      "chunks_used": 2
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:1017",
+      "sha256": "2e1a5045278486e30bc6e57af3afd2bdaeb58a0a60a63f7f63360956bc5924f0",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-19T18:26:26Z",
+        "url": "https://www.pon.harvard.edu/research_projects/affiliated-faculty/"
+      },
+      "source_tokens": 826,
+      "chunks_used": 1
+    },
+    {
+      "doc_id": "c4:en:validation:c4-en-validation-00000.json.gz:1019",
+      "sha256": "5b6b32a5cd281a372468af8360af8cac54a6602f911b088573f316bf186368b4",
+      "artifact": "c4_validation",
+      "source": "allenai/c4:en",
+      "source_split": "validation",
+      "source_metadata": {
+        "timestamp": "2019-04-20T09:13:52Z",
+        "url": "http://dslab.naist.jp/en/publication-e.html"
+      },
+      "source_tokens": 12958,
+      "chunks_used": 9
+    }
+  ],
+  "chunk_sha256": [
+    "74c9abce16eb29cfe76309aeb0d5ea30e3dc2b14ba02f3de6c3b6722bdf1ace7",
+    "350a5ea58c069222560fbb5886b74a00f263c6b8e1bb2215b0214fa4f0d46f56",
+    "d08487fc4e64330214c53a9d00e445c98a58fd1df1e74a690f504d111eaeb159",
+    "ba77834afd2dd183656686bd0f6e58a8613efbd36d3f60483f543c0ced9bc04c",
+    "6599b324c93d56a959a8fc54d79f2dff3ae307657bea5e97e114ee0405973bdc",
+    "a95611bb2203cf8f274e261c0a823ce97a39f24322d1d412c5124d8de13fb70e",
+    "b3986765f6ccc15ca88ce31f1476a82c23ad9558ce6002fc704dd6f2e6d1b316",
+    "3841a7bc41ccfeefc1e73ab567f6c8fd4c66650972fbaedb33c9bbfa49255e5e",
+    "0208c7d159fc808dfd5c596628b0aa80cb251397b6982042276e219af9faf1ca",
+    "a4916fee9fa28b33efa8fd9920919aa4d9ee276859933d7ff435af5d7651fb79",
+    "860da8eb86887ba51bfaaf791a321a5d8210d4a0bbd2b458776c67aed1644d69",
+    "50fe025e02a17e9e517aaba5bb5f996df0c58a0d9fec84cb1a155e4456173ac2",
+    "7b7df6bf8fa7851acb51128267af9a51669a12b67648d95df95461a5d262ef36",
+    "77d2bf9219116e9d16862807367d65ebe91277bf389252a4f6eb5bc64bb8e7ac",
+    "6f87f855153fe7ed8a56cf111f8b50ff577c7b561e5dafb0e833f4d45795f9b1",
+    "db8fcc09ed32cf775a4dedd9bb7886c74a295d0b665991da07fc75bd3145273a",
+    "279f7e5b37b835c23b0ba4828221217750969bc95579d01099c1d1e57fb2c51c",
+    "4888b6aca47422af7eb0a5007bf88e061d0a5e3969396c5f845ae9f91ff4a4db",
+    "0ff0dafb4f1f597a261e4f43721b149fbeab8708af3e1910b6844fc4dab2c1af",
+    "6f30c1d8e92d324cd4a89061a15fc37a423649547867bd991538c33e4cf19754",
+    "328519681e0f21af9cc21fc14fbca53c2eb3f9aa8e8e36fb75ce09a258f953a2",
+    "092a7e0aaa2abdd57c37f87150f73118d5d3bd680e29655f43fbf72c09990aae",
+    "3fbe749432b2c0a83a0f0775ec497b87d71a6c024ad01a19490afdd891590128",
+    "fa062d62695bb34ea40be5cc67a861566196a0efbe0df16e7c2d530f2148c99a",
+    "f2feeba78b06b60dcf0ce2ea6e2d92505e45ed068b9be55e4435c57016941145",
+    "6069c43144e4ab427873dc145f262fdc716e0e44c2855ef9f6fb9e84a6a55860",
+    "88e9a894ab51643e219ecaab3a55088b3e4d17b601c53f4d471cde5d01be6dff",
+    "238de39f2bbae2047e77559e5208d13cd0f6cc95e9a1e3294ff624c2d7d3122d",
+    "189e331ab33ff94ce85d9500dcb69bcca0022f24d89a09cf7e9db3e254137f6f",
+    "6adc4d85073793e748b0607a5cc0f6f7648363fca4d2a3f42d61730b22decff5",
+    "27f4cc11c66bffdae2c537d75d26df86579025c927274c054a3d334519f7e4ba",
+    "cf28d74e420066d383a55e560b91034101e6f5de8feda5a4dee6ed8125565ce6",
+    "a1abf906719b368750b9b7b53398850e094c47e27ef052a7f733f0f68c896345",
+    "ba3b11705230417ac0019d850333eb50c9487af869c0345dd53ba3c293b239af",
+    "917790803ba590695495f1c3741d55577147c32a30ad4900791b06232f758650",
+    "2e2dfb46638a4c5b992804d11a7df949ffb9213c12e40cf49ecdc1f806119272",
+    "31d12c2ce6054a34b3acb1981253b21add93dda708596a89dbec02bcf74c711a",
+    "94ad777cda8f226a18a68656a1485ea69bf84190ceb4f4294730326a768eb519",
+    "7365d58186ee7cef88e4dd7d25c3f2629479523daa48e569bf2e273733fd5ef1",
+    "1478798ca965386f42267a2b24889e8060219678cfc8cff37f5a4182782f18e1",
+    "8c642433d0c51a98f3c7c12ab019ae7a39d4ae8093f9baa07496a4ff9680a72a",
+    "d989428db1b434eb08655fd51852c3158e01284f0d1546874dad555536b8baf5",
+    "6f3af534cb4226af422ef8cc1faf28c82cceb72793f0ae5a8a168cab31ab2f7c",
+    "311cc78414285180337275ab64e5a936f57be6585e4cfc79988b7c7a2cacbc56",
+    "c0206f4ac6236f7d0ae90b7e7903c25e874f7cee2f12f854f90f868976ec2bfc",
+    "918257d19929b5181df8d1394e4b6e389456219949dc3b5c59948bf7f7d2959c",
+    "e8a205ef84de700ab31ab26c7841f4418622f33d52787300399819f379197a23",
+    "1deaf92ef94a1f78d7beed239bf85342d3c4e112d34c0229026f4c6f48c26fa9",
+    "83acdc11736fe8e86921a779317fcd041f732157f62ed2d27abd2f6928ddd6f2",
+    "5aee1f0cb79213c104a5b8cb3e14ddf5d6c838d6ff1a33e6ed453680426d3fde",
+    "246185cdab58fa55e064a4f9217aa65d7ae957e8958cd46092fc9d2e37dc6cec",
+    "a26335a42d4f71fc0d508384e2b0315d0e7369cadec70f4666209a15d590b92b",
+    "47d816d5917eff7dc9ecbc8b20b2be01e9f5d05bff1ed1dbc26fe8b3fd3d1c6a",
+    "7bd85a9556764193676471a46bf853afb4c2ba1ea998673ddb285fc67d1489c1",
+    "3f04a5ef0397dc48a1a8a23df8b8aa883c0d695cf1aef6df88fb8f196e57f4bc",
+    "0d37868c27e7099ee89d77c191054fde58e8595b35267141b9157581463c1719",
+    "48d844edb747de9f0368feb2d633e82244aa775a2f0bd71b1e2550780758b474",
+    "81679e44ea99526b19515dec57e9fda16159db6a130b39c4f0f7f4b21ba5c21e",
+    "4ea7da62bfc0af61b4f79706a7f2dc4719edf3f13567aac5c01bc794f0574f2e",
+    "5f13ca19c35ca59086267ea9c7ea9ea9af3155c10b175250879eb322660e336d",
+    "f492c8afc4a08c41f7c40587c1f617b8580d9cd82656396266977a9cda24fdbd",
+    "7e63cbf23ec2ac058bf786dc2dcaeb3675e03a5b616862456fe83088820d12b8",
+    "a58304e999d65aec169a2732b621d74768aa42a183c1a24395e48155ba896d42",
+    "6031187a1e48bc63c31ee4dd41aa665d8255fe84a8fb2a1957b346e3f5957f95",
+    "1b0f4ad4cc26aab0867d2d788a422c6ad4ab9dd4cfe3b92c226cf0e074a01c09",
+    "7e54f4858dbc108eeb6f4299d9cb18bb59e3d960be34de645425fe325d8556b4",
+    "fd7fe21f51ead6ac567f7fd5ff38fc28c59e5523102b6483c282efc6ee5e5b6c",
+    "a44e4f298c6f1b7649b062c8efbe7a7977cc435a1795cfa3a126376fbb458f17",
+    "500a8f649792355be6f1d2d401869a2ca7cc9b86629e9f0613c43050efe8c8fd",
+    "37a621064e994e85ca1532737bf0362a3532952bdd4799c7457c141fb061d99f",
+    "eccc693548bc3ffe0f17f262da3e61198c15e2af267a22ee1f8581cc95b7f903",
+    "542350c6f0847465459ef7719f7a942aeadef61fd10e050f9736cc5a1d496cdf",
+    "00dfbe66873f4238e44bb0d72befe57f2c6cf8417070213aa966602d1b276590",
+    "d0f2a411016af2dd41703ffc3409f65c54eeeee75c70b007b6f7c91e7ba5865e",
+    "521306631bbdaf0e69fc08d75852e5ad27e335b9040e72975f6dfe79c59982fb",
+    "a256a6805cde061969fec7ff689f578bfcbf4d3bad0683c1359ff725db64b0c8",
+    "8e4b31287c1e6d10148a254ebb8300de4b18bb916087b698a0dd9a59a4b87195",
+    "c53b3ba1b7c5c60cec99d5530ecb50fc5417717d3a09d8e9b5cb86c48484f710",
+    "87c92bc9d4a8d072791eec4aeecf3ba7661703abb5b6c38015b20d8e76165dea",
+    "4700762e12a408eae18a17b15b122e786c0f812c6a003b1200e0f653c6ab7d1d",
+    "576ebdbf3d94e66404e1822fecdbd18f8caa7e098d63c6b0e00bebee13664ec7",
+    "f2ac7d03a179864547f667ebbd35ce8e969532fac896b3ced902a8e2845585d4",
+    "e59b64bae5cd3a8ca98f363d81105e529b4780aff9d814ea05d2e029e9d2e288",
+    "0c7ac3f7932d008f6b388081f79162891bcff303c9ff4d7753d497a14612e2eb",
+    "9988da136a4bf0b70c2698e7cfef3d0e8dff5693041d9584a9bda5452b789e20",
+    "446c7cc2b9a659da39152aa503c7028223acd711385d08b103a78b3e8bf7d3dc",
+    "45faf7c3367d87d443a53ca2e126812eee60de4784df9edf5c3df148a25e09da",
+    "202cd37064cdfc923c217d5b19669fbc1c478976a3cfa2863350a330b1236d73",
+    "f7569b8286bad1f0d1b9fa252ca246537eb7a74711413964f9fd2e0ed5a39246",
+    "ef813f34f062f61ea7f1c51d9a3cf0ce385c89d724f9955e6e71ec29fb67ab15",
+    "15d9ef48e01386c9e639199e4e248ce03d84916a03cedf0fe6e67b99a9ee7b4e",
+    "60aa8efd97cc879b4eef27ec675dd8c7483141fc325a923bd3a9e0fe2ea32a70",
+    "2cd7f86b9fa175f4e4200cc54281df16157315c36531c88ae74798d95fd8562a",
+    "ea07457e1b208f145ece2ffe9b4a897f2eb2390facb7638c14177d89c22a8988",
+    "6ee5723c3b588dc253e73c61c15b62dfce4b13bef24ef9cdf1064a6b247fd098",
+    "f47c1c7d041013e368a17421aa65b7ca92c16dd4c55dd57b6ee31912848f21f0",
+    "0c7ef5e474783e9bbc9ccbec9d6ccb5107e87156e46018f186c453bebd784ba7",
+    "66d1cc31df96f3ead037986c9555f4ae39cef212e5e7f764f76db8894e809c59",
+    "1903a87bb43f63c959a0e648f49e824a31740f8fb1c2cc1f8e1801109192c872",
+    "e40c379655ae04252ed0c003b64c19dfd6140ee21ffc16d465063e5d5070c573",
+    "46eb9d77dc1e754e528edb69b37489f8a818fc18f7f90417da797011154e1edd",
+    "2f8b722db7de50d1c33ec2efd7ba88c3c91cf6fe71ecb1e2c11691f908a9b66b",
+    "45ccdb27569c4f1f8aeb8901837855f8065aa4b3746b30b0c832fa4dce57083d",
+    "f7b0a37afa882ea14cc5b7812e91130dea26ca04d2fef1572c36d559c34ccc52",
+    "3ece3a5657cf3367f52cdb2fdea1a856f69c0f51c3f25655c9ae881419a36026",
+    "00434c9549a392cd810592fcd2881015959ce2819e051ea65d484885134b2966",
+    "27d5cb7ed6601239dd308e8e5dcc4553814e5d8d03e3e2b5867b41b14849ba8d",
+    "6c67856985359fd787d52054d4be0cb9cd1dffcc6afa63aa22c58b2a02aa76e4",
+    "26fa45773737128128aac62d57a6bb41dc0d354ab74cddd43028abcf0c9d6dda",
+    "49df4d022e40893f5c0ab3af33dcd13ea4368e4f98ba825f619096ab3dc2b84f",
+    "17dc21e3d33bf93ff43fd7813b7a56c8c658f4b98f03e3281cb6d01a1d1e8a77",
+    "54b39715a50cfccb9589bc307f99aa8718d1d69b0879c884f5977f4eac4db834",
+    "e7a38cd26766d01b52feb4beed6227dcbc7f3651d08a23fbcde19721520e0023",
+    "439a73a6e296115577867de235879d2a358cb88117d1c909857bb9dc4b4aa3de",
+    "0eebaca5e56192142022e4ca977030c8190a29ad33beb14148c692172a825811",
+    "71b0c3e3d131b7ecf16c4e0f09da67a3d940a322db55dffe862129dd79884a8f",
+    "694b84bcba083f7534151beadb3bdac396b81873eacc4faa4f2278ceb2ba9583",
+    "555ccf1d51cb69613ca8bbee3cb0c8c66ad7f38f4a581977e07f74f922300aed",
+    "ce437de012c354330cbefa41e7569a050d0b2cc77430f67c9836c2b1eca77351",
+    "aedc753e82182b5fdaa5dc8e7136a9660daa8358f49d939b28eb2ad7af6822ca",
+    "39553bbd7e2e5107660fae84152136f4cf5767ce44a0805960d9d05c2c312cea",
+    "ff4ef2d06bc839a85a63db3819084d7b9584f6a85b3bdddfd63f8436f3a4fdce",
+    "63f2f1e322f551f9277cc85ec264452dbf8b7d3f68e0712d7367ae635a754752",
+    "ab9bf609761a56efb11966c1b41d82daef9b9992ffe743a6b41fb1e22bd98190",
+    "c63c5f6617c103f5b0b350d3ea587742f02c21920cb8b93c702f665e3bf33c5e",
+    "63aa79f87e7e7522649fbf2dd39f8314b7d2548d571325d650d6399401993502",
+    "76d256c8daa65bc79f042a2ac4ce884675865b531ce3155033a98c813922a64c",
+    "c769b83431ebf73a2c77cb5f60e9ab12ba4586e10aac4e8de4e06e57d21c7e64",
+    "118a29f1db61f1c747a3cdca764b737249f215fe69f2d92b6d3f177e89f24ef0",
+    "ba4103171e8f5a59e962cc9db67719376a2d732ba0e9c5df4b37aa9ed8ab2b0b",
+    "b572a50471af85b102e97669d0fc233e26bc12202fd9f5668ed6b9bf98a60c23",
+    "746ff509fd50e7f0c9575f7888a212452306e3e899c17e26dc32135beff9a7bf",
+    "3589b74e76265e8f9626d3f87a4b5858d0d7903d5111961e8373a136a9f8c632",
+    "8101d177b55c1e183dad708938605f4457480eaf75d988af0571077082ab02c5",
+    "1d8b2590f75744967ead6e9a2acd162d54bc3c1abe7dc9aea8c9f48b7bbdd8fa",
+    "69e34dfc51ee2c619169628d433ed643ce4d954e0d043bc23a57b687a57dc6a1",
+    "f4ae0640a2c251a11d4f3f68a5e5c8e7387cf24bb3fcb8b2a1dfdb769750523b",
+    "77b10a743300b5d4d93d8f045027bc1e234bcfa9f38acad856a89896ac4a46f3",
+    "dec9db64d7d6a9e6ba67d7bb77257941a84e22ae0e87eb90ba7be735f52bf096",
+    "3f5f40608adf42d08c3a4caeaa8033990d39a2df6eeed4bc2a4def4e9554ad0c",
+    "ddac89bb3483c0f573a5630ab2eb8153a4eca1289086a262f67e4fa6b529864b",
+    "a7e6b36a667aef58fb1fc01a5b101b8ac4bbb7351a867c9e7d5f8f7521278481",
+    "31a48a7ae42042af22f5dea1a702e866f0fae7d9afa54fa2effbd71fb59e3d3f",
+    "a9673193aeb708ded488dda591758d582a0747bbb2b25066936624cc943991f1",
+    "77c48ba9750d1de2ce157e5960aea1ffd4f7d42fe8e769b5cb36668a635a53bc",
+    "eee5b3751858fccfae2ba6d04f3b6f42c3f1595b0f057c33eb083ee5331dfa94",
+    "7d47b8332a589ab693b334bc95ffbf2c6e0ce8e3053ac6b2c60f4c478b89cee5",
+    "22ac19414333c09e3cad82c897311c5e95ccf744a24023c34f3f45ed38a27cda",
+    "84f1a8fb23f062329f1fe4c0f7734520e0e5d7fc87f55cab19699b311df9af2f",
+    "3ac67866814d21ae29f0c5d7645169e68241f1a0392fc3d169581ad6a2540cd0",
+    "cb4956b2695a4fc5907a87d5d05b842da17d26d561cff6655eded77e1bf0ead5",
+    "11109860b75d851fe42b2d6be70a824988c73ebf2445a5f07758761e48bcf437",
+    "484b1a3bebf83b217d370bb64acba57016beb7b3628dfa069e6fc4d502d79d60",
+    "77273017be4e5f99556ecfe78bd976ba711ee7e023577f74d667a3222a172f1b",
+    "16c267e119e56c28066e572907782169d6025c243e4a4843e7345e8001095162",
+    "0093ad5b1cbfcf83bd96e2983be73b9142acac5bd437f745a0db5d4eb0e9bc1b",
+    "259b08487c7009fa54c310a952310049900c9ec737f3cfafb333915fe07012dc",
+    "197058c1e5446f305501f707aafef43c55ad473bb144defa0049b1f8a1ad145a",
+    "b223636f3efb8758cf494cd97a66728848e3ced8e8387ee1d29c5dfa0275a8f8",
+    "4d9f84eed28fce16f172078e65b7dbe7a5a6765b06e77774b48c2802c96378d2",
+    "75f241aee7c3921e953f1272fe8b524b414806eaecf4d166897347d0cb1b5601",
+    "9b99ae8b4160babcdbc4c9ab0c186983444afaba20c77d84b9f4f23f9dc95980",
+    "e40fc94f1e0b3a7b789ed24c1f6f9151e2d9f823b0f1ec3b0337f0ea6c4b9376",
+    "ec5a20f39220e62278d06f3810aacdb2e023c464ade6f7f66502efead1d02790",
+    "e20a9327da5ba75789683007e6e1eb139fcc10e6b6e3c535446fd960c6a10046",
+    "56ba5691479616c8f673fc3d9d3bfa0fc1bd39d4b77f314ae5ba249b5a8ba71a",
+    "534e1c5b5e174248f528933a361930d6b53def2bfaf2495ffce734024c4be38e",
+    "f8ee750ba7a5b8f10053fd99dddae35ede6a76e7cff76a8f9a66ac414eaa48d0",
+    "6d1597973b8a2db6c23d18edf72492dd518d099bdaf244bdae4395932bbf36ed",
+    "d6aa74d9d3a25147a0a05e420374fe374bd6eccec027262f6d0182c08b249d23",
+    "68599d66d4d807c15897afe5e2b6d65d5173d3e5fae6bfa066618ce3bad6b7a7",
+    "5690084e35dfdfc84df18a1dbe659009f3903af128a6451768d54a8e9df5184e",
+    "41fad74d9902d1c4c006223dc47a22f2cf4712575d94c2b26c2cf78df60245fc",
+    "ee2a4c15a7eeff58325ee7e01936a348dd44217ab51c58822bc2a50398b57274",
+    "11c09449b3f8db4c118d69cb252d6cbbae01903d62a7a13a6e82e16798dc864a",
+    "3734bf37b95b5dcae27bcb3dae18a9ca77eb867b64d7b06d899c590393567b5c",
+    "337e24b26f859b14fee40bc858b27d2c91639ed381d46ffd4007d0825dffc820",
+    "33504707c84ac62ba278655f24fef249dccaaad2e0380e90dccfb5745ef89292",
+    "ec8a561a6e400d7dd0f49e5fb0bf1031f387fe4a8141922679d22b9fd473ff17",
+    "90f80cee4bca9616a9d7e793a38690511af7e93a3314a3b46af2ff9bbfee2306",
+    "5869c7b9d44c9d0025090e607af8936df4ea2f9b4cf86f964c071a4d115c0373",
+    "019e1a62579226f91eaaecd38cf2c3fba7020162851c16c06efe23b97af5cb16",
+    "3194ad3816deeaad3a5425e6b98b9ca84a7927bdce30ae254be04b6954ece698",
+    "9d3ef6c06f88b738fc26e2ba50aab82d36bca39ac17bc3d605e7198233f1bb84",
+    "74b2a0cfbb1be843abd068bb6473a2dc3e149ed67ffe2c4de79c2e56823b5dcc",
+    "bd67610535fa2df05802e8a68de1fccd327434e93f5f16d4ef66adf508517de1",
+    "071078ca4570cf77eebfad347d43a62a0e506c13f007ae23d31539d72ee7bb14",
+    "db811b51eefc1218d396b08cd35104c790e94be17d14ecc4804bd6fc565a044c",
+    "13465b18d3319046ed89f4703a7d6b5b8e64ca6d1eb478d951886c06dfb6ea99",
+    "423adbcfc1b08b1754783e43d8655dc9205523bc5495850871b304a95d40aa96",
+    "21658ad5c32a4ab0eb45f5644cc4b7466debe768acf41790229cdb902b7a2067",
+    "bbc83023c9223f9a99359d8154eaa677145e68ee2d8bdd5863fab3e7237fc261",
+    "ed22785dcbd312f98d6ee27ba0babcd0bc5e5b52eb48c7f80463643b826818d4",
+    "32e5503734b4a62c512ff3ceaa69a1813bf48e603e81115737fffa79af392fcc",
+    "e3d3084923612f7e4ddea33e7a5237db8d3fc886850cc9f5db1458f1d1c3fa4d",
+    "1791dcae7a0d467bdd10ff83fe9a7bf0483134e3759f56959c48ef9384ad55f5",
+    "938aeb97564ab42942c7cbd9ea9dc33356f3a36748f41f08a69785d36a8b3c4a",
+    "5eaa3080c20b9deaf3526a8dc31f021b900307e69ff06dfda89f7eb01fc57896",
+    "3ef3bca7ad55435259893f6943908fac2104ef899bdc644719437f5831316b2d",
+    "5e0f7c6d16be90a78481decc5c5012e72cdb2181050a74f9ac4bb45071f4656b",
+    "7df310874ab8680cf3ed4610077f215f753fda13e16f08c3e30c0044af20c0c0",
+    "dd6e8e66bb4637a6e523cfcd606cdd07f87701ab8c4c507c50ad54844dc23f58",
+    "73fc659831e0489b0e2c976cefe99efd509974932cd0034353600a9ca42e895d",
+    "f6694fa1b7c55108bf792780b91f84ab7adcf890a3353b594e15eb7364d13f5b",
+    "dcba21c7f167f6f4ab23fa057e3bb94ca247abf739ba0080fe78952b11228252",
+    "f7dea782502f3bf1deb37f8b1bc4b26872b7601ff63ff11e974e309d0822bd67",
+    "91911e6a3d735ec0cb9557b8f4390e279985a00b7eb82a55a790be2f21298d90",
+    "b296c0200b353d4e6bad67da97d9ca560271e86f88211ff814280414155c5a6b",
+    "31e9e018fe3cb75155f1cf1fe7771cd7138fafa4e9c7133583bdc960143370ff",
+    "590893260f29a292910565807c38e5cc94f5eec76de21cf64951bcd408e383a6",
+    "3e084571fffab38c3fb0c862459ece2f677e3185c0b3abb393292d34702ea914",
+    "b67e1b446e7ffcdde08eb00073bc535eadafae6c4f43e537d621edc285ed2b77",
+    "2a41cc72eabfcc6f502c4c3ff9ba011c643cef676ce5db7547b1153e417e1a81",
+    "04a24513cccc068ae81f12d2cc203cea3e2416e80d42e0387f0ccf55a7d42884",
+    "ae89f52ed4ca7dc379e2f66f2165a09b36e238a334eb8b89a862d2e8e927282f",
+    "020b092c1ebfbeacecdc0122485d94435eea9ebc876a762c37ccabf8d821f567",
+    "5428a946fb07f95a77ee01c77171520ffef7f89fedb1089899c632cbdba0c3de",
+    "92041ba3447a63f8e752e93ae234c79daa4528d8ded30b4b4c91eac64df5a38c",
+    "060eb97fcfdbd7f0fa9ee860edb3f93c04e025e808d02d959575f3bd9115a25b",
+    "d6c204daa0a8e196ae1dcc05af30e87957bee4cf1a293073c53c54711f188e09",
+    "7893d7a4c15f880238171b66cb605cd8074093f8ab7fb77a3a93fae2e688aa31",
+    "1a2f8ba93d3fc9616f29f517a03b60afac4fe12b1112a570972729601b095e21",
+    "b5b7f3ceda5b43ec00e63b37e8f943df4084111f1477a59d5d8a324c17d770d0",
+    "6ea29fe973f46f25c2035390225c93fc56011688365ab886c39e34444178c8c6",
+    "257b94f177f51bf0062eb9f0ec4f1276fa9097f112458fcacdb243397ce1a898",
+    "9782e1abf2148e6e7d4e2fd911908b03f761d9b2fca2427991be3d2849bbb2fd",
+    "616e3ae3cf23e95546c751afcd9a5ea7a5cce4988b7fb44a2fd45c34ebabdd88",
+    "df0d4ca34e76854320c889f9870879edaa0de4571fa994af583ccd8e32ecab9c",
+    "93a9be4dd5b02496c7cb9aa7b6d9aa80f836de336494bb8dea3325ee72aeb9e6",
+    "d08d05d96971d3cbd01288d55f3bf2f7a8543d2a024400198f710b21ab799624",
+    "87015c802b89823d5293399d7b21260a788eefb791362894cc0572d51644f79f",
+    "113386f2c9f33e814f9b488d41de881e463d836d7ce4dd54601e992a1a4b2d8a",
+    "301e6aaa589e76bcd761aeccd45712d47902332abce66f4a1059a50693070fdf",
+    "3417e4d9d1a7cd42720bb2bcb7e2e393028736475acd67c9d4c07849b6e4dc02",
+    "6fe516dfe181a211019d577d0c16ddfcdd0e03cefc0f1e84a74f031312abe8b9",
+    "fba8efd9b3f398ada0316bdf34430891d56ff142b2bd4dad6e232bb305acc62f",
+    "447e86e12614cc21be2ca49c670273bafb2017fa9ab96bc5a076a5ec510e8c07",
+    "1b061d868cae4ab53a8a838983d15388eaeb43c7522c94fff58cb64a09f22c09",
+    "0c813a63e2da9af5082f09e439f9943d2fe310b36ebc1ff755e38c1d4629617d",
+    "0504f0d494ae27eae8e443bffce58ad3e4087879fce522b4933c0e289abb5601",
+    "904a9ea968aeece4b76c44b638252cf8ffcc35df85d7684172cca535c91e15b8",
+    "09c04e6b9f54b91000e498cdfecbb7bac97b8bd3e513243e902f15523295a6a1",
+    "92b36cba86a4ee5b38a486417a21a79189fd73462471996fd1365cbba82febf1",
+    "8937c4058fdf870912a90802c4cf85381772dfeb51b3a7e9620a2a7b5a77f15f",
+    "31d9ed8bb50c131d9f3d033853aa50e22908ba0dd9412aebe07042e320b1383e",
+    "6e350b56174c1f1eacb90042e6f9aaff4a57f0037a64d3fb04a4f7930b48f43c",
+    "f9014ad816e633bd29a9f98d79cf9a409778201ae4b905e0288d501c26268a7a",
+    "05de461ecf0513a2f166beabb8ca716b9069474c3f95a69b0fb3d33f0b40e122",
+    "e24da8429c36bea2c20b30f51a0b3a709fa0f2732998f950fe025c5ff79de7dc",
+    "77872936f357fc85f944d082c2da080f473ab5a6ec893b326f3befa8dfa1fc6d",
+    "d91c8a3eec75627bb74de4863c65363a33bd539c6a9d6ce5bffdea0538070bbd",
+    "0f62761b05012abaed8538cc5d744b23f8521707dc484aec1a230ffd1a27917a",
+    "c073b4363dc8ae398356732c4b70ca00416eb6bfa57f7727e8947f7d1f1ad9e7",
+    "1e0b633306689826f5a7ed8bfb1100212ac2bfaf85a6fa9bf726e4fd2d39187b",
+    "bee4ea5748cddffc5d2674cfb6e996d9f35beb6931990116bf286b90abb2a641",
+    "f74d3ab77255e59e75dd55c2e570bd0e2971e8e4a0f396ac19afa88d41798b37",
+    "fbf1fa27e96cffe8f248eff0846641712fc235be9c7385add32ea2fb68259cd4",
+    "a05042005b5c83b04e317a84632e8202956d8fc33e998e6d1c05e4b9d6acadeb",
+    "d5cf58df1552391653187f55ce5307e5cb6eb78715dabf02e33ce2de5c6bba7a",
+    "dd244f5605d3045af56f804926fd25f40363154cc652114f2f1b5a3f14d332b9",
+    "8b6398dad92230c82b26aee5db76144a43c0316dee42b06692b5e828c03a7037",
+    "3753967fb7a3f560500819c16f6c80f777d2fd4f52984f8478ec9a4512c30aec",
+    "92f88743ae7c12dc0216271a1ede6c35251431a8f205f6edc0dff74b1ac166cd",
+    "6f9673cff48e65ce350eeaba4bbbdd7b4027902f0e826f248a74691d4ca1ceb6"
+  ],
+  "path": "artifacts/data/c4_validation.pt",
+  "sha256": "e888cdd26077d4886b9f7294c9b4aafed981ed6f06beef9ff139950879b5bfb2",
+  "chunks": 264,
+  "sequence_length": 512,
+  "raw_input_tokens": 135168,
+  "prediction_tokens": 134904,
+  "document_count": 123,
+  "tensor_dtype": "int32"
+}

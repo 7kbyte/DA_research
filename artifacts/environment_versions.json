@@ -1,0 +1,24 @@
+{
+  "python": "3.10.12",
+  "packages": {
+    "torch": "2.3.0a0+6ddf5cf85e.nv24.04",
+    "transformers": "4.46.3",
+    "datasets": "3.1.0",
+    "accelerate": "1.1.1",
+    "tokenizers": "0.20.3",
+    "pyarrow": "17.0.0",
+    "sklearn": "1.2.0",
+    "huggingface_hub": "0.26.2",
+    "numpy": "1.24.4",
+    "google.protobuf": "3.20.3",
+    "safetensors": "0.4.5"
+  },
+  "cuda": "12.4",
+  "gpu_count": 4,
+  "model_load": "CPU float32 okay",
+  "adamw_init": "okay",
+  "known_unrelated_dependency_conflicts": [
+    "cudf requires protobuf>=4.21, but unused by this experiment",
+    "preexisting torchtext exact torch build mismatch, unused"
+  ]
+}

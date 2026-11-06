@@ -1,0 +1,224 @@
+{
+  "method": "within-chunk order-sensitive polynomial rolling uint64 token ngram hashes",
+  "ngram_tokens": 13,
+  "fixed_chunk_match_fraction_threshold": 0.2,
+  "policy": "diagnostic report only; no loss measurements or filtering",
+  "reports": {
+    "c4_test": {
+      "finemath_train": {
+        "matching_ngram_occurrences": 0,
+        "total_ngram_occurrences": 132000,
+        "matching_occurrence_fraction": 0.0,
+        "chunks_at_or_above_threshold": 0,
+        "chunk_fraction_max": 0.0,
+        "flagged_chunk_indices": [],
+        "flagged_document_ids": []
+      },
+      "c4_candidate": {
+        "matching_ngram_occurrences": 7,
+        "total_ngram_occurrences": 132000,
+        "matching_occurrence_fraction": 5.303030303030303e-05,
+        "chunks_at_or_above_threshold": 0,
+        "chunk_fraction_max": 0.01,
+        "flagged_chunk_indices": [],
+        "flagged_document_ids": []
+      },
+      "finemath_validation": {
+        "matching_ngram_occurrences": 0,
+        "total_ngram_occurrences": 132000,
+        "matching_occurrence_fraction": 0.0,
+        "chunks_at_or_above_threshold": 0,
+        "chunk_fraction_max": 0.0,
+        "flagged_chunk_indices": [],
+        "flagged_document_ids": []
+      }
+    },
+    "c4_validation": {
+      "finemath_train": {
+        "matching_ngram_occurrences": 0,
+        "total_ngram_occurrences": 132000,
+        "matching_occurrence_fraction": 0.0,
+        "chunks_at_or_above_threshold": 0,
+        "chunk_fraction_max": 0.0,
+        "flagged_chunk_indices": [],
+        "flagged_document_ids": []
+      },
+      "c4_candidate": {
+        "matching_ngram_occurrences": 1,
+        "total_ngram_occurrences": 132000,
+        "matching_occurrence_fraction": 7.575757575757576e-06,
+        "chunks_at_or_above_threshold": 0,
+        "chunk_fraction_max": 0.002,
+        "flagged_chunk_indices": [],
+        "flagged_document_ids": []
+      },
+      "finemath_validation": {
+        "matching_ngram_occurrences": 0,
+        "total_ngram_occurrences": 132000,
+        "matching_occurrence_fraction": 0.0,
+        "chunks_at_or_above_threshold": 0,
+        "chunk_fraction_max": 0.0,
+        "flagged_chunk_indices": [],
+        "flagged_document_ids": []
+      }
+    },
+    "finemath_test": {
+      "finemath_train": {
+        "matching_ngram_occurrences": 4273,
+        "total_ngram_occurrences": 132000,
+        "matching_occurrence_fraction": 0.03237121212121212,
+        "chunks_at_or_above_threshold": 14,
+        "chunk_fraction_max": 1.0,
+        "flagged_chunk_indices": [
+          1,
+          65,
+          66,
+          67,
+          68,
+          119,
+          120,
+          121,
+          156,
+          157,
+          203,
+          212,
+          215,
+          216
+        ],
+        "flagged_document_ids": [
+          "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:175",
+          "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:197",
+          "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:5",
+          "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:105",
+          "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:122",
+          "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:40"
+        ]
+      },
+      "c4_candidate": {
+        "matching_ngram_occurrences": 0,
+        "total_ngram_occurrences": 132000,
+        "matching_occurrence_fraction": 0.0,
+        "chunks_at_or_above_threshold": 0,
+        "chunk_fraction_max": 0.0,
+        "flagged_chunk_indices": [],
+        "flagged_document_ids": []
+      },
+      "finemath_validation": {
+        "matching_ngram_occurrences": 714,
+        "total_ngram_occurrences": 132000,
+        "matching_occurrence_fraction": 0.005409090909090909,
+        "chunks_at_or_above_threshold": 3,
+        "chunk_fraction_max": 0.458,
+        "flagged_chunk_indices": [
+          65,
+          66,
+          68
+        ],
+        "flagged_document_ids": [
+          "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:40"
+        ]
+      }
+    },
+    "finemath_validation": {
+      "finemath_train": {
+        "matching_ngram_occurrences": 2872,
+        "total_ngram_occurrences": 132000,
+        "matching_occurrence_fraction": 0.021757575757575757,
+        "chunks_at_or_above_threshold": 10,
+        "chunk_fraction_max": 0.958,
+        "flagged_chunk_indices": [
+          2,
+          3,
+          4,
+          5,
+          27,
+          28,
+          110,
+          113,
+          116,
+          242
+        ],
+        "flagged_document_ids": [
+          "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:153",
+          "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00000.parquet:62",
+          "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00016.parquet:66",
+          "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00032.parquet:14",
+          "HuggingFaceTB/finemath:finemath-4plus:finemath-4plus-train-00048.parquet:3"
+        ]
+      },
+      "c4_candidate": {
+        "matching_ngram_occurrences": 0,
+        "total_ngram_occurrences": 132000,
+        "matching_occurrence_fraction": 0.0,
+        "chunks_at_or_above_threshold": 0,
+        "chunk_fraction_max": 0.0,
+        "flagged_chunk_indices": [],
+        "flagged_document_ids": []
+      }
+    },
+    "wikitext103_test": {
+      "finemath_train": {
+        "matching_ngram_occurrences": 0,
+        "total_ngram_occurrences": 264500,
+        "matching_occurrence_fraction": 0.0,
+        "chunks_at_or_above_threshold": 0,
+        "chunk_fraction_max": 0.0,
+        "flagged_chunk_indices": [],
+        "flagged_document_ids": []
+      },
+      "c4_candidate": {
+        "matching_ngram_occurrences": 0,
+        "total_ngram_occurrences": 264500,
+        "matching_occurrence_fraction": 0.0,
+        "chunks_at_or_above_threshold": 0,
+        "chunk_fraction_max": 0.0,
+        "flagged_chunk_indices": [],
+        "flagged_document_ids": []
+      },
+      "finemath_validation": {
+        "matching_ngram_occurrences": 0,
+        "total_ngram_occurrences": 264500,
+        "matching_occurrence_fraction": 0.0,
+        "chunks_at_or_above_threshold": 0,
+        "chunk_fraction_max": 0.0,
+        "flagged_chunk_indices": [],
+        "flagged_document_ids": []
+      }
+    },
+    "wikitext103_validation": {
+      "finemath_train": {
+        "matching_ngram_occurrences": 0,
+        "total_ngram_occurrences": 230500,
+        "matching_occurrence_fraction": 0.0,
+        "chunks_at_or_above_threshold": 0,
+        "chunk_fraction_max": 0.0,
+        "flagged_chunk_indices": [],
+        "flagged_document_ids": []
+      },
+      "c4_candidate": {
+        "matching_ngram_occurrences": 0,
+        "total_ngram_occurrences": 230500,
+        "matching_occurrence_fraction": 0.0,
+        "chunks_at_or_above_threshold": 0,
+        "chunk_fraction_max": 0.0,
+        "flagged_chunk_indices": [],
+        "flagged_document_ids": []
+      },
+      "finemath_validation": {
+        "matching_ngram_occurrences": 0,
+        "total_ngram_occurrences": 230500,
+        "matching_occurrence_fraction": 0.0,
+        "chunks_at_or_above_threshold": 0,
+        "chunk_fraction_max": 0.0,
+        "flagged_chunk_indices": [],
+        "flagged_document_ids": []
+      }
+    }
+  },
+  "reference_unique_ngram_counts": {
+    "finemath_train": 1880104,
+    "c4_candidate": 1015489,
+    "finemath_validation": 109395
+  },
+  "seconds": 1.4154458679258823
+}
