@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
 """Render a compact local status page from the saved experiment records."""
+import argparse
 import collections
 import datetime as dt
 import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--stage', help='Current operational description; does not change frozen protocol metadata.')
+args = parser.parse_args()
 now = dt.datetime.now(dt.timezone.utc)
 deadline = dt.datetime(2026, 11, 7, 3, 26, 32, tzinfo=dt.timezone.utc)
 started = deadline - dt.timedelta(hours=24)
@@ -15,7 +19,7 @@ lines = ['# 研究运行状态', '', f'更新时间：{now.isoformat()}',
          '截止时间：2026-11-07 03:26:32 UTC（北京时间11:26）',
          f'已用 {(now-started).total_seconds()/3600:.2f} 小时；剩余 {max(0,(deadline-now).total_seconds()/3600):.2f} 小时。',
          '', '以下状态来自运行日志。配置完成不等于实验完成；正式结论以最终研究报告为准。',
-         '', f"当前阶段：{protocol.get('stage', '进行中')}", '', protocol.get('note', ''),
+         '', f"当前阶段：{args.stage or protocol.get('stage', '进行中')}", '', protocol.get('note', ''),
          '', '| 调度阶段 | 完成 | 运行 | 待执行 | 失败/阻塞 |', '|---|---:|---:|---:|---:|']
 for path in sorted((ROOT/'logs').glob('*job_state.json')):
     try:
@@ -53,7 +57,15 @@ supplement_A_read = protocol.get('first_supplement_A_nll_read')
 if supplement_A_read and (ROOT / supplement_A_read).exists():
     receipt = json.loads((ROOT / supplement_A_read).read_text())
     lines.append(f"补充 A NLL 首次允许语义读取时间：{receipt['semantic_access_enabled_at_utc']}；"
-                 '完整126条件及固定验证选择的18条件已解封。B/C和行为分数仍须分别满足完整性与授权条件。')
+                 '完整126条件及固定验证选择的18条件已解封。')
+supplement_B_complete = ROOT / 'results/supplemental_analysis_v2/supplement_B_nll/COMPLETE.json'
+if supplement_B_complete.exists():
+    complete = json.loads(supplement_B_complete.read_text())
+    if complete.get('complete'):
+        receipt = json.loads(Path(complete['first_read_receipt']['path']).read_text())
+        lines.append(f"补充 B NLL 首次允许语义读取时间：{receipt['semantic_access_enabled_at_utc']}；"
+                     '完整60条件及其初始基线已通过完整性门禁，全部结果已解封。')
+lines.append('C和行为分数仍须分别满足完整性与授权条件；任务准备完成不代表分数已解封。')
 lines += ['', '## 当前数据与选参记录', '']
 for rel in ['artifacts/data/VERSION', 'artifacts/evaluation_v3/VERSION']:
     path = ROOT/rel

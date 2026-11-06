@@ -1,0 +1,64 @@
+{
+  "status": "prepared_only_root_review_required",
+  "created_at_utc": "2026-11-06T11:37:26.144821+00:00",
+  "source_sha256": {
+    "scripts/export_C_final_weights.py": "bc057d04298b91a8189dae58fb6189c19b69faf70c9c83298d7854bf1cc38390",
+    "tests/test_C_final_weight_export.py": "ae0449e658ba6d22bb22e7b5d66631426ea3fdf88103199ee211928c5b1b701b",
+    "docs/C最终权重导出预案.md": "1aeee6f9079042badf72cd0459acd100f031fd1e75c4b0a817d1389fd88ca00d",
+    "scripts/export_A_selected_weights.py": "426cbeea9ec04445fbbc168070f856aac3aab8dca5a21d9e1d9c9ef2d461861a",
+    "scripts/export_remaining_primary_endpoints.py": "eb7339e4224062f3d55bd0adcba467599e06035ac84172f53d954b7302a1473d",
+    "src/replay_study/weight_archive.py": "3c2bcf9e38773ae4f69c27f85f342356dbefcb53d817be4321da6e9c4e550e1a"
+  },
+  "preparation_review": "/tmp/grad-research-20261106/delivery/extended_C_final_v1/preparation_review.json",
+  "preparation_review_sha256": "fa38896f89b3080db25b777b23eddb6dd5c83f458af16f25c2964b8c7d504edc",
+  "static_preflight": "passed; all63 frozen run definitions and276 source files; no actual export",
+  "tests": {
+    "command": "CUDA_VISIBLE_DEVICES='' PYTHONPATH=src pytest -q tests/test_C_final_weight_export.py tests/test_A_selected_weight_export.py tests/test_weight_archive.py",
+    "passed": 59,
+    "wall_seconds": 1.25,
+    "additional_guards": [
+      "checkpoint/summary provenance",
+      "actual final exposure",
+      "model identity",
+      "FP32 teacher weight dtype"
+    ],
+    "additional_READY_scheduler_guards": [
+      "unpublished partial manifest not read",
+      "READY ready/status/id/mode/path/current bytes SHA",
+      "saved and current scheduler stop_requested_at rejected even null",
+      "actual argv equal frozen definition argv"
+    ]
+  },
+  "durable_410m_dependency_check": {
+    "passed": true,
+    "base_tensor_metadata": 292,
+    "base_files": 6,
+    "duplicated_base_members": 0,
+    "read_scope": "historical complete TAR acceptance plus current stat and pinned small manifest/ZIP metadata only"
+  },
+  "actual_encoded_models": 0,
+  "actual_shared_writes": 0,
+  "gpu_used": false,
+  "actual_export_started": false,
+  "entrypoint": "scripts/export_C_final_weights.py --execute",
+  "worker_lock": "/tmp/grad-research-20261106/delivery/.supplemental_weight_export.lock",
+  "A_running_code_unchanged": true,
+  "master_append_allowed": true,
+  "individual_frozen_definitions_checked": true,
+  "per_run_draft_fullphase_package_boundary_tested": true,
+  "final_alias_policy": "source-bound final per-pair equal=true only; false is independently encoded; no status-only inference",
+  "fullphase_source_and_identity_gate_required": true,
+  "optimizer_included": false,
+  "timers": {
+    "preparation_wall_seconds": 8.091580245643854,
+    "preparation_process_cpu_seconds": 8.069166142,
+    "semantics": "this preparation invocation only; no encoding"
+  },
+  "prepared_source_files": 281,
+  "revision": "READY_and_actual_scheduler_guards_v2",
+  "history_manifest": "artifacts/provenance/C_weight_export/pre_READY_guard_v1/history_manifest.json",
+  "history_manifest_sha256": "91176329da9e9d437e19985cc18b0adf20d719d3052470944493446e68ea6b4f",
+  "supersedes_source_sha256": "19d341a7964ed5831c19954b0ff20267272ea7ca580d85faacd0e3b9ab131fb9",
+  "root_launch_until": "2026-11-07T02:00:00Z",
+  "source_changed_only_for_root_requested_v2_guards": true
+}
