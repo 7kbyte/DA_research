@@ -1,0 +1,181 @@
+{
+  "model": "pythia-2.8b",
+  "model_revision": "2a259cdd96a4beb1cdf467512e3904197345f6a9",
+  "data_version": "extended_v1",
+  "model_provenance": {
+    "repo": "EleutherAI/pythia-2.8b",
+    "revision": "2a259cdd96a4beb1cdf467512e3904197345f6a9",
+    "training_step": 143000,
+    "path": "/tmp/grad-research-20261106/models/pythia-2.8b-final",
+    "weight_file": "/tmp/grad-research-20261106/models/pythia-2.8b-final/model.safetensors",
+    "bytes": 5684693096,
+    "sha256": "ab496f1c3fd79e3c749a9d5414136a2c8e4224f94eecb261970315cdb0f813fe",
+    "parameter_count": 2775208960,
+    "safetensors_header_valid": true,
+    "tensor_count": 484,
+    "metadata": {
+      "format": "pt"
+    },
+    "tokenizer_comparison": "artifacts/assets/extended_tokenizer_comparison.json",
+    "validation_scope": "download checksum, safetensors format/header, meta-device architecture initialization; no GPU or training"
+  },
+  "model_provenance_manifest_path": "/tmp/grad-research-20261106/worktree/artifacts/assets/extended_model_provenance.json",
+  "model_provenance_manifest_sha256": "5440ff0d942e3b43f03d4a4f0cd51854c80a1a7370101a6f8c74962a6ae8ecd8",
+  "source_code_sha256": {
+    "src/replay_study/__init__.py": "b2dce8cc5ea80a67a90b1798232163a7684874487b5ea4102e60851c7017f520",
+    "src/replay_study/analysis.py": "05d50004d60acdc4dc098d94f35a36fb1739f3f856267c7d2cdc35e02d96922c",
+    "src/replay_study/data.py": "e43c6f859db2815ff6b7dcd1a1d65fe71a3ca2621dd6564a3b0424595ab65c24",
+    "src/replay_study/evaluate.py": "d9648b4fbc891746a9bafe9e9639e2ee584521ba68bd949d2091484c833c3c46",
+    "src/replay_study/generate.py": "7415647d6d2f23e2f0e59f288dc544a21b8fb0eaa9069daf90e5ea949e607e33",
+    "src/replay_study/objectives.py": "9e0a319965bf486ebf721e3e662b6a474046e56c44dfab0d13590a20aedd98be",
+    "src/replay_study/selection.py": "88814e111aa5db1fb1009d90eba54c353a018fd6c1cbdda4ff4a148b57aa11b7",
+    "src/replay_study/tasks.py": "c631b1c81386193b645b59a3a82eb73dfacc6d9d1302b95e997f0de4afc47a51",
+    "src/replay_study/train.py": "fdfcf6aa12e4d9e60de48b817ce37c5646cb1169f28d971a421f91972543ab6d",
+    "src/replay_study/execution.py": "70ed6b3d63f950ffc00f2c671f20e0d842c154f4cbf1648fe9a6511bbd077bf5",
+    "src/replay_study/bank_variance.py": "901a58642b9970abb72281147d7cb7673c8c95868b290120ecc68815b46cdc4d",
+    "src/replay_study/behavioral_analysis.py": "18e6b57dc1914119743e87170637a46cf7e9b5d99ad704b42b3c0959e2a0e280",
+    "src/replay_study/lambda_analysis.py": "573416f6db4c0b79d8de59f4b8c7632755e193a3f5415692e9abfac0356e20c5",
+    "src/replay_study/weight_archive.py": "3c2bcf9e38773ae4f69c27f85f342356dbefcb53d817be4321da6e9c4e550e1a",
+    "scripts/run_train.py": "eae92291ad7d4a52717078e8764dc5a5440cba44b09dd0f1cfc46223317798de",
+    "scripts/run_evaluate.py": "6d7b9cd6b311f96e94b854e8ccd15f15f92ff9eefbd6b5a0dddc67fee8989ddf",
+    "scripts/make_experiments.py": "e6997abcb3c65afcfb2fd9fc1129877b1e4afc3f80ad49be3495aa99a6764df4",
+    "scripts/make_extended_experiments.py": "b26bad67c6f65ad13ccf0071495548c14e8bd395762830deb0770078b0f137a9",
+    "scripts/calibrate_extended_experiments.py": "c069647d9cc6c4c915b766c3f80974211be4ee21cc2cfc3e285cbce124711271"
+  },
+  "seed": 101,
+  "learning_rate_grid_completed": [
+    1e-05,
+    3e-05,
+    0.0001
+  ],
+  "groups": [
+    "B1",
+    "B2",
+    "B3",
+    "B4"
+  ],
+  "lambda_grid": [
+    0.05,
+    0.5,
+    1.0,
+    5.0
+  ],
+  "target_prediction_tokens": 2000000,
+  "replay_prediction_tokens": 100000,
+  "replay_ratio": 0.05,
+  "microbatch_size": 8,
+  "gradient_accumulation_steps": 8,
+  "learning_rate_selection_rule": "Minimum target validation NLL after exactly 2M prediction tokens; strict ties smaller LR",
+  "lambda_group_score": "(Ltarget-Ltarget_initial)+0.5*((Lc4-Lc4_initial)+(Lwikitext-Lwikitext_initial))",
+  "lambda_aggregate": "unweighted arithmetic mean across B1,B2,B3,B4",
+  "lambda_selection_rule": "minimum aggregate score; strict equal-score ties smaller lambda",
+  "validation_paths": {
+    "target": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_validation.pt",
+    "c4": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_validation.pt",
+    "wikitext": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_validation.pt"
+  },
+  "test_paths": {
+    "target": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_test.pt",
+    "c4": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_test.pt",
+    "wikitext": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_test.pt"
+  },
+  "validation_sha256": {
+    "target": "59b2bb2d89104652785915e08c45ad3f8815037461da5216de42408ccfbb3ea0",
+    "c4": "ee0389143e28fc8d0e2e3f1107674e7a8d8a178d324c350820223937d7bcb274",
+    "wikitext": "4018c33bd6e36b45aafcb5b5129ed18cbd480613ccbed0f8cdf57a02e8b0e85c"
+  },
+  "data_sha256": {
+    "artifacts/data_extended/finemath_train.pt": "d75095a4c1847f72168d7cad1fd56da8d82ac7f5b17c43673dd70ed7eae118b0",
+    "artifacts/data_extended/finemath_validation.pt": "59b2bb2d89104652785915e08c45ad3f8815037461da5216de42408ccfbb3ea0",
+    "artifacts/data_extended/c4_validation.pt": "ee0389143e28fc8d0e2e3f1107674e7a8d8a178d324c350820223937d7bcb274",
+    "artifacts/data_extended/wikitext103_validation.pt": "4018c33bd6e36b45aafcb5b5129ed18cbd480613ccbed0f8cdf57a02e8b0e85c",
+    "artifacts/data_extended/finemath_test.pt": "f19f802f985d929ecb3a623e3255785159b1fcb895c8f439bc037a7012d29718",
+    "artifacts/data_extended/c4_test.pt": "e81744326b66513afdfc02cc3b74b9c92908cd2359f13d0eac2b1a99bf516747",
+    "artifacts/data_extended/wikitext103_test.pt": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f",
+    "artifacts/data_extended/c4_candidate.pt": "c3c916aebcb185f2ea09690c51f2b37c7c4410793f95ce964e27157b9077b696"
+  },
+  "deterministic_algorithms": true,
+  "deterministic_warn_only": false,
+  "attention_backend": "auto",
+  "allow_tf32": true,
+  "cudnn_deterministic": true,
+  "cudnn_benchmark": false,
+  "model_weight_precision": "FP32",
+  "precision": "bf16",
+  "effective_batch_chunks": 64,
+  "evaluation_batch_size": 8,
+  "formal_target_prediction_tokens": 25000000,
+  "formal_eval_every_steps": 153,
+  "formal_eval_every_target_tokens_actual": 5003712,
+  "benchmark_status": "candidate microbatch8 accum8; matched throughput/batch selection record required before execution",
+  "source_pool_rule": "Frozen teacher of the same model/revision; extended C4 candidates; all banks model-specific",
+  "relationship_to_primary": "Extended target includes primary prefix; correlated robustness extension, not an independent replication",
+  "evaluation_rule": "Use matched data_extended val/test; main v3 cannot evaluate extended training contamination-free",
+  "test_scores_seen": false,
+  "launch_status": "prepared_not_authorized",
+  "created_at_utc": "2026-11-06T06:24:27.181412+00:00",
+  "shared_learning_rate": 1e-05,
+  "shared_lambda": 0.05,
+  "choices": {
+    "learning_rate": {
+      "path": "results/extended/pythia-2.8b/m8/learning_rate_selection.json",
+      "sha256": "705317d7fdbe06efccbddb2d071cc7a59947c70f860e9b1490620baa8bdca489"
+    },
+    "lambda": {
+      "path": "results/extended/pythia-2.8b/m8/lambda_selection.json",
+      "sha256": "f6f229f5e223e11f90cdb145227d42b70f665aa1252d3f16b8876231d657fd2a"
+    }
+  },
+  "configuration_version": 2,
+  "training_deadline_utc": "2026-11-07T00:00:00Z",
+  "original_formal_target_prediction_tokens": 50000000,
+  "formal_learning_rate_horizon_prediction_tokens": 25000000,
+  "resource_horizon_amendment": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/extended_2p8b_horizon_amendment.json",
+    "sha256": "a3ba8578807c9799ee753029bee8c84027816b890b05c7789e8ca7d5312044b7"
+  },
+  "batch_selection_record": {
+    "path": "results/benchmarks/pythia-2.8b_batch_recommendation.json",
+    "sha256": "87549af708de9ea9973be1549947bc3b9f5d9d99b65ad2ad511508d74735004d"
+  },
+  "initial_validation_path": "/tmp/grad-research-20261106/worktree/results/extended/pythia-2.8b/initial_validation.json",
+  "initial_validation_sha256": "6eeafad0dd429ce4a75a0470e7a5200a3353013dc0188c73f7dbac23733b8f5d",
+  "bank_sha256": {
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/c4_random_seed11.pt": {
+      "tensor": "7979f32f96bc76f74be01729d9405cbdd733917205e55a3a90aae13a5df0e559",
+      "manifest": "bd834d781ccdf9603290cab0b7146df489dd730d449b6fd544014ab11f286ee4"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_random_seed11.pt": {
+      "tensor": "aaee8b58da940e26d0d473cb6b1a13f79e62ae8c75410de8ae6075c11a178904",
+      "manifest": "29247d900700896032f99922cbfa6e53b1cfd8361a4a6c0ddc1d246989afdab5"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_nll_stratified_seed11.pt": {
+      "tensor": "6a7b844e1b61d5442feafb15e4fc62bfe91ca481ad7d98edda1e5efeb978dfa5",
+      "manifest": "7ff3d3ee7d0e0fc62f5fef311f1f6c1843c9690322538b315310ce41de9607b0"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/c4_random_seed22.pt": {
+      "tensor": "d645cbde6e566e357ff09ce27d1817e4c2739813f37e5ebeea98e110c80c3f81",
+      "manifest": "266f199adc2ee5e8b5d0bacc8ace1c2a66ec8104ec779033031e4dcf50c68df2"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_random_seed22.pt": {
+      "tensor": "d3a2132af8428bbd8e38579fef6759899e2481e161f26c0c7bc31ccd8657ae1b",
+      "manifest": "60b095bac26077dfa04c02ec340eac87a2fd6a6e11d78183ab81c4ace1569a61"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_nll_stratified_seed22.pt": {
+      "tensor": "eaec4bf48efd6117d1122808eec6388cb0c7147ecbbb85cc2b4432fa3dd87d55",
+      "manifest": "6055c0646eb32edb1e9a96a6ef3638e9f0212492ac640c3192a5f77b1b69a06d"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/c4_random_seed33.pt": {
+      "tensor": "8614e2a520e8512d937ae876e690cfc2e4f61d456bf5fda0eee55b8d44d6f58a",
+      "manifest": "92c30ebbc4fed1a07d97a0374337814638bcdfb06b44c03cfd0b882d30b472f6"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_random_seed33.pt": {
+      "tensor": "9cd8f508b0972efbb1ce77bcf55aa6c51d1a4d5d82353c51b435a7609b7bf90b",
+      "manifest": "0ca270a93a07b56cf4389c884f8cba577d855a8c47d0092a281ad120e089ed11"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_nll_stratified_seed33.pt": {
+      "tensor": "4a8f3d6932d1c4ce26d8599a5b11e0ddb4b6f1ca268bd8ef5532a26f287fa712",
+      "manifest": "1c1f2a612905a546458dc284f47f5c525f62b3e0cb15b24efd4aaca30f01f205"
+    }
+  }
+}

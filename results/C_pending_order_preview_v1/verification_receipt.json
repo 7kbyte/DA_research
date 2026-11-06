@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "utc": "2026-11-06T12:48:43.906027+00:00",
+  "preview": {
+    "path": "/tmp/grad-research-20261106/worktree/results/C_pending_order_preview_v1/preview.json",
+    "sha256": "24b25d5ba2418f825ee441aa08c22a2514d102a7d5008e1bd77a2ac577283502"
+  },
+  "checks": [
+    "All source copies byte SHA exact",
+    "All564 definition hashes match source state",
+    "All4 candidates preserve running/nonC/C410 positions and within-model relative order",
+    "All8 FIFO projections independently recomputed from frozen snapshot",
+    "Whole FIFO10percent once including all49 high rates",
+    "All63 actual/forecast starts inspected",
+    "Last4-only candidate has unchanged makespan and >1000seconds more launch headroom",
+    "Optional49 threshold checks true only for last4 candidate"
+  ],
+  "projections_recomputed": 8,
+  "live_master_queue_unchanged": true,
+  "verifier": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_order_preview_v1/verify_preview.py",
+    "sha256": "681e7e8a46e96994bfe271f4ad38f36fc8e510ff901a3b94ce24d1a0c3bdef21"
+  },
+  "score_semantics_read": false,
+  "GPU_queue_or_scheduler_started": false
+}

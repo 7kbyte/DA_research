@@ -1,0 +1,33 @@
+{
+  "status": "keep_early_C410_NLL_deferred_pending_real_READY_and_both_time_gates",
+  "decided_at_utc": "2026-11-06T12:35:17.074126+00:00",
+  "admission_amendment": {
+    "path": "/tmp/grad-research-20261106/worktree/results/C410_admission_amendment_v1/amendment.json",
+    "sha256": "eacb9d7e425ad9df5f897438205f98a1f8c563b72ee0b51aa2b1914258d18476"
+  },
+  "source_preview": {
+    "path": "/tmp/grad-research-20261106/worktree/results/C410_early_NLL_upperbound_v1/preview.json",
+    "sha256": "9d2b84c3d92aaa363690b5dcce010b4f6fb20fa2b30d147c9908b3b946d5c0ed"
+  },
+  "actual_master_pid": 2988506,
+  "actual_deadline_utc": "2026-11-07T00:00:00Z",
+  "actual_launch_margin_seconds": 1800,
+  "actual_stop_margin_seconds": 600,
+  "all_C_frozen_expected_seconds": 3600,
+  "actual_C_strict_latest_launch_utc": "2026-11-06T22:30:00Z",
+  "additional_optional_early_work_admission_headroom_seconds": 300,
+  "headroom_semantics": "Operational reserve for optional new early inference, not a statistical confidence bound; existing authorized C training continues.",
+  "new_early_work_required_gates": [
+    "Actual complete model-specific READY/source audits/manifest and queue available.",
+    "Under the high timing scenario, every remaining scientific training launch is at least300seconds before its actual strict master admission cutoff.",
+    "High-scenario whole master finishes at least900seconds before23:50 UTC and full30-minute final delivery tail remains.",
+    "Use fresh actual occupied slots and source-bound runtime; no doubled sensitivity/10percent and no unproved aliases."
+  ],
+  "new_GPU_or_queue_or_scheduler_changes": false,
+  "job_definitions_changed": false,
+  "scientific_horizons_or_cohorts_changed": false,
+  "main66_remains_deferred": true,
+  "old_B_completed_work_not_rewritten": true,
+  "old_previews_preserved_with_omission_documented": true,
+  "no_restart_or_margin_change_authorized": true
+}

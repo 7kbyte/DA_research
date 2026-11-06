@@ -1,0 +1,17 @@
+{
+  "status": "root_authorized_pending_order_only",
+  "authorized": true,
+  "decided_at_utc": "2026-11-06T12:55:46.465319+00:00",
+  "candidate": "last4_1b_after_2p8b",
+  "preview_sha256": "24b25d5ba2418f825ee441aa08c22a2514d102a7d5008e1bd77a2ac577283502",
+  "before_queue_sha256": "f9a05e3687c6d0c282180fa0f142770373120c92801087bc26b08128b6f56c42",
+  "after_queue_sha256": "b4a2c80b1d0ced8f47aa4bb79c41ba14594a7c446dd2ff2c8acfe93eb04edf99",
+  "producer_sha256": "1bccb2b7912d5acbec3b1a4f2cfdfe27322a71751bffaf08bb0f4252fa0ccd20",
+  "master_pid": 2988506,
+  "rationale": "At the same frozen runtime snapshot the last4 pending1B after2.8B candidate preserves projected whole makespan and increases strict22:30 admission headroom from4.374 to22.753minutes. This is an operational forecast, not a completion guarantee.",
+  "scope": "Only move existing pending raw JSON objects. Keep all564 definitions, all C410 and completed/running positions, all within-model orders, index, phase definitions, active master and workers unchanged. Require live lead-in and atomic file plus directory fsync.",
+  "early_NLL_authorized": false,
+  "main66_behavior_authorized": false,
+  "future_early_evaluation_requirement": "Real full-phase READY plus fresh high-scenario300second launch and900second finish reserve gates; no score-dependent scheduling.",
+  "risk_acknowledged": "The scheduler does not take the mutation lock; unchanged running and pending C410 lead-in ensures no affected task is dispatchable during publication. Forecast1B whole-phase completion moves later;2.8B moves earlier."
+}

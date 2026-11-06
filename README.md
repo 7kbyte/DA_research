@@ -11,7 +11,7 @@
 - [研究报告工作稿](研究报告.md)与[PDF预览](reports/研究报告_工作稿.pdf)
 - [主实验独立NLL结果](docs/主NLL测试结果讨论.md)与[补充A完整权重敏感性结果](docs/补充A_NLL完整结果.md)
 - [补充B的完整独立测试结果](docs/补充B_完整60run测试结果解释.md)与[验证结果](docs/补充B_完整60run验证结果解释.md)：60条件均已完成，比较固定生成池和训练流下的选库波动。
-- [文献调研](literature/文献调研.md)
+- [文献调研](literature/文献调研.md)与[三篇近邻工作的定位复核](docs/三篇近邻文献_实验定位复核备忘录_20261106.md)
 - [环境重建与移交](docs/环境重建与移交.md)
 - [已校验的共享盘快照](docs/durable_snapshot_latest.json)
 - 主36条件的final与best共72个逻辑端点均已持久保存：[best端点验收](docs/primary_best_weights_durable_publication.json)、[主比例24条件验收](docs/primary_weights_durable_publication.json)、[预算敏感性12条件验收](docs/budget_final_weights_durable_publication.json)及[恢复说明](docs/无损权重交付格式.md)

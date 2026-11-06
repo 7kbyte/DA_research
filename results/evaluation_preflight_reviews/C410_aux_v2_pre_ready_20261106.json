@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-11-06T13:00:13.215880+00:00",
+  "prepared_only": true,
+  "authority_issued": false,
+  "score_parsing": false,
+  "GPU_started": false,
+  "source_files_modified": false,
+  "source_sha256": [
+    {
+      "path": "docs/supplemental_aux_analysis_protocol_v2.json",
+      "sha256": "eed050602c368e5e4be87172ac4d208b890d9a7f7e9811ce1684ae62acc8f742",
+      "bytes": 59111
+    },
+    {
+      "path": "configs/supplemental_aux_analysis_commands_v2.json",
+      "sha256": "fb46ee08de3c578b0ba23d14f1d5191d8653bda66169f976f1b0aa7437b7765c",
+      "bytes": 30779
+    },
+    {
+      "path": "configs/supplemental_evaluation_preparation_v5.json",
+      "sha256": "90163f7a77529434c872f52f41d45151bf09826ddd17ab58ea48d21d16f3d186",
+      "bytes": 541219
+    },
+    {
+      "path": "scripts/analyze_supplemental_phase_v2.py",
+      "sha256": "a2f613babda5f1fd3b520259515b1acda90703ef42d3c7089c32c7e57497af3a",
+      "bytes": 20476
+    },
+    {
+      "path": "src/replay_study/supplemental_analysis_guard_v2.py",
+      "sha256": "64c89e37be3d595c239ad2683d72a85cdef6db776374ef6eeae28e23b97c3aea",
+      "bytes": 31353
+    },
+    {
+      "path": "src/replay_study/nll_v2_analysis.py",
+      "sha256": "356088e4a8bc82947d6287a8e712038426382efbf45f3a7006bf9eea18a1c59e",
+      "bytes": 34271
+    },
+    {
+      "path": "scripts/evaluation_plan.py",
+      "sha256": "1f68bab77a0e4d9953bcfa85306702dbc21d3ce5c85691218e06ea15df75196f",
+      "bytes": 40509
+    },
+    {
+      "path": "scripts/stat_bound_digest_cache.py",
+      "sha256": "9cc01b493b46a5bf391a7c649a379d87011fff077ddeea701eaf8a84bdb568e2",
+      "bytes": 9777
+    },
+    {
+      "path": "scripts/prepare_supplemental_evaluations.py",
+      "sha256": "dd641ed5d5d0ab750fb400e1fc2add313b4ea72a38d01aa4a7f3272fc8fee26d",
+      "bytes": 31927
+    }
+  ],
+  "protocol_bound_analysis_source_mismatches": [],
+  "C_ready_index_observed_at_utc": "2026-11-06T12:59:52.340546+00:00",
+  "C_status_observation": [
+    {
+      "id": "extended_pythia_410m_100m_nll",
+      "status": "waiting_training",
+      "ready": false
+    },
+    {
+      "id": "extended_pythia_410m_100m_behavior",
+      "status": "waiting_training",
+      "ready": false
+    },
+    {
+      "id": "extended_pythia_1b_100m_nll",
+      "status": "waiting_training",
+      "ready": false
+    },
+    {
+      "id": "extended_pythia_1b_100m_behavior",
+      "status": "waiting_training",
+      "ready": false
+    },
+    {
+      "id": "extended_pythia_2p8b_25m_nll",
+      "status": "waiting_training",
+      "ready": false
+    },
+    {
+      "id": "extended_pythia_2p8b_25m_behavior",
+      "status": "waiting_training",
+      "ready": false
+    }
+  ],
+  "C410_READY_exists": false,
+  "C410_equivalence_completion_exists": false,
+  "C410_contract": {
+    "checkpoints": [
+      "final",
+      "best"
+    ],
+    "family": "C",
+    "inference_policy_expect": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+      "allow_tf32_cudnn": true,
+      "allow_tf32_matmul": true,
+      "attention_backend": "auto",
+      "attention_implementation": "sdpa",
+      "batch_size": 16,
+      "cuda_version": "12.4",
+      "cudnn_benchmark": false,
+      "cudnn_deterministic": true,
+      "cudnn_sdp_enabled": true,
+      "deterministic_algorithms": true,
+      "deterministic_warn_only": false,
+      "device": "cuda:0",
+      "device_type": "cuda",
+      "effective_precision": "cuda_bfloat16_autocast",
+      "flash_sdp_enabled": true,
+      "gpu_name": "NVIDIA H100 80GB HBM3",
+      "math_sdp_enabled": true,
+      "max_length": 512,
+      "mem_efficient_sdp_enabled": true,
+      "model": "/tmp/grad-research-20261106/models/pythia-410m-final",
+      "model_weight_dtype": "torch.float32",
+      "precision": "bf16",
+      "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+      "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04"
+    },
+    "logical_endpoints": 48,
+    "mode": "nll",
+    "phase": {
+      "data_family": "extended_v1",
+      "expected_phase": "formal",
+      "model_tag": "pythia-410m",
+      "name": "extended_pythia_410m_100m",
+      "role": "extended",
+      "rows": 24
+    },
+    "scientific_identity": {
+      "data_family": "extended_v1",
+      "model": {
+        "path": "/tmp/grad-research-20261106/models/pythia-410m-final",
+        "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      },
+      "model_tag": "pythia-410m",
+      "test_data": {
+        "c4": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_test.pt",
+          "sha256": "e81744326b66513afdfc02cc3b74b9c92908cd2359f13d0eac2b1a99bf516747"
+        },
+        "target": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_test.pt",
+          "sha256": "f19f802f985d929ecb3a623e3255785159b1fcb895c8f439bc037a7012d29718"
+        },
+        "wikitext": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_test.pt",
+          "sha256": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f"
+        }
+      },
+      "training_data": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_train.pt",
+        "sha256": "d75095a4c1847f72168d7cad1fd56da8d82ac7f5b17c43673dd70ed7eae118b0"
+      },
+      "validation_data": {
+        "c4": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_validation.pt",
+          "sha256": "ee0389143e28fc8d0e2e3f1107674e7a8d8a178d324c350820223937d7bcb274"
+        },
+        "target": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_validation.pt",
+          "sha256": "59b2bb2d89104652785915e08c45ad3f8815037461da5216de42408ccfbb3ea0"
+        },
+        "wikitext": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_validation.pt",
+          "sha256": "4018c33bd6e36b45aafcb5b5129ed18cbd480613ccbed0f8cdf57a02e8b0e85c"
+        }
+      }
+    },
+    "source_proof_files": {
+      "/tmp/grad-research-20261106/worktree/artifacts/provenance/extended_v2_pythia_410m_m64_formal_input_snapshot.json": "5b065523d3a87235bf143ae144655589ea42591f71ef49e4dc430633954a029e",
+      "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal_active_registry.json": "c7f5c50d6794ba0df0dc3e071198da761f084ad9347ce5d9ce4dddf867ee48bd",
+      "/tmp/grad-research-20261106/worktree/configs/supplemental_evaluation_preparation_v4.json": "df35f09d35ddc5b9aab95e5e3cb42f7f042b86b5f87b81204a34ac83ed0f72a9",
+      "/tmp/grad-research-20261106/worktree/docs/extended_v2_pythia_410m_m64_formal_protocol.json": "15bb2daec1521413e80749fb99c0a324cf24ecf62d5d17d4accf845682772b31",
+      "/tmp/grad-research-20261106/worktree/docs/supplemental_evaluation_preparation_v4_execution.json": "2a78edb949667804cd45fc7dbd43dcd5baea01ed49ffa3f4d08aee50135d210a",
+      "/tmp/grad-research-20261106/worktree/results/extended_formal_freeze.json": "50786c00724008eed6a96cb753b442295152f9dea96d73a2c75f8fcf16033528",
+      "/tmp/grad-research-20261106/worktree/scripts/prepare_supplemental_evaluations.py": "dd641ed5d5d0ab750fb400e1fc2add313b4ea72a38d01aa4a7f3272fc8fee26d",
+      "/tmp/grad-research-20261106/worktree/scripts/prepare_supplemental_evaluations_v5.py": "f533a7e4b0104c7ab422d5a6836b740dd56ba04982907db091b7e2df03efa191",
+      "/tmp/grad-research-20261106/worktree/scripts/schedule_jobs.py": "c5c264b058ff655315ef896ccb0a89b471637c6612013a51999fc6f48b2d16d9",
+      "/tmp/grad-research-20261106/worktree/scripts/stat_bound_digest_cache.py": "9cc01b493b46a5bf391a7c649a379d87011fff077ddeea701eaf8a84bdb568e2"
+    },
+    "source_registry": {
+      "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal_active_registry.json",
+      "sha256": "c7f5c50d6794ba0df0dc3e071198da761f084ad9347ce5d9ce4dddf867ee48bd"
+    }
+  },
+  "count_scenarios": {
+    "logical_training_conditions": 24,
+    "logical_final_best_endpoints": 48,
+    "no_other_reuse_and_no_proved_alias_forward_jobs_including_initial": 49,
+    "only_six_D_B4_endpoint_aliases_all_true_forward_jobs_including_initial": 43,
+    "physical_training_runs_unchanged": 24,
+    "future_actual_manifest_is_count_authority": true
+  },
+  "matched_extended_baseline": "One separately matched extended_v1 initial expected. Primary main_v3 NLL initial differs in evaluation inputs; no cross-data-family baseline substitution.",
+  "cache_snapshot_observation": {
+    "progress_updated_at_utc": "2026-11-06T12:59:52.349138+00:00",
+    "snapshot": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/digest_cache_snapshot_1793969992341778455.json",
+      "sha256": "b006a386890cf47d6a5ca9647a194404aa4f4b26425013a96431490b23607762"
+    },
+    "snapshot_bytes_sha_verified": true,
+    "bound_to_future_analysis_plan": false,
+    "future_rule": "Choose and explicitly bind latest immutable verified snapshot only after real READY; complete CP allowlist expectedSHA plus stable full-read receipt/current five-stat, missing entries fresh fallback."
+  },
+  "timer_review": {
+    "usr_bin_time_exists": false,
+    "available": "Bash time reserved keyword",
+    "tiny_CPU_only_timer_format_smoke_passed": true,
+    "documented_command_blocks_bash_syntax_passed": 2,
+    "scope": "parent measurement of entire analyze child command, includes internal gate/collect/plots, child/descendant user and sys CPU; no waiting calendar or nested guard added twice",
+    "actual_C_analysis_timing_measured": false
+  },
+  "remaining_conditions": [
+    "24 real training sources and both endpoints complete",
+    "per-model source audit plus six complete-state endpoint comparisons with genuine CP/source SHA and actual exposure binding",
+    "real v5 READY/manifest/queue/source proof frozen",
+    "explicit after-READY snapshot and real immutable prepared analysis plan",
+    "whole physical/reuse/priorbaseline/logical alias closure completed rc0 with fresh output/attestation integrity",
+    "root TRUE authority exact plan/protocol/READY/manifest/counts/cache-policy binding",
+    "one analyze invocation with immutable first-read and complete outer process timing"
+  ],
+  "output": {
+    "path": "docs/C410_NLL解封前运行清单_20261106.md",
+    "sha256": "777b9f713307ddad72f317728699b23f588e89b90f546a92868889832e44b473",
+    "bytes": 6384
+  }
+}
