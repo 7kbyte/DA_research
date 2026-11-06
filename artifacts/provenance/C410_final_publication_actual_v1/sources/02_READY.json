@@ -1,0 +1,182 @@
+{
+  "status": "ready",
+  "ready": true,
+  "id": "extended_pythia_410m_100m_nll",
+  "mode": "nll",
+  "phase_spec": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_nll/phase_spec.json",
+    "sha256": "bc1f0429b196e400593737d8ebf39f7ac2ec43d0a72fe86c79c8c42590a3df3d"
+  },
+  "queue": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_nll/queue.json",
+    "sha256": "d94df2358c0e2c644135b7071f95ae7adc6fd09ed74609437133a380eabb968d"
+  },
+  "manifest": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_nll/manifest.json",
+    "sha256": "48f8b2235c303211e4f79a92c16c7fb1c8d3757ce5d66a97a555fba7dfcf8f32"
+  },
+  "workload": {
+    "logical_runs": 24,
+    "physical_training_runs": 24,
+    "logical_checkpoint_endpoints": 48,
+    "adapted_inference_jobs": 42,
+    "initial_baselines": 1,
+    "reused_initial_baselines": 0,
+    "reuse_materialization_jobs": 0,
+    "total_inference_jobs": 43,
+    "total_queue_jobs": 43,
+    "avoided_duplicate_inferences": 6,
+    "by_baseline_group": {
+      "3aedc05b62a7fc71ec81a6d1c94aea9836be91805de091599448b2e9857e437b": {
+        "model_tag": "pythia-410m",
+        "policy": {
+          "model": "/tmp/grad-research-20261106/models/pythia-410m-final",
+          "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+          "batch_size": 16,
+          "max_length": 512,
+          "device": "cuda:0",
+          "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+          "cuda_version": "12.4",
+          "gpu_name": "NVIDIA H100 80GB HBM3",
+          "precision": "bf16",
+          "device_type": "cuda",
+          "effective_precision": "cuda_bfloat16_autocast",
+          "attention_implementation": "sdpa",
+          "attention_backend": "auto",
+          "deterministic_algorithms": true,
+          "deterministic_warn_only": false,
+          "allow_tf32_matmul": true,
+          "allow_tf32_cudnn": true,
+          "cudnn_deterministic": true,
+          "cudnn_benchmark": false,
+          "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+          "flash_sdp_enabled": true,
+          "mem_efficient_sdp_enabled": true,
+          "math_sdp_enabled": true,
+          "cudnn_sdp_enabled": true,
+          "model_weight_dtype": "torch.float32"
+        },
+        "adapted_inferences": 42,
+        "initial_inferences": 1,
+        "per_inference": {
+          "corpora": {
+            "target": {
+              "prediction_tokens": 500269,
+              "raw_input_tokens": 501248,
+              "chunks": 979
+            },
+            "c4": {
+              "prediction_tokens": 500269,
+              "raw_input_tokens": 501248,
+              "chunks": 979
+            },
+            "wikitext": {
+              "prediction_tokens": 270319,
+              "raw_input_tokens": 270848,
+              "chunks": 529
+            }
+          },
+          "teacher_kl": true,
+          "forward_multiplier": {
+            "initial": 1,
+            "adapted": 2
+          },
+          "note": "Teacher forward is nested in evaluation wall time; never add it again"
+        }
+      }
+    },
+    "scheduler_allowance_seconds": 7740,
+    "scheduler_allowance_per_job_seconds": 180,
+    "cost_formula": "sum_g(initial_count_g * measured_initial_seconds_g + adapted_count_g * measured_adapted_seconds_g); add separately measured CPU verification/materialization wall time",
+    "estimate_available": false,
+    "allowance_is_measured_cost_estimate": false,
+    "wall_seconds_are_not_gpu_seconds": true
+  },
+  "logical_endpoints": 48,
+  "source_model_equivalence": {
+    "required": true,
+    "completion": {
+      "path": "/tmp/grad-research-20261106/worktree/results/extended_phase_equivalence/extended_v2_pythia_410m_m64_formal/completion.json",
+      "sha256": "67802f0080d8b1a8ff5bc6aa47a3deed13e7660d1c24b88d67b3a7cb27465d18"
+    },
+    "audit": {
+      "path": "/tmp/grad-research-20261106/worktree/results/extended_phase_equivalence/extended_v2_pythia_410m_m64_formal/audit.json",
+      "sha256": "7f007b2a372a06c0a2ca02ee3856e5414b9f679533a348f8e5cd8841459ec472"
+    },
+    "proofs": [
+      {
+        "path": "/tmp/grad-research-20261106/worktree/results/extended_phase_equivalence/extended_v2_pythia_410m_m64_formal/final_model_equivalence_proofs.json",
+        "sha256": "aa5c1ce9a5d2797ca10ee4c60686d26ba8d9a65f99b0e8e889e3bef5d225ffa8"
+      },
+      {
+        "path": "/tmp/grad-research-20261106/worktree/results/extended_phase_equivalence/extended_v2_pythia_410m_m64_formal/best_model_equivalence_proofs.json",
+        "sha256": "423be07d69fe5157541bd82896077cdf6de839aebde54e5deb1913843f0d4303"
+      }
+    ],
+    "comparisons": [
+      {
+        "endpoint": "final",
+        "seed": 11,
+        "bitwise_model_state_equal": true,
+        "left_run_id": "extended_v2_pythia_410m_m64_formal_B4_s11_w0p05",
+        "right_run_id": "extended_v2_pythia_410m_m64_formal_D_s11_w0p05",
+        "left_checkpoint_sha256": "6a8ee71a6cea60f11348fdff414247456815ae01c7cb4669b3506e123ad24372",
+        "right_checkpoint_sha256": "487ca56d8dcd9e1d3a8a0d71bb99d3070e16e81522e8a9ac07f2fde88bee83b7"
+      },
+      {
+        "endpoint": "final",
+        "seed": 22,
+        "bitwise_model_state_equal": true,
+        "left_run_id": "extended_v2_pythia_410m_m64_formal_B4_s22_w0p05",
+        "right_run_id": "extended_v2_pythia_410m_m64_formal_D_s22_w0p05",
+        "left_checkpoint_sha256": "030a729723e4e6f524ddf70714710800fce85b35f78bd735328589cc281a6849",
+        "right_checkpoint_sha256": "8047588292ae325bd3f2aa24d22e074d8b3eacf9f8711c29e35687d2119c3478"
+      },
+      {
+        "endpoint": "final",
+        "seed": 33,
+        "bitwise_model_state_equal": true,
+        "left_run_id": "extended_v2_pythia_410m_m64_formal_B4_s33_w0p05",
+        "right_run_id": "extended_v2_pythia_410m_m64_formal_D_s33_w0p05",
+        "left_checkpoint_sha256": "b45f6714cf8fcd2037e331097b71b29ce4a23bdc853f1ba3efbe3a90576d758f",
+        "right_checkpoint_sha256": "53e722782f459124e07dca86f74c466089d40e16fd201cfde94261c515c31155"
+      },
+      {
+        "endpoint": "best",
+        "seed": 11,
+        "bitwise_model_state_equal": true,
+        "left_run_id": "extended_v2_pythia_410m_m64_formal_B4_s11_w0p05",
+        "right_run_id": "extended_v2_pythia_410m_m64_formal_D_s11_w0p05",
+        "left_checkpoint_sha256": "37999522b8a1bff0ebaf8472e0759b1cd9496d7302e18950c012030315bdefd0",
+        "right_checkpoint_sha256": "8965ccb277ae4252ac6e88a97ffd680c11dd2db7be23b4a3bd2de03a22311ab4"
+      },
+      {
+        "endpoint": "best",
+        "seed": 22,
+        "bitwise_model_state_equal": true,
+        "left_run_id": "extended_v2_pythia_410m_m64_formal_B4_s22_w0p05",
+        "right_run_id": "extended_v2_pythia_410m_m64_formal_D_s22_w0p05",
+        "left_checkpoint_sha256": "d96d3626ac0dbf1fb1f2d9f26efa696844195450bdb9d4fd3ef2434fced818b0",
+        "right_checkpoint_sha256": "ac29bdec89a18d45952100500f95ad622387123b4323ed85236aff179c17d298"
+      },
+      {
+        "endpoint": "best",
+        "seed": 33,
+        "bitwise_model_state_equal": true,
+        "left_run_id": "extended_v2_pythia_410m_m64_formal_B4_s33_w0p05",
+        "right_run_id": "extended_v2_pythia_410m_m64_formal_D_s33_w0p05",
+        "left_checkpoint_sha256": "2ac75221f3fe3e1877039ea5db5436c576f68e2c4602645bf20489b8c1b16f48",
+        "right_checkpoint_sha256": "7f0107c78b3d26b7703a72d93a0a26aef1b6128a3df55c6ca084426f8b21a541"
+      }
+    ],
+    "all_pairs_bitwise_equal": true,
+    "equal_pairs_by_endpoint": {
+      "final": 3,
+      "best": 3
+    },
+    "unequal_pairs": [],
+    "alias_rule": "Only individually bitwise-equal, actual-checkpoint-SHA-bound endpoint pairs may share inference; all other endpoints remain distinct"
+  },
+  "model_inference_started": false,
+  "scheduler_started": false
+}
