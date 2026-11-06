@@ -1,0 +1,40 @@
+{
+  "status": "CPU_preparation_accepted_pending_actual_complete_READY",
+  "at_utc": "2026-11-06T14:12:25.847442+00:00",
+  "source_full_read": true,
+  "actual_READY_schema_comparison": "Existing v5 B manifest/READY and frozen C proof-watcher producer schema only; C READY does not yet exist",
+  "root_full_CPU_suite": {
+    "passed": 724,
+    "pytest_seconds": 26.5
+  },
+  "actual_C410_preflight_or_enqueue_run": false,
+  "score_semantics_read": false,
+  "new_GPU_work": false,
+  "scope": "Single actual complete C410 phase insertion proposal only; both existing ROOT admission reserves remain required; output is never authority",
+  "files": [
+    {
+      "path": "scripts/preflight_C410_ready_nll.py",
+      "sha256": "445e9499827b9da0362f1836c985f7b86d5a837508510f7f78bf9c5dd055f2d4"
+    },
+    {
+      "path": "tests/test_C410_ready_nll_preflight.py",
+      "sha256": "2801c6cffcc048bc38105c122b724a0305878cff6c9a3305603ce556ca78ffe0"
+    },
+    {
+      "path": "docs/C410_READY后纯时间预检.md",
+      "sha256": "7da3b1cee4ba27285613b43aefceff72ed1046d9358908df6003c1e6afc96bde"
+    },
+    {
+      "path": "docs/C完整结果解释框架_解封前.md",
+      "sha256": "edec0545dff68ea3dd6a9190af416e8bcd0eb59733866f140f5d184ca0c8460a"
+    },
+    {
+      "path": "results/C_interpretation_preparation_v1/receipt.json",
+      "sha256": "f3cff2d637770180902a2a89f8a990714432880f96caf5d2a38a879de7ffecf8"
+    },
+    {
+      "path": "logs/tests_after_C410_preflight_and_primary_behavior_wrapper_full.log",
+      "sha256": "f30ed88d5388f4e79fe87c6a66ba8082cfce21c0994304a93753264854578372"
+    }
+  ]
+}

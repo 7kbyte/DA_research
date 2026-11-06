@@ -1,0 +1,26 @@
+usage: preflight_C410_ready_nll.py [-h] --ready READY --ready-sha256
+                                   READY_SHA256 --manifest MANIFEST
+                                   --manifest-sha256 MANIFEST_SHA256
+                                   --phase-queue PHASE_QUEUE
+                                   --phase-queue-sha256 PHASE_QUEUE_SHA256
+                                   [--runtime RUNTIME] [--state STATE]
+                                   [--master-queue MASTER_QUEUE]
+                                   --master-queue-sha256 MASTER_QUEUE_SHA256
+                                   [--master-pid MASTER_PID] --output OUTPUT
+
+Read-only, actual-READY C410 NLL timing preflight. Never enqueue or authorize.
+
+options:
+  -h, --help            show this help message and exit
+  --ready READY
+  --ready-sha256 READY_SHA256
+  --manifest MANIFEST
+  --manifest-sha256 MANIFEST_SHA256
+  --phase-queue PHASE_QUEUE
+  --phase-queue-sha256 PHASE_QUEUE_SHA256
+  --runtime RUNTIME
+  --state STATE
+  --master-queue MASTER_QUEUE
+  --master-queue-sha256 MASTER_QUEUE_SHA256
+  --master-pid MASTER_PID
+  --output OUTPUT

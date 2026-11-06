@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "status": "prepared_and_synthetic_CPU_tests_passed",
+  "created_at_utc": "2026-11-06T14:09:49.783013+00:00",
+  "sources": {
+    "scripts/preflight_C410_ready_nll.py": {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/preflight_C410_ready_nll.py",
+      "sha256": "445e9499827b9da0362f1836c985f7b86d5a837508510f7f78bf9c5dd055f2d4"
+    },
+    "tests/test_C410_ready_nll_preflight.py": {
+      "path": "/tmp/grad-research-20261106/worktree/tests/test_C410_ready_nll_preflight.py",
+      "sha256": "2801c6cffcc048bc38105c122b724a0305878cff6c9a3305603ce556ca78ffe0"
+    },
+    "docs/C410_READY后纯时间预检.md": {
+      "path": "/tmp/grad-research-20261106/worktree/docs/C410_READY后纯时间预检.md",
+      "sha256": "7da3b1cee4ba27285613b43aefceff72ed1046d9358908df6003c1e6afc96bde"
+    }
+  },
+  "pinned_inputs_match": {
+    "scripts/reconcile_main_behavior_runtime.py": {
+      "expected": "17d9b7839aef14e8c073124489c455d67512033f6de7658029411e88047a6f17",
+      "actual": "17d9b7839aef14e8c073124489c455d67512033f6de7658029411e88047a6f17",
+      "matches": true
+    },
+    "scripts/schedule_jobs.py": {
+      "expected": "c5c264b058ff655315ef896ccb0a89b471637c6612013a51999fc6f48b2d16d9",
+      "actual": "c5c264b058ff655315ef896ccb0a89b471637c6612013a51999fc6f48b2d16d9",
+      "matches": true
+    },
+    "scripts/handoff_evaluation.py": {
+      "expected": "bbe5a14e16bde55362aa3a7edc044b35ed8a7e2d0966a8b40692513b6c3a748a",
+      "actual": "bbe5a14e16bde55362aa3a7edc044b35ed8a7e2d0966a8b40692513b6c3a748a",
+      "matches": true
+    },
+    "results/evaluation_timing_budget_v5.json": {
+      "expected": "940a0a0651cc7dd20da16d46321d8d4cac6b4dbbf7dd3e1ba6fbdd787e0b8f7d",
+      "actual": "940a0a0651cc7dd20da16d46321d8d4cac6b4dbbf7dd3e1ba6fbdd787e0b8f7d",
+      "matches": true
+    },
+    "configs/supplemental_evaluation_preparation_v5.json": {
+      "expected": "90163f7a77529434c872f52f41d45151bf09826ddd17ab58ea48d21d16f3d186",
+      "actual": "90163f7a77529434c872f52f41d45151bf09826ddd17ab58ea48d21d16f3d186",
+      "matches": true
+    },
+    "results/extended_formal_freeze.json": {
+      "expected": "50786c00724008eed6a96cb753b442295152f9dea96d73a2c75f8fcf16033528",
+      "actual": "50786c00724008eed6a96cb753b442295152f9dea96d73a2c75f8fcf16033528",
+      "matches": true
+    },
+    "docs/C410_early_NLL_admission_ROOT_decision.json": {
+      "expected": "885f0532301cc7a09f2b736763651a7216579378afaca1f7f55eabc9d0cfac02",
+      "actual": "885f0532301cc7a09f2b736763651a7216579378afaca1f7f55eabc9d0cfac02",
+      "matches": true
+    }
+  },
+  "commands": [
+    {
+      "argv": [
+        "python",
+        "-m",
+        "py_compile",
+        "scripts/preflight_C410_ready_nll.py"
+      ],
+      "returncode": 0,
+      "wall_seconds": 0.03891417011618614,
+      "log": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_ready_nll_preflight_preparation_v1/check_0.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "python",
+        "scripts/preflight_C410_ready_nll.py",
+        "--help"
+      ],
+      "returncode": 0,
+      "wall_seconds": 1.3175115659832954,
+      "log": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_ready_nll_preflight_preparation_v1/check_1.log",
+      "log_sha256": "59bc8486ed2e6349b390867483d63287971c740bee05a2faa85125648c692bf3"
+    },
+    {
+      "argv": [
+        "python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_C410_ready_nll_preflight.py"
+      ],
+      "returncode": 0,
+      "wall_seconds": 1.6172095239162445,
+      "log": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_ready_nll_preflight_preparation_v1/check_2.log",
+      "log_sha256": "8169545d95d465b1910788bdf4cd9abb3b1993acac1e49d603e3dc198eb2b89d"
+    }
+  ],
+  "verification_driver_wall_seconds": 2.9737691916525364,
+  "verification_driver_self_process_cpu_seconds": 0.0016556420000000058,
+  "verification_timer_scope": "Only compile/help/synthetic pytest subprocess stages; excludes preparation/edit/review and receipt serialization. Stage walls are nested in driver wall. Self CPU excludes children.",
+  "real_preflight_run": false,
+  "actual_C_READY_or_runtime_or_state_snapshots_read_for_preview": false,
+  "new_authority_or_READY_created": false,
+  "GPU_or_scheduler_or_watcher_started": false,
+  "score_or_checkpoint_payload_read": false,
+  "live_queue_state_ordering_frozen_helpers_modified": false
+}
