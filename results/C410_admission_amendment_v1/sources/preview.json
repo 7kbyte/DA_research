@@ -1,0 +1,2442 @@
+{
+  "schema_version": 1,
+  "status": "one_shot_read_only_preview_not_execution_authority",
+  "captured_at_utc": "2026-11-06T12:12:22.617043+00:00",
+  "runtime_source_utc": "2026-11-06T12:11:47.971803+00:00",
+  "source_proofs": {
+    "budget_v5.json": {
+      "path": "/tmp/grad-research-20261106/worktree/results/evaluation_timing_budget_v5.json",
+      "sha256": "940a0a0651cc7dd20da16d46321d8d4cac6b4dbbf7dd3e1ba6fbdd787e0b8f7d"
+    },
+    "FIFO_source.py": {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/reconcile_main_behavior_runtime.py",
+      "sha256": "17d9b7839aef14e8c073124489c455d67512033f6de7658029411e88047a6f17"
+    },
+    "C410_registry.json": {
+      "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal_active_registry.json",
+      "sha256": "c7f5c50d6794ba0df0dc3e071198da761f084ad9347ce5d9ce4dddf867ee48bd"
+    },
+    "raw_runtime.json": {
+      "path": "/tmp/grad-research-20261106/worktree/results/runtime_budget_latest.json",
+      "sha256": "22c69f276fc61243c187bf8c843f7b86405d4df378ffd566986d9d785329247e"
+    },
+    "master_state.json": {
+      "path": "/tmp/grad-research-20261106/worktree/logs/supplemental_job_state.json",
+      "sha256": "5be6b0e68307c84a298799e5a236f4db7cfcb99148e4c0d48cb9af289c101bfc"
+    },
+    "master_queue.json": {
+      "path": "/tmp/grad-research-20261106/worktree/configs/supplemental_v1_queue.json",
+      "sha256": "f9a05e3687c6d0c282180fa0f142770373120c92801087bc26b08128b6f56c42"
+    },
+    "ready_index.json": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/ready_index.json",
+      "sha256": "c329909039df5515e6b75b513b831280018d6d53887fea30b7fd8c07d21b5961"
+    },
+    "producer.py": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_early_NLL_upperbound_v1/producer.py",
+      "sha256": "ca430162225b3d184a326cee63bd852cfe75b60d2a8daebcacf80ca4c9e61d63"
+    }
+  },
+  "C410_status_counts": {
+    "completed": 2,
+    "running": 4,
+    "pending": 18
+  },
+  "C410_full24_training_gate_utc_proxy": "2026-11-06T15:36:46.573958+00:00",
+  "other_training_slots_already_running_at_that_gate": [
+    {
+      "id": "extended_v2_pythia_1b_m32_formal_B0_s11_w0",
+      "slot": 0,
+      "start_seconds": 9968.542707832717,
+      "end_seconds": 13092.99237403007
+    },
+    {
+      "id": "extended_v2_pythia_1b_m32_formal_B1_s11_w0p05",
+      "slot": 1,
+      "start_seconds": 10195.307676162345,
+      "end_seconds": 13589.973760542383
+    },
+    {
+      "id": "extended_v2_pythia_1b_m32_formal_B2_s11_w0p05",
+      "slot": 2,
+      "start_seconds": 12260.738533624886,
+      "end_seconds": 15715.822768565042
+    }
+  ],
+  "training_only_FIFO": {
+    "status": "complete_time_simulation",
+    "hypothetical_phase_priority_before_pending": true,
+    "actual_running_children_not_preempted": true,
+    "all_remaining_job_durations_receive_10pct_once": true,
+    "unassigned_conservative_nonphase_slot_seconds": 2.9103830456733704e-11,
+    "makespan_seconds_with_10pct": 39405.70700486721,
+    "ideal_four_slot_seconds_with_10pct": 38763.031572280284,
+    "longrun_FIFO_imbalance_seconds_above_ideal": 642.675432586926,
+    "future_dispatch_timing_rows": [
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_M_s11_w0p05",
+        "slot": 3,
+        "start_seconds": 466.96006637288315,
+        "end_seconds": 2844.0466284549984
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_C_s11_w0p05",
+        "slot": 2,
+        "start_seconds": 733.862016007455,
+        "end_seconds": 3110.9485780895707
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_B0_s22_w0",
+        "slot": 0,
+        "start_seconds": 756.9216214505453,
+        "end_seconds": 2837.408326107064
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_B1_s22_w0p05",
+        "slot": 1,
+        "start_seconds": 815.4760703670212,
+        "end_seconds": 3125.4551755688153
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_B2_s22_w0p05",
+        "slot": 0,
+        "start_seconds": 2837.408326107064,
+        "end_seconds": 5218.515092691217
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_B3_s22_w0p05",
+        "slot": 3,
+        "start_seconds": 2844.0466284549984,
+        "end_seconds": 5163.322264192295
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_B4_s22_w0p05",
+        "slot": 2,
+        "start_seconds": 3110.9485780895707,
+        "end_seconds": 5483.889631148956
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_D_s22_w0p05",
+        "slot": 1,
+        "start_seconds": 3125.4551755688153,
+        "end_seconds": 5505.391873264683
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_M_s22_w0p05",
+        "slot": 3,
+        "start_seconds": 5163.322264192295,
+        "end_seconds": 7540.40882627441
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_C_s22_w0p05",
+        "slot": 0,
+        "start_seconds": 5218.515092691217,
+        "end_seconds": 7595.6016547733325
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_B0_s33_w0",
+        "slot": 2,
+        "start_seconds": 5483.889631148956,
+        "end_seconds": 7564.376335805475
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_B1_s33_w0p05",
+        "slot": 1,
+        "start_seconds": 5505.391873264683,
+        "end_seconds": 7815.370978466477
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_B2_s33_w0p05",
+        "slot": 3,
+        "start_seconds": 7540.40882627441,
+        "end_seconds": 9921.515592858563
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_B3_s33_w0p05",
+        "slot": 2,
+        "start_seconds": 7564.376335805475,
+        "end_seconds": 9883.651971542771
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_B4_s33_w0p05",
+        "slot": 0,
+        "start_seconds": 7595.6016547733325,
+        "end_seconds": 9968.542707832717
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_D_s33_w0p05",
+        "slot": 1,
+        "start_seconds": 7815.370978466477,
+        "end_seconds": 10195.307676162345
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_M_s33_w0p05",
+        "slot": 2,
+        "start_seconds": 9883.651971542771,
+        "end_seconds": 12260.738533624886
+      },
+      {
+        "id": "extended_v2_pythia_410m_m64_formal_C_s33_w0p05",
+        "slot": 3,
+        "start_seconds": 9921.515592858563,
+        "end_seconds": 12298.602154940678
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B0_s11_w0",
+        "slot": 0,
+        "start_seconds": 9968.542707832717,
+        "end_seconds": 13092.99237403007
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B1_s11_w0p05",
+        "slot": 1,
+        "start_seconds": 10195.307676162345,
+        "end_seconds": 13589.973760542383
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B2_s11_w0p05",
+        "slot": 2,
+        "start_seconds": 12260.738533624886,
+        "end_seconds": 15715.822768565042
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B3_s11_w0p05",
+        "slot": 3,
+        "start_seconds": 12298.602154940678,
+        "end_seconds": 15693.345473467185
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_D_s11_w0p05",
+        "slot": 0,
+        "start_seconds": 13092.99237403007,
+        "end_seconds": 16542.591738629213
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_M_s11_w0p05",
+        "slot": 1,
+        "start_seconds": 13589.973760542383,
+        "end_seconds": 17039.573125141527
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_C_s11_w0p05",
+        "slot": 3,
+        "start_seconds": 15693.345473467185,
+        "end_seconds": 19142.94483806633
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B0_s22_w0",
+        "slot": 2,
+        "start_seconds": 15715.822768565042,
+        "end_seconds": 18840.272434762395
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B1_s22_w0p05",
+        "slot": 0,
+        "start_seconds": 16542.591738629213,
+        "end_seconds": 19937.25782300925
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B2_s22_w0p05",
+        "slot": 1,
+        "start_seconds": 17039.573125141527,
+        "end_seconds": 20494.657360081685
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B3_s22_w0p05",
+        "slot": 2,
+        "start_seconds": 18840.272434762395,
+        "end_seconds": 22235.015753288902
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B4_s22_w0p05",
+        "slot": 3,
+        "start_seconds": 19142.94483806633,
+        "end_seconds": 22592.544202665475
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_D_s22_w0p05",
+        "slot": 0,
+        "start_seconds": 19937.25782300925,
+        "end_seconds": 23386.857187608395
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_M_s22_w0p05",
+        "slot": 1,
+        "start_seconds": 20494.657360081685,
+        "end_seconds": 23944.25672468083
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_C_s22_w0p05",
+        "slot": 2,
+        "start_seconds": 22235.015753288902,
+        "end_seconds": 25684.615117888046
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B0_s33_w0",
+        "slot": 3,
+        "start_seconds": 22592.544202665475,
+        "end_seconds": 25716.993868862824
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B1_s33_w0p05",
+        "slot": 0,
+        "start_seconds": 23386.857187608395,
+        "end_seconds": 26781.523271988433
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B2_s33_w0p05",
+        "slot": 1,
+        "start_seconds": 23944.25672468083,
+        "end_seconds": 27399.340959620986
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B3_s33_w0p05",
+        "slot": 2,
+        "start_seconds": 25684.615117888046,
+        "end_seconds": 29079.358436414554
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_B4_s33_w0p05",
+        "slot": 3,
+        "start_seconds": 25716.993868862824,
+        "end_seconds": 29166.59323346197
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_D_s33_w0p05",
+        "slot": 0,
+        "start_seconds": 26781.523271988433,
+        "end_seconds": 30231.122636587577
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_M_s33_w0p05",
+        "slot": 1,
+        "start_seconds": 27399.340959620986,
+        "end_seconds": 30848.94032422013
+      },
+      {
+        "id": "extended_v2_pythia_1b_m32_formal_C_s33_w0p05",
+        "slot": 2,
+        "start_seconds": 29079.358436414554,
+        "end_seconds": 32528.957801013697
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B0_s11_w0",
+        "slot": 3,
+        "start_seconds": 29166.59323346197,
+        "end_seconds": 31349.73506192791
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B1_s11_w0p05",
+        "slot": 0,
+        "start_seconds": 30231.122636587577,
+        "end_seconds": 32544.137638719123
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B2_s11_w0p05",
+        "slot": 1,
+        "start_seconds": 30848.94032422013,
+        "end_seconds": 33200.28144541225
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_M_s11_w0p05",
+        "slot": 3,
+        "start_seconds": 31349.73506192791,
+        "end_seconds": 33696.53874962169
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B0_s22_w0",
+        "slot": 2,
+        "start_seconds": 32528.957801013697,
+        "end_seconds": 34712.099629479635
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B1_s22_w0p05",
+        "slot": 0,
+        "start_seconds": 32544.137638719123,
+        "end_seconds": 34857.15264085067
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B2_s22_w0p05",
+        "slot": 1,
+        "start_seconds": 33200.28144541225,
+        "end_seconds": 35551.62256660437
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B4_s22_w0p05",
+        "slot": 3,
+        "start_seconds": 33696.53874962169,
+        "end_seconds": 36043.34243731548
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_M_s22_w0p05",
+        "slot": 2,
+        "start_seconds": 34712.099629479635,
+        "end_seconds": 37058.90331717342
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B0_s33_w0",
+        "slot": 0,
+        "start_seconds": 34857.15264085067,
+        "end_seconds": 37040.29446931661
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B1_s33_w0p05",
+        "slot": 1,
+        "start_seconds": 35551.62256660437,
+        "end_seconds": 37864.63756873592
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B2_s33_w0p05",
+        "slot": 3,
+        "start_seconds": 36043.34243731548,
+        "end_seconds": 38394.6835585076
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B4_s33_w0p05",
+        "slot": 0,
+        "start_seconds": 37040.29446931661,
+        "end_seconds": 39387.09815701039
+      },
+      {
+        "id": "extended_v2_pythia_2p8b_m8_h25m_formal_M_s33_w0p05",
+        "slot": 2,
+        "start_seconds": 37058.90331717342,
+        "end_seconds": 39405.7070048672
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "name": "low",
+      "v5_rates_already_include_sensitivity_factor": 1.0,
+      "rates_seconds": {
+        "final": 38.94772026431083,
+        "best": 29.19575581209905,
+        "initial": 29.213140334555625
+      },
+      "forward_count_upperbound": {
+        "initial": 1,
+        "final": 24,
+        "best": 24
+      },
+      "phase_slot_seconds_before_single_FIFO_10pct": 1664.6565661683953,
+      "initial_start_utc_if_zero_extra_READY_latency": "2026-11-06T15:36:46.573958+00:00",
+      "phase_forward_completion_utc_proxy": "2026-11-06T15:58:43.784727+00:00",
+      "master_training_plus_early_NLL_finish_utc_proxy": "2026-11-06T23:16:48.981414+00:00",
+      "increment_over_training_only_FIFO_minutes": 8.255043428918604,
+      "margin_before_2350_minutes": 33.1836431,
+      "meets_15min_reserve_under_timing_proxy": true,
+      "conservative_finish_including_unchanged_full_v5_tail_utc": "2026-11-07T01:03:21.504591+00:00",
+      "conservative_margin_before_30min_delivery_tail_minutes": 113.17492348333333,
+      "current_actual_tail_forward_credit": 0,
+      "future_actual_complete49_only_NLL_count_example": {
+        "before": 129,
+        "after": 80
+      },
+      "FIFO": {
+        "status": "complete_time_simulation",
+        "hypothetical_phase_priority_before_pending": true,
+        "actual_running_children_not_preempted": true,
+        "all_remaining_job_durations_receive_10pct_once": true,
+        "unassigned_conservative_nonphase_slot_seconds": 2.9103830456733704e-11,
+        "makespan_seconds_with_10pct": 39901.00961060233,
+        "ideal_four_slot_seconds_with_10pct": 39220.81212797659,
+        "longrun_FIFO_imbalance_seconds_above_ideal": 680.1974826257356,
+        "future_dispatch_timing_rows": [
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_M_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 466.96006637288315,
+            "end_seconds": 2844.0466284549984
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_C_s11_w0p05",
+            "slot": 2,
+            "start_seconds": 733.862016007455,
+            "end_seconds": 3110.9485780895707
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B0_s22_w0",
+            "slot": 0,
+            "start_seconds": 756.9216214505453,
+            "end_seconds": 2837.408326107064
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B1_s22_w0p05",
+            "slot": 1,
+            "start_seconds": 815.4760703670212,
+            "end_seconds": 3125.4551755688153
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B2_s22_w0p05",
+            "slot": 0,
+            "start_seconds": 2837.408326107064,
+            "end_seconds": 5218.515092691217
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B3_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 2844.0466284549984,
+            "end_seconds": 5163.322264192295
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B4_s22_w0p05",
+            "slot": 2,
+            "start_seconds": 3110.9485780895707,
+            "end_seconds": 5483.889631148956
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_D_s22_w0p05",
+            "slot": 1,
+            "start_seconds": 3125.4551755688153,
+            "end_seconds": 5505.391873264683
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_M_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 5163.322264192295,
+            "end_seconds": 7540.40882627441
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_C_s22_w0p05",
+            "slot": 0,
+            "start_seconds": 5218.515092691217,
+            "end_seconds": 7595.6016547733325
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B0_s33_w0",
+            "slot": 2,
+            "start_seconds": 5483.889631148956,
+            "end_seconds": 7564.376335805475
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B1_s33_w0p05",
+            "slot": 1,
+            "start_seconds": 5505.391873264683,
+            "end_seconds": 7815.370978466477
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B2_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 7540.40882627441,
+            "end_seconds": 9921.515592858563
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B3_s33_w0p05",
+            "slot": 2,
+            "start_seconds": 7564.376335805475,
+            "end_seconds": 9883.651971542771
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B4_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 7595.6016547733325,
+            "end_seconds": 9968.542707832717
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_D_s33_w0p05",
+            "slot": 1,
+            "start_seconds": 7815.370978466477,
+            "end_seconds": 10195.307676162345
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_M_s33_w0p05",
+            "slot": 2,
+            "start_seconds": 9883.651971542771,
+            "end_seconds": 12260.738533624886
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_C_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 9921.515592858563,
+            "end_seconds": 12298.602154940678
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B0_s11_w0",
+            "slot": 0,
+            "start_seconds": 9968.542707832717,
+            "end_seconds": 13092.99237403007
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B1_s11_w0p05",
+            "slot": 1,
+            "start_seconds": 10195.307676162345,
+            "end_seconds": 13589.973760542383
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B2_s11_w0p05",
+            "slot": 2,
+            "start_seconds": 12260.738533624886,
+            "end_seconds": 15715.822768565042
+          },
+          {
+            "id": "timing_only_C410_extended_NLL_initial",
+            "slot": 3,
+            "start_seconds": 12298.602154940678,
+            "end_seconds": 12330.73660930869
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B0_s11_w0",
+            "slot": 3,
+            "start_seconds": 12330.73660930869,
+            "end_seconds": 12373.579101599431
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B1_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 12373.579101599431,
+            "end_seconds": 12416.421593890173
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B2_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 12416.421593890173,
+            "end_seconds": 12459.264086180914
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B3_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 12459.264086180914,
+            "end_seconds": 12502.106578471656
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B4_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 12502.106578471656,
+            "end_seconds": 12544.949070762397
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_D_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 12544.949070762397,
+            "end_seconds": 12587.791563053139
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_M_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 12587.791563053139,
+            "end_seconds": 12630.63405534388
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_C_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 12630.63405534388,
+            "end_seconds": 12673.476547634622
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B0_s22_w0",
+            "slot": 3,
+            "start_seconds": 12673.476547634622,
+            "end_seconds": 12716.319039925364
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B1_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 12716.319039925364,
+            "end_seconds": 12759.161532216105
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B2_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 12759.161532216105,
+            "end_seconds": 12802.004024506847
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B3_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 12802.004024506847,
+            "end_seconds": 12844.846516797588
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B4_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 12844.846516797588,
+            "end_seconds": 12887.68900908833
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_D_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 12887.68900908833,
+            "end_seconds": 12930.531501379071
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_M_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 12930.531501379071,
+            "end_seconds": 12973.373993669813
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_C_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 12973.373993669813,
+            "end_seconds": 13016.216485960555
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B0_s33_w0",
+            "slot": 3,
+            "start_seconds": 13016.216485960555,
+            "end_seconds": 13059.058978251296
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B1_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 13059.058978251296,
+            "end_seconds": 13101.901470542038
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B2_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 13092.99237403007,
+            "end_seconds": 13135.83486632081
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B3_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 13101.901470542038,
+            "end_seconds": 13144.74396283278
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B4_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 13135.83486632081,
+            "end_seconds": 13178.677358611552
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_D_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 13144.74396283278,
+            "end_seconds": 13187.58645512352
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_M_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 13178.677358611552,
+            "end_seconds": 13221.519850902294
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_C_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 13187.58645512352,
+            "end_seconds": 13230.428947414262
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B0_s11_w0",
+            "slot": 0,
+            "start_seconds": 13221.519850902294,
+            "end_seconds": 13253.635182295602
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B1_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 13230.428947414262,
+            "end_seconds": 13262.54427880757
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B2_s11_w0p05",
+            "slot": 0,
+            "start_seconds": 13253.635182295602,
+            "end_seconds": 13285.75051368891
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B3_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 13262.54427880757,
+            "end_seconds": 13294.659610200879
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B4_s11_w0p05",
+            "slot": 0,
+            "start_seconds": 13285.75051368891,
+            "end_seconds": 13317.865845082219
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_D_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 13294.659610200879,
+            "end_seconds": 13326.774941594187
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_M_s11_w0p05",
+            "slot": 0,
+            "start_seconds": 13317.865845082219,
+            "end_seconds": 13349.981176475527
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_C_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 13326.774941594187,
+            "end_seconds": 13358.890272987495
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B0_s22_w0",
+            "slot": 0,
+            "start_seconds": 13349.981176475527,
+            "end_seconds": 13382.096507868835
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B1_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 13358.890272987495,
+            "end_seconds": 13391.005604380804
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B2_s22_w0p05",
+            "slot": 0,
+            "start_seconds": 13382.096507868835,
+            "end_seconds": 13414.211839262143
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B3_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 13391.005604380804,
+            "end_seconds": 13423.120935774112
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B4_s22_w0p05",
+            "slot": 0,
+            "start_seconds": 13414.211839262143,
+            "end_seconds": 13446.327170655451
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_D_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 13423.120935774112,
+            "end_seconds": 13455.23626716742
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_M_s22_w0p05",
+            "slot": 0,
+            "start_seconds": 13446.327170655451,
+            "end_seconds": 13478.44250204876
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_C_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 13455.23626716742,
+            "end_seconds": 13487.351598560728
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B0_s33_w0",
+            "slot": 0,
+            "start_seconds": 13478.44250204876,
+            "end_seconds": 13510.557833442068
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B1_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 13487.351598560728,
+            "end_seconds": 13519.466929954036
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B2_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 13510.557833442068,
+            "end_seconds": 13542.673164835376
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B3_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 13519.466929954036,
+            "end_seconds": 13551.582261347345
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B4_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 13542.673164835376,
+            "end_seconds": 13574.788496228684
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_D_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 13551.582261347345,
+            "end_seconds": 13583.697592740653
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_M_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 13574.788496228684,
+            "end_seconds": 13606.903827621993
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_C_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 13583.697592740653,
+            "end_seconds": 13615.812924133961
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B3_s11_w0p05",
+            "slot": 1,
+            "start_seconds": 13589.973760542383,
+            "end_seconds": 16984.71707906889
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_D_s11_w0p05",
+            "slot": 0,
+            "start_seconds": 13606.903827621993,
+            "end_seconds": 17056.50319222114
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_M_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 13615.812924133961,
+            "end_seconds": 17065.412288733107
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_C_s11_w0p05",
+            "slot": 2,
+            "start_seconds": 15715.822768565042,
+            "end_seconds": 19165.422133164186
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B0_s22_w0",
+            "slot": 1,
+            "start_seconds": 16984.71707906889,
+            "end_seconds": 20109.166745266244
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B1_s22_w0p05",
+            "slot": 0,
+            "start_seconds": 17056.50319222114,
+            "end_seconds": 20451.169276601177
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B2_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 17065.412288733107,
+            "end_seconds": 20520.496523673264
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B3_s22_w0p05",
+            "slot": 2,
+            "start_seconds": 19165.422133164186,
+            "end_seconds": 22560.165451690693
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B4_s22_w0p05",
+            "slot": 1,
+            "start_seconds": 20109.166745266244,
+            "end_seconds": 23558.766109865388
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_D_s22_w0p05",
+            "slot": 0,
+            "start_seconds": 20451.169276601177,
+            "end_seconds": 23900.76864120032
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_M_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 20520.496523673264,
+            "end_seconds": 23970.095888272408
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_C_s22_w0p05",
+            "slot": 2,
+            "start_seconds": 22560.165451690693,
+            "end_seconds": 26009.764816289837
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B0_s33_w0",
+            "slot": 1,
+            "start_seconds": 23558.766109865388,
+            "end_seconds": 26683.215776062738
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B1_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 23900.76864120032,
+            "end_seconds": 27295.43472558036
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B2_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 23970.095888272408,
+            "end_seconds": 27425.180123212565
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B3_s33_w0p05",
+            "slot": 2,
+            "start_seconds": 26009.764816289837,
+            "end_seconds": 29404.508134816344
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B4_s33_w0p05",
+            "slot": 1,
+            "start_seconds": 26683.215776062738,
+            "end_seconds": 30132.81514066188
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_D_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 27295.43472558036,
+            "end_seconds": 30745.034090179503
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_M_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 27425.180123212565,
+            "end_seconds": 30874.77948781171
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_C_s33_w0p05",
+            "slot": 2,
+            "start_seconds": 29404.508134816344,
+            "end_seconds": 32854.10749941549
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B0_s11_w0",
+            "slot": 1,
+            "start_seconds": 30132.81514066188,
+            "end_seconds": 32315.956969127823
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B1_s11_w0p05",
+            "slot": 0,
+            "start_seconds": 30745.034090179503,
+            "end_seconds": 33058.04909231105
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B2_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 30874.77948781171,
+            "end_seconds": 33226.120609003825
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_M_s11_w0p05",
+            "slot": 1,
+            "start_seconds": 32315.956969127823,
+            "end_seconds": 34662.76065682161
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B0_s22_w0",
+            "slot": 2,
+            "start_seconds": 32854.10749941549,
+            "end_seconds": 35037.24932788143
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B1_s22_w0p05",
+            "slot": 0,
+            "start_seconds": 33058.04909231105,
+            "end_seconds": 35371.0640944426
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B2_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 33226.120609003825,
+            "end_seconds": 35577.461730195944
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B4_s22_w0p05",
+            "slot": 1,
+            "start_seconds": 34662.76065682161,
+            "end_seconds": 37009.56434451539
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_M_s22_w0p05",
+            "slot": 2,
+            "start_seconds": 35037.24932788143,
+            "end_seconds": 37384.05301557521
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B0_s33_w0",
+            "slot": 0,
+            "start_seconds": 35371.0640944426,
+            "end_seconds": 37554.205922908535
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B1_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 35577.461730195944,
+            "end_seconds": 37890.476732327494
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B2_s33_w0p05",
+            "slot": 1,
+            "start_seconds": 37009.56434451539,
+            "end_seconds": 39360.90546570751
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B4_s33_w0p05",
+            "slot": 2,
+            "start_seconds": 37384.05301557521,
+            "end_seconds": 39730.856703269
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_M_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 37554.205922908535,
+            "end_seconds": 39901.00961060232
+          }
+        ]
+      }
+    },
+    {
+      "name": "central",
+      "v5_rates_already_include_sensitivity_factor": 1.25,
+      "rates_seconds": {
+        "final": 48.71704708700424,
+        "best": 36.50785072169603,
+        "initial": 36.51642541819453
+      },
+      "forward_count_upperbound": {
+        "initial": 1,
+        "final": 24,
+        "best": 24
+      },
+      "phase_slot_seconds_before_single_FIFO_10pct": 2081.913972827002,
+      "initial_start_utc_if_zero_extra_READY_latency": "2026-11-06T15:36:46.573958+00:00",
+      "phase_forward_completion_utc_proxy": "2026-11-06T16:01:10.494294+00:00",
+      "master_training_plus_early_NLL_finish_utc_proxy": "2026-11-06T23:19:20.620451+00:00",
+      "increment_over_training_only_FIFO_minutes": 10.78236071784777,
+      "margin_before_2350_minutes": 30.656325816666666,
+      "meets_15min_reserve_under_timing_proxy": true,
+      "conservative_finish_including_unchanged_full_v5_tail_utc": "2026-11-07T01:35:14.811416+00:00",
+      "conservative_margin_before_30min_delivery_tail_minutes": 81.28647640000001,
+      "current_actual_tail_forward_credit": 0,
+      "future_actual_complete49_only_NLL_count_example": {
+        "before": 129,
+        "after": 80
+      },
+      "FIFO": {
+        "status": "complete_time_simulation",
+        "hypothetical_phase_priority_before_pending": true,
+        "actual_running_children_not_preempted": true,
+        "all_remaining_job_durations_receive_10pct_once": true,
+        "unassigned_conservative_nonphase_slot_seconds": 2.9103830456733704e-11,
+        "makespan_seconds_with_10pct": 40052.64864793808,
+        "ideal_four_slot_seconds_with_10pct": 39335.55791480771,
+        "longrun_FIFO_imbalance_seconds_above_ideal": 717.0907331303679,
+        "future_dispatch_timing_rows": [
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_M_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 466.96006637288315,
+            "end_seconds": 2844.0466284549984
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_C_s11_w0p05",
+            "slot": 2,
+            "start_seconds": 733.862016007455,
+            "end_seconds": 3110.9485780895707
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B0_s22_w0",
+            "slot": 0,
+            "start_seconds": 756.9216214505453,
+            "end_seconds": 2837.408326107064
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B1_s22_w0p05",
+            "slot": 1,
+            "start_seconds": 815.4760703670212,
+            "end_seconds": 3125.4551755688153
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B2_s22_w0p05",
+            "slot": 0,
+            "start_seconds": 2837.408326107064,
+            "end_seconds": 5218.515092691217
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B3_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 2844.0466284549984,
+            "end_seconds": 5163.322264192295
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B4_s22_w0p05",
+            "slot": 2,
+            "start_seconds": 3110.9485780895707,
+            "end_seconds": 5483.889631148956
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_D_s22_w0p05",
+            "slot": 1,
+            "start_seconds": 3125.4551755688153,
+            "end_seconds": 5505.391873264683
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_M_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 5163.322264192295,
+            "end_seconds": 7540.40882627441
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_C_s22_w0p05",
+            "slot": 0,
+            "start_seconds": 5218.515092691217,
+            "end_seconds": 7595.6016547733325
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B0_s33_w0",
+            "slot": 2,
+            "start_seconds": 5483.889631148956,
+            "end_seconds": 7564.376335805475
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B1_s33_w0p05",
+            "slot": 1,
+            "start_seconds": 5505.391873264683,
+            "end_seconds": 7815.370978466477
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B2_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 7540.40882627441,
+            "end_seconds": 9921.515592858563
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B3_s33_w0p05",
+            "slot": 2,
+            "start_seconds": 7564.376335805475,
+            "end_seconds": 9883.651971542771
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B4_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 7595.6016547733325,
+            "end_seconds": 9968.542707832717
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_D_s33_w0p05",
+            "slot": 1,
+            "start_seconds": 7815.370978466477,
+            "end_seconds": 10195.307676162345
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_M_s33_w0p05",
+            "slot": 2,
+            "start_seconds": 9883.651971542771,
+            "end_seconds": 12260.738533624886
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_C_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 9921.515592858563,
+            "end_seconds": 12298.602154940678
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B0_s11_w0",
+            "slot": 0,
+            "start_seconds": 9968.542707832717,
+            "end_seconds": 13092.99237403007
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B1_s11_w0p05",
+            "slot": 1,
+            "start_seconds": 10195.307676162345,
+            "end_seconds": 13589.973760542383
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B2_s11_w0p05",
+            "slot": 2,
+            "start_seconds": 12260.738533624886,
+            "end_seconds": 15715.822768565042
+          },
+          {
+            "id": "timing_only_C410_extended_NLL_initial",
+            "slot": 3,
+            "start_seconds": 12298.602154940678,
+            "end_seconds": 12338.770222900692
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B0_s11_w0",
+            "slot": 3,
+            "start_seconds": 12338.770222900692,
+            "end_seconds": 12392.358974696397
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B1_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 12392.358974696397,
+            "end_seconds": 12445.947726492102
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B2_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 12445.947726492102,
+            "end_seconds": 12499.536478287808
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B3_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 12499.536478287808,
+            "end_seconds": 12553.125230083513
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B4_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 12553.125230083513,
+            "end_seconds": 12606.713981879218
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_D_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 12606.713981879218,
+            "end_seconds": 12660.302733674924
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_M_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 12660.302733674924,
+            "end_seconds": 12713.891485470629
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_C_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 12713.891485470629,
+            "end_seconds": 12767.480237266334
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B0_s22_w0",
+            "slot": 3,
+            "start_seconds": 12767.480237266334,
+            "end_seconds": 12821.06898906204
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B1_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 12821.06898906204,
+            "end_seconds": 12874.657740857745
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B2_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 12874.657740857745,
+            "end_seconds": 12928.24649265345
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B3_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 12928.24649265345,
+            "end_seconds": 12981.835244449156
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B4_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 12981.835244449156,
+            "end_seconds": 13035.423996244861
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_D_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 13035.423996244861,
+            "end_seconds": 13089.012748040566
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_M_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 13089.012748040566,
+            "end_seconds": 13142.601499836272
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_C_s22_w0p05",
+            "slot": 0,
+            "start_seconds": 13092.99237403007,
+            "end_seconds": 13146.581125825775
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B0_s33_w0",
+            "slot": 3,
+            "start_seconds": 13142.601499836272,
+            "end_seconds": 13196.190251631977
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B1_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 13146.581125825775,
+            "end_seconds": 13200.16987762148
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B2_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 13196.190251631977,
+            "end_seconds": 13249.779003427682
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B3_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 13200.16987762148,
+            "end_seconds": 13253.758629417185
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B4_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 13249.779003427682,
+            "end_seconds": 13303.367755223388
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_D_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 13253.758629417185,
+            "end_seconds": 13307.34738121289
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_M_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 13303.367755223388,
+            "end_seconds": 13356.956507019093
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_C_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 13307.34738121289,
+            "end_seconds": 13360.936133008596
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B0_s11_w0",
+            "slot": 3,
+            "start_seconds": 13356.956507019093,
+            "end_seconds": 13397.115142812958
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B1_s11_w0p05",
+            "slot": 0,
+            "start_seconds": 13360.936133008596,
+            "end_seconds": 13401.09476880246
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B2_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 13397.115142812958,
+            "end_seconds": 13437.273778606823
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B3_s11_w0p05",
+            "slot": 0,
+            "start_seconds": 13401.09476880246,
+            "end_seconds": 13441.253404596326
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B4_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 13437.273778606823,
+            "end_seconds": 13477.432414400688
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_D_s11_w0p05",
+            "slot": 0,
+            "start_seconds": 13441.253404596326,
+            "end_seconds": 13481.41204039019
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_M_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 13477.432414400688,
+            "end_seconds": 13517.591050194553
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_C_s11_w0p05",
+            "slot": 0,
+            "start_seconds": 13481.41204039019,
+            "end_seconds": 13521.570676184056
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B0_s22_w0",
+            "slot": 3,
+            "start_seconds": 13517.591050194553,
+            "end_seconds": 13557.749685988418
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B1_s22_w0p05",
+            "slot": 0,
+            "start_seconds": 13521.570676184056,
+            "end_seconds": 13561.72931197792
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B2_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 13557.749685988418,
+            "end_seconds": 13597.908321782283
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B3_s22_w0p05",
+            "slot": 0,
+            "start_seconds": 13561.72931197792,
+            "end_seconds": 13601.887947771786
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B4_s22_w0p05",
+            "slot": 1,
+            "start_seconds": 13589.973760542383,
+            "end_seconds": 13630.132396336248
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_D_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 13597.908321782283,
+            "end_seconds": 13638.066957576148
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_M_s22_w0p05",
+            "slot": 0,
+            "start_seconds": 13601.887947771786,
+            "end_seconds": 13642.04658356565
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_C_s22_w0p05",
+            "slot": 1,
+            "start_seconds": 13630.132396336248,
+            "end_seconds": 13670.291032130113
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B0_s33_w0",
+            "slot": 3,
+            "start_seconds": 13638.066957576148,
+            "end_seconds": 13678.225593370013
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B1_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 13642.04658356565,
+            "end_seconds": 13682.205219359515
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B2_s33_w0p05",
+            "slot": 1,
+            "start_seconds": 13670.291032130113,
+            "end_seconds": 13710.449667923978
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B3_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 13678.225593370013,
+            "end_seconds": 13718.384229163878
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B4_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 13682.205219359515,
+            "end_seconds": 13722.36385515338
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_D_s33_w0p05",
+            "slot": 1,
+            "start_seconds": 13710.449667923978,
+            "end_seconds": 13750.608303717843
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_M_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 13718.384229163878,
+            "end_seconds": 13758.542864957742
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_C_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 13722.36385515338,
+            "end_seconds": 13762.522490947245
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B3_s11_w0p05",
+            "slot": 1,
+            "start_seconds": 13750.608303717843,
+            "end_seconds": 17145.35162224435
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_D_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 13758.542864957742,
+            "end_seconds": 17208.14222955689
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_M_s11_w0p05",
+            "slot": 0,
+            "start_seconds": 13762.522490947245,
+            "end_seconds": 17212.12185554639
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_C_s11_w0p05",
+            "slot": 2,
+            "start_seconds": 15715.822768565042,
+            "end_seconds": 19165.422133164186
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B0_s22_w0",
+            "slot": 1,
+            "start_seconds": 17145.35162224435,
+            "end_seconds": 20269.801288441704
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B1_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 17208.14222955689,
+            "end_seconds": 20602.808313936926
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B2_s22_w0p05",
+            "slot": 0,
+            "start_seconds": 17212.12185554639,
+            "end_seconds": 20667.206090486547
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B3_s22_w0p05",
+            "slot": 2,
+            "start_seconds": 19165.422133164186,
+            "end_seconds": 22560.165451690693
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B4_s22_w0p05",
+            "slot": 1,
+            "start_seconds": 20269.801288441704,
+            "end_seconds": 23719.400653040848
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_D_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 20602.808313936926,
+            "end_seconds": 24052.40767853607
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_M_s22_w0p05",
+            "slot": 0,
+            "start_seconds": 20667.206090486547,
+            "end_seconds": 24116.80545508569
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_C_s22_w0p05",
+            "slot": 2,
+            "start_seconds": 22560.165451690693,
+            "end_seconds": 26009.764816289837
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B0_s33_w0",
+            "slot": 1,
+            "start_seconds": 23719.400653040848,
+            "end_seconds": 26843.850319238198
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B1_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 24052.40767853607,
+            "end_seconds": 27447.07376291611
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B2_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 24116.80545508569,
+            "end_seconds": 27571.889690025848
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B3_s33_w0p05",
+            "slot": 2,
+            "start_seconds": 26009.764816289837,
+            "end_seconds": 29404.508134816344
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B4_s33_w0p05",
+            "slot": 1,
+            "start_seconds": 26843.850319238198,
+            "end_seconds": 30293.44968383734
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_D_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 27447.07376291611,
+            "end_seconds": 30896.673127515252
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_M_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 27571.889690025848,
+            "end_seconds": 31021.48905462499
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_C_s33_w0p05",
+            "slot": 2,
+            "start_seconds": 29404.508134816344,
+            "end_seconds": 32854.10749941549
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B0_s11_w0",
+            "slot": 1,
+            "start_seconds": 30293.44968383734,
+            "end_seconds": 32476.591512303283
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B1_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 30896.673127515252,
+            "end_seconds": 33209.6881296468
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B2_s11_w0p05",
+            "slot": 0,
+            "start_seconds": 31021.48905462499,
+            "end_seconds": 33372.83017581711
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_M_s11_w0p05",
+            "slot": 1,
+            "start_seconds": 32476.591512303283,
+            "end_seconds": 34823.39519999707
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B0_s22_w0",
+            "slot": 2,
+            "start_seconds": 32854.10749941549,
+            "end_seconds": 35037.24932788143
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B1_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 33209.6881296468,
+            "end_seconds": 35522.70313177835
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B2_s22_w0p05",
+            "slot": 0,
+            "start_seconds": 33372.83017581711,
+            "end_seconds": 35724.17129700923
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B4_s22_w0p05",
+            "slot": 1,
+            "start_seconds": 34823.39519999707,
+            "end_seconds": 37170.19888769085
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_M_s22_w0p05",
+            "slot": 2,
+            "start_seconds": 35037.24932788143,
+            "end_seconds": 37384.05301557521
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B0_s33_w0",
+            "slot": 3,
+            "start_seconds": 35522.70313177835,
+            "end_seconds": 37705.844960244285
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B1_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 35724.17129700923,
+            "end_seconds": 38037.186299140776
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B2_s33_w0p05",
+            "slot": 1,
+            "start_seconds": 37170.19888769085,
+            "end_seconds": 39521.54000888297
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B4_s33_w0p05",
+            "slot": 2,
+            "start_seconds": 37384.05301557521,
+            "end_seconds": 39730.856703269
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_M_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 37705.844960244285,
+            "end_seconds": 40052.64864793807
+          }
+        ]
+      }
+    },
+    {
+      "name": "high",
+      "v5_rates_already_include_sensitivity_factor": 1.5,
+      "rates_seconds": {
+        "final": 58.4935918628835,
+        "best": 58.431891228664014,
+        "initial": 43.81971050183344
+      },
+      "forward_count_upperbound": {
+        "initial": 1,
+        "final": 24,
+        "best": 24
+      },
+      "phase_slot_seconds_before_single_FIFO_10pct": 2850.0313046989727,
+      "initial_start_utc_if_zero_extra_READY_latency": "2026-11-06T15:36:46.573958+00:00",
+      "phase_forward_completion_utc_proxy": "2026-11-06T16:06:05.497606+00:00",
+      "master_training_plus_early_NLL_finish_utc_proxy": "2026-11-06T23:24:01.976909+00:00",
+      "increment_over_training_only_FIFO_minutes": 15.471635018603653,
+      "margin_before_2350_minutes": 25.967051516666668,
+      "meets_15min_reserve_under_timing_proxy": true,
+      "conservative_finish_including_unchanged_full_v5_tail_utc": "2026-11-07T02:20:49.997529+00:00",
+      "conservative_margin_before_30min_delivery_tail_minutes": 35.70004118333333,
+      "current_actual_tail_forward_credit": 0,
+      "future_actual_complete49_only_NLL_count_example": {
+        "before": 129,
+        "after": 80
+      },
+      "FIFO": {
+        "status": "complete_time_simulation",
+        "hypothetical_phase_priority_before_pending": true,
+        "actual_running_children_not_preempted": true,
+        "all_remaining_job_durations_receive_10pct_once": true,
+        "unassigned_conservative_nonphase_slot_seconds": 2.9103830456733704e-11,
+        "makespan_seconds_with_10pct": 40334.00510598343,
+        "ideal_four_slot_seconds_with_10pct": 39546.7901810725,
+        "longrun_FIFO_imbalance_seconds_above_ideal": 787.214924910928,
+        "future_dispatch_timing_rows": [
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_M_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 466.96006637288315,
+            "end_seconds": 2844.0466284549984
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_C_s11_w0p05",
+            "slot": 2,
+            "start_seconds": 733.862016007455,
+            "end_seconds": 3110.9485780895707
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B0_s22_w0",
+            "slot": 0,
+            "start_seconds": 756.9216214505453,
+            "end_seconds": 2837.408326107064
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B1_s22_w0p05",
+            "slot": 1,
+            "start_seconds": 815.4760703670212,
+            "end_seconds": 3125.4551755688153
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B2_s22_w0p05",
+            "slot": 0,
+            "start_seconds": 2837.408326107064,
+            "end_seconds": 5218.515092691217
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B3_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 2844.0466284549984,
+            "end_seconds": 5163.322264192295
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B4_s22_w0p05",
+            "slot": 2,
+            "start_seconds": 3110.9485780895707,
+            "end_seconds": 5483.889631148956
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_D_s22_w0p05",
+            "slot": 1,
+            "start_seconds": 3125.4551755688153,
+            "end_seconds": 5505.391873264683
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_M_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 5163.322264192295,
+            "end_seconds": 7540.40882627441
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_C_s22_w0p05",
+            "slot": 0,
+            "start_seconds": 5218.515092691217,
+            "end_seconds": 7595.6016547733325
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B0_s33_w0",
+            "slot": 2,
+            "start_seconds": 5483.889631148956,
+            "end_seconds": 7564.376335805475
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B1_s33_w0p05",
+            "slot": 1,
+            "start_seconds": 5505.391873264683,
+            "end_seconds": 7815.370978466477
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B2_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 7540.40882627441,
+            "end_seconds": 9921.515592858563
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B3_s33_w0p05",
+            "slot": 2,
+            "start_seconds": 7564.376335805475,
+            "end_seconds": 9883.651971542771
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_B4_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 7595.6016547733325,
+            "end_seconds": 9968.542707832717
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_D_s33_w0p05",
+            "slot": 1,
+            "start_seconds": 7815.370978466477,
+            "end_seconds": 10195.307676162345
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_M_s33_w0p05",
+            "slot": 2,
+            "start_seconds": 9883.651971542771,
+            "end_seconds": 12260.738533624886
+          },
+          {
+            "id": "extended_v2_pythia_410m_m64_formal_C_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 9921.515592858563,
+            "end_seconds": 12298.602154940678
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B0_s11_w0",
+            "slot": 0,
+            "start_seconds": 9968.542707832717,
+            "end_seconds": 13092.99237403007
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B1_s11_w0p05",
+            "slot": 1,
+            "start_seconds": 10195.307676162345,
+            "end_seconds": 13589.973760542383
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B2_s11_w0p05",
+            "slot": 2,
+            "start_seconds": 12260.738533624886,
+            "end_seconds": 15715.822768565042
+          },
+          {
+            "id": "timing_only_C410_extended_NLL_initial",
+            "slot": 3,
+            "start_seconds": 12298.602154940678,
+            "end_seconds": 12346.803836492694
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B0_s11_w0",
+            "slot": 3,
+            "start_seconds": 12346.803836492694,
+            "end_seconds": 12411.146787541866
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B1_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 12411.146787541866,
+            "end_seconds": 12475.489738591037
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B2_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 12475.489738591037,
+            "end_seconds": 12539.832689640209
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B3_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 12539.832689640209,
+            "end_seconds": 12604.17564068938
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B4_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 12604.17564068938,
+            "end_seconds": 12668.518591738552
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_D_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 12668.518591738552,
+            "end_seconds": 12732.861542787723
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_M_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 12732.861542787723,
+            "end_seconds": 12797.204493836894
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_C_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 12797.204493836894,
+            "end_seconds": 12861.547444886066
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B0_s22_w0",
+            "slot": 3,
+            "start_seconds": 12861.547444886066,
+            "end_seconds": 12925.890395935237
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B1_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 12925.890395935237,
+            "end_seconds": 12990.233346984409
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B2_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 12990.233346984409,
+            "end_seconds": 13054.57629803358
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B3_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 13054.57629803358,
+            "end_seconds": 13118.919249082752
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B4_s22_w0p05",
+            "slot": 0,
+            "start_seconds": 13092.99237403007,
+            "end_seconds": 13157.33532507924
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_D_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 13118.919249082752,
+            "end_seconds": 13183.262200131923
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_M_s22_w0p05",
+            "slot": 0,
+            "start_seconds": 13157.33532507924,
+            "end_seconds": 13221.678276128412
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_C_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 13183.262200131923,
+            "end_seconds": 13247.605151181095
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B0_s33_w0",
+            "slot": 0,
+            "start_seconds": 13221.678276128412,
+            "end_seconds": 13286.021227177584
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B1_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 13247.605151181095,
+            "end_seconds": 13311.948102230266
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B2_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 13286.021227177584,
+            "end_seconds": 13350.364178226755
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B3_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 13311.948102230266,
+            "end_seconds": 13376.291053279438
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_B4_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 13350.364178226755,
+            "end_seconds": 13414.707129275926
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_D_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 13376.291053279438,
+            "end_seconds": 13440.634004328609
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_M_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 13414.707129275926,
+            "end_seconds": 13479.050080325098
+          },
+          {
+            "id": "timing_only_C410_NLL_final_extended_v2_pythia_410m_m64_formal_C_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 13440.634004328609,
+            "end_seconds": 13504.97695537778
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B0_s11_w0",
+            "slot": 0,
+            "start_seconds": 13479.050080325098,
+            "end_seconds": 13543.325160676628
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B1_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 13504.97695537778,
+            "end_seconds": 13569.25203572931
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B2_s11_w0p05",
+            "slot": 0,
+            "start_seconds": 13543.325160676628,
+            "end_seconds": 13607.600241028158
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B3_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 13569.25203572931,
+            "end_seconds": 13633.52711608084
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B4_s11_w0p05",
+            "slot": 1,
+            "start_seconds": 13589.973760542383,
+            "end_seconds": 13654.248840893913
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_D_s11_w0p05",
+            "slot": 0,
+            "start_seconds": 13607.600241028158,
+            "end_seconds": 13671.875321379688
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_M_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 13633.52711608084,
+            "end_seconds": 13697.80219643237
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_C_s11_w0p05",
+            "slot": 1,
+            "start_seconds": 13654.248840893913,
+            "end_seconds": 13718.523921245443
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B0_s22_w0",
+            "slot": 0,
+            "start_seconds": 13671.875321379688,
+            "end_seconds": 13736.150401731218
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B1_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 13697.80219643237,
+            "end_seconds": 13762.0772767839
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B2_s22_w0p05",
+            "slot": 1,
+            "start_seconds": 13718.523921245443,
+            "end_seconds": 13782.799001596974
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B3_s22_w0p05",
+            "slot": 0,
+            "start_seconds": 13736.150401731218,
+            "end_seconds": 13800.425482082748
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B4_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 13762.0772767839,
+            "end_seconds": 13826.35235713543
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_D_s22_w0p05",
+            "slot": 1,
+            "start_seconds": 13782.799001596974,
+            "end_seconds": 13847.074081948504
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_M_s22_w0p05",
+            "slot": 0,
+            "start_seconds": 13800.425482082748,
+            "end_seconds": 13864.700562434278
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_C_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 13826.35235713543,
+            "end_seconds": 13890.62743748696
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B0_s33_w0",
+            "slot": 1,
+            "start_seconds": 13847.074081948504,
+            "end_seconds": 13911.349162300034
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B1_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 13864.700562434278,
+            "end_seconds": 13928.975642785808
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B2_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 13890.62743748696,
+            "end_seconds": 13954.90251783849
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B3_s33_w0p05",
+            "slot": 1,
+            "start_seconds": 13911.349162300034,
+            "end_seconds": 13975.624242651564
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_B4_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 13928.975642785808,
+            "end_seconds": 13993.250723137338
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_D_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 13954.90251783849,
+            "end_seconds": 14019.177598190021
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_M_s33_w0p05",
+            "slot": 1,
+            "start_seconds": 13975.624242651564,
+            "end_seconds": 14039.899323003094
+          },
+          {
+            "id": "timing_only_C410_NLL_best_extended_v2_pythia_410m_m64_formal_C_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 13993.250723137338,
+            "end_seconds": 14057.525803488868
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B3_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 14019.177598190021,
+            "end_seconds": 17413.920916716528
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_D_s11_w0p05",
+            "slot": 1,
+            "start_seconds": 14039.899323003094,
+            "end_seconds": 17489.498687602238
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_M_s11_w0p05",
+            "slot": 0,
+            "start_seconds": 14057.525803488868,
+            "end_seconds": 17507.125168088012
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_C_s11_w0p05",
+            "slot": 2,
+            "start_seconds": 15715.822768565042,
+            "end_seconds": 19165.422133164186
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B0_s22_w0",
+            "slot": 3,
+            "start_seconds": 17413.920916716528,
+            "end_seconds": 20538.370582913878
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B1_s22_w0p05",
+            "slot": 1,
+            "start_seconds": 17489.498687602238,
+            "end_seconds": 20884.164771982276
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B2_s22_w0p05",
+            "slot": 0,
+            "start_seconds": 17507.125168088012,
+            "end_seconds": 20962.20940302817
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B3_s22_w0p05",
+            "slot": 2,
+            "start_seconds": 19165.422133164186,
+            "end_seconds": 22560.165451690693
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B4_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 20538.370582913878,
+            "end_seconds": 23987.969947513022
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_D_s22_w0p05",
+            "slot": 1,
+            "start_seconds": 20884.164771982276,
+            "end_seconds": 24333.76413658142
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_M_s22_w0p05",
+            "slot": 0,
+            "start_seconds": 20962.20940302817,
+            "end_seconds": 24411.808767627314
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_C_s22_w0p05",
+            "slot": 2,
+            "start_seconds": 22560.165451690693,
+            "end_seconds": 26009.764816289837
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B0_s33_w0",
+            "slot": 3,
+            "start_seconds": 23987.969947513022,
+            "end_seconds": 27112.41961371037
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B1_s33_w0p05",
+            "slot": 1,
+            "start_seconds": 24333.76413658142,
+            "end_seconds": 27728.430220961458
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B2_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 24411.808767627314,
+            "end_seconds": 27866.89300256747
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B3_s33_w0p05",
+            "slot": 2,
+            "start_seconds": 26009.764816289837,
+            "end_seconds": 29404.508134816344
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_B4_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 27112.41961371037,
+            "end_seconds": 30562.018978309516
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_D_s33_w0p05",
+            "slot": 1,
+            "start_seconds": 27728.430220961458,
+            "end_seconds": 31178.029585560602
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_M_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 27866.89300256747,
+            "end_seconds": 31316.492367166615
+          },
+          {
+            "id": "extended_v2_pythia_1b_m32_formal_C_s33_w0p05",
+            "slot": 2,
+            "start_seconds": 29404.508134816344,
+            "end_seconds": 32854.10749941549
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B0_s11_w0",
+            "slot": 3,
+            "start_seconds": 30562.018978309516,
+            "end_seconds": 32745.160806775457
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B1_s11_w0p05",
+            "slot": 1,
+            "start_seconds": 31178.029585560602,
+            "end_seconds": 33491.04458769215
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B2_s11_w0p05",
+            "slot": 0,
+            "start_seconds": 31316.492367166615,
+            "end_seconds": 33667.83348835873
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_M_s11_w0p05",
+            "slot": 3,
+            "start_seconds": 32745.160806775457,
+            "end_seconds": 35091.96449446924
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B0_s22_w0",
+            "slot": 2,
+            "start_seconds": 32854.10749941549,
+            "end_seconds": 35037.24932788143
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B1_s22_w0p05",
+            "slot": 1,
+            "start_seconds": 33491.04458769215,
+            "end_seconds": 35804.0595898237
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B2_s22_w0p05",
+            "slot": 0,
+            "start_seconds": 33667.83348835873,
+            "end_seconds": 36019.17460955085
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B4_s22_w0p05",
+            "slot": 2,
+            "start_seconds": 35037.24932788143,
+            "end_seconds": 37384.05301557521
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_M_s22_w0p05",
+            "slot": 3,
+            "start_seconds": 35091.96449446924,
+            "end_seconds": 37438.768182163025
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B0_s33_w0",
+            "slot": 1,
+            "start_seconds": 35804.0595898237,
+            "end_seconds": 37987.20141828964
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B1_s33_w0p05",
+            "slot": 0,
+            "start_seconds": 36019.17460955085,
+            "end_seconds": 38332.1896116824
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B2_s33_w0p05",
+            "slot": 2,
+            "start_seconds": 37384.05301557521,
+            "end_seconds": 39735.39413676733
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B4_s33_w0p05",
+            "slot": 3,
+            "start_seconds": 37438.768182163025,
+            "end_seconds": 39785.57186985681
+          },
+          {
+            "id": "extended_v2_pythia_2p8b_m8_h25m_formal_M_s33_w0p05",
+            "slot": 1,
+            "start_seconds": 37987.20141828964,
+            "end_seconds": 40334.00510598342
+          }
+        ]
+      }
+    }
+  ],
+  "full_training_cohort_unchanged": {
+    "all_models_total_runs": 63,
+    "horizons_changed": false
+  },
+  "new_matched_extended_initial_required": true,
+  "primary_v3_NLL_baseline_reused": false,
+  "conceptual_timing_rows_not_executable_jobs": true,
+  "extra_training_dependencies_are_simulation_only": true,
+  "phase_gate_additional_audit_proof_READY_latency_seconds": null,
+  "no_actual_remaining_evaluation_budget_credit": true,
+  "no_unproved_D_or_best_final_alias_discount": true,
+  "no_total_compute_saving_claimed": true,
+  "main66_still_deferred": true,
+  "optional_2p8b_QA_still_paused": true,
+  "checks_executed": [
+    "No simulated initial before all24 training ends",
+    "Every48 adapted starts only after new initial ends",
+    "Training dispatch before the cohort gate is identical to current FIFO",
+    "Actual currently running children keep their slots",
+    "Sensitivity factors are already in rate inputs and not multiplied again; entire FIFO adds10 percent once"
+  ],
+  "future_ROOT_gate_checklist": [
+    "All24 C410 training jobs actually complete/rc0 with immutable definitions, full100M exposures and source audits.",
+    "Published actual v5 model-specific READY plus complete audit/final+best state proofs, queue and manifest SHA.",
+    "Use the actual matched-extended initial/dependency closure; never alias main_v3 baseline.",
+    "Only the actual frozen plan may spend a proved alias; this preview spends none.",
+    "Recapture contemporaneous master/state/runtime and reprice actual complete queue with current occupied long-run slots.",
+    "Require high scenario >=15min before23:50, retain all63 training/horizons and full30min delivery tail.",
+    "Obtain separate ROOT execution authority and append through existing single master only; this file authorizes nothing.",
+    "After actual successful whole-phase output/attestation verification, deduct only matching completed work once from final tail."
+  ],
+  "limitations": [
+    "Zero extra CPU audit/proof/READY latency is modeled; unmeasured gate delay changes slot placement and must be repriced at real READY.",
+    "The unchanged full-v5-tail envelope intentionally gives no future-work credit and includes the same49 again; it is a conservative schedule check, never a total-cost sum.",
+    "Main4 archive QA has a separate budget and no execution is authorized here; optional2.8B QA remains paused.",
+    "FIFO timing forecasts do not guarantee deadlines or replace actual scheduler admission/source checks."
+  ],
+  "GPU_or_queue_or_authority_or_watcher_started": false,
+  "score_semantics_read": false,
+  "global_report_modified": false
+}

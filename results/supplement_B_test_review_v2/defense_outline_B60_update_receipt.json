@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "updated_at_utc": "2026-11-06T12:24:14.185716+00:00",
+  "document": "/tmp/grad-research-20261106/worktree/docs/论文写作与答辩提纲.md",
+  "before_sha256": "144c77b88b14376a7f982d9b6cdd32f8af70039a51a51dd1871f2070f84ef053",
+  "after_sha256": "4799b453f5c2fbadf156693084ebef0b11b731bb51a67abfc909cce93e64b4c9",
+  "changes": [
+    {
+      "before": "# 论文写作与答辩提纲（主实验与补充A完成版）",
+      "after": "# 论文写作与答辩提纲（主实验与补充A/B完成版）"
+    },
+    {
+      "before": "本稿依据已经完成的主36训练、补充A126条件及各自独立NLL测试。补充B/C和行为结果尚未全部完成，后续只能填入真实完整结果，不能把准备好的配置写成已验证结论。主数字和证据入口以[研究报告](../研究报告.md)及[主NLL讨论](主NLL测试结果讨论.md)为准。",
+      "after": "本稿依据已经完成的主36训练、补充A126条件和B60条件及各自冻结heldout NLL测试；B复用主v3测试文本与配套initial，不是新增独立测试样本。C与行为结果仍待完成，后续只能填入真实完整结果，不能把准备好的配置写成已验证结论。主数字和证据入口以[研究报告](../研究报告.md)、[主NLL讨论](主NLL测试结果讨论.md)及[B完整测试解释](补充B_完整60run测试结果解释.md)为准。"
+    },
+    {
+      "before": "用A的完整λ曲线说明共享超参数结论的适用范围；B/C和行为仅在完整后纳入。",
+      "after": "用A完整λ曲线说明共享超参数的适用范围，用B说明库组成稳定不等于端点稳定；C和行为仍待完整结果。"
+    },
+    {
+      "before": "B/C仍按预先冻结的λ=.05完成。",
+      "after": "B保持预先冻结的λ=.05；C按各自冻结协议执行，结果另报。"
+    },
+    {
+      "before": "补充B用于进一步隔离条件选库波动，必须等它真实完整后解释。",
+      "after": "完整B60中，M的bank均值teacher-NLL更稳，但两种K×三个token端点的六格sample SD均未低于B4。这里只观察到10draw的样本SD，不证明总体方差更大，也未直接测所有梯度方差。见[B测试与组成解析对照](补充B_完整60run测试结果解释.md#与validation和事前bank组成解析的关系)。"
+    },
+    {
+      "before": "**D与B4相同还有意义吗？**",
+      "after": "**B的十次选库能增加主实验的训练seed数吗？** 不能。B固定pool=11、train=11，n=10是selection seeds1001—1010的条件bank draws；不是十个独立训练/生成seed，也不能和主三seed合成十三个重复。同标签配对不保证不同算法消耗相同随机数，不能称严格CRN。全部[60个个体](../results/supplement_B_test_review_v2/all_60_endpoints.csv)均保留。\n\n**K196的M均值更好，是否足以宣布分层有效？** 其M−B4的G/C4/Wiki均值差为+.004052/−.004415/−.006274，有利个体7/7/8个；K20三个均值方向却相反，且K196的端点SD也未降低。这限定于一个pool、一个训练seed和冻结λ=.05，不能外推稳定优势或按test事后选K。见[同标签配对差及sample SD](../results/supplement_B_test_review_v2/paired_six_metric_statistics.csv)与[方向计数](../results/supplement_B_test_review_v2/direction_counts.csv)。\n\n**D与B4相同还有意义吗？**"
+    },
+    {
+      "before": "多项逐一95%区间也不是全研究统一95%的显著性保证。",
+      "after": "多项逐一95%区间也不是全研究统一95%的显著性保证。B中K196的M−B4在draw1001/1005的token ΔG分别为+.018049/−.024406，各自条件文档区间虽窄，bank draw方向仍相反；文档区间不能替代选库sample SD。假设文档独立/可交换重采样也可能受同源内容相关性限制。见[逐draw条件区间](../results/supplement_B_test_review_v2/conditional_paired_document_CIs.csv)。"
+    },
+    {
+      "before": "测试后分解说明这一加权关系，但不证明长度因果效应，也不能按哪个结果更好看临时挑口径。",
+      "after": "测试后分解说明这一加权关系，但不证明长度因果效应，也不能按哪个结果更好看临时挑口径。B六条件的token/doc均值排名相同，绝对增益仍有明显差异：例如K20/B4的G为token−.000243、等文档+.021654；冻结样本中保留更多块的文档在token口径下权重较高。见[六指标统计](../results/supplement_B_test_review_v2/six_metric_statistics.csv)与[文档权重分解](../results/supplement_B_test_review_v1/target_doc_weight_decomposition_24.csv)。"
+    }
+  ],
+  "new_paired_numeric_examples": [
+    {
+      "metric": "g_new",
+      "K": 196,
+      "paired_mean": 0.004052097747295091
+    },
+    {
+      "metric": "f_old_c4",
+      "K": 196,
+      "paired_mean": -0.004414745439348078
+    },
+    {
+      "metric": "f_old_wikitext",
+      "K": 196,
+      "paired_mean": -0.006274144986897179
+    }
+  ],
+  "all_new_B_numeric_examples_checked": true,
+  "preserved_primary_and_A_numeric_content": true,
+  "C_behavior_still_await_complete_results": true,
+  "new_statistics_or_GPU_inference": false,
+  "main_report_README_changed": false,
+  "sources": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/supplement_B_test_review_v2/paired_six_metric_statistics.csv",
+      "sha256": "a853abca34461cd2ee8f6dd8d3e3e87c47a4b1a175c9b487601fb6d7f397072f"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/supplement_B_test_review_v2/direction_counts.csv",
+      "sha256": "962b0a41ff13c3cee5bff0c550986e0acd1661476b56160b5ceae90d852b8500"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/supplement_B_test_review_v2/six_metric_statistics.csv",
+      "sha256": "e561c15d7bdcd90a6630a174ee5e4c773dff2b32d5686a201cb1f014b78f6908"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/supplement_B_test_review_v2/conditional_paired_document_CIs.csv",
+      "sha256": "c2290a7cc10b269010ab39c939949ad3aaa8b3c645d7b84b10734a36211aeacc"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/supplement_B_test_review_v2/six_metric_rankings.csv",
+      "sha256": "db922a0a3e03c23102230eec2004e8730a99279d8c9c614972a05b023a63c380"
+    }
+  ]
+}
