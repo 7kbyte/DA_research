@@ -1,0 +1,75 @@
+{
+  "ROOT_authority_granted": false,
+  "ROOT_authority_instruction": "Keep FALSE template immutable. Only after complete inspect-state proof and ROOT review create a separate JSON with exact matching plan/manifest/frozen_queue/state_proof/source/counts/journal/output, allow_score_analysis=true, allow_partial=false; bind its full SHA. No authority is created by this template.",
+  "actual_executor_source_rule": "Use the actual queue/state which contains all67 definitions and completed records, including inherited initial. A future handoff needs its own real queue/state, not an assumed old master. No original check is called by inspect-state.",
+  "actual_original_guard_check_or_analyze_executed": false,
+  "counts": {
+    "initial_baselines": 1,
+    "logical_endpoints": 72,
+    "physical_jobs": 67,
+    "proved_aliases": 6
+  },
+  "cpu_env": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "MKL_NUM_THREADS": "2",
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2"
+  },
+  "disabled_ROOT_template": {
+    "bytes": 4945,
+    "path": "/tmp/grad-research-20261106/worktree/results/primary_behavior_analysis_preparation_v1/plan_ROOT_FALSE_TEMPLATE.json",
+    "sha256": "67ee8daeed51322b62c6d7ed195a037456c835d2c89ed42642c2b5fb33bb167f"
+  },
+  "first_read_semantics": "Original check passes -> exclusive per-manifest semantic_access_enabled journal -> original analyze. Journal denotes permission/attempt, not successful parsing; failures remain and cannot reset by changing output folder.",
+  "fixed_per_manifest_first_read_journal": "/tmp/grad-research-20261106/worktree/artifacts/provenance/primary_behavior_first_reads_v1/312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934.json",
+  "future_authorized_run_argv": [
+    "/usr/bin/python",
+    "/tmp/grad-research-20261106/worktree/scripts/run_primary_behavior_analysis_v1.py",
+    "run",
+    "--plan",
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_analysis_preparation_v1/plan.json",
+    "--plan-sha256",
+    "cdd6dea33675e19dd3da9d013198f4e60498e2c4d80323808ce6cce02933c1b2",
+    "--state-proof",
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_analysis_preparation_v1/STATE_PROOF_NEW.json",
+    "--state-proof-sha256",
+    "<STATE_PROOF_SHA256>",
+    "--authority",
+    "<SEPARATE_ROOT_TRUE_AUTHORITY_JSON>",
+    "--authority-sha256",
+    "<ROOT_AUTHORITY_SHA256>",
+    "--attempt-dir",
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_analysis_execution_v1"
+  ],
+  "future_inspect_state_argv": [
+    "/usr/bin/python",
+    "/tmp/grad-research-20261106/worktree/scripts/run_primary_behavior_analysis_v1.py",
+    "inspect-state",
+    "--plan",
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_analysis_preparation_v1/plan.json",
+    "--plan-sha256",
+    "cdd6dea33675e19dd3da9d013198f4e60498e2c4d80323808ce6cce02933c1b2",
+    "--queue",
+    "<ACTUAL_EXECUTOR_QUEUE_JSON>",
+    "--state",
+    "<ACTUAL_EXECUTOR_STATE_JSON>",
+    "--output",
+    "/tmp/grad-research-20261106/worktree/results/primary_behavior_analysis_preparation_v1/STATE_PROOF_NEW.json"
+  ],
+  "plan": {
+    "path": "/tmp/grad-research-20261106/worktree/results/primary_behavior_analysis_preparation_v1/plan.json",
+    "sha256": "cdd6dea33675e19dd3da9d013198f4e60498e2c4d80323808ce6cce02933c1b2"
+  },
+  "planned_analysis_output": "/tmp/grad-research-20261106/worktree/results/primary_behavior_analysis_authorized_v1",
+  "prepared_only": true,
+  "present_preparation_no_stateproof_or_behavior_outputs_read": true,
+  "schema_version": 1,
+  "scope": "primary_complete_behavior_67physical_72logical_v1",
+  "source": {
+    "bytes": 27044,
+    "path": "/tmp/grad-research-20261106/worktree/scripts/run_primary_behavior_analysis_v1.py",
+    "sha256": "7c3f3db3515b67b38bd41be2b5f96915e896f8ffa74cf2b950a39c42265b08b4"
+  },
+  "source_policy": "Original guard/collector/inventory/analysis/worker/common code unchanged. Only their original check/analyze is called after true authority. Current prepared task artifacts are SHA-verified as opaque input bytes before future analysis, not parsed as outcomes. No checkpoint payload read is added.",
+  "whole_process_timing": "Timed parent spawns complete CPU worker containing closure recheck, original check, journal and original analyze. resource child CPU includes waited original check/analyze descendants. Whole parent receipt persists even worker fails. Nested timers are not added. Parent prelaunch authority validation and manual signing/writing are outside this child timer."
+}
