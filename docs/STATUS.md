@@ -1,12 +1,12 @@
 # 研究运行状态
 
-更新时间：2026-11-06T21:20:32.026043+00:00
+更新时间：2026-11-06T21:35:53.141284+00:00
 截止时间：2026-11-07 03:26:32 UTC（北京时间11:26）
-已用 17.90 小时；剩余 6.10 小时。
+已用 18.16 小时；剩余 5.84 小时。
 
 以下状态来自运行日志。配置完成不等于实验完成；正式结论以最终研究报告为准。
 
-当前阶段：正式训练262/267完成；主36、A108、B60、C410长程24均已完成并分析，C1B20/24及C2.8B14/15仍按原队列训练。21:10预算刷新及独立复核通过，预测全训练22:22:42、评价high情景01:05:35，非实际handoff许可；当前仍5/9 READY。八权重包与19:18项目快照、B单例恢复及成本v8均已验收。16页报告已补充多重比较、A选参与C共享数据边界。最终可编辑树v2已准备而未实际恢复，归档复训QA尚未执行。剩余C模型和行为评分保持封存。
+当前阶段：正式训练263/267完成；主36、A108、B60、C410长程24已分析，C2.8B15/15训练于21:24完成，C1B20/24完成、最后4组运行且无待启动项。v5实际7/9 READY；21:26已启动C2.8B best固定首个CPU导出样例，批量与持久发布尚未授权。C2.8两分析plan/FALSE/v3 repair已准备，等待评价完整闭包；剩余C模型与行为分数均未解封。八权重包、19:18项目快照、B单例恢复及成本v8已验收；16页报告和最终树v2准备保持。预测训练22:22:42/high评价01:05:35只是估计，尚不满足最终handoff。
 
 旧非确定性pilot/formal仅供诊断；主strict36为正式主结果。补充训练独立phase，截止00:00 UTC；主active_registry保留供分析与alias验证。
 
@@ -18,7 +18,7 @@
 | lambda_job_state（已隔离） | 16 | 0 | 0 | 0 |
 | lambda_v3_job_state（已隔离） | 16 | 0 | 0 | 0 |
 | lr_deterministic_v3_job_state | 4 | 0 | 0 | 0 |
-| supplemental_job_state | 602 | 4 | 1 | 0 |
+| supplemental_job_state | 603 | 4 | 0 | 0 |
 | v3_lr_eval_job_state（已隔离） | 4 | 0 | 0 | 0 |
 
 ## 当前单一调度器内的阶段
@@ -38,8 +38,8 @@
 | extended_v2_pythia_2p8b_m8_lambda | 16 | 0 | 0 | 0 |
 | primary_behavior_initial_timing | 1 | 0 | 0 | 0 |
 | extended_v2_pythia_410m_m64_formal | 24 | 0 | 0 | 0 |
-| extended_v2_pythia_1b_m32_formal | 20 | 3 | 1 | 0 |
-| extended_v2_pythia_2p8b_m8_h25m_formal | 14 | 1 | 0 | 0 |
+| extended_v2_pythia_1b_m32_formal | 20 | 4 | 0 | 0 |
+| extended_v2_pythia_2p8b_m8_h25m_formal | 15 | 0 | 0 | 0 |
 | planned_model_initial_timing_v1 | 2 | 0 | 0 | 0 |
 | replay_fit_diagnostic_v2 | 15 | 0 | 0 | 0 |
 | primary_independent_nll_test | 67 | 0 | 0 | 0 |

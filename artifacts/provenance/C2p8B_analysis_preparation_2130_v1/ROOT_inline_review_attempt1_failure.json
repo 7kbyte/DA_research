@@ -1,0 +1,12 @@
+{
+  "status": "failed_ROOT_metadata_review_key_assumption_not_source_failure",
+  "recorded_at_utc": "2026-11-06T21:37:52.929497+00:00",
+  "observed_returncode": 1,
+  "error": "AssertionError at inline line14: checked x.get(authorized) is False but original schema uses allow_score_analysis=False",
+  "actual_template_field": "allow_score_analysis",
+  "source_or_output_mutated_before_failure": false,
+  "whole_child_timing_seconds": null,
+  "actual_read_bytes": null,
+  "no_score_or_model_payload_reads": true,
+  "correction": "Check exact existing allow_score_analysis and allow_partial fields; original source/template unchanged."
+}

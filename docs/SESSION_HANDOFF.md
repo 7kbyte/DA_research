@@ -329,3 +329,10 @@ Behaviorfrozenprotocolcompletevalidation PiQA1838,HellaSwag10042;char-normalized
 - ROOT新增本次首样48GiB保守available门槛，非原scope值/峰值保证；实际precheck55.95GiB，launch约58.16GiB。1200+120秒仅准入allowance，run_one没有hardtimeout。
 - audit_phase(compare_weights=False)仍fresh散列model_files；ROOT未为precheck重复调用。既有exporter在编码前的fullphase_source_audit.json已真实passed15/no violations（21:27:40观察），属于样例parent实际IO，不能叫metadata-only。
 - eval_selection正在仅准备C2.8两个analysis plan/FALSE/v3 operational repair，禁止TRUE/check/analyze与评分读取。最终解封需actual successor同一个不可变state路径/SHA从check开始绑定。
+
+### 21:37 C2.8 analysis preparation accepted (still sealed)
+
+- NLL plan71b80a6b…/repair7a218b5d…：30logical/31closure；behavior plane49b2ccc…/repair5728413f…：15new+1imported initial=16closure，无D/alias。prepare COMPLETE7ccf72b3…；independent COMPLETEb1c6cb79…；ROOT acceptance52892d93c06f761649a5f90cb8fd52b1baffa7d17f8ab0f13f98deb79f29509b，位置artifacts/provenance/C2p8B_analysis_preparation_2130_v1/ROOT_acceptance.json。
+- 52项小proof/2,942,311B fresh核对；30CP历史大小666,060,469,582B（final含optimizer）不是本次IO。当前CP/base/score0；future check仍fresh hash5,684,693,096B base，届时明确授权并计时。
+- 四份FALSE模板真实字段是allow_score_analysis=false/allow_partial=false；ROOT第一次小核错用authorized键，assert退出1，原样例和源均未改；ROOT_inline_review_attempt1_failure.json保留，whole timing/IO unknown。独立审阅一次MD误JSON失败.030912s也保留，成功.056490s。
+- 新v3 FALSE state当前null；future每phase在其closure完整后可对同一份actual successor不可变state从check→analyze绑定，不必等其它phase全部结束；不读partial，不更改统计或first-read journal。当前没有TRUE/check/analyze。

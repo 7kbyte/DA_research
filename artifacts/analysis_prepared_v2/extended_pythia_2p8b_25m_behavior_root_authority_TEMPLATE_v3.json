@@ -1,0 +1,58 @@
+{
+  "allow_partial": false,
+  "allow_score_analysis": false,
+  "authorized_by": "root",
+  "checkpoint_verification": {
+    "cache_reader_source": {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/stat_bound_digest_cache.py",
+      "sha256": "9cc01b493b46a5bf391a7c649a379d87011fff077ddeea701eaf8a84bdb568e2"
+    },
+    "cache_snapshot": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/digest_cache_snapshot_1794000500254466661.json",
+      "sha256": "fd14a156b761b04a7a9ccc4dcd9dbea52f42119845ca34b71b128bce922a6ae8"
+    },
+    "mode": "v5_checkpoint_snapshot"
+  },
+  "contract_id": "extended_pythia_2p8b_25m_behavior",
+  "expected_counts": {
+    "closure_canonical_forward_jobs": 16,
+    "closure_queue_jobs": 16,
+    "closure_reuse_materializations": 0,
+    "imported_baselines": 1,
+    "imported_canonical_forward_jobs": 1,
+    "logical_aliases": 0,
+    "logical_endpoints": 15,
+    "new_forward_jobs": 15,
+    "queue_jobs": 15,
+    "reuse_jobs": 0
+  },
+  "manifest": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_behavior/manifest.json",
+    "sha256": "0170c8aa27ba3bcbf8b9b9c51616ac99cea0f3d806986a645a48372bd8734b0e"
+  },
+  "plan": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_2p8b_25m_behavior.json",
+    "sha256": "e49b2ccc6d5963c6596c360e9fe916513d16d6e1d6836ee6ee3217372c652829"
+  },
+  "protocol": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_protocol_v2.json",
+    "sha256": "eed050602c368e5e4be87172ac4d208b890d9a7f7e9811ce1684ae62acc8f742"
+  },
+  "ready": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_behavior/READY.json",
+    "sha256": "2e157df30676a728f1823be231968a056a8b01883d3a01470dd6ff6cbd0149f4"
+  },
+  "test_or_behavior_used_for_selection": false,
+  "training_methods_grid_selection_horizons_frozen": true,
+  "operational_repair": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C2p8B_behavior.json",
+    "sha256": "5728413f502649fae3c1bd7e300a9c4b53823318ae5cced50c340deb87e73983"
+  },
+  "actual_successor_immutable_state": {
+    "path": null,
+    "sha256": null,
+    "pending_actual_handoff": true,
+    "same_exact_source_required_for_check_and_analyze": true
+  },
+  "note": "Non-authorizing only. Before first real check, ROOT must bind one actual successor immutable state path/SHA and use that same file for both check and analyze; do not substitute current live master or a different analysis state. This operational state field must be externally enforced; frozen core state arguments/receipts are unchanged."
+}

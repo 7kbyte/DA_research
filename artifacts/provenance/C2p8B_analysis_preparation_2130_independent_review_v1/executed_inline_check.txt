@@ -1,0 +1,90 @@
+
+import collections,hashlib,json,stat
+from pathlib import Path
+R=Path.cwd().resolve();P=R/'artifacts/provenance/C2p8B_analysis_preparation_2130_v1';O=R/'artifacts/provenance/C2p8B_analysis_preparation_2130_independent_review_v1'
+cache={};proofs={}
+def raw(path,sha=None):
+ p=Path(path).resolve();assert p.suffix in {'.json','.py','.md','.txt'} and '/models/' not in str(p) and '/results/future_evaluation_v1/' not in str(p)
+ if p not in cache:
+  s=p.stat();assert stat.S_ISREG(s.st_mode) and s.st_size<32<<20
+  cache[p]=p.read_bytes();t=p.stat();assert (s.st_dev,s.st_ino,s.st_size,s.st_mtime_ns,s.st_ctime_ns)==(t.st_dev,t.st_ino,t.st_size,t.st_mtime_ns,t.st_ctime_ns)
+  proofs[str(p)]={'path':str(p),'bytes':len(cache[p]),'sha256':hashlib.sha256(cache[p]).hexdigest()}
+ if sha is not None:assert proofs[str(p)]['sha256']==sha
+ return cache[p]
+def read(p,sha=None):return json.loads(raw(p,sha))
+def ref(x):return read(x['path'],x['sha256'])
+def sig(s):return dict(dev=s.st_dev,ino=s.st_ino,size=s.st_size,mtime_ns=s.st_mtime_ns,ctime_ns=s.st_ctime_ns)
+c=read(P/'COMPLETE.json','7ccf72b377f75778dbbeb03556d7ead826a08f5588251b5194361a53a57d8502')
+for x in c['namespace_files']:
+ assert Path(x['path']).resolve().is_relative_to(P);assert len(raw(x['path'],x['sha256']))==x['bytes']
+ref(c['doc']);proto=ref(c['original_protocol']);snapshot=ref(c['cache_snapshot']);raw(c['reader_source']['path'],c['reader_source']['sha256'])
+meta=read(P/'metadata_preflight.json');schema=read(P/'metadata_schema_validation.json');assert meta['cache_snapshot']==c['cache_snapshot']
+for path,sha in proto['analysis_source_sha256'].items():raw(path,sha)
+records=schema['original_training_gate_metadata_only']['records'];queue=ref(schema['original_training_gate_metadata_only']['queue']);jobs={j['id']:j for j in queue};assert len(records)==15
+for rid,rec in records.items():
+ assert rec['status']=='completed' and type(rec['returncode']) is int and rec['returncode']==0 and not rec.get('missing_outputs') and not any(k.startswith('stop_requested') for k in rec)
+ assert rec['argv']==jobs[rid]['argv'] and rec['definition_sha256']==hashlib.sha256(json.dumps(jobs[rid],sort_keys=True).encode()).hexdigest()
+allcp={};plans={};science={};summary=[]
+for item in c['contracts']:
+ p=ref(item['plan']);m=ref(item['manifest']);ready=ref(p['ready']);mode=p['contract']['mode'];plans[mode]=p
+ assert p['contract']==proto['contracts'][item['contract_id']] and p['counts']==item['counts'] and p['contract_id']==item['contract_id']
+ assert p['prepared_only'] is True and all(p[k] is False for k in ('score_access_authorized','test_or_behavior_scores_parsed','model_inference_started'))
+ assert p['protocol']['sha256']==c['original_protocol']['sha256'] and p['checkpoint_verification']['cache_snapshot']==c['cache_snapshot']
+ assert ready['ready'] is True and ready['status']=='ready' and ready['id']==item['contract_id'] and ready['mode']==mode and ready['manifest']==p['manifest']==item['manifest']
+ assert ready['source_model_equivalence']=={'required':False,'proofs':[]};ref(ready['phase_spec']);q=ref(ready['queue']);ql={j['id']:j for j in q}
+ closure=p['closure_jobs'];assert len(closure)==p['closure_job_count']==(31 if mode=='nll' else 16) and len({j['job_id'] for j in closure})==len(closure)
+ assert len(q)==len(ql)==len(m['jobs'])==(31 if mode=='nll' else 15) and sum(j['kind']=='initial' for j in closure)==1
+ assert p['counts']['imported_baselines']==(0 if mode=='nll' else 1)
+ for row in closure:
+  if row['job_id'] in ql:assert row['definition']==ql[row['job_id']]
+  else:
+   assert mode=='behavior' and row['kind']=='initial';src=R/'configs/planned_model_behavioral_timing_v1_queue.json';imported=read(src,p['preparation_source_sha256'][str(src)]);assert row['definition']==next(j for j in imported if j['id']==row['job_id'])
+ assert {r['group'] for r in m['records']}=={'B0','B1','B2','B4','M'} and {r['training_seed'] for r in m['records']}=={11,22,33}
+ assert collections.Counter(r['kind'] for r in m['records'])==({'final':15,'best':15} if mode=='nll' else {'final':15})
+ assert len({r['run_id'] for r in m['records']})==15 and len({r['inference_job_id'] for r in m['records']})==len(m['records'])
+ assert all(r['run_id']==r['actual_run_id'] and r['inference_alias_of'] is None and r['is_training_alias'] is False and r['source_model_equivalence'] is None for r in m['records'])
+ assert p['counts']['logical_aliases']==p['counts']['reuse_jobs']==p['counts']['closure_reuse_materializations']==0
+ for r in m['records']:
+  assert r['checkpoint_sha256']==p['checkpoint_paths'][r['checkpoint']];allcp[r['checkpoint']]=r
+  policy=m['baseline_groups'][r['baseline_group']]['inference_policy'];assert all(policy[k]==v for k,v in p['contract']['inference_policy_expect'].items())
+ for path,sha in p['preparation_source_sha256'].items():
+  if Path(path).suffix=='.py':raw(path,sha)
+ for path,sha in p['contract']['source_proof_files'].items():
+  b=raw(path,sha)
+  if path.endswith('_input_snapshot.json'):
+   for rel,v in json.loads(b)['code'].items():
+    v=v['sha256'] if isinstance(v,dict) else v;raw(R/rel,v);science[rel]=v
+ f2=ref(item['v2_FALSE_template']);f3=ref(item['v3_FALSE_template']);repair=ref(item['non_authorizing_v3_repair'])
+ for f in (f2,f3):
+  assert f['allow_score_analysis'] is False and f['allow_partial'] is False and f['plan']==item['plan']
+  assert all(f[k]==p[k] for k in ('protocol','ready','manifest','checkpoint_verification'))
+ assert f3['operational_repair']==item['non_authorizing_v3_repair'];pending=f3['actual_successor_immutable_state']
+ assert pending['path'] is None and pending['sha256'] is None and pending['same_exact_source_required_for_check_and_analyze'] is True
+ assert repair['score_access_authorized'] is False and repair['scientific_or_statistics_changes'] is False and repair['this_is_not_a_ROOT_score_authority'] is True
+ assert repair['retained_plan']==repair['actual_plan_at_repair']==item['plan'] and repair['retained_manifest']==p['manifest'] and repair['retained_protocol']==p['protocol']
+ for key in ('active_source_sha256','retained_source_sha256'):
+  for path,sha in repair[key].items():raw(path,sha)
+ assert not Path(p['first_read_receipt_path']).exists();summary.append({'contract':item['contract_id'],'counts':p['counts'],'both_authorities_FALSE':True,'successor_state_pending':True})
+assert len(science)==10 and len(allcp)==len(meta['checkpoint_expected_and_current_stats'])==30
+assert set(plans['nll']['checkpoint_paths'])==set(allcp) and set(plans['behavior']['checkpoint_paths'])=={p for p,r in allcp.items() if r['kind']=='final'}
+sizes=collections.defaultdict(int);stats=[]
+for path,r in allcp.items():
+ row=meta['checkpoint_expected_and_current_stats'][path];assert snapshot['entries'][path]==row['historical_full_read_receipt'];receipt=ref(row['historical_full_read_receipt']);s=Path(path).stat();current=sig(s)
+ assert stat.S_ISREG(s.st_mode) and current==row['current_stat5']==receipt['fd_before']==receipt['fd_after']==receipt['stat_before']==receipt['stat_after']
+ assert receipt['canonical_path']==str(Path(path).resolve()) and receipt['sha256']==row['sha256']==r['checkpoint_sha256'] and receipt['complete_to_eof'] is True and receipt['read_bytes']==current['size']
+ assert receipt['method']=='sha256_entire_open_fd_to_eof_v1' and receipt['reader_source']['sha256']==c['reader_source']['sha256']
+ a=receipt['source_authority'];assert a['kind']=='completed_training_checkpoint' and type(a['returncode']) is int and a['returncode']==0 and not any(k.startswith('stop_requested') for k in a)
+ assert a['run_id']==r['run_id'] and a['endpoint']==r['kind'] and a['job_definition_sha256']==records[r['run_id']]['definition_sha256']
+ assert a['config']['sha256']==r['input_sha256'][r['config_path']] and a['summary']['sha256']==r['input_sha256'][r['summary_path']]
+ sizes[r['kind']]+=s.st_size;stats.append({'path':path,'kind':r['kind'],'stat5':current,'historical_receipt':row['historical_full_read_receipt']})
+assert sum(sizes.values())==c['qualified_CP_historical_file_size_bytes_not_current_read']==666060469582 and sizes['final']>sizes['best']
+commands=ref(c['future_commands']);pending=commands['actual_successor_immutable_state_binding'];assert commands['score_access_authorized'] is False and commands['prepared_only'] is True
+assert pending['path'] is None and pending['sha256'] is None and pending['same_source_required_for_both_check_and_analyze'] is True
+for phase in commands['phases']:
+ ca,aa=phase['check_argv_template'],phase['analyze_argv_template'];assert ca[ca.index('--state')+1]==aa[aa.index('--state')+1]=='<ACTUAL_SUCCESSOR_IMMUTABLE_STATE_PATH>'
+assert c['actual_successor_immutable_state_binding']['externally_enforced_ROOT_operation_requirement_not_new_core_validation'] is True
+assert next(iter(c['future_source_read_caveat'].values()))['current_stat5']['size']==5684693096
+assert all(c[k] is False for k in ('check_or_analyze_executed','TRUE_authority_created','first_read_journal_created','frozen_scientific_sources_changed'))
+result={'status':'passed_C2p8B_prepare_metadata_only_independent_review','contracts':summary,'scientific_code_10_fresh_SHA_matches':science,'checkpoint_cached_receipts_plus_current_stat_only':30,'checkpoint_historical_file_sizes_by_kind_bytes':dict(sizes),'checkpoint_historical_total_bytes_NOT_current_IO':sum(sizes.values()),'checkpoint_stat_evidence':stats,'future_state_binding':'pending/null; same actual successor immutable path/SHA must be bound from first check through analyze, externally enforced by ROOT','future_base_fresh_bytes_not_authorized_now':5684693096,'current_CP_base_score_payload_bytes':0,'prepare_check_analyze_reexecuted':False,'TRUE_tests_GPU_queue_operations':False,'metadata_files_read':len(proofs),'metadata_logical_bytes_returned':sum(v['bytes'] for v in proofs.values()),'source_proofs':list(proofs.values()),'manual_review_preparation_whole_seconds':None}
+with (O/'review.json').open('x') as f:json.dump(result,f,indent=2,ensure_ascii=False);f.write('\n')
+print(json.dumps({k:v for k,v in result.items() if k not in ('source_proofs','checkpoint_stat_evidence','scientific_code_10_fresh_SHA_matches')},ensure_ascii=False))
