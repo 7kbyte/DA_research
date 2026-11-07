@@ -447,3 +447,10 @@ All 514 frozen evaluation jobs finished 2026-11-07T00:29:18Z (0 failed, 0 stoppe
 - `final_qa_all24_seed2233_v1`：seed22/33 × 8组 = 16 run，4波重跑，全部completed rc0（01:43—02:12）。
 - 归档指纹直接比较重训与原始检查点：32/32逐位一致（各405,334,016元素），224.8s，状态 `passed_all16_seed2233_bitwise`；收据 `fingerprint_comparison_all24.json`（SHA aef829ad…）。
 - 累计：最终交付归档上全部24个主条件（8组×3seed）的final+best = **48/48端点逐位一致**（另加0732归档8/8）。报告§7、QA文档、README、指南、成本、STATUS已更新。
+
+
+### 02:48 UTC 第五轮：预算敏感性条件24/24，主实验72/72全绿
+
+- `final_qa_budget12_v1`：B4/M×b=.01/.10×3seed = 12 run，3波重跑（02:22—02:45），全部completed rc0，占槽合计约4,205秒。
+- 指纹直接比较重训与原始检查点：24/24逐位一致（各405,334,016元素），181.6s，状态 `passed_budget12_bitwise`；收据 `fingerprint_comparison_budget12.json`（SHA 44f3b728…）。
+- 累计：最终交付归档上**主实验全部36次训练、72/72个final/best端点逐位一致**（另有0732归档8/8）。报告§7、QA文档、README、指南、成本、STATUS已更新；窗口结束后由用户接管。

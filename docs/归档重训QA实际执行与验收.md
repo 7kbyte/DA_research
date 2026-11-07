@@ -105,3 +105,17 @@
 **累计覆盖**：针对最终交付归档的三轮重训覆盖全部 **24个主条件（8组×3seed、b=.05家族）的final与best，即48/48端点逐位一致**（另加第一轮07:32归档的8/8端点）。这是本平台、本容器环境下由交付归档直接重训得到的权重可复现性；仍不外推跨平台，不比较轨迹/优化器/RNG，不构成新科学重复。
 
 证据：`artifacts/provenance/final_archive_qa_v1/relocate_all24.json`、`dry_run_all24.json`、`launch_receipt_all24.json`、`fingerprint_comparison_all24.json`（SHA `aef829ad51cd49249717ac4b1f90d99114e21b5bab520b47405a150ecf0732a5`）。
+
+## 第五轮（收尾）：12 个预算敏感性条件
+
+用同一最终交付归档relocate出 `final_qa_budget12_v1`（12个run：B4与M在b=.01/.10、seed 11/22/33，rc0），分3波在4张H100上重跑：
+
+| 条件数 | 状态 | rc | 占槽（秒） |
+|---:|---|---:|---|
+| 12 | 全部completed | 0 | 合计4234.4 |
+
+全部12个任务严格rc0、无停止、无缺失输出。归档指纹函数把重训与原始训练检查点各算一次并直接比较：**24/24端点逐位相同**（12个run × final/best，每个405,334,016元素），状态 `passed_budget12_bitwise`，181.6秒。
+
+**最终覆盖**：针对最终交付归档的五轮重训合起来覆盖**主实验全部36次训练（8组×3seed 的 b=.05 家族，加上 B4/M 在 b=.01/.10 的12个预算条件）的 final 与 best，即 72/72 个端点完整模型状态逐位一致**；另加第一轮07:32归档的8/8端点。这是本平台、本容器环境下由交付归档直接重训得到的权重可复现性，不外推跨平台，不比较轨迹/优化器/RNG，不构成新科学重复。
+
+证据：`artifacts/provenance/final_archive_qa_v1/relocate_budget12.json`、`dry_run_budget12.json`、`launch_receipt_budget12.json`、`fingerprint_comparison_budget12.json`（SHA `44f3b72836fad9142a7449c682af969530fd4ec9a7bd59086ba4579a548234f8`）。

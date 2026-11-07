@@ -17,7 +17,7 @@
 - [410M／100M完整长程结果](docs/C410_100M_NLL完整结果与正文素材.md)：24项训练、48个final/best逻辑端点与完整配对；[final权重持久发布](docs/C410_final_weights_durable_publication.json)与[全部24项best权重持久发布](docs/C410_best_weights_durable_publication.json)（best包native基座自带；尚未另做单例durable恢复）。
 - 1B与2.8B长程结果已写入报告第6.4/6.5节，独立复核见[C1B NLL](results/C1B_nll_independent_review_v1/independent_review_receipt.json)、[C1B行为](results/C1B_behavior_independent_review_v1/COMPLETE.json)、[C2.8B NLL](results/C2p8B_nll_independent_review_v1/independent_review_receipt.json)、[C2.8B行为](results/C2p8B_behavior_independent_review_v1/COMPLETE.json)；两模型的final权重已持久发布并完成1B单例CPU恢复；两模型的best包已在scratch完成定长编码与整包自检，但尚无对应的ROOT发布审阅适配器，因此未发布。
 - [文献调研](literature/文献调研.md)与[三篇近邻工作的定位复核](docs/三篇近邻文献_实验定位复核备忘录_20261106.md)
-- [归档重训QA实际执行与逐位验收](docs/归档重训QA实际执行与验收.md)：两轮实测（07:32中间归档与**最终交付归档**）各自重跑主实验B1/B2/B3/B4(seed11,b=.05,λ=.05)，两轮的4个final+4个best完整模型状态均**逐位一致**；第三至四轮把范围扩到**全部24个主条件、48/48端点逐位一致**。
+- [归档重训QA实际执行与逐位验收](docs/归档重训QA实际执行与验收.md)：两轮实测（07:32中间归档与**最终交付归档**）各自重跑主实验B1/B2/B3/B4(seed11,b=.05,λ=.05)，两轮的4个final+4个best完整模型状态均**逐位一致**；五轮扩展覆盖主实验**全部36次训练、72/72个final/best端点逐位一致**。
 - [环境重建与移交](docs/环境重建与移交.md)
 - [交付文件与恢复容量指南](docs/交付文件与恢复容量指南.md)：已发布文件、基座依赖、按需恢复空间与操作顺序。
 - [已校验的共享盘快照（2026-11-07 最终项目归档，3,093,828,104字节）](docs/durable_snapshot_latest.json)与[持久发布收据](docs/snapshot_final_durable_publication.json)；最终可编辑工作树已从该归档恢复并验收。
