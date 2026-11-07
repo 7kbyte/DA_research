@@ -416,3 +416,19 @@ All 514 frozen evaluation jobs finished 2026-11-07T00:29:18Z (0 failed, 0 stoppe
 - Cost: v8 structured ledger unchanged; `results/cost_inventory_final_v9_operations/operations.json` adds 25 measured post-v8 operations. 24h GPU telemetry `results/resources_final_24h`: 2497 samples, time-weighted mean utilisation 76.93/78.08/78.91/79.21%, sampled GPU energy 35.711 kWh, utilisation integral 65.400 GPU·h, 259.6s gap excluded.
 - Optional and NOT executed: archive-retraining QA (main4 or C-three), 2.8B CPU restore, C best-weight publication, deck refresh. They are listed as not executed rather than silently dropped.
 - Post-archive documents (final PDF, snapshot acceptance, tree evidence, STATUS/handoff) are recorded in the durable tree's `restore_evidence/post_archive_addenda.json`; they are not claimed to be archive payload.
+
+
+## 2026-11-07 01:20 UTC — 归档重训QA已执行并逐位通过
+
+- 用户追加授权“自由跑实验”。执行了最后一个未执行计划项：`archive0732_seed11_2x2_v1`。前置：514/514评价完成、4 GPU空闲、无训练进程。运行前用归档helper dry-run重验输入（rc0，1.00s）。ROOT授权 `artifacts/provenance/archive_qa_actual_v1/ROOT_operational_amendment_v2.json`（SHA 9192938e…），相对原计划仅加 `--launch-margin-seconds 120 --stop-margin-seconds 120`，deadline 02:56:32，4 GPU，exit-when-idle。
+- 调度器PID 3494892，01:05:40启动；4任务01:11:31前全部completed，严格int rc0、无stop字段、无缺失输出；占槽340.4/350.4/350.4/350.4s。
+- CPU核验 `passed_all_final_and_best_full_model_state_bytes`：4 final + 4 best 全部完整模型状态逐位一致；24次读、77,829,310,128字节序列化、fresh SHA 25,943,462,104字节、60.02s。收据 `results/reproduction_qa/archive0732_seed11_2x2_v1/actual_postrun_v2/receipt.json`。
+- 报告新增§7段落，PDF重渲染为32页（SHA c20f7a85…），QA收据 `artifacts/report_review/final_report_v31/QA.json` 更新；新增 `docs/归档重训QA实际执行与验收.md`。
+- 边界：只覆盖该4个固定条件，不外推全部267次训练；不比较轨迹/优化器/RNG；不要求与原检查点序列化字节相等；非新科学重复。
+
+
+### 01:30 UTC 第二轮：最终交付归档也逐位复现
+
+- 用户追加授权自由实验。从 `research_snapshot_20261107_final.tar.gz`（SHA 20a30f41…）解出 `research/`（30,732文件），用归档自身 registry/input snapshot/scripts 执行 relocate（rc0，0.94s，冻结核心/配置/数据/基座SHA全通过），dry-run rc0，随后4 GPU重跑同4条件：01:18:47启动，全部completed rc0，占槽340.4/350.4/350.4/350.4s（与第一轮完全相同）。
+- 用归档内 `model_fingerprint` 直接比较8个端点：8/8逐位相同（各405,334,016元素），24.82s，状态 `passed_final_archive_retraining_bitwise`；收据 `artifacts/provenance/final_archive_qa_v1/fingerprint_comparison.json`（SHA 1798fad5…），ROOT记录 `ROOT_authority_record.json`。
+- 报告§7已写两轮，PDF 32页（SHA c…见QA.json）；文档 `docs/归档重训QA实际执行与验收.md` 增加第二轮。第二轮是打包层面补充直接比较，受测流程在第一轮已执行。

@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "status": "ROOT_AUTHORITY_RECORDED_FOR_FINAL_ARCHIVE_QA",
+  "authorized_by": "root",
+  "authorized_at_utc": "2026-11-07T01:26:48.004616+00:00",
+  "recorded_after_launch": true,
+  "launch_utc": "2026-11-07T01:18:47.160855+00:00",
+  "scope": "Second, supplementary retraining QA of the DELIVERED final archive (research_snapshot_20261107_final.tar.gz): extract, relocate from the archive's own copies, retrain the same four frozen conditions, compare full model-state fingerprints. Operational only; no new scientific condition.",
+  "source_archive": {
+    "path": "/data/202610/7kb/research_delivery/research_snapshot_20261107_final.tar.gz",
+    "sha256": "20a30f41cdc6cefd5e0f3848d542d5a0564dee2b25ed54555963759ba9fc0fd3",
+    "bytes": 3093828104
+  },
+  "extracted_workspace": "/tmp/grad-research-20261106/reproduction_qa/final_archive_qa_v1/research",
+  "independent_scratch": "/tmp/grad-research-20261106/reproduction_qa/final_archive_qa_v1/scratch",
+  "relocate": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_archive_qa_v1/relocate.json",
+    "sha256": "1a170ca30a3987fc493aee091f2a6bcbb80c4d9a2019174dfebf8c0f9b8d1e1e",
+    "returncode": 0,
+    "status": "verified_prepared"
+  },
+  "dry_run": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_archive_qa_v1/dry_run.json",
+    "sha256": "637351de786b79603832e78ea4717b9f74fa0f29cac500f210970ca4998e5ad4",
+    "returncode": 0
+  },
+  "launch": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_archive_qa_v1/launch_receipt.json",
+    "sha256": "f8318ae391976f69d71e82c23524115cf80ca4b28a4b92b1b148d7ba281608c0"
+  },
+  "only_argv_delta": [
+    "--launch-margin-seconds",
+    "120",
+    "--stop-margin-seconds",
+    "120"
+  ],
+  "deadline_utc": "2026-11-07T02:56:32Z",
+  "planned_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "exit_when_idle": true,
+  "expected_fingerprints": {
+    "path": "/tmp/grad-research-20261106/worktree/results/reproduction_qa/archive0732_seed11_2x2_v1/postrun_expected_final_best_v2.json",
+    "sha256": "93da7a152e4f88968a01a8a569b1d057511474e6ccf1f04a4c336dcaafe891ce"
+  },
+  "note": "The final-archive round is a packaging-level check; the vetted verify pipeline was executed for the 0732 archive. This round uses the archived model_fingerprint function directly and is labelled as a supplementary direct comparison.",
+  "no_new_scientific_claim_authorized": true
+}

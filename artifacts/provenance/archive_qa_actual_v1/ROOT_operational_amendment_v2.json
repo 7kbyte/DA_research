@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "status": "ROOT_AUTHORITY_TRUE_EXECUTING_OPERATIONAL_MARGINS_ONLY",
+  "root_authorized": true,
+  "prepared_only": false,
+  "GPU_or_scheduler_started_by_this_authority": true,
+  "scientific_grid_or_training_changed": false,
+  "scope": "Engineering archive reproduction QA: rerun the four archived seed11 b=.05 lambda=.05 definitions (B1,B2,B3,B4) from the published 07:32 archive using the archived helper; no new scientific replicate, no test-score task, no selection.",
+  "utc": "2026-11-07T01:05:33.556932+00:00",
+  "original_plan": {
+    "path": "/tmp/grad-research-20261106/worktree/results/reproduction_qa/archive0732_seed11_2x2_v1/qa_plan.json",
+    "sha256": "f9a4077153abf1487fcd28d44f73b05be4403b9d19b45ec89b3cacafd3a98062"
+  },
+  "original_helper_and_core_unmodified": true,
+  "original_queue": {
+    "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/configs/reproductions/archive0732_qa_2x2_seed11_v1_queue.json",
+    "sha256": "4ec9a68ef6f78bbb5c44c2ce026e62d8deb01b6c1ae82f276a4a98f3730203b0",
+    "jobs": [
+      "archive0732_qa_2x2_seed11_v1__formal_deterministic_B1_s11_b0p05_w0p05",
+      "archive0732_qa_2x2_seed11_v1__formal_deterministic_B2_s11_b0p05_w0p05",
+      "archive0732_qa_2x2_seed11_v1__formal_deterministic_B3_s11_b0p05_w0p05",
+      "archive0732_qa_2x2_seed11_v1__formal_deterministic_B4_s11_b0p05_w0p05"
+    ],
+    "job_count": 4
+  },
+  "original_registry": {
+    "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/configs/reproductions/archive0732_qa_2x2_seed11_v1_registry.json",
+    "sha256": "1c587c00182e3b004f4cd35261ed111290d4881de1b7bb5f467ac0ca8c534376"
+  },
+  "helper_source": {
+    "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/scripts/reproduce_experiments.py",
+    "sha256": "ac54da86c4ae278783daf045c40f9c1cd7ed267f9be3a8fb09397f163b28eff1"
+  },
+  "scheduler_source": {
+    "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/scripts/schedule_jobs.py",
+    "sha256": "c5c264b058ff655315ef896ccb0a89b471637c6612013a51999fc6f48b2d16d9"
+  },
+  "only_argv_delta": [
+    "--launch-margin-seconds",
+    "120",
+    "--stop-margin-seconds",
+    "120"
+  ],
+  "four_job_definitions_unchanged": true,
+  "expected_seconds_each_unchanged": 600,
+  "deadline_utc": "2026-11-07T02:56:32Z",
+  "planned_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "exit_when_idle": true,
+  "precedents": {
+    "operational_margin_review": {
+      "path": "/tmp/grad-research-20261106/worktree/results/reproduction_qa/archive0732_seed11_2x2_v1/operational_margin_review_v2.json",
+      "sha256": "e13bfb9961aeadfac614342d0bce092114e18873f9b2c8e9cf59e931ae37a778"
+    },
+    "false_template": {
+      "path": "/tmp/grad-research-20261106/worktree/docs/reproduction_qa_operational_amendment_v2_TEMPLATE.json",
+      "sha256": "3f35123f0ba2d24562db9e65f5a234829ff4e23791251704eb73ffd14529b362"
+    },
+    "postrun_expected": {
+      "path": "/tmp/grad-research-20261106/worktree/results/reproduction_qa/archive0732_seed11_2x2_v1/postrun_expected_final_best_v2.json",
+      "sha256": "93da7a152e4f88968a01a8a569b1d057511474e6ccf1f04a4c336dcaafe891ce"
+    }
+  },
+  "prelaunch_reverification": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/archive_qa_actual_v1/prelaunch_reverification.json",
+    "sha256": "6071b78e315bebc527cf132840d6c85220ccd9db9dc41010b5e925330dc63ee5",
+    "returncode": 0,
+    "status": "verified_not_started"
+  },
+  "preconditions": {
+    "all_514_frozen_evaluations_complete": true,
+    "successor_counts": {
+      "completed": 514,
+      "running": 0,
+      "pending": 0,
+      "failed": 0,
+      "blocked": 0
+    },
+    "no_training_or_scheduler_process": true,
+    "gpu_lines": [
+      "0, 0 %, 0 MiB",
+      "1, 0 %, 0 MiB",
+      "2, 0 %, 0 MiB",
+      "3, 0 %, 0 MiB"
+    ],
+    "all_four_gpus_idle": true,
+    "old_master_gone": true
+  },
+  "stop_semantics": "Any scheduler stop signal or missing output marks the QA failed; no rerun or mutation of the frozen archive is permitted.",
+  "authorization": {
+    "authorized_by": "root",
+    "authorized_at_utc": "2026-11-07T01:05:33.556932+00:00",
+    "reason": "All prescribed science and evaluation finished; 4 GPUs idle; deadline margin checked; this authority changes only operational margins."
+  },
+  "no_new_scientific_claim_authorized": true
+}
