@@ -49,3 +49,9 @@ python scripts/reproduce_experiments.py relocate --registry configs/formal_deter
 随后用`reproduce --registry <新registry路径> --gpus 0 --deadline <新的UTC截止时间>`复核输入并打印启动命令；添加`--execute`后以detached scheduler训练新运行。先按冻结环境文件准备依赖，运行时版本和实际精度仍由每项summary记录。
 
 已从实际共享盘快照重新解包，逐文件核对3925个归档成员，并使用归档内原始helper完成B1/B2/B3/B4、seed11的路径重定位和启动命令dry-run；共34项输入（其中包括10份冻结科学源码及固定基座文件）均通过核验，见[归档复现QA](docs/归档复现QA演练.md)。这验证了归档内容与启动准备，尚未验证重新训练的权重一致性，也未完成全新容器的环境重建。
+
+## GitHub 与模型包
+
+- 代码、配置、文档、结果与报告已推送到 https://github.com/7kbyte/DA_research （分支 `main`，含完整研究提交历史）。
+- 关键模型的无损权重归档位于共享盘 `/data/202610/7kb/research_delivery/DA_models_bundle/`（与持久 TAR 硬链接），清单与 SHA 见[模型包清单](docs/模型包清单_DA_models_bundle.md)；小体积的 `DA_models_bundle_MANIFEST.tar.gz` 也在该目录。
+- 权重 TAR 合计 475.4 GiB，不能放入 GitHub（单文件 100 MB 限制）；仓库只保存其发布收据、清单与 SHA。
