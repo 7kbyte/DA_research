@@ -91,3 +91,17 @@
 这一轮不使用预计算预期文件，两侧都在本次运行中实测；D与B4的指纹相同（`63069435…`/`cb76a09b…`），与已证明的D/B4完整状态别名一致，构成内部一致性检查。
 
 边界不变：不比较训练/验证轨迹与优化器/RNG状态，不要求序列化字节相等，不是新科学重复。证据：`artifacts/provenance/final_archive_qa_v1/relocate_all8.json`、`dry_run_all8.json`、`launch_receipt_all8.json`、`fingerprint_comparison_all8.json`（SHA `335d3401d93670515e240946f8786900b3ddaff40393bd8e9744980730850c62`）。
+
+## 第四轮（补齐）：seed 22/33 的其余十六个主条件
+
+用同一最终交付归档relocate出 `final_qa_all24_seed2233_v1`（16个run，rc0），分4波在4张H100上重跑：
+
+| 条件数 | 状态 | rc | 占槽（秒） |
+|---:|---|---:|---|
+| 16 | 全部completed | 0 | 320.3—350.4（合计5536.0） |
+
+全部16个任务严格rc0、无停止、无缺失输出。随后用归档指纹函数把重训与原始训练检查点各算一次并直接比较：**32/32端点逐位相同**（16个run × final/best，每个405,334,016元素），状态 `passed_all16_seed2233_bitwise`，224.8秒。D与B4在seed22/33上的指纹亦相同。
+
+**累计覆盖**：针对最终交付归档的三轮重训覆盖全部 **24个主条件（8组×3seed、b=.05家族）的final与best，即48/48端点逐位一致**（另加第一轮07:32归档的8/8端点）。这是本平台、本容器环境下由交付归档直接重训得到的权重可复现性；仍不外推跨平台，不比较轨迹/优化器/RNG，不构成新科学重复。
+
+证据：`artifacts/provenance/final_archive_qa_v1/relocate_all24.json`、`dry_run_all24.json`、`launch_receipt_all24.json`、`fingerprint_comparison_all24.json`（SHA `aef829ad51cd49249717ac4b1f90d99114e21b5bab520b47405a150ecf0732a5`）。

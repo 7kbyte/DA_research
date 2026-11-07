@@ -440,3 +440,10 @@ All 514 frozen evaluation jobs finished 2026-11-07T00:29:18Z (0 failed, 0 stoppe
 - 归档内 `model_fingerprint` 同时计算重训与**原始训练**检查点：16/16逐位一致（各405,334,016元素），112.1s，状态 `passed_all8_seed11_bitwise`；D与B4指纹相同，符合已证明别名。收据 `artifacts/provenance/final_archive_qa_v1/fingerprint_comparison_all8.json`（SHA 335d3401…）。
 - 报告§7、QA文档、README、指南、成本文档、STATUS、本handoff已更新；PDF 32页（c…见QA.json，SHA 61d3fbdd…）。
 - 三轮QA边界一致：不比较轨迹/优化器/RNG，不要求序列化字节相等，不外推跨平台，不构成新科学重复。
+
+
+### 02:12 UTC 第四轮：全部24个主条件48/48端点逐位一致
+
+- `final_qa_all24_seed2233_v1`：seed22/33 × 8组 = 16 run，4波重跑，全部completed rc0（01:43—02:12）。
+- 归档指纹直接比较重训与原始检查点：32/32逐位一致（各405,334,016元素），224.8s，状态 `passed_all16_seed2233_bitwise`；收据 `fingerprint_comparison_all24.json`（SHA aef829ad…）。
+- 累计：最终交付归档上全部24个主条件（8组×3seed）的final+best = **48/48端点逐位一致**（另加0732归档8/8）。报告§7、QA文档、README、指南、成本、STATUS已更新。
