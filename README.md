@@ -19,7 +19,7 @@
 - [文献调研](literature/文献调研.md)与[三篇近邻工作的定位复核](docs/三篇近邻文献_实验定位复核备忘录_20261106.md)
 - [环境重建与移交](docs/环境重建与移交.md)
 - [交付文件与恢复容量指南](docs/交付文件与恢复容量指南.md)：已发布文件、基座依赖、按需恢复空间与操作顺序。
-- [已校验的共享盘快照（1918中间里程碑）](docs/durable_snapshot_latest.json)
+- [已校验的共享盘快照（2026-11-07 最终项目归档，3,093,828,104字节）](docs/durable_snapshot_latest.json)与[持久发布收据](docs/snapshot_final_durable_publication.json)；最终可编辑工作树已从该归档恢复并验收。
 - 主36条件的final与best共72个逻辑端点均已持久保存：[best端点验收](docs/primary_best_weights_durable_publication.json)、[主比例24条件验收](docs/primary_weights_durable_publication.json)、[预算敏感性12条件验收](docs/budget_final_weights_durable_publication.json)及[恢复说明](docs/无损权重交付格式.md)；[按需恢复两个指定模型](docs/已交付权重恢复示例.md)
 - 补充A全部126个λ网格final端点现已跨包持久覆盖：主包18项引用、[验证所选包15份新增权重](docs/A_selected_weights_durable_publication.json)，以及[其余93项native包发布验收](docs/A_remaining_final_weights_durable_publication.json)／[ROOT接受](artifacts/provenance/A_remaining_final_publication_actual_v1/ROOT_acceptance.json)；来源与容量见[交付指南](docs/交付文件与恢复容量指南.md)。
 - 补充B全部60个final端点已持久保存（固定训练/pool seed11的选库变异）：[发布验收](docs/B_all_final_weights_durable_publication.json)、[包旁独立收据](/data/202610/7kb/research_delivery/B_all_final_weights_lossless_v1.tar.receipt.json)；native基座与恢复工具自带，已完成[固定draw1001/B4单例实际CPU恢复](docs/B固定首例native持久包实际恢复验收.md)；见[容量指南](docs/交付文件与恢复容量指南.md)。

@@ -337,6 +337,51 @@
       },
       "additive_within_phase": false,
       "note": "presenter/reviewer whole child; nested subtimers not additive"
+    },
+    {
+      "operation": "final_snapshot:package",
+      "category": "archive_QA",
+      "argv": "python scripts/package_research.py --output /tmp/grad-research-20261106/delivery/research_snapshot_20261107_final.tar.gz --runs-root /tmp/grad-research-20261106/runs --require-run-records --fail-on-symlinks",
+      "returncode": 0,
+      "wall_seconds": 331.93,
+      "user_cpu_seconds": 323.57,
+      "sys_cpu_seconds": 6.3,
+      "source": {
+        "path": "/tmp/grad-research-20261106/delivery/research_snapshot_20261107_final.tar.gz",
+        "sha256": "20a30f41cdc6cefd5e0f3848d542d5a0564dee2b25ed54555963759ba9fc0fd3"
+      },
+      "additive_within_phase": false,
+      "note": "ROOT manual subprocess/resource measurement; includes compression and full payload verification"
+    },
+    {
+      "operation": "final_snapshot:publish",
+      "category": "storage_publication",
+      "argv": "python scripts/publish_reserved_archive.py --source … --reserved .final_results_reserve_20261106 --destination research_snapshot_20261107_final.tar.gz",
+      "returncode": 0,
+      "wall_seconds": 26.79575514420867,
+      "user_cpu_seconds": null,
+      "sys_cpu_seconds": null,
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/docs/snapshot_final_durable_publication.json",
+        "sha256": "a2530721d9ddfd4d42946a7e1036b499c811ec8f912fb1286a3aa8d47ec900cf"
+      },
+      "additive_within_phase": false,
+      "note": "Publisher whole wall from its own receipt, including prefix write, read-back SHA, truncate, fsync and no-replace link"
+    },
+    {
+      "operation": "final_editable_tree:restore",
+      "category": "archive_QA",
+      "argv": "python restore_tree.py --plan … --authority … --execute",
+      "returncode": 0,
+      "wall_seconds": 267.5060539022088,
+      "user_cpu_seconds": 45.871052,
+      "sys_cpu_seconds": 12.629731,
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_actual_v1/restore_timing/whole_child_timing.json",
+        "sha256": "56c8b37cd130d10411d38cea35f8644416151f609072cccd554607a126106331"
+      },
+      "additive_within_phase": false,
+      "note": "External whole child; internal tool wall 267.39s is nested and not added"
     }
   ],
   "ledger_notes": [
@@ -344,7 +389,8 @@
     "analyze and check are separate children; the authorize script execs analyze so its preparation body is listed separately and not added to analyze.",
     "ROOT manual external walls measured this session but not persisted by the child: C1B NLL reviewer 9.16s, C2.8B NLL reviewer 6.31s (python subprocess timer).",
     "The v8 structured ledger remains the last full inventory; this file only adds post-v8 operations and does not retotal the study.",
-    "GPU evaluation/training wall and energy are reported separately in results/resources_final_24h and the scheduler state; they are not added to CPU timers."
+    "GPU evaluation/training wall and energy are reported separately in results/resources_final_24h and the scheduler state; they are not added to CPU timers.",
+    "Report render and PDF QA are not precisely timed in this ledger (manual shell); the rendered PDF/HTML SHAs are recorded in artifacts/report_review/final_report_v31/QA.json."
   ],
   "study_total_unknown": true
 }
