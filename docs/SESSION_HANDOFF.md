@@ -432,3 +432,11 @@ All 514 frozen evaluation jobs finished 2026-11-07T00:29:18Z (0 failed, 0 stoppe
 - 用户追加授权自由实验。从 `research_snapshot_20261107_final.tar.gz`（SHA 20a30f41…）解出 `research/`（30,732文件），用归档自身 registry/input snapshot/scripts 执行 relocate（rc0，0.94s，冻结核心/配置/数据/基座SHA全通过），dry-run rc0，随后4 GPU重跑同4条件：01:18:47启动，全部completed rc0，占槽340.4/350.4/350.4/350.4s（与第一轮完全相同）。
 - 用归档内 `model_fingerprint` 直接比较8个端点：8/8逐位相同（各405,334,016元素），24.82s，状态 `passed_final_archive_retraining_bitwise`；收据 `artifacts/provenance/final_archive_qa_v1/fingerprint_comparison.json`（SHA 1798fad5…），ROOT记录 `ROOT_authority_record.json`。
 - 报告§7已写两轮，PDF 32页（SHA c…见QA.json）；文档 `docs/归档重训QA实际执行与验收.md` 增加第二轮。第二轮是打包层面补充直接比较，受测流程在第一轮已执行。
+
+
+### 01:40 UTC 第三轮：最终交付归档全八组16/16逐位一致
+
+- 新namespace `final_qa_all8_seed11_v1`，8个run（B0,B1,B2,B3,B4,D,M,C，seed11，b=.05家族），两波重跑：01:27—01:40，全部completed rc0；占槽B0 320.3s、其余350.4s（合计2,772.7s）。
+- 归档内 `model_fingerprint` 同时计算重训与**原始训练**检查点：16/16逐位一致（各405,334,016元素），112.1s，状态 `passed_all8_seed11_bitwise`；D与B4指纹相同，符合已证明别名。收据 `artifacts/provenance/final_archive_qa_v1/fingerprint_comparison_all8.json`（SHA 335d3401…）。
+- 报告§7、QA文档、README、指南、成本文档、STATUS、本handoff已更新；PDF 32页（c…见QA.json，SHA 61d3fbdd…）。
+- 三轮QA边界一致：不比较轨迹/优化器/RNG，不要求序列化字节相等，不外推跨平台，不构成新科学重复。

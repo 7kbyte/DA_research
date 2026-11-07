@@ -69,3 +69,25 @@
 说明：第二轮是**打包层面的补充直接比较**（同一归档算法、直接调用），而完整的受测 `verify_reproduction_qa_postrun` 流程已在第一轮（0732归档）执行并通过；两轮都只覆盖这4个固定条件。
 
 证据：`artifacts/provenance/final_archive_qa_v1/`（relocate、dry-run、launch、job_state、fingerprint_comparison，SHA `1798fad5a4f65217f3aebaae5450a7c049ba478f45d5b2cacf95207d91c24d4a`）。
+
+## 第三轮（扩展）：最终交付归档上覆盖全部八个主组
+
+为把可复现性从4个条件扩到完整主组，从同一最终交付归档用同名 `relocate` 生成新namespace `final_qa_all8_seed11_v1`（8个run，rc0），在4张H100上**两波**重跑：
+
+| 条件 | 状态 | rc | 占槽秒 | GPU |
+|---|---|---:|---:|---:|
+| formal_deterministic_B0_s11_b0_w0 | completed | 0 | 320.3 | 0 |
+| formal_deterministic_B1_s11_b0p05_w0p05 | completed | 0 | 350.4 | 1 |
+| formal_deterministic_B2_s11_b0p05_w0p05 | completed | 0 | 350.4 | 2 |
+| formal_deterministic_B3_s11_b0p05_w0p05 | completed | 0 | 350.4 | 3 |
+| formal_deterministic_B4_s11_b0p05_w0p05 | completed | 0 | 350.4 | 0 |
+| formal_deterministic_D_s11_b0p05_w0p05 | completed | 0 | 350.4 | 1 |
+| formal_deterministic_M_s11_b0p05_w0p05 | completed | 0 | 350.4 | 2 |
+| formal_deterministic_C_s11_b0p05_w0p05 | completed | 0 | 350.4 | 3 |
+
+全部8个任务严格rc0、无停止、无缺失输出；B0因无回放占槽320.3秒，其余350.4秒。
+
+随后用归档内同一 `model_fingerprint` 函数，把**重训检查点**与**原始训练检查点**（`/tmp/grad-research-20261106/runs/<id>/checkpoints/`）各算一次指纹并直接比较：**16/16 端点逐位相同**（8组×final/best，每个405,334,016元素），状态 `passed_all8_seed11_bitwise`，112.1秒。
+这一轮不使用预计算预期文件，两侧都在本次运行中实测；D与B4的指纹相同（`63069435…`/`cb76a09b…`），与已证明的D/B4完整状态别名一致，构成内部一致性检查。
+
+边界不变：不比较训练/验证轨迹与优化器/RNG状态，不要求序列化字节相等，不是新科学重复。证据：`artifacts/provenance/final_archive_qa_v1/relocate_all8.json`、`dry_run_all8.json`、`launch_receipt_all8.json`、`fingerprint_comparison_all8.json`（SHA `335d3401d93670515e240946f8786900b3ddaff40393bd8e9744980730850c62`）。
