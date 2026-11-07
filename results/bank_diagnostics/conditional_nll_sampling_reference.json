@@ -1,0 +1,97 @@
+{
+  "scope": "Exact finite-population reference for chunk mean teacher NLL, conditional on frozen pool11",
+  "not_claimed": "No prediction about gradient or trained-endpoint variance; no trained repeats added",
+  "banks_generated": 0,
+  "model_or_test_inference_performed": false,
+  "statistics_sha256": "357340480e19e1753edecf715faddec297eeadb20a7e01cbeb42f5e70f64e0f5",
+  "source_bank_manifest_sha256": "b67a03e162d6d8fb3e3be2a40d261cb095027f16b94d6b85a0649b8a8aeb42c8",
+  "script_sha256": "c452fe75faf4c97bd9c274665a186d029b4d805e9fcf90fb213dc4670d9b29c1",
+  "selection_source_sha256": "88814e111aa5db1fb1009d90eba54c353a018fd6c1cbdda4ff4a148b57aa11b7",
+  "pool_chunks": 1957,
+  "prediction_tokens_per_chunk": 511,
+  "pool_teacher_nll_mean": 3.253173781769216,
+  "pool_teacher_nll_variance_ddof1": 0.7113206587274747,
+  "stratum_sizes": [
+    392,
+    392,
+    391,
+    391,
+    391
+  ],
+  "stratum_means": [
+    2.0374708665268764,
+    2.905946979109122,
+    3.2963670592783663,
+    3.6667485840790106,
+    4.363332682558338
+  ],
+  "stratum_variances_ddof1": [
+    0.26118272549971233,
+    0.020237246631872395,
+    0.010711815460761722,
+    0.012480091340644487,
+    0.24654969803731935
+  ],
+  "records": [
+    {
+      "method": "random",
+      "bank_chunks": 20,
+      "expected_bank_nll_mean": 3.253173781769216,
+      "conditional_bias_against_pool_mean": 0.0,
+      "analytic_variance_bank_nll_mean": 0.035202557893590156,
+      "analytic_sd_bank_nll_mean": 0.18762344707842396
+    },
+    {
+      "method": "nll_stratified",
+      "bank_chunks": 20,
+      "stratum_allocation": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "actual_stratum_weights": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "expected_bank_nll_mean": 3.253973234310343,
+      "conditional_bias_against_pool_mean": 0.0007994525411270104,
+      "analytic_variance_bank_nll_mean": 0.005455304396927848,
+      "analytic_sd_bank_nll_mean": 0.07386003247310312
+    },
+    {
+      "method": "random",
+      "bank_chunks": 196,
+      "expected_bank_nll_mean": 3.253173781769216,
+      "conditional_bias_against_pool_mean": 0.0,
+      "analytic_variance_bank_nll_mean": 0.0032657119915402667,
+      "analytic_sd_bank_nll_mean": 0.05714640838705672
+    },
+    {
+      "method": "nll_stratified",
+      "bank_chunks": 196,
+      "stratum_allocation": [
+        40,
+        39,
+        39,
+        39,
+        39
+      ],
+      "actual_stratum_weights": [
+        0.20408163265306123,
+        0.1989795918367347,
+        0.1989795918367347,
+        0.1989795918367347,
+        0.1989795918367347
+      ],
+      "expected_bank_nll_mean": 3.2477665895767536,
+      "conditional_bias_against_pool_mean": -0.005407192192462329,
+      "analytic_variance_bank_nll_mean": 0.0005092307362293033,
+      "analytic_sd_bank_nll_mean": 0.022566141367750564
+    }
+  ]
+}

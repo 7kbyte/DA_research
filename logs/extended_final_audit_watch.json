@@ -1,0 +1,28 @@
+{
+  "updated_at_utc": "2026-11-06T22:19:33.515787+00:00",
+  "status": "passed",
+  "expected_runs": 63,
+  "completed_runs": 63,
+  "failed_or_blocked_runs": [],
+  "manifest_sha256": "50786c00724008eed6a96cb753b442295152f9dea96d73a2c75f8fcf16033528",
+  "audit_source_sha256": "605135db92b39e334ba3b2ac8a2b84152e349c6d6db12f6aac4976e712a07653",
+  "pid": 3021646,
+  "gpu_work_launched": false,
+  "test_and_behavior_scores_read": false,
+  "returncode": 0,
+  "audit_output": "/tmp/grad-research-20261106/worktree/results/extended_run_audit.json",
+  "proof_output": "/tmp/grad-research-20261106/worktree/results/extended_final_model_equivalence_proofs.json",
+  "command": [
+    "/usr/bin/python",
+    "/tmp/grad-research-20261106/worktree/scripts/audit_extended_runs.py",
+    "--freeze-manifest",
+    "/tmp/grad-research-20261106/worktree/results/extended_formal_freeze.json",
+    "--state",
+    "/tmp/grad-research-20261106/worktree/logs/supplemental_job_state.json",
+    "--output",
+    "/tmp/grad-research-20261106/worktree/results/extended_run_audit.json",
+    "--compare-weights",
+    "--equivalence-proof-output",
+    "/tmp/grad-research-20261106/worktree/results/extended_final_model_equivalence_proofs.json"
+  ]
+}

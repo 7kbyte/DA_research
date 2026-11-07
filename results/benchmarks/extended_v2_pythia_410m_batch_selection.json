@@ -1,0 +1,44 @@
+{
+  "model": "pythia-410m",
+  "selected_microbatch": 64,
+  "gradient_accumulation_steps": 1,
+  "effective_batch_chunks": 64,
+  "candidate_adopted": true,
+  "candidate_throughput_ratio": 1.150856102047309,
+  "candidate_reserved_headroom_bytes": 36464361472,
+  "selection_policy": {
+    "minimum_throughput_ratio": 1.05,
+    "minimum_reserved_headroom_bytes": 8589934592,
+    "effective_batch_chunks": 64,
+    "steady_steps": "2-10",
+    "selection_inputs": "throughput and memory only; no validation or test losses",
+    "tie_rule": "retain the previously measured microbatch"
+  },
+  "failed_attempts": 0,
+  "failed_attempt_seconds": 0,
+  "formal_configs_changed": false,
+  "root_controls_formal_budget": true,
+  "baseline": {
+    "registry_path": "/tmp/grad-research-20261106/worktree/configs/formal_deterministic_registry.json",
+    "registry_sha256": "284fa9dd939dab75195afe3f968e0eb6411501b26b8a5caa1962b4ee5e9f372b",
+    "derived_benchmark": {
+      "status": "succeeded",
+      "model": "pythia-410m",
+      "microbatch": 16,
+      "accumulation": 4,
+      "steady_steps": "2-10",
+      "steady_target_tokens": 294336,
+      "steady_seconds": 6.059120785444975,
+      "steady_target_prediction_tokens_per_second": 48577.344869414796,
+      "config_path": "/tmp/grad-research-20261106/worktree/configs/formal_deterministic/formal_deterministic_B4_s11_b0p05_w0p05.json",
+      "config_sha256": "a4f8622c5ca6e65bd09adf28e24a175ab65165a6cc6aee567386ca7f8b831c9e",
+      "event_path": "/tmp/grad-research-20261106/runs/formal_deterministic_B4_s11_b0p05_w0p05/events.jsonl",
+      "event_sha256": "83cb0f19fb932268779f68a957589e6d2b12e63388849602592716cd7fcd7ba5",
+      "comparison_limit": "Baseline uses primary target and training seed11; candidate uses extended target and seed101. Both use identical sequence length, effective batch and strict BF16 FP32 execution; timing is a short operational estimate."
+    }
+  },
+  "candidate": {
+    "path": "/tmp/grad-research-20261106/worktree/results/benchmarks/supplemental_v1_benchmark_pythia_410m_m64.json",
+    "sha256": "1210fd6154cdea8d028a76ad97620a3baf494bb3e252b932f2141d12745d6a89"
+  }
+}

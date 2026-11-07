@@ -1,0 +1,93 @@
+{
+  "status": "passed",
+  "source": "/tmp/grad-research-20261106/delivery/primary_final_weights_lossless_v1.tar",
+  "destination": "/data/202610/7kb/research_delivery/primary_final_weights_lossless_v1.tar",
+  "source_sha256": "2bb090fbe7df172b31102068715143ab702087ff49f77ef7dfd5db3637c928b1",
+  "destination_sha256": "2bb090fbe7df172b31102068715143ab702087ff49f77ef7dfd5db3637c928b1",
+  "bytes": 24949391360,
+  "original_reservation": "/data/202610/7kb/research_delivery/.primary_weights_reserve_20261106",
+  "original_reservation_stat": {
+    "device": 106,
+    "inode": 386615240,
+    "bytes": 27917287424,
+    "allocated_bytes": 27917287424,
+    "mode": "0o600",
+    "uid": 11471,
+    "gid": 11471,
+    "mtime_ns": 1793944277017755521,
+    "ctime_ns": 1793944277017755521
+  },
+  "destination_stat": {
+    "device": 106,
+    "inode": 386615240,
+    "bytes": 24949391360,
+    "allocated_bytes": 24949391360,
+    "mode": "0o600",
+    "uid": 11471,
+    "gid": 11471,
+    "mtime_ns": 1793947771820470742,
+    "ctime_ns": 1793947771820470742
+  },
+  "original_inode_preserved": true,
+  "permissions_and_ownership_preserved": true,
+  "overwrite": false,
+  "source_stable_stat": {
+    "device": 139,
+    "inode": 6651080647,
+    "bytes": 24949391360,
+    "allocated_bytes": 24949391360,
+    "mode": "0o644",
+    "uid": 0,
+    "gid": 0,
+    "mtime_ns": 1793946922783839556,
+    "ctime_ns": 1793946973345645121
+  },
+  "source_retained": true,
+  "gpu_used": false,
+  "file_fsync_after_copy": true,
+  "prefix_sha_verified_before_truncate": true,
+  "file_fsync_after_truncate": true,
+  "atomic_rename_noreplace": false,
+  "atomic_destination_commit_noreplace": true,
+  "publication_method": "atomic_hard_link_noreplace_fsync_then_unlink",
+  "parent_directory_fsync": true,
+  "durability_events": [
+    {
+      "event": "source_sha_and_stable_stat_verified",
+      "utc": "2026-11-06T06:42:58.976075+00:00",
+      "sha256": "2bb090fbe7df172b31102068715143ab702087ff49f77ef7dfd5db3637c928b1"
+    },
+    {
+      "event": "full_prefix_write_fsync_completed",
+      "utc": "2026-11-06T06:43:59.826866+00:00",
+      "bytes": 24949391360
+    },
+    {
+      "event": "entire_valid_prefix_sha_verified_before_truncate",
+      "utc": "2026-11-06T06:45:56.176216+00:00",
+      "sha256": "2bb090fbe7df172b31102068715143ab702087ff49f77ef7dfd5db3637c928b1",
+      "reservation_size_before_truncate": 27917287424
+    },
+    {
+      "event": "truncate_to_verified_length_and_file_fsync_completed",
+      "utc": "2026-11-06T06:45:57.888818+00:00",
+      "bytes": 24949391360
+    },
+    {
+      "event": "recovery_full_source_and_reserved_sha_verified_file_fsync",
+      "utc": "2026-11-06T06:49:30.280417+00:00",
+      "sha256": "2bb090fbe7df172b31102068715143ab702087ff49f77ef7dfd5db3637c928b1"
+    },
+    {
+      "event": "parent_directory_fsync_completed",
+      "utc": "2026-11-06T06:49:31.820975+00:00",
+      "path": "/data/202610/7kb/research_delivery"
+    }
+  ],
+  "recovery_of_failure": "OSError(22, 'Invalid argument')",
+  "recovered_progress_sha256": "7b5e14186fd9915cbb8619997004ce49c29215b3086f8d3451519f5aa42698de",
+  "started_at_utc": "2026-11-06T06:42:34.599726+00:00",
+  "finished_at_utc": "2026-11-06T06:49:31.821288+00:00",
+  "recovery_wall_seconds": 128.6888920776546,
+  "publisher_source_sha256": "9c194743383a16f98313f767fe2e722c309ec57c1aafc65d9b99d08e5407022e"
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_frozen_scope_accounting_v1/whole_child_timing.json",
+    "sha256": "e855a797c6083bdb4c01def01292cbf8e92f22912961a2442ef341553d259fdc",
+    "bytes": 1770
+  },
+  "original_wall_pointer": "/whole_wall_seconds",
+  "wall_seconds": 0.15160545334219933,
+  "CPU_component_pointers": [
+    "/user_seconds",
+    "/system_seconds"
+  ],
+  "CPU_components": {
+    "user_seconds": 0.125297,
+    "system_seconds": 0.024752
+  },
+  "recorded_inclusive_CPU_seconds": 0.150049,
+  "original_returncode": 1,
+  "scope": "Whole child including interpreter startup, metadata/hash checks, CSV/JSON generation; excludes this parent preparation and later prose review.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall; sum only the named user/system components. Failure rc retained. No calendar-derived elapsed.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

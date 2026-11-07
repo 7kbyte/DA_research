@@ -1,0 +1,80 @@
+{
+  "status": "passed",
+  "verified_at_utc": "2026-11-06T05:54:18.948412+00:00",
+  "single_example_only": true,
+  "batch_exported": false,
+  "shared_storage_written": false,
+  "gpu_used": false,
+  "cpu_threads": 2,
+  "encode": {
+    "status": "encoded",
+    "archive": "/tmp/grad-research-20261106/delivery/weights/formal_deterministic_B4_s11_b0p05_w0p05.xor.zip",
+    "archive_sha256": "2b1df38b3b32006df8b187c7ee5cf7f495dbbb82835dc66e02a16cd187a028a7",
+    "archive_bytes": 1143733212,
+    "model_raw_bytes": 1621336064,
+    "compression_ratio_archive_over_model_raw": 0.7054263686569054,
+    "model_fingerprint": {
+      "sha256_model_state": "63069435cb5ea77931a58d7b00b573bcc4b517fdea283f7b551345997508c28c",
+      "state_elements": 405334016
+    },
+    "base_sha256": "3e09001631bb18ec8a6f4522f8e6ab26a53099e69228f9822adc91bfbe27511b",
+    "source_checkpoint_sha256": "19bf6f08e0c34d3334973a17142c7801f1be89f8fb20e49fc37f5b194303d014",
+    "source_checkpoint_bytes_including_optimizer": 4864403284,
+    "wall_seconds": 70.2947081439197,
+    "cpu_threads": 2,
+    "model_only": true,
+    "lossless_weight_bits": true,
+    "gpu_used": false
+  },
+  "decode": {
+    "status": "decoded_and_hash_verified",
+    "archive": "/tmp/grad-research-20261106/delivery/weights/formal_deterministic_B4_s11_b0p05_w0p05.xor.zip",
+    "restored": "/tmp/grad-research-20261106/delivery/weights/formal_deterministic_B4_s11_b0p05_w0p05.restored.pt",
+    "model_fingerprint": {
+      "sha256_model_state": "63069435cb5ea77931a58d7b00b573bcc4b517fdea283f7b551345997508c28c",
+      "state_elements": 405334016
+    },
+    "tensor_raw_hashes_verified": 292,
+    "restored_file_sha256": "cd9a9978c687097bc48ba4dbe955ce4c9d8a5a226c7d994ff4ef6e485f0b258d",
+    "restored_bytes": 1621460298,
+    "wall_seconds": 18.397640716284513,
+    "cpu_threads": 2,
+    "gpu_used": false,
+    "model_only_evaluation_format": true
+  },
+  "bytewise_verification": {
+    "status": "passed",
+    "tensor_count": 292,
+    "all_tensor_bytes_equal": true,
+    "source_checkpoint_sha256": "19bf6f08e0c34d3334973a17142c7801f1be89f8fb20e49fc37f5b194303d014",
+    "archive_sha256": "2b1df38b3b32006df8b187c7ee5cf7f495dbbb82835dc66e02a16cd187a028a7",
+    "model_fingerprint": {
+      "sha256_model_state": "63069435cb5ea77931a58d7b00b573bcc4b517fdea283f7b551345997508c28c",
+      "state_elements": 405334016
+    },
+    "wall_seconds": 7.836597569286823,
+    "cpu_threads": 2,
+    "gpu_used": false
+  },
+  "test_cases": [
+    "raw special floating-point bit patterns and multichunk roundtrip",
+    "wrong base rejected before output creation",
+    "audited fingerprint mismatch refuses archive commit"
+  ],
+  "test_result": "3 passed in 1.13 seconds",
+  "source_files_sha256": {
+    "src/replay_study/weight_archive.py": "05ae5d68e229b10a007676425d6a575d187dc49a805328a58fb33235be2bc81b",
+    "scripts/archive_model_weights.py": "28c5841cae8e7fd87d8cb62e7f756dad40ce15cb558710c31e48dfb45fde668a",
+    "tests/test_weight_archive.py": "8bb83b978b86ed0f5b121ca76d21f1994ab481d57c5a65be642bbed2f1b39ada",
+    "docs/无损权重交付格式.md": "93dd10f0ebc69c0551a7b9c9c36e892a9555c5aebca77ccf8070e4cb0b7b3b52",
+    "results/formal_run_audit.json": "3ab507ecaf9953e7056649f2fee1320467b0ba3b23f65e6584cb876dbae0cf00"
+  },
+  "projection_not_a_batch_measurement": {
+    "unique_main_models": 21,
+    "same_single_ratio_archive_bytes": 24018397452,
+    "plus_one_pinned_base_bytes": 24929771084,
+    "plus_one_pinned_base_GiB": 23.21765859052539,
+    "reserved_GiB": 26,
+    "caution": "Other models can compress differently; measure all archive sizes before persistent TAR delivery."
+  }
+}

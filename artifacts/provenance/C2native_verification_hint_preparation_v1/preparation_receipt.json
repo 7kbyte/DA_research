@@ -1,0 +1,108 @@
+{
+  "status": "prepared_fixed_four_completed_derived_outputs_no_hint_executed",
+  "at_utc": "2026-11-06T23:10:56.195893+00:00",
+  "plan": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C2native_verification_hint_preparation_v1/prepared_plan.json",
+    "sha256": "badb933059a381fce7fea70dc07cb548e853f5c058ccab401ccb77f95e40ff32"
+  },
+  "source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C2native_verification_hint_preparation_v1/hint_once.py",
+    "sha256": "33120a9e18a64e5084512bc2536d85f5e8d20524591592c57da1c290d49b0501"
+  },
+  "preparation_reference_scan": {
+    "other_FD_references": [],
+    "mappings": [],
+    "unreadable_process_metadata": []
+  },
+  "preparation_memory_observation": {
+    "at_utc": "2026-11-06T23:10:56.194967+00:00",
+    "maximum": 1030792151040,
+    "current": 1021508173824,
+    "stat": {
+      "anon": 6854959104,
+      "file": 994558038016,
+      "kernel": 19676778496,
+      "kernel_stack": 12353536,
+      "pagetables": 50540544,
+      "percpu": 0,
+      "sock": 8192,
+      "vmalloc": 0,
+      "shmem": 25821769728,
+      "zswap": 0,
+      "zswapped": 0,
+      "file_mapped": 4921765888,
+      "file_dirty": 255942656,
+      "file_writeback": 0,
+      "swapcached": 0,
+      "anon_thp": 2797600768,
+      "file_thp": 0,
+      "shmem_thp": 0,
+      "inactive_anon": 7290073088,
+      "active_anon": 25801220096,
+      "inactive_file": 12504031232,
+      "active_file": 956232163328,
+      "unevictable": 0,
+      "slab_reclaimable": 17990982664,
+      "slab_unreclaimable": 1617530000,
+      "slab": 19608512664,
+      "workingset_refault_anon": 0,
+      "workingset_refault_file": 1181203268,
+      "workingset_activate_anon": 0,
+      "workingset_activate_file": 815548577,
+      "workingset_restore_anon": 0,
+      "workingset_restore_file": 64893908,
+      "workingset_nodereclaim": 6494608,
+      "pgscan": 3350153029,
+      "pgsteal": 3308255003,
+      "pgscan_kswapd": 488611392,
+      "pgscan_direct": 2861541637,
+      "pgsteal_kswapd": 488509362,
+      "pgsteal_direct": 2819745641,
+      "pgfault": 149534951144,
+      "pgmajfault": 10983373,
+      "pgrefill": 1270758824,
+      "pgactivate": 1806163071,
+      "pgdeactivate": 1270531819,
+      "pglazyfree": 335655,
+      "pglazyfreed": 1088,
+      "zswpin": 0,
+      "zswpout": 0,
+      "thp_fault_alloc": 282164791,
+      "thp_collapse_alloc": 71109
+    },
+    "clean_inactive_credit": 12248088576,
+    "conservative_available_bytes": 21532065792,
+    "events": {
+      "low": 0,
+      "high": 0,
+      "max": 234531,
+      "oom": 0,
+      "oom_kill": 0,
+      "oom_group_kill": 0
+    }
+  },
+  "actual_execution_must_repeat_all_guards": true,
+  "required_memory_bytes": 48698310656,
+  "skip_if_already_sufficient": false,
+  "target_payload_FDs_opened": false,
+  "target_payload_bytes_read": 0,
+  "hint_executed": false,
+  "TRUE_authority_created": false,
+  "tests_run": false,
+  "known_limitations": [
+    "Reference scan is a point-in-time observation, not a producer lease",
+    "Historical record complete SHA and current full stat bind bytes without rereading payload",
+    "DONTNEED is advisory; exact reclaimed bytes and future headroom not guaranteed",
+    "No ROOT restore authority or scheduler/GPU action is implied"
+  ],
+  "previous_failed_resource_gate": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_CPU_restore_actual_v1/2p8b/ROOT_preexecution_resource_gate_attempt1.json",
+    "sha256": "d55f6f5f32cf58dc280e12b04f81c5e7f976f7762b6f5c55e9eda664f04eb110",
+    "observed_bytes": 14605336576,
+    "required_bytes": 48698310656
+  },
+  "preparation_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C2native_verification_hint_preparation_v1/prepare_metadata.py",
+    "sha256": "e7f1baa64032a5ed51b1fe0d28080b9dfb1a379f7cc796f89ff90dd5c8c4ddbe"
+  }
+}

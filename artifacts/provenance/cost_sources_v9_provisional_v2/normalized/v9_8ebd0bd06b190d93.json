@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/report_scientific_boundary_revision_v1/render_whole_child_timing.json",
+    "sha256": "3813159dd6a9476f32cfbcfd40aaf56ba672e6ccad391d310b6997aa7d53e7fe",
+    "bytes": 1020
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 12.60238128900528,
+  "CPU_component_pointers": [
+    "/whole_child_user_cpu_seconds",
+    "/whole_child_sys_cpu_seconds"
+  ],
+  "CPU_components": {
+    "whole_child_user_cpu_seconds": 12.24357,
+    "whole_child_sys_cpu_seconds": 0.32353699999999996
+  },
+  "recorded_inclusive_CPU_seconds": 12.567107,
+  "original_returncode": 0,
+  "scope": "Single complete spawn-to-exit report render after exactly three ROOT-requested interpretation-boundary corrections. Internal timers not additive. No scoring/training/weights payload.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall; sum only the named user/system components. Failure rc retained. No calendar-derived elapsed.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

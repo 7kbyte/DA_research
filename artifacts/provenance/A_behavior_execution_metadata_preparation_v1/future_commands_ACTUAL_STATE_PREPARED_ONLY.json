@@ -1,0 +1,86 @@
+{
+  "prepared_only": true,
+  "execution_authorized": false,
+  "original_v2_only": true,
+  "source_live_state": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/successor/state.json",
+  "future_operations_namespace": "/tmp/grad-research-20261106/worktree/artifacts/provenance/A_behavior_analysis_actual_v1",
+  "immutable_state_path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/A_behavior_analysis_actual_v1/state_capture/actual_successor_state_immutable.json",
+  "immutable_state_SHA256": "27b41e7ee3d8f7e49180e3bf228684816a15d6f7558df7ea65c40624c1eadb88",
+  "check_argv": [
+    "/usr/bin/python",
+    "/tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v2.py",
+    "check",
+    "--plan",
+    "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/supplement_A_behavior.json",
+    "--plan-sha256",
+    "7ab89cc4fc71287d3df8b04098c51db92a4720ae10eff36ed421f5b44d82ed8a",
+    "--state",
+    "/tmp/grad-research-20261106/worktree/artifacts/provenance/A_behavior_analysis_actual_v1/state_capture/actual_successor_state_immutable.json",
+    "--output",
+    "/tmp/grad-research-20261106/worktree/artifacts/provenance/A_behavior_analysis_actual_v1/check_readiness.json"
+  ],
+  "authority_source_template": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/supplement_A_behavior_root_authority_TEMPLATE.json",
+    "sha256": "e88c6cd50d38d27cf41a55e8c139a85f3afba356e943fdbd3597a64de367b9ef"
+  },
+  "authority_output": "/tmp/grad-research-20261106/worktree/artifacts/provenance/A_behavior_analysis_actual_v1/ROOT_A_behavior_authority.json",
+  "analyze_argv": [
+    "/usr/bin/python",
+    "/tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v2.py",
+    "analyze",
+    "--plan",
+    "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/supplement_A_behavior.json",
+    "--plan-sha256",
+    "7ab89cc4fc71287d3df8b04098c51db92a4720ae10eff36ed421f5b44d82ed8a",
+    "--authority",
+    "/tmp/grad-research-20261106/worktree/artifacts/provenance/A_behavior_analysis_actual_v1/ROOT_A_behavior_authority.json",
+    "--authority-sha256",
+    "PENDING_ROOT_TRUE_AUTHORITY_SHA256",
+    "--state",
+    "/tmp/grad-research-20261106/worktree/artifacts/provenance/A_behavior_analysis_actual_v1/state_capture/actual_successor_state_immutable.json",
+    "--output",
+    "/tmp/grad-research-20261106/worktree/results/supplemental_analysis_v2/supplement_A_behavior"
+  ],
+  "first_read_receipt_path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/supplemental_score_first_reads_v1/supplement_A_behavior_31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa.json",
+  "checkpoint_verification": {
+    "cache_reader_source": {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/stat_bound_digest_cache.py",
+      "sha256": "9cc01b493b46a5bf391a7c649a379d87011fff077ddeea701eaf8a84bdb568e2"
+    },
+    "cache_snapshot": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/digest_cache_snapshot_1793984987008682332.json",
+      "sha256": "d4367a24bc81d6ada9775f8dbd586078a309b01ba5da843d6e7d0c5fe70b1416"
+    },
+    "mode": "v5_checkpoint_snapshot"
+  },
+  "source_SHA_bindings": {
+    "plan": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/supplement_A_behavior.json",
+      "sha256": "7ab89cc4fc71287d3df8b04098c51db92a4720ae10eff36ed421f5b44d82ed8a"
+    },
+    "ready": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/READY.json",
+      "sha256": "1e94e722dbba58dc1d69d50106eba895b83549679780912cde015c4b965a926f"
+    },
+    "manifest": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/manifest.json",
+      "sha256": "31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa"
+    },
+    "protocol": {
+      "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_protocol_v2.json",
+      "sha256": "eed050602c368e5e4be87172ac4d208b890d9a7f7e9811ce1684ae62acc8f742"
+    }
+  },
+  "actual_state_ROOT_capture_receipt": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/A_behavior_analysis_actual_v1/state_capture/ROOT_state_capture_receipt.json",
+    "sha256": "2105cc58ed11a778e1b1366701c18f0cd81555ba8f3e5514e4d1dbe3d6761dd0"
+  },
+  "future_ROOT_requirements_remain": [
+    "Capture actual completed phase state only once and bind path/SHA before first check. Other phases may still run.",
+    "Readiness must ready=true with counts22 and no pending; scheduler_state/scheduler_state_sha256 must equal captured source.",
+    "ROOT independently reviews actual check, then creates new TRUE from exact unchanged FALSE template. Add exact immutable state/check path+SHA as external operational evidence.",
+    "Analyze uses identical state path/SHA; never reset or change original first-read journal.",
+    "Use unique stdout/stderr/full Popen RUSAGE_CHILDREN timers for check and analyze; nested work not additive."
+  ],
+  "capture_step_already_performed_by_ROOT": true
+}

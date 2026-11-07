@@ -1,0 +1,461 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-11-06T08:30:26.906744+00:00",
+  "state": "CPU_prepare_and_synthetic_review_only",
+  "catalog": {
+    "path": "/tmp/grad-research-20261106/worktree/configs/supplemental_evaluation_preparation_v4.json",
+    "sha256": "df35f09d35ddc5b9aab95e5e3cb42f7f042b86b5f87b81204a34ac83ed0f72a9"
+  },
+  "ready_index_snapshot": {
+    "updated_at_utc": "2026-11-06T08:30:19.182139+00:00",
+    "ready_phase_count": 0,
+    "planned_phases": 9
+  },
+  "source_sha256": {
+    "/tmp/grad-research-20261106/worktree/scripts/analyze_nll_v2.py": "e465b46acbc31ce77466aef94eedcca7766395af511a7c8978ca39fb51f506dd",
+    "/tmp/grad-research-20261106/worktree/src/replay_study/nll_v2_analysis.py": "356088e4a8bc82947d6287a8e712038426382efbf45f3a7006bf9eea18a1c59e",
+    "/tmp/grad-research-20261106/worktree/src/replay_study/analysis.py": "05d50004d60acdc4dc098d94f35a36fb1739f3f856267c7d2cdc35e02d96922c",
+    "/tmp/grad-research-20261106/worktree/scripts/analyze_behavioral_plan.py": "89c1f29f62bb5b48eca6699768b3d76d1dd5d9f3eb1d0715cae75483bab949b9",
+    "/tmp/grad-research-20261106/worktree/src/replay_study/behavioral_analysis.py": "18e6b57dc1914119743e87170637a46cf7e9b5d99ad704b42b3c0959e2a0e280",
+    "/tmp/grad-research-20261106/worktree/scripts/guarded_behavior_analysis.py": "b5d22cd6caee7c1d37f156010ad7348f72478e62adbb7d9af8c975a5c34e8a1d",
+    "/tmp/grad-research-20261106/worktree/scripts/monitor_primary_nll_readiness.py": "1124ebb9cb8871d78e7b89f6aec1bede7ed09406017d2bb2394b257cc3033fc6",
+    "/tmp/grad-research-20261106/worktree/scripts/analyze_primary_nll.py": "488b247fa0bc24e13010fc5fa0616133d26427328181f4c095ff910f8f6ac6e7",
+    "/tmp/grad-research-20261106/worktree/scripts/prepare_supplemental_evaluations.py": "dd641ed5d5d0ab750fb400e1fc2add313b4ea72a38d01aa4a7f3272fc8fee26d",
+    "/tmp/grad-research-20261106/worktree/tests/test_supplemental_analysis_support_review.py": "827284dd65aef5fa3fa7cafd89c23b42b76f6ff8ac81a85a04dadd82c1de73a9",
+    "/tmp/grad-research-20261106/worktree/tests/test_remaining_evaluation_budget.py": "b98837e746d324a18b502cfae56295a7927a8207179d5b1d2cbc48e0ec4dfdec"
+  },
+  "real_primary_prepare_only": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/analysis/adapter_readiness_review_v1/primary_final/prepared_analysis_plan.json",
+      "sha256": "3ab90939fc446550c4e712e4d932b5a85cab5ffb0522e0d516a3a0fcacccc115"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/analysis/adapter_readiness_review_v1/primary_best/prepared_analysis_plan.json",
+      "sha256": "0a6336755b3989b0b72eee18d569eb6b215077b109b30423c34b290c58326070"
+    }
+  ],
+  "currently_available_supplemental_real_manifest_count": 0,
+  "prepared_command_templates": [
+    {
+      "plan_id": "supplement_A_nll",
+      "mode": "nll",
+      "role": "supplement_A",
+      "phase_name": "supplement_A",
+      "model_tag": "pythia-410m",
+      "data_family": "main_v3",
+      "expected_manifest_path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v4/supplement_A_nll/manifest.json",
+      "manifest_available_at_review": false,
+      "manifest_sha256_resolution": "Use matching READY.manifest.sha256 only after ready=true and verify the actual manifest bytes; do not insert a guessed SHA",
+      "execution_authorized_now": false,
+      "score_parsing_authorized": false,
+      "prepare_templates": [
+        [
+          "python",
+          "scripts/analyze_nll_v2.py",
+          "--manifest",
+          "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v4/supplement_A_nll/manifest.json",
+          "--manifest-sha256",
+          "<SHA_FROM_MATCHING_READY>",
+          "--role",
+          "supplement_A",
+          "--phase-name",
+          "supplement_A",
+          "--model-tag",
+          "pythia-410m",
+          "--data-family",
+          "main_v3",
+          "--checkpoint",
+          "final",
+          "--output",
+          "/tmp/grad-research-20261106/worktree/results/analysis/supplemental_prepared_v1/supplement_A_nll/final"
+        ]
+      ]
+    },
+    {
+      "plan_id": "supplement_A_behavior",
+      "mode": "behavior",
+      "role": "supplement_A",
+      "phase_name": "supplement_A",
+      "model_tag": "pythia-410m",
+      "data_family": "main_v3",
+      "expected_manifest_path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v4/supplement_A_behavior/manifest.json",
+      "manifest_available_at_review": false,
+      "manifest_sha256_resolution": "Use matching READY.manifest.sha256 only after ready=true and verify the actual manifest bytes; do not insert a guessed SHA",
+      "execution_authorized_now": false,
+      "score_parsing_authorized": false,
+      "prepare_templates": [],
+      "check_only_template": [
+        "python",
+        "scripts/guarded_behavior_analysis.py",
+        "--manifest",
+        "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v4/supplement_A_behavior/manifest.json",
+        "--manifest-sha256",
+        "<SHA_FROM_MATCHING_READY>"
+      ]
+    },
+    {
+      "plan_id": "supplement_B_nll",
+      "mode": "nll",
+      "role": "supplement_B",
+      "phase_name": "supplement_B",
+      "model_tag": "pythia-410m",
+      "data_family": "main_v3",
+      "expected_manifest_path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v4/supplement_B_nll/manifest.json",
+      "manifest_available_at_review": false,
+      "manifest_sha256_resolution": "Use matching READY.manifest.sha256 only after ready=true and verify the actual manifest bytes; do not insert a guessed SHA",
+      "execution_authorized_now": false,
+      "score_parsing_authorized": false,
+      "prepare_templates": [
+        [
+          "python",
+          "scripts/analyze_nll_v2.py",
+          "--manifest",
+          "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v4/supplement_B_nll/manifest.json",
+          "--manifest-sha256",
+          "<SHA_FROM_MATCHING_READY>",
+          "--role",
+          "supplement_B",
+          "--phase-name",
+          "supplement_B",
+          "--model-tag",
+          "pythia-410m",
+          "--data-family",
+          "main_v3",
+          "--checkpoint",
+          "final",
+          "--output",
+          "/tmp/grad-research-20261106/worktree/results/analysis/supplemental_prepared_v1/supplement_B_nll/final"
+        ]
+      ]
+    },
+    {
+      "plan_id": "extended_pythia_410m_100m_nll",
+      "mode": "nll",
+      "role": "extended",
+      "phase_name": "extended_pythia_410m_100m",
+      "model_tag": "pythia-410m",
+      "data_family": "extended_v1",
+      "expected_manifest_path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v4/extended_pythia_410m_100m_nll/manifest.json",
+      "manifest_available_at_review": false,
+      "manifest_sha256_resolution": "Use matching READY.manifest.sha256 only after ready=true and verify the actual manifest bytes; do not insert a guessed SHA",
+      "execution_authorized_now": false,
+      "score_parsing_authorized": false,
+      "prepare_templates": [
+        [
+          "python",
+          "scripts/analyze_nll_v2.py",
+          "--manifest",
+          "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v4/extended_pythia_410m_100m_nll/manifest.json",
+          "--manifest-sha256",
+          "<SHA_FROM_MATCHING_READY>",
+          "--role",
+          "extended",
+          "--phase-name",
+          "extended_pythia_410m_100m",
+          "--model-tag",
+          "pythia-410m",
+          "--data-family",
+          "extended_v1",
+          "--checkpoint",
+          "final",
+          "--output",
+          "/tmp/grad-research-20261106/worktree/results/analysis/supplemental_prepared_v1/extended_pythia_410m_100m_nll/final"
+        ],
+        [
+          "python",
+          "scripts/analyze_nll_v2.py",
+          "--manifest",
+          "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v4/extended_pythia_410m_100m_nll/manifest.json",
+          "--manifest-sha256",
+          "<SHA_FROM_MATCHING_READY>",
+          "--role",
+          "extended",
+          "--phase-name",
+          "extended_pythia_410m_100m",
+          "--model-tag",
+          "pythia-410m",
+          "--data-family",
+          "extended_v1",
+          "--checkpoint",
+          "best",
+          "--output",
+          "/tmp/grad-research-20261106/worktree/results/analysis/supplemental_prepared_v1/extended_pythia_410m_100m_nll/best"
+        ]
+      ]
+    },
+    {
+      "plan_id": "extended_pythia_410m_100m_behavior",
+      "mode": "behavior",
+      "role": "extended",
+      "phase_name": "extended_pythia_410m_100m",
+      "model_tag": "pythia-410m",
+      "data_family": "extended_v1",
+      "expected_manifest_path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v4/extended_pythia_410m_100m_behavior/manifest.json",
+      "manifest_available_at_review": false,
+      "manifest_sha256_resolution": "Use matching READY.manifest.sha256 only after ready=true and verify the actual manifest bytes; do not insert a guessed SHA",
+      "execution_authorized_now": false,
+      "score_parsing_authorized": false,
+      "prepare_templates": [],
+      "check_only_template": [
+        "python",
+        "scripts/guarded_behavior_analysis.py",
+        "--manifest",
+        "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v4/extended_pythia_410m_100m_behavior/manifest.json",
+        "--manifest-sha256",
+        "<SHA_FROM_MATCHING_READY>"
+      ]
+    },
+    {
+      "plan_id": "extended_pythia_1b_100m_nll",
+      "mode": "nll",
+      "role": "extended",
+      "phase_name": "extended_pythia_1b_100m",
+      "model_tag": "pythia-1b",
+      "data_family": "extended_v1",
+      "expected_manifest_path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v4/extended_pythia_1b_100m_nll/manifest.json",
+      "manifest_available_at_review": false,
+      "manifest_sha256_resolution": "Use matching READY.manifest.sha256 only after ready=true and verify the actual manifest bytes; do not insert a guessed SHA",
+      "execution_authorized_now": false,
+      "score_parsing_authorized": false,
+      "prepare_templates": [
+        [
+          "python",
+          "scripts/analyze_nll_v2.py",
+          "--manifest",
+          "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v4/extended_pythia_1b_100m_nll/manifest.json",
+          "--manifest-sha256",
+          "<SHA_FROM_MATCHING_READY>",
+          "--role",
+          "extended",
+          "--phase-name",
+          "extended_pythia_1b_100m",
+          "--model-tag",
+          "pythia-1b",
+          "--data-family",
+          "extended_v1",
+          "--checkpoint",
+          "final",
+          "--output",
+          "/tmp/grad-research-20261106/worktree/results/analysis/supplemental_prepared_v1/extended_pythia_1b_100m_nll/final"
+        ],
+        [
+          "python",
+          "scripts/analyze_nll_v2.py",
+          "--manifest",
+          "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v4/extended_pythia_1b_100m_nll/manifest.json",
+          "--manifest-sha256",
+          "<SHA_FROM_MATCHING_READY>",
+          "--role",
+          "extended",
+          "--phase-name",
+          "extended_pythia_1b_100m",
+          "--model-tag",
+          "pythia-1b",
+          "--data-family",
+          "extended_v1",
+          "--checkpoint",
+          "best",
+          "--output",
+          "/tmp/grad-research-20261106/worktree/results/analysis/supplemental_prepared_v1/extended_pythia_1b_100m_nll/best"
+        ]
+      ]
+    },
+    {
+      "plan_id": "extended_pythia_1b_100m_behavior",
+      "mode": "behavior",
+      "role": "extended",
+      "phase_name": "extended_pythia_1b_100m",
+      "model_tag": "pythia-1b",
+      "data_family": "extended_v1",
+      "expected_manifest_path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v4/extended_pythia_1b_100m_behavior/manifest.json",
+      "manifest_available_at_review": false,
+      "manifest_sha256_resolution": "Use matching READY.manifest.sha256 only after ready=true and verify the actual manifest bytes; do not insert a guessed SHA",
+      "execution_authorized_now": false,
+      "score_parsing_authorized": false,
+      "prepare_templates": [],
+      "check_only_template": [
+        "python",
+        "scripts/guarded_behavior_analysis.py",
+        "--manifest",
+        "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v4/extended_pythia_1b_100m_behavior/manifest.json",
+        "--manifest-sha256",
+        "<SHA_FROM_MATCHING_READY>"
+      ]
+    },
+    {
+      "plan_id": "extended_pythia_2p8b_25m_nll",
+      "mode": "nll",
+      "role": "extended",
+      "phase_name": "extended_pythia_2p8b_25m",
+      "model_tag": "pythia-2.8b",
+      "data_family": "extended_v1",
+      "expected_manifest_path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v4/extended_pythia_2p8b_25m_nll/manifest.json",
+      "manifest_available_at_review": false,
+      "manifest_sha256_resolution": "Use matching READY.manifest.sha256 only after ready=true and verify the actual manifest bytes; do not insert a guessed SHA",
+      "execution_authorized_now": false,
+      "score_parsing_authorized": false,
+      "prepare_templates": [
+        [
+          "python",
+          "scripts/analyze_nll_v2.py",
+          "--manifest",
+          "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v4/extended_pythia_2p8b_25m_nll/manifest.json",
+          "--manifest-sha256",
+          "<SHA_FROM_MATCHING_READY>",
+          "--role",
+          "extended",
+          "--phase-name",
+          "extended_pythia_2p8b_25m",
+          "--model-tag",
+          "pythia-2.8b",
+          "--data-family",
+          "extended_v1",
+          "--checkpoint",
+          "final",
+          "--output",
+          "/tmp/grad-research-20261106/worktree/results/analysis/supplemental_prepared_v1/extended_pythia_2p8b_25m_nll/final"
+        ],
+        [
+          "python",
+          "scripts/analyze_nll_v2.py",
+          "--manifest",
+          "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v4/extended_pythia_2p8b_25m_nll/manifest.json",
+          "--manifest-sha256",
+          "<SHA_FROM_MATCHING_READY>",
+          "--role",
+          "extended",
+          "--phase-name",
+          "extended_pythia_2p8b_25m",
+          "--model-tag",
+          "pythia-2.8b",
+          "--data-family",
+          "extended_v1",
+          "--checkpoint",
+          "best",
+          "--output",
+          "/tmp/grad-research-20261106/worktree/results/analysis/supplemental_prepared_v1/extended_pythia_2p8b_25m_nll/best"
+        ]
+      ]
+    },
+    {
+      "plan_id": "extended_pythia_2p8b_25m_behavior",
+      "mode": "behavior",
+      "role": "extended",
+      "phase_name": "extended_pythia_2p8b_25m",
+      "model_tag": "pythia-2.8b",
+      "data_family": "extended_v1",
+      "expected_manifest_path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v4/extended_pythia_2p8b_25m_behavior/manifest.json",
+      "manifest_available_at_review": false,
+      "manifest_sha256_resolution": "Use matching READY.manifest.sha256 only after ready=true and verify the actual manifest bytes; do not insert a guessed SHA",
+      "execution_authorized_now": false,
+      "score_parsing_authorized": false,
+      "prepare_templates": [],
+      "check_only_template": [
+        "python",
+        "scripts/guarded_behavior_analysis.py",
+        "--manifest",
+        "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v4/extended_pythia_2p8b_25m_behavior/manifest.json",
+        "--manifest-sha256",
+        "<SHA_FROM_MATCHING_READY>"
+      ]
+    }
+  ],
+  "confirmed_support": [
+    "A126 logical rows and all42 method/lambda cells preserved; 3 training seeds per cell",
+    "B selection_seed replicate with fixed training/generation seed11 and explicit K",
+    "C role/model/data-family/endpoint/baseline identity strata and actual best exposure",
+    "Behavior acc_norm/acc separate transitions, conditional intervals and seed SD within each stratum"
+  ],
+  "gaps": [
+    {
+      "id": "A_selected_ID_view",
+      "reason": "No existing independent join of full126 NLL endpoint table to the complete validation-selected IDs/selection SHA; no dedicated seven-lambda curve renderer"
+    },
+    {
+      "id": "A_different_lambda_pairs",
+      "reason": "Both existing NLL and behavioral primary pairs require equal weight/LR; independently validation-selected method lambdas may differ, so pairs are omitted intentionally. New auxiliary selected-policy contrast must retain both lambdas and explicit matched training seeds."
+    },
+    {
+      "id": "supplemental_NLL_all_phase_guard",
+      "reason": "collect_scores rejects incomplete final output after it may already read present scores. Primary67 authorization guard is primary-only. A new independent all-manifest SHA/attestation/baseline/alias and root-authorization pre-read gate is required; --allow-partial must not be used."
+    },
+    {
+      "id": "supplemental_behavior_authorization",
+      "reason": "Generic behavior guard can check the whole explicit manifest and prior baselines, but per-phase root authorization and analysis-source/validation-choice SHA freeze are still needed. Direct analyze_behavioral_plan CLI parses scores and has no dry-run flag."
+    },
+    {
+      "id": "full_training_cost_join",
+      "reason": "Behavior endpoint CSV preserves actual checkpoint exposure but does not itself export numeric full-training parent-cost tables; join canonical physical-run inventory and keep all final/best/alias references."
+    },
+    {
+      "id": "CPU_reporting_tail",
+      "reason": "Bootstrap/document sampling, prediction JSONL parsing, plotting/reporting, proof production and persistence are not fully timed.30min delivery reserve is a planning allocation, not measured completion coverage."
+    }
+  ],
+  "supplemental_NLL_conditional_bootstrap_work": [
+    {
+      "plan_id": "supplement_A_nll",
+      "logical_endpoints": 126,
+      "matched_same_lambda_pair_endpoint_comparisons": 126,
+      "bootstrap_calls": 1512,
+      "bootstrap_replicates_per_call": 5000,
+      "bootstrap_sample_replicates": 7560000,
+      "calls_per_endpoint_or_pair": 6,
+      "CPU_wall_measured": false,
+      "unknown_CPU_wall_is_not_zero": true
+    },
+    {
+      "plan_id": "supplement_B_nll",
+      "logical_endpoints": 60,
+      "matched_same_lambda_pair_endpoint_comparisons": 40,
+      "bootstrap_calls": 600,
+      "bootstrap_replicates_per_call": 5000,
+      "bootstrap_sample_replicates": 3000000,
+      "calls_per_endpoint_or_pair": 6,
+      "CPU_wall_measured": false,
+      "unknown_CPU_wall_is_not_zero": true
+    },
+    {
+      "plan_id": "extended_pythia_410m_100m_nll",
+      "logical_endpoints": 48,
+      "matched_same_lambda_pair_endpoint_comparisons": 36,
+      "bootstrap_calls": 504,
+      "bootstrap_replicates_per_call": 5000,
+      "bootstrap_sample_replicates": 2520000,
+      "calls_per_endpoint_or_pair": 6,
+      "CPU_wall_measured": false,
+      "unknown_CPU_wall_is_not_zero": true
+    },
+    {
+      "plan_id": "extended_pythia_1b_100m_nll",
+      "logical_endpoints": 48,
+      "matched_same_lambda_pair_endpoint_comparisons": 36,
+      "bootstrap_calls": 504,
+      "bootstrap_replicates_per_call": 5000,
+      "bootstrap_sample_replicates": 2520000,
+      "calls_per_endpoint_or_pair": 6,
+      "CPU_wall_measured": false,
+      "unknown_CPU_wall_is_not_zero": true
+    },
+    {
+      "plan_id": "extended_pythia_2p8b_25m_nll",
+      "logical_endpoints": 30,
+      "matched_same_lambda_pair_endpoint_comparisons": 18,
+      "bootstrap_calls": 288,
+      "bootstrap_replicates_per_call": 5000,
+      "bootstrap_sample_replicates": 1440000,
+      "calls_per_endpoint_or_pair": 6,
+      "CPU_wall_measured": false,
+      "unknown_CPU_wall_is_not_zero": true
+    }
+  ],
+  "supplemental_NLL_total_bootstrap_calls": 3408,
+  "behavior_complete_scope_endpoint_bootstrap_calls_max": 612,
+  "behavior_multinomial_bootstrap_replicates_max": 3060000,
+  "analysis_guard_scope": "One complete frozen manifest (including both C NLL endpoints if specified), all aliases and original baseline closure. It does not implicitly wait for other model phases or authorize a different task. A behavior additionally binds full126-cell validation-only selection; its guard does not imply all126 NLL tests are complete.",
+  "future_CPU_overlap_rule": "After explicit phase-specific root unsealing and its whole-manifest guard, CPU analysis may overlap later independent GPU phases; never use resulting test/behavior scores to retune, alter conditions or choose later execution scope.",
+  "CPU_test_result": "25 passed: remaining budget + synthetic support review + NLL adapter + behavior guard",
+  "scorer_or_statistics_definitions_modified": false,
+  "new_inference_started": false,
+  "test_or_behavior_scores_parsed": false
+}

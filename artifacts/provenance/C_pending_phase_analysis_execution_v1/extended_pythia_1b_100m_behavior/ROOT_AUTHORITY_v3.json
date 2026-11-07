@@ -1,0 +1,283 @@
+{
+  "allow_partial": false,
+  "allow_score_analysis": true,
+  "authorized_by": "root",
+  "checkpoint_verification": {
+    "cache_reader_source": {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/stat_bound_digest_cache.py",
+      "sha256": "9cc01b493b46a5bf391a7c649a379d87011fff077ddeea701eaf8a84bdb568e2"
+    },
+    "cache_snapshot": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/digest_cache_snapshot_1794003609611862274.json",
+      "sha256": "bba05b10faab3f3ed3c808f64949fbdd57e31237f122e856c77ffbe2a5b87d4f"
+    },
+    "mode": "v5_checkpoint_snapshot"
+  },
+  "contract_id": "extended_pythia_1b_100m_behavior",
+  "expected_counts": {
+    "closure_canonical_forward_jobs": 22,
+    "closure_queue_jobs": 22,
+    "closure_reuse_materializations": 0,
+    "imported_baselines": 1,
+    "imported_canonical_forward_jobs": 1,
+    "logical_aliases": 3,
+    "logical_endpoints": 24,
+    "new_forward_jobs": 21,
+    "queue_jobs": 21,
+    "reuse_jobs": 0
+  },
+  "manifest": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_1b_100m_behavior/manifest.json",
+    "sha256": "e56a85f0c1d1eb2c375f863873fbeed7efc3c934f05b61d77b63ae7a7744fe6d"
+  },
+  "plan": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_1b_100m_behavior.json",
+    "sha256": "0d6fe37a1c376cb56be8b46f6d88b06cf4e7ef8116345ae584c7bc3788eace8c"
+  },
+  "protocol": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_protocol_v2.json",
+    "sha256": "eed050602c368e5e4be87172ac4d208b890d9a7f7e9811ce1684ae62acc8f742"
+  },
+  "ready": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_1b_100m_behavior/READY.json",
+    "sha256": "e6b1776b90acc4e781e1536e908f5dc5a18a707ff938f7f8bb91d31e60a6bbac"
+  },
+  "test_or_behavior_used_for_selection": false,
+  "training_methods_grid_selection_horizons_frozen": true,
+  "operational_repair": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C1B_behavior.json",
+    "sha256": "b86edb21c5e46db26bac205640441a5053aec1727f4251f77e649b2d5a1424b2"
+  },
+  "actual_successor_immutable_state": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_behavior/state_capture/actual_successor_state_immutable.json",
+    "sha256": "65d49d12168ca8d5d5d2a95ff0547f8eb1a80522461e6487948bcacbeb72eaa8",
+    "pending_actual_completed_phase_snapshot": false,
+    "same_exact_source_required_for_check_and_analyze": true
+  },
+  "note": "Non-authorizing only. Before first real check, ROOT binds an immutable byte copy of the actual successor state after this full phase closure completes. Other phases may still run. Use that exact state path/SHA for check and analyze; never the old master or different state. This operational state field is externally enforced; frozen core is unchanged.",
+  "authorized_at_utc": "2026-11-06T23:58:01.848235+00:00",
+  "whole_phase_check": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_behavior/check_readiness.json",
+    "sha256": "7e75475d50b2ad9c38834b213eff597a26546261655bf864b915d58709ca7f67"
+  },
+  "ROOT_review": {
+    "fresh_small_source_proofs": {
+      "/tmp/grad-research-20261106/worktree/results/C_pending_analysis_metadata_runbook_v1/future_commands_PREPARED_ONLY.json": {
+        "sha256": "fdefaeb3d9abb059d4431a5b047d9804861c69635f0d2dc31eb1823996150996",
+        "bytes": 46206
+      },
+      "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_1b_100m_behavior.json": {
+        "sha256": "0d6fe37a1c376cb56be8b46f6d88b06cf4e7ef8116345ae584c7bc3788eace8c",
+        "bytes": 66787
+      },
+      "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C1B_behavior.json": {
+        "sha256": "b86edb21c5e46db26bac205640441a5053aec1727f4251f77e649b2d5a1424b2",
+        "bytes": 3340
+      },
+      "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_1b_100m_behavior_root_authority_TEMPLATE_v3.json": {
+        "sha256": "b469108ed5e218f7ee3cb5294eb752ec43b43b5afa654d21686c951dcda969ba",
+        "bytes": 2787
+      },
+      "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_protocol_v2.json": {
+        "sha256": "eed050602c368e5e4be87172ac4d208b890d9a7f7e9811ce1684ae62acc8f742",
+        "bytes": 59111
+      },
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_1b_100m_behavior/READY.json": {
+        "sha256": "e6b1776b90acc4e781e1536e908f5dc5a18a707ff938f7f8bb91d31e60a6bbac",
+        "bytes": 7325
+      },
+      "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_1b_100m_behavior/manifest.json": {
+        "sha256": "e56a85f0c1d1eb2c375f863873fbeed7efc3c934f05b61d77b63ae7a7744fe6d",
+        "bytes": 1227844
+      },
+      "/tmp/grad-research-20261106/worktree/scripts/analyze_behavioral_plan.py": {
+        "sha256": "89c1f29f62bb5b48eca6699768b3d76d1dd5d9f3eb1d0715cae75483bab949b9",
+        "bytes": 7938
+      },
+      "/tmp/grad-research-20261106/worktree/scripts/analyze_nll_v2.py": {
+        "sha256": "e465b46acbc31ce77466aef94eedcca7766395af511a7c8978ca39fb51f506dd",
+        "bytes": 2397
+      },
+      "/tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v2.py": {
+        "sha256": "a2f613babda5f1fd3b520259515b1acda90703ef42d3c7089c32c7e57497af3a",
+        "bytes": 20476
+      },
+      "/tmp/grad-research-20261106/worktree/scripts/evaluate_tasks.py": {
+        "sha256": "cfc4f149b021740f90245e3fa822f801f30c82f6ba580d43aeec4857cbab9981",
+        "bytes": 6410
+      },
+      "/tmp/grad-research-20261106/worktree/scripts/evaluation_plan.py": {
+        "sha256": "1f68bab77a0e4d9953bcfa85306702dbc21d3ce5c85691218e06ea15df75196f",
+        "bytes": 40509
+      },
+      "/tmp/grad-research-20261106/worktree/scripts/make_behavioral_queue.py": {
+        "sha256": "14076e3bfbf9ad4d5665e9e943ce72b55bf74414a416d3465a050fefdbd8d340",
+        "bytes": 19576
+      },
+      "/tmp/grad-research-20261106/worktree/scripts/run_evaluate.py": {
+        "sha256": "6d7b9cd6b311f96e94b854e8ccd15f15f92ff9eefbd6b5a0dddc67fee8989ddf",
+        "bytes": 2366
+      },
+      "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py": {
+        "sha256": "1f691de8da574c671a8822b5999292fd601f31f83d3794f1a603eaa8c79bef8d",
+        "bytes": 12283
+      },
+      "/tmp/grad-research-20261106/worktree/scripts/stat_bound_digest_cache.py": {
+        "sha256": "9cc01b493b46a5bf391a7c649a379d87011fff077ddeea701eaf8a84bdb568e2",
+        "bytes": 9777
+      },
+      "/tmp/grad-research-20261106/worktree/src/replay_study/analysis.py": {
+        "sha256": "05d50004d60acdc4dc098d94f35a36fb1739f3f856267c7d2cdc35e02d96922c",
+        "bytes": 63530
+      },
+      "/tmp/grad-research-20261106/worktree/src/replay_study/behavioral_analysis.py": {
+        "sha256": "18e6b57dc1914119743e87170637a46cf7e9b5d99ad704b42b3c0959e2a0e280",
+        "bytes": 14557
+      },
+      "/tmp/grad-research-20261106/worktree/src/replay_study/evaluate.py": {
+        "sha256": "d9648b4fbc891746a9bafe9e9639e2ee584521ba68bd949d2091484c833c3c46",
+        "bytes": 16936
+      },
+      "/tmp/grad-research-20261106/worktree/src/replay_study/execution.py": {
+        "sha256": "70ed6b3d63f950ffc00f2c671f20e0d842c154f4cbf1648fe9a6511bbd077bf5",
+        "bytes": 4371
+      },
+      "/tmp/grad-research-20261106/worktree/src/replay_study/nll_v2_analysis.py": {
+        "sha256": "356088e4a8bc82947d6287a8e712038426382efbf45f3a7006bf9eea18a1c59e",
+        "bytes": 34271
+      },
+      "/tmp/grad-research-20261106/worktree/src/replay_study/selected_policy_analysis.py": {
+        "sha256": "a7eeec7b71305078ea812fca2735421942e72d698a4ab51e0e6f08b416004d89",
+        "bytes": 15799
+      },
+      "/tmp/grad-research-20261106/worktree/src/replay_study/supplemental_analysis_guard.py": {
+        "sha256": "448871cbf821db2917a255b33c1e57609cdd32e687295319d5647ca23f799d01",
+        "bytes": 23733
+      },
+      "/tmp/grad-research-20261106/worktree/src/replay_study/supplemental_analysis_guard_v2.py": {
+        "sha256": "64c89e37be3d595c239ad2683d72a85cdef6db776374ef6eeae28e23b97c3aea",
+        "bytes": 31353
+      },
+      "/tmp/grad-research-20261106/worktree/src/replay_study/tasks.py": {
+        "sha256": "c631b1c81386193b645b59a3a82eb73dfacc6d9d1302b95e997f0de4afc47a51",
+        "bytes": 12569
+      },
+      "/tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v3.py": {
+        "sha256": "bd0463e34fe9373ffcb37587f6838f5f5bb1a852b6eafc023bd67923ec97ed0c",
+        "bytes": 8402
+      },
+      "/tmp/grad-research-20261106/worktree/src/replay_study/supplemental_analysis_guard_v3.py": {
+        "sha256": "6190ded0f8c21c035a1829f0d4f451d3842af9f5f03942dcc1fceb94bdcbc4cb",
+        "bytes": 12808
+      },
+      "/tmp/grad-research-20261106/worktree/results/planned_model_behavioral_timing_v1/pythia-1b/baselines/110026c3570c2941690ef4675232ee3298a831c33d69131490e7291c8ff2f56f_execution.json": {
+        "sha256": "da10ca22fb575df4668533f116fee439ef7e155d8f2ea0ec61315807b08c5e8d",
+        "bytes": 2540
+      },
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/behavior/pythia-1b/extended_pythia_1b_100m/extended_v2_pythia_1b_m32_formal_B0_s11_w0/final_execution.json": {
+        "sha256": "f0fffb5ef2a7d356e6fa2423aa06a0052bf29e776102c8aec25f9709b440b8db",
+        "bytes": 2986
+      },
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/behavior/pythia-1b/extended_pythia_1b_100m/extended_v2_pythia_1b_m32_formal_B1_s11_w0p05/final_execution.json": {
+        "sha256": "b08faea99e3dd6f0434a21bafe2a88bdb51abf7c09de794bfefb6b4d09f7b15a",
+        "bytes": 3001
+      },
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/behavior/pythia-1b/extended_pythia_1b_100m/extended_v2_pythia_1b_m32_formal_B2_s11_w0p05/final_execution.json": {
+        "sha256": "a38e0ee3af59b50412c708c3d1b9a2454bb9a03b79e7dcf6470c7226f2cb0bc3",
+        "bytes": 3001
+      },
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/behavior/pythia-1b/extended_pythia_1b_100m/extended_v2_pythia_1b_m32_formal_B3_s11_w0p05/final_execution.json": {
+        "sha256": "9dd888beb1ca4f207b869988218f4fafe68b4db4cee7845dc539c42fd240c23f",
+        "bytes": 3001
+      },
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/behavior/pythia-1b/extended_pythia_1b_100m/extended_v2_pythia_1b_m32_formal_B4_s11_w0p05/final_execution.json": {
+        "sha256": "d7bf21a13a4f4f843ad09a9689c3b1bbae3d324ddd4e66a1ee98e50ff271b229",
+        "bytes": 3699
+      },
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/behavior/pythia-1b/extended_pythia_1b_100m/extended_v2_pythia_1b_m32_formal_D_s11_w0p05/final_execution.json": {
+        "sha256": "c9206ab1a32cbedc79000c0b786c397dbe1ff1d8d5b9c51c25189f082d20bee2",
+        "bytes": 4041
+      },
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/behavior/pythia-1b/extended_pythia_1b_100m/extended_v2_pythia_1b_m32_formal_M_s11_w0p05/final_execution.json": {
+        "sha256": "9728126902101e03968353ef7956cef30bf907af79b4f442ccd4e1835971d485",
+        "bytes": 2996
+      },
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/behavior/pythia-1b/extended_pythia_1b_100m/extended_v2_pythia_1b_m32_formal_C_s11_w0p05/final_execution.json": {
+        "sha256": "c1112468da30bfb8596cf9c124acec3ddba947fbcf8cd9b4c0cbe0ca5f47845a",
+        "bytes": 2996
+      },
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/behavior/pythia-1b/extended_pythia_1b_100m/extended_v2_pythia_1b_m32_formal_B0_s22_w0/final_execution.json": {
+        "sha256": "b64caa240629fe2f6e6290966f445b32ffb2bc074f5ec66ad8f82f86ba6bc854",
+        "bytes": 2986
+      },
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/behavior/pythia-1b/extended_pythia_1b_100m/extended_v2_pythia_1b_m32_formal_B1_s22_w0p05/final_execution.json": {
+        "sha256": "8a725e1a14220b80f0779ad1a30686fd00d91044b5cc53db333dd7a43fe465a7",
+        "bytes": 3001
+      },
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/behavior/pythia-1b/extended_pythia_1b_100m/extended_v2_pythia_1b_m32_formal_B2_s22_w0p05/final_execution.json": {
+        "sha256": "1d36b3d645102b5909cc02aaf348091cb309d092062cf447a7d3ebaff7f79ea7",
+        "bytes": 3001
+      },
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/behavior/pythia-1b/extended_pythia_1b_100m/extended_v2_pythia_1b_m32_formal_B3_s22_w0p05/final_execution.json": {
+        "sha256": "308a811f6db29684967ae07a413179529fa539d2aaae06a643232a6b8cf8ed3d",
+        "bytes": 3001
+      },
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/behavior/pythia-1b/extended_pythia_1b_100m/extended_v2_pythia_1b_m32_formal_B4_s22_w0p05/final_execution.json": {
+        "sha256": "499788656b21d8b4eea81b46d6fe9dc7f048465be3e698c3ce6afda7f653b12f",
+        "bytes": 3699
+      },
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/behavior/pythia-1b/extended_pythia_1b_100m/extended_v2_pythia_1b_m32_formal_D_s22_w0p05/final_execution.json": {
+        "sha256": "e80281b2eeda7414efff060597e8f9dfddbef735220af2e5347b25d18e5ec823",
+        "bytes": 4041
+      },
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/behavior/pythia-1b/extended_pythia_1b_100m/extended_v2_pythia_1b_m32_formal_M_s22_w0p05/final_execution.json": {
+        "sha256": "3694dbac163457afe563a3afbb549d95ee9a1b6c53f1e5889232543c6c853fcb",
+        "bytes": 2996
+      },
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/behavior/pythia-1b/extended_pythia_1b_100m/extended_v2_pythia_1b_m32_formal_C_s22_w0p05/final_execution.json": {
+        "sha256": "25b73fd906f19921cde7e8f1f8b4d25b9cd58aaf27f1e31d5adc9f7895fd011e",
+        "bytes": 2996
+      },
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/behavior/pythia-1b/extended_pythia_1b_100m/extended_v2_pythia_1b_m32_formal_B0_s33_w0/final_execution.json": {
+        "sha256": "89948792727faef8787647522903c69e87867ec7f53f4517399925de3ca9ff4a",
+        "bytes": 2985
+      },
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/behavior/pythia-1b/extended_pythia_1b_100m/extended_v2_pythia_1b_m32_formal_B1_s33_w0p05/final_execution.json": {
+        "sha256": "cceca16441c49de3130f7a87710666b1573d1ed3521ad52a86f647a530a0dbee",
+        "bytes": 2998
+      },
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/behavior/pythia-1b/extended_pythia_1b_100m/extended_v2_pythia_1b_m32_formal_B2_s33_w0p05/final_execution.json": {
+        "sha256": "50c2e8a59ddc81861dab7999506f74df2c34eb226ad055c613f1a1fc83367096",
+        "bytes": 3001
+      },
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/behavior/pythia-1b/extended_pythia_1b_100m/extended_v2_pythia_1b_m32_formal_B3_s33_w0p05/final_execution.json": {
+        "sha256": "a2b152377cfe66fb4faa17154b12255231c1475a22fc2e4636d20e34ca567bb7",
+        "bytes": 3000
+      },
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/behavior/pythia-1b/extended_pythia_1b_100m/extended_v2_pythia_1b_m32_formal_B4_s33_w0p05/final_execution.json": {
+        "sha256": "493b771c55888692beeb97e830a649c4c3722b16d6d4cce6dee83780c6b77540",
+        "bytes": 3699
+      },
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/behavior/pythia-1b/extended_pythia_1b_100m/extended_v2_pythia_1b_m32_formal_D_s33_w0p05/final_execution.json": {
+        "sha256": "cb4a4854d4b06bda90a618707ca466ba820f91924267ee7bd73e3bae53f8ac83",
+        "bytes": 4041
+      },
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/behavior/pythia-1b/extended_pythia_1b_100m/extended_v2_pythia_1b_m32_formal_M_s33_w0p05/final_execution.json": {
+        "sha256": "88023da16814c0d580baab5671708ad4d95dd77d06e50598b005ef0876c6910f",
+        "bytes": 2996
+      },
+      "/tmp/grad-research-20261106/worktree/results/future_evaluation_v1/behavior/pythia-1b/extended_pythia_1b_100m/extended_v2_pythia_1b_m32_formal_C_s33_w0p05/final_execution.json": {
+        "sha256": "cc374fac288dc83122886dc0872b6bfaeb8a231f472f063d9670653f05855e91",
+        "bytes": 2995
+      }
+    },
+    "checkpoint_current_five_stat_checks": 24,
+    "source_or_score_model_payload_read_by_ROOT": false,
+    "original_complete_check_parent": {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_behavior/check_timing/whole_child_timing.json",
+      "sha256": "7651cd5a064c5d344a1a431ad9f744b25782920e66c4f8cf328f4e7489a1f7db"
+    },
+    "root_preparation_body_seconds": 0.007392257452011108,
+    "manual_parent_seconds": null
+  }
+}

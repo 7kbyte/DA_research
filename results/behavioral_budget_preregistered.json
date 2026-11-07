@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-06T05:46:41.403990+00:00",
+  "data_root": "/tmp/grad-research-20261106/worktree/artifacts/behavioral",
+  "source_sha256": {
+    "/tmp/grad-research-20261106/worktree/artifacts/behavioral/data_manifest.json": "5c91890603f5149fb2f2f62b29edd16ee2044d3602d75265f819f35a501b7d0f",
+    "/tmp/grad-research-20261106/worktree/artifacts/behavioral/sources/harness_manifest.json": "2301b180eddd3a65d028f8bcb570f8e8ad2b63017a1f184b0174c16eb819452f",
+    "/tmp/grad-research-20261106/worktree/artifacts/behavioral/piqa_validation.jsonl": "1c651cd30ba15f579a2bfddfe6c92b2bdc20a01c00921693c50a620993119301",
+    "/tmp/grad-research-20261106/worktree/artifacts/behavioral/piqa_validation.json": "5d091ca9f562e7cff3e419955a3af4c6dba7891442c96d21c108fa2c21d02e35",
+    "/tmp/grad-research-20261106/worktree/artifacts/behavioral/hellaswag_validation.jsonl": "948f15fb1733acf005121510a504272a58133ee1d4a9511870176e6ff6f50d75",
+    "/tmp/grad-research-20261106/worktree/artifacts/behavioral/hellaswag_validation.json": "11672fe57bba7b67401338aabe1de1bede27ec2b047d4610aa501267ace4ab30",
+    "/tmp/grad-research-20261106/worktree/artifacts/behavioral/sources/harness_lm_eval__tasks__piqa__piqa.yaml": "e874f7956ccac325b888d4a5dc600bad867b79fba2bd358fe8761ab8263270fb",
+    "/tmp/grad-research-20261106/worktree/artifacts/behavioral/sources/harness_lm_eval__tasks__piqa__README.md": "788cef081bb9fff2afe8a30984ce17fffa7c0401674d5abd4f558306e713825a",
+    "/tmp/grad-research-20261106/worktree/artifacts/behavioral/sources/harness_lm_eval__tasks__hellaswag__hellaswag.yaml": "e9ef8ac3fed02bf283777d946ae76cbf906152e9c92533c9794e5a9dad78d1cf",
+    "/tmp/grad-research-20261106/worktree/artifacts/behavioral/sources/harness_lm_eval__tasks__hellaswag__utils.py": "07d23b60b28f2a4f658dcf8440623a63fe6644854ce9b846a114dde980dc1214",
+    "/tmp/grad-research-20261106/worktree/artifacts/behavioral/sources/harness_lm_eval__tasks__hellaswag__README.md": "d12c5bb378e08ae58914c074a27a58faf853c4264c59b0e47bc125445b222df6",
+    "/tmp/grad-research-20261106/worktree/artifacts/behavioral/sources/harness_lm_eval__api__task.py": "4c25a4f1949488483b833ce4fcf91cfd3e066084a9ea00079c6879ae3ba95657",
+    "/tmp/grad-research-20261106/worktree/artifacts/behavioral/sources/harness_lm_eval__api__model.py": "b8b1db336e168b53d9ca808fe837d5bf8943d9dca76a14cf747e4f3a22d50545",
+    "/tmp/grad-research-20261106/worktree/artifacts/behavioral/sources/harness_lm_eval__models__huggingface.py": "56d215b8f713d7579f9c7b58a9b8771b09c88e0e4fb8d1b6dd9068033b614b80",
+    "/tmp/grad-research-20261106/worktree/artifacts/behavioral/sources/harness_lm_eval__config__task.py": "c9ec7ce71a5ee6c84cd85436eec47a8fdf9842f2bd7011cc336c83ecb4cd958a",
+    "/tmp/grad-research-20261106/worktree/artifacts/behavioral/sources/harness_lm_eval__api__utils.py": "027862cf6efb657861b78a8827ad33a88ad3a1284f9086cc00b2826c74423dfa",
+    "/tmp/grad-research-20261106/worktree/artifacts/behavioral/sources/harness_LICENSE.md": "a806e42547620dffbc2ec0333322c8b3523b4af11e059be14ef81aa5b1ae021f"
+  },
+  "tokenizer": "/tmp/grad-research-20261106/models/pythia-410m-final",
+  "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+  "tokenizer_asset_sha256": {
+    "/tmp/grad-research-20261106/models/pythia-410m-final/special_tokens_map.json": "6f50ab5a5a509a1c309d6171f339b196a900dc9c99ad0408ff23bb615fdae7ad",
+    "/tmp/grad-research-20261106/models/pythia-410m-final/tokenizer_config.json": "70e38394e494931c6f773ba41e19460dd4436526b852207367f04341b4066d3f",
+    "/tmp/grad-research-20261106/models/pythia-410m-final/tokenizer.json": "c24618a1b3e6a38167beff1c72cffd126c3a66254347304b50547d12c5f25624"
+  },
+  "counting_module_sha256": "c631b1c81386193b645b59a3a82eb73dfacc6d9d1302b95e997f0de4afc47a51",
+  "counting_script_sha256": "b19e4905885954edf3711f39292f7c523b399cbfb8ecc501f39de7be73b34b7c",
+  "max_length": 2048,
+  "tasks": {
+    "piqa": {
+      "questions": 1838,
+      "choices": 3676,
+      "scored_continuation_prediction_tokens": 83886,
+      "unpadded_forward_input_positions": 130280,
+      "maximum_forward_input_length": 241,
+      "choices_with_context_truncation": 0,
+      "boundary_prefix_mismatch_choices": 0,
+      "by_batch": {
+        "8": {
+          "forward_calls": 460,
+          "padded_forward_input_positions": 131072,
+          "padded_sequence_length_squared_sum": 6889456
+        },
+        "16": {
+          "forward_calls": 230,
+          "padded_forward_input_positions": 132176,
+          "padded_sequence_length_squared_sum": 7205168
+        }
+      }
+    },
+    "hellaswag": {
+      "questions": 10042,
+      "choices": 40168,
+      "scored_continuation_prediction_tokens": 1199604,
+      "unpadded_forward_input_positions": 3179384,
+      "maximum_forward_input_length": 147,
+      "choices_with_context_truncation": 0,
+      "boundary_prefix_mismatch_choices": 0,
+      "by_batch": {
+        "8": {
+          "forward_calls": 5021,
+          "padded_forward_input_positions": 3179848,
+          "padded_sequence_length_squared_sum": 285885928
+        },
+        "16": {
+          "forward_calls": 2511,
+          "padded_forward_input_positions": 3180392,
+          "padded_sequence_length_squared_sum": 285979080
+        }
+      }
+    }
+  },
+  "scope": {
+    "pythia-410m": {
+      "primary_checkpoint_endpoints": 72,
+      "A_selected_final_maximum": 18,
+      "extended_final": 24,
+      "initial": 1,
+      "proposed_behavior_batch": 16,
+      "maximum_inference_passes_before_equivalence_reuse": 115,
+      "work_per_pass": {
+        "questions": 11880,
+        "choices": 43844,
+        "scored_continuation_prediction_tokens": 1283490,
+        "padded_forward_input_positions": 3312568,
+        "forward_calls": 2741
+      },
+      "maximum_total_work": {
+        "questions": 1366200,
+        "choices": 5042060,
+        "scored_continuation_prediction_tokens": 147601350,
+        "padded_forward_input_positions": 380945320,
+        "forward_calls": 315215
+      },
+      "architecture": {
+        "hidden_size": 1024,
+        "intermediate_size": 4096,
+        "num_hidden_layers": 24,
+        "num_attention_heads": 16,
+        "vocab_size": 50304
+      },
+      "architecture_config_sha256": "d4c11e84a59c8af4d88446bba53b718f7aef740daa070ded08fd6a9a3aca4fc6"
+    },
+    "pythia-1b": {
+      "extended_final": 24,
+      "initial": 1,
+      "proposed_behavior_batch": 16,
+      "maximum_inference_passes_before_equivalence_reuse": 25,
+      "work_per_pass": {
+        "questions": 11880,
+        "choices": 43844,
+        "scored_continuation_prediction_tokens": 1283490,
+        "padded_forward_input_positions": 3312568,
+        "forward_calls": 2741
+      },
+      "maximum_total_work": {
+        "questions": 297000,
+        "choices": 1096100,
+        "scored_continuation_prediction_tokens": 32087250,
+        "padded_forward_input_positions": 82814200,
+        "forward_calls": 68525
+      },
+      "architecture": {
+        "hidden_size": 2048,
+        "intermediate_size": 8192,
+        "num_hidden_layers": 16,
+        "num_attention_heads": 8,
+        "vocab_size": 50304
+      },
+      "architecture_config_sha256": "302d6702a29de1039066e41404877fb8c53b7ddc82e88f9aba277f230086cfe0"
+    },
+    "pythia-2.8b": {
+      "extended_final": 15,
+      "initial": 1,
+      "proposed_behavior_batch": 8,
+      "maximum_inference_passes_before_equivalence_reuse": 16,
+      "work_per_pass": {
+        "questions": 11880,
+        "choices": 43844,
+        "scored_continuation_prediction_tokens": 1283490,
+        "padded_forward_input_positions": 3310920,
+        "forward_calls": 5481
+      },
+      "maximum_total_work": {
+        "questions": 190080,
+        "choices": 701504,
+        "scored_continuation_prediction_tokens": 20535840,
+        "padded_forward_input_positions": 52974720,
+        "forward_calls": 87696
+      },
+      "architecture": {
+        "hidden_size": 2560,
+        "intermediate_size": 10240,
+        "num_hidden_layers": 32,
+        "num_attention_heads": 32,
+        "vocab_size": 50304
+      },
+      "architecture_config_sha256": "fe1a9b9550935517588c98f89df24db7d7eadf4c4a00dd32e127a2d4585e9827"
+    }
+  },
+  "maximum_inference_passes": 156,
+  "supplement_B_behavior": false,
+  "extended_best_behavior": false,
+  "batch_proposal_requires_root_freeze": true,
+  "timing_measured": false,
+  "model_weights_loaded": false,
+  "model_inference_performed": false,
+  "time_risk": {
+    "remaining_after_training_deadline_seconds": 12392,
+    "four_gpu_full_window_average_seconds_per_pass_upper_bound": 317.7435897435897,
+    "note": "Necessary mean allowance if all four GPUs were dedicated to behavior; excludes NLL evaluation, CPU SHA, packaging, contention and failures. This is not a throughput estimate."
+  },
+  "cost_formula": "sum_model(N_distinct_passes_model * measured_full_task_seconds_model_batch_policy); use exact padded input positions and architecture for structural comparisons, never convert parameter counts into seconds without measurement",
+  "reuse_rule": "Same actual inference inputs/policy plus exact checkpoint bytes or SHA-bound full-model_state equivalence. Preserve all logical endpoints and physical training identities."
+}

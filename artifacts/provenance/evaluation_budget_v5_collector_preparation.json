@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "status": "prepared_waiting_for_B60_full_completion",
+  "utc": "2026-11-06T11:40:54.189452+00:00",
+  "producer": {
+    "path": "/tmp/grad-research-20261106/worktree/scripts/describe_remaining_evaluation_budget_v5.py",
+    "sha256": "5185a6a17cb00bd7d431dba03027df967a48ada994e5efb6e100fdef9fa3cedf"
+  },
+  "support_sources": {
+    "scripts/describe_remaining_evaluation_budget_v4.py": "a83711ad69d03ecc4314a015a8ca21379acf07ebaaea50aa0820a298554c39b7",
+    "scripts/describe_remaining_evaluation_budget.py": "ff6d80e5e2bc2a3d78c615a8752fe3ed31bdb043c862573f8949d92986cf083d",
+    "scripts/reconcile_main_behavior_runtime.py": "17d9b7839aef14e8c073124489c455d67512033f6de7658029411e88047a6f17",
+    "scripts/handoff_evaluation.py": "bbe5a14e16bde55362aa3a7edc044b35ed8a7e2d0966a8b40692513b6c3a748a",
+    "scripts/schedule_jobs.py": "c5c264b058ff655315ef896ccb0a89b471637c6612013a51999fc6f48b2d16d9",
+    "scripts/stat_bound_digest_cache.py": "9cc01b493b46a5bf391a7c649a379d87011fff077ddeea701eaf8a84bdb568e2",
+    "tests/test_remaining_evaluation_budget_v5.py": "9c18081c850492f92c21eec4dbc27d47c62f805c9819f14848b836fc33d57544",
+    "tests/test_main_behavior_runtime_reconciliation.py": "dd57d20cbb18097131f18f118658bb8ed2a4b647b529aaf5232c7cb723a369a8"
+  },
+  "primary_behavior_manifest_bound_to_v4": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+    "sha256": "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934"
+  },
+  "scientific_core_matches_frozen_10": {
+    "src/replay_study/train.py": true,
+    "src/replay_study/objectives.py": true,
+    "src/replay_study/evaluate.py": true,
+    "src/replay_study/execution.py": true,
+    "src/replay_study/generate.py": true,
+    "src/replay_study/selection.py": true,
+    "src/replay_study/data.py": true,
+    "scripts/run_evaluate.py": true,
+    "scripts/run_train.py": true,
+    "scripts/make_experiments.py": true
+  },
+  "tests": {
+    "command": "pytest -q tests/test_remaining_evaluation_budget_v5.py tests/test_main_behavior_runtime_reconciliation.py",
+    "passed": 12,
+    "wall_seconds_reported_by_pytest": 1.25
+  },
+  "CPU_watcher": {
+    "pid": 3167134,
+    "progress": "logs/B_evaluation_budget_v5_watch.json",
+    "CUDA_VISIBLE_DEVICES": "",
+    "poll_seconds": 60
+  },
+  "final_output": "results/evaluation_timing_budget_v5.json",
+  "completion_receipt": "results/evaluation_timing_budget_v5_sources/B_runtime_completion.json",
+  "no_final_budget_before_all_B_rc0_and_output_SHA_attestations": true,
+  "scores_semantically_read": false,
+  "science_or_queue_modified": false,
+  "new_GPU_work_started": false
+}

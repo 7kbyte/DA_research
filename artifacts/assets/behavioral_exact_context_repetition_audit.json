@@ -1,0 +1,38 @@
+{
+  "created_at_utc": "2026-11-06T10:29:32.579250+00:00",
+  "scope": "Formatted benchmark input contexts only, before any behavioral score reading. Exact text equality is not source-document identity or an estimate of error dependence. No bootstrap or scorer changed.",
+  "score_files_read": false,
+  "rows": [
+    {
+      "task": "piqa",
+      "items": 1838,
+      "unique_exact_formatted_contexts": 1803,
+      "contexts_with_multiple_items": 27,
+      "items_in_repeated_contexts": 62,
+      "max_items_same_exact_context": 4,
+      "cluster_size_histogram": {
+        "1": 1776,
+        "2": 20,
+        "3": 6,
+        "4": 1
+      },
+      "source": "artifacts/behavioral/piqa_validation.jsonl",
+      "source_sha256": "1c651cd30ba15f579a2bfddfe6c92b2bdc20a01c00921693c50a620993119301"
+    },
+    {
+      "task": "hellaswag",
+      "items": 10042,
+      "unique_exact_formatted_contexts": 10019,
+      "contexts_with_multiple_items": 22,
+      "items_in_repeated_contexts": 45,
+      "max_items_same_exact_context": 3,
+      "cluster_size_histogram": {
+        "1": 9997,
+        "2": 21,
+        "3": 1
+      },
+      "source": "artifacts/behavioral/hellaswag_validation.jsonl",
+      "source_sha256": "948f15fb1733acf005121510a504272a58133ee1d4a9511870176e6ff6f50d75"
+    }
+  ]
+}

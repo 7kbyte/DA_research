@@ -1,0 +1,45 @@
+{
+  "registered_at_utc": "2026-11-06T06:20:07.188410+00:00",
+  "model": "pythia-2.8b",
+  "reason": "Compute budget only; preserve all matched groups and three training seeds within 00:00 UTC training cutoff.",
+  "original_target_prediction_tokens": 50000000,
+  "fallback_target_prediction_tokens": 25000000,
+  "ordered_choices": [
+    50000000,
+    25000000,
+    null
+  ],
+  "groups": [
+    "B0",
+    "B1",
+    "B2",
+    "B4",
+    "M"
+  ],
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "runs": 15,
+  "decision_rule": "Before the first 2.8B formal job, choose50M iff all priority A/B and410M/1B cohorts plus full2.8B50M fit by00:00 UTC with10%turnaround reserve; else choose full25M iff it fits with the same reserve; otherwise do not launch2.8B formal. Freeze once; never truncate after seeing outcomes.",
+  "contingency_fraction": 0.1,
+  "training_deadline_utc": "2026-11-07T00:00:00Z",
+  "calibration_rule_unchanged": "Same model-specific seed101 2M B0 LR grid and B1-B4 lambda grid, validation-only shared choices; no new tuning.",
+  "learning_rate_schedule": "Fresh from pretrained weights, full chosen target-exposure cosine schedule and same warmup fraction for all15; no resume from a50M schedule.",
+  "evaluation": "Same matched data_extended validation/test, fixed153steps per validation (~5M prediction tokens) plus final.",
+  "interpretation": "Different optimization horizons/replay exposures across model sizes; no isolated causal model-size claim; short pilots do not guarantee long-horizon optimum.",
+  "behavior_or_test_scores_used": false,
+  "score_access_authority": "Root explicitly stated scores remain unread/sealed at amendment; engineering agent reads timing/state only.",
+  "no_2p8b_formal_job_exists_at_registration": true,
+  "preserved_pre_amendment_budget": {
+    "path": "results/supplemental_compute_budget_before_horizon_amendment_50m.json",
+    "sha256": "93e331508be8ad1255c366473768280f08d8c1a2261dc7316311585652cc62ce"
+  },
+  "old_auxiliary_source_sha256": {
+    "scripts/make_extended_experiments.py": "02e33e54e1eb0f62110afdbae36a39634671af4d67c6815412e45a9d3cbc3314",
+    "scripts/freeze_extended_formal.py": "6a34aedb7eaae5d5320783b593d83beb3ed079d7e1db7ee095ac062c69c0542d",
+    "scripts/estimate_supplemental_budget.py": "eb6fb676b83d2946cf68e9e020fd7892410a27f40c110388e3ea2b5b5976f161"
+  },
+  "frozen_scientific_core_unchanged": "de54262b8deff2c49547bba740d0dbf28a1074a7"
+}

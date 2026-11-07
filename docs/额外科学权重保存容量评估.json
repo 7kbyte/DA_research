@@ -1,0 +1,126 @@
+{
+  "status": "proposal_only_no_export_or_shared_write",
+  "created_at_utc": "2026-11-06T10:03:09.120361+00:00",
+  "selection_rule": "A frozen validation-selected18 final, three already-durable B1 aliases; C all63 final, D/B4 alias only if full source-bound equality proof",
+  "sources": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/supplement_A_validation/validation_lambda_selection.json",
+      "sha256": "9548085fc18278f69fad584b67485bceb5193a18b10c78f516f6b09b4fa4e477"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/extended_formal_freeze.json",
+      "sha256": "50786c00724008eed6a96cb753b442295152f9dea96d73a2c75f8fcf16033528"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/docs/extended_phase_equivalence_protocol.json",
+      "sha256": "4840f192c6104df11c98626b39ee1095cfe1eb1f24b78be58ee33a6c82081822"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/primary_remaining_endpoints_export_state.json",
+      "sha256": "cc65fdbdd066a5ee56540630f9a1e7076c1e9843c013c760cd2c8953a0e9b66b"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/delivery/budget_final_weights_manifest.json",
+      "sha256": "88e03b0f40bfdecabb68bfaa4a6f58de729e3008a1828244507a495449bbe388"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/delivery/primary_best_weights_manifest.json",
+      "sha256": "fbd5d91c967d46e7b55d1aca62fd1c4a9a71c6e646ebe697bc0b730199698e4f"
+    }
+  ],
+  "observation": {
+    "verified_unique_models": 45,
+    "fp32_model_bytes_each": 1621336064,
+    "ratio_low": 0.692729522405003,
+    "ratio_high": 0.7060040382226396,
+    "encode_cpu_seconds": 3113.1857506749993,
+    "complete_batch_wall_seconds": 4467.705006744713,
+    "encode_cpu_seconds_per_raw_GB": 42.66968897236319,
+    "roundtrip_pack_wall_seconds_per_raw_GB": 61.234888736315575,
+    "publication_seconds_per_GB": 7.387680295586302
+  },
+  "count_verification": "CPU-only meta-device GPTNeoX construction from pinned config; tensor counts292/196/388, no forward/no GPU; matches safetensors header after excluding obsolete attention buffers",
+  "model_state_bytes": {
+    "pythia-410m": 1621336064,
+    "pythia-1b": 4047126528,
+    "pythia-2.8b": 11100835840
+  },
+  "packages": [
+    {
+      "phase": "A_selected_final_new",
+      "model": "pythia-410m",
+      "logical_endpoints": 18,
+      "new_unique_weights": 15,
+      "raw_model_bytes": 24320040960,
+      "new_base_bytes_once": 0,
+      "estimated_package_low_bytes": 16847210360,
+      "estimated_package_high_bytes": 17203601560,
+      "estimated_package_high_gib": 16.022102497518063,
+      "estimated_encode_cpu_minutes": 17.295476392638882,
+      "estimated_complete_roundtrip_pack_wall_minutes": 24.820583370803956,
+      "estimated_publish_minutes_at_budget_observed_rate": 2.118245137632163,
+      "incremental_scratch_bytes_if_keep_all_restored": 58727244079
+    },
+    {
+      "phase": "C_410m_all_final",
+      "model": "pythia-410m",
+      "logical_endpoints": 24,
+      "new_unique_weights": 21,
+      "raw_model_bytes": 34048057344,
+      "new_base_bytes_once": 0,
+      "estimated_package_low_bytes": 23586094503,
+      "estimated_package_high_bytes": 24071620411,
+      "estimated_package_high_gib": 22.418443496339023,
+      "estimated_encode_cpu_minutes": 24.213666949694435,
+      "estimated_complete_roundtrip_pack_wall_minutes": 34.74881671912554,
+      "estimated_publish_minutes_at_budget_observed_rate": 2.9638905965529623,
+      "incremental_scratch_bytes_if_keep_all_restored": 82191298165
+    },
+    {
+      "phase": "C_1b_all_final",
+      "model": "pythia-1b",
+      "logical_endpoints": 24,
+      "new_unique_weights": 21,
+      "raw_model_bytes": 84989657088,
+      "new_base_bytes_once": 2090701528,
+      "estimated_package_low_bytes": 60965546092,
+      "estimated_package_high_bytes": 62127297072,
+      "estimated_package_high_gib": 57.86055426299572,
+      "estimated_encode_cpu_minutes": 60.44137056354604,
+      "estimated_complete_roundtrip_pack_wall_minutes": 86.7388699253549,
+      "estimated_publish_minutes_at_budget_observed_rate": 7.649610139947516,
+      "incremental_scratch_bytes_if_keep_all_restored": 207153549703
+    },
+    {
+      "phase": "C_2p8b_all_final",
+      "model": "pythia-2.8b",
+      "logical_endpoints": 15,
+      "new_unique_weights": 15,
+      "raw_model_bytes": 166512537600,
+      "new_base_bytes_once": 5684693096,
+      "estimated_package_low_bytes": 121032843743,
+      "estimated_package_high_bytes": 123276771489,
+      "estimated_package_high_gib": 114.8104402134195,
+      "estimated_encode_cpu_minutes": 118.41730315651552,
+      "estimated_complete_roundtrip_pack_wall_minutes": 169.93961188562605,
+      "estimated_publish_minutes_at_budget_observed_rate": 15.178822927213009,
+      "incremental_scratch_bytes_if_keep_all_restored": 407381387481
+    }
+  ],
+  "total_estimated_high_bytes": 226679290532,
+  "total_estimated_low_bytes": 222431694698,
+  "total_estimated_wall_minutes": 316.24788190091044,
+  "total_incremental_scratch_if_keep_all_restored_bytes": 755453479428,
+  "shared_available_bytes": 129646133248,
+  "scratch_available_bytes": 25247029841920,
+  "keep_free_floor_bytes": 2147483648,
+  "report_reserves_already_allocated_and_untouched": true,
+  "compression_band_is_observed_410m_main_not_prediction_interval": true,
+  "larger_model_longer_horizon_ratio_unmeasured": true,
+  "no_alias_if_proof_false_additional_unique_weights": 6,
+  "added_bytes_if_no_C_D_alias_at_high_ratio": 12005872442,
+  "codec_reusable_without_format_change": true,
+  "primary_exporter_entry_not_reusable_without_phase_specific_identity_adapter": true,
+  "no_new_training_or_evaluation": true,
+  "no_scientific_parameters_modified": true
+}

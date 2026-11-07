@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C2native_verification_hint_actual_independent_v1/whole_child_timing.json",
+    "sha256": "0cba0875ffe85c5aae8db2a621c9b8e4880282b3bdf721dc3d74c19e06b63eff",
+    "bytes": 710
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 0.0825544111430645,
+  "CPU_component_pointers": [
+    "/child_user_seconds",
+    "/child_system_seconds"
+  ],
+  "CPU_components": {
+    "child_user_seconds": 0.06509999999999999,
+    "child_system_seconds": 0.016045
+  },
+  "recorded_inclusive_CPU_seconds": 0.081145,
+  "original_returncode": 0,
+  "scope": "Independent small metadata/stat review only; actual hint whole3.770098101s is separate. No payload/hint/cache/restore/tests operation.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall; sum only the named user/system components. Failure rc retained. No calendar-derived elapsed.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

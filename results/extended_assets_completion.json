@@ -1,0 +1,73 @@
+{
+  "complete": true,
+  "utc": "2026-11-06T04:49:59.949813+00:00",
+  "models": {
+    "pythia-1b": {
+      "revision": "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2",
+      "summary": "results/extended_pythia-1b_generation_summary.json",
+      "summary_sha256": "c9317de0bfeca575c342976848a831575a8d41c173ddffbd02c06e151b26f47e",
+      "audit": "results/extended_pythia-1b_replay_artifact_audit.json",
+      "audit_sha256": "995391e06bc27e98f20c3d756009a35a17c145188aa027b8fe5fdd65a0f9b88b",
+      "bank_files": 20,
+      "cost_totals": {
+        "pilot": {
+          "pool_count": 1,
+          "generated_prediction_tokens": 1000027,
+          "generation_wall_seconds": 145.5412481278181,
+          "joint_teacher_nll_and_features_wall_seconds": 10.016700975596905,
+          "all_bank_selection_wall_seconds": 5.520016636699438,
+          "clustering_wall_seconds": 4.117798611521721
+        },
+        "formal": {
+          "pool_count": 3,
+          "generated_prediction_tokens": 3000081,
+          "generation_wall_seconds": 419.4141045175493,
+          "joint_teacher_nll_and_features_wall_seconds": 30.02039348334074,
+          "all_bank_selection_wall_seconds": 14.366973120719194,
+          "clustering_wall_seconds": 11.9127891138196
+        }
+      },
+      "all_pools_zero_exact_duplicate_rate": true,
+      "generation_peak_gpu_memory_bytes": 31057815552
+    },
+    "pythia-2.8b": {
+      "revision": "2a259cdd96a4beb1cdf467512e3904197345f6a9",
+      "summary": "results/extended_pythia-2.8b_generation_summary.json",
+      "summary_sha256": "bfafffdff5f267ec62d729c60a2ee998bbf4a59b8746c29cad8d0772d7b37aa5",
+      "audit": "results/extended_pythia-2.8b_replay_artifact_audit.json",
+      "audit_sha256": "aa00eed515f368915763390c17e57229313448ea9577abfb01433cb6b074caac",
+      "bank_files": 20,
+      "cost_totals": {
+        "pilot": {
+          "pool_count": 1,
+          "generated_prediction_tokens": 1000027,
+          "generation_wall_seconds": 434.14357962459326,
+          "joint_teacher_nll_and_features_wall_seconds": 19.032610461115837,
+          "all_bank_selection_wall_seconds": 7.759050358086824,
+          "clustering_wall_seconds": 6.153582572937012
+        },
+        "formal": {
+          "pool_count": 3,
+          "generated_prediction_tokens": 3000081,
+          "generation_wall_seconds": 1291.470529049635,
+          "joint_teacher_nll_and_features_wall_seconds": 56.87213199213147,
+          "all_bank_selection_wall_seconds": 16.878216944634914,
+          "clustering_wall_seconds": 15.805505719035864
+        }
+      },
+      "all_pools_zero_exact_duplicate_rate": true,
+      "generation_peak_gpu_memory_bytes": 44217612288
+    }
+  },
+  "pools_total": 8,
+  "bank_files_total": 40,
+  "prediction_tokens_per_pool": 1000027,
+  "prediction_tokens_per_bank": 100156,
+  "same_seed_c4_bank_tokens_and_indices_equal_across_models": true,
+  "sampling_and_selection_mathematics_unchanged": true,
+  "generation_backend_environment": "artifacts/extended/generation_backend_environment.json",
+  "generation_resume_incident": "artifacts/extended/disk_full_resume_incident.json",
+  "pretrained_behavioral_inference_run": false,
+  "training_started_by_this_worker": false,
+  "gpu1_generation_worker_finished": true
+}

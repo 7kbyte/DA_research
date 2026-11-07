@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_410m_100m_behavior/capture_timing/whole_child_timing.json",
+    "sha256": "0f0c2c0566267ee96ff114c554e5fbc47fd820ea2b2d197d84d1b068c9b0703f",
+    "bytes": 943
+  },
+  "original_wall_pointer": "/wall_seconds",
+  "wall_seconds": 0.04646438732743263,
+  "CPU_component_pointers": [
+    "/user_cpu_seconds",
+    "/sys_cpu_seconds"
+  ],
+  "CPU_components": {
+    "user_cpu_seconds": 0.035234,
+    "sys_cpu_seconds": 0.010078
+  },
+  "recorded_inclusive_CPU_seconds": 0.045312000000000005,
+  "original_returncode": 0,
+  "scope": "Whole direct helper child spawn through exit. Any detached successor scheduler lifetime is excluded.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall; sum only the named user/system components. Failure rc retained. No calendar-derived elapsed.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

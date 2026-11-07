@@ -1,0 +1,36 @@
+{
+  "registered_at_utc": "2026-11-06T07:13:43.046559+00:00",
+  "phase": "runtime_only_before_extended_formal",
+  "source_sha256": {
+    "scripts/monitor_runtime_budget.py": "aaf4c774b47d00bef8794ac4151f1194ad04c6d6d6dce830ceceb337f331d0f4",
+    "scripts/watch_lambda_selection.py": "b6742ba2d378f2274feca4feeab21ee11822e3c3e5ac6d31223e2b665fa4ed4c",
+    "tests/test_runtime_monitoring.py": "64d3b7af6a1f46301989d088cc6dc8ab1d942c35399b0c79abcb13a3eb97e3ff"
+  },
+  "runtime_observer_launch": "logs/runtime_budget_observer_launch.json",
+  "runtime_output": "results/runtime_budget_latest.json",
+  "extended_training_rate_policy": {
+    "minimum_optimizer_steps": 100,
+    "excluded_warmup_steps": 10,
+    "own_method_rate": "median across eligible complete/live formal traces of the same model and method",
+    "fallback_rate": "model median observed/probe seconds ratio times the pre-frozen pilot method factor",
+    "teacher_timer_nested": true,
+    "heldout_scores_used": false
+  },
+  "queued_NLL_policy": "Only explicit queued primary67; actual same-kind completed scheduler elapsed median after3 samples, otherwise max prior proxy/observed; no scored output read; remaining noncompleted jobs only.",
+  "other_jobs": "Unmodeled queued jobs are explicitly listed and charged frozen expected_seconds; no hidden training/scoring jobs.",
+  "A_selection_gate": {
+    "physical_runs": 108,
+    "parent_alias_conditions": 18,
+    "all_actual_runs_completed_rc0": true,
+    "allow_partial": false,
+    "entrypoint": "scripts/analyze_lambda_sweep.py",
+    "output": "results/supplement_A_validation/validation_lambda_selection.json",
+    "all_candidate_count": 42,
+    "selected_groups": 6,
+    "uses_only_final_10m_validation": true
+  },
+  "conditions_changed": false,
+  "scheduling_changed": false,
+  "test_or_behavior_scores_read": false,
+  "cpu_tests_passed": 4
+}

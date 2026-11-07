@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/additional_endpoint_actual_v4/C1B_best_sample/whole_child_timing.json",
+    "sha256": "0c5beba647beaa4262af5a12208322e0f001fdb04c78242e8465d099b3302776",
+    "bytes": 403
+  },
+  "original_wall_pointer": "/wall_seconds",
+  "wall_seconds": 238.84081211686134,
+  "CPU_component_pointers": [
+    "/user_cpu_seconds",
+    "/sys_cpu_seconds"
+  ],
+  "CPU_components": {
+    "user_cpu_seconds": 216.142734,
+    "sys_cpu_seconds": 23.581355
+  },
+  "recorded_inclusive_CPU_seconds": 239.724089,
+  "original_returncode": 0,
+  "scope": "Whole single exporter child spawn through exit; startup/endpoint/assembly timers are nested, not additive",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall; sum only the named user/system components. Failure rc retained. No calendar-derived elapsed.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

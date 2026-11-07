@@ -1,0 +1,772 @@
+{
+  "status": "passed",
+  "audited_at_utc": "2026-11-06T09:36:13.105190+00:00",
+  "full_conditions": 126,
+  "candidates": 42,
+  "new_training": 108,
+  "main_aliases": 18,
+  "source_files_sha_verified": 370,
+  "selected_lambda_by_method": {
+    "B1": 0.05,
+    "B2": 1.0,
+    "B3": 0.1,
+    "B4": 5.0,
+    "C": 1.0,
+    "M": 5.0
+  },
+  "primary_shared": {
+    "seed": 101,
+    "target_prediction_tokens": 2000000,
+    "replay_prediction_tokens": 100000,
+    "lambda_grid": [
+      0.05,
+      0.5,
+      1.0,
+      5.0
+    ],
+    "aggregate": "unweighted mean of four B1-B4 scores at seed101",
+    "selected_lambda": 0.05,
+    "selected_mean_S": -0.031109066505816907,
+    "per_group_pilot_minimizers": {
+      "B1": {
+        "weight": 0.5,
+        "score": -0.013969754045644045
+      },
+      "B2": {
+        "weight": 1.0,
+        "score": -0.06357265960555458
+      },
+      "B3": {
+        "weight": 0.05,
+        "score": -0.03958566928449425
+      },
+      "B4": {
+        "weight": 1.0,
+        "score": -0.06068089891571016
+      }
+    },
+    "legacy_execution_metadata_gaps": [
+      {
+        "run_id": "pilot_lambda_deterministic_v3_B1_s101_b0p05_w0p05",
+        "missing_observation": "cudnn_sdp_enabled",
+        "status": "historical provenance incomplete; not asserted as independently execution-matched"
+      },
+      {
+        "run_id": "pilot_lambda_deterministic_v3_B2_s101_b0p05_w0p05",
+        "missing_observation": "cudnn_sdp_enabled",
+        "status": "historical provenance incomplete; not asserted as independently execution-matched"
+      },
+      {
+        "run_id": "pilot_lambda_deterministic_v3_B3_s101_b0p05_w0p05",
+        "missing_observation": "cudnn_sdp_enabled",
+        "status": "historical provenance incomplete; not asserted as independently execution-matched"
+      },
+      {
+        "run_id": "pilot_lambda_deterministic_v3_B4_s101_b0p05_w0p05",
+        "missing_observation": "cudnn_sdp_enabled",
+        "status": "historical provenance incomplete; not asserted as independently execution-matched"
+      },
+      {
+        "run_id": "pilot_lambda_deterministic_v3_B1_s101_b0p05_w0p5",
+        "missing_observation": "cudnn_sdp_enabled",
+        "status": "historical provenance incomplete; not asserted as independently execution-matched"
+      },
+      {
+        "run_id": "pilot_lambda_deterministic_v3_B2_s101_b0p05_w0p5",
+        "missing_observation": "cudnn_sdp_enabled",
+        "status": "historical provenance incomplete; not asserted as independently execution-matched"
+      },
+      {
+        "run_id": "pilot_lambda_deterministic_v3_B3_s101_b0p05_w0p5",
+        "missing_observation": "cudnn_sdp_enabled",
+        "status": "historical provenance incomplete; not asserted as independently execution-matched"
+      },
+      {
+        "run_id": "pilot_lambda_deterministic_v3_B4_s101_b0p05_w0p5",
+        "missing_observation": "cudnn_sdp_enabled",
+        "status": "historical provenance incomplete; not asserted as independently execution-matched"
+      },
+      {
+        "run_id": "pilot_lambda_deterministic_v3_B1_s101_b0p05_w1",
+        "missing_observation": "cudnn_sdp_enabled",
+        "status": "historical provenance incomplete; not asserted as independently execution-matched"
+      },
+      {
+        "run_id": "pilot_lambda_deterministic_v3_B2_s101_b0p05_w1",
+        "missing_observation": "cudnn_sdp_enabled",
+        "status": "historical provenance incomplete; not asserted as independently execution-matched"
+      },
+      {
+        "run_id": "pilot_lambda_deterministic_v3_B3_s101_b0p05_w1",
+        "missing_observation": "cudnn_sdp_enabled",
+        "status": "historical provenance incomplete; not asserted as independently execution-matched"
+      },
+      {
+        "run_id": "pilot_lambda_deterministic_v3_B4_s101_b0p05_w1",
+        "missing_observation": "cudnn_sdp_enabled",
+        "status": "historical provenance incomplete; not asserted as independently execution-matched"
+      },
+      {
+        "run_id": "pilot_lambda_deterministic_v3_B1_s101_b0p05_w5",
+        "missing_observation": "cudnn_sdp_enabled",
+        "status": "historical provenance incomplete; not asserted as independently execution-matched"
+      },
+      {
+        "run_id": "pilot_lambda_deterministic_v3_B2_s101_b0p05_w5",
+        "missing_observation": "cudnn_sdp_enabled",
+        "status": "historical provenance incomplete; not asserted as independently execution-matched"
+      },
+      {
+        "run_id": "pilot_lambda_deterministic_v3_B3_s101_b0p05_w5",
+        "missing_observation": "cudnn_sdp_enabled",
+        "status": "historical provenance incomplete; not asserted as independently execution-matched"
+      }
+    ],
+    "initial_backend_amendment": {
+      "reason": "Standalone initial now explicitly enables fourth cuDNN SDP backend to match training auto; all complete-corpus NLL/KL/sumNLL/token metrics identical; LR ranking and training unchanged",
+      "previous_baseline_path": "/tmp/grad-research-20261106/worktree/results/pilots/lr_deterministic_v3/initial.json",
+      "previous_baseline_sha256": "a6aa27b20bbc417f33c946d781557fb6d2f13e3842410ba08027300deed625c2",
+      "comparison": {
+        "target": {
+          "nll": {
+            "old": 2.4206741857557708,
+            "new": 2.4206741857557708,
+            "equal": true
+          },
+          "kl": {
+            "old": 0.0,
+            "new": 0.0,
+            "equal": true
+          },
+          "valid_prediction_tokens": {
+            "old": 523264,
+            "new": 523264,
+            "equal": true
+          },
+          "sum_nll": {
+            "old": 1266651.6571353076,
+            "new": 1266651.6571353076,
+            "equal": true
+          }
+        },
+        "c4": {
+          "nll": {
+            "old": 3.068727817590529,
+            "new": 3.068727817590529,
+            "equal": true
+          },
+          "kl": {
+            "old": 0.0,
+            "new": 0.0,
+            "equal": true
+          },
+          "valid_prediction_tokens": {
+            "old": 523264,
+            "new": 523264,
+            "equal": true
+          },
+          "sum_nll": {
+            "old": 1605754.7927436905,
+            "new": 1605754.7927436905,
+            "equal": true
+          }
+        },
+        "wikitext": {
+          "nll": {
+            "old": 3.1299843643461203,
+            "new": 3.1299843643461203,
+            "equal": true
+          },
+          "kl": {
+            "old": 0.0,
+            "new": 0.0,
+            "equal": true
+          },
+          "valid_prediction_tokens": {
+            "old": 235571,
+            "new": 235571,
+            "equal": true
+          },
+          "sum_nll": {
+            "old": 737333.5466933799,
+            "new": 737333.5466933799,
+            "equal": true
+          }
+        }
+      },
+      "amended_at_utc": "2026-11-06T04:41:37.043550+00:00"
+    }
+  },
+  "supplement_A": {
+    "seeds": [
+      11,
+      22,
+      33
+    ],
+    "target_prediction_tokens": 10000000,
+    "replay_prediction_tokens": 500000,
+    "aggregate": "per-method unweighted mean of three seed scores",
+    "endpoint": "final only; no best or heldout selection"
+  },
+  "score": "-G_target + .5*(F_C4+F_Wiki); lower is better",
+  "selected_strategy_pairs_not_fixed_lambda": true,
+  "source_selection": {
+    "path": "/tmp/grad-research-20261106/worktree/results/supplement_A_validation/validation_lambda_selection.json",
+    "sha256": "9548085fc18278f69fad584b67485bceb5193a18b10c78f516f6b09b4fa4e477"
+  },
+  "primary_protocol": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/formal_deterministic_protocol.json",
+    "sha256": "6c77bef7a437c05c18a6a7d6633d3e2cb04c35034355253d00d58ea5e9ce2954"
+  },
+  "primary_pilot": {
+    "path": "/tmp/grad-research-20261106/worktree/results/pilot_lambda_selection_deterministic_v3.json",
+    "sha256": "328dfda238700df8df3d58d1da95046e8b7d19a01173ebdae7aca531315bccda"
+  },
+  "source_endpoint_csv": {
+    "path": "/tmp/grad-research-20261106/worktree/results/supplement_A_validation/validation_endpoints.csv",
+    "sha256": "4e6c39b7db8ed5ad14e4dc8e78eae3110b5c006fdcf90756ad31c8f1a78d2e94"
+  },
+  "summary_proofs": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B4_s11_b0p05_w0p01_summary.json",
+      "sha256": "163f94ebc84f42407eab8399d8cab74e4cc3f557527d3542e2dd2257ba666ff9"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B4_s22_b0p05_w0p01_summary.json",
+      "sha256": "5b14319fc6c96c573dacb678723c326d3df7c10583d4bebbc401d1b2ad5a39c5"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B4_s33_b0p05_w0p01_summary.json",
+      "sha256": "496dbefdcc972fec6c879a426fd4ae3fc0bf4a192108a0c4384411bc6fa4b303"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s11_b0p05_w0p05_summary.json",
+      "sha256": "600892fa82d0a73b92e31c7f032792e20a22add11ef08722306527c8e4034bdf"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s22_b0p05_w0p05_summary.json",
+      "sha256": "32a28e2daf25f05a28a468f81a590b27d00edf6ea6490b1716cb43c7ddffded3"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s33_b0p05_w0p05_summary.json",
+      "sha256": "ca32af13fb9ac7960fa07fdc135442d2f514d53de142af50f27207c840f1a73d"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B4_s11_b0p05_w0p1_summary.json",
+      "sha256": "5c417d2de23a77faac9e8524f4a5b1c6961a95fcaadbeb3ec4240b0ed82b8bb8"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B4_s22_b0p05_w0p1_summary.json",
+      "sha256": "dc187bb2b901847be0f78a7122b3e0324ef3693f8e39c799d3f3d9b0786d0d7a"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B4_s33_b0p05_w0p1_summary.json",
+      "sha256": "459c7ebeb4bb291583a111b2511721c1e4b95964141d43422e0f3ca953f1534e"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B4_s11_b0p05_w0p5_summary.json",
+      "sha256": "d83abfec2626a56e80d52e9234e604843a4f7cc293e07f04b63876b8f8895d4d"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B4_s22_b0p05_w0p5_summary.json",
+      "sha256": "bc5cd77947605237e717ea816b457f084ed3cc07c0ce0042a91c85b4909411d0"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B4_s33_b0p05_w0p5_summary.json",
+      "sha256": "8227fdf94733d49defcb9ede54d6f276a7a4fb62e0e939292164ac44ddcb908f"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B4_s11_b0p05_w1_summary.json",
+      "sha256": "ec887a0052314a6ad00e1f00f28081b88b250048f7346a6d033291a997032a50"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B4_s22_b0p05_w1_summary.json",
+      "sha256": "3e14d4644014f12e459b1acb08de9648f0f5045e8f92fcb14fc6d5a7847463f8"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B4_s33_b0p05_w1_summary.json",
+      "sha256": "c0b62803816a5434b5a91b989e8dd9317d341879fb822fd8ceb46bc89fc4acbb"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B4_s11_b0p05_w5_summary.json",
+      "sha256": "51cb9f7fa9e584ba479058931e4fde244ac7ee1d49b77b1b552906b409fb0ede"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B4_s22_b0p05_w5_summary.json",
+      "sha256": "dfc5763ed76911b4e32d5fac9c2a2208d81ba778d35ee84bee94064bda805000"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B4_s33_b0p05_w5_summary.json",
+      "sha256": "c9f91d7b3f6d6f469d16f1e22e3e5d99a3b4474b49a7e9c0751136cddeb878c0"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B4_s11_b0p05_w10_summary.json",
+      "sha256": "e94fa140413d269d6825b98cd1ebfc3b7477075912ddf2a23995eabc2d697a50"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B4_s22_b0p05_w10_summary.json",
+      "sha256": "2893660fb6d4509ef5cc62b1edfb4ce7d64dde6a3f6caa34ce53ff9d5e2eae6d"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B4_s33_b0p05_w10_summary.json",
+      "sha256": "30b39f61df08740e63a578f20951ab9e55572f274ab366a701de1e5c7a475744"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_M_s11_b0p05_w0p01_summary.json",
+      "sha256": "a33e56ef4e7b3ebf5fc4abfb36235fc228879c9493d8b742a3d7e3939b1cf0c8"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_M_s22_b0p05_w0p01_summary.json",
+      "sha256": "20efcfabb23be467fdb49c8226d103f9246cbb6bc47dc02c69d00bfa28cbf11d"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_M_s33_b0p05_w0p01_summary.json",
+      "sha256": "f33ee480ae43e7824c1562d969f71a085b6b60a1542efa45282f13a36c968334"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_M_s11_b0p05_w0p05_summary.json",
+      "sha256": "77f0c0efb87a377bf9c0309568c9eacf9d90e9e0b8804ce9ee02ab8b11e3a2b7"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_M_s22_b0p05_w0p05_summary.json",
+      "sha256": "b9df2e23953c7d200cbe12befdb1ae37c3538a4251a83049bc24567b1b30437a"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_M_s33_b0p05_w0p05_summary.json",
+      "sha256": "e83b3dec2f99a7528e0c2ac4dc6b95476236e24337f1c4cc651caf000fdd4b45"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_M_s11_b0p05_w0p1_summary.json",
+      "sha256": "7dcb4cca4b9895ca7cf39992de1a55af304791e72027511401bed593a80cacf2"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_M_s22_b0p05_w0p1_summary.json",
+      "sha256": "a08c33a37f9b9ae9028d9dfe1a90a407d217f84080381740a23f6b440140965c"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_M_s33_b0p05_w0p1_summary.json",
+      "sha256": "1b2e86f6e7bdfe90ca36385f5708428d777773afe55e42c8ce1b005ca0766e60"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_M_s11_b0p05_w0p5_summary.json",
+      "sha256": "fc406f1baeb993bc787de6118c3eb4153da6653c9643feed5367eb010c196ef9"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_M_s22_b0p05_w0p5_summary.json",
+      "sha256": "8ac4ad8046260b26fce3418a32ff7c650b24bc58c227e796acedfd48a8bb522e"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_M_s33_b0p05_w0p5_summary.json",
+      "sha256": "f29bcc4a4f8dc2d76963621cb2bbfc36226a41529d8a780db236925a3cc886df"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_M_s11_b0p05_w1_summary.json",
+      "sha256": "646454abd06e055e06151e330a3e18849de508ebed60c6f8a602b0605cd93689"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_M_s22_b0p05_w1_summary.json",
+      "sha256": "74d360508caed1fdebbcb748728e34312d3596833e7839b26344bbee7baa1977"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_M_s33_b0p05_w1_summary.json",
+      "sha256": "c6d966b3ca4992d6b72072c1cc54e200d9914d02cd4cbb08799ff11803fea14e"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_M_s11_b0p05_w5_summary.json",
+      "sha256": "0dacff99b60c22982db03fa240b155cb44f3b1c535e7449ca96fa6207d41581e"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_M_s22_b0p05_w5_summary.json",
+      "sha256": "493f23e7ec5072d7be9073b8b6ef4edd3eb0281a7eaecc760fcf7b6a86b0ce79"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_M_s33_b0p05_w5_summary.json",
+      "sha256": "3e99f24c34153a9a4d174087a709b843e3b2cc3888519c0464148667516f78ff"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_M_s11_b0p05_w10_summary.json",
+      "sha256": "b28059c5bd82a84327cc475094d5db8e00309c7f232d84b21aa4855f8dc42a56"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_M_s22_b0p05_w10_summary.json",
+      "sha256": "dbd730ed426201a2249362ee67575ad4dd138bf51bdd80185d912ae33da3704d"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_M_s33_b0p05_w10_summary.json",
+      "sha256": "60d52e401c6605970ddd3b4c1e3bafb8deed5b6555d8132b42f502ac17fff82a"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B1_s11_b0p05_w0p01_summary.json",
+      "sha256": "a70973a959397cb66c1b2214bba1616a9e204b9ca4f0c8baf12f826ba41999e0"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B1_s22_b0p05_w0p01_summary.json",
+      "sha256": "10f4a3dd98d40ec2f344d1333073cd8dfddd5996b6b5c7286eb5a958db8e78ed"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B1_s33_b0p05_w0p01_summary.json",
+      "sha256": "cf5b8adc7bf048243b43cef173ef44d45be4abe807a2680e97f322801cab4ef5"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B1_s11_b0p05_w0p05_summary.json",
+      "sha256": "3d35727fd969443e6b2f027b3ecaa7df5e20b1f8e32728ea9cc6d3831b3e723a"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B1_s22_b0p05_w0p05_summary.json",
+      "sha256": "2020f52f58c2c7e2ceae3d53948272981bb1dd18994b13db48a7e918557f0c65"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B1_s33_b0p05_w0p05_summary.json",
+      "sha256": "e6935bc8a1dd6019a4b19a6627e12b110368e8e0cd06c164f1feb85eb9dfcff5"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B1_s11_b0p05_w0p1_summary.json",
+      "sha256": "742a3ab5f77eef90233ce6e9b15443543eb2d1c5354afe4de6b799b1c18b5d52"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B1_s22_b0p05_w0p1_summary.json",
+      "sha256": "ce19b5d54d65c11e374e89af5c68544af715296763548022e9f3cbeac556c63c"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B1_s33_b0p05_w0p1_summary.json",
+      "sha256": "5df52872748c67ce421ed662009e8e4d8df54fb30f0332d7ae9f81909db96a97"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B1_s11_b0p05_w0p5_summary.json",
+      "sha256": "451d0a48a6990f374ed82ba671e0827cdeb183cabbae4841570cbb610e05406c"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B1_s22_b0p05_w0p5_summary.json",
+      "sha256": "742b8a6522050c40c6fcc1ae9c166ab7d0694a361dcd9cea494e90c441ceb637"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B1_s33_b0p05_w0p5_summary.json",
+      "sha256": "85b0f8aff572ca48598c1b7dbaad898d4d47af3f16babd7fd35b6317524cf6bd"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B1_s11_b0p05_w1_summary.json",
+      "sha256": "92493da70d0d05e1079a434552105df4c9672f9259f7702157a7549fe426ef41"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B1_s22_b0p05_w1_summary.json",
+      "sha256": "8a4cfc580f5768d4673663e9367308bed285bb8c72418e491e035b6da5a05a69"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B1_s33_b0p05_w1_summary.json",
+      "sha256": "cd04919b72475c22710fe70104027c0448f858134c41e5f2ee851b79e45ae2a4"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B1_s11_b0p05_w5_summary.json",
+      "sha256": "75d152f10c81290b8e749a1e74e4d76b216e915d85bcfa2e9d30ac9ba93a48bc"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B1_s22_b0p05_w5_summary.json",
+      "sha256": "89759d11d57161cedd1bcb8df3facae0dafd21e2c236936bbde6ad3669acef4f"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B1_s33_b0p05_w5_summary.json",
+      "sha256": "a851469be75e2d8fa8f982fe013cd661f823add1a80a118ebeb315aeb03f117e"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B1_s11_b0p05_w10_summary.json",
+      "sha256": "9f1c0ff63553130886ae85118fbad8012fe8b24e2bd4673e03617c8b1a07bd2a"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B1_s22_b0p05_w10_summary.json",
+      "sha256": "2bd31fcc95341148786d9184c3342361db7e3f19e924e34b7b5446ed2dd8265f"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B1_s33_b0p05_w10_summary.json",
+      "sha256": "77f8b8b20dea7c8ab62a4c272554326cfdd85c30fe88dbd559820c09bdf676de"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B2_s11_b0p05_w0p01_summary.json",
+      "sha256": "153147683829ecc4863581bbfc9d76fe35a31231e4c907ef78f5b149355ad54f"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B2_s22_b0p05_w0p01_summary.json",
+      "sha256": "4d76292b8ef561affe27b34a0691db8253b138c7d9b3bbc62b7f8b54a545028c"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B2_s33_b0p05_w0p01_summary.json",
+      "sha256": "c62a6c2ecc0ee79c4697f408e275af81da5dae7742e12fdc959e9ba35a6d9413"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B2_s11_b0p05_w0p05_summary.json",
+      "sha256": "5b09a71cb3b4e755b6acbeb4d548a7ae7fa7bb6aff04bfd807eed562ff532316"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B2_s22_b0p05_w0p05_summary.json",
+      "sha256": "5d9b1bfa3e850ade6fd64e8cf23045a99b11829bf138821c2f5d70046d9cc1cb"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B2_s33_b0p05_w0p05_summary.json",
+      "sha256": "413fafb578497283b520e389186b6dee2c2019c82d210bb6ffb8bfec6fdef511"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B2_s11_b0p05_w0p1_summary.json",
+      "sha256": "64abcfe585e4787de39cb227a588706d466b4c857c0242f433542bb2fc1b2018"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B2_s22_b0p05_w0p1_summary.json",
+      "sha256": "6c17185e68ba217f63740339df5de3032ecc36be976f594ff47700b50b27b763"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B2_s33_b0p05_w0p1_summary.json",
+      "sha256": "66f9b3c1a08bddbdc20c91a450d1877f1d9563daa49b49cb0ee69acfef925587"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B2_s11_b0p05_w0p5_summary.json",
+      "sha256": "42e4b7f7257d66780ec7f2fc627a27083d09f9e72368a4825cfbe7f76a45cc0e"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B2_s22_b0p05_w0p5_summary.json",
+      "sha256": "524267bc18355947656cfa2ba844e2c2959e0ed307c5f6f0fe67709b0530ce07"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B2_s33_b0p05_w0p5_summary.json",
+      "sha256": "7ad7a44d1cb2398303389cc764b3b8d20118bdbc4fccdbd1d1bed1f933a42cab"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B2_s11_b0p05_w1_summary.json",
+      "sha256": "607197bcd7c8c1c2132e0981897f7233170a605369c619a47778ed37ca9d8947"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B2_s22_b0p05_w1_summary.json",
+      "sha256": "db05936b6ae2372550ab00459f43be080fe8362e114aceb77fc1625572c5159e"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B2_s33_b0p05_w1_summary.json",
+      "sha256": "a35c7ba2003f5f47a60a7b869ea78c52d8fb1436de91de160d06cee7f7561b0c"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B2_s11_b0p05_w5_summary.json",
+      "sha256": "bd594f51c541675d3d7891593945e13abb681a8d4a13a11603275e8038ed306f"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B2_s22_b0p05_w5_summary.json",
+      "sha256": "4c81ff2aac968d3051a8ca32dc7c16e5961b68d3ecf8db0519ee672e6d685717"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B2_s33_b0p05_w5_summary.json",
+      "sha256": "4fd2b0f417ee81679599c07836ffc070246a27d48058cf5e6fb712c6ef2f7833"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B2_s11_b0p05_w10_summary.json",
+      "sha256": "0a50a7d63786f5bd976ac9f301d289172a0dd4f615a7079cad3c0e45eacd0406"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B2_s22_b0p05_w10_summary.json",
+      "sha256": "ac86930ff21578038ecb5d67c80776b6b0cd9290c94355e684acd6ec63466afd"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B2_s33_b0p05_w10_summary.json",
+      "sha256": "6d45efba94d81d1a57aa35ed7a96111ce9424e743be85b654ad818bc56c61bd5"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B3_s11_b0p05_w0p01_summary.json",
+      "sha256": "133e1e5c91594b66d51341148eb2ea64a71d80eb588fbd37c4fd617ad9f3d67e"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B3_s22_b0p05_w0p01_summary.json",
+      "sha256": "77bb745d6a66b1072207f6cd2d1c4ea08abe9a974fd051ea00d467d3fb20b062"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B3_s33_b0p05_w0p01_summary.json",
+      "sha256": "18b493aa5e757d90217bd98dd4cde533137ff94b22d47c9aef5ec4159ec970f0"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B3_s11_b0p05_w0p05_summary.json",
+      "sha256": "9e475441150fe471c9928003474bf9828054c998386b5d6950315dcf2afe2ba6"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B3_s22_b0p05_w0p05_summary.json",
+      "sha256": "a29aec968d3c89bc3dd2e62c00ed4fcae5ae4b0cd2a3f6eee4960bbc4b3447d4"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B3_s33_b0p05_w0p05_summary.json",
+      "sha256": "cd376fbf0907c7ee62fc1c36880c74196f6f73f9f472a931f599eb724fbd6879"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B3_s11_b0p05_w0p1_summary.json",
+      "sha256": "79fd1e050089ac1633b3d52aca0dbb2276b569c40d92d83757e1d4a74b82d54d"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B3_s22_b0p05_w0p1_summary.json",
+      "sha256": "c25d2ab208da5b549484effbdcb75a1cec9c62af7c4a50c87d2c3864c670e022"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B3_s33_b0p05_w0p1_summary.json",
+      "sha256": "005c5bd29865e7cfdb8aa3ae122624a624ee74758b4ac7385c3ffe7ccf802bf0"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B3_s11_b0p05_w0p5_summary.json",
+      "sha256": "0137b4da13bf387e19c5d4a423d6b64045fc9eb40552bdde5d5027f28f2e2ea7"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B3_s22_b0p05_w0p5_summary.json",
+      "sha256": "70011e567c1b1c4ec08f422d758ea576ea77f138d20c727c64e83b94eac155e7"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B3_s33_b0p05_w0p5_summary.json",
+      "sha256": "318ec780fcc1d4a1aca0558a37fbe96796751a443c26a6723e7900313c1a1824"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B3_s11_b0p05_w1_summary.json",
+      "sha256": "6046f936a378504671d2dc4e2fbdaf7c2187c8165d93f1740c70ef2988351ac9"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B3_s22_b0p05_w1_summary.json",
+      "sha256": "6de9e942117e3bfd73c4375f4d6867833c447a5781dc7e6827e3e8fef5a02cb2"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B3_s33_b0p05_w1_summary.json",
+      "sha256": "a6116707858e19563c653bb6a0fa33dd72610f85e8f1d0a1d415687c18a36807"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B3_s11_b0p05_w5_summary.json",
+      "sha256": "a5d053287f30f8a9957fe43e08647bf9ca37c8d8133ca9380a529b897f7a2192"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B3_s22_b0p05_w5_summary.json",
+      "sha256": "0d2bbfbabfb1757e96ea25727f83363821d0bf16b5dda2a4e0e87f8dca7e6da6"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B3_s33_b0p05_w5_summary.json",
+      "sha256": "f77489fa13c2a8b175abc9b561d06e76d2e3a2125068301e891f7e5b6b20689d"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B3_s11_b0p05_w10_summary.json",
+      "sha256": "955f562c530c93bbfc3dd153e799cf2112a6f12d5becd314b2d5c8adee2f006d"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B3_s22_b0p05_w10_summary.json",
+      "sha256": "bd62d9a20c3b93d2fdb6da41ab327e0488162f081fa4dff6176be0b249e447b7"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_B3_s33_b0p05_w10_summary.json",
+      "sha256": "35a176cf0b658237f6da26d0cdac4429b63789e91fe09062f151ebb6479fd8da"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_C_s11_b0p05_w0p01_summary.json",
+      "sha256": "cd77da2c2d9804dd0804076555ec8762e6fdadb30e605e75b165e70e746fbc66"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_C_s22_b0p05_w0p01_summary.json",
+      "sha256": "4285641bbb0169ce5b7fc9660be37ed54b710df764f85af525be90c7ac864602"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_C_s33_b0p05_w0p01_summary.json",
+      "sha256": "b966d7d06d55b7c268aff9518e76ae9047cf55fbdff378f08214dc37e85f73e4"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_C_s11_b0p05_w0p05_summary.json",
+      "sha256": "b096bfcce5d17554256f6e5c4903a5c75163221b42e66b5195fd89dfa873db17"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_C_s22_b0p05_w0p05_summary.json",
+      "sha256": "f5f70874594ba49a722388dfb8e6496d6d0cad8d88a66b5107a813e13efbe512"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_C_s33_b0p05_w0p05_summary.json",
+      "sha256": "50a7c058e5b8f33f6f30d78cf444fc58afd5e257b9d6c9cf03929753c33af222"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_C_s11_b0p05_w0p1_summary.json",
+      "sha256": "43077fd56c4386de205ce71e5afa3351e499b4752a824e7862a0e423ca65a04d"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_C_s22_b0p05_w0p1_summary.json",
+      "sha256": "606f0041a7d8f7dda76bf6521c2630687548a54cd4b69f6e5a3e70d1f9a5a180"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_C_s33_b0p05_w0p1_summary.json",
+      "sha256": "5e7e97db4333de7258246d62635bd4b890c318c9b6b0261e7e2dd7bb2f99a6f5"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_C_s11_b0p05_w0p5_summary.json",
+      "sha256": "52d0f4d7eb870c04623b764947037f33833ca47a10043199fd00fee2893607b7"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_C_s22_b0p05_w0p5_summary.json",
+      "sha256": "f8ee7c68665d27f83d5e4223859f52a1ff6ffbf34f2495b00fe66843700c59b8"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_C_s33_b0p05_w0p5_summary.json",
+      "sha256": "4bdc7204aa3e8bbe37ec69d15a3a4f0c7db5bd8e11ecc49c46fb4ed739f7df21"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_C_s11_b0p05_w1_summary.json",
+      "sha256": "f8d90d08031bbbdc4f423ce8020ec2c9796ec8fb75529968f6f889e9eaeb30c9"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_C_s22_b0p05_w1_summary.json",
+      "sha256": "d518bd28d2c150b9d9549e5273dca5fe7393580f2e99c5d8cf5860a6cc8b5d68"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_C_s33_b0p05_w1_summary.json",
+      "sha256": "2893535b480c92440720f098bbca11889fc7fa1b90d4f7cf7f8fecba91fa4290"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_C_s11_b0p05_w5_summary.json",
+      "sha256": "aa0b010b90b8b615f8f7856cb7c712789cf077319512dca49e09e74913d5e63f"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_C_s22_b0p05_w5_summary.json",
+      "sha256": "40a61f54331b39844c29d15cbed0c5ab217fa992ece014204e74b32ac7d829ba"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_C_s33_b0p05_w5_summary.json",
+      "sha256": "15e7d78dee5b052bbe960838b56bf936d9a1fc60b05702c59bc0fa974d4a0256"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_C_s11_b0p05_w10_summary.json",
+      "sha256": "5900673621b1b1ceac13460a5d974632e971aedc3438b168b25b7faa8f0905b3"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_C_s22_b0p05_w10_summary.json",
+      "sha256": "a57d75d48d34e2ad01343573c2ef75b2a5a8da1f0abd4bab337db104c4d84d44"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/lambda_sweep_deterministic/lambda_sweep_deterministic_C_s33_b0p05_w10_summary.json",
+      "sha256": "4ede848c70e2de4ca4dcd6d5fc95e8b1bc1b74cc0c538b6481cb9534a7f2ad0d"
+    }
+  ],
+  "producer_source": {
+    "path": "/tmp/grad-research-20261106/worktree/scripts/audit_supplement_A_validation.py",
+    "sha256": "f1cf58f7a02d3c19cfd9bebbbf793480ffc765c976bd13a5748c086258aa349c"
+  },
+  "test_or_behavior_scores_read": false,
+  "scientific_parameters_modified": false,
+  "supplement_C_frozen_lambda_unchanged": 0.05,
+  "outputs": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/supplement_A_validation_review/all126_recomputed_validation.csv",
+      "sha256": "a714dd7abe473b284d8fb9184e1eabbc33ff025bdefb59b84af8043ed6f30b1d"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/supplement_A_validation_review/all42_lambda_validation_scores_7in.pdf",
+      "sha256": "463c839488612efbd361090d2d127a742194fcaca572a47979ccd1cabe785e3a"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/supplement_A_validation_review/all42_lambda_validation_scores_7in.png",
+      "sha256": "4363f3837536ccfaf11117970fb7f21c3d94f86fdec5779f179506a04486d36f"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/supplement_A_validation_review/all42_lambda_validation_scores_7in.svg",
+      "sha256": "65813ba2d338f25631f7a159ba1cce6cbb94c6b340ad734959df3935831f8c13"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/supplement_A_validation_review/all42_recomputed_scores.csv",
+      "sha256": "4c9ff67878663af5dd51c5b658ee94d1d852aa4f63f3e1470835a14137044d19"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/supplement_A_validation_review/selected_policy_paired_validation.csv",
+      "sha256": "2f6b14636a4cca2bc6f89628a65e10177e41b979bfa08312d0aa1189ce1147a0"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/supplement_A_validation_review/selected_vs_common_lambda_validation.csv",
+      "sha256": "f6582ed9ec24a0f54db1ab763fb7b3ac64aaa960d3334960a567aecac34c26e0"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_behavior_presentation_actual_v1/whole_parent_timing.json",
+    "sha256": "8d550c2ba364991f2642f384297396455aede857193a2ce43ca2f3e7f598eaac",
+    "bytes": 1035
+  },
+  "original_wall_pointer": "/whole_process_wall_seconds",
+  "wall_seconds": 3.7142454609274864,
+  "CPU_component_pointers": [
+    "/child_user_seconds",
+    "/child_system_seconds"
+  ],
+  "CPU_components": {
+    "child_user_seconds": 3.9253269999999993,
+    "child_system_seconds": 1.4801139999999995
+  },
+  "recorded_inclusive_CPU_seconds": 5.405440999999999,
+  "original_returncode": 0,
+  "scope": "Complete Popen spawn through exit including Python startup and helper parent+child. Adjacent helper timer nested, not additive. Manual/setup whole unknown.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall; sum only the named user/system components. Failure rc retained. No calendar-derived elapsed.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

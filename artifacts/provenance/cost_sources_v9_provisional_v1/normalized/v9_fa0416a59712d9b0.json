@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C2p8B_final_publication_metadata_review_actual_v1/whole_child_timing.json",
+    "sha256": "54e38d0efc0454cae8f49576e54d910ccbf9c6639e20ee33b41243db3bdc40e8",
+    "bytes": 492
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 0.11154738813638687,
+  "CPU_component_pointers": [
+    "/child_user_seconds",
+    "/child_system_seconds"
+  ],
+  "CPU_components": {
+    "child_user_seconds": 0.06877699999999999,
+    "child_system_seconds": 0.020926
+  },
+  "recorded_inclusive_CPU_seconds": 0.08970299999999999,
+  "original_returncode": 0,
+  "scope": "Full approved metadata-checker child spawn through exit; no original exporter/draft/assembly timing included; manual setup/read unknown",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall; sum only the named user/system components. Failure rc retained. No calendar-derived elapsed.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

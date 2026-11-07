@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "status": "passed_numeric_and_scope_review_with_two_optional_wording_clarifications",
+  "created_at_utc": "2026-11-06T23:26:37.846284+00:00",
+  "report_commit": "5e72749",
+  "snapshot": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/report_behavior_sections_independent_review_v1/研究报告_5e72749.md",
+    "sha256": "0041826badb90e248643fce8c146fb09c190547ec6096b254e336dd7bc8a62b9",
+    "bytes": 60478
+  },
+  "scope": "Only sections5.5 and6.1.1 plus necessary already-authorized definitions/source findings; live report untouched",
+  "machine_audit": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/report_behavior_sections_independent_review_v1/machine_audit.json",
+    "sha256": "a85da971a07702fd523b26a5a37bab15abc184a31408771484bc6153fa77534a",
+    "bytes": 102851
+  },
+  "machine_checks": 168,
+  "machine_failures": 0,
+  "mean_SD_display_pairs_checked": 112,
+  "all_A_paired_values_use": "selected_policy_score_resolved_statistics.csv with explicit score + quantity columns",
+  "accepted_source_proofs": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/primary_behavior_ROOT_visual_v1/ROOT_acceptance.json",
+      "sha256": "08c16f1628137278ce08abd7ba71e1b3f48feba9f3aa12acba7f8ed8f4e34772",
+      "bytes": 13831
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/A_behavior_independent_review_actual_v1/ROOT_acceptance.json",
+      "sha256": "7d717008c7b4ec57192278ba6060889204fb81625eadb2d8dad470eb3f202e2d",
+      "bytes": 15572
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/primary_behavior_findings_v2/COMPLETE.json",
+      "sha256": "0eacff5d4a9064eecba954770a6eb8d2958bfaacdca8c90299debefc30dc319b",
+      "bytes": 2659
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/primary_behavior_findings_v2/讨论.md",
+      "sha256": "ff791c5a47ed8fe303abaeb97da616599f5cd9bef640b444e2bf7dadfd27c0cc",
+      "bytes": 5207
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/supplement_A_behavior_findings_v1/COMPLETE.json",
+      "sha256": "76ecb8cddc017f9230145d2497c32a6c49912177a8e8a36bd8254928eaad6221",
+      "bytes": 4444
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/supplement_A_behavior_findings_v1/讨论.md",
+      "sha256": "6e49f45bd230f7957907ff8749fd42ff1fb65a56c41ccd142e6884c64b509fa7",
+      "bytes": 6083
+    }
+  ],
+  "whole_targeted_audit_child": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/report_behavior_sections_independent_review_v1/whole_child_timing.json",
+    "sha256": "e7c8a0350a51da0151d449dede1c2807fdfc57bb02ef9058ed3d1ff6e0d08ed9",
+    "bytes": 542
+  },
+  "source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/report_behavior_sections_independent_review_v1/audit_display.py",
+    "sha256": "0cbad07ca96e525c53df5b5929a50391fc698777743f20dbb677c247ee8100d6",
+    "bytes": 10389
+  },
+  "suggestions": [
+    {
+      "line": 241,
+      "severity": "optional_clarification_not_numeric_error",
+      "text": "逻辑namespace的有限bootstrap区间略异",
+      "suggestion": "D与B4各自相对initial的端点bootstrap区间可略异",
+      "reason": "当前上下文是D−B4配对图；同预测的D−B4逐题差为0，其配对bootstrap不应被读成非零。原句实际意在说明端点相对initial的不同RNG namespace。"
+    },
+    {
+      "line": 304,
+      "severity": "optional_clarification_not_numeric_error",
+      "text": "M−B4是本批唯一同λ=5的方法配对",
+      "suggestion": "六个预定策略对照中，M−B4是唯一同λ配对（λ=5）",
+      "reason": "明确限制为事先冻结六对，不暗示已穷举方法间所有可能同λ比较；B2/C也各选λ1，但C−B2并非本批预定对照。"
+    }
+  ],
+  "new_statistics_CIs_or_models": false,
+  "real_other_phase_scores_read": false,
+  "raw_choice_predictions_read": false,
+  "CP_base_archive_payload_bytes_read": 0,
+  "live_report_modified": false,
+  "tests_run": false,
+  "manual_reading_authoring_whole_seconds": null,
+  "interpretation_passes": [
+    "pp differences versus percent accuracies separated",
+    "three pipeline-seed sampleSD not question CI or independent rerun-of-selection variability",
+    "all72 primary endpoints and all18 A endpoints retained; aliases/reusedB1 do not add training replicates",
+    "PiQA all endpoint-vs-initial intervals include0; HellaSwag final/all, A exceptions and paired directions accurate",
+    "best exposure exceptions correct; mathematical best not behavior-selected or equal-budget",
+    "conditionalCW examples accurate; netgain does not assert all old correctitems preserved",
+    "task/context dependence, individual unadjusted95percent intervals and validation-selected same3seed boundary explicit"
+  ]
+}

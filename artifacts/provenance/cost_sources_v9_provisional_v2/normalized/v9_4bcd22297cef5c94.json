@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/bounded_completed_scratch_TAR_cache_hint_v1/whole_child_timing.json",
+    "sha256": "3e4358c6644c7939f4935974823a7440f1b1ccce33e7bf5fcf89d633920ad77d",
+    "bytes": 599
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 1.0591175816953182,
+  "CPU_component_pointers": [
+    "/user_cpu_seconds",
+    "/sys_cpu_seconds"
+  ],
+  "CPU_components": {
+    "user_cpu_seconds": 0.025522,
+    "sys_cpu_seconds": 0.999367
+  },
+  "recorded_inclusive_CPU_seconds": 1.024889,
+  "original_returncode": 0,
+  "scope": "Entire one specific completed scratch TAR cache-hint child; hint region is nested, not added",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall; sum only the named user/system components. Failure rc retained. No calendar-derived elapsed.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

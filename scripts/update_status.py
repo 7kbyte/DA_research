@@ -29,6 +29,12 @@ for path in sorted((ROOT/'logs').glob('*job_state.json')):
         lines.append(f"| {label} | {c['completed']} | {c['running']} | {c['pending']} | {c['failed']+c['blocked']} |")
     except (ValueError, KeyError):
         lines.append(f'| {path.stem} | 状态暂不可读 | | | |')
+successor_state = ROOT / 'artifacts/provenance/final_evaluation_handoff_actual_v1/successor/state.json'
+if successor_state.exists():
+    state = json.loads(successor_state.read_text())
+    c = collections.Counter(x['status'] for x in state['jobs'].values())
+    lines.append(f"| final_evaluation_successor（含299项继承） | {c['completed']} | {c['running']} | "
+                 f"{c['pending']} | {c['failed']+c['blocked']} |")
 phase_index = ROOT / 'configs/supplemental_v1_registry_index.json'
 master_state = ROOT / 'logs/supplemental_job_state.json'
 if phase_index.exists() and master_state.exists():
@@ -83,7 +89,25 @@ for contract_id, label in [
                      '整模型final/best结果已通过完整性门禁并完成分析。')
     else:
         lines.append(f'{label}尚无完整分析收据。')
-lines.append('各行为合同及尚无完整分析收据的阶段仍须分别满足完整性与授权条件；任务准备完成不代表分数已解封。')
+for contract_id, label in [
+    ('extended_pythia_410m_100m_behavior', 'C：410M行为评价'),
+    ('extended_pythia_1b_100m_behavior', 'C：1B行为评价'),
+    ('extended_pythia_2p8b_25m_behavior', 'C：2.8B行为评价'),
+]:
+    completed = []
+    for revision in ('v2', 'v3'):
+        path = ROOT / f'results/supplemental_analysis_{revision}' / contract_id / 'COMPLETE.json'
+        if path.exists():
+            value = json.loads(path.read_text())
+            if value.get('complete') is True:
+                completed.append(value)
+    if completed:
+        receipt = json.loads(Path(completed[-1]['first_read_receipt']['path']).read_text())
+        lines.append(f"{label}首次允许语义读取时间：{receipt['semantic_access_enabled_at_utc']}；"
+                     '完整final行为端点已通过完整性门禁并完成分析。')
+    else:
+        lines.append(f'{label}尚无完整分析收据。')
+lines.append('各阶段分数仅在完整闭包与对应授权后解封；任务准备完成不代表分数已解封，报告结论以研究报告为准。')
 lines += ['', '## 当前数据与选参记录', '']
 for rel in ['artifacts/data/VERSION', 'artifacts/evaluation_v3/VERSION']:
     path = ROOT/rel

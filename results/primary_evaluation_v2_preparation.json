@@ -1,0 +1,148 @@
+{
+  "nll": {
+    "queue": "/tmp/grad-research-20261106/worktree/configs/primary_evaluation_v2_nll_queue.json",
+    "queue_sha256": "99502d9b4e9bb362386418a323d59f028971e4be6518360da7beb4388f490183",
+    "manifest": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_nll_manifest.json",
+    "manifest_sha256": "b22b71a9273de416bebb7e69080c20e9fd01ce7a05b0b327fb5aa5aa52ec3a33",
+    "workload": {
+      "logical_runs": 36,
+      "physical_training_runs": 36,
+      "logical_checkpoint_endpoints": 72,
+      "adapted_inference_jobs": 66,
+      "initial_baselines": 1,
+      "reused_initial_baselines": 0,
+      "reuse_materialization_jobs": 0,
+      "total_inference_jobs": 67,
+      "total_queue_jobs": 67,
+      "avoided_duplicate_inferences": 6,
+      "by_baseline_group": {
+        "a851b7918d7ca8cb6cc1952c514c3b61b05822e38d68754a9dae262f1eef3666": {
+          "model_tag": "pythia-410m",
+          "policy": {
+            "model": "/tmp/grad-research-20261106/models/pythia-410m-final",
+            "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+            "batch_size": 16,
+            "max_length": 512,
+            "precision": "bf16",
+            "attention_backend": "auto",
+            "attention_implementation": "sdpa",
+            "deterministic_algorithms": true,
+            "deterministic_warn_only": false,
+            "allow_tf32_matmul": true,
+            "allow_tf32_cudnn": true,
+            "cudnn_deterministic": true,
+            "cudnn_benchmark": false,
+            "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+            "flash_sdp_enabled": true,
+            "mem_efficient_sdp_enabled": true,
+            "math_sdp_enabled": true,
+            "cudnn_sdp_enabled": true,
+            "device_type": "cuda",
+            "device": "cuda:0",
+            "model_weight_dtype": "torch.float32",
+            "effective_precision": "cuda_bfloat16_autocast"
+          },
+          "adapted_inferences": 66,
+          "initial_inferences": 1,
+          "per_inference": {
+            "corpora": {
+              "target": {
+                "prediction_tokens": 523264,
+                "raw_input_tokens": 524288,
+                "chunks": 1024
+              },
+              "c4": {
+                "prediction_tokens": 523264,
+                "raw_input_tokens": 524288,
+                "chunks": 1024
+              },
+              "wikitext": {
+                "prediction_tokens": 270319,
+                "raw_input_tokens": 270848,
+                "chunks": 529
+              }
+            },
+            "teacher_kl": true,
+            "forward_multiplier": {
+              "initial": 1,
+              "adapted": 2
+            },
+            "note": "Teacher forward is nested in evaluation wall time; never add it again"
+          }
+        }
+      },
+      "scheduler_allowance_seconds": 12060,
+      "scheduler_allowance_per_job_seconds": 180,
+      "cost_formula": "sum_g(initial_count_g * measured_initial_seconds_g + adapted_count_g * measured_adapted_seconds_g); add separately measured CPU verification/materialization wall time",
+      "estimate_available": false,
+      "allowance_is_measured_cost_estimate": false,
+      "wall_seconds_are_not_gpu_seconds": true
+    }
+  },
+  "behavior": {
+    "queue": "/tmp/grad-research-20261106/worktree/configs/primary_evaluation_v2_behavior_queue.json",
+    "queue_sha256": "ff9606a9175ab7df2d09a0d8bee5a30bf1c1760bb02b83cde815696d6ebbdc06",
+    "manifest": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+    "manifest_sha256": "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+    "workload": {
+      "logical_runs": 36,
+      "physical_training_runs": 36,
+      "logical_checkpoint_endpoints": 72,
+      "adapted_inference_jobs": 66,
+      "initial_baselines": 1,
+      "reused_initial_baselines": 0,
+      "reuse_materialization_jobs": 0,
+      "total_inference_jobs": 67,
+      "total_queue_jobs": 67,
+      "avoided_duplicate_inferences": 6,
+      "by_baseline_group": {
+        "41a3156878bf36d607b48e21c055dce6784b367497e2a081dfdf41dbead2edc0": {
+          "model_tag": "pythia-410m",
+          "policy": {
+            "model": "/tmp/grad-research-20261106/models/pythia-410m-final",
+            "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+            "batch_size": 16,
+            "max_length": 2048,
+            "precision": "bf16",
+            "attention_backend": "auto",
+            "attention_implementation": "sdpa",
+            "deterministic_algorithms": true,
+            "deterministic_warn_only": false,
+            "allow_tf32_matmul": true,
+            "allow_tf32_cudnn": true,
+            "cudnn_deterministic": true,
+            "cudnn_benchmark": false,
+            "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+            "flash_sdp_enabled": true,
+            "mem_efficient_sdp_enabled": true,
+            "math_sdp_enabled": true,
+            "cudnn_sdp_enabled": true,
+            "device_type": "cuda",
+            "device": "cuda:0",
+            "model_weight_dtype": "torch.float32",
+            "effective_precision": "cuda_bfloat16_autocast"
+          },
+          "adapted_inferences": 66,
+          "initial_inferences": 1,
+          "per_inference": {
+            "questions": 11880,
+            "choices": 43844,
+            "tokenizer_forward_work": "context+continuation tokens depend on model tokenizer; no inference estimate invented"
+          }
+        }
+      },
+      "scheduler_allowance_seconds": 20100,
+      "scheduler_allowance_per_job_seconds": 300,
+      "cost_formula": "sum_g(initial_count_g * measured_initial_seconds_g + adapted_count_g * measured_adapted_seconds_g); add separately measured CPU verification/materialization wall time",
+      "estimate_available": false,
+      "allowance_is_measured_cost_estimate": false,
+      "wall_seconds_are_not_gpu_seconds": true
+    }
+  },
+  "phase_spec": "/tmp/grad-research-20261106/worktree/configs/primary_evaluation_v2_phase_spec.json",
+  "phase_spec_sha256": "74796642c6b7a4ef8ac3ace05fb5e5fb4da0161f44ee5782d5e318318eec327e",
+  "CPU_only": true,
+  "scorer_started": false,
+  "model_weights_deserialized": false,
+  "scheduler_started": false
+}

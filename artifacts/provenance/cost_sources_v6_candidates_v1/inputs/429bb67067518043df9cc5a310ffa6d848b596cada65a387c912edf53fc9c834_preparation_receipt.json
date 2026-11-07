@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "status": "prepared_runbook_and_metadata_reviewer_not_actual_package_acceptance",
+  "utc": "2026-11-06T15:18:10.104290+00:00",
+  "sources": {
+    "review_metadata.py": "eb1b363933a390a90182a02c9d0b586feaee06bed211322fc5544c782ba311c4",
+    "docs/C410_final权重包持久发布runbook.md": "9cb8ab8473f201df3d3583ac2a2e9847360924dca3e5a676f8bae9086946491e"
+  },
+  "original_helpers_unchanged": {
+    "scripts/export_C_final_weights.py": {
+      "sha256": "bc057d04298b91a8189dae58fb6189c19b69faf70c9c83298d7854bf1cc38390",
+      "unchanged_expected_sha_matches": true
+    },
+    "scripts/publish_reserved_archive.py": {
+      "sha256": "9c194743383a16f98313f767fe2e722c309ec57c1aafc65d9b99d08e5407022e",
+      "unchanged_expected_sha_matches": true
+    },
+    "scripts/export_remaining_primary_endpoints.py": {
+      "sha256": "eb7339e4224062f3d55bd0adcba467599e06035ac84172f53d954b7302a1473d",
+      "unchanged_expected_sha_matches": true
+    },
+    "src/replay_study/weight_archive.py": {
+      "sha256": "3c2bcf9e38773ae4f69c27f85f342356dbefcb53d817be4321da6e9c4e550e1a",
+      "unchanged_expected_sha_matches": true
+    }
+  },
+  "compile_help": [
+    {
+      "argv": [
+        "/usr/bin/python",
+        "-m",
+        "py_compile",
+        "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_final_publication_runbook_v1/review_metadata.py"
+      ],
+      "returncode": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python",
+        "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_final_publication_runbook_v1/review_metadata.py",
+        "--help"
+      ],
+      "returncode": 0,
+      "log_sha256": "34c2dd43a8dc9617a3ec69b3c4991fe9e582f894bf8312647e80ead7a5f52cb9"
+    }
+  ],
+  "source_folder": "/tmp/grad-research-20261106/delivery/extended_C_final_v1/pythia-410m",
+  "expected_output_presence_only": {
+    "completion.json": false,
+    "extended_C_final_manifest.json": false,
+    "extended_C_410m_final_weights_lossless_v1.tar": false
+  },
+  "reserve_current_stat": {
+    "device": 106,
+    "inode": 484145481,
+    "bytes": 28991029248,
+    "allocated_bytes": 28991029248,
+    "uid": 11471,
+    "gid": 11471,
+    "mode": "0o600"
+  },
+  "reserve_matching_proc_locks": [],
+  "old_grower3132534_still_exists": false,
+  "export_daemon3168336_cmdline": "/usr/bin/python -u /tmp/grad-research-20261106/worktree/scripts/export_C_final_weights.py --execute --poll-seconds 30 --until 2026-11-07T02:00:00Z ",
+  "export_worker_matching_proc_locks": [
+    "43: FLOCK  ADVISORY  WRITE 3168336 00:8b:6651088842 0 EOF"
+  ],
+  "actual_completed_phase_metadata_reviewer_executed": false,
+  "fresh_tar_or_checkpoint_or_ZIP_payload_reads": false,
+  "score_semantics_read": false,
+  "publication_reservation_worker_GPU_started": false,
+  "new_authority_created": false,
+  "live_source_or_codec_or_publisher_modified": false,
+  "whole_preparation_wall_CPU_not_measured": true
+}

@@ -1,0 +1,20 @@
+{
+  "updated_at_utc": "2026-11-06T04:43:50.339165+00:00",
+  "stage": "正式strict资格验证：B4/D seed11完整306步",
+  "active_registry": "configs/formal_deterministic_registry.json",
+  "active_lr_selection": "results/pilot_lr_selection_deterministic_v3.json",
+  "active_lambda_selection": "results/pilot_lambda_selection_deterministic_v3.json",
+  "provisional_registries": [
+    "configs/formal_registry.json"
+  ],
+  "provisional_schedulers": [
+    "formal_job_state",
+    "lambda_job_state",
+    "lambda_v3_job_state",
+    "v3_lr_eval_job_state"
+  ],
+  "note": "旧LR/λ及formal输出仅作数值诊断，不进入正式方法比较。数据划分和固定生成池仍有效，GPU1继续较大模型生成。",
+  "test_scores_seen": false,
+  "scheduler_pid": 2957098,
+  "scheduler_state": "logs/formal_deterministic_job_state.json"
+}

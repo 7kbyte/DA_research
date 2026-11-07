@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "status": "passed_CPU_trial_with_explicit_unknowns",
+  "utc": "2026-11-06T12:00:24.040664+00:00",
+  "producer": {
+    "path": "/tmp/grad-research-20261106/worktree/scripts/inventory_study_costs_final_v2.py",
+    "sha256": "864effb89f20dbfce3ba6ce51db8eb8351b087c2ac92d255274fe6267753f6ae"
+  },
+  "source_spec": {
+    "path": "/tmp/grad-research-20261106/worktree/configs/cost_inventory_final_sources_v2.json",
+    "sha256": "3c0286f39fb19f386bbb09a68143c80cd4fe45677efaf360309b032712b14ce7"
+  },
+  "trial_inventory": {
+    "path": "/tmp/grad-research-20261106/worktree/results/cost_inventory_final_v2_cpu_trial_20261106/inventory.json",
+    "sha256": "009c70654649936a78045234129a739ed52e95923162b6f122771019785b904f"
+  },
+  "collection_receipt": {
+    "path": "/tmp/grad-research-20261106/worktree/results/cost_inventory_final_v2_cpu_trial_20261106/collection_receipt.json",
+    "sha256": "c69466803fb53c0aa08ae4bd817e97be5a37d331269d32fa5d4459379a003640"
+  },
+  "documentation": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/最终成本来源v2说明.md",
+    "sha256": "32589bfbfb5a86c5e8394368f3c83ddeca8f312af0efae0139a7d287f300b088"
+  },
+  "tests": {
+    "command": "pytest -q tests/test_final_cost_inventory_v2.py tests/test_final_cost_inventory.py",
+    "passed": 13,
+    "reported_seconds": 0.1
+  },
+  "exact_cost_source_copies_verified": 54,
+  "exact_source_bytes": 1763604,
+  "B60_forward_cost_counted_only_by_existing_evaluation_inventory": true,
+  "B_full_CPU_analysis_wall_still_unknown": true,
+  "C_actual_drafts_observed": 2,
+  "C_model_assembly_complete": 0,
+  "C_publications_completed_assumed": 0,
+  "original_v1_collector_and_source_unchanged": true,
+  "science10_sha_matches": {
+    "src/replay_study/train.py": true,
+    "src/replay_study/objectives.py": true,
+    "src/replay_study/evaluate.py": true,
+    "src/replay_study/execution.py": true,
+    "src/replay_study/generate.py": true,
+    "src/replay_study/selection.py": true,
+    "src/replay_study/data.py": true,
+    "scripts/run_evaluate.py": true,
+    "scripts/run_train.py": true,
+    "scripts/make_experiments.py": true
+  },
+  "score_semantics_read": false,
+  "GB_model_payload_rehashed": false,
+  "GPU_or_queue_modified": false
+}

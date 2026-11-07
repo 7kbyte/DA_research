@@ -1,0 +1,3166 @@
+{
+  "status": "passed",
+  "scope": "extended-assets",
+  "scope_description": "prepared extended assets; not an assertion of actual training use",
+  "prepared_at_utc": "2026-11-06T06:07:45.312390+00:00",
+  "ngram_tokens": 13,
+  "fixed_threshold": 0.2,
+  "threshold_rule": "5 * exact matching query ngram occurrences >= query ngram occurrences; length<13 inapplicable",
+  "query_policy": "prepare_choice(max_length=2048), full context+choice sequence = input_ids followed by final label; includes final predicted token; no gold-choice selection",
+  "source_boundary_policy": "within each actual unpadded 512-token training chunk only, never cross chunk/document boundaries",
+  "item_counting": "a task item is counted once across its choices and once across source artifacts; per-source choice details retained",
+  "all_choice_token_fingerprint_sha256": "1fcb114f278ac832def3bb1aaf50082d873ac53f9ee3e5a52b6c6b71a46a108d",
+  "task_items": {
+    "piqa": 1838,
+    "hellaswag": 10042
+  },
+  "choice_sequences": 43844,
+  "choices_shorter_than_13_inapplicable": [
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:27",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:27",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:43",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:43",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:46",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:46",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:144",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:144",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:217",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:217",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:221",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:221",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:224",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:241",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:243",
+      "choice_index": 0,
+      "tokens": 9
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:243",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:291",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:291",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:296",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:296",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:395",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:395",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:408",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:408",
+      "choice_index": 1,
+      "tokens": 9
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:421",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:421",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:426",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:426",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:427",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:427",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:439",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:439",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:473",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:473",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:479",
+      "choice_index": 0,
+      "tokens": 9
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:479",
+      "choice_index": 1,
+      "tokens": 9
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:486",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:486",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:547",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:547",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:552",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:552",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:564",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:568",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:568",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:573",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:589",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:589",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:616",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:616",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:691",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:691",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:697",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:697",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:709",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:723",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:723",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:732",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:736",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:736",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:756",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:756",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:792",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:792",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:809",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:848",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:848",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:857",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:857",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:888",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:905",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:905",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:948",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:958",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:958",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1003",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1003",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1004",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1004",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1018",
+      "choice_index": 0,
+      "tokens": 9
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1018",
+      "choice_index": 1,
+      "tokens": 9
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1025",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1026",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1026",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1034",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1034",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1070",
+      "choice_index": 0,
+      "tokens": 9
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1070",
+      "choice_index": 1,
+      "tokens": 9
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1087",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1087",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1111",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1111",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1115",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1116",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1116",
+      "choice_index": 1,
+      "tokens": 9
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1121",
+      "choice_index": 0,
+      "tokens": 9
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1121",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1122",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1134",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1141",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1141",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1179",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1192",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1261",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1261",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1264",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1264",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1269",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1269",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1289",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1289",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1301",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1306",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1306",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1312",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1312",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1317",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1317",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1331",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1331",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1347",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1372",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1377",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1410",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1410",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1415",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1430",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1430",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1442",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1442",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1464",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1466",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1466",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1469",
+      "choice_index": 0,
+      "tokens": 9
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1469",
+      "choice_index": 1,
+      "tokens": 9
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1532",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1532",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1547",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1549",
+      "choice_index": 0,
+      "tokens": 9
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1549",
+      "choice_index": 1,
+      "tokens": 9
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1561",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1572",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1590",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1590",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1608",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1608",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1611",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1620",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1621",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1627",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1627",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1659",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1684",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1684",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1706",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1706",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1711",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1714",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1714",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1721",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1721",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1728",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1728",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1731",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1731",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1748",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1771",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1771",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1774",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1774",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1790",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1790",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1794",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1800",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1803",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1803",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1804",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1804",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1813",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1813",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1814",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1814",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1827",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1827",
+      "choice_index": 1,
+      "tokens": 11
+    }
+  ],
+  "choices_with_context_truncation": 0,
+  "choices_with_tokenization_boundary_mismatch": 0,
+  "unique_flagged_item_ids": {
+    "piqa": [],
+    "hellaswag": []
+  },
+  "reports": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_train.pt",
+      "role": "prepared_extended_target",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 39140,
+      "source_unique_13grams": 17307904,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "d75095a4c1847f72168d7cad1fd56da8d82ac7f5b17c43673dd70ed7eae118b0"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/c4_random_seed101.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97149,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "8febb0c842238612e8a5b370b56203910fc072e8b6b5821095696f2f4df48a2b"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/c4_random_seed11.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97637,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "7979f32f96bc76f74be01729d9405cbdd733917205e55a3a90aae13a5df0e559"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/c4_random_seed22.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97561,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "d645cbde6e566e357ff09ce27d1817e4c2739813f37e5ebeea98e110c80c3f81"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/c4_random_seed33.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97366,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "8614e2a520e8512d937ae876e690cfc2e4f61d456bf5fda0eee55b8d44d6f58a"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_cluster_seed101.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 96378,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "072f81498c4bc5a5084f9e9ee926d2ac457f2187369ab6843d0fd498200ba5df"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_cluster_seed11.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 96835,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "46056bb881ab456a299d8ac23df4196608b899cc4c936386f7386d27640df804"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_cluster_seed22.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 96100,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "f53d99113919b521e5ae96b9801a0f6a7ab5a8930c9a0e9e24ec05d58df7c5ea"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_cluster_seed33.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 96708,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "4e2e016df0c1d932ea8bfadcb4946e89aba5da05799de9f738b7c84820d8e441"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_dedup_random_seed101.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 96913,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "e5bc6b41dfb612b3fd97894d7a5f6edff74d064d88861a7ceb1005487d0b8f33"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_dedup_random_seed11.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97056,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "e2f7323dd596b62c769e74d7f7ff9277514890f0086aa0a8384ba001e9f497ab"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_dedup_random_seed22.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 96224,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "47fc5d6ba9e57136eae96889d6e1c09acf5c9c22ec8208ec043594ef98d60cad"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_dedup_random_seed33.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97018,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "5ef553b0a34bbff3386a4a27576e824a4d893ac092daa20d7e7c038c0bbb54ae"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_nll_stratified_seed101.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 96963,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "1504a8685e86c23716f8e58243466833875f0f442d55754abab79bd3e23191d2"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_nll_stratified_seed11.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 96632,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "4c3870444a098c9ee48a83affcaf7d0ad00de4a08909b510907f7152b8eba37d"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_nll_stratified_seed22.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 96390,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "29fd4d3130391824ce6d9917e9c0b4eda1de74c8aff76470b3d7443c87a6deee"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_nll_stratified_seed33.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97005,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "e187abc8dd6a7fa5c26fcf3fade442a5bf745e247e13458a2d069a0d79798b2b"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_random_seed101.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 96913,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "2467d619f3dd50f3ae6cf8cd0b96dfb73dc9a92aa9e066794242fc3b4c69eaa7"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_random_seed11.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97056,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "8da0656f17817e1ad9c17220c86e84e051147bf0cf9491b55f44ff6bf39cdd93"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_random_seed22.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 96224,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "dd85685b67950c29f8fb0f6eb6af82f05db7c9717f38a3233cef43be8e9c11e2"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_random_seed33.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97018,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "da797f74de038a6f9a8b76de53bccbba2f92ed0e3806e1e2c2b332fabbd10955"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/c4_random_seed101.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97149,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "8febb0c842238612e8a5b370b56203910fc072e8b6b5821095696f2f4df48a2b"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/c4_random_seed11.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97637,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "7979f32f96bc76f74be01729d9405cbdd733917205e55a3a90aae13a5df0e559"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/c4_random_seed22.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97561,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "d645cbde6e566e357ff09ce27d1817e4c2739813f37e5ebeea98e110c80c3f81"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/c4_random_seed33.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97366,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "8614e2a520e8512d937ae876e690cfc2e4f61d456bf5fda0eee55b8d44d6f58a"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_cluster_seed101.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 96081,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "74f609ae8d4bfd2bf8df52e8c9f6a41b9963dd72580ef7de20a42610f0835a8b"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_cluster_seed11.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 96194,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "4c984c0ec3ce54166b6ca9507d4978178d78908acb037ac2cfe2ad5bc2c39ce1"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_cluster_seed22.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 96568,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "3649d31f24b44b249f7df39353644ddb6f595fd253e4818266a0317156aa479d"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_cluster_seed33.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 96775,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "4658716621fdde32dc3841bd436f11999b375f6adf6ba753fff0eb9cdd3ff986"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_dedup_random_seed101.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 96955,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "c52f388a646d3cf63ba8f136e007cde1174f6b16a9c52fb1b1244cc479a09c1a"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_dedup_random_seed11.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 96819,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "0350f3d3debff6cc032c15498b592612321744840a6fd2650fa980f238bcb737"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_dedup_random_seed22.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97056,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "61a62f6a9be2c92ba9deb33b0726ac333f7d3995d0b5fcf987a83822f364795b"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_dedup_random_seed33.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 95961,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "477a056f553a0ce327d1ead57c538138ce473d8b47fb6ecb77531e1c8757f0f7"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_nll_stratified_seed101.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97065,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "c2db94e8224bc34499abb6eeef4612f78abbe4cded2f42ba71b2809e2bfcc619"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_nll_stratified_seed11.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97128,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "6a7b844e1b61d5442feafb15e4fc62bfe91ca481ad7d98edda1e5efeb978dfa5"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_nll_stratified_seed22.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97119,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "eaec4bf48efd6117d1122808eec6388cb0c7147ecbbb85cc2b4432fa3dd87d55"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_nll_stratified_seed33.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97114,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "4a8f3d6932d1c4ce26d8599a5b11e0ddb4b6f1ca268bd8ef5532a26f287fa712"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_random_seed101.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 96955,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "2ebed7045829e990b59c908fe9fba7027dad353a1e6afe107e5504577e298bcb"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_random_seed11.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 96819,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "aaee8b58da940e26d0d473cb6b1a13f79e62ae8c75410de8ae6075c11a178904"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_random_seed22.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97056,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "d3a2132af8428bbd8e38579fef6759899e2481e161f26c0c7bc31ccd8657ae1b"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_random_seed33.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 95961,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "9cd8f508b0972efbb1ce77bcf55aa6c51d1a4d5d82353c51b435a7609b7bf90b"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/c4_random_seed101.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97149,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "8febb0c842238612e8a5b370b56203910fc072e8b6b5821095696f2f4df48a2b"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/c4_random_seed11.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97637,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "7979f32f96bc76f74be01729d9405cbdd733917205e55a3a90aae13a5df0e559"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/c4_random_seed22.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97561,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "d645cbde6e566e357ff09ce27d1817e4c2739813f37e5ebeea98e110c80c3f81"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/c4_random_seed33.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97366,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "8614e2a520e8512d937ae876e690cfc2e4f61d456bf5fda0eee55b8d44d6f58a"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_cluster_seed101.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 96927,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "4cfaa00d6021d284f294637f86a1300bbd8e79315586495927641ddc7ba8c914"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_cluster_seed11.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97312,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "2bda5b5772abcda2c92bacb25a67c5f9fc88caf683b5554c49c81de63d814746"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_cluster_seed22.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97453,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "23051038f93b035f4a28de78e779447b90e63b109cd33660e454dd16818b2f27"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_cluster_seed33.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 96863,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "e87f747cdf637a65b0c45a77bea47421e67c50d3cc1f9529e2753c3d09cfe3b6"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_dedup_random_seed101.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97229,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "faa635abf235bc7b195a422a939ac92c1b0121c170d51c1caf92735b524a0eb7"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_dedup_random_seed11.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97193,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "2b4762d5e7a9b5a5b8bc1cdb2afdbc8aa1b4a0a329c0b0a94e7d30457b60b90e"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_dedup_random_seed22.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97539,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "b585a780b25e383a96cb6039c3301f9ab0d3047b6d287b5cc542d96ca745f3be"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_dedup_random_seed33.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97590,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "e19e9647564da50f6ec9f75d97c6e6e43835c6be171ed50df01e10ec7a55f969"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_nll_stratified_seed101.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97499,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "d68bd5df7dc8be1b02ae5798a6d945b2806ba287c274386c9f0bfa2db0a81182"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_nll_stratified_seed11.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97547,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "0bcbb43d37b343c4bf62c3553c80a8d8fcfcb7ae95d1e035011fcacbfc300cfe"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_nll_stratified_seed22.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97076,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "95bca391e5a4b928e051624669940e97523d6d372f56c6ae8bd32a2b05f32356"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_nll_stratified_seed33.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97442,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "bd37c3f067194d89e373bdba113fb6e2c49bc99a1c14b5686b7ca3183fedea6e"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_random_seed101.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97229,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "aea3850b28f30cc32d15b1ecf5f96af92cfbe96e4bc992bdb609841e5aae790b"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_random_seed11.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97193,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "a1f0ddc372ad23d24ae0f628910881f77b22b8cb62be02f94c915c23d9155118"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_random_seed22.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97539,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "14c3827bad0687943d61d024768b018997360d481715601b35c385479d8dae82"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_random_seed33.pt",
+      "role": "prepared_extended_selected_bank",
+      "used_by_run_ids": [],
+      "actual_training_use_not_established": true,
+      "source_chunks": 196,
+      "source_unique_13grams": 97590,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "558b6e00b0c6d2a6f0531cddf06aca06b0a187fc8a88a26cd1fbb4f2e483b13c"
+    }
+  ],
+  "actual_condition_target_plus_replay_unions": [],
+  "input_files_sha256": {
+    "/tmp/grad-research-20261106/worktree/artifacts/behavioral/data_manifest.json": "5c91890603f5149fb2f2f62b29edd16ee2044d3602d75265f819f35a501b7d0f",
+    "/tmp/grad-research-20261106/worktree/artifacts/behavioral/piqa_validation.jsonl": "1c651cd30ba15f579a2bfddfe6c92b2bdc20a01c00921693c50a620993119301",
+    "/tmp/grad-research-20261106/worktree/artifacts/behavioral/hellaswag_validation.jsonl": "948f15fb1733acf005121510a504272a58133ee1d4a9511870176e6ff6f50d75",
+    "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_train.pt": "d75095a4c1847f72168d7cad1fd56da8d82ac7f5b17c43673dd70ed7eae118b0",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/c4_random_seed101.pt": "8febb0c842238612e8a5b370b56203910fc072e8b6b5821095696f2f4df48a2b",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/c4_random_seed11.pt": "7979f32f96bc76f74be01729d9405cbdd733917205e55a3a90aae13a5df0e559",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/c4_random_seed22.pt": "d645cbde6e566e357ff09ce27d1817e4c2739813f37e5ebeea98e110c80c3f81",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/c4_random_seed33.pt": "8614e2a520e8512d937ae876e690cfc2e4f61d456bf5fda0eee55b8d44d6f58a",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_cluster_seed101.pt": "072f81498c4bc5a5084f9e9ee926d2ac457f2187369ab6843d0fd498200ba5df",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_cluster_seed11.pt": "46056bb881ab456a299d8ac23df4196608b899cc4c936386f7386d27640df804",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_cluster_seed22.pt": "f53d99113919b521e5ae96b9801a0f6a7ab5a8930c9a0e9e24ec05d58df7c5ea",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_cluster_seed33.pt": "4e2e016df0c1d932ea8bfadcb4946e89aba5da05799de9f738b7c84820d8e441",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_dedup_random_seed101.pt": "e5bc6b41dfb612b3fd97894d7a5f6edff74d064d88861a7ceb1005487d0b8f33",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_dedup_random_seed11.pt": "e2f7323dd596b62c769e74d7f7ff9277514890f0086aa0a8384ba001e9f497ab",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_dedup_random_seed22.pt": "47fc5d6ba9e57136eae96889d6e1c09acf5c9c22ec8208ec043594ef98d60cad",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_dedup_random_seed33.pt": "5ef553b0a34bbff3386a4a27576e824a4d893ac092daa20d7e7c038c0bbb54ae",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_nll_stratified_seed101.pt": "1504a8685e86c23716f8e58243466833875f0f442d55754abab79bd3e23191d2",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_nll_stratified_seed11.pt": "4c3870444a098c9ee48a83affcaf7d0ad00de4a08909b510907f7152b8eba37d",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_nll_stratified_seed22.pt": "29fd4d3130391824ce6d9917e9c0b4eda1de74c8aff76470b3d7443c87a6deee",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_nll_stratified_seed33.pt": "e187abc8dd6a7fa5c26fcf3fade442a5bf745e247e13458a2d069a0d79798b2b",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_random_seed101.pt": "2467d619f3dd50f3ae6cf8cd0b96dfb73dc9a92aa9e066794242fc3b4c69eaa7",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_random_seed11.pt": "8da0656f17817e1ad9c17220c86e84e051147bf0cf9491b55f44ff6bf39cdd93",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_random_seed22.pt": "dd85685b67950c29f8fb0f6eb6af82f05db7c9717f38a3233cef43be8e9c11e2",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_random_seed33.pt": "da797f74de038a6f9a8b76de53bccbba2f92ed0e3806e1e2c2b332fabbd10955",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/c4_random_seed101.pt": "8febb0c842238612e8a5b370b56203910fc072e8b6b5821095696f2f4df48a2b",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/c4_random_seed11.pt": "7979f32f96bc76f74be01729d9405cbdd733917205e55a3a90aae13a5df0e559",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/c4_random_seed22.pt": "d645cbde6e566e357ff09ce27d1817e4c2739813f37e5ebeea98e110c80c3f81",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/c4_random_seed33.pt": "8614e2a520e8512d937ae876e690cfc2e4f61d456bf5fda0eee55b8d44d6f58a",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_cluster_seed101.pt": "74f609ae8d4bfd2bf8df52e8c9f6a41b9963dd72580ef7de20a42610f0835a8b",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_cluster_seed11.pt": "4c984c0ec3ce54166b6ca9507d4978178d78908acb037ac2cfe2ad5bc2c39ce1",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_cluster_seed22.pt": "3649d31f24b44b249f7df39353644ddb6f595fd253e4818266a0317156aa479d",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_cluster_seed33.pt": "4658716621fdde32dc3841bd436f11999b375f6adf6ba753fff0eb9cdd3ff986",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_dedup_random_seed101.pt": "c52f388a646d3cf63ba8f136e007cde1174f6b16a9c52fb1b1244cc479a09c1a",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_dedup_random_seed11.pt": "0350f3d3debff6cc032c15498b592612321744840a6fd2650fa980f238bcb737",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_dedup_random_seed22.pt": "61a62f6a9be2c92ba9deb33b0726ac333f7d3995d0b5fcf987a83822f364795b",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_dedup_random_seed33.pt": "477a056f553a0ce327d1ead57c538138ce473d8b47fb6ecb77531e1c8757f0f7",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_nll_stratified_seed101.pt": "c2db94e8224bc34499abb6eeef4612f78abbe4cded2f42ba71b2809e2bfcc619",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_nll_stratified_seed11.pt": "6a7b844e1b61d5442feafb15e4fc62bfe91ca481ad7d98edda1e5efeb978dfa5",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_nll_stratified_seed22.pt": "eaec4bf48efd6117d1122808eec6388cb0c7147ecbbb85cc2b4432fa3dd87d55",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_nll_stratified_seed33.pt": "4a8f3d6932d1c4ce26d8599a5b11e0ddb4b6f1ca268bd8ef5532a26f287fa712",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_random_seed101.pt": "2ebed7045829e990b59c908fe9fba7027dad353a1e6afe107e5504577e298bcb",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_random_seed11.pt": "aaee8b58da940e26d0d473cb6b1a13f79e62ae8c75410de8ae6075c11a178904",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_random_seed22.pt": "d3a2132af8428bbd8e38579fef6759899e2481e161f26c0c7bc31ccd8657ae1b",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_random_seed33.pt": "9cd8f508b0972efbb1ce77bcf55aa6c51d1a4d5d82353c51b435a7609b7bf90b",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/c4_random_seed101.pt": "8febb0c842238612e8a5b370b56203910fc072e8b6b5821095696f2f4df48a2b",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/c4_random_seed11.pt": "7979f32f96bc76f74be01729d9405cbdd733917205e55a3a90aae13a5df0e559",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/c4_random_seed22.pt": "d645cbde6e566e357ff09ce27d1817e4c2739813f37e5ebeea98e110c80c3f81",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/c4_random_seed33.pt": "8614e2a520e8512d937ae876e690cfc2e4f61d456bf5fda0eee55b8d44d6f58a",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_cluster_seed101.pt": "4cfaa00d6021d284f294637f86a1300bbd8e79315586495927641ddc7ba8c914",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_cluster_seed11.pt": "2bda5b5772abcda2c92bacb25a67c5f9fc88caf683b5554c49c81de63d814746",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_cluster_seed22.pt": "23051038f93b035f4a28de78e779447b90e63b109cd33660e454dd16818b2f27",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_cluster_seed33.pt": "e87f747cdf637a65b0c45a77bea47421e67c50d3cc1f9529e2753c3d09cfe3b6",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_dedup_random_seed101.pt": "faa635abf235bc7b195a422a939ac92c1b0121c170d51c1caf92735b524a0eb7",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_dedup_random_seed11.pt": "2b4762d5e7a9b5a5b8bc1cdb2afdbc8aa1b4a0a329c0b0a94e7d30457b60b90e",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_dedup_random_seed22.pt": "b585a780b25e383a96cb6039c3301f9ab0d3047b6d287b5cc542d96ca745f3be",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_dedup_random_seed33.pt": "e19e9647564da50f6ec9f75d97c6e6e43835c6be171ed50df01e10ec7a55f969",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_nll_stratified_seed101.pt": "d68bd5df7dc8be1b02ae5798a6d945b2806ba287c274386c9f0bfa2db0a81182",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_nll_stratified_seed11.pt": "0bcbb43d37b343c4bf62c3553c80a8d8fcfcb7ae95d1e035011fcacbfc300cfe",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_nll_stratified_seed22.pt": "95bca391e5a4b928e051624669940e97523d6d372f56c6ae8bd32a2b05f32356",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_nll_stratified_seed33.pt": "bd37c3f067194d89e373bdba113fb6e2c49bc99a1c14b5686b7ca3183fedea6e",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_random_seed101.pt": "aea3850b28f30cc32d15b1ecf5f96af92cfbe96e4bc992bdb609841e5aae790b",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_random_seed11.pt": "a1f0ddc372ad23d24ae0f628910881f77b22b8cb62be02f94c915c23d9155118",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_random_seed22.pt": "14c3827bad0687943d61d024768b018997360d481715601b35c385479d8dae82",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_random_seed33.pt": "558b6e00b0c6d2a6f0531cddf06aca06b0a187fc8a88a26cd1fbb4f2e483b13c"
+  },
+  "tokenizer_files_sha256": {
+    "tokenizer.json": "c24618a1b3e6a38167beff1c72cffd126c3a66254347304b50547d12c5f25624",
+    "tokenizer_config.json": "70e38394e494931c6f773ba41e19460dd4436526b852207367f04341b4066d3f",
+    "special_tokens_map.json": "6f50ab5a5a509a1c309d6171f339b196a900dc9c99ad0408ff23bb615fdae7ad"
+  },
+  "source_files_sha256": {
+    "scripts/audit_behavioral_training_overlap.py": "6b110040906d87aa15592b7baaccab929b516176e16b5520a25429f83c85bc3d",
+    "scripts/audit_data_ngrams.py": "47ffc90a8116a35bea817ef16ba9691614696ac97dfa4df15d55d437bedf9a5c",
+    "src/replay_study/tasks.py": "c631b1c81386193b645b59a3a82eb73dfacc6d9d1302b95e997f0de4afc47a51"
+  },
+  "seconds": 41.3250670209527,
+  "gpu_used": false,
+  "model_scores_read": false,
+  "frozen_inputs_modified": false,
+  "interpretation": "Lexical overlap diagnostic only. No automatic task exclusion. Candidate pools not selected into training are not inputs here. Common contexts can trigger multiple choices but are counted once per item. Zero flags cannot exclude semantic paraphrases, source-boundary overlaps or historical Pile pretraining contamination."
+}

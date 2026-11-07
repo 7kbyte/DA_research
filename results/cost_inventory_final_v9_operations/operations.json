@@ -1,0 +1,350 @@
+{
+  "schema_version": 1,
+  "utc": "2026-11-07T00:34:57.767766+00:00",
+  "status": "measured_post_v8_operations_not_a_study_total",
+  "base_ledger": {
+    "path": "/tmp/grad-research-20261106/worktree/results/cost_inventory_final_v8_cpu_collection_20261106_attempt1/inventory.json",
+    "sha256": "9d48a7bd63299300204ce5d7c5c214f92860d071498b0c398f2c547e0de173d2",
+    "status": "observed_snapshot_with_explicit_gaps"
+  },
+  "operations": [
+    {
+      "operation": "extended_pythia_1b_100m_nll:capture",
+      "category": "cpu_analysis",
+      "argv": "/usr/bin/python artifacts/provenance/final_evaluation_handoff_actual_v1/capture_phase_state_ROOT.py --plan artifacts/analysis_prepared_v2/extended_pythia_1b_100m_nll.json --plan-sha256 e828aa3b0d31c9548b48cca9a3abf597bef708b5da96ee96598a0b9683f18aa4 --output artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_nll/state_capture",
+      "returncode": 0,
+      "wall_seconds": 0.047108713537454605,
+      "user_cpu_seconds": 0.03531,
+      "sys_cpu_seconds": 0.010768999999999999,
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_nll/capture_timing/whole_child_timing.json",
+        "sha256": "854abab4321e517591d88639229b382e79fe9b9dc993d5649e5ba042bd505cce"
+      },
+      "additive_within_phase": false,
+      "note": "check precedes analyze; each measured by its own whole-child timer"
+    },
+    {
+      "operation": "extended_pythia_1b_100m_nll:check",
+      "category": "cpu_analysis",
+      "argv": "/usr/bin/python /tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v3.py check --plan /tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_1b_100m_nll.json --plan-sha256 e828aa3b0d31c9548b48cca9a3abf597bef708b5da96ee96598a0b9683f18aa4 --operational-repair /tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C1B_nll.json --operational-repair-sha256 f7b6f22051c59c09d1822f010d2aa39d519bcfd067f6c14b07dac022f80d609c --state /tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_nll/state_capture/actual_successor_state_immutable.json --output /tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_nll/check_readiness.json",
+      "returncode": 0,
+      "wall_seconds": 3.018357243388891,
+      "user_cpu_seconds": 2.367754,
+      "sys_cpu_seconds": 0.749485,
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_nll/check_timing/whole_child_timing.json",
+        "sha256": "c8761106b440a4254ff29118eaae9558ad80240daaea7714c29b9922120c748f"
+      },
+      "additive_within_phase": false,
+      "note": "check precedes analyze; each measured by its own whole-child timer"
+    },
+    {
+      "operation": "extended_pythia_1b_100m_nll:analyze",
+      "category": "cpu_analysis",
+      "argv": "/usr/bin/python /tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v3.py analyze --plan /tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_1b_100m_nll.json --plan-sha256 e828aa3b0d31c9548b48cca9a3abf597bef708b5da96ee96598a0b9683f18aa4 --operational-repair /tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C1B_nll.json --operational-repair-sha256 f7b6f22051c59c09d1822f010d2aa39d519bcfd067f6c14b07dac022f80d609c --state /tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_nll/state_capture/actual_successor_state_immutable.json --authority /tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_nll/ROOT_AUTHORITY_v3.json --authority-sha256 1f82a3f51688610d949435370e34a80c6d2a52eef26351a7ff8f3ac14d1ff64c --output /tmp/grad-research-20261106/worktree/results/supplemental_analysis_v3/extended_pythia_1b_100m_nll",
+      "returncode": 0,
+      "wall_seconds": 13.006465304642916,
+      "user_cpu_seconds": 12.167849,
+      "sys_cpu_seconds": 0.894454,
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_nll/analyze_timing/whole_child_timing.json",
+        "sha256": "1453fd37e4a53b7d3aae453a3dbc7a88ca4da36bc521eefd5782e0452c68d54e"
+      },
+      "additive_within_phase": false,
+      "note": "check precedes analyze; each measured by its own whole-child timer"
+    },
+    {
+      "operation": "extended_pythia_1b_100m_nll:ROOT_authorize_preparation",
+      "category": "cpu_analysis",
+      "argv": null,
+      "returncode": null,
+      "wall_seconds": 0.010343313217163086,
+      "user_cpu_seconds": null,
+      "sys_cpu_seconds": null,
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_nll/ROOT_AUTHORITY_v3.json",
+        "sha256": "1f82a3f51688610d949435370e34a80c6d2a52eef26351a7ff8f3ac14d1ff64c"
+      },
+      "additive_within_phase": false,
+      "note": "execv replaced the process with analyze; analyze_timing covers the child"
+    },
+    {
+      "operation": "extended_pythia_1b_100m_behavior:capture",
+      "category": "cpu_analysis",
+      "argv": "/usr/bin/python artifacts/provenance/final_evaluation_handoff_actual_v1/capture_phase_state_ROOT.py --plan /tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_1b_100m_behavior.json --plan-sha256 0d6fe37a1c376cb56be8b46f6d88b06cf4e7ef8116345ae584c7bc3788eace8c --output /tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_behavior/state_capture",
+      "returncode": 0,
+      "wall_seconds": 0.04796958714723587,
+      "user_cpu_seconds": 0.033735999999999995,
+      "sys_cpu_seconds": 0.013156,
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_behavior/capture_timing/whole_child_timing.json",
+        "sha256": "e66a698d4da7ee69d565955e0ce1b1c74a96b192405ba27334b26ebdfb81e214"
+      },
+      "additive_within_phase": false,
+      "note": "check precedes analyze; each measured by its own whole-child timer"
+    },
+    {
+      "operation": "extended_pythia_1b_100m_behavior:check",
+      "category": "cpu_analysis",
+      "argv": "/usr/bin/python /tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v3.py check --plan /tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_1b_100m_behavior.json --plan-sha256 0d6fe37a1c376cb56be8b46f6d88b06cf4e7ef8116345ae584c7bc3788eace8c --operational-repair /tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C1B_behavior.json --operational-repair-sha256 b86edb21c5e46db26bac205640441a5053aec1727f4251f77e649b2d5a1424b2 --state /tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_behavior/state_capture/actual_successor_state_immutable.json --output /tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_behavior/check_readiness.json",
+      "returncode": 0,
+      "wall_seconds": 25.741967149078846,
+      "user_cpu_seconds": 19.651732,
+      "sys_cpu_seconds": 5.940895,
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_behavior/check_timing/whole_child_timing.json",
+        "sha256": "7651cd5a064c5d344a1a431ad9f744b25782920e66c4f8cf328f4e7489a1f7db"
+      },
+      "additive_within_phase": false,
+      "note": "check precedes analyze; each measured by its own whole-child timer"
+    },
+    {
+      "operation": "extended_pythia_1b_100m_behavior:analyze",
+      "category": "cpu_analysis",
+      "argv": "/usr/bin/python /tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v3.py analyze --plan /tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_1b_100m_behavior.json --plan-sha256 0d6fe37a1c376cb56be8b46f6d88b06cf4e7ef8116345ae584c7bc3788eace8c --operational-repair /tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C1B_behavior.json --operational-repair-sha256 b86edb21c5e46db26bac205640441a5053aec1727f4251f77e649b2d5a1424b2 --state /tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_behavior/state_capture/actual_successor_state_immutable.json --authority /tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_behavior/ROOT_AUTHORITY_v3.json --authority-sha256 f649a24cb3bd94acb69395d45ab89d7de2adb75cf33b251de95eb678d9092d50 --output /tmp/grad-research-20261106/worktree/results/supplemental_analysis_v3/extended_pythia_1b_100m_behavior",
+      "returncode": 0,
+      "wall_seconds": 37.57857036963105,
+      "user_cpu_seconds": 30.081579,
+      "sys_cpu_seconds": 7.351859,
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_behavior/analyze_timing/whole_child_timing.json",
+        "sha256": "278df111937ac3f96f14d8fd0707b739f34b95e9f9e147f614ca0b2e1b76d999"
+      },
+      "additive_within_phase": false,
+      "note": "check precedes analyze; each measured by its own whole-child timer"
+    },
+    {
+      "operation": "extended_pythia_1b_100m_behavior:ROOT_authorize_preparation",
+      "category": "cpu_analysis",
+      "argv": null,
+      "returncode": null,
+      "wall_seconds": 0.007392257452011108,
+      "user_cpu_seconds": null,
+      "sys_cpu_seconds": null,
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_behavior/ROOT_AUTHORITY_v3.json",
+        "sha256": "f649a24cb3bd94acb69395d45ab89d7de2adb75cf33b251de95eb678d9092d50"
+      },
+      "additive_within_phase": false,
+      "note": "execv replaced the process with analyze; analyze_timing covers the child"
+    },
+    {
+      "operation": "extended_pythia_2p8b_25m_nll:capture",
+      "category": "cpu_analysis",
+      "argv": "/usr/bin/python artifacts/provenance/final_evaluation_handoff_actual_v1/capture_phase_state_ROOT.py --plan /tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_2p8b_25m_nll.json --plan-sha256 71b80a6b563a712ccceb416001022205ebfcdcc273a857c67320588c32d27412 --output /tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_nll/state_capture",
+      "returncode": 0,
+      "wall_seconds": 0.046875860542058945,
+      "user_cpu_seconds": 0.035796,
+      "sys_cpu_seconds": 0.009966,
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_nll/capture_timing/whole_child_timing.json",
+        "sha256": "a09e7567a073a38433a9623e6aeacf18aa93fae81c36d9d5ac4f616afefd9ae0"
+      },
+      "additive_within_phase": false,
+      "note": "check precedes analyze; each measured by its own whole-child timer"
+    },
+    {
+      "operation": "extended_pythia_2p8b_25m_nll:check",
+      "category": "cpu_analysis",
+      "argv": "/usr/bin/python /tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v3.py check --plan /tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_2p8b_25m_nll.json --plan-sha256 71b80a6b563a712ccceb416001022205ebfcdcc273a857c67320588c32d27412 --operational-repair /tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C2p8B_nll.json --operational-repair-sha256 7a218b5d402630d0d804a1a5b36be642e360cae287b1b49c0645f6fb97d3141c --state /tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_nll/state_capture/actual_successor_state_immutable.json --output /tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_nll/check_readiness.json",
+      "returncode": 0,
+      "wall_seconds": 5.706906747072935,
+      "user_cpu_seconds": 4.40106,
+      "sys_cpu_seconds": 1.390212,
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_nll/check_timing/whole_child_timing.json",
+        "sha256": "53e772da6fb115448b58aeddbc4dea36e0db16f8d6a3d26790d027a293780d0b"
+      },
+      "additive_within_phase": false,
+      "note": "check precedes analyze; each measured by its own whole-child timer"
+    },
+    {
+      "operation": "extended_pythia_2p8b_25m_nll:analyze",
+      "category": "cpu_analysis",
+      "argv": "/usr/bin/python /tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v3.py analyze --plan /tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_2p8b_25m_nll.json --plan-sha256 71b80a6b563a712ccceb416001022205ebfcdcc273a857c67320588c32d27412 --operational-repair /tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C2p8B_nll.json --operational-repair-sha256 7a218b5d402630d0d804a1a5b36be642e360cae287b1b49c0645f6fb97d3141c --state /tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_nll/state_capture/actual_successor_state_immutable.json --authority /tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_nll/ROOT_AUTHORITY_v3.json --authority-sha256 371540da03d077528639c7e744e50e036994772cc65dc2c5637e87e0aeb9d95a --output /tmp/grad-research-20261106/worktree/results/supplemental_analysis_v3/extended_pythia_2p8b_25m_nll",
+      "returncode": 0,
+      "wall_seconds": 11.569826748222113,
+      "user_cpu_seconds": 9.961307,
+      "sys_cpu_seconds": 1.656072,
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_nll/analyze_timing/whole_child_timing.json",
+        "sha256": "81f0673dd00a32d6ceaa32bdd2c8e8519dbbacda1d69b5fdccc954af4ac4372d"
+      },
+      "additive_within_phase": false,
+      "note": "check precedes analyze; each measured by its own whole-child timer"
+    },
+    {
+      "operation": "extended_pythia_2p8b_25m_nll:ROOT_authorize_preparation",
+      "category": "cpu_analysis",
+      "argv": null,
+      "returncode": null,
+      "wall_seconds": 0.006809171289205551,
+      "user_cpu_seconds": null,
+      "sys_cpu_seconds": null,
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_nll/ROOT_AUTHORITY_v3.json",
+        "sha256": "371540da03d077528639c7e744e50e036994772cc65dc2c5637e87e0aeb9d95a"
+      },
+      "additive_within_phase": false,
+      "note": "execv replaced the process with analyze; analyze_timing covers the child"
+    },
+    {
+      "operation": "extended_pythia_2p8b_25m_behavior:capture",
+      "category": "cpu_analysis",
+      "argv": "/usr/bin/python artifacts/provenance/final_evaluation_handoff_actual_v1/capture_phase_state_ROOT.py --plan /tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_2p8b_25m_behavior.json --plan-sha256 e49b2ccc6d5963c6596c360e9fe916513d16d6e1d6836ee6ee3217372c652829 --output /tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_behavior/state_capture",
+      "returncode": 0,
+      "wall_seconds": 0.04686613753437996,
+      "user_cpu_seconds": 0.039762,
+      "sys_cpu_seconds": 0.006097,
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_behavior/capture_timing/whole_child_timing.json",
+        "sha256": "d0f582bdd4c828c9f41e06150335937bac658b2714ccc460d36e100326a143ae"
+      },
+      "additive_within_phase": false,
+      "note": "check precedes analyze; each measured by its own whole-child timer"
+    },
+    {
+      "operation": "extended_pythia_2p8b_25m_behavior:check",
+      "category": "cpu_analysis",
+      "argv": "/usr/bin/python /tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v3.py check --plan /tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_2p8b_25m_behavior.json --plan-sha256 e49b2ccc6d5963c6596c360e9fe916513d16d6e1d6836ee6ee3217372c652829 --operational-repair /tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C2p8B_behavior.json --operational-repair-sha256 5728413f502649fae3c1bd7e300a9c4b53823318ae5cced50c340deb87e73983 --state /tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_behavior/state_capture/actual_successor_state_immutable.json --output /tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_behavior/check_readiness.json",
+      "returncode": 0,
+      "wall_seconds": 5.9025049060583115,
+      "user_cpu_seconds": 4.447791,
+      "sys_cpu_seconds": 1.421857,
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_behavior/check_timing/whole_child_timing.json",
+        "sha256": "c2cdeafb543041fd44d30dd5e9a10ae8d91fb5ceb5092eb0962dbe1ff5263e67"
+      },
+      "additive_within_phase": false,
+      "note": "check precedes analyze; each measured by its own whole-child timer"
+    },
+    {
+      "operation": "extended_pythia_2p8b_25m_behavior:analyze",
+      "category": "cpu_analysis",
+      "argv": "/usr/bin/python /tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v3.py analyze --plan /tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_2p8b_25m_behavior.json --plan-sha256 e49b2ccc6d5963c6596c360e9fe916513d16d6e1d6836ee6ee3217372c652829 --operational-repair /tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C2p8B_behavior.json --operational-repair-sha256 5728413f502649fae3c1bd7e300a9c4b53823318ae5cced50c340deb87e73983 --state /tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_behavior/state_capture/actual_successor_state_immutable.json --authority /tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_behavior/ROOT_AUTHORITY_v3.json --authority-sha256 89e79dbe1b2e0836baad0549440f2301e18e28afa2f8471e538141d2d7dc5677 --output /tmp/grad-research-20261106/worktree/results/supplemental_analysis_v3/extended_pythia_2p8b_25m_behavior",
+      "returncode": 0,
+      "wall_seconds": 13.34825974702835,
+      "user_cpu_seconds": 11.211605,
+      "sys_cpu_seconds": 2.154954,
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_behavior/analyze_timing/whole_child_timing.json",
+        "sha256": "bd444aa38cd8b8ed49ec0f1df39049a1516d89f1829128ce4de0ea261d2a574f"
+      },
+      "additive_within_phase": false,
+      "note": "check precedes analyze; each measured by its own whole-child timer"
+    },
+    {
+      "operation": "extended_pythia_2p8b_25m_behavior:ROOT_authorize_preparation",
+      "category": "cpu_analysis",
+      "argv": null,
+      "returncode": null,
+      "wall_seconds": 0.005532972514629364,
+      "user_cpu_seconds": null,
+      "sys_cpu_seconds": null,
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_behavior/ROOT_AUTHORITY_v3.json",
+        "sha256": "89e79dbe1b2e0836baad0549440f2301e18e28afa2f8471e538141d2d7dc5677"
+      },
+      "additive_within_phase": false,
+      "note": "execv replaced the process with analyze; analyze_timing covers the child"
+    },
+    {
+      "operation": "C1B_nll:independent_review",
+      "category": "cpu_analysis",
+      "argv": "/tmp/grad-research-20261106/worktree/scripts/review_C_model_nll_results_v2.py",
+      "returncode": 0,
+      "wall_seconds": 8.895429763942957,
+      "user_cpu_seconds": null,
+      "sys_cpu_seconds": null,
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/results/C1B_nll_independent_review_v1/independent_review_receipt.json",
+        "sha256": "c12b874e3aac9a21570a70ac5c49ca8c66ae9179a3a8bee0a6c33d9243405a27"
+      },
+      "additive_within_phase": false,
+      "note": "inside_run wall excludes python startup; separate ROOT manual wall recorded in ledger_notes"
+    },
+    {
+      "operation": "C2p8B_nll:independent_review",
+      "category": "cpu_analysis",
+      "argv": "/tmp/grad-research-20261106/worktree/scripts/review_C_model_nll_results_v2.py",
+      "returncode": 0,
+      "wall_seconds": 6.076948635280132,
+      "user_cpu_seconds": null,
+      "sys_cpu_seconds": null,
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/results/C2p8B_nll_independent_review_v1/independent_review_receipt.json",
+        "sha256": "9a0bd6eb7d0ef2902a022815c8ab739a77140e2ed40b03fbf61a72293fa9ac38"
+      },
+      "additive_within_phase": false,
+      "note": "inside_run wall excludes python startup; separate ROOT manual wall recorded in ledger_notes"
+    },
+    {
+      "operation": "C1B_behavior:independent_review",
+      "category": "cpu_analysis",
+      "argv": "/usr/bin/python /tmp/grad-research-20261106/worktree/scripts/review_behavioral_results.py --complete results/supplemental_analysis_v3/extended_pythia_1b_100m_behavior/COMPLETE.json --complete-sha256 cfc39abb48694f2c11cb55fb6ef2a56c88b8c517b04b851f8cd76cacb9c836c2 --manifest artifacts/evaluation_ready_v5/extended_pythia_1b_100m_behavior/manifest.json --manifest-sha256 e56a85f0c1d1eb2c375f863873fbeed7efc3c934f05b61d77b63ae7a7744fe6d --output results/C1B_behavior_independent_review_v1 --child",
+      "returncode": 0,
+      "wall_seconds": 10.036295246332884,
+      "user_cpu_seconds": 10.636519,
+      "sys_cpu_seconds": 3.71476,
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/results/C1B_behavior_independent_review_v1_whole_child_timing.json",
+        "sha256": "81fff284e470d5d7317544d37ffc7acdef30d42eed98a392a9f486d01b03a956"
+      },
+      "additive_within_phase": false,
+      "note": "presenter/reviewer whole child; nested subtimers not additive"
+    },
+    {
+      "operation": "C1B_behavior:presenter",
+      "category": "cpu_analysis",
+      "argv": "/usr/bin/python /tmp/grad-research-20261106/worktree/scripts/present_behavioral_review.py --review-complete results/C1B_behavior_independent_review_v1/COMPLETE.json --review-complete-sha256 f5004cbed7ffe476263b437f9db8cfc382042e50bd2cd07c501086ae4aa550f3 --output results/C1B_behavior_presented_v1 --child",
+      "returncode": 0,
+      "wall_seconds": 3.746196109801531,
+      "user_cpu_seconds": 3.910533,
+      "sys_cpu_seconds": 1.529409,
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/results/C1B_behavior_presented_v1_whole_child_timing.json",
+        "sha256": "243bb8db2c6915b5ed80979b17f4e1d86753966bd8ad5d65d5fc73edbea6806b"
+      },
+      "additive_within_phase": false,
+      "note": "presenter/reviewer whole child; nested subtimers not additive"
+    },
+    {
+      "operation": "C2p8B_behavior:independent_review",
+      "category": "cpu_analysis",
+      "argv": "/usr/bin/python /tmp/grad-research-20261106/worktree/scripts/review_behavioral_results.py --complete results/supplemental_analysis_v3/extended_pythia_2p8b_25m_behavior/COMPLETE.json --complete-sha256 b95fd4484f885653dfccbe0580c42fda73c2bae1c22935a538bf8973f9784078 --manifest artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_behavior/manifest.json --manifest-sha256 0170c8aa27ba3bcbf8b9b9c51616ac99cea0f3d806986a645a48372bd8734b0e --output results/C2p8B_behavior_independent_review_v1 --child",
+      "returncode": 0,
+      "wall_seconds": 6.128250114619732,
+      "user_cpu_seconds": 6.495734,
+      "sys_cpu_seconds": 2.315929,
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/results/C2p8B_behavior_independent_review_v1_whole_child_timing.json",
+        "sha256": "20a5495ab38b5e82c1f782af1bc476a39e1841348b8cc5919405b99beb326ee1"
+      },
+      "additive_within_phase": false,
+      "note": "presenter/reviewer whole child; nested subtimers not additive"
+    },
+    {
+      "operation": "C2p8B_behavior:presenter",
+      "category": "cpu_analysis",
+      "argv": "/usr/bin/python /tmp/grad-research-20261106/worktree/scripts/present_behavioral_review.py --review-complete results/C2p8B_behavior_independent_review_v1/COMPLETE.json --review-complete-sha256 2c694ecbcd0d6b46a3b3f67788bc3471fbb2a27e0615e4b679a3dcf57bf1eb1d --output results/C2p8B_behavior_presented_v1 --child",
+      "returncode": 0,
+      "wall_seconds": 3.1908407360315323,
+      "user_cpu_seconds": 3.357923,
+      "sys_cpu_seconds": 1.325967,
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/results/C2p8B_behavior_presented_v1_whole_child_timing.json",
+        "sha256": "4aac06bb75f89a0becbfdccb9f48c2b5425cc5ec80392cac383e9a1fd01c1b62"
+      },
+      "additive_within_phase": false,
+      "note": "presenter/reviewer whole child; nested subtimers not additive"
+    }
+  ],
+  "ledger_notes": [
+    "All values are whole-child timers as produced by time_child.py or by the analysis/review helper itself.",
+    "analyze and check are separate children; the authorize script execs analyze so its preparation body is listed separately and not added to analyze.",
+    "ROOT manual external walls measured this session but not persisted by the child: C1B NLL reviewer 9.16s, C2.8B NLL reviewer 6.31s (python subprocess timer).",
+    "The v8 structured ledger remains the last full inventory; this file only adds post-v8 operations and does not retotal the study.",
+    "GPU evaluation/training wall and energy are reported separately in results/resources_final_24h and the scheduler state; they are not added to CPU timers."
+  ],
+  "study_total_unknown": true
+}

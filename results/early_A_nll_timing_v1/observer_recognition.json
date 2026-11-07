@@ -1,0 +1,40 @@
+{
+  "A_job_count_if_queued": 126,
+  "A_jobs_already_in_master": 0,
+  "A_jobs_recognized_by_observer_frozen_training_or_primary_NLL_sets": 0,
+  "actual_manifest_bound_central_four_gpu_minutes_with_10pct_plus_tail": 26.779886482159302,
+  "advice": {
+    "path": "/tmp/grad-research-20261106/worktree/results/early_A_nll_timing_v1/advice.json",
+    "sha256": "56b7b93b934b0ba8f89d28e03d373b69bf6c82cff805fa0a2160e3e50778d587"
+  },
+  "future_adapter_rule": "Keep immutable expected_seconds/job definitions. Subtract only the A IDs actually charged in raw other_queued_jobs, then add manifest-bound remaining whole-slot rates; completed rc0 jobs cost0, running jobs receive no progress credit. Freeze actual completed timing samples using their definition/output attestations.",
+  "generic_allowance_is_not_measured_cost": true,
+  "generic_allowance_seconds_per_job": [
+    180
+  ],
+  "manifest": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_nll/manifest.json",
+    "sha256": "88dc927c9b4909cca66901608216290e1e435022e4ff925c00875f5099077a90"
+  },
+  "master_jobs": 378,
+  "new_gpu_work_started": false,
+  "observer_source": {
+    "path": "/tmp/grad-research-20261106/worktree/scripts/monitor_runtime_budget.py",
+    "sha256": "aaf4c774b47d00bef8794ac4151f1194ad04c6d6d6dce830ceceb337f331d0f4"
+  },
+  "queue": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_nll/queue.json",
+    "sha256": "a882a80a5728723fbf5a3001f1940562018622a54ed4d5e28f12bed5ff1dd59c"
+  },
+  "queue_or_state_modified": false,
+  "raw_other_queued_jobs_counterfactual_four_gpu_increment_minutes_with_10pct": 103.95000000000002,
+  "raw_other_queued_jobs_counterfactual_increment_slot_seconds": 22680,
+  "schema_version": 1,
+  "scores_parsed": false,
+  "source_master": {
+    "path": "/tmp/grad-research-20261106/worktree/configs/supplemental_v1_queue.json",
+    "sha256": "7f4977b81d24973cab38f2d74b062244cd113bb07351a6410305a25bae6f3566"
+  },
+  "status": "counterfactual_recognition_only_A_not_enqueued",
+  "utc": "2026-11-06T09:25:32.869559+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C1B_analysis_preparation_2225_v1/extended_pythia_1b_100m_behavior_prepare_whole_child_timing.json",
+    "sha256": "fc1ac79d2dfd2047f0ac5127d63d279c8f13d1cdab826956b1681ae265ea1543",
+    "bytes": 1559
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 0.18348610401153564,
+  "CPU_component_pointers": [
+    "/child_user_seconds",
+    "/child_system_seconds"
+  ],
+  "CPU_components": {
+    "child_user_seconds": 0.15014700000000003,
+    "child_system_seconds": 0.03203199999999999
+  },
+  "recorded_inclusive_CPU_seconds": 0.18217900000000004,
+  "original_returncode": 0,
+  "scope": "Original v2 prepare only; no check/analyze, no score output read, no CP/base payload read, no authority or GPU.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall; sum only the named user/system components. Failure rc retained. No calendar-derived elapsed.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

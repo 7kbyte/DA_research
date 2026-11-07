@@ -1,0 +1,40 @@
+{
+  "updated_at_utc": "2026-11-06T06:27:45.839183+00:00",
+  "models": {
+    "pythia-410m": {
+      "status": "calibration_complete",
+      "microbatch": 64,
+      "accumulation": 1,
+      "batch_selection_path": "/tmp/grad-research-20261106/worktree/results/benchmarks/extended_v2_pythia_410m_batch_selection.json",
+      "learning_rate_selection_path": "/tmp/grad-research-20261106/worktree/results/extended/pythia-410m/m64/learning_rate_selection.json",
+      "selected_learning_rate": 3e-05,
+      "lambda_selection_path": "/tmp/grad-research-20261106/worktree/results/extended/pythia-410m/m64/lambda_selection.json",
+      "selected_shared_lambda": 0.05
+    },
+    "pythia-1b": {
+      "status": "calibration_complete",
+      "microbatch": 32,
+      "accumulation": 2,
+      "batch_selection_path": "/tmp/grad-research-20261106/worktree/results/benchmarks/extended_v2_pythia_1b_batch_selection.json",
+      "learning_rate_selection_path": "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/m32/learning_rate_selection.json",
+      "selected_learning_rate": 3e-05,
+      "lambda_selection_path": "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/m32/lambda_selection.json",
+      "selected_shared_lambda": 0.05
+    },
+    "pythia-2.8b": {
+      "status": "calibration_complete",
+      "microbatch": 8,
+      "accumulation": 8,
+      "batch_selection_path": "/tmp/grad-research-20261106/worktree/results/benchmarks/pythia-2.8b_batch_recommendation.json",
+      "learning_rate_selection_path": "/tmp/grad-research-20261106/worktree/results/extended/pythia-2.8b/m8/learning_rate_selection.json",
+      "selected_learning_rate": 1e-05,
+      "lambda_selection_path": "/tmp/grad-research-20261106/worktree/results/extended/pythia-2.8b/m8/lambda_selection.json",
+      "selected_shared_lambda": 0.05
+    }
+  },
+  "driver_source_sha256": "f541c0267733ecce4063ebd789d8326ffbe09173fe305ec14e974b22a2ae5de8",
+  "gpu_work_launched_directly": false,
+  "formal_extended_runs_authorized_by_driver": false,
+  "master_state": "/tmp/grad-research-20261106/worktree/logs/supplemental_job_state.json",
+  "status": "complete"
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "registered_at_utc": "2026-11-06T07:35:32.910464+00:00",
+  "models": [
+    {
+      "model": "pythia-410m",
+      "phase": "extended_v2_pythia_410m_m64_formal",
+      "expected_real_runs": 24,
+      "source_registry": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal_active_registry.json",
+        "sha256": "c7f5c50d6794ba0df0dc3e071198da761f084ad9347ce5d9ce4dddf867ee48bd"
+      },
+      "input_snapshot": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/extended_v2_pythia_410m_m64_formal_input_snapshot.json",
+        "sha256": "5b065523d3a87235bf143ae144655589ea42591f71ef49e4dc430633954a029e"
+      },
+      "audit": "/tmp/grad-research-20261106/worktree/results/extended_phase_equivalence/extended_v2_pythia_410m_m64_formal/audit.json",
+      "proofs": {
+        "final": "/tmp/grad-research-20261106/worktree/results/extended_phase_equivalence/extended_v2_pythia_410m_m64_formal/final_model_equivalence_proofs.json",
+        "best": "/tmp/grad-research-20261106/worktree/results/extended_phase_equivalence/extended_v2_pythia_410m_m64_formal/best_model_equivalence_proofs.json"
+      },
+      "completion": "/tmp/grad-research-20261106/worktree/results/extended_phase_equivalence/extended_v2_pythia_410m_m64_formal/completion.json"
+    },
+    {
+      "model": "pythia-1b",
+      "phase": "extended_v2_pythia_1b_m32_formal",
+      "expected_real_runs": 24,
+      "source_registry": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal_active_registry.json",
+        "sha256": "c106330d947904447fe7c1aa42fa8dbe8a337a683520801b90653d7d6474b8d6"
+      },
+      "input_snapshot": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/extended_v2_pythia_1b_m32_formal_input_snapshot.json",
+        "sha256": "8cdc78f694464d1e0ef179614e00eddfa192b600ace68f7fe044f5d34446832a"
+      },
+      "audit": "/tmp/grad-research-20261106/worktree/results/extended_phase_equivalence/extended_v2_pythia_1b_m32_formal/audit.json",
+      "proofs": {
+        "final": "/tmp/grad-research-20261106/worktree/results/extended_phase_equivalence/extended_v2_pythia_1b_m32_formal/final_model_equivalence_proofs.json",
+        "best": "/tmp/grad-research-20261106/worktree/results/extended_phase_equivalence/extended_v2_pythia_1b_m32_formal/best_model_equivalence_proofs.json"
+      },
+      "completion": "/tmp/grad-research-20261106/worktree/results/extended_phase_equivalence/extended_v2_pythia_1b_m32_formal/completion.json"
+    }
+  ],
+  "complete_physical_cohort_required": true,
+  "cpu_threads": 2,
+  "sequential_checkpoint_loads": true,
+  "algorithm": "sha256_sorted_key_dtype_shape_contiguous_uint8_v1",
+  "proof_comparisons_per_model": 6,
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "endpoints": [
+    "final",
+    "best"
+  ],
+  "comparison_kind": "identical_bank_null_control",
+  "comparison_endpoint_field": "endpoint",
+  "status_passed_means_computation_complete_not_all_equal": true,
+  "false_equality_action": "retain individual evaluation; report actual non-equivalence",
+  "source_state_failure_action": "no completion receipt; no READY",
+  "existing_global_63_audit_changed": false,
+  "gpu_work_started": false,
+  "test_or_behavior_scores_read": false,
+  "script": {
+    "path": "/tmp/grad-research-20261106/worktree/scripts/watch_extended_phase_equivalence.py",
+    "sha256": "5e44afc5c50e9cadf4ae1ec3aed09eaabe34c8469412d0901f88afe4235aee1e"
+  }
+}

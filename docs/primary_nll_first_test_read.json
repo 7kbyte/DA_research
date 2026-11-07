@@ -1,0 +1,41 @@
+{
+  "first_real_test_semantic_read_utc": "2026-11-06T07:14:59.369548+00:00",
+  "first_score_path": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/nll/pythia-410m/baselines/4838ea6576ce899abcef5e3b384d007876744780f5b484a00b9e8999201dd733.json",
+  "manifest_sha256": "d1502bcaff5cdcd75d984a4b8776f1cb4027b596f474835bfe9ed18875d9fd18",
+  "role": "primary",
+  "phase": "formal",
+  "phase_name": "primary",
+  "model_tag": "pythia-410m",
+  "data_family": "main_v3",
+  "heldout_scope": "primary NLL only; behavior and all other phases remain sealed",
+  "before_first_score_json_parse": true,
+  "all_67_jobs_completed_and_integrity_verified": true,
+  "readiness_receipt": "/tmp/grad-research-20261106/worktree/results/primary_nll_readiness.json",
+  "readiness_receipt_sha256": "7a1b72e71487f5c25dbbe62a578a6b7b634f901cf549d78ec86e4542a6269f7f",
+  "authorization": "Root conditional authorization: only after successful enqueue, all67 complete, source/attestation/SHA checks pass",
+  "methods_grids_horizons_and_validation_selection_rules_frozen_before_first_test_access": true,
+  "test_used_for_model_or_hyperparameter_selection": false,
+  "authorization_evidence": {
+    "enqueue_confirmation": "docs/primary_nll_enqueue_confirmation.json",
+    "enqueue_confirmation_sha256": "d14fcb2c058015222d25f4be20e6d78b278c45eb6fe87cea3b3130016d79b71d",
+    "authority": "docs/primary_nll_test_execution_authority.json",
+    "authority_sha256": "df543ba24b1fa963b781888d2b6664ba89370b0695787f82fd0b840392f00fce",
+    "frozen_training_metadata_sha256": {
+      "docs/primary_evaluation_v2_execution_matched_nll_manifest.json": "d1502bcaff5cdcd75d984a4b8776f1cb4027b596f474835bfe9ed18875d9fd18",
+      "configs/primary_evaluation_v2_execution_matched_nll_queue.json": "1428e024f710873a09138ccd47742e2897a6eb25fe3d9b35523153d43e7df346",
+      "results/formal_run_audit.json": "3ab507ecaf9953e7056649f2fee1320467b0ba3b23f65e6584cb876dbae0cf00",
+      "results/extended_formal_freeze.json": "50786c00724008eed6a96cb753b442295152f9dea96d73a2c75f8fcf16033528",
+      "docs/extended_2p8b_horizon_selection.json": "cd9fe9354341464b584d7188c465fe063feeef09fde3f49ef5b4f809ddd8f02d",
+      "configs/lambda_sweep_deterministic_registry.json": "e342e67b23ece61a21ece4187002f6d1eb75c0cb345bf16f50f619060e1eacf4",
+      "configs/nll_scope_execution_freeze_v1.json": "2b9be7cc136b2f85808568a9536b98b1d8499b7eb0d615f03f23c0c7ce4ca77d",
+      "results/supplemental_compute_budget.json": "a7e77d56e865e6fe877343b5c41481ca319d06608b98100dbd51de35c9b2dfc8",
+      "src/replay_study/lambda_analysis.py": "573416f6db4c0b79d8de59f4b8c7632755e193a3f5415692e9abfac0356e20c5"
+    },
+    "analysis_sources_sha256": {
+      "/tmp/grad-research-20261106/worktree/scripts/analyze_primary_nll.py": "488b247fa0bc24e13010fc5fa0616133d26427328181f4c095ff910f8f6ac6e7",
+      "/tmp/grad-research-20261106/worktree/scripts/monitor_primary_nll_readiness.py": "1124ebb9cb8871d78e7b89f6aec1bede7ed09406017d2bb2394b257cc3033fc6",
+      "/tmp/grad-research-20261106/worktree/src/replay_study/nll_v2_analysis.py": "422b8fd39d32eff697c46156280be4557ad39ae818d0f200e841e2536de75b21",
+      "/tmp/grad-research-20261106/worktree/src/replay_study/analysis.py": "05d50004d60acdc4dc098d94f35a36fb1739f3f856267c7d2cdc35e02d96922c"
+    }
+  }
+}

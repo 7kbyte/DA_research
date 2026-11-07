@@ -1,0 +1,135 @@
+{
+  "recorded_at_utc": "2026-11-06T06:52:11.822247+00:00",
+  "status": "timing_sensitivity_only_no_execution",
+  "sources": {
+    "training_budget": {
+      "path": "/tmp/grad-research-20261106/worktree/results/supplemental_training_budget_before_primary_evaluation.json",
+      "sha256": "3adfc79c91c622a3bf199d52a1d99eebf4c0eced5e9cd7f6926c7fe31dfabc27"
+    },
+    "auxiliary_timing": {
+      "path": "/tmp/grad-research-20261106/worktree/results/auxiliary_evaluation_timing_completed_v1.json",
+      "sha256": "db4676e000d7c49ec810cc868243b7951a110b74c65cdca1dc32b91d52b9f78e"
+    },
+    "replay_manifest": {
+      "path": "/tmp/grad-research-20261106/worktree/docs/replay_fit_diagnostic_v2_manifest.json",
+      "sha256": "391baf218cd0e4e13b902236b3ea0fe799518676cbb2fd2357cd6234e51ac019"
+    },
+    "nll_budget": {
+      "path": "/tmp/grad-research-20261106/worktree/results/nll_scope_budget_v1.json",
+      "sha256": "0104c5c13d423f11592e552e008160b095b3ffc9b1ba5efcc8241a3bcf36892a"
+    },
+    "behavior_budget": {
+      "path": "/tmp/grad-research-20261106/worktree/results/behavioral_timing_budget_v1.json",
+      "sha256": "44854c5c042946bf923a855441a33a63d9288b63533b553dcf34cd09fc7c7244"
+    },
+    "primary_nll_manifest": {
+      "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_nll_manifest.json",
+      "sha256": "d1502bcaff5cdcd75d984a4b8776f1cb4027b596f474835bfe9ed18875d9fd18"
+    },
+    "primary_behavior_manifest": {
+      "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+      "sha256": "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934"
+    }
+  },
+  "requested_primary_nll_jobs": 67,
+  "remaining_primary_behavior_jobs": 66,
+  "completed_primary_behavior_initial_not_charged_again": true,
+  "nll_job_kind_counts": {
+    "initial": 1,
+    "final": 33,
+    "best": 33
+  },
+  "replay_fit_full_job_scheduler_elapsed_pools": {
+    "initial": [
+      20.030150413513184,
+      20.02893352508545,
+      20.028258085250854
+    ],
+    "final": [
+      40.07539987564087,
+      40.06935501098633,
+      40.07359600067139,
+      40.07239103317261,
+      40.073410511016846,
+      40.07356548309326
+    ],
+    "best": [
+      30.05381178855896,
+      30.0486741065979,
+      30.05347228050232,
+      30.052353143692017,
+      30.05004572868347,
+      30.053419828414917
+    ]
+  },
+  "source_diagnostic_prediction_tokens_per_case": 1000027,
+  "primary_prediction_tokens_per_case": 1316847,
+  "additional_validation_rate_corpus_loop_seconds_proxy": 4.693926264204889,
+  "nll_elapsed_proxy_seconds_by_kind": {
+    "initial": 24.724076677718074,
+    "final": 44.76932613984576,
+    "best": 34.74773805276385
+  },
+  "nll_elapsed_proxy_method": "Max observed same-kind complete replay-fit whole-job wall plus additional token-scaled validation loop wall; startup/SHA/polling already included, teacher timing nested.",
+  "remaining_training_four_slot_hours_with_10pct": 16.01772341661228,
+  "remaining_window_before_midnight_hours": 17.130049375833334,
+  "master_stop_margin_seconds": 600,
+  "new_initial_scorer_seconds_context_only": {
+    "behavior_pythia-1b_110026c3570c2941690e_initial": 80.14269004017115,
+    "behavior_pythia-2.8b_d2a4a507dd6ebaca1268_initial": 211.1012738570571
+  },
+  "sensitivity_scenarios": [
+    {
+      "adapted_behavior_scorer_factor": 1.0,
+      "nll_whole_job_factor": 1.0,
+      "nll_job_seconds_proxy": 2648.7871950338354,
+      "behavior_job_seconds_proxy": 6843.334620575126,
+      "additional_four_slot_hours_proxy": 0.6591751260839557,
+      "additional_four_slot_hours_with_10pct": 0.7250926386923513,
+      "all_training_plus_primary_evaluation_four_slot_hours_with_10pct": 16.74281605530463,
+      "margin_before_midnight_minutes": 23.23399923172225,
+      "margin_before_master_2350_stop_minutes": 13.233999231722251,
+      "fits_before_midnight": true,
+      "fits_before_master_stop": true
+    },
+    {
+      "adapted_behavior_scorer_factor": 1.25,
+      "nll_whole_job_factor": 1.25,
+      "nll_job_seconds_proxy": 3310.9839937922943,
+      "behavior_job_seconds_proxy": 8349.518147469204,
+      "additional_four_slot_hours_proxy": 0.8097570931431597,
+      "additional_four_slot_hours_with_10pct": 0.8907328024574758,
+      "all_training_plus_primary_evaluation_four_slot_hours_with_10pct": 16.908456219069755,
+      "margin_before_midnight_minutes": 13.29558940581471,
+      "margin_before_master_2350_stop_minutes": 3.2955894058147095,
+      "fits_before_midnight": true,
+      "fits_before_master_stop": true
+    },
+    {
+      "adapted_behavior_scorer_factor": 1.5,
+      "nll_whole_job_factor": 1.5,
+      "nll_job_seconds_proxy": 3973.180792550753,
+      "behavior_job_seconds_proxy": 9855.701674363281,
+      "additional_four_slot_hours_proxy": 0.9603390602023635,
+      "additional_four_slot_hours_with_10pct": 1.0563729662226,
+      "all_training_plus_primary_evaluation_four_slot_hours_with_10pct": 17.07409638283488,
+      "margin_before_midnight_minutes": 3.357179579907168,
+      "margin_before_master_2350_stop_minutes": -6.642820420092832,
+      "fits_before_midnight": true,
+      "fits_before_master_stop": false
+    }
+  ],
+  "central_fits_before_master_stop": true,
+  "all_scenarios_fit_before_master_stop": false,
+  "limitations": [
+    "Four-slot division assumes continuously busy independent GPUs; not a runtime guarantee.",
+    "Whole long-horizon training remains extrapolated from short measured probes; its10% contingency is preserved.",
+    "Replay-fit and primary NLL data differ; token-rate transfer and shared CPU/I/O contention are sensitivity assumptions.",
+    "Behavior adapted checkpoint startup is unmeasured; existing1/1.25/1.5 scorer sensitivity is retained.",
+    "This includes primary67 NLL and66 remaining behavior only; supplemental NLL/behavior still need their independent later budget."
+  ],
+  "scores_or_predictions_deserialized": false,
+  "gpu_work_started": false,
+  "training_or_scientific_conditions_changed": false,
+  "producer_source_sha256": "f4532f33699d026627b2b6a892f6f538054496bb6ad8e43e1db5cca5e467cf31"
+}

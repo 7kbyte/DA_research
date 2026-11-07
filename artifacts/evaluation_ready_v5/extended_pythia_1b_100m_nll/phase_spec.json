@@ -1,0 +1,218 @@
+{
+  "schema_version": 2,
+  "science_frozen": true,
+  "phases": [
+    {
+      "data_family": "extended_v1",
+      "expected_phase": "formal",
+      "expected_rows": 24,
+      "family": "C",
+      "model": {
+        "path": "/tmp/grad-research-20261106/models/pythia-1b-final",
+        "revision": "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      },
+      "model_tag": "pythia-1b",
+      "name": "extended_pythia_1b_100m",
+      "protocol": {
+        "path": "/tmp/grad-research-20261106/worktree/docs/extended_v2_pythia_1b_m32_formal_protocol.json",
+        "sha256": "90cb3dd20893f5b755ed3710681efe91b5323580ebf3caaba090a846e7013f53"
+      },
+      "protocol_expect": {
+        "data_version": "extended_v1",
+        "formal_target_prediction_tokens": 100000000,
+        "model": "pythia-1b",
+        "model_revision": "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2",
+        "shared_lambda": 0.05,
+        "shared_learning_rate": 3e-05
+      },
+      "registry": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal_active_registry.json",
+        "sha256": "c106330d947904447fe7c1aa42fa8dbe8a337a683520801b90653d7d6474b8d6"
+      },
+      "role": "extended",
+      "source_proof_files": {
+        "/tmp/grad-research-20261106/worktree/artifacts/provenance/extended_v2_pythia_1b_m32_formal_input_snapshot.json": "8cdc78f694464d1e0ef179614e00eddfa192b600ace68f7fe044f5d34446832a",
+        "/tmp/grad-research-20261106/worktree/configs/supplemental_evaluation_preparation_v4.json": "df35f09d35ddc5b9aab95e5e3cb42f7f042b86b5f87b81204a34ac83ed0f72a9",
+        "/tmp/grad-research-20261106/worktree/docs/supplemental_evaluation_preparation_v4_execution.json": "2a78edb949667804cd45fc7dbd43dcd5baea01ed49ffa3f4d08aee50135d210a",
+        "/tmp/grad-research-20261106/worktree/results/extended_formal_freeze.json": "50786c00724008eed6a96cb753b442295152f9dea96d73a2c75f8fcf16033528",
+        "/tmp/grad-research-20261106/worktree/scripts/prepare_supplemental_evaluations.py": "dd641ed5d5d0ab750fb400e1fc2add313b4ea72a38d01aa4a7f3272fc8fee26d",
+        "/tmp/grad-research-20261106/worktree/scripts/prepare_supplemental_evaluations_v5.py": "f533a7e4b0104c7ab422d5a6836b740dd56ba04982907db091b7e2df03efa191",
+        "/tmp/grad-research-20261106/worktree/scripts/schedule_jobs.py": "c5c264b058ff655315ef896ccb0a89b471637c6612013a51999fc6f48b2d16d9",
+        "/tmp/grad-research-20261106/worktree/scripts/stat_bound_digest_cache.py": "9cc01b493b46a5bf391a7c649a379d87011fff077ddeea701eaf8a84bdb568e2",
+        "/tmp/grad-research-20261106/worktree/results/extended_phase_equivalence/extended_v2_pythia_1b_m32_formal/completion.json": "e89420de3136e3e7c966c5a6a951063a06c774a3dba524ea1348394b285e1cb4",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal_active_registry.json": "c106330d947904447fe7c1aa42fa8dbe8a337a683520801b90653d7d6474b8d6",
+        "/tmp/grad-research-20261106/worktree/scripts/watch_extended_phase_equivalence.py": "5e44afc5c50e9cadf4ae1ec3aed09eaabe34c8469412d0901f88afe4235aee1e",
+        "/tmp/grad-research-20261106/worktree/scripts/audit_extended_runs.py": "605135db92b39e334ba3b2ac8a2b84152e349c6d6db12f6aac4976e712a07653",
+        "/tmp/grad-research-20261106/worktree/scripts/audit_formal_runs.py": "b2997465717ddd46b5f80924a022d6a82bafe65f5d348636852fdc10836a2362",
+        "/tmp/grad-research-20261106/worktree/scripts/evaluation_plan.py": "1f68bab77a0e4d9953bcfa85306702dbc21d3ce5c85691218e06ea15df75196f",
+        "/tmp/grad-research-20261106/worktree/scripts/make_model_equivalence_proofs.py": "8971019040ff1c66e6007fc78ec05a4d16c179f5752a05d79f9b7d4a2de2316c",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal_active_registry.json": "c7f5c50d6794ba0df0dc3e071198da761f084ad9347ce5d9ce4dddf867ee48bd",
+        "/tmp/grad-research-20261106/worktree/artifacts/provenance/extended_v2_pythia_410m_m64_formal_input_snapshot.json": "5b065523d3a87235bf143ae144655589ea42591f71ef49e4dc430633954a029e",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal_queue.json": "92d28d02a7b4194b9c3becec18a4cb197bcb4643dff99f431629e51c6150aa35",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal_queue.json": "63ab9858bfbb859b2e9bb520f7caf6ca973aeed70157a6d70a007fa1c8747d46",
+        "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B0_s11_w0_summary.json": "56af99273c832c9cee0be1b9d96b89230e206d62bca5664afe003a6557b000d9",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B0_s11_w0.json": "425b616c52703bbc822f41437cdac7b905a23343745ac4b40244b5f7a4a54c32",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_B0_s11_w0/events.jsonl": "1be089fcc6ddc2bc24c4506571f8e5e6afb6c3db8d56511dfb45fc2acc417b6c",
+        "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B1_s11_w0p05_summary.json": "760f3df5b79f4390b7f316250a7096bca731955ca35c617587e166961bedb5b7",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B1_s11_w0p05.json": "8a31928649cd4d944557de21ecd1a444abeab912717431dac9b3fc85d5d7c9d9",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_B1_s11_w0p05/events.jsonl": "002143a17b13c2c650f0e49d82b0ca385a7f48eaf090638c93ca99a55407f6e9",
+        "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B2_s11_w0p05_summary.json": "405b656dc25f55ee316567a8bd0c29b95490c61be11154a053d462f31cd18722",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B2_s11_w0p05.json": "e640ccd647681f5c7fd086e7e210efa9275d200a868d70eeea1fdd9926d3d8ec",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_B2_s11_w0p05/events.jsonl": "052598cf63c859cc668d96847f5f3cfe1e060381711dc39448db0cb486280901",
+        "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B3_s11_w0p05_summary.json": "8b4e9015dcb3594720864cd03402ba486c75e0f93833a7e9c482c9ee065db2fa",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B3_s11_w0p05.json": "8d576a72de708ce293531cae49e990ad2c2a39be8b5c2a970ad0927110df040b",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_B3_s11_w0p05/events.jsonl": "1180939d2bef898467e8e8a52ee41879a3757a88f1a90573e52ed298d4b5ea19",
+        "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B4_s11_w0p05_summary.json": "daa02e909621479797bf327cb38cd5a8fd086bbe23867a74775a7bf9c21b9eb7",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B4_s11_w0p05.json": "b608f35518c4ea4f7e2b0e67f6dca1e8f7c3c5e969ebf28b7158782ca3b7085f",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_B4_s11_w0p05/events.jsonl": "77e50a799cb0404e4265ef2aef373944ba48c4d3956604702457f3cf0d24970b",
+        "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_D_s11_w0p05_summary.json": "5cbea215eeefd0e92e6de437a4661be9f2bf6981fed7bbf3ab79d08bd4b1a462",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_D_s11_w0p05.json": "66303ad05fce3b33c70cd413720b8171b7288e4de6510fa0bb77553b1c77ed91",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_D_s11_w0p05/events.jsonl": "185635c59f09576d786fe69094dd844618d7fd5886735b9de765ffe67258bb74",
+        "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_M_s11_w0p05_summary.json": "583246054774d66f65e33e345666a5ea56f0d6ea685b47c5d9fa8facd167e23a",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_M_s11_w0p05.json": "90416ccc5a668c283223919cad6185ce5a6ee0691799811a82af0d1c86b55a92",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_M_s11_w0p05/events.jsonl": "b3a99c18f6c9c35f4124d515b4aa966beacd154b210fa5391c66469d2d1e75c1",
+        "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_C_s11_w0p05_summary.json": "a15b122e1fc6d3d737e553db95903a8a35484b2633cc5012f6e9ee3b99e057bb",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_C_s11_w0p05.json": "f1fe72f82bbc1e8f0f3f38dc1f6d1765b24ac03a60f6b7bac41f322523a30bda",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_C_s11_w0p05/events.jsonl": "5237cca51f78095d36540a4a1686ddff3907b0d87e26d43a7f49e3952a691b47",
+        "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B0_s22_w0_summary.json": "1ab49142f4a340ec31aa4141783b2e05dfea0aa12f5ced0963d5b045f1dc317a",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B0_s22_w0.json": "e3afe50cb05aa45bb31d809a4568d984bbee6c51d5449ac65a99df64736bfb50",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_B0_s22_w0/events.jsonl": "75493041fd16d6a3831dcaaf60855838746f34da3d85c3cbd66e97d61fa833dc",
+        "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B1_s22_w0p05_summary.json": "59a810a2d22417e8f91e4906af8ce009f73d7dafff2bf051ebce5ae1cc6e8622",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B1_s22_w0p05.json": "598f0bdbbbe446bb4ce14093fad393ffbc16ceafed80ccacb94feee4f23c15fe",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_B1_s22_w0p05/events.jsonl": "395000ce8e8af699394a57b5dbd1e02c6698e2c1f7000b4de6b6a80bdb31b56b",
+        "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B2_s22_w0p05_summary.json": "db2575858b83dbaa9951c5a7db43fe5d584970e8e2fefb4e064086aa350ed752",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B2_s22_w0p05.json": "ef88ac7ee04f91f85abca6fc1e8da1d8bb92155d4b22c5d5634730c9c12c2b80",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_B2_s22_w0p05/events.jsonl": "715a753ff2d138a0aa78c4db39a37c6d24df2dbaca5d1929b8b15c916ff33b37",
+        "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B3_s22_w0p05_summary.json": "49807091308611e2948d60a04ba1c3a22b5ce7a4738539c8e07f7fedd47e9464",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B3_s22_w0p05.json": "6534daddd1d66069457097b3d433683ccaafc80f4d84d6ec8a78e3481fda8c80",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_B3_s22_w0p05/events.jsonl": "4399f0c663e57cfd389230be520bcaff14dbf38b288f29f04a88a6851012afcf",
+        "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B4_s22_w0p05_summary.json": "b2e307ac61bb7a2668ef796e75c5ea25d65394f28758f6eabf83d2051f8da260",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B4_s22_w0p05.json": "7a113d5321f746a71de312992dd7463fbbadafe9cf4028092d537b6a3039881b",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_B4_s22_w0p05/events.jsonl": "1b072b2f454eb17a02ea0a8c70b5639a59782b20dd7dea61d14de0c5ffc2a3a0",
+        "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_D_s22_w0p05_summary.json": "4bda748cc1752e9ad1544f6e8cf9770e51dbb2d202af3d4796be475ec7c95d9b",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_D_s22_w0p05.json": "7399f23f82b6373d207bf2392ae8ad9cc4c1487b0b8776c9a93732f665e21365",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_D_s22_w0p05/events.jsonl": "c8478a1e0ebf048ed55dd382e8bb4b3ed7fba3590bdf0f6d208f7682e15cef3f",
+        "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_M_s22_w0p05_summary.json": "4603cdc569a31a8809880d236e9369a06c5c11800bbf6ec58f408ddb11c9b936",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_M_s22_w0p05.json": "269f47d1aa7fc3cbfefe2b9ea60ac5110767f1db16f7d1ad7a002fdb0c93ea52",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_M_s22_w0p05/events.jsonl": "3c910028c1d40ba4ee79addc1d14a1d87a765fd3e70df8b1c37933939e3d4187",
+        "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_C_s22_w0p05_summary.json": "7add9c3bf1a48a291f60256ef308574b3f7edd41f67b7a4e423b83cd406b5f05",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_C_s22_w0p05.json": "68fb0a94a5cc71d8bb191ffa2e6cf950f3539b4e732cf1c0595b7b7b65a115dd",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_C_s22_w0p05/events.jsonl": "c1a3d0b9bb80054d438925f6d4373aa70ca6c8ffb1338761d363fa6287e45422",
+        "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B0_s33_w0_summary.json": "7ad856b579c83e0127fe8f6706870ea1efa0471f920daf71a9e00a49c41f3681",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B0_s33_w0.json": "14485bf65245824f7253b6846be203ae205bcc1058d2977ff71f372dcf09aa49",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_B0_s33_w0/events.jsonl": "6c8e9cd8f0cba124a7c0d21528a89a3d7f4dfa7ef76e222273b27ed85106b461",
+        "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B1_s33_w0p05_summary.json": "686f76b0eab16a865ab5a4e01e4593d53f2210f7d2b7c714354d9f90fd1d6f6a",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B1_s33_w0p05.json": "250e886bd0bbb8044fb27e251da4a2b203770eaa90a36582c203291ba1d92a06",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_B1_s33_w0p05/events.jsonl": "59c5ccd479449b394e6b1ff1b21436a2edc4f1a616b22650c36269d68f320912",
+        "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B2_s33_w0p05_summary.json": "2ee567b162529601dad774dfa750c7e3e7f4bab9251fa41db15de5dfd15c38d0",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B2_s33_w0p05.json": "fa10e3bb0715ed81bc4a51bced7aa5fb158bba4101a8a0d9a969d83825701aa7",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_B2_s33_w0p05/events.jsonl": "475c51c53e81317bac506216243ca6cdd2cd3ad11e70a287f75ce022cd3108ee",
+        "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B3_s33_w0p05_summary.json": "162f3da23ba2652c3582db089489290a2adc83cf2ed7ded6b7e0853a6be3ea97",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B3_s33_w0p05.json": "f26e9b43a512b037171fc1bbf440aef0211fe2881145b801e581f48633179569",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_B3_s33_w0p05/events.jsonl": "71ebd7f79de842acbc424df916d01541e8eff6baf745b91157f33f37d3db6bbe",
+        "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_B4_s33_w0p05_summary.json": "92640a61f4c0487590c2a1dd09023d973b4f1ef384b16b67ced06d3c4d83866b",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B4_s33_w0p05.json": "9a80d2193fda0ff2084e5ba8a3cf9bf97dde5761ba22290cfddc189c19d20056",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_B4_s33_w0p05/events.jsonl": "4873bb515bcede4a7a89e4f8359a36da435a35cb60c2f1407a49f9dbb1ef9705",
+        "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_D_s33_w0p05_summary.json": "62cd000647607fd5c5ff0e901a4c37c5077c567b906112dcef4eb0527f8dd7a5",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_D_s33_w0p05.json": "0c4b9aedab8fd1bd0f44d68551b73fc8561e493fb2c809c38d8f50522349a552",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_D_s33_w0p05/events.jsonl": "93d948232b17537600582f24df43a3476eeacce6d3b843b56f16bb5d74ff99e3",
+        "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_M_s33_w0p05_summary.json": "9b2df1bfd48943d03546365e4766f73b6f9b791fb7aa069cd6e83e242bd8908b",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_M_s33_w0p05.json": "8ff1adbfa5ef573f169919f1ce66b515a3fdabd7145a689fd81a8202b0be425f",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_M_s33_w0p05/events.jsonl": "358961837270a85716a1f716c1b71b8046a9116d7071e87431c285299d413b51",
+        "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_formal_C_s33_w0p05_summary.json": "d6acebb587276f39e303f4391ea6e4545932ff04ae47b25acc8f4ec19603b6a9",
+        "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_C_s33_w0p05.json": "b548bb6dd1591309113c2d2c9433e98a8fff2380877ca636ab34285158c3e1e1",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_C_s33_w0p05/events.jsonl": "8c7e07bc4ca6931505491876bddb963d1d4feee862fe572d628e4dbf41721d4b",
+        "/tmp/grad-research-20261106/worktree/results/extended_phase_equivalence/extended_v2_pythia_1b_m32_formal/audit.json": "a60f483e66f07cf4b30455157ad6a651e0d2be9e44e6aa78d99bcb3449308ba6",
+        "/tmp/grad-research-20261106/worktree/results/extended_phase_equivalence/extended_v2_pythia_1b_m32_formal/final_model_equivalence_proofs.json": "6e5db93b0208b41cada6aa823a0ec5baa56e199e990557796fc87bf80f9bba47",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_B4_s11_w0p05/checkpoints/latest.pt": "8619261b6559ce90c198a2f722bc00baeb52460b4b812b73e3870763fd2dda1c",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_D_s11_w0p05/checkpoints/latest.pt": "cb3c81426113e304c407b9ebf407f2dd2e41ce6d3b517da9d5de247bee835309",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_B4_s22_w0p05/checkpoints/latest.pt": "ff54fa5c184031f3b5d50e0a5911160200352635237605ef56a009f8e10cf46d",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_D_s22_w0p05/checkpoints/latest.pt": "2bf0361bef3083fa0adba392f351e72cc9a8412c8165528ce73f509758298f41",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_B4_s33_w0p05/checkpoints/latest.pt": "8b05a14a7820778d25774113e5f1892755421bf363561f3556163b1941d7ea17",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_D_s33_w0p05/checkpoints/latest.pt": "c1e3b06d590eed7c9cc6b42275a85e85b22c87faa3740c567d7d74bb86403754",
+        "/tmp/grad-research-20261106/worktree/results/extended_phase_equivalence/extended_v2_pythia_1b_m32_formal/best_model_equivalence_proofs.json": "545c9e9486b887856198dc1be5de817a7512622c08f4bccb424e19f65737209d",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_B4_s11_w0p05/checkpoints/checkpoint_best.pt": "af699b61e5429e084fa70a42b5d9cd2fb0f0fb399307fd9bb2d43e3688f262a0",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_D_s11_w0p05/checkpoints/checkpoint_best.pt": "ed68f2c1010296188911f138cab42374899bb97248d2a01a6a0dae1da191748e",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_B4_s22_w0p05/checkpoints/checkpoint_best.pt": "cac27769b38cd7284fb08d02a60384190ae753803f5a1985796dafb2d29249b0",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_D_s22_w0p05/checkpoints/checkpoint_best.pt": "113e6c3ea49d91ba2db4583235c361a712fc71bc79919c10231851f2cf11a01d",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_B4_s33_w0p05/checkpoints/checkpoint_best.pt": "cdb09cd1b66c013cfd080db35bb7b77f3cee21e5efc75b5bfcf998057d71b1ca",
+        "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_D_s33_w0p05/checkpoints/checkpoint_best.pt": "83e94acc13fda8fe2958f4def6cddc3bf4ba732902febf09f72decfbf7d44c9b",
+        "/tmp/grad-research-20261106/worktree/configs/behavioral_scope_execution_freeze_v2.json": "ebb86bc4ace0c3e4426b3830ea40a7963697163a98e59b8ca2fdf9746a186962",
+        "/tmp/grad-research-20261106/worktree/configs/nll_scope_execution_freeze_v1.json": "2b9be7cc136b2f85808568a9536b98b1d8499b7eb0d615f03f23c0c7ce4ca77d"
+      },
+      "test_data": {
+        "c4": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_test.pt",
+          "sha256": "e81744326b66513afdfc02cc3b74b9c92908cd2359f13d0eac2b1a99bf516747"
+        },
+        "target": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_test.pt",
+          "sha256": "f19f802f985d929ecb3a623e3255785159b1fcb895c8f439bc037a7012d29718"
+        },
+        "wikitext": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_test.pt",
+          "sha256": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f"
+        }
+      },
+      "training_data": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_train.pt",
+        "sha256": "d75095a4c1847f72168d7cad1fd56da8d82ac7f5b17c43673dd70ed7eae118b0"
+      },
+      "validation_data": {
+        "c4": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_validation.pt",
+          "sha256": "ee0389143e28fc8d0e2e3f1107674e7a8d8a178d324c350820223937d7bcb274"
+        },
+        "target": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_validation.pt",
+          "sha256": "59b2bb2d89104652785915e08c45ad3f8815037461da5216de42408ccfbb3ea0"
+        },
+        "wikitext": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_validation.pt",
+          "sha256": "4018c33bd6e36b45aafcb5b5129ed18cbd480613ccbed0f8cdf57a02e8b0e85c"
+        }
+      },
+      "science_frozen": true,
+      "checkpoints": [
+        "final",
+        "best"
+      ],
+      "behavior": {
+        "batch_size": 16,
+        "max_length": 2048
+      }
+    }
+  ],
+  "checkpoints": [
+    "final",
+    "best"
+  ],
+  "prior_plans": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_nll_manifest.json",
+      "sha256": "d1502bcaff5cdcd75d984a4b8776f1cb4027b596f474835bfe9ed18875d9fd18"
+    }
+  ],
+  "model_equivalence_proofs": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/formal_model_equivalence_proofs.json",
+      "sha256": "bdd4ccf7de88a9baba973cbb1907ecd90a50f693ee9d75c48f0e019bfa8048be"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/extended_phase_equivalence/extended_v2_pythia_1b_m32_formal/final_model_equivalence_proofs.json",
+      "sha256": "6e5db93b0208b41cada6aa823a0ec5baa56e199e990557796fc87bf80f9bba47"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/extended_phase_equivalence/extended_v2_pythia_1b_m32_formal/best_model_equivalence_proofs.json",
+      "sha256": "545c9e9486b887856198dc1be5de817a7512622c08f4bccb424e19f65737209d"
+    }
+  ],
+  "behavior": {
+    "data_root": "/tmp/grad-research-20261106/worktree/artifacts/behavioral",
+    "batch_size": 16,
+    "max_length": 2048,
+    "data_manifest_sha256": "5c91890603f5149fb2f2f62b29edd16ee2044d3602d75265f819f35a501b7d0f",
+    "harness_manifest_sha256": "2301b180eddd3a65d028f8bcb570f8e8ad2b63017a1f184b0174c16eb819452f"
+  },
+  "inference_launch_authorized_by_preparation": false
+}

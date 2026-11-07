@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_handoff_actual_independent_review_v1/whole_child_timing.json",
+    "sha256": "cad6d61c00e9c79c9cb16bd4fec5ef61ccae95d39d340433227ed2839bd30ef5",
+    "bytes": 391
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 0.4143935553729534,
+  "CPU_component_pointers": [
+    "/user_cpu_seconds",
+    "/sys_cpu_seconds"
+  ],
+  "CPU_components": {
+    "user_cpu_seconds": 0.314725,
+    "sys_cpu_seconds": 0.06276899999999999
+  },
+  "recorded_inclusive_CPU_seconds": 0.377494,
+  "original_returncode": 0,
+  "scope": "One complete read-only actual handoff metadata/FIFO review child; no nested work added",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall; sum only the named user/system components. Failure rc retained. No calendar-derived elapsed.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

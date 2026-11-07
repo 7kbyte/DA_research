@@ -1,0 +1,146 @@
+{
+  "GPU_work_or_queue_mutation_authorized_by_this_receipt": false,
+  "all_three_models_have_100_steps_excluding_10_warmup": true,
+  "hypothetical_main_behavior_66_scenarios": [
+    {
+      "66_forward_slot_seconds_proxy": 6929.13225025535,
+      "existing_training_forecast_already_contains_10pct": true,
+      "fits_before_2350_under_timing_proxy": true,
+      "four_slot_increment_with_10pct_and_dispatch_tail_seconds_proxy": 1958.0047949585196,
+      "hypothetical_margin_before_2350_minutes": 21.18717185822244,
+      "name": "low",
+      "per_job_whole_slot_seconds_proxy": 104.98685227659621
+    },
+    {
+      "66_forward_slot_seconds_proxy": 8880.43755422384,
+      "existing_training_forecast_already_contains_10pct": true,
+      "fits_before_2350_under_timing_proxy": true,
+      "four_slot_increment_with_10pct_and_dispatch_tail_seconds_proxy": 2509.3963694890094,
+      "hypothetical_margin_before_2350_minutes": 11.997312282714276,
+      "name": "central",
+      "per_job_whole_slot_seconds_proxy": 134.55208415490665
+    },
+    {
+      "66_forward_slot_seconds_proxy": 11130.744549094145,
+      "existing_training_forecast_already_contains_10pct": true,
+      "fits_before_2350_under_timing_proxy": true,
+      "four_slot_increment_with_10pct_and_dispatch_tail_seconds_proxy": 3145.2785733425126,
+      "hypothetical_margin_before_2350_minutes": 1.3992755518225621,
+      "name": "high",
+      "per_job_whole_slot_seconds_proxy": 168.6476446832446
+    }
+  ],
+  "limitations": [
+    "Early evaluation moves the same work; its time must leave the later evaluation budget once completed.",
+    "First B4 samples cover one method per model, not all future methods or contention patterns.",
+    "Training steps omit validation/checkpoint time; the source forecast includes those as separate costs.",
+    "The observer uses model/method pilot factors outside measured methods and is not a completion guarantee.",
+    "Root alone decides whether the unchanged remaining 66 evaluation definitions enter the single master."
+  ],
+  "margin_before_master_2350_stop_minutes": 53.8205851075311,
+  "master_status_counts": {
+    "completed": 440,
+    "pending": 60,
+    "running": 4
+  },
+  "minimum_steps_observed": 100,
+  "models": {
+    "pythia-1b": {
+      "complete_long_runs": 0,
+      "latest_checkpoint_seconds_proxy": 15.90097043231914,
+      "model_only_best_save_seconds_proxy": 5.087950391792937,
+      "qualifying_sample_count": 1,
+      "remaining_seconds_proxy": 73656.04685811624,
+      "samples": [
+        {
+          "event_path": "/tmp/grad-research-20261106/runs/extended_v2_pythia_1b_m32_formal_B4_s11_w0p05/events.jsonl",
+          "group": "B4",
+          "id": "extended_v2_pythia_1b_m32_formal_B4_s11_w0p05",
+          "observed_to_probe_seconds_ratio": 0.9993073533307241,
+          "sample": {
+            "sampled_target_prediction_tokens": 8339520,
+            "sampled_training_seconds": 211.5505017451942,
+            "seconds_per_target_prediction_token": 2.5367227579668157e-05,
+            "steps_observed": 265,
+            "warmup_steps_excluded": 10
+          },
+          "trace_sha256": "f93c39296d428f74c1f012d91775819a5f30f22ca7cb959aa06f5ffa29968124"
+        }
+      ],
+      "validation_seconds_per_point_proxy": 23.424528323506053
+    },
+    "pythia-2.8b": {
+      "complete_long_runs": 0,
+      "latest_checkpoint_seconds_proxy": 50.83583491001474,
+      "model_only_best_save_seconds_proxy": 15.034239164308497,
+      "qualifying_sample_count": 1,
+      "remaining_seconds_proxy": 31515.8612292604,
+      "samples": [
+        {
+          "event_path": "/tmp/grad-research-20261106/runs/extended_v2_pythia_2p8b_m8_h25m_formal_B4_s11_w0p05/events.jsonl",
+          "group": "B4",
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B4_s11_w0p05",
+          "observed_to_probe_seconds_ratio": 0.9896678056068701,
+          "sample": {
+            "sampled_target_prediction_tokens": 3041472,
+            "sampled_training_seconds": 209.44432616233826,
+            "seconds_per_target_prediction_token": 6.886281582152926e-05,
+            "steps_observed": 103,
+            "warmup_steps_excluded": 10
+          },
+          "trace_sha256": "214149eb7ea1e7f399957ba576d2f5994ace80d5664f3fa8fb6127c2eb55348c"
+        }
+      ],
+      "validation_seconds_per_point_proxy": 58.87900860117454
+    },
+    "pythia-410m": {
+      "complete_long_runs": 0,
+      "latest_checkpoint_seconds_proxy": 5.180587067219772,
+      "model_only_best_save_seconds_proxy": 1.571007221152908,
+      "qualifying_sample_count": 1,
+      "remaining_seconds_proxy": 50419.242070648834,
+      "samples": [
+        {
+          "event_path": "/tmp/grad-research-20261106/runs/extended_v2_pythia_410m_m64_formal_B4_s11_w0p05/events.jsonl",
+          "group": "B4",
+          "id": "extended_v2_pythia_410m_m64_formal_B4_s11_w0p05",
+          "observed_to_probe_seconds_ratio": 0.9779157384395295,
+          "sample": {
+            "sampled_target_prediction_tokens": 12329408,
+            "sampled_training_seconds": 215.66956465691328,
+            "seconds_per_target_prediction_token": 1.74922887341317e-05,
+            "steps_observed": 387,
+            "warmup_steps_excluded": 10
+          },
+          "trace_sha256": "4fc45148d9d661e5fe09bcdca9d7391a761320e39a491d2bc9819ea160784de7"
+        }
+      ],
+      "validation_seconds_per_point_proxy": 18.439938265242073
+    }
+  },
+  "producer": {
+    "path": "/tmp/grad-research-20261106/worktree/scripts/watch_first_C_steady.py",
+    "sha256": "9bc999ee41663e2c00281886b32d8a5282eebe50cd2c8b1f913df48e262d87ed"
+  },
+  "schema_version": 1,
+  "scientific_conditions_changed": false,
+  "scores_or_predictions_read": false,
+  "source_budget": {
+    "path": "/tmp/grad-research-20261106/worktree/results/evaluation_timing_budget_v4.json",
+    "sha256": "a5154c67177e5d43bc77593c8927ebc06c330989197e8db0dc701a80da381328"
+  },
+  "source_observer_age_seconds": 5.522988,
+  "source_observer_healthy_and_fresh": true,
+  "source_observer_updated_at_utc": "2026-11-06T11:01:28.360865+00:00",
+  "source_runtime_snapshot": {
+    "path": "/tmp/grad-research-20261106/worktree/results/C_steady_timing_v1/all_three_models_steady_runtime.json",
+    "sha256": "449f20561fe0ab164a976d423d944340bed1111827ba034db5c83ffdeadda661"
+  },
+  "status": "all_three_models_qualified",
+  "total_compute_reduction_due_to_earlier_evaluation_seconds": 0,
+  "training_finish_utc_with_existing_10pct_proxy": "2026-11-06T22:56:16.287882+00:00",
+  "unknown_queued_job_allowances_requiring_reconciliation": [],
+  "utc": "2026-11-06T11:01:33.883853+00:00",
+  "warmup_steps_excluded": 10,
+  "watcher_pid": 3127444
+}

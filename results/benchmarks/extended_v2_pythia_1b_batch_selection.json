@@ -1,0 +1,29 @@
+{
+  "model": "pythia-1b",
+  "selected_microbatch": 32,
+  "gradient_accumulation_steps": 2,
+  "effective_batch_chunks": 64,
+  "candidate_adopted": true,
+  "candidate_throughput_ratio": 1.0868146100243847,
+  "candidate_reserved_headroom_bytes": 38062391296,
+  "selection_policy": {
+    "minimum_throughput_ratio": 1.05,
+    "minimum_reserved_headroom_bytes": 8589934592,
+    "effective_batch_chunks": 64,
+    "steady_steps": "2-10",
+    "selection_inputs": "throughput and memory only; no validation or test losses",
+    "tie_rule": "retain the previously measured microbatch"
+  },
+  "failed_attempts": 0,
+  "failed_attempt_seconds": 0,
+  "formal_configs_changed": false,
+  "root_controls_formal_budget": true,
+  "baseline": {
+    "path": "/tmp/grad-research-20261106/worktree/results/benchmarks/benchmark_extended_pythia_1b_m16_s101.json",
+    "sha256": "987815bb523df048ba898141fd8a081c9de355fafd02fbaa6c00f483910d027b"
+  },
+  "candidate": {
+    "path": "/tmp/grad-research-20261106/worktree/results/benchmarks/supplemental_v1_benchmark_pythia_1b_m32.json",
+    "sha256": "2c824f3ebf9b9139a6a1aac52a87988d240b0ac50fec7382e655926df3ade750"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "launched_at_utc": "2026-11-06T07:46:39.382385+00:00",
+  "pid": 3058367,
+  "log": "/tmp/grad-research-20261106/worktree/logs/auxiliary_validation_analysis_watch_v2.log",
+  "progress": "/tmp/grad-research-20261106/worktree/logs/auxiliary_validation_analysis_watch.json",
+  "protocol": "/tmp/grad-research-20261106/worktree/docs/auxiliary_validation_analysis_protocol_v2.json",
+  "protocol_sha256": "dea9851ec294bc04f10f867380c3f855ba9c5c3395416062d1ab10062fa312bd",
+  "cpu_threads": 2,
+  "gpu": false,
+  "access": "validation and scheduler logs only",
+  "tests": {
+    "command": "PYTHONPATH=src OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 pytest -q",
+    "passed": 346,
+    "elapsed_seconds": 12.07,
+    "new_tests_passed": 23
+  },
+  "supersedes_prepared_only_protocol": "/tmp/grad-research-20261106/worktree/docs/auxiliary_validation_analysis_protocol_v1.json",
+  "previous_watcher_pid": 3057259,
+  "previous_watcher_stopped_before_any_adapted_validation_read": true,
+  "reason": "Add frozen master job definition SHA, rc0, and required output gate before any B/C endpoint read"
+}

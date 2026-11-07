@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/primary_behavior_analysis_actual_v1/capture_timing/whole_child_timing.json",
+    "sha256": "791677db800fee2133796e4f04651186461a891c1c037930a0f9215bfa4d280e",
+    "bytes": 514
+  },
+  "original_wall_pointer": "/wall_seconds",
+  "wall_seconds": 0.04310901463031769,
+  "CPU_component_pointers": [
+    "/user_cpu_seconds",
+    "/sys_cpu_seconds"
+  ],
+  "CPU_components": {
+    "user_cpu_seconds": 0.035926,
+    "sys_cpu_seconds": 0.00599
+  },
+  "recorded_inclusive_CPU_seconds": 0.041916,
+  "original_returncode": 0,
+  "scope": "Whole direct helper child spawn through exit. Any detached successor scheduler lifetime is excluded.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall; sum only the named user/system components. Failure rc retained. No calendar-derived elapsed.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

@@ -1,0 +1,52 @@
+{
+  "manifest": "/tmp/grad-research-20261106/worktree/docs/replay_fit_diagnostic_v2_manifest.json",
+  "manifest_sha256": "391baf218cd0e4e13b902236b3ea0fe799518676cbb2fd2357cd6234e51ac019",
+  "job_id": "replay_fit_v1_seed11_initial",
+  "baseline_group": "90a234fe1638fc4129b6340799c3bbbea859e607d9c5518f81551ca3c9a0beca",
+  "checkpoint_sha256": null,
+  "verified_frozen_inputs": true,
+  "weights_identity": null,
+  "source_model_equivalence": null,
+  "actual_argv": [
+    "/usr/bin/python",
+    "/tmp/grad-research-20261106/worktree/scripts/run_evaluate.py",
+    "--model",
+    "/tmp/grad-research-20261106/models/pythia-410m-final",
+    "--revision",
+    "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+    "--device",
+    "cuda:0",
+    "--batch-size",
+    "16",
+    "--precision",
+    "bf16",
+    "--attention-backend",
+    "auto",
+    "--deterministic-algorithms",
+    "--cudnn-deterministic",
+    "--no-cudnn-benchmark",
+    "--allow-tf32-matmul",
+    "--allow-tf32-cudnn",
+    "--teacher-kl",
+    "--include-chunks",
+    "--corpus",
+    "bank=/tmp/grad-research-20261106/worktree/artifacts/replay_fit_diagnostic_v1/seed11_bank.pt",
+    "--corpus",
+    "complement=/tmp/grad-research-20261106/worktree/artifacts/replay_fit_diagnostic_v1/seed11_complement.pt",
+    "--output",
+    "/tmp/grad-research-20261106/worktree/results/replay_fit_diagnostic_v2/seed11/initial.json"
+  ],
+  "started_at_utc": "2026-11-06T06:32:33.543754+00:00",
+  "preflight_environment": {
+    "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+    "cuda_version": "12.4",
+    "gpu_name": "NVIDIA H100 80GB HBM3"
+  },
+  "finished_at_utc": "2026-11-06T06:32:51.858611+00:00",
+  "verification_wall_seconds": 0.8463480398058891,
+  "inference_subprocess_wall_seconds": 15.860427688807249,
+  "inference_alias": false,
+  "output_sha256": {
+    "/tmp/grad-research-20261106/worktree/results/replay_fit_diagnostic_v2/seed11/initial.json": "ddc4de1307e21c8e6a02f34237829d2c02c5bda90e3a8eb767621d3901dcb026"
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "schema_version": 2,
+  "status": "PREPARED_READ_ONLY_MARGIN_REVIEW_NOT_EXECUTED",
+  "created_at_utc": "2026-11-06T10:28:31.912258+00:00",
+  "original_plan": {
+    "path": "/tmp/grad-research-20261106/worktree/results/reproduction_qa/archive0732_seed11_2x2_v1/qa_plan.json",
+    "sha256": "f9a4077153abf1487fcd28d44f73b05be4403b9d19b45ec89b3cacafd3a98062",
+    "bytes": 49110
+  },
+  "false_authority_template": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/reproduction_qa_operational_amendment_v2_TEMPLATE.json",
+    "sha256": "3f35123f0ba2d24562db9e65f5a234829ff4e23791251704eb73ffd14529b362",
+    "bytes": 13373
+  },
+  "review_document": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/归档复现QA操作预算修订_v2_建议.md",
+    "sha256": "9e8eefc57b2d48073cbdca106ed1a41936b5ad62cfcc79f9a4174910b5369f9f",
+    "bytes": 8216
+  },
+  "original_queue": {
+    "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/configs/reproductions/archive0732_qa_2x2_seed11_v1_queue.json",
+    "sha256": "4ec9a68ef6f78bbb5c44c2ce026e62d8deb01b6c1ae82f276a4a98f3730203b0",
+    "bytes": 5487
+  },
+  "original_registry": {
+    "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/configs/reproductions/archive0732_qa_2x2_seed11_v1_registry.json",
+    "sha256": "1c587c00182e3b004f4cd35261ed111290d4881de1b7bb5f467ac0ca8c534376",
+    "bytes": 8267
+  },
+  "only_argv_delta": [
+    "--launch-margin-seconds",
+    "120",
+    "--stop-margin-seconds",
+    "120"
+  ],
+  "four_job_definitions_unchanged": true,
+  "expected_seconds_each_unchanged": 600,
+  "config_checks": [
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/configs/reproductions/archive0732_qa_2x2_seed11_v1/archive0732_qa_2x2_seed11_v1__formal_deterministic_B1_s11_b0p05_w0p05.json",
+      "sha256": "a321b607e1ed7259ac890d9b5cbda0257d5c1614b9aa0cf405690ab6b3269292",
+      "bytes": 2171
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/configs/reproductions/archive0732_qa_2x2_seed11_v1/archive0732_qa_2x2_seed11_v1__formal_deterministic_B2_s11_b0p05_w0p05.json",
+      "sha256": "fe62251d091ee92a20427b90c64476f959cdea53ebcac3574c71bf9dd24ceaae",
+      "bytes": 2171
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/configs/reproductions/archive0732_qa_2x2_seed11_v1/archive0732_qa_2x2_seed11_v1__formal_deterministic_B3_s11_b0p05_w0p05.json",
+      "sha256": "cb90fde9fcbdd3143d1597f9521733330b4df74059c895b466fade482e64405a",
+      "bytes": 2178
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/configs/reproductions/archive0732_qa_2x2_seed11_v1/archive0732_qa_2x2_seed11_v1__formal_deterministic_B4_s11_b0p05_w0p05.json",
+      "sha256": "7455dd43a9b8e4a6b904a8ac9dff5cf7946ae65aba228652ff207bd0e8ed60fd",
+      "bytes": 2178
+    }
+  ],
+  "archived_source_sha_verified": {
+    "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/scripts/reproduce_experiments.py": "ac54da86c4ae278783daf045c40f9c1cd7ed267f9be3a8fb09397f163b28eff1",
+    "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/scripts/schedule_jobs.py": "c5c264b058ff655315ef896ccb0a89b471637c6612013a51999fc6f48b2d16d9",
+    "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/scripts/audit_formal_runs.py": "b2997465717ddd46b5f80924a022d6a82bafe65f5d348636852fdc10836a2362",
+    "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/src/replay_study/train.py": "fdfcf6aa12e4d9e60de48b817ce37c5646cb1169f28d971a421f91972543ab6d",
+    "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/src/replay_study/__init__.py": "b2dce8cc5ea80a67a90b1798232163a7684874487b5ea4102e60851c7017f520"
+  },
+  "all10_core_source_files_match_prior_full_read_receipt": [
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/scripts/make_experiments.py",
+      "sha256": "e6997abcb3c65afcfb2fd9fc1129877b1e4afc3f80ad49be3495aa99a6764df4",
+      "bytes": 14454
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/scripts/run_evaluate.py",
+      "sha256": "6d7b9cd6b311f96e94b854e8ccd15f15f92ff9eefbd6b5a0dddc67fee8989ddf",
+      "bytes": 2366
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/scripts/run_train.py",
+      "sha256": "eae92291ad7d4a52717078e8764dc5a5440cba44b09dd0f1cfc46223317798de",
+      "bytes": 1036
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/src/replay_study/data.py",
+      "sha256": "e43c6f859db2815ff6b7dcd1a1d65fe71a3ca2621dd6564a3b0424595ab65c24",
+      "bytes": 5331
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/src/replay_study/evaluate.py",
+      "sha256": "d9648b4fbc891746a9bafe9e9639e2ee584521ba68bd949d2091484c833c3c46",
+      "bytes": 16936
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/src/replay_study/execution.py",
+      "sha256": "70ed6b3d63f950ffc00f2c671f20e0d842c154f4cbf1648fe9a6511bbd077bf5",
+      "bytes": 4371
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/src/replay_study/generate.py",
+      "sha256": "7415647d6d2f23e2f0e59f288dc544a21b8fb0eaa9069daf90e5ea949e607e33",
+      "bytes": 13346
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/src/replay_study/objectives.py",
+      "sha256": "9e0a319965bf486ebf721e3e662b6a474046e56c44dfab0d13590a20aedd98be",
+      "bytes": 5815
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/src/replay_study/selection.py",
+      "sha256": "88814e111aa5db1fb1009d90eba54c353a018fd6c1cbdda4ff4a148b57aa11b7",
+      "bytes": 13258
+    },
+    {
+      "path": "/tmp/grad-research-20261106/reproduction_qa/archive0732_seed11_2x2_v1/research/src/replay_study/train.py",
+      "sha256": "fdfcf6aa12e4d9e60de48b817ce37c5646cb1169f28d971a421f91972543ab6d",
+      "bytes": 41138
+    }
+  ],
+  "CLI_defaults_confirmed_via_AST_without_invocation": {
+    "--launch-margin-seconds": 1800,
+    "--stop-margin-seconds": 600,
+    "--terminate-grace-seconds": 90,
+    "--poll-seconds": 10
+  },
+  "timeline_utc": {
+    "latest_scheduler_loop_admission_exclusive": "2026-11-07T02:44:32Z",
+    "stop_SIGTERM_threshold": "2026-11-07T02:54:32Z",
+    "nominal_SIGKILL_threshold_if_SIGTERM_sent_exactly_at_stop": "2026-11-07T02:56:02Z",
+    "nominal_reap_threshold_with_two_10s_poll_rounds_after_SIGKILL": "2026-11-07T02:56:22Z",
+    "arithmetic_latest_start_for_600s_training_plus_300s_proof_excluding_other_overhead": "2026-11-07T02:41:32Z",
+    "recommended_actual_launch_target_no_later_than": "2026-11-07T02:40:00Z"
+  },
+  "original_input_full_read_receipt_reference": {
+    "path": "/tmp/grad-research-20261106/worktree/results/reproduction_qa/archive0732_seed11_2x2_v1/independent_review_v1.json",
+    "sha256": "039b91d589c31c1575c50d14e97d41d91bb6156e48d4f8877be925161a63b4e1",
+    "bytes": 21102
+  },
+  "new34_input_audit_or_helper_dry_run_executed": false,
+  "original_plan_queue_config_or_archived_source_modified": false,
+  "new_QA_state_outputs_and_CP_all_absent": true,
+  "new_checkpoint_hash_or_tensor_load_performed": false,
+  "proof_planning_seconds": 300,
+  "proof_seconds_measured": false,
+  "late_admission_is_not_end_to_end_completion_guarantee": true,
+  "scheduler_grace_and_poll_are_not_hard_realtime": true,
+  "all_old_scheduler_PGroups_exit_and_four_GPU_free_barrier_still_required": true,
+  "all4_complete_model_state_and_new_CP_SHA_posterior_required": true,
+  "root_execution_authority_granted_by_this_review": false,
+  "GPU_scheduler_training_or_scoring_started": false,
+  "sealed_scores_read": false,
+  "new_workflow_source_written": false,
+  "note": "Only source/JSON/metadata verification in this v2 review; original34-file full-read acceptance retained, must freshly re-audit before eventual launch. All four QA physical costs remain independent engineering diagnostics."
+}

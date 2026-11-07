@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "computed_at_utc": "2026-11-06T05:49:24.532699+00:00",
+  "computation_device": "CPU only",
+  "algorithm": "sha256_sorted_key_dtype_shape_contiguous_uint8_v1",
+  "algorithm_source": {
+    "path": "scripts/audit_formal_runs.py",
+    "sha256": "b2997465717ddd46b5f80924a022d6a82bafe65f5d348636852fdc10836a2362",
+    "function": "model_fingerprint"
+  },
+  "algorithm_detail": "For every sorted state key, SHA256 updates JSON [name,str(dtype),list(shape)] followed by all contiguous uint8 bytes; includes every tensor element and excludes config/optimizer/serialization metadata.",
+  "source_audit": {
+    "path": "/tmp/grad-research-20261106/worktree/results/formal_run_audit.json",
+    "sha256": "3ab507ecaf9953e7056649f2fee1320467b0ba3b23f65e6584cb876dbae0cf00"
+  },
+  "source_registry": {
+    "path": "/tmp/grad-research-20261106/worktree/configs/formal_deterministic_registry.json",
+    "sha256": "284fa9dd939dab75195afe3f968e0eb6411501b26b8a5caa1962b4ee5e9f372b"
+  },
+  "producer_source": {
+    "path": "/tmp/grad-research-20261106/worktree/scripts/make_model_equivalence_proofs.py",
+    "sha256": "8971019040ff1c66e6007fc78ec05a4d16c179f5752a05d79f9b7d4a2de2316c"
+  },
+  "comparisons": [
+    {
+      "id": "formal_D_B4_seed11_best",
+      "kind": "identical_bank_null_control",
+      "seed": 11,
+      "left": {
+        "checkpoint": "/tmp/grad-research-20261106/runs/formal_deterministic_B4_s11_b0p05_w0p05/checkpoints/checkpoint_best.pt",
+        "checkpoint_sha256": "db7f99401668aa8de3ac01c54eb1f1958fa8fe7fe632d7d4e52a434528318839",
+        "checkpoint_bytes": 1621461090,
+        "model_state_fingerprint": {
+          "sha256_model_state": "cb76a09bf26e0242c04ec7f066b27c82a94567166988842fac3d661b5131b09e",
+          "state_elements": 405334016
+        },
+        "run_id": "formal_deterministic_B4_s11_b0p05_w0p05",
+        "kind": "best",
+        "model_revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+        "model_name_or_path": "/tmp/grad-research-20261106/models/pythia-410m-final",
+        "config_path": "/tmp/grad-research-20261106/worktree/configs/formal_deterministic/formal_deterministic_B4_s11_b0p05_w0p05.json",
+        "config_sha256": "a4f8622c5ca6e65bd09adf28e24a175ab65165a6cc6aee567386ca7f8b831c9e"
+      },
+      "right": {
+        "checkpoint": "/tmp/grad-research-20261106/runs/formal_deterministic_D_s11_b0p05_w0p05/checkpoints/checkpoint_best.pt",
+        "checkpoint_sha256": "50bf7cfba968c280772301f7a2b6fc8184bfc961e97e200543c3402103b00e30",
+        "checkpoint_bytes": 1621461090,
+        "model_state_fingerprint": {
+          "sha256_model_state": "cb76a09bf26e0242c04ec7f066b27c82a94567166988842fac3d661b5131b09e",
+          "state_elements": 405334016
+        },
+        "run_id": "formal_deterministic_D_s11_b0p05_w0p05",
+        "kind": "best",
+        "model_revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+        "model_name_or_path": "/tmp/grad-research-20261106/models/pythia-410m-final",
+        "config_path": "/tmp/grad-research-20261106/worktree/configs/formal_deterministic/formal_deterministic_D_s11_b0p05_w0p05.json",
+        "config_sha256": "70fdcddb527f6c9998c0ae9619528a0b8c5897f16e4e26cddeb2330c66a31518"
+      },
+      "bitwise_model_state_equal": true
+    },
+    {
+      "id": "formal_D_B4_seed22_best",
+      "kind": "identical_bank_null_control",
+      "seed": 22,
+      "left": {
+        "checkpoint": "/tmp/grad-research-20261106/runs/formal_deterministic_B4_s22_b0p05_w0p05/checkpoints/checkpoint_best.pt",
+        "checkpoint_sha256": "c52b7537f32d906221b4d2f59ffdf5a9afb2aed71d2384f8fefc3d6c3332ad3c",
+        "checkpoint_bytes": 1621461090,
+        "model_state_fingerprint": {
+          "sha256_model_state": "f869252ca86d21eec3755d9a0f16b65111340d92bedd895f8d57ae64be8dcc65",
+          "state_elements": 405334016
+        },
+        "run_id": "formal_deterministic_B4_s22_b0p05_w0p05",
+        "kind": "best",
+        "model_revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+        "model_name_or_path": "/tmp/grad-research-20261106/models/pythia-410m-final",
+        "config_path": "/tmp/grad-research-20261106/worktree/configs/formal_deterministic/formal_deterministic_B4_s22_b0p05_w0p05.json",
+        "config_sha256": "72274eb106907958b04ee2434c07c4c7de42092c26c59f8a7d5e3103f3b2dd66"
+      },
+      "right": {
+        "checkpoint": "/tmp/grad-research-20261106/runs/formal_deterministic_D_s22_b0p05_w0p05/checkpoints/checkpoint_best.pt",
+        "checkpoint_sha256": "cf098bab0b1acf1674b6d5ce1b162f453b89adf9e92896e0882a2be0c67d3eb5",
+        "checkpoint_bytes": 1621461090,
+        "model_state_fingerprint": {
+          "sha256_model_state": "f869252ca86d21eec3755d9a0f16b65111340d92bedd895f8d57ae64be8dcc65",
+          "state_elements": 405334016
+        },
+        "run_id": "formal_deterministic_D_s22_b0p05_w0p05",
+        "kind": "best",
+        "model_revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+        "model_name_or_path": "/tmp/grad-research-20261106/models/pythia-410m-final",
+        "config_path": "/tmp/grad-research-20261106/worktree/configs/formal_deterministic/formal_deterministic_D_s22_b0p05_w0p05.json",
+        "config_sha256": "1961fc7f1f068aa5213c0b086cc4c46ecc88118bfce2b8ba7c86d7d9e02c56f6"
+      },
+      "bitwise_model_state_equal": true
+    },
+    {
+      "id": "formal_D_B4_seed33_best",
+      "kind": "identical_bank_null_control",
+      "seed": 33,
+      "left": {
+        "checkpoint": "/tmp/grad-research-20261106/runs/formal_deterministic_B4_s33_b0p05_w0p05/checkpoints/checkpoint_best.pt",
+        "checkpoint_sha256": "aca04864c5682c8bd4c3592dcf299caea309e826b6dc7ee4be83393bbfca0594",
+        "checkpoint_bytes": 1621461090,
+        "model_state_fingerprint": {
+          "sha256_model_state": "45d2fc7aee28211d5cf1c3d121061abd4e6e388064b1d39041e1c8a2faa914a1",
+          "state_elements": 405334016
+        },
+        "run_id": "formal_deterministic_B4_s33_b0p05_w0p05",
+        "kind": "best",
+        "model_revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+        "model_name_or_path": "/tmp/grad-research-20261106/models/pythia-410m-final",
+        "config_path": "/tmp/grad-research-20261106/worktree/configs/formal_deterministic/formal_deterministic_B4_s33_b0p05_w0p05.json",
+        "config_sha256": "fea1d37dd6f38b94807ade1d10aa0c927f499de9f770572fc4707e0649c73f5c"
+      },
+      "right": {
+        "checkpoint": "/tmp/grad-research-20261106/runs/formal_deterministic_D_s33_b0p05_w0p05/checkpoints/checkpoint_best.pt",
+        "checkpoint_sha256": "0c189016f736e528c343ea1790e4764f49af730597606a5982072f4360847c06",
+        "checkpoint_bytes": 1621461090,
+        "model_state_fingerprint": {
+          "sha256_model_state": "45d2fc7aee28211d5cf1c3d121061abd4e6e388064b1d39041e1c8a2faa914a1",
+          "state_elements": 405334016
+        },
+        "run_id": "formal_deterministic_D_s33_b0p05_w0p05",
+        "kind": "best",
+        "model_revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+        "model_name_or_path": "/tmp/grad-research-20261106/models/pythia-410m-final",
+        "config_path": "/tmp/grad-research-20261106/worktree/configs/formal_deterministic/formal_deterministic_D_s33_b0p05_w0p05.json",
+        "config_sha256": "750c239d05ac3454c29b9a0badbe58fa74fa39e3819263b42ae9c5ab47185015"
+      },
+      "bitwise_model_state_equal": true
+    }
+  ],
+  "best_final_candidates": [],
+  "other_best_final_pairs": "No equivalence authorized without another full-state CPU proof.",
+  "test_scores_accessed": false,
+  "checkpoint_files_modified": false
+}

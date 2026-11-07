@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_CPU_restore_actual_v1/1b/restore_whole_child_evidence/whole_child_timing.json",
+    "sha256": "3b3878cd1321b4c6d45f29c819ef06578088f6d500214f1be845af81dc0d72c9",
+    "bytes": 1622
+  },
+  "original_wall_pointer": "/whole_child_process_wall_seconds",
+  "wall_seconds": 84.33324014395475,
+  "CPU_component_pointers": [
+    "/whole_child_user_cpu_seconds",
+    "/whole_child_sys_cpu_seconds"
+  ],
+  "CPU_components": {
+    "whole_child_user_cpu_seconds": 49.866894,
+    "whole_child_sys_cpu_seconds": 20.015561
+  },
+  "recorded_inclusive_CPU_seconds": 69.88245500000001,
+  "original_returncode": 0,
+  "scope": "Inclusive child spawn-to-exit plus full process-group cleanup/reaping. Descendant CPU is attributed when reaped; failed unresolved groups may have incomplete CPU totals. Body/stages are nested.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall; sum only the named user/system components. Failure rc retained. No calendar-derived elapsed.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

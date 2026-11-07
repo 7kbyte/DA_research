@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/bounded_completed_verification_cache_hint_v1/whole_child_timing.json",
+    "sha256": "c596ecdd3923571451d95be24a867f47a8450f217dd11cd83a3c6b4b354428d5",
+    "bytes": 635
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 3.0040804967284203,
+  "CPU_component_pointers": [
+    "/user_cpu_seconds",
+    "/sys_cpu_seconds"
+  ],
+  "CPU_components": {
+    "user_cpu_seconds": 0.046535,
+    "sys_cpu_seconds": 2.892922
+  },
+  "recorded_inclusive_CPU_seconds": 2.939457,
+  "original_returncode": 0,
+  "scope": "Entire one bounded four completed derived verification-output cache-hint child; per-file fsync/advice regions nested, not added",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall; sum only the named user/system components. Failure rc retained. No calendar-derived elapsed.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

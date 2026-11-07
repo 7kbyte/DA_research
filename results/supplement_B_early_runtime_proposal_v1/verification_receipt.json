@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "utc": "2026-11-06T11:30:32.197520+00:00",
+  "proposal": {
+    "path": "/tmp/grad-research-20261106/worktree/results/supplement_B_early_runtime_proposal_v1/proposal.json",
+    "sha256": "1378a3061cf5239b2f496f9dc4714f62eb8992b7217f79f3ab3874a5fb68a509"
+  },
+  "producer_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/supplement_B_early_runtime_v1/producer.py",
+    "sha256": "91aa4af6675cb6e600425d18be2b4215ac4472d4f9740882ca88cea0f721d8b0"
+  },
+  "candidate_queue": {
+    "path": "/tmp/grad-research-20261106/worktree/results/supplement_B_early_runtime_proposal_v1/candidate_queue.json",
+    "sha256": "d166e2f4aaee69870328952274c471a804a2aec387b9838deaf653a9fe353240"
+  },
+  "checks": [
+    "60 exact immutable B job definitions",
+    "4 existing running children not preempted",
+    "C-only includes 59 pending C and no fake phase rows",
+    "hypothetical priority has 60 B plus 59 C dispatch rows",
+    "all low/central/high have >=15min reserve before23:50",
+    "B backlog credit remains0 until actual successful completion"
+  ],
+  "baseline_output_only_full_opaque_sha_not_score_semantics": true,
+  "no_large_checkpoint_rehash": true,
+  "no_enqueue_or_GPU_execution": true,
+  "root_admission_decision_still_required": true
+}

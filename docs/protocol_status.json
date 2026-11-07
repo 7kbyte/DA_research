@@ -1,6 +1,6 @@
 {
-  "updated_at_utc": "2026-11-06T09:50:36.525903+00:00",
-  "stage": "主36与补充A126独立NLL测试完成并各自通过解封；B60与长程63继续冻结方案",
+  "updated_at_utc": "2026-11-07T00:32:38.135547+00:00",
+  "stage": "全部267项正式训练与514项冻结独立评价已完成；主/补充A/B及C410/1B/2.8B的NLL与行为结果均已在各自完整闭包后解封、独立复核并写入研究报告",
   "active_registry": "configs/formal_deterministic_registry.json",
   "active_lr_selection": "results/pilot_lr_selection_deterministic_v3.json",
   "active_lambda_selection": "results/pilot_lambda_selection_deterministic_v3.json",
@@ -13,7 +13,7 @@
     "lambda_v3_job_state",
     "v3_lr_eval_job_state"
   ],
-  "note": "旧非确定性pilot/formal仅供诊断；主strict36为正式主结果。补充训练独立phase，截止00:00 UTC；主active_registry保留供分析与alias验证。",
+  "note": "旧非确定性pilot/formal仅供诊断；正式主结果为主strict36。补充训练按冻结计划在00:00 UTC结束科学计算，全部评价由后继调度器完成。研究交付工作稿见研究报告.md（31页）。",
   "test_scores_seen": true,
   "scheduler_pid": 2964213,
   "scheduler_state": "logs/formal_deterministic_job_state.json",
@@ -47,5 +47,6 @@
   "first_primary_test_read": "docs/primary_nll_first_test_read.json",
   "supplement_A_nll_analysis_complete": "results/supplemental_analysis_v2/supplement_A_nll/COMPLETE.json",
   "supplement_A_validation_selection": "results/supplement_A_validation/validation_lambda_selection.json",
-  "first_supplement_A_nll_read": "artifacts/provenance/supplemental_score_first_reads_v1/supplement_A_nll_88dc927c9b4909cca66901608216290e1e435022e4ff925c00875f5099077a90.json"
+  "first_supplement_A_nll_read": "artifacts/provenance/supplemental_score_first_reads_v1/supplement_A_nll_88dc927c9b4909cca66901608216290e1e435022e4ff925c00875f5099077a90.json",
+  "independent_evaluation_status": "all_514_successor_jobs_completed_and_reported"
 }

@@ -1,0 +1,154 @@
+{
+  "nll": {
+    "queue": "/tmp/grad-research-20261106/worktree/configs/primary_evaluation_v2_execution_matched_nll_queue.json",
+    "queue_sha256": "1428e024f710873a09138ccd47742e2897a6eb25fe3d9b35523153d43e7df346",
+    "manifest": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_nll_manifest.json",
+    "manifest_sha256": "d1502bcaff5cdcd75d984a4b8776f1cb4027b596f474835bfe9ed18875d9fd18",
+    "workload": {
+      "logical_runs": 36,
+      "physical_training_runs": 36,
+      "logical_checkpoint_endpoints": 72,
+      "adapted_inference_jobs": 66,
+      "initial_baselines": 1,
+      "reused_initial_baselines": 0,
+      "reuse_materialization_jobs": 0,
+      "total_inference_jobs": 67,
+      "total_queue_jobs": 67,
+      "avoided_duplicate_inferences": 6,
+      "by_baseline_group": {
+        "4838ea6576ce899abcef5e3b384d007876744780f5b484a00b9e8999201dd733": {
+          "model_tag": "pythia-410m",
+          "policy": {
+            "model": "/tmp/grad-research-20261106/models/pythia-410m-final",
+            "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+            "batch_size": 16,
+            "max_length": 512,
+            "device": "cuda:0",
+            "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+            "cuda_version": "12.4",
+            "gpu_name": "NVIDIA H100 80GB HBM3",
+            "precision": "bf16",
+            "device_type": "cuda",
+            "effective_precision": "cuda_bfloat16_autocast",
+            "attention_implementation": "sdpa",
+            "attention_backend": "auto",
+            "deterministic_algorithms": true,
+            "deterministic_warn_only": false,
+            "allow_tf32_matmul": true,
+            "allow_tf32_cudnn": true,
+            "cudnn_deterministic": true,
+            "cudnn_benchmark": false,
+            "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+            "flash_sdp_enabled": true,
+            "mem_efficient_sdp_enabled": true,
+            "math_sdp_enabled": true,
+            "cudnn_sdp_enabled": true,
+            "model_weight_dtype": "torch.float32"
+          },
+          "adapted_inferences": 66,
+          "initial_inferences": 1,
+          "per_inference": {
+            "corpora": {
+              "target": {
+                "prediction_tokens": 523264,
+                "raw_input_tokens": 524288,
+                "chunks": 1024
+              },
+              "c4": {
+                "prediction_tokens": 523264,
+                "raw_input_tokens": 524288,
+                "chunks": 1024
+              },
+              "wikitext": {
+                "prediction_tokens": 270319,
+                "raw_input_tokens": 270848,
+                "chunks": 529
+              }
+            },
+            "teacher_kl": true,
+            "forward_multiplier": {
+              "initial": 1,
+              "adapted": 2
+            },
+            "note": "Teacher forward is nested in evaluation wall time; never add it again"
+          }
+        }
+      },
+      "scheduler_allowance_seconds": 12060,
+      "scheduler_allowance_per_job_seconds": 180,
+      "cost_formula": "sum_g(initial_count_g * measured_initial_seconds_g + adapted_count_g * measured_adapted_seconds_g); add separately measured CPU verification/materialization wall time",
+      "estimate_available": false,
+      "allowance_is_measured_cost_estimate": false,
+      "wall_seconds_are_not_gpu_seconds": true
+    }
+  },
+  "behavior": {
+    "queue": "/tmp/grad-research-20261106/worktree/configs/primary_evaluation_v2_execution_matched_behavior_queue.json",
+    "queue_sha256": "393f3df2f0213e2e4e4d2387109b750825c797b909f4b05d16cd3cb739f6aaa9",
+    "manifest": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+    "manifest_sha256": "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+    "workload": {
+      "logical_runs": 36,
+      "physical_training_runs": 36,
+      "logical_checkpoint_endpoints": 72,
+      "adapted_inference_jobs": 66,
+      "initial_baselines": 1,
+      "reused_initial_baselines": 0,
+      "reuse_materialization_jobs": 0,
+      "total_inference_jobs": 67,
+      "total_queue_jobs": 67,
+      "avoided_duplicate_inferences": 6,
+      "by_baseline_group": {
+        "109f59e1e08b4d91880e04fc18414e3548cd0718cfb5b3fdab10b946d8639ab1": {
+          "model_tag": "pythia-410m",
+          "policy": {
+            "model": "/tmp/grad-research-20261106/models/pythia-410m-final",
+            "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+            "batch_size": 16,
+            "max_length": 2048,
+            "device": "cuda:0",
+            "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+            "cuda_version": "12.4",
+            "gpu_name": "NVIDIA H100 80GB HBM3",
+            "precision": "bf16",
+            "device_type": "cuda",
+            "effective_precision": "cuda_bfloat16_autocast",
+            "attention_implementation": "sdpa",
+            "attention_backend": "auto",
+            "deterministic_algorithms": true,
+            "deterministic_warn_only": false,
+            "allow_tf32_matmul": true,
+            "allow_tf32_cudnn": true,
+            "cudnn_deterministic": true,
+            "cudnn_benchmark": false,
+            "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+            "flash_sdp_enabled": true,
+            "mem_efficient_sdp_enabled": true,
+            "math_sdp_enabled": true,
+            "cudnn_sdp_enabled": true,
+            "model_weight_dtype": "torch.float32"
+          },
+          "adapted_inferences": 66,
+          "initial_inferences": 1,
+          "per_inference": {
+            "questions": 11880,
+            "choices": 43844,
+            "tokenizer_forward_work": "context+continuation tokens depend on model tokenizer; no inference estimate invented"
+          }
+        }
+      },
+      "scheduler_allowance_seconds": 20100,
+      "scheduler_allowance_per_job_seconds": 300,
+      "cost_formula": "sum_g(initial_count_g * measured_initial_seconds_g + adapted_count_g * measured_adapted_seconds_g); add separately measured CPU verification/materialization wall time",
+      "estimate_available": false,
+      "allowance_is_measured_cost_estimate": false,
+      "wall_seconds_are_not_gpu_seconds": true
+    }
+  },
+  "phase_spec": "/tmp/grad-research-20261106/worktree/configs/primary_evaluation_v2_execution_matched_phase_spec.json",
+  "phase_spec_sha256": "5ca78e5d8c22ffe5c79a9cd9d6dabf5e0d2d4c927c7875afc578f68bcf44e0c5",
+  "CPU_only": true,
+  "scorer_started": false,
+  "model_weights_deserialized": false,
+  "scheduler_started": false
+}

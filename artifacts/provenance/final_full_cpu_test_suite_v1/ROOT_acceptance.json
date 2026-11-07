@@ -1,0 +1,40 @@
+{
+  "status": "passed_complete_CPU_suite_881_tests",
+  "at_utc": "2026-11-06T23:19:12.706278+00:00",
+  "inputs": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_full_cpu_test_suite_v1/inputs.json",
+    "sha256": "1e666fd27e884413e127192e041533e895f12e8c750549275eb6f7e170d38b0d"
+  },
+  "test_output": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_full_cpu_test_suite_v1/whole_timing/stdout.log",
+    "sha256": "c7c067674c4c2d53ee1e78280ba774bc2203bc080c62ebb6b2c2cfe2ebbe7678"
+  },
+  "whole_parent": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_full_cpu_test_suite_v1/whole_timing/whole_child_timing.json",
+    "sha256": "6667beb6f6aa251203601456820128bf8c1fa84810d7d8bdfdb75ce12cf9431d"
+  },
+  "whole_parent_timing": {
+    "argv": [
+      "python",
+      "-m",
+      "pytest",
+      "-q",
+      "--basetemp",
+      "/tmp/grad-research-20261106/final_cpu_test_suite_v1"
+    ],
+    "returncode": 0,
+    "wall_seconds": 39.47915180400014,
+    "user_cpu_seconds": 38.802994999999996,
+    "sys_cpu_seconds": 10.575057,
+    "child_peak_rss_bytes": 831488000,
+    "started_at_utc": "2026-11-06T23:18:09.115263+00:00",
+    "finished_at_utc": "2026-11-06T23:18:48.594424+00:00",
+    "timing_scope": "Whole direct helper child spawn through exit. Any detached successor scheduler lifetime is excluded."
+  },
+  "all_pinned_source_bytes_unchanged": true,
+  "pinned_file_count": 248,
+  "tests_passed": 881,
+  "GPU_hidden": true,
+  "synthetic_tmp_directory_outside_worktree": true,
+  "not_fresh_container_or_actual_retraining_proof": true
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "state": "prepared_only_behavior_scores_sealed",
+  "manifest": "docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+  "manifest_sha256": "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+  "expected_inference_jobs": 67,
+  "expected_logical_endpoints": 72,
+  "source_sha256": {
+    "scripts/guarded_behavior_analysis.py": "b5d22cd6caee7c1d37f156010ad7348f72478e62adbb7d9af8c975a5c34e8a1d",
+    "scripts/analyze_behavioral_plan.py": "89c1f29f62bb5b48eca6699768b3d76d1dd5d9f3eb1d0715cae75483bab949b9",
+    "src/replay_study/behavioral_analysis.py": "18e6b57dc1914119743e87170637a46cf7e9b5d99ad704b42b3c0959e2a0e280",
+    "src/replay_study/evaluation_cost_inventory.py": "0046281e937ec2d917f3c41b3fc27d75c88ef1e52022515989f1581fe3d6220f"
+  },
+  "primary_metric": "acc_norm",
+  "auxiliary_metric": "acc",
+  "counts": [
+    "CC",
+    "CW",
+    "WC",
+    "WW"
+  ],
+  "bootstrap": {
+    "replicates": 5000,
+    "seed": 20261106,
+    "draw_unit": "paired example; one joint CC/CW/WC/WW multinomial draw, separately per metric",
+    "per_endpoint_stream": "(20261106 + int(SHA256(record_id|task|metric)[:8],16)) mod 2^32"
+  },
+  "uncertainty_scope": "Wilson and paired-example bootstrap assume independent/exchangeable questions. HellaSwag shared activity/context dependence is uncorrected. Intervals are conditional descriptions for fixed trained checkpoints, not automatic target-population or training-randomness confidence intervals. Report individual training seed values and three-seed SD separately.",
+  "checkpoint_policy": "Final/best stratified by actual step and target/replay exposure; aliases not extra seeds; full physical training cost once per actual run, never scaled to best exposure.",
+  "gate_policy": "All original inferences, source baseline and all materialized logical aliases must have SHA-matched execution attestations before score deserialization; explicit matching root unseal authorization required.",
+  "authorization_template": {
+    "allow_score_analysis": false,
+    "manifest_sha256": "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+    "expected_inference_jobs": 67,
+    "expected_logical_endpoints": 72
+  },
+  "check_only_argv": [
+    "python",
+    "scripts/guarded_behavior_analysis.py",
+    "--manifest",
+    "docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+    "--manifest-sha256",
+    "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+    "--expected-inference-jobs",
+    "67"
+  ],
+  "future_authorized_analysis_argv": [
+    "python",
+    "scripts/guarded_behavior_analysis.py",
+    "--manifest",
+    "docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+    "--manifest-sha256",
+    "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+    "--analyze",
+    "--authorization",
+    "docs/ROOT_AUTHORIZED_behavior_unseal.json",
+    "--output",
+    "results/analysis/primary_behavior_complete"
+  ],
+  "model_or_task_inference_started": false,
+  "real_score_analysis_performed": false
+}

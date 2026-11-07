@@ -1,0 +1,102 @@
+{
+  "status": "ready",
+  "ready": true,
+  "id": "supplement_A_nll",
+  "mode": "nll",
+  "phase_spec": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_nll/phase_spec.json",
+    "sha256": "da33d565eabbf80a83b1d42eae35e917b008419e0f083e25fe42d728f365ed7e"
+  },
+  "queue": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_nll/queue.json",
+    "sha256": "a882a80a5728723fbf5a3001f1940562018622a54ed4d5e28f12bed5ff1dd59c"
+  },
+  "manifest": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_nll/manifest.json",
+    "sha256": "88dc927c9b4909cca66901608216290e1e435022e4ff925c00875f5099077a90"
+  },
+  "workload": {
+    "logical_runs": 126,
+    "physical_training_runs": 126,
+    "logical_checkpoint_endpoints": 126,
+    "adapted_inference_jobs": 108,
+    "initial_baselines": 0,
+    "reused_initial_baselines": 1,
+    "reuse_materialization_jobs": 18,
+    "total_inference_jobs": 108,
+    "total_queue_jobs": 126,
+    "avoided_duplicate_inferences": 18,
+    "by_baseline_group": {
+      "4838ea6576ce899abcef5e3b384d007876744780f5b484a00b9e8999201dd733": {
+        "model_tag": "pythia-410m",
+        "policy": {
+          "model": "/tmp/grad-research-20261106/models/pythia-410m-final",
+          "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+          "batch_size": 16,
+          "max_length": 512,
+          "device": "cuda:0",
+          "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+          "cuda_version": "12.4",
+          "gpu_name": "NVIDIA H100 80GB HBM3",
+          "precision": "bf16",
+          "device_type": "cuda",
+          "effective_precision": "cuda_bfloat16_autocast",
+          "attention_implementation": "sdpa",
+          "attention_backend": "auto",
+          "deterministic_algorithms": true,
+          "deterministic_warn_only": false,
+          "allow_tf32_matmul": true,
+          "allow_tf32_cudnn": true,
+          "cudnn_deterministic": true,
+          "cudnn_benchmark": false,
+          "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+          "flash_sdp_enabled": true,
+          "mem_efficient_sdp_enabled": true,
+          "math_sdp_enabled": true,
+          "cudnn_sdp_enabled": true,
+          "model_weight_dtype": "torch.float32"
+        },
+        "adapted_inferences": 108,
+        "initial_inferences": 0,
+        "per_inference": {
+          "corpora": {
+            "target": {
+              "prediction_tokens": 523264,
+              "raw_input_tokens": 524288,
+              "chunks": 1024
+            },
+            "c4": {
+              "prediction_tokens": 523264,
+              "raw_input_tokens": 524288,
+              "chunks": 1024
+            },
+            "wikitext": {
+              "prediction_tokens": 270319,
+              "raw_input_tokens": 270848,
+              "chunks": 529
+            }
+          },
+          "teacher_kl": true,
+          "forward_multiplier": {
+            "initial": 1,
+            "adapted": 2
+          },
+          "note": "Teacher forward is nested in evaluation wall time; never add it again"
+        }
+      }
+    },
+    "scheduler_allowance_seconds": 22680,
+    "scheduler_allowance_per_job_seconds": 180,
+    "cost_formula": "sum_g(initial_count_g * measured_initial_seconds_g + adapted_count_g * measured_adapted_seconds_g); add separately measured CPU verification/materialization wall time",
+    "estimate_available": false,
+    "allowance_is_measured_cost_estimate": false,
+    "wall_seconds_are_not_gpu_seconds": true
+  },
+  "logical_endpoints": 126,
+  "source_model_equivalence": {
+    "required": false,
+    "proofs": []
+  },
+  "model_inference_started": false,
+  "scheduler_started": false
+}

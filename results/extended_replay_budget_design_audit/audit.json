@@ -1,0 +1,767 @@
+{
+  "created_at_utc": "2026-11-06T10:12:09.699352+00:00",
+  "status": "passed_metadata_only_design_audit",
+  "training_or_evaluation_executed": false,
+  "test_scores_read": false,
+  "all_3models_3seeds_selected_design_fields_match": true,
+  "rows": [
+    {
+      "model": "pythia-410m",
+      "seed": 11,
+      "group": "B1",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 19570,
+      "candidate_prediction_tokens": 10000270,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/c4_random_seed11.json",
+      "source_pool": "artifacts/data_extended/c4_candidate.pt"
+    },
+    {
+      "model": "pythia-410m",
+      "seed": 11,
+      "group": "B2",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 19570,
+      "candidate_prediction_tokens": 10000270,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/c4_random_seed11.json",
+      "source_pool": "artifacts/data_extended/c4_candidate.pt"
+    },
+    {
+      "model": "pythia-410m",
+      "seed": 11,
+      "group": "B4",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 1957,
+      "candidate_prediction_tokens": 1000027,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_random_seed11.json",
+      "source_pool": "artifacts/generated/pool_seed11.pt"
+    },
+    {
+      "model": "pythia-410m",
+      "seed": 11,
+      "group": "M",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 1957,
+      "candidate_prediction_tokens": 1000027,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_nll_stratified_seed11.json",
+      "source_pool": "artifacts/generated/pool_seed11.pt"
+    },
+    {
+      "model": "pythia-410m",
+      "seed": 22,
+      "group": "B1",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 19570,
+      "candidate_prediction_tokens": 10000270,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/c4_random_seed22.json",
+      "source_pool": "artifacts/data_extended/c4_candidate.pt"
+    },
+    {
+      "model": "pythia-410m",
+      "seed": 22,
+      "group": "B2",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 19570,
+      "candidate_prediction_tokens": 10000270,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/c4_random_seed22.json",
+      "source_pool": "artifacts/data_extended/c4_candidate.pt"
+    },
+    {
+      "model": "pythia-410m",
+      "seed": 22,
+      "group": "B4",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 1957,
+      "candidate_prediction_tokens": 1000027,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_random_seed22.json",
+      "source_pool": "artifacts/generated/pool_seed22.pt"
+    },
+    {
+      "model": "pythia-410m",
+      "seed": 22,
+      "group": "M",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 1957,
+      "candidate_prediction_tokens": 1000027,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_nll_stratified_seed22.json",
+      "source_pool": "artifacts/generated/pool_seed22.pt"
+    },
+    {
+      "model": "pythia-410m",
+      "seed": 33,
+      "group": "B1",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 19570,
+      "candidate_prediction_tokens": 10000270,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/c4_random_seed33.json",
+      "source_pool": "artifacts/data_extended/c4_candidate.pt"
+    },
+    {
+      "model": "pythia-410m",
+      "seed": 33,
+      "group": "B2",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 19570,
+      "candidate_prediction_tokens": 10000270,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/c4_random_seed33.json",
+      "source_pool": "artifacts/data_extended/c4_candidate.pt"
+    },
+    {
+      "model": "pythia-410m",
+      "seed": 33,
+      "group": "B4",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 1957,
+      "candidate_prediction_tokens": 1000027,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_random_seed33.json",
+      "source_pool": "artifacts/generated/pool_seed33.pt"
+    },
+    {
+      "model": "pythia-410m",
+      "seed": 33,
+      "group": "M",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 1957,
+      "candidate_prediction_tokens": 1000027,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_nll_stratified_seed33.json",
+      "source_pool": "artifacts/generated/pool_seed33.pt"
+    },
+    {
+      "model": "pythia-1b",
+      "seed": 11,
+      "group": "B1",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 19570,
+      "candidate_prediction_tokens": 10000270,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/c4_random_seed11.json",
+      "source_pool": "artifacts/data_extended/c4_candidate.pt"
+    },
+    {
+      "model": "pythia-1b",
+      "seed": 11,
+      "group": "B2",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 19570,
+      "candidate_prediction_tokens": 10000270,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/c4_random_seed11.json",
+      "source_pool": "artifacts/data_extended/c4_candidate.pt"
+    },
+    {
+      "model": "pythia-1b",
+      "seed": 11,
+      "group": "B4",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 1957,
+      "candidate_prediction_tokens": 1000027,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_random_seed11.json",
+      "source_pool": "artifacts/extended/pythia-1b/generated/pool_seed11.pt"
+    },
+    {
+      "model": "pythia-1b",
+      "seed": 11,
+      "group": "M",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 1957,
+      "candidate_prediction_tokens": 1000027,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_nll_stratified_seed11.json",
+      "source_pool": "artifacts/extended/pythia-1b/generated/pool_seed11.pt"
+    },
+    {
+      "model": "pythia-1b",
+      "seed": 22,
+      "group": "B1",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 19570,
+      "candidate_prediction_tokens": 10000270,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/c4_random_seed22.json",
+      "source_pool": "artifacts/data_extended/c4_candidate.pt"
+    },
+    {
+      "model": "pythia-1b",
+      "seed": 22,
+      "group": "B2",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 19570,
+      "candidate_prediction_tokens": 10000270,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/c4_random_seed22.json",
+      "source_pool": "artifacts/data_extended/c4_candidate.pt"
+    },
+    {
+      "model": "pythia-1b",
+      "seed": 22,
+      "group": "B4",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 1957,
+      "candidate_prediction_tokens": 1000027,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_random_seed22.json",
+      "source_pool": "artifacts/extended/pythia-1b/generated/pool_seed22.pt"
+    },
+    {
+      "model": "pythia-1b",
+      "seed": 22,
+      "group": "M",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 1957,
+      "candidate_prediction_tokens": 1000027,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_nll_stratified_seed22.json",
+      "source_pool": "artifacts/extended/pythia-1b/generated/pool_seed22.pt"
+    },
+    {
+      "model": "pythia-1b",
+      "seed": 33,
+      "group": "B1",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 19570,
+      "candidate_prediction_tokens": 10000270,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/c4_random_seed33.json",
+      "source_pool": "artifacts/data_extended/c4_candidate.pt"
+    },
+    {
+      "model": "pythia-1b",
+      "seed": 33,
+      "group": "B2",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 19570,
+      "candidate_prediction_tokens": 10000270,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/c4_random_seed33.json",
+      "source_pool": "artifacts/data_extended/c4_candidate.pt"
+    },
+    {
+      "model": "pythia-1b",
+      "seed": 33,
+      "group": "B4",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 1957,
+      "candidate_prediction_tokens": 1000027,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_random_seed33.json",
+      "source_pool": "artifacts/extended/pythia-1b/generated/pool_seed33.pt"
+    },
+    {
+      "model": "pythia-1b",
+      "seed": 33,
+      "group": "M",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 1957,
+      "candidate_prediction_tokens": 1000027,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_nll_stratified_seed33.json",
+      "source_pool": "artifacts/extended/pythia-1b/generated/pool_seed33.pt"
+    },
+    {
+      "model": "pythia-2.8b",
+      "seed": 11,
+      "group": "B1",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 19570,
+      "candidate_prediction_tokens": 10000270,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/c4_random_seed11.json",
+      "source_pool": "artifacts/data_extended/c4_candidate.pt"
+    },
+    {
+      "model": "pythia-2.8b",
+      "seed": 11,
+      "group": "B2",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 19570,
+      "candidate_prediction_tokens": 10000270,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/c4_random_seed11.json",
+      "source_pool": "artifacts/data_extended/c4_candidate.pt"
+    },
+    {
+      "model": "pythia-2.8b",
+      "seed": 11,
+      "group": "B4",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 1957,
+      "candidate_prediction_tokens": 1000027,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_random_seed11.json",
+      "source_pool": "artifacts/extended/pythia-2.8b/generated/pool_seed11.pt"
+    },
+    {
+      "model": "pythia-2.8b",
+      "seed": 11,
+      "group": "M",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 1957,
+      "candidate_prediction_tokens": 1000027,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_nll_stratified_seed11.json",
+      "source_pool": "artifacts/extended/pythia-2.8b/generated/pool_seed11.pt"
+    },
+    {
+      "model": "pythia-2.8b",
+      "seed": 22,
+      "group": "B1",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 19570,
+      "candidate_prediction_tokens": 10000270,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/c4_random_seed22.json",
+      "source_pool": "artifacts/data_extended/c4_candidate.pt"
+    },
+    {
+      "model": "pythia-2.8b",
+      "seed": 22,
+      "group": "B2",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 19570,
+      "candidate_prediction_tokens": 10000270,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/c4_random_seed22.json",
+      "source_pool": "artifacts/data_extended/c4_candidate.pt"
+    },
+    {
+      "model": "pythia-2.8b",
+      "seed": 22,
+      "group": "B4",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 1957,
+      "candidate_prediction_tokens": 1000027,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_random_seed22.json",
+      "source_pool": "artifacts/extended/pythia-2.8b/generated/pool_seed22.pt"
+    },
+    {
+      "model": "pythia-2.8b",
+      "seed": 22,
+      "group": "M",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 1957,
+      "candidate_prediction_tokens": 1000027,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_nll_stratified_seed22.json",
+      "source_pool": "artifacts/extended/pythia-2.8b/generated/pool_seed22.pt"
+    },
+    {
+      "model": "pythia-2.8b",
+      "seed": 33,
+      "group": "B1",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 19570,
+      "candidate_prediction_tokens": 10000270,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/c4_random_seed33.json",
+      "source_pool": "artifacts/data_extended/c4_candidate.pt"
+    },
+    {
+      "model": "pythia-2.8b",
+      "seed": 33,
+      "group": "B2",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 19570,
+      "candidate_prediction_tokens": 10000270,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/c4_random_seed33.json",
+      "source_pool": "artifacts/data_extended/c4_candidate.pt"
+    },
+    {
+      "model": "pythia-2.8b",
+      "seed": 33,
+      "group": "B4",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 1957,
+      "candidate_prediction_tokens": 1000027,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_random_seed33.json",
+      "source_pool": "artifacts/extended/pythia-2.8b/generated/pool_seed33.pt"
+    },
+    {
+      "model": "pythia-2.8b",
+      "seed": 33,
+      "group": "M",
+      "bank_chunks": 196,
+      "bank_prediction_tokens": 100156,
+      "candidate_chunks": 1957,
+      "candidate_prediction_tokens": 1000027,
+      "replay_ratio": 0.05,
+      "replay_weight": 0.05,
+      "source_bank_metadata": "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_nll_stratified_seed33.json",
+      "source_pool": "artifacts/extended/pythia-2.8b/generated/pool_seed33.pt"
+    }
+  ],
+  "sources": {
+    "configs/extended_v2_pythia_410m_m64_formal_active_registry.json": {
+      "sha256": "c7f5c50d6794ba0df0dc3e071198da761f084ad9347ce5d9ce4dddf867ee48bd"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal/extended_v2_pythia_410m_m64_formal_B0_s11_w0.json": {
+      "sha256": "05b6a2b298e25f0e22ab2a1233cd8f3a763c932f8695c7c5cfbf9e95a6f2881e"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal/extended_v2_pythia_410m_m64_formal_B1_s11_w0p05.json": {
+      "sha256": "3b1ec53d0014109b8c28d2df65bfd5a1da7484956378ba9dc5801ac1e00f0993"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal/extended_v2_pythia_410m_m64_formal_B2_s11_w0p05.json": {
+      "sha256": "76b75401d73a3d0a0117241e683f832d2f5402181c313cdf0b6226f4c8343077"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal/extended_v2_pythia_410m_m64_formal_B3_s11_w0p05.json": {
+      "sha256": "990f91f1f38ba20dc50696570777d4a0a83d3095f4c9a0d4dadf951733f96591"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal/extended_v2_pythia_410m_m64_formal_B4_s11_w0p05.json": {
+      "sha256": "dcd08b2ac0976bf942b73419da8989b44a952f49402cd1a57e47d97d20d577c6"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal/extended_v2_pythia_410m_m64_formal_D_s11_w0p05.json": {
+      "sha256": "5b2b42e581a2d9a5ef46445ece27162c7a930ff2b82ffcaeaf9281d503a3d3c3"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal/extended_v2_pythia_410m_m64_formal_M_s11_w0p05.json": {
+      "sha256": "a8e825f2863ec7316134bcce5a06eef5e9069e67072c3ee83571da086f835c0c"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal/extended_v2_pythia_410m_m64_formal_C_s11_w0p05.json": {
+      "sha256": "7f4a7c62d9743844fa4b5112cde5a90c47f35d92e2c6018ca0fea3ce84448ffa"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/c4_random_seed11.json": {
+      "sha256": "46927a0cb2181fdb70aa15b660f5461039f640f5a7355fa837a4d00b514ee40c"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_random_seed11.json": {
+      "sha256": "59c02b20fc83aa1dac7283322f5a807732e7576bd431fe93f0e758f1a86930d8"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_nll_stratified_seed11.json": {
+      "sha256": "c1adf0afc90c0d4500e2d6365a97e46501474301720929e15c5d9e787ecc042f"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal/extended_v2_pythia_410m_m64_formal_B0_s22_w0.json": {
+      "sha256": "dc456477d3b6e98e0c8218e32150f57057ad1e98d07721468642d7b828808c34"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal/extended_v2_pythia_410m_m64_formal_B1_s22_w0p05.json": {
+      "sha256": "74a9089a6826dbc329dde158d24f3eb6cdc269b889e4221a92c1109ae7b5d156"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal/extended_v2_pythia_410m_m64_formal_B2_s22_w0p05.json": {
+      "sha256": "a8456334ec04ff93b9b0dd3d091366462fb12d124f7bc247d9dbfa57fa985375"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal/extended_v2_pythia_410m_m64_formal_B3_s22_w0p05.json": {
+      "sha256": "68a3ed45d5b144b06b91b707ab3d8b9e1915a5d9d036469b804ec395f5bb6e2f"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal/extended_v2_pythia_410m_m64_formal_B4_s22_w0p05.json": {
+      "sha256": "9c8ee261fd22b87a72c75bb3f33d59237b421a4645687d03d1580fd86a200abc"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal/extended_v2_pythia_410m_m64_formal_D_s22_w0p05.json": {
+      "sha256": "bc9f258932a66af27c22323affea75b6d93cb6ed303aadffd3faa28ebed4f396"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal/extended_v2_pythia_410m_m64_formal_M_s22_w0p05.json": {
+      "sha256": "53eb457069279ba018c2517d8164aaf2e2d03ca018d5fcd2a64d9eb5c76c85d7"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal/extended_v2_pythia_410m_m64_formal_C_s22_w0p05.json": {
+      "sha256": "00c709b3e9c4cf732d87ba0d96ba27ec3222e52e81238108d7e2c91ed17a0486"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/c4_random_seed22.json": {
+      "sha256": "983495d848102ddf07ba2f84933994d2a43502588185d3a801c7d88697904212"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_random_seed22.json": {
+      "sha256": "83820227a5de0da7398e3a1595d6f3939a0701da20a85dfebe5fe44565108336"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_nll_stratified_seed22.json": {
+      "sha256": "4d07321c11ff3ecbd43ffb23c5db66a7400db83e9de79a20d9984924b36dafcb"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal/extended_v2_pythia_410m_m64_formal_B0_s33_w0.json": {
+      "sha256": "7293f873a8312ad2b81947d870df00e86917677069933f7411ba3510d06cc362"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal/extended_v2_pythia_410m_m64_formal_B1_s33_w0p05.json": {
+      "sha256": "f2c2235cdfff2eac5ec0d4d6cbbcc6b0d18945c155bd697df99d5f3b36799f39"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal/extended_v2_pythia_410m_m64_formal_B2_s33_w0p05.json": {
+      "sha256": "81e91bd8671b634adb4d8feba2dd873cd4b233f62feaab69c31022baecb73600"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal/extended_v2_pythia_410m_m64_formal_B3_s33_w0p05.json": {
+      "sha256": "309d985cca55c56153b46297a08dbe628960d1d29f8ab6a7bf1324a45943020d"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal/extended_v2_pythia_410m_m64_formal_B4_s33_w0p05.json": {
+      "sha256": "cb4cdedfd8ac718ee466ad9bc05da7fa0fbf27fcf953553978c7c9157e583b69"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal/extended_v2_pythia_410m_m64_formal_D_s33_w0p05.json": {
+      "sha256": "d978340f3a64746e13caaf92abbd57cd124c867af70ea10f5a1581dc96f83852"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal/extended_v2_pythia_410m_m64_formal_M_s33_w0p05.json": {
+      "sha256": "eb879584166f08e5108364b7d14ecf5cd9014d498e552fa15d21c7f10f470505"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal/extended_v2_pythia_410m_m64_formal_C_s33_w0p05.json": {
+      "sha256": "8711e6be59158dd0f7b5ec2084de54dc4bf8e43e943fc4da37d1e4452ac18953"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/c4_random_seed33.json": {
+      "sha256": "18ccd514c163f97bfd889c74440432f8ea8a8a3a6ab8090df751ef620c75ce92"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_random_seed33.json": {
+      "sha256": "b3a97b49e18619aa59e0dbc40b6ca5b244e7993ba92210dcf01c8ccb48adfad4"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-410m/banks/generated_nll_stratified_seed33.json": {
+      "sha256": "e16b94b089520bc251b66f87a90562c90e895aa87d668c4264fdca4111ba6db5"
+    },
+    "configs/extended_v2_pythia_1b_m32_formal_active_registry.json": {
+      "sha256": "c106330d947904447fe7c1aa42fa8dbe8a337a683520801b90653d7d6474b8d6"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B0_s11_w0.json": {
+      "sha256": "425b616c52703bbc822f41437cdac7b905a23343745ac4b40244b5f7a4a54c32"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B1_s11_w0p05.json": {
+      "sha256": "8a31928649cd4d944557de21ecd1a444abeab912717431dac9b3fc85d5d7c9d9"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B2_s11_w0p05.json": {
+      "sha256": "e640ccd647681f5c7fd086e7e210efa9275d200a868d70eeea1fdd9926d3d8ec"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B3_s11_w0p05.json": {
+      "sha256": "8d576a72de708ce293531cae49e990ad2c2a39be8b5c2a970ad0927110df040b"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B4_s11_w0p05.json": {
+      "sha256": "b608f35518c4ea4f7e2b0e67f6dca1e8f7c3c5e969ebf28b7158782ca3b7085f"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_D_s11_w0p05.json": {
+      "sha256": "66303ad05fce3b33c70cd413720b8171b7288e4de6510fa0bb77553b1c77ed91"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_M_s11_w0p05.json": {
+      "sha256": "90416ccc5a668c283223919cad6185ce5a6ee0691799811a82af0d1c86b55a92"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_C_s11_w0p05.json": {
+      "sha256": "f1fe72f82bbc1e8f0f3f38dc1f6d1765b24ac03a60f6b7bac41f322523a30bda"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/c4_random_seed11.json": {
+      "sha256": "fc47e76f61aebb5dc13cb73535ff1a4db4724ca3a927cca6c1e5d705eede8f6c"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_random_seed11.json": {
+      "sha256": "30faee79b63ad9c1cf6f1553c06964ec038f82bb1a573d60ee060fd51ea0926f"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_nll_stratified_seed11.json": {
+      "sha256": "79925ba555af59dfdb16d5f2b8072296b6776a1b2babaeb693dfc48fd39a6c7e"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B0_s22_w0.json": {
+      "sha256": "e3afe50cb05aa45bb31d809a4568d984bbee6c51d5449ac65a99df64736bfb50"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B1_s22_w0p05.json": {
+      "sha256": "598f0bdbbbe446bb4ce14093fad393ffbc16ceafed80ccacb94feee4f23c15fe"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B2_s22_w0p05.json": {
+      "sha256": "ef88ac7ee04f91f85abca6fc1e8da1d8bb92155d4b22c5d5634730c9c12c2b80"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B3_s22_w0p05.json": {
+      "sha256": "6534daddd1d66069457097b3d433683ccaafc80f4d84d6ec8a78e3481fda8c80"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B4_s22_w0p05.json": {
+      "sha256": "7a113d5321f746a71de312992dd7463fbbadafe9cf4028092d537b6a3039881b"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_D_s22_w0p05.json": {
+      "sha256": "7399f23f82b6373d207bf2392ae8ad9cc4c1487b0b8776c9a93732f665e21365"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_M_s22_w0p05.json": {
+      "sha256": "269f47d1aa7fc3cbfefe2b9ea60ac5110767f1db16f7d1ad7a002fdb0c93ea52"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_C_s22_w0p05.json": {
+      "sha256": "68fb0a94a5cc71d8bb191ffa2e6cf950f3539b4e732cf1c0595b7b7b65a115dd"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/c4_random_seed22.json": {
+      "sha256": "dddca025a16c466f3bd7187346574df20abf596dbb8276dadbfbce344bbe19eb"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_random_seed22.json": {
+      "sha256": "1d0e55343d7b5d5b4cb4f6bb485366172d55cf040da288439742ccae1255bd4a"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_nll_stratified_seed22.json": {
+      "sha256": "647d0cc8ebcdd77adf8cbacd136fcb431ce5029f6990c6102dcc9c27ad45d988"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B0_s33_w0.json": {
+      "sha256": "14485bf65245824f7253b6846be203ae205bcc1058d2977ff71f372dcf09aa49"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B1_s33_w0p05.json": {
+      "sha256": "250e886bd0bbb8044fb27e251da4a2b203770eaa90a36582c203291ba1d92a06"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B2_s33_w0p05.json": {
+      "sha256": "fa10e3bb0715ed81bc4a51bced7aa5fb158bba4101a8a0d9a969d83825701aa7"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B3_s33_w0p05.json": {
+      "sha256": "f26e9b43a512b037171fc1bbf440aef0211fe2881145b801e581f48633179569"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_B4_s33_w0p05.json": {
+      "sha256": "9a80d2193fda0ff2084e5ba8a3cf9bf97dde5761ba22290cfddc189c19d20056"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_D_s33_w0p05.json": {
+      "sha256": "0c4b9aedab8fd1bd0f44d68551b73fc8561e493fb2c809c38d8f50522349a552"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_M_s33_w0p05.json": {
+      "sha256": "8ff1adbfa5ef573f169919f1ce66b515a3fdabd7145a689fd81a8202b0be425f"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal/extended_v2_pythia_1b_m32_formal_C_s33_w0p05.json": {
+      "sha256": "b548bb6dd1591309113c2d2c9433e98a8fff2380877ca636ab34285158c3e1e1"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/c4_random_seed33.json": {
+      "sha256": "b6f76fe36314400c132bce60ba5490bf8b0d0d9b631583adf137ca9f90a9b65c"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_random_seed33.json": {
+      "sha256": "f54c361d758ce2f0cf63afe6face8f467114ffc286f26196d08265d1be546f57"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/banks/generated_nll_stratified_seed33.json": {
+      "sha256": "c45e6a888ef9d8e67802bd34a79df0b12fc1e1489a8ec38e6894531c04906ca8"
+    },
+    "configs/extended_v2_pythia_2p8b_m8_h25m_formal_active_registry.json": {
+      "sha256": "c98360002f763a98423d16bf99c866edfbec21da2668a04cb3ccfd5652888d05"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_h25m_formal/extended_v2_pythia_2p8b_m8_h25m_formal_B0_s11_w0.json": {
+      "sha256": "d7c5898135d5d9c33164bf2266ceef4f1fcc57394bce5b79b3b2746eb15f4d5c"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_h25m_formal/extended_v2_pythia_2p8b_m8_h25m_formal_B1_s11_w0p05.json": {
+      "sha256": "002abc42bf795c72d90e39c2fc0ed873a36b95be1285c3202731e68ee374d856"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_h25m_formal/extended_v2_pythia_2p8b_m8_h25m_formal_B2_s11_w0p05.json": {
+      "sha256": "3c16be139e718a1cca201d494d3114c1c4c82a56f86909e420ca66572263a7dc"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_h25m_formal/extended_v2_pythia_2p8b_m8_h25m_formal_B4_s11_w0p05.json": {
+      "sha256": "a5e592f181c30cf673a2c817e649a595dd0dca53e547253b92c9a5ccacc0aa3d"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_h25m_formal/extended_v2_pythia_2p8b_m8_h25m_formal_M_s11_w0p05.json": {
+      "sha256": "50e46ab0b99e51ff5bf72c4cf970a86be771ebb1076067890c57dadb403391e9"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/c4_random_seed11.json": {
+      "sha256": "bd834d781ccdf9603290cab0b7146df489dd730d449b6fd544014ab11f286ee4"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_random_seed11.json": {
+      "sha256": "29247d900700896032f99922cbfa6e53b1cfd8361a4a6c0ddc1d246989afdab5"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_nll_stratified_seed11.json": {
+      "sha256": "7ff3d3ee7d0e0fc62f5fef311f1f6c1843c9690322538b315310ce41de9607b0"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_h25m_formal/extended_v2_pythia_2p8b_m8_h25m_formal_B0_s22_w0.json": {
+      "sha256": "344305bfc22393511954694ba55ce719e6c7852cb1be7ca4135e8016d96c123b"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_h25m_formal/extended_v2_pythia_2p8b_m8_h25m_formal_B1_s22_w0p05.json": {
+      "sha256": "b11d0298e87a64bda937a135a430605baba11ead813eb1af4f48ffb2f456032f"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_h25m_formal/extended_v2_pythia_2p8b_m8_h25m_formal_B2_s22_w0p05.json": {
+      "sha256": "dbf8e3443dec9f86d90c20576bbcd8d3a28c4bd916abfda6d3763ae0f43e91b7"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_h25m_formal/extended_v2_pythia_2p8b_m8_h25m_formal_B4_s22_w0p05.json": {
+      "sha256": "66f36b2374085e4c56d1f1567ea1401f990de9b13adf7635196fc8b3c3aa23be"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_h25m_formal/extended_v2_pythia_2p8b_m8_h25m_formal_M_s22_w0p05.json": {
+      "sha256": "1eab86955c10027d68b0561c34eb6e582999e13918d53abc613245763e75c46c"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/c4_random_seed22.json": {
+      "sha256": "266f199adc2ee5e8b5d0bacc8ace1c2a66ec8104ec779033031e4dcf50c68df2"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_random_seed22.json": {
+      "sha256": "60b095bac26077dfa04c02ec340eac87a2fd6a6e11d78183ab81c4ace1569a61"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_nll_stratified_seed22.json": {
+      "sha256": "6055c0646eb32edb1e9a96a6ef3638e9f0212492ac640c3192a5f77b1b69a06d"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_h25m_formal/extended_v2_pythia_2p8b_m8_h25m_formal_B0_s33_w0.json": {
+      "sha256": "015af1e04358694dff269ca80c0f010862c184558adea7054203a059466a693a"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_h25m_formal/extended_v2_pythia_2p8b_m8_h25m_formal_B1_s33_w0p05.json": {
+      "sha256": "ac4615d5acdc36c4ff14ee86ad9ca80ef9e66104a4c6ad6baccf77a6f0e4f9c6"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_h25m_formal/extended_v2_pythia_2p8b_m8_h25m_formal_B2_s33_w0p05.json": {
+      "sha256": "2e764b1a9199ddb1bbf83f4207cb7c9e7500a81f0e57a04a57df7a1de5e679be"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_h25m_formal/extended_v2_pythia_2p8b_m8_h25m_formal_B4_s33_w0p05.json": {
+      "sha256": "a35445c1a73b0e55d0814686c71ca90e0d79c251aaf6768751f1f86e8ce62496"
+    },
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_h25m_formal/extended_v2_pythia_2p8b_m8_h25m_formal_M_s33_w0p05.json": {
+      "sha256": "6bb48fd528ca8df6161933509b73056377e5583f7010a8dc8491b8bbce81817a"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/c4_random_seed33.json": {
+      "sha256": "92c30ebbc4fed1a07d97a0374337814638bcdfb06b44c03cfd0b882d30b472f6"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_random_seed33.json": {
+      "sha256": "0ca270a93a07b56cf4389c884f8cba577d855a8c47d0092a281ad120e089ed11"
+    },
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/banks/generated_nll_stratified_seed33.json": {
+      "sha256": "1c1f2a612905a546458dc284f47f5c525f62b3e0cb15b24efd4aaca30f01f205"
+    }
+  },
+  "main_bank_K": 100156,
+  "C100M_replay_budget": 5000000,
+  "C25M_replay_budget": 1250000,
+  "cumulative_replay_over_K": {
+    "main10M": 4.992212149047486,
+    "C100M": 49.92212149047486,
+    "C25M": 12.480530372618714
+  },
+  "interpretation": "Equal K and b within each phase does not equal matched candidate pool size, cumulative exposure, or unique bank fraction across horizons. Random selection from larger pool is not claimed to prove better bank quality."
+}

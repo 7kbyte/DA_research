@@ -1,0 +1,58 @@
+{
+  "A_enqueue_confirmation": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/supplement_A_nll_enqueue_confirmation.json",
+    "sha256": "3f3f2eb7ca5e4af8315d5a71155a4ac062b965b3b99889881060eabfce6dd764"
+  },
+  "A_execution_authority": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/supplement_A_nll_execution_authority.json",
+    "sha256": "4aeec20b39b1c5a7ee75ce351ccf614eaca94d5342366cf65f503e6ed2faf53e"
+  },
+  "CPU_tests_passed": 42,
+  "advice": {
+    "path": "/tmp/grad-research-20261106/worktree/results/early_A_nll_timing_v1/advice.json",
+    "sha256": "56b7b93b934b0ba8f89d28e03d373b69bf6c82cff805fa0a2160e3e50778d587"
+  },
+  "argv": [
+    "/usr/bin/python",
+    "/tmp/grad-research-20261106/worktree/scripts/reconcile_A_nll_runtime.py",
+    "--advice",
+    "/tmp/grad-research-20261106/worktree/results/early_A_nll_timing_v1/advice.json",
+    "--advice-sha256",
+    "56b7b93b934b0ba8f89d28e03d373b69bf6c82cff805fa0a2160e3e50778d587",
+    "--output",
+    "/tmp/grad-research-20261106/worktree/results/runtime_budget_with_A_nll_latest.json",
+    "--watch",
+    "--poll-seconds",
+    "60"
+  ],
+  "exit_when_A126_completed": true,
+  "frozen_8_unchanged": true,
+  "master_jobs_at_start": 504,
+  "new_gpu_scheduler_or_inference_started": false,
+  "no_queue_job_or_state_mutations": true,
+  "output": "/tmp/grad-research-20261106/worktree/results/runtime_budget_with_A_nll_latest.json",
+  "raw_observer_source": {
+    "path": "/tmp/grad-research-20261106/worktree/scripts/monitor_runtime_budget.py",
+    "sha256": "aaf4c774b47d00bef8794ac4151f1194ad04c6d6d6dce830ceceb337f331d0f4"
+  },
+  "schema_version": 1,
+  "score_fields_accessed": false,
+  "source_files": {
+    "scripts/estimate_early_A_nll.py": {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/estimate_early_A_nll.py",
+      "sha256": "69bc1b49b3cbf433fd1ed6624bf274e412a48525b55f6bbf645dcd0002bfdf73"
+    },
+    "scripts/handoff_evaluation.py": {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/handoff_evaluation.py",
+      "sha256": "bbe5a14e16bde55362aa3a7edc044b35ed8a7e2d0966a8b40692513b6c3a748a"
+    },
+    "scripts/reconcile_A_nll_runtime.py": {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/reconcile_A_nll_runtime.py",
+      "sha256": "d4b9b565853e38b9ebf89dedd9db1c2d7f60e4baeb24f2456e4f62667ca537e1"
+    }
+  },
+  "status": "CPU_timing_reconciliation_only",
+  "utc": "2026-11-06T09:32:59.643697+00:00",
+  "v5_sources_unchanged": true,
+  "watcher_pid": 3108000
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_v8_independent_review_v1/whole_child_timing_attempt2.json",
+    "sha256": "1c761e2688923dfce7cf915c0f27da69b9f70e72c29e59c89426e45bee5cc4bd",
+    "bytes": 497
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 0.37951304018497467,
+  "CPU_component_pointers": [
+    "/child_user_seconds",
+    "/child_system_seconds"
+  ],
+  "CPU_components": {
+    "child_user_seconds": 0.260314,
+    "child_system_seconds": 0.116296
+  },
+  "recorded_inclusive_CPU_seconds": 0.37661,
+  "original_returncode": 0,
+  "scope": "Independent small-source, frozen ledger and copied-metadata SHA review only; no collector rerun, score or large payload open; manual engineering whole unknown",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall; sum only the named user/system components. Failure rc retained. No calendar-derived elapsed.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

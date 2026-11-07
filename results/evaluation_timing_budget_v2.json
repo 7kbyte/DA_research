@@ -1,0 +1,211 @@
+{
+  "schema_version": 2,
+  "source_sha256": {
+    "results/first_behavior_timing_monitor.json": "78ac61009ab1c5a36bb2b38a85eb43015da0ebab6f5f9dc9a50f7f3819d1d2a9",
+    "results/auxiliary_evaluation_timing_completed_v1.json": "db4676e000d7c49ec810cc868243b7951a110b74c65cdca1dc32b91d52b9f78e",
+    "results/nll_scope_budget_v1.json": "0104c5c13d423f11592e552e008160b095b3ffc9b1ba5efcc8241a3bcf36892a",
+    "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_lr_B0_s101_lr1em05_summary.json": "d42840803c67f57abb6f490ead252d376d925c90f80a8d24eb537c33f7027442",
+    "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_lr_B0_s101_lr3em05_summary.json": "ebfc57a32ca90b7b65d6aba9639604a6e13a1c65dfa0859a4723ca613dcfd04d",
+    "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_lr_B0_s101_lr0p0001_summary.json": "77b5f43cc89aef201716fce5afe32e206172e4ae209bccff3cff75de612e03ca",
+    "/tmp/grad-research-20261106/worktree/results/extended/pythia-2.8b/extended_v2_pythia_2p8b_m8_lr_B0_s101_lr1em05_summary.json": "7ae91d8be2da829269bbcc6982347f1edef6e129eab17c65f69e656c6398ab26",
+    "/tmp/grad-research-20261106/worktree/results/extended/pythia-2.8b/extended_v2_pythia_2p8b_m8_lr_B0_s101_lr3em05_summary.json": "6d8c054bdbb78cf48fb2a1f897681f195ed8046749fef011659b769f18e07dda",
+    "/tmp/grad-research-20261106/worktree/results/extended/pythia-2.8b/extended_v2_pythia_2p8b_m8_lr_B0_s101_lr0p0001_summary.json": "98143c83d86e3867a2d3f00805ed40aeaa2291fa0a1da6d8a1b287d4f83c37c9"
+  },
+  "measured_initials": {
+    "pythia-410m": {
+      "scorer_subprocess_wall_seconds": 91.28385011479259,
+      "SHA_manifest_verification_wall_seconds": 0.9213802516460419,
+      "scheduler_elapsed_seconds": 100.13961291313171,
+      "scheduler_unclassified_residual_wall_seconds": 7.934382546693087,
+      "inference_policy": {
+        "model": "/tmp/grad-research-20261106/models/pythia-410m-final",
+        "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+        "batch_size": 16,
+        "max_length": 2048,
+        "device": "cuda:0",
+        "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+        "cuda_version": "12.4",
+        "gpu_name": "NVIDIA H100 80GB HBM3",
+        "precision": "bf16",
+        "device_type": "cuda",
+        "effective_precision": "cuda_bfloat16_autocast",
+        "attention_implementation": "sdpa",
+        "attention_backend": "auto",
+        "deterministic_algorithms": true,
+        "deterministic_warn_only": false,
+        "allow_tf32_matmul": true,
+        "allow_tf32_cudnn": true,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "flash_sdp_enabled": true,
+        "mem_efficient_sdp_enabled": true,
+        "math_sdp_enabled": true,
+        "cudnn_sdp_enabled": true,
+        "model_weight_dtype": "torch.float32"
+      },
+      "initial_verified_input_bytes": 924642842,
+      "future_final_checkpoint_byte_size_proxy": 4864403348,
+      "checkpoint_size_proxy_source": "Largest existing frozen primary final checkpoint; all extra 410M cells conservatively use final-size SHA proxy",
+      "adapted_input_byte_ratio_proxy": 6.260845730961707,
+      "single_initial_observation_not_a_timing_distribution": true
+    },
+    "pythia-1b": {
+      "scorer_subprocess_wall_seconds": 80.14269004017115,
+      "SHA_manifest_verification_wall_seconds": 1.8530166186392307,
+      "scheduler_elapsed_seconds": 90.16397452354431,
+      "scheduler_unclassified_residual_wall_seconds": 8.168267864733934,
+      "inference_policy": {
+        "model": "/tmp/grad-research-20261106/models/pythia-1b-final",
+        "revision": "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2",
+        "batch_size": 16,
+        "max_length": 2048,
+        "device": "cuda:0",
+        "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+        "cuda_version": "12.4",
+        "gpu_name": "NVIDIA H100 80GB HBM3",
+        "precision": "bf16",
+        "device_type": "cuda",
+        "effective_precision": "cuda_bfloat16_autocast",
+        "attention_implementation": "sdpa",
+        "attention_backend": "auto",
+        "deterministic_algorithms": true,
+        "deterministic_warn_only": false,
+        "allow_tf32_matmul": true,
+        "allow_tf32_cudnn": true,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "flash_sdp_enabled": true,
+        "mem_efficient_sdp_enabled": true,
+        "math_sdp_enabled": true,
+        "cudnn_sdp_enabled": true,
+        "model_weight_dtype": "torch.float32"
+      },
+      "initial_verified_input_bytes": 2104376530,
+      "future_final_checkpoint_byte_size_proxy": 12141650006,
+      "checkpoint_size_proxy_source": "Largest completed same-model LR latest checkpoint file size; future formal file bytes unmeasured",
+      "adapted_input_byte_ratio_proxy": 6.769713657659924,
+      "single_initial_observation_not_a_timing_distribution": true
+    },
+    "pythia-2.8b": {
+      "scorer_subprocess_wall_seconds": 211.1012738570571,
+      "SHA_manifest_verification_wall_seconds": 5.059351745992899,
+      "scheduler_elapsed_seconds": 220.38843631744385,
+      "scheduler_unclassified_residual_wall_seconds": 4.227810714393854,
+      "inference_policy": {
+        "model": "/tmp/grad-research-20261106/models/pythia-2.8b-final",
+        "revision": "2a259cdd96a4beb1cdf467512e3904197345f6a9",
+        "batch_size": 8,
+        "max_length": 2048,
+        "device": "cuda:0",
+        "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+        "cuda_version": "12.4",
+        "gpu_name": "NVIDIA H100 80GB HBM3",
+        "precision": "bf16",
+        "device_type": "cuda",
+        "effective_precision": "cuda_bfloat16_autocast",
+        "attention_implementation": "sdpa",
+        "attention_backend": "auto",
+        "deterministic_algorithms": true,
+        "deterministic_warn_only": false,
+        "allow_tf32_matmul": true,
+        "allow_tf32_cudnn": true,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "flash_sdp_enabled": true,
+        "mem_efficient_sdp_enabled": true,
+        "math_sdp_enabled": true,
+        "cudnn_sdp_enabled": true,
+        "model_weight_dtype": "torch.float32"
+      },
+      "initial_verified_input_bytes": 5698368146,
+      "future_final_checkpoint_byte_size_proxy": 33303023972,
+      "checkpoint_size_proxy_source": "Largest completed same-model LR latest checkpoint file size; future formal file bytes unmeasured",
+      "adapted_input_byte_ratio_proxy": 6.844308952796817,
+      "single_initial_observation_not_a_timing_distribution": true
+    }
+  },
+  "behavior_scope_before_further_proofs": {
+    "total_inferences": 150,
+    "model_counts": {
+      "pythia-410m": 109,
+      "pythia-1b": 25,
+      "pythia-2.8b": 16
+    },
+    "completed_initials": 3,
+    "remaining_adapted_inferences_upper_count": 147,
+    "primary_remaining": 66,
+    "unproven_future_A_C_reuse_not_deducted": true
+  },
+  "NLL_scope_before_further_proofs": {
+    "logical_endpoints": 384,
+    "inferences": 364
+  },
+  "replay_fit": {
+    "all_15_complete_integrity_verified": true,
+    "recorded_scorer_subprocess_wall_seconds_sum": 319.5153572000563,
+    "recorded_SHA_manifest_verification_wall_seconds_sum": 49.45265765488148,
+    "remaining_inferences": 0,
+    "results_semantically_parsed": false
+  },
+  "sensitivity_scenarios": [
+    {
+      "adapted_scorer_factor_assumption": 1.0,
+      "extra_checkpoint_loading_allowance_per_behavior_job_seconds": 0.0,
+      "NLL_test_validation_rate_factor_assumption": 0.75,
+      "NLL_nonloop_startup_SHA_allowance_per_job_seconds": 5.0,
+      "remaining_behavior_job_wall_seconds_proxy_by_model": {
+        "pythia-410m": 11338.58004587239,
+        "pythia-1b": 2420.5283955834693,
+        "pythia-2.8b": 3749.3527653284755
+      },
+      "remaining_behavior_job_wall_seconds_proxy": 17508.461206784334,
+      "remaining_NLL_job_wall_seconds_proxy": 8245.975190250569,
+      "combined_ideal_four_uncontended_slots_seconds_proxy": 6438.609099258725,
+      "interpretation": "Sensitivity assumptions only, not confidence intervals, measured adapted costs or runtime guarantees"
+    },
+    {
+      "adapted_scorer_factor_assumption": 1.25,
+      "extra_checkpoint_loading_allowance_per_behavior_job_seconds": 10.0,
+      "NLL_test_validation_rate_factor_assumption": 1.0,
+      "NLL_nonloop_startup_SHA_allowance_per_job_seconds": 15.0,
+      "remaining_behavior_job_wall_seconds_proxy_by_model": {
+        "pythia-410m": 14883.24399897179,
+        "pythia-1b": 3141.384535824496,
+        "pythia-2.8b": 4690.98254229244
+      },
+      "remaining_behavior_job_wall_seconds_proxy": 22715.611077088724,
+      "remaining_NLL_job_wall_seconds_proxy": 14027.96692033409,
+      "combined_ideal_four_uncontended_slots_seconds_proxy": 9185.894499355703,
+      "interpretation": "Sensitivity assumptions only, not confidence intervals, measured adapted costs or runtime guarantees"
+    },
+    {
+      "adapted_scorer_factor_assumption": 1.5,
+      "extra_checkpoint_loading_allowance_per_behavior_job_seconds": 30.0,
+      "NLL_test_validation_rate_factor_assumption": 1.5,
+      "NLL_nonloop_startup_SHA_allowance_per_job_seconds": 30.0,
+      "remaining_behavior_job_wall_seconds_proxy_by_model": {
+        "pythia-410m": 19507.90795207119,
+        "pythia-1b": 4102.240676065523,
+        "pythia-2.8b": 5782.612319256404
+      },
+      "remaining_behavior_job_wall_seconds_proxy": 29392.760947393115,
+      "remaining_NLL_job_wall_seconds_proxy": 23771.950380501137,
+      "combined_ideal_four_uncontended_slots_seconds_proxy": 13291.177831973564,
+      "interpretation": "Sensitivity assumptions only, not confidence intervals, measured adapted costs or runtime guarantees"
+    }
+  ],
+  "evaluation_window_seconds_after_training": 12392,
+  "limitations": [
+    "Three measured initial wall observations replace all model-parameter scaling assumptions",
+    "Adapted checkpoint loading, baseline transitions and different caching/contention are not yet measured",
+    "SHA byte scaling and future checkpoint sizes are proxies; model CPU deserialization cost is a separate allowance",
+    "Initial observations on available GPUs do not estimate an adapted runtime distribution",
+    "No wall component is labeled pure GPU time; nested result/teacher timers are not added",
+    "Four-slot arithmetic excludes ongoing training, retries, packaging and unavailable slots"
+  ],
+  "test_or_behavior_scores_parsed": false,
+  "new_inference_started": false
+}

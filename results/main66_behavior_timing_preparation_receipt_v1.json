@@ -1,0 +1,87 @@
+{
+  "actual_frozen_generic_seconds_per_job": 300,
+  "baseline_already_completed": {
+    "attestation_sha256": {
+      "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/baselines/109f59e1e08b4d91880e04fc18414e3548cd0718cfb5b3fdab10b946d8639ab1_execution.json": "7a6a511be6c6856332e60cfa933e133c567fdb9c644a322cff88657ce6436210"
+    },
+    "charged_to_new_phase": false,
+    "definition_sha256": "0c4adb068e50cafd2e077b0b689e67a4523cb7a1eda8a3efe6a08b707d3154b3",
+    "id": "behavior_pythia-410m_109f59e1e08b4d91880e_initial",
+    "whole_slot_seconds": 100.13961291313171
+  },
+  "documentation": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/主行为66纯时间校正说明.md",
+    "sha256": "54be0e3711acd7d36d14655e551b2f0aa2d4aa12fd902c4092151e1eede9936d"
+  },
+  "frozen_behavior_manifest": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+    "sha256": "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934"
+  },
+  "frozen_behavior_queue": {
+    "path": "/tmp/grad-research-20261106/worktree/configs/primary_evaluation_v2_execution_matched_behavior_queue.json",
+    "sha256": "393f3df2f0213e2e4e4d2387109b750825c797b909f4b05d16cd3cb739f6aaa9"
+  },
+  "frozen_v4_budget": {
+    "path": "/tmp/grad-research-20261106/worktree/results/evaluation_timing_budget_v4.json",
+    "sha256": "a5154c67177e5d43bc77593c8927ebc06c330989197e8db0dc701a80da381328"
+  },
+  "immutable_input_snapshots": [
+    {
+      "name": "raw_runtime",
+      "snapshot": {
+        "path": "/tmp/grad-research-20261106/worktree/results/main66_behavior_timing_proposal_v2_inputs/raw_runtime.json",
+        "sha256": "598d8eb49d7418ed2039d8bc82f8d9ce9611f6cefcec93fa90b1c2df2b09cd5f"
+      },
+      "source": "/tmp/grad-research-20261106/worktree/results/runtime_budget_latest.json"
+    },
+    {
+      "name": "master_state",
+      "snapshot": {
+        "path": "/tmp/grad-research-20261106/worktree/results/main66_behavior_timing_proposal_v2_inputs/master_state.json",
+        "sha256": "b6b2f35edda516d29e5e9edd253e8d2b7200f1bbb5a248b7e45df7bccd5d6130"
+      },
+      "source": "/tmp/grad-research-20261106/worktree/logs/supplemental_job_state.json"
+    },
+    {
+      "name": "master_queue",
+      "snapshot": {
+        "path": "/tmp/grad-research-20261106/worktree/results/main66_behavior_timing_proposal_v2_inputs/master_queue.json",
+        "sha256": "7cb38a7cb952557a7f48d656ea0615e787fdc75b5ff9abebe1ce28971fda975c"
+      },
+      "source": "/tmp/grad-research-20261106/worktree/configs/supplemental_v1_queue.json"
+    }
+  ],
+  "main66_completed": 0,
+  "main66_enqueued": false,
+  "main66_final_tail_budget_deduction": 0,
+  "master_jobs": 504,
+  "master_pid": 2988506,
+  "master_queue": {
+    "path": "/tmp/grad-research-20261106/worktree/configs/supplemental_v1_queue.json",
+    "sha256": "7cb38a7cb952557a7f48d656ea0615e787fdc75b5ff9abebe1ce28971fda975c"
+  },
+  "new_GPU_or_watcher_started": false,
+  "proposal": {
+    "path": "/tmp/grad-research-20261106/worktree/results/main66_behavior_timing_proposal_v2.json",
+    "sha256": "8f6a568c1814041c4aaf1d9aeb457956b9adaa4c7691661652f673b0a8aef409"
+  },
+  "recommendation": "Keep main66 unqueued until new complete-run timing evidence; do not act on minute-level jitter.",
+  "schema_version": 1,
+  "scores_or_predictions_parsed": false,
+  "source": {
+    "path": "/tmp/grad-research-20261106/worktree/scripts/reconcile_main_behavior_runtime.py",
+    "sha256": "f4285f3d3e694b5642e5c49e64ce5cc60af7110183ebdfd94b058390caecb8ca"
+  },
+  "source_queue_and_scientific10_helpers8_v5_unchanged": true,
+  "status": "CPU_tests_and_fixed_hypothetical_proposal_passed",
+  "tests": {
+    "command": "python -m pytest -q tests/test_main_behavior_runtime_reconciliation.py tests/test_first_C_steady_timing.py tests/test_final_cost_inventory.py",
+    "new_main66_tests": 6,
+    "passed": 18
+  },
+  "tests_source": {
+    "path": "/tmp/grad-research-20261106/worktree/tests/test_main_behavior_runtime_reconciliation.py",
+    "sha256": "3d56d15c890c30e952a8cc57ea00b0b5c38cbe12ca8fda6cc2da886eec98554c"
+  },
+  "utc": "2026-11-06T11:07:46.359632+00:00"
+}

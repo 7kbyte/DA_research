@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_budget_v6_refresh_2110_v1/whole_child_timing.json",
+    "sha256": "09d8f50f9646a435630f8c97fc0c7bcd847d857b7862f4dde0d298a3e9faff94",
+    "bytes": 990
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 1.6868541203439236,
+  "CPU_component_pointers": [
+    "/user_cpu_seconds",
+    "/sys_cpu_seconds"
+  ],
+  "CPU_components": {
+    "user_cpu_seconds": 1.211323,
+    "sys_cpu_seconds": 0.47414599999999996
+  },
+  "recorded_inclusive_CPU_seconds": 1.6854689999999999,
+  "original_returncode": 0,
+  "scope": "Original unchanged budget producer; ROOT explicitly allows original opaque integrity SHA for completed C41043 plus initial1. No score semantics/CP/base/TAR/ZIP reads, GPU, or queue/source/margin changes. Internal collector timer nested.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall; sum only the named user/system components. Failure rc retained. No calendar-derived elapsed.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

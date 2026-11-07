@@ -1,0 +1,90 @@
+{
+  "GPU_inference_started": false,
+  "checkpoint_cache": "Explicit optional per-plan immutable v5 snapshot; default fresh; all payload hits current5stat+expectedSHA+complete receipt; output/source/attestation checks fresh",
+  "collector_IO_review": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_collector_io_review_v2.json",
+    "sha256": "64c7746ae4b76ba38f20b66685394ea59192c65aa47a7daca3c4ba3fad56ebb4"
+  },
+  "command_templates": {
+    "path": "/tmp/grad-research-20261106/worktree/configs/supplemental_aux_analysis_commands_v2.json",
+    "sha256": "fb46ee08de3c578b0ba23d14f1d5191d8653bda66169f976f1b0aa7437b7765c"
+  },
+  "frozen8_unchanged": true,
+  "master_jobs": 378,
+  "master_queue": {
+    "path": "/tmp/grad-research-20261106/worktree/configs/supplemental_v1_queue.json",
+    "sha256": "7f4977b81d24973cab38f2d74b062244cd113bb07351a6410305a25bae6f3566"
+  },
+  "metadata_accounting": "Historical CP covered bytes are separate from current fresh payload bytes; reader counters diagnostic, not additive; other guard bytes do not claim all library/collector I/O",
+  "new_scheduler_started": false,
+  "operational_revision": 2,
+  "prepared_at_utc": "2026-11-06T09:20:35.269657+00:00",
+  "primary_behavior_guard_unchanged": true,
+  "protocol": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_protocol_v2.json",
+    "sha256": "eed050602c368e5e4be87172ac4d208b890d9a7f7e9811ce1684ae62acc8f742"
+  },
+  "queue_append": false,
+  "ready_phase_count": 0,
+  "ready_snapshot": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/supplemental_aux_analysis_v2/preparation_readiness_snapshot.json",
+    "sha256": "df87f50865e6c3f48ea61c2b7bb69648cb6bef1e717958aa3707cfa2d7eade35"
+  },
+  "real_checkpoint_payload_reads_in_this_v2_preparation": 0,
+  "real_phase_cache_plans_prepared": 0,
+  "real_score_authorities_issued": 0,
+  "real_supplemental_or_behavior_scores_read": false,
+  "schema_version": 2,
+  "science_invariant_keys_equal_to_v1": [
+    "contracts",
+    "bootstrap_replicates",
+    "bootstrap_seed",
+    "confidence",
+    "policy_pairs",
+    "A_registry",
+    "print_figure_policy"
+  ],
+  "selected_policy_math_source_unchanged": true,
+  "source_files": {
+    "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_collector_io_review_v2.json": "64c7746ae4b76ba38f20b66685394ea59192c65aa47a7daca3c4ba3fad56ebb4",
+    "/tmp/grad-research-20261106/worktree/docs/补充分析checkpoint核验缓存操作修订_v2.md": "8f78bb9bbb0af4e852edcad04d74d80045a1fb95f3259b4ac5b37c9f4195c360",
+    "/tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v2.py": "a2f613babda5f1fd3b520259515b1acda90703ef42d3c7089c32c7e57497af3a",
+    "/tmp/grad-research-20261106/worktree/src/replay_study/supplemental_analysis_guard_v2.py": "64c89e37be3d595c239ad2683d72a85cdef6db776374ef6eeae28e23b97c3aea",
+    "/tmp/grad-research-20261106/worktree/tests/test_supplemental_analysis_cache_v2.py": "d3c25a37cb2494c463852ed4ba9579465ecf1081d32377dcabd2f626b4101fbf"
+  },
+  "status": "prepared_only_waiting_real_READY_and_explicit_root_score_authority",
+  "tests": {
+    "cases": [
+      "default fresh",
+      "checkpoint hit without payload reread",
+      "missing entry fresh fallback",
+      "unqualified historical receipt fresh fallback",
+      "wrong snapshot/receipt/reader/expected SHA rejection",
+      "EOF/full stable-fd proof rejection",
+      "5stat/inode changes fresh invalidation",
+      "changed bytes rejected despite restored mtime",
+      "symlink retarget/after-verification mutation rejection",
+      "noncheckpoint output/attestation/code/evaluation tensor always fresh",
+      "whole phase/aliases/C final+best gating unchanged",
+      "root authority binds exact mode/snapshot",
+      "immutable first-read before collector",
+      "full A126 with exact selected18,126 historical hits and zero current CP payload bytes",
+      "existing real collector on synthetic results never hashes CP"
+    ],
+    "command": "CUDA_VISIBLE_DEVICES='' OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 pytest -q",
+    "log": {
+      "path": "/tmp/grad-research-20261106/worktree/results/supplemental_aux_analysis_cpu_tests_v2.log",
+      "sha256": "d37d0d731c65a5d5d26157c8562ecc20b0c8a1eb09185dff4e4949b3dd043762"
+    },
+    "new_cache_tests_passed": 21,
+    "passed": 474,
+    "wall_seconds": 22.51
+  },
+  "v1_byte_snapshot": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/supplemental_aux_analysis_v1/source_bytes_manifest.json",
+    "sha256": "49eab2b0b24e65904d9131147338149f0e90cc26d81768688b14220cb5804583"
+  },
+  "v1_original_sources_and_protocol_and_templates_unchanged": true,
+  "v1_real_scores_read": false,
+  "v5_CPU_watcher_pid": 3093854
+}

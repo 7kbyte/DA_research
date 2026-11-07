@@ -1,0 +1,74 @@
+{
+  "complete": true,
+  "utc": "2026-11-06T04:54:29.565908+00:00",
+  "measurement": "results/selection_cost_diagnostic_main410m_seed11.json",
+  "measurement_sha256": "d9f8995739e15d38a03656382619a92ede366a13d60e81691809f76d67ac4e3a",
+  "input_pool_sha256": "9909c12dcb8b1c96650678dd9de9dfbe857aa9919bf2d6e98d44afd76baeed3d",
+  "input_stats_sha256": "357340480e19e1753edecf715faddec297eeadb20a7e01cbeb42f5e70f64e0f5",
+  "batch_size": 16,
+  "chunks": 1957,
+  "prediction_tokens": 1000027,
+  "execution_policy": {
+    "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+    "cuda_version": "12.4",
+    "precision": "bf16",
+    "attention_implementation": "sdpa",
+    "device_type": "cuda",
+    "effective_precision": "cuda_bfloat16_autocast",
+    "gpu_name": "NVIDIA H100 80GB HBM3",
+    "attention_backend_requested": "auto",
+    "flash_sdp_enabled": true,
+    "mem_efficient_sdp_enabled": true,
+    "math_sdp_enabled": true,
+    "cudnn_sdp_enabled": true,
+    "deterministic_algorithms": true,
+    "deterministic_warn_only": false,
+    "allow_tf32_matmul": true,
+    "allow_tf32_cudnn": true,
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false,
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+  },
+  "historical_shared_joint_wall_seconds_count_once": 8.102698240429163,
+  "modes": {
+    "nll_only": {
+      "trials": 3,
+      "median_wall_seconds": 8.660092793405056,
+      "median_cuda_event_elapsed_seconds": 8.660060546875,
+      "wall_seconds_range": [
+        8.659125607460737,
+        8.664418693631887
+      ],
+      "peak_gpu_allocated_bytes_including_model": 3557409792,
+      "peak_gpu_reserved_bytes_including_model": 4586471424,
+      "all_frozen_tensor_comparisons_exact_equal": true
+    },
+    "feature_only": {
+      "trials": 3,
+      "median_wall_seconds": 3.3223021887242794,
+      "median_cuda_event_elapsed_seconds": 3.3222509765625,
+      "wall_seconds_range": [
+        3.319262057542801,
+        3.3547153808176517
+      ],
+      "peak_gpu_allocated_bytes_including_model": 2043042816,
+      "peak_gpu_reserved_bytes_including_model": 2210398208,
+      "all_frozen_tensor_comparisons_exact_equal": true
+    },
+    "joint_frozen_pipeline": {
+      "trials": 3,
+      "median_wall_seconds": 8.678083702921867,
+      "median_cuda_event_elapsed_seconds": 8.67803125,
+      "wall_seconds_range": [
+        8.67786729335785,
+        8.684638012200594
+      ],
+      "peak_gpu_allocated_bytes_including_model": 5201576960,
+      "peak_gpu_reserved_bytes_including_model": 5391777792,
+      "all_frozen_tensor_comparisons_exact_equal": true
+    }
+  },
+  "all_recomputed_tensors_exact_equal_to_frozen_stats": true,
+  "caveat": "CUDA events record a whole-pass stream span including host gaps; not kernel-active GPU time. Cost diagnostic does not measure retention or prove feature coverage improves retention.",
+  "accounting": "Study incurred one shared joint preparation pass, counted once. Independent deployment M uses NLL-only, C uses head-free feature-only, random and exact-dedup random require no teacher statistics; generation and selection costs are separately accounted."
+}

@@ -1,0 +1,44 @@
+{
+  "analyze_NOT_EXECUTED_AND_REQUIRES_ROOT_AUTHORITY": [
+    "/usr/bin/python",
+    "/tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v2.py",
+    "analyze",
+    "--plan",
+    "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/supplement_A_nll.json",
+    "--plan-sha256",
+    "71e4487378ad94fecfd9dcf4c10ba906a838ce3fffeca4a921b5c47738f4bc7b",
+    "--authority",
+    "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/supplement_A_nll_ROOT_AUTHORITY.json",
+    "--authority-sha256",
+    "<ROOT_AUTHORITY_SHA256>",
+    "--state",
+    "/tmp/grad-research-20261106/worktree/logs/supplemental_job_state.json",
+    "--output",
+    "/tmp/grad-research-20261106/worktree/results/supplemental_analysis_v2/supplement_A_nll"
+  ],
+  "check_NOT_EXECUTED": [
+    "/usr/bin/python",
+    "/tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v2.py",
+    "check",
+    "--plan",
+    "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/supplement_A_nll.json",
+    "--plan-sha256",
+    "71e4487378ad94fecfd9dcf4c10ba906a838ce3fffeca4a921b5c47738f4bc7b",
+    "--state",
+    "/tmp/grad-research-20261106/worktree/logs/supplemental_job_state.json",
+    "--output",
+    "/tmp/grad-research-20261106/worktree/results/supplemental_analysis_v2/supplement_A_nll_readiness.json"
+  ],
+  "plan": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/supplement_A_nll.json",
+    "sha256": "71e4487378ad94fecfd9dcf4c10ba906a838ce3fffeca4a921b5c47738f4bc7b"
+  },
+  "prepared_only": true,
+  "root_authority_false_template": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/supplement_A_nll_root_authority_TEMPLATE.json",
+    "sha256": "5776e1002739d6f9fabeef0267cf5b6257ca28dcde7b2021e76761eb45da7160"
+  },
+  "root_authority_to_create_after_independent_review": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/supplement_A_nll_ROOT_AUTHORITY.json",
+  "schema_version": 2,
+  "score_authority_issued": false
+}

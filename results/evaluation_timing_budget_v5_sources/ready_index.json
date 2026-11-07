@@ -1,0 +1,858 @@
+{
+  "schema_version": 1,
+  "updated_at_utc": "2026-11-06T11:49:17.380365+00:00",
+  "catalog": {
+    "path": "/tmp/grad-research-20261106/worktree/configs/supplemental_evaluation_preparation_v5.json",
+    "sha256": "90163f7a77529434c872f52f41d45151bf09826ddd17ab58ea48d21d16f3d186"
+  },
+  "phases": [
+    {
+      "id": "supplement_A_nll",
+      "mode": "nll",
+      "family": "A",
+      "model_tag": "pythia-410m",
+      "status": "ready",
+      "ready": true,
+      "phase_spec": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_nll/phase_spec.json",
+        "sha256": "da33d565eabbf80a83b1d42eae35e917b008419e0f083e25fe42d728f365ed7e"
+      },
+      "queue": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_nll/queue.json",
+        "sha256": "a882a80a5728723fbf5a3001f1940562018622a54ed4d5e28f12bed5ff1dd59c"
+      },
+      "manifest": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_nll/manifest.json",
+        "sha256": "88dc927c9b4909cca66901608216290e1e435022e4ff925c00875f5099077a90"
+      },
+      "workload": {
+        "logical_runs": 126,
+        "physical_training_runs": 126,
+        "logical_checkpoint_endpoints": 126,
+        "adapted_inference_jobs": 108,
+        "initial_baselines": 0,
+        "reused_initial_baselines": 1,
+        "reuse_materialization_jobs": 18,
+        "total_inference_jobs": 108,
+        "total_queue_jobs": 126,
+        "avoided_duplicate_inferences": 18,
+        "by_baseline_group": {
+          "4838ea6576ce899abcef5e3b384d007876744780f5b484a00b9e8999201dd733": {
+            "model_tag": "pythia-410m",
+            "policy": {
+              "model": "/tmp/grad-research-20261106/models/pythia-410m-final",
+              "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+              "batch_size": 16,
+              "max_length": 512,
+              "device": "cuda:0",
+              "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+              "cuda_version": "12.4",
+              "gpu_name": "NVIDIA H100 80GB HBM3",
+              "precision": "bf16",
+              "device_type": "cuda",
+              "effective_precision": "cuda_bfloat16_autocast",
+              "attention_implementation": "sdpa",
+              "attention_backend": "auto",
+              "deterministic_algorithms": true,
+              "deterministic_warn_only": false,
+              "allow_tf32_matmul": true,
+              "allow_tf32_cudnn": true,
+              "cudnn_deterministic": true,
+              "cudnn_benchmark": false,
+              "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+              "flash_sdp_enabled": true,
+              "mem_efficient_sdp_enabled": true,
+              "math_sdp_enabled": true,
+              "cudnn_sdp_enabled": true,
+              "model_weight_dtype": "torch.float32"
+            },
+            "adapted_inferences": 108,
+            "initial_inferences": 0,
+            "per_inference": {
+              "corpora": {
+                "target": {
+                  "prediction_tokens": 523264,
+                  "raw_input_tokens": 524288,
+                  "chunks": 1024
+                },
+                "c4": {
+                  "prediction_tokens": 523264,
+                  "raw_input_tokens": 524288,
+                  "chunks": 1024
+                },
+                "wikitext": {
+                  "prediction_tokens": 270319,
+                  "raw_input_tokens": 270848,
+                  "chunks": 529
+                }
+              },
+              "teacher_kl": true,
+              "forward_multiplier": {
+                "initial": 1,
+                "adapted": 2
+              },
+              "note": "Teacher forward is nested in evaluation wall time; never add it again"
+            }
+          }
+        },
+        "scheduler_allowance_seconds": 22680,
+        "scheduler_allowance_per_job_seconds": 180,
+        "cost_formula": "sum_g(initial_count_g * measured_initial_seconds_g + adapted_count_g * measured_adapted_seconds_g); add separately measured CPU verification/materialization wall time",
+        "estimate_available": false,
+        "allowance_is_measured_cost_estimate": false,
+        "wall_seconds_are_not_gpu_seconds": true
+      },
+      "logical_endpoints": 126,
+      "source_model_equivalence": {
+        "required": false,
+        "proofs": []
+      },
+      "model_inference_started": false,
+      "scheduler_started": false
+    },
+    {
+      "id": "supplement_A_behavior",
+      "mode": "behavior",
+      "family": "A",
+      "model_tag": "pythia-410m",
+      "status": "ready",
+      "ready": true,
+      "phase_spec": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/phase_spec.json",
+        "sha256": "2001c061b1849ce318b7525a21caef5ec6545de69ecea7cd3bf1446ef07458b1"
+      },
+      "queue": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/queue.json",
+        "sha256": "cc9226e32515d08dc9ff12055b66e620d98fa4b544d51adde7eb1c386cdd0be2"
+      },
+      "manifest": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/manifest.json",
+        "sha256": "31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa"
+      },
+      "workload": {
+        "logical_runs": 18,
+        "physical_training_runs": 18,
+        "logical_checkpoint_endpoints": 18,
+        "adapted_inference_jobs": 15,
+        "initial_baselines": 0,
+        "reused_initial_baselines": 1,
+        "reuse_materialization_jobs": 3,
+        "total_inference_jobs": 15,
+        "total_queue_jobs": 18,
+        "avoided_duplicate_inferences": 3,
+        "by_baseline_group": {
+          "109f59e1e08b4d91880e04fc18414e3548cd0718cfb5b3fdab10b946d8639ab1": {
+            "model_tag": "pythia-410m",
+            "policy": {
+              "model": "/tmp/grad-research-20261106/models/pythia-410m-final",
+              "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+              "batch_size": 16,
+              "max_length": 2048,
+              "device": "cuda:0",
+              "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+              "cuda_version": "12.4",
+              "gpu_name": "NVIDIA H100 80GB HBM3",
+              "precision": "bf16",
+              "device_type": "cuda",
+              "effective_precision": "cuda_bfloat16_autocast",
+              "attention_implementation": "sdpa",
+              "attention_backend": "auto",
+              "deterministic_algorithms": true,
+              "deterministic_warn_only": false,
+              "allow_tf32_matmul": true,
+              "allow_tf32_cudnn": true,
+              "cudnn_deterministic": true,
+              "cudnn_benchmark": false,
+              "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+              "flash_sdp_enabled": true,
+              "mem_efficient_sdp_enabled": true,
+              "math_sdp_enabled": true,
+              "cudnn_sdp_enabled": true,
+              "model_weight_dtype": "torch.float32"
+            },
+            "adapted_inferences": 15,
+            "initial_inferences": 0,
+            "per_inference": {
+              "questions": 11880,
+              "choices": 43844,
+              "tokenizer_forward_work": "context+continuation tokens depend on model tokenizer; no inference estimate invented"
+            }
+          }
+        },
+        "scheduler_allowance_seconds": 10800,
+        "scheduler_allowance_per_job_seconds": 600,
+        "cost_formula": "sum_g(initial_count_g * measured_initial_seconds_g + adapted_count_g * measured_adapted_seconds_g); add separately measured CPU verification/materialization wall time",
+        "estimate_available": false,
+        "allowance_is_measured_cost_estimate": false,
+        "wall_seconds_are_not_gpu_seconds": true
+      },
+      "logical_endpoints": 18,
+      "source_model_equivalence": {
+        "required": false,
+        "proofs": []
+      },
+      "model_inference_started": false,
+      "scheduler_started": false
+    },
+    {
+      "id": "supplement_B_nll",
+      "mode": "nll",
+      "family": "B",
+      "model_tag": "pythia-410m",
+      "status": "ready",
+      "ready": true,
+      "phase_spec": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_B_nll/phase_spec.json",
+        "sha256": "e3dde341a797982967db09ccef0ae6b63541be41509350e3890ecc34b6351578"
+      },
+      "queue": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_B_nll/queue.json",
+        "sha256": "d166e2f4aaee69870328952274c471a804a2aec387b9838deaf653a9fe353240"
+      },
+      "manifest": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_B_nll/manifest.json",
+        "sha256": "ffa3304307004d4e013b7414a841c5cdc54df619dd5f0376b276491ab2c515b4"
+      },
+      "workload": {
+        "logical_runs": 60,
+        "physical_training_runs": 60,
+        "logical_checkpoint_endpoints": 60,
+        "adapted_inference_jobs": 60,
+        "initial_baselines": 0,
+        "reused_initial_baselines": 1,
+        "reuse_materialization_jobs": 0,
+        "total_inference_jobs": 60,
+        "total_queue_jobs": 60,
+        "avoided_duplicate_inferences": 0,
+        "by_baseline_group": {
+          "4838ea6576ce899abcef5e3b384d007876744780f5b484a00b9e8999201dd733": {
+            "model_tag": "pythia-410m",
+            "policy": {
+              "model": "/tmp/grad-research-20261106/models/pythia-410m-final",
+              "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+              "batch_size": 16,
+              "max_length": 512,
+              "device": "cuda:0",
+              "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+              "cuda_version": "12.4",
+              "gpu_name": "NVIDIA H100 80GB HBM3",
+              "precision": "bf16",
+              "device_type": "cuda",
+              "effective_precision": "cuda_bfloat16_autocast",
+              "attention_implementation": "sdpa",
+              "attention_backend": "auto",
+              "deterministic_algorithms": true,
+              "deterministic_warn_only": false,
+              "allow_tf32_matmul": true,
+              "allow_tf32_cudnn": true,
+              "cudnn_deterministic": true,
+              "cudnn_benchmark": false,
+              "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+              "flash_sdp_enabled": true,
+              "mem_efficient_sdp_enabled": true,
+              "math_sdp_enabled": true,
+              "cudnn_sdp_enabled": true,
+              "model_weight_dtype": "torch.float32"
+            },
+            "adapted_inferences": 60,
+            "initial_inferences": 0,
+            "per_inference": {
+              "corpora": {
+                "target": {
+                  "prediction_tokens": 523264,
+                  "raw_input_tokens": 524288,
+                  "chunks": 1024
+                },
+                "c4": {
+                  "prediction_tokens": 523264,
+                  "raw_input_tokens": 524288,
+                  "chunks": 1024
+                },
+                "wikitext": {
+                  "prediction_tokens": 270319,
+                  "raw_input_tokens": 270848,
+                  "chunks": 529
+                }
+              },
+              "teacher_kl": true,
+              "forward_multiplier": {
+                "initial": 1,
+                "adapted": 2
+              },
+              "note": "Teacher forward is nested in evaluation wall time; never add it again"
+            }
+          }
+        },
+        "scheduler_allowance_seconds": 10800,
+        "scheduler_allowance_per_job_seconds": 180,
+        "cost_formula": "sum_g(initial_count_g * measured_initial_seconds_g + adapted_count_g * measured_adapted_seconds_g); add separately measured CPU verification/materialization wall time",
+        "estimate_available": false,
+        "allowance_is_measured_cost_estimate": false,
+        "wall_seconds_are_not_gpu_seconds": true
+      },
+      "logical_endpoints": 60,
+      "source_model_equivalence": {
+        "required": false,
+        "proofs": []
+      },
+      "model_inference_started": false,
+      "scheduler_started": false
+    },
+    {
+      "id": "extended_pythia_410m_100m_nll",
+      "mode": "nll",
+      "family": "C",
+      "model_tag": "pythia-410m",
+      "status": "waiting_training",
+      "ready": false,
+      "expected_rows": 24,
+      "pending_conditions": 22,
+      "pending_reasons": [
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_B0_s11_w0",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_B1_s11_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_B3_s11_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_D_s11_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_M_s11_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_C_s11_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_B0_s22_w0",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_B1_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_B2_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_B3_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_B4_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_D_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_M_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_C_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_B0_s33_w0",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_B1_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_B2_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_B3_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_B4_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_D_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_M_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_C_s33_w0p05",
+          "reason": "missing_summary"
+        }
+      ]
+    },
+    {
+      "id": "extended_pythia_410m_100m_behavior",
+      "mode": "behavior",
+      "family": "C",
+      "model_tag": "pythia-410m",
+      "status": "waiting_training",
+      "ready": false,
+      "expected_rows": 24,
+      "pending_conditions": 22,
+      "pending_reasons": [
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_B0_s11_w0",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_B1_s11_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_B3_s11_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_D_s11_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_M_s11_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_C_s11_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_B0_s22_w0",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_B1_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_B2_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_B3_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_B4_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_D_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_M_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_C_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_B0_s33_w0",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_B1_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_B2_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_B3_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_B4_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_D_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_M_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_410m_m64_formal_C_s33_w0p05",
+          "reason": "missing_summary"
+        }
+      ]
+    },
+    {
+      "id": "extended_pythia_1b_100m_nll",
+      "mode": "nll",
+      "family": "C",
+      "model_tag": "pythia-1b",
+      "status": "waiting_training",
+      "ready": false,
+      "expected_rows": 24,
+      "pending_conditions": 23,
+      "pending_reasons": [
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B0_s11_w0",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B1_s11_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B2_s11_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B3_s11_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_D_s11_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_M_s11_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_C_s11_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B0_s22_w0",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B1_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B2_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B3_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B4_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_D_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_M_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_C_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B0_s33_w0",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B1_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B2_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B3_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B4_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_D_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_M_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_C_s33_w0p05",
+          "reason": "missing_summary"
+        }
+      ]
+    },
+    {
+      "id": "extended_pythia_1b_100m_behavior",
+      "mode": "behavior",
+      "family": "C",
+      "model_tag": "pythia-1b",
+      "status": "waiting_training",
+      "ready": false,
+      "expected_rows": 24,
+      "pending_conditions": 23,
+      "pending_reasons": [
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B0_s11_w0",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B1_s11_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B2_s11_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B3_s11_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_D_s11_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_M_s11_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_C_s11_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B0_s22_w0",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B1_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B2_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B3_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B4_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_D_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_M_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_C_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B0_s33_w0",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B1_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B2_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B3_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_B4_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_D_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_M_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_1b_m32_formal_C_s33_w0p05",
+          "reason": "missing_summary"
+        }
+      ]
+    },
+    {
+      "id": "extended_pythia_2p8b_25m_nll",
+      "mode": "nll",
+      "family": "C",
+      "model_tag": "pythia-2.8b",
+      "status": "waiting_training",
+      "ready": false,
+      "expected_rows": 15,
+      "pending_conditions": 14,
+      "pending_reasons": [
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B0_s11_w0",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B1_s11_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B2_s11_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_M_s11_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B0_s22_w0",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B1_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B2_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B4_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_M_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B0_s33_w0",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B1_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B2_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B4_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_M_s33_w0p05",
+          "reason": "missing_summary"
+        }
+      ]
+    },
+    {
+      "id": "extended_pythia_2p8b_25m_behavior",
+      "mode": "behavior",
+      "family": "C",
+      "model_tag": "pythia-2.8b",
+      "status": "waiting_training",
+      "ready": false,
+      "expected_rows": 15,
+      "pending_conditions": 14,
+      "pending_reasons": [
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B0_s11_w0",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B1_s11_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B2_s11_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_M_s11_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B0_s22_w0",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B1_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B2_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B4_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_M_s22_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B0_s33_w0",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B1_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B2_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_B4_s33_w0p05",
+          "reason": "missing_summary"
+        },
+        {
+          "id": "extended_v2_pythia_2p8b_m8_h25m_formal_M_s33_w0p05",
+          "reason": "missing_summary"
+        }
+      ]
+    }
+  ],
+  "ready_phase_count": 3,
+  "all_requested_phases_ready": false,
+  "handoff_draft": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/handoff_draft.json",
+    "sha256": "c1149330e09b099c1aabb6c3b57ab6b744b828fb4a9d04d4f50f227ad3edc22f"
+  },
+  "handoff_complete_dependency_closure_validated": true,
+  "handoff_checkpoint_input_rehash_deferred_to_legal_handoff_and_worker": true,
+  "handoff_dependency_closure_jobs": 338,
+  "no_scheduler_started": true,
+  "no_model_inference": true,
+  "test_or_behavior_scores_read": false
+}

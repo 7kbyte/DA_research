@@ -1,0 +1,83 @@
+{
+  "utc": "2026-11-06T04:17:39.200577+00:00",
+  "split": "validation",
+  "test_likelihood_accessed": false,
+  "comparison": "D-B4 seed11",
+  "same_replay_tensor_sha256": true,
+  "same_target_trace": true,
+  "same_replay_trace": true,
+  "same_source_sha256": true,
+  "configuration_differences": {
+    "output_dir": [
+      "/tmp/grad-research-20261106/runs/formal_B4_s11_b0p05_w0p05",
+      "/tmp/grad-research-20261106/runs/formal_D_s11_b0p05_w0p05"
+    ],
+    "replay_path": [
+      "/data/202610/7kb/research/artifacts/banks/generated_random_seed11.pt",
+      "/data/202610/7kb/research/artifacts/banks/generated_dedup_random_seed11.pt"
+    ],
+    "run_label": [
+      "formal_B4_s11_b0p05_w0p05",
+      "formal_D_s11_b0p05_w0p05"
+    ]
+  },
+  "first_steps": {
+    "B4": [
+      {
+        "step": 1,
+        "target_ce": 2.4938037969361546,
+        "replay_loss": 0.0,
+        "grad_norm": 7.949446201324463,
+        "target_stream_hash": "983dabd5bea6627596f9032943cb94e3fd862a5a5d3bb8b43099f7f726dfaf49",
+        "replay_stream_hash": "1351a04195549278d4dc7abdb4439c31d5f814f1b411a2d08596250265184eea"
+      },
+      {
+        "step": 2,
+        "target_ce": 2.5586982622538526,
+        "replay_loss": 0.042453530221174984,
+        "grad_norm": 8.081536293029785,
+        "target_stream_hash": "489ed5280e7a7ab954c3fd6f45c0d92b66e64c4557fed2e56fe9d7ba54cebc13",
+        "replay_stream_hash": "e0eb7acec0b190229e35bb9d4d2fbab39cc7f8c6562bdcc74ddedca39ec0c98e"
+      },
+      {
+        "step": 3,
+        "target_ce": 2.533284166787702,
+        "replay_loss": 0.03608652517336224,
+        "grad_norm": 6.727385997772217,
+        "target_stream_hash": "b7fa96d93dadab97f187ba96aeb6a79dae6ed7d67b1df682db128c06df821625",
+        "replay_stream_hash": "ebebe21321de782e18eb031b56e31b131a58bb064754c61a87f956b5402c3b8a"
+      }
+    ],
+    "D": [
+      {
+        "step": 1,
+        "target_ce": 2.4938037969361546,
+        "replay_loss": 0.0,
+        "grad_norm": 7.955277442932129,
+        "target_stream_hash": "983dabd5bea6627596f9032943cb94e3fd862a5a5d3bb8b43099f7f726dfaf49",
+        "replay_stream_hash": "1351a04195549278d4dc7abdb4439c31d5f814f1b411a2d08596250265184eea"
+      },
+      {
+        "step": 2,
+        "target_ce": 2.5603149175177347,
+        "replay_loss": 0.04149993056551032,
+        "grad_norm": 7.332846641540527,
+        "target_stream_hash": "489ed5280e7a7ab954c3fd6f45c0d92b66e64c4557fed2e56fe9d7ba54cebc13",
+        "replay_stream_hash": "e0eb7acec0b190229e35bb9d4d2fbab39cc7f8c6562bdcc74ddedca39ec0c98e"
+      },
+      {
+        "step": 3,
+        "target_ce": 2.5317862374441966,
+        "replay_loss": 0.036529604010625716,
+        "grad_norm": 6.956031322479248,
+        "target_stream_hash": "b7fa96d93dadab97f187ba96aeb6a79dae6ed7d67b1df682db128c06df821625",
+        "replay_stream_hash": "ebebe21321de782e18eb031b56e31b131a58bb064754c61a87f956b5402c3b8a"
+      }
+    ]
+  },
+  "final_validation_target_nll": {
+    "B4": 2.413110136544474,
+    "D": 2.400186510119733
+  },
+  "interpretation": "identical content, objective, seed and streams; numerical differences begin in first backward. CUDA nondeterminism is a hypothesis requiring engineering diagnosis, not a deduplication content effect."
+}

@@ -1,0 +1,12 @@
+component,coverage_status,structured_record_count,known_recorded_wall_seconds,included_in_method_comparison_cost_categories,unmeasured_cost_is_zero,complete_physical_cost_claim,limit
+generation_statistics_selection_and_recorded_diagnostics,recorded_components_partial,136,3261.7442659698427,True,False,False,"Explicit source timers only; shared joint stats once, lost/unrecorded attempts excluded"
+physical_training,committed_path_partial,295,68684.80989228562,True,False,False,committed-path accounting; excludes rolled-back/discarded work and unfinished operations not reflected in the selected counter snapshot
+evaluation_inference,last_attested_path_partial,211,6527.062387529761,True,False,False,Explicit canonical inference attestations only; missing/failed/retried work not reconstructed
+data_download_and_acquisition,not_completely_instrumented,,,False,False,False,"Network waiting, downloads, decompression and source fetches have no complete structured total"
+environment_installation,not_completely_instrumented,,,False,False,False,Dependency/environment setup has no complete structured wall record
+CPU_dataset_preprocessing,not_completely_instrumented,,,False,False,False,"Tokenization, overlap audits, data revisions and CPU preparation lack complete structured timing"
+report_plotting_and_packaging,not_completely_instrumented,,,False,False,False,"Root report, analysis figures, packaging and coordination are not all timed"
+weight_archive_and_verification,partially_measured_receipts,4,6758.182013347745,False,False,False,Only registered receipts below; CPU/IO wall is separate from method/GPU comparison costs
+shared_storage_publication,not_completely_instrumented_or_in_progress,,,False,False,False,Scratch archive acceptance does not establish shared publication completion or full transfer wall
+rollback_failures_and_discarded_work,lower_bounds_and_gaps_only,,,False,False,False,ENOSPC generation 83.313541s is a separate lower bound; remaining losses unknown
+whole_study_time_and_GPU_activity,timewindow_and_external_sampled_telemetry,,,False,False,False,24h authorization/deadline plus sampled telemetry; never sum parallel wall as study elapsed

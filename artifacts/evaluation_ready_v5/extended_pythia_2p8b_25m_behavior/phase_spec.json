@@ -1,0 +1,114 @@
+{
+  "schema_version": 2,
+  "science_frozen": true,
+  "phases": [
+    {
+      "data_family": "extended_v1",
+      "expected_phase": "formal",
+      "expected_rows": 15,
+      "family": "C",
+      "model": {
+        "path": "/tmp/grad-research-20261106/models/pythia-2.8b-final",
+        "revision": "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      },
+      "model_tag": "pythia-2.8b",
+      "name": "extended_pythia_2p8b_25m",
+      "protocol": {
+        "path": "/tmp/grad-research-20261106/worktree/docs/extended_v2_pythia_2p8b_m8_h25m_formal_protocol.json",
+        "sha256": "5056fabcc349160bf34f96317597a4376964c7132062b7b7de5a590535e56e60"
+      },
+      "protocol_expect": {
+        "data_version": "extended_v1",
+        "formal_target_prediction_tokens": 25000000,
+        "model": "pythia-2.8b",
+        "model_revision": "2a259cdd96a4beb1cdf467512e3904197345f6a9",
+        "shared_lambda": 0.05,
+        "shared_learning_rate": 1e-05
+      },
+      "registry": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_h25m_formal_active_registry.json",
+        "sha256": "c98360002f763a98423d16bf99c866edfbec21da2668a04cb3ccfd5652888d05"
+      },
+      "role": "extended",
+      "source_proof_files": {
+        "/tmp/grad-research-20261106/worktree/artifacts/provenance/extended_v2_pythia_2p8b_m8_h25m_formal_input_snapshot.json": "49d3965a7d0909b23ab5880efe3c4d8b32944c5335e802435dd92e4cec017379",
+        "/tmp/grad-research-20261106/worktree/configs/supplemental_evaluation_preparation_v4.json": "df35f09d35ddc5b9aab95e5e3cb42f7f042b86b5f87b81204a34ac83ed0f72a9",
+        "/tmp/grad-research-20261106/worktree/docs/supplemental_evaluation_preparation_v4_execution.json": "2a78edb949667804cd45fc7dbd43dcd5baea01ed49ffa3f4d08aee50135d210a",
+        "/tmp/grad-research-20261106/worktree/results/extended_formal_freeze.json": "50786c00724008eed6a96cb753b442295152f9dea96d73a2c75f8fcf16033528",
+        "/tmp/grad-research-20261106/worktree/scripts/prepare_supplemental_evaluations.py": "dd641ed5d5d0ab750fb400e1fc2add313b4ea72a38d01aa4a7f3272fc8fee26d",
+        "/tmp/grad-research-20261106/worktree/scripts/prepare_supplemental_evaluations_v5.py": "f533a7e4b0104c7ab422d5a6836b740dd56ba04982907db091b7e2df03efa191",
+        "/tmp/grad-research-20261106/worktree/scripts/schedule_jobs.py": "c5c264b058ff655315ef896ccb0a89b471637c6612013a51999fc6f48b2d16d9",
+        "/tmp/grad-research-20261106/worktree/scripts/stat_bound_digest_cache.py": "9cc01b493b46a5bf391a7c649a379d87011fff077ddeea701eaf8a84bdb568e2",
+        "/tmp/grad-research-20261106/worktree/configs/behavioral_scope_execution_freeze_v2.json": "ebb86bc4ace0c3e4426b3830ea40a7963697163a98e59b8ca2fdf9746a186962",
+        "/tmp/grad-research-20261106/worktree/configs/nll_scope_execution_freeze_v1.json": "2b9be7cc136b2f85808568a9536b98b1d8499b7eb0d615f03f23c0c7ce4ca77d"
+      },
+      "test_data": {
+        "c4": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_test.pt",
+          "sha256": "e81744326b66513afdfc02cc3b74b9c92908cd2359f13d0eac2b1a99bf516747"
+        },
+        "target": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_test.pt",
+          "sha256": "f19f802f985d929ecb3a623e3255785159b1fcb895c8f439bc037a7012d29718"
+        },
+        "wikitext": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_test.pt",
+          "sha256": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f"
+        }
+      },
+      "training_data": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_train.pt",
+        "sha256": "d75095a4c1847f72168d7cad1fd56da8d82ac7f5b17c43673dd70ed7eae118b0"
+      },
+      "validation_data": {
+        "c4": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_validation.pt",
+          "sha256": "ee0389143e28fc8d0e2e3f1107674e7a8d8a178d324c350820223937d7bcb274"
+        },
+        "target": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_validation.pt",
+          "sha256": "59b2bb2d89104652785915e08c45ad3f8815037461da5216de42408ccfbb3ea0"
+        },
+        "wikitext": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_validation.pt",
+          "sha256": "4018c33bd6e36b45aafcb5b5129ed18cbd480613ccbed0f8cdf57a02e8b0e85c"
+        }
+      },
+      "science_frozen": true,
+      "checkpoints": [
+        "final"
+      ],
+      "behavior": {
+        "batch_size": 8,
+        "max_length": 2048
+      }
+    }
+  ],
+  "checkpoints": [
+    "final"
+  ],
+  "prior_plans": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+      "sha256": "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/docs/planned_model_behavioral_timing_v1_manifest.json",
+      "sha256": "062c170687f7e86c61f247fc6c46c99352faeca25306923c223e28ab81d45c20"
+    }
+  ],
+  "model_equivalence_proofs": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/formal_model_equivalence_proofs.json",
+      "sha256": "bdd4ccf7de88a9baba973cbb1907ecd90a50f693ee9d75c48f0e019bfa8048be"
+    }
+  ],
+  "behavior": {
+    "data_root": "/tmp/grad-research-20261106/worktree/artifacts/behavioral",
+    "batch_size": 8,
+    "max_length": 2048,
+    "data_manifest_sha256": "5c91890603f5149fb2f2f62b29edd16ee2044d3602d75265f819f35a501b7d0f",
+    "harness_manifest_sha256": "2301b180eddd3a65d028f8bcb570f8e8ad2b63017a1f184b0174c16eb819452f"
+  },
+  "inference_launch_authorized_by_preparation": false
+}

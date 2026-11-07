@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/results/primary_behavior_analysis_execution_v1/whole_process_timing.json",
+    "sha256": "0192397e6ea2d66e389b1f02a08c140a009d0997dadab2e8eba08f181c1c0537",
+    "bytes": 756
+  },
+  "original_wall_pointer": "/whole_child_process_wall_seconds",
+  "wall_seconds": 33.77299711480737,
+  "CPU_component_pointers": [
+    "/whole_child_user_cpu_seconds",
+    "/whole_child_sys_cpu_seconds"
+  ],
+  "CPU_components": {
+    "whole_child_user_cpu_seconds": 30.318426,
+    "whole_child_sys_cpu_seconds": 3.304736
+  },
+  "recorded_inclusive_CPU_seconds": 33.623162,
+  "original_returncode": 0,
+  "scope": "Complete child + its waited original check/analyze descendants, including full closure, original check, exclusive semantic journal and original analyze",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall; sum only the named user/system components. Failure rc retained. No calendar-derived elapsed.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

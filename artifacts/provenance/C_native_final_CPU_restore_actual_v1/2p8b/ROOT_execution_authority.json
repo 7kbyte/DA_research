@@ -1,0 +1,34 @@
+{
+  "authorized": true,
+  "model": "pythia-2.8b",
+  "run_id": "extended_v2_pythia_2p8b_m8_h25m_formal_B4_s11_w0p05",
+  "scope": "one_fixed_native_Cfinal_CPU_recovery",
+  "sequential_only": true,
+  "plan": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_CPU_restore_actual_v1/2p8b/bound_plan.json",
+    "sha256": "573c4f4924298408d53ef5fa7b07441549260b89dbae34c5e634dd2baf82a4f2"
+  },
+  "runner": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/restore_native_final.py",
+    "sha256": "bfc748c776f18dff86c378c5c55ca72dbc63995cfc40ddfb96eb919486610db1"
+  },
+  "checker": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/check_restored.py",
+    "sha256": "6b7df26abef4ce0bd09dabbd7878a5a9585c8681d3cb97115f912dd542d3fa8d"
+  },
+  "authorized_by": "ROOT",
+  "authorized_at_utc": "2026-11-06T23:25:08.457232+00:00",
+  "ROOT_resource_gate": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_CPU_restore_actual_v1/2p8b/ROOT_preexecution_resource_gate_attempt3.json",
+    "sha256": "91711904b5e72b929b7c9c63e4937a58612b47a2661f5e790e2d2e515c8f40f1"
+  },
+  "whole_wrapper": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_restore_preparation_v1/run_whole_child.py",
+    "sha256": "2a2d09daac8504b099a5cd9682dff722bbad0519922ba39beedf4e96e9498266"
+  },
+  "ordering": "After successful ROOT-accepted fixed1B native CPU restore; prior PG absent",
+  "prior_1b_success": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_native_final_CPU_restore_actual_v1/1b/ROOT_actual_restore_acceptance.json",
+    "sha256": "d7d6a7511f2d802d3194c19f99798ea1dddb7d15467a1fa9d8e6abadd873c9eb"
+  }
+}

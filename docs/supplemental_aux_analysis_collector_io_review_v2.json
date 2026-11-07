@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "review_kind": "CPU read-only source review plus synthetic collector instrumentation",
+  "no_real_score_files_read": true,
+  "sources": {
+    "src/replay_study/nll_v2_analysis.py": "356088e4a8bc82947d6287a8e712038426382efbf45f3a7006bf9eea18a1c59e",
+    "scripts/analyze_behavioral_plan.py": "89c1f29f62bb5b48eca6699768b3d76d1dd5d9f3eb1d0715cae75483bab949b9",
+    "src/replay_study/behavioral_analysis.py": "18e6b57dc1914119743e87170637a46cf7e9b5d99ad704b42b3c0959e2a0e280",
+    "scripts/run_frozen_evaluation.py": "1f691de8da574c671a8822b5999292fd601f31f83d3794f1a603eaa8c79bef8d",
+    "scripts/evaluation_plan.py": "1f68bab77a0e4d9953bcfa85306702dbc21d3ce5c85691218e06ea15df75196f"
+  },
+  "findings": [
+    {
+      "source": "src/replay_study/nll_v2_analysis.py",
+      "functions": [
+        "prepare_plan",
+        "collect_scores"
+      ],
+      "checkpoint_payload_hash_or_deserialization": false,
+      "evidence": "prepare_plan hashes manifest/spec/registry/proof JSON; collect_scores sources contain metadata/results and attestations. Full synthetic collector test forbids sha(checkpoint) and succeeds."
+    },
+    {
+      "source": "scripts/analyze_behavioral_plan.py",
+      "functions": [
+        "collect"
+      ],
+      "checkpoint_payload_hash_or_deserialization": false,
+      "evidence": "Fresh common metadata/output/prediction verification. Calls verify_outputs/validate_result, not verified_job; v2 gate rejects checkpoint in common source list."
+    },
+    {
+      "source": "scripts/run_frozen_evaluation.py",
+      "functions": [
+        "verified_job"
+      ],
+      "actual_GPU_worker_checkpoint_verification": "fresh and unchanged",
+      "analysis_collectors_call_verified_job": false
+    }
+  ],
+  "source_line_references": {
+    "src/replay_study/nll_v2_analysis.py": [
+      {
+        "line": 55,
+        "text": "def prepare_plan(manifest_path, manifest_sha256, *, role, phase_name, model_tag, data_family, checkpoint):"
+      },
+      {
+        "line": 157,
+        "text": "\"records\": checked, \"sources_sha256\": sources, \"score_files_read\": False, \"expected_conditions\": len(rows)}"
+      },
+      {
+        "line": 207,
+        "text": "def collect_scores(plan, *, read_heldout_scores=False, allow_partial=False, n_bootstrap=5000,"
+      },
+      {
+        "line": 213,
+        "text": "for path, expected_sha in plan[\"sources_sha256\"].items():"
+      },
+      {
+        "line": 217,
+        "text": "sources, baseline_cache = dict(plan[\"sources_sha256\"]), {}"
+      },
+      {
+        "line": 393,
+        "text": "for path, expected_sha in sources.items():"
+      },
+      {
+        "line": 401,
+        "text": "\"sources_sha256\": sources, \"test_lambda_selection_performed\": False,"
+      }
+    ],
+    "scripts/analyze_behavioral_plan.py": [
+      {
+        "line": 20,
+        "text": "def collect(path):"
+      },
+      {
+        "line": 37,
+        "text": "verify_outputs(output, source_digest, job_id)"
+      },
+      {
+        "line": 38,
+        "text": "validate_result(manifest, {\"output\": output, \"kind\": \"initial\", \"baseline_group\": key})"
+      },
+      {
+        "line": 53,
+        "text": "attestation = verify_outputs(output, digest, record[\"inference_job_id\"])"
+      },
+      {
+        "line": 58,
+        "text": "validate_result(manifest, {\"output\": output, \"checkpoint\": record[\"checkpoint\"], \"baseline_group\": key})"
+      }
+    ],
+    "src/replay_study/behavioral_analysis.py": [
+      {
+        "line": 137,
+        "text": "def collect(manifest_path,n_bootstrap=5000,seed=20261106):"
+      }
+    ],
+    "scripts/run_frozen_evaluation.py": [
+      {
+        "line": 38,
+        "text": "def verify_outputs(output, manifest_sha256, job_id):"
+      },
+      {
+        "line": 49,
+        "text": "def verified_job(path, manifest_sha256, job_id, require_baseline=True):"
+      },
+      {
+        "line": 119,
+        "text": "def validate_result(manifest, job):"
+      },
+      {
+        "line": 204,
+        "text": "validate_result(manifest, job)"
+      }
+    ],
+    "scripts/evaluation_plan.py": [
+      {
+        "line": 215,
+        "text": "common = {str(spec_path): hashes.digest(spec_path)}"
+      },
+      {
+        "line": 438,
+        "text": "spec, qualified, phases, common = qualify(spec_path, hashes)"
+      }
+    ]
+  }
+}

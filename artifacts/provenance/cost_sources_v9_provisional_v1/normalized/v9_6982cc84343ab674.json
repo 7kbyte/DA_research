@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C1native_CPU_restore_actual_independent_v1/whole_child_timing.json",
+    "sha256": "eb5d6d5c8c208e5ea17578caa7962046ed92d4c72aa172b4d7e10316e2ea28ff",
+    "bytes": 674
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 0.06727645918726921,
+  "CPU_component_pointers": [
+    "/child_user_seconds",
+    "/child_system_seconds"
+  ],
+  "CPU_components": {
+    "child_user_seconds": 0.029124999999999998,
+    "child_system_seconds": 0.012459
+  },
+  "recorded_inclusive_CPU_seconds": 0.041583999999999996,
+  "original_returncode": 0,
+  "scope": "Metadata review only, independent of actual restore whole84.333240144s; no payload reads or operations",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall; sum only the named user/system components. Failure rc retained. No calendar-derived elapsed.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

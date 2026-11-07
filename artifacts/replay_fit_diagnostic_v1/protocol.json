@@ -1,0 +1,29 @@
+{
+  "phase": "post_validation_exploratory_replay_fit",
+  "state": "prepared_only_not_scheduled",
+  "created_at_utc": "2026-11-06T06:09:04.838361+00:00",
+  "motivation": "Observed primary validation CE/KL contrast; no actual heldout NLL or behavioral result was inspected for this diagnostic",
+  "main_fixed_exposure_endpoint": "final: target=10000000, replay=500000",
+  "secondary_endpoint": "validation-selected best, actual exposure retained separately; no equal-budget claim",
+  "primary_contrast": "gap_NLL = (NLL_adapted_complement - NLL_initial_complement) - (NLL_adapted_bank - NLL_initial_bank); compare gap_B3 - gap_B4 within seed",
+  "secondary_metrics": "forward KL(initial teacher || adapted) separately for bank/complement and its analogous initial-subtracted gap; do not assume computed baseline KL is numerically zero",
+  "metric_weighting": "prediction-token-weighted per split; every full512 chunk has511 predictions; report all per-seed and mean/SD(ddof1,n=3)",
+  "initial_baseline_reuse": "Initial weights are shared across seeds but corpus identities differ. Cache by pinned base file SHA/revision + exact ordered bank/complement tensor SHA + scorer/execution policy. The same seed's initial result is shared by B3/B4 and final/best; never reuse an aggregate from another seed or a different heldout corpus merely because the base weights match.",
+  "direction": "positive NLL gap means relative bank fit exceeds complement fit; it is not by itself proof of harmful forgetting or a complete causal mechanism",
+  "independence_limits": "Complement excludes bank exactly but belongs to the same frozen teacher generation pool, which participated in statistics/selection. It is not a new independent heldout test. Common generation/training seed differences persist across the three paired seeds.",
+  "selection_policy": "No tuning, bank changes, main-model selection or official test exclusion based on this exploratory outcome; final and best are separate strata",
+  "execution_requirements": "Use the frozen main baseline/adapted execution policy and same tokenizer; include per-chunk doc_id/identity, NLL and forward KL; root must approve scheduling and bind scorer SHA before GPU execution",
+  "planned_model_cases": 15,
+  "initial_cases": 3,
+  "adapted_cases": 12,
+  "corpora_per_model_case": 2,
+  "checkpoint_sha_binding_source": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_nll_manifest.json",
+    "sha256": "b22b71a9273de416bebb7e69080c20e9fd01ce7a05b0b327fb5aa5aa52ec3a33"
+  },
+  "formal_registry_sha256": "284fa9dd939dab75195afe3f968e0eb6411501b26b8a5caa1962b4ee5e9f372b",
+  "formal_audit_sha256": "3ab507ecaf9953e7056649f2fee1320467b0ba3b23f65e6584cb876dbae0cf00",
+  "cpu_only": true,
+  "real_model_inference_performed": false,
+  "real_model_test_or_behavioral_scores_read": false
+}

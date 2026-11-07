@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v8/collection_whole_child_timing.json",
+    "sha256": "fc43f9a854a21e0be0e5f01384424e7067b934b11bf8512af39a2b3a2d4aa534",
+    "bytes": 1261
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 8.667578175663948,
+  "CPU_component_pointers": [
+    "/child_user_seconds",
+    "/child_system_seconds"
+  ],
+  "CPU_components": {
+    "child_user_seconds": 6.662219,
+    "child_system_seconds": 1.854631
+  },
+  "recorded_inclusive_CPU_seconds": 8.51685,
+  "original_returncode": 0,
+  "scope": "Whole unchanged v7 IO-audit wrapper plus unchanged v2 collector child spawn-to-exit, including actual opaque score-output streaming SHA. All collector internal timers nested. This successful collection is not recursively included in its own ledger. No CP/native/TAR/ZIP/tensor payload reads; IO audit is authority.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall; sum only the named user/system components. Failure rc retained. No calendar-derived elapsed.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

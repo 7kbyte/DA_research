@@ -1,6 +1,6 @@
 # 固定回放预算下的语言模型领域适应与遗忘
 
-本目录基于原始[开题报告](开题报告.pdf)开展24小时研究。当前工作进行中，未产生的实验结论不会作为结果报告。
+本目录基于原始[开题报告](开题报告.pdf)开展24小时研究的交付工作树。已完成的实验结论、尚未验收的产物与未执行的可选项分别标注，不以配置存在代替实证完成。
 
 - 研究时段：2026-11-06 03:26:32 至 2026-11-07 03:26:32 UTC。
 - 主模型：Pythia-410M；目标域：FineMath finemath-4plus；替代通用回放：C4；通用评估：独立C4与WikiText-103。
@@ -9,12 +9,13 @@
 ## 导航
 
 - [研究报告工作稿](研究报告.md)与[PDF预览](reports/研究报告_工作稿.pdf)
-- [12页答辩演示工作稿](presentations/答辩工作稿_20261106_1730/答辩演示工作稿.pdf)与[可编辑源及说明](presentations/答辩工作稿_20261106_1730/阅读与编辑说明.md)：截至17:30的已完成结果，1B、2.8B与行为评价仍明确待补。
+- [17:30答辩演示工作稿](presentations/答辩工作稿_20261106_1730/答辩演示工作稿.pdf)与[可编辑源及说明](presentations/答辩工作稿_20261106_1730/阅读与编辑说明.md)：该时点快照，1B／2.8B与部分行为评价当时尚未解封；最新完整结果以[研究报告](研究报告.md)为准。
 - [论文写作与答辩提纲](docs/论文写作与答辩提纲.md)及[开题承诺与实际交付对照](docs/开题承诺与实际交付对照.md)
 - [主实验独立NLL结果](docs/主NLL测试结果讨论.md)与[补充A完整权重敏感性结果](docs/补充A_NLL完整结果.md)
 - [A梯度日志的事后描述性诊断](docs/A梯度裁剪_事后描述性诊断.md)：完整126次训练的裁剪阈值超出率与梯度范数，保留事后分析及因果解释边界。
 - [补充B的完整独立测试结果](docs/补充B_完整60run测试结果解释.md)与[验证结果](docs/补充B_完整60run验证结果解释.md)：60条件均已完成，比较固定生成池和训练流下的选库波动。
 - [410M／100M完整长程结果](docs/C410_100M_NLL完整结果与正文素材.md)：24项训练、48个final/best逻辑端点与完整配对；[final权重持久发布](docs/C410_final_weights_durable_publication.json)与[全部24项best权重持久发布](docs/C410_best_weights_durable_publication.json)（best包native基座自带；尚未另做单例durable恢复）。
+- 1B与2.8B长程结果已写入报告第6.4/6.5节，独立复核见[C1B NLL](results/C1B_nll_independent_review_v1/independent_review_receipt.json)、[C1B行为](results/C1B_behavior_independent_review_v1/COMPLETE.json)、[C2.8B NLL](results/C2p8B_nll_independent_review_v1/independent_review_receipt.json)、[C2.8B行为](results/C2p8B_behavior_independent_review_v1/COMPLETE.json)；两模型的final权重已持久发布并完成1B单例CPU恢复；两模型的best包已在scratch完成定长编码与整包自检，但尚无对应的ROOT发布审阅适配器，因此未发布。
 - [文献调研](literature/文献调研.md)与[三篇近邻工作的定位复核](docs/三篇近邻文献_实验定位复核备忘录_20261106.md)
 - [环境重建与移交](docs/环境重建与移交.md)
 - [交付文件与恢复容量指南](docs/交付文件与恢复容量指南.md)：已发布文件、基座依赖、按需恢复空间与操作顺序。

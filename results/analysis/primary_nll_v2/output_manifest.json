@@ -1,0 +1,253 @@
+{
+  "status": "complete_primary_nll_only",
+  "manifest_sha256": "d1502bcaff5cdcd75d984a4b8776f1cb4027b596f474835bfe9ed18875d9fd18",
+  "first_real_test_semantic_read_utc": "2026-11-06T07:14:59.369548+00:00",
+  "first_read_receipt_unchanged": true,
+  "first_integrity_receipt_unchanged": true,
+  "original_analysis_source_matches_first_read_journal": true,
+  "logical_endpoints": 72,
+  "physical_inference_jobs": 67,
+  "bootstrap_replicates": 5000,
+  "all_pdf_widths_inches": 7,
+  "all_sources_sha256": {
+    "docs/主NLL测试结果讨论.md": "cd5a53960ddcda7fd2b34b8bb2c77ddb4fe6139187bec0816d108c82365d1c54",
+    "docs/primary_nll_first_test_read.json": "164f3166e86e473365f976e05aa3d19ae1afbfa48cc62f84a7e926543cda33bb",
+    "results/primary_nll_readiness.json": "7a1b72e71487f5c25dbbe62a578a6b7b634f901cf549d78ec86e4542a6269f7f",
+    "docs/primary_nll_enqueue_confirmation.json": "d14fcb2c058015222d25f4be20e6d78b278c45eb6fe87cea3b3130016d79b71d",
+    "docs/primary_nll_test_execution_authority.json": "df543ba24b1fa963b781888d2b6664ba89370b0695787f82fd0b840392f00fce",
+    "docs/primary_evaluation_v2_execution_matched_nll_manifest.json": "d1502bcaff5cdcd75d984a4b8776f1cb4027b596f474835bfe9ed18875d9fd18",
+    "src/replay_study/analysis.py": "05d50004d60acdc4dc098d94f35a36fb1739f3f856267c7d2cdc35e02d96922c",
+    "src/replay_study/nll_v2_analysis.py": "356088e4a8bc82947d6287a8e712038426382efbf45f3a7006bf9eea18a1c59e",
+    "scripts/analyze_primary_nll.py": "488b247fa0bc24e13010fc5fa0616133d26427328181f4c095ff910f8f6ac6e7",
+    "scripts/monitor_primary_nll_readiness.py": "1124ebb9cb8871d78e7b89f6aec1bede7ed09406017d2bb2394b257cc3033fc6",
+    "scripts/plot_primary_nll_print.py": "526058d538ed95c82978e023f04eb336fe7873e440bda798df18c5e967257f6c",
+    "scripts/summarize_primary_nll.py": "4bd7c146f77460bc3863eeba7a9b4c0be839cbc8bdca67cfae5a2e7095f0b581",
+    "results/analysis/formal_deterministic_validation/endpoint_statistics.csv": "4d1f21f2051d74b9bec4102caadfada916b96f57f46ef5219c0989700155f90b",
+    "artifacts/provenance/primary_nll_first_analysis_v1/manifest.json": "fcd52ad07fb454494bec20168561e6ddc53d00d9c62a50ad118f0416e0280ece",
+    "logs/tests_primary_nll_analysis_completed.log": "f6f2403ea36f0983c014d0782bc56df647e0c14d0aba297cafb94f77dd787f4a"
+  },
+  "files": {
+    "results/analysis/primary_nll_v2/prepared_only.json": {
+      "bytes": 3115,
+      "sha256": "509f3e7b46b7763f12d353ae2dc6e82f3db9de5b5826687562aa2517fc89f5f1"
+    },
+    "results/analysis/primary_nll_v2/all67_physical_inference_costs.csv": {
+      "bytes": 6278,
+      "sha256": "a63b2d78d12c4a28dab7cb55dc5e08b27884ba695b7b69271a932f76e37bc86f"
+    },
+    "results/analysis/primary_nll_v2/scope_and_costs.json": {
+      "bytes": 4147,
+      "sha256": "b8bd5af2d359c9a32586572394fe97b90c23627f3642c107d734e4baa5ee51de"
+    },
+    "results/analysis/primary_nll_v2/打印图说明.md": {
+      "bytes": 599,
+      "sha256": "f3c751f4b73c88e2fb304eae4ee78dd88d12396a1bd5e484e08b76ceae52e131"
+    },
+    "results/analysis/primary_nll_v2/bootstrap_identity_metadata_repair.json": {
+      "bytes": 1069,
+      "sha256": "0f9504ec046fd9d889da906cf1472d16aafae1aff0ce221793a6b35c9729d78f"
+    },
+    "results/analysis/primary_nll_v2/best_vs_final_descriptive.csv": {
+      "bytes": 5196,
+      "sha256": "08173462868e02a663e127d82a7bb3b247d66e2312f3bbffa5145bc044a1ee16"
+    },
+    "results/analysis/primary_nll_v2/readable_summary_provenance.json": {
+      "bytes": 2300,
+      "sha256": "4651c771b1f633091c2152740ada8670d4afbaf34b2859d90321d4813aebfd85"
+    },
+    "results/analysis/primary_nll_v2/final/endpoints.csv": {
+      "bytes": 23738,
+      "sha256": "b9a327daba14856a2c75c4b7a643d28b6f2e75a40640694e7cbef9e4d78ec335"
+    },
+    "results/analysis/primary_nll_v2/final/endpoint_statistics.csv": {
+      "bytes": 31405,
+      "sha256": "9420d0f6e4225f6063385cdfc89d426d2c9237720bbffa4e862b0d22baf1866d"
+    },
+    "results/analysis/primary_nll_v2/final/paired_effects.csv": {
+      "bytes": 12786,
+      "sha256": "16bda6f452b6dcf97a28287b929550620a9c239a97238a740d98941861708916"
+    },
+    "results/analysis/primary_nll_v2/final/paired_statistics.csv": {
+      "bytes": 17743,
+      "sha256": "47f80a6560467c75a6f1aaf351e618d5f1ec96aea3ac54b6d1bcd1e07015c233"
+    },
+    "results/analysis/primary_nll_v2/final/all_candidates_frontier.csv": {
+      "bytes": 3041,
+      "sha256": "b86175e0d4f5354ffc2072831ef8d48c31900d7920c9074f39086b63d86a5e1b"
+    },
+    "results/analysis/primary_nll_v2/final/availability.csv": {
+      "bytes": 5204,
+      "sha256": "985bff9e94551001e7faec85b4afaab9a27980fc6d628c4914ccaf0a012e1b04"
+    },
+    "results/analysis/primary_nll_v2/final/actual_training_costs.csv": {
+      "bytes": 12485,
+      "sha256": "433db569dbfecdff7f105d72edaab761b5f6ff7e751582e15f30591cb7f05b69"
+    },
+    "results/analysis/primary_nll_v2/final/physical_inference_costs.csv": {
+      "bytes": 4417,
+      "sha256": "175d1347e51aabe5c1d04ffc5c5ad8dc278a41dd4058fd89066eb0637a8a5a1b"
+    },
+    "results/analysis/primary_nll_v2/final/document_bootstrap.json": {
+      "bytes": 237658,
+      "sha256": "cde6d82e92eb811ceccfd8a66533ae1107a6c62fa0301e699c72ac148633e5c7"
+    },
+    "results/analysis/primary_nll_v2/final/endpoint_document_bootstrap.json": {
+      "bytes": 262378,
+      "sha256": "c3cb356d731b1b56ee87861fe469e771797ae363187c4b3198489e3bcd9d60e2"
+    },
+    "results/analysis/primary_nll_v2/final/analysis_manifest.json": {
+      "bytes": 23224,
+      "sha256": "45af82977515f104dd1968bcd3cd89d5e2203d79b09fd4260d24bccd29d4639d"
+    },
+    "results/analysis/primary_nll_v2/final/adaptation_retention_frontier.png": {
+      "bytes": 134220,
+      "sha256": "6ddea16ee42b63e699e78380db268055005895bcf90dab2a2f4da3d2c479217f"
+    },
+    "results/analysis/primary_nll_v2/final/adaptation_retention_frontier.pdf": {
+      "bytes": 29746,
+      "sha256": "04a9a535645feb780ded5f5d6b3094312cd52352e372e21a57f2ff3a98bd414e"
+    },
+    "results/analysis/primary_nll_v2/final/adaptation_retention_frontier.svg": {
+      "bytes": 123702,
+      "sha256": "0099d7cc2c71bc1379c62c5c01a51222554622eabd24e0da84d53358e389470c"
+    },
+    "results/analysis/primary_nll_v2/final/图形说明.md": {
+      "bytes": 435,
+      "sha256": "c0f4d31b78d7b72579d7dbf3932029640e9132b812e7ffda1c53a721ea27f29a"
+    },
+    "results/analysis/primary_nll_v2/final/paired_contrasts_7in.png": {
+      "bytes": 147226,
+      "sha256": "22e960071ac6bdddee587ab0a9c74f45e5296e4338048080ac25b2a95c4f47cf"
+    },
+    "results/analysis/primary_nll_v2/final/paired_contrasts_7in.pdf": {
+      "bytes": 22636,
+      "sha256": "8790d2efdbb40ecc03adfe4daeb34d29cbb19ea08caacee028e03502aa728612"
+    },
+    "results/analysis/primary_nll_v2/final/paired_contrasts_7in.svg": {
+      "bytes": 80741,
+      "sha256": "b92408f3a34f44a9a049a4d7681c52140a235845f82d51d7d60304e6655c61d7"
+    },
+    "results/analysis/primary_nll_v2/final/budget_sensitivity_7in.png": {
+      "bytes": 235999,
+      "sha256": "9ad64305dc22f095aa5aeb1fd7139aad14019a0dacdc7fc2f35d4b04560f7392"
+    },
+    "results/analysis/primary_nll_v2/final/budget_sensitivity_7in.pdf": {
+      "bytes": 18578,
+      "sha256": "766e720e55577c990e3b9cce43bd5e28bcbada9c2b0c0d7ee6490fb214603d98"
+    },
+    "results/analysis/primary_nll_v2/final/budget_sensitivity_7in.svg": {
+      "bytes": 78767,
+      "sha256": "6857b939cd574de52a32bda6a9ba7eaa50775ededafe86b4f9e961337fb49b19"
+    },
+    "results/analysis/primary_nll_v2/final/endpoint_bootstrap_intervals_readable.csv": {
+      "bytes": 136944,
+      "sha256": "d6ce65fa248d2bfa99c7cb8e70e0fa4cb9c8a16fb010832b4a151fbfa2432ad3"
+    },
+    "results/analysis/primary_nll_v2/final/paired_bootstrap_intervals_readable.csv": {
+      "bytes": 123385,
+      "sha256": "dda2b44edff41314f5aa6787075c3ca0208ed7c1c70f4f70ab88a6174791cbea"
+    },
+    "results/analysis/primary_nll_v2/final/主结果与六组配对表.md": {
+      "bytes": 2351,
+      "sha256": "8fb36074962f5d0cd068025785ee81d96940a75e388862a9f8a5c5c1d6d736a2"
+    },
+    "results/analysis/primary_nll_v2/best/endpoints.csv": {
+      "bytes": 23647,
+      "sha256": "0bd40cd0d055a836db5c0cdc8015b542827b2e1ecf4f6ffc028974781f622609"
+    },
+    "results/analysis/primary_nll_v2/best/endpoint_statistics.csv": {
+      "bytes": 31275,
+      "sha256": "fbc34f0813de58d03f238c989947504dab8aea4aea1d8b688194e0ce1351d2dd"
+    },
+    "results/analysis/primary_nll_v2/best/paired_effects.csv": {
+      "bytes": 12869,
+      "sha256": "c6fc89deb25e661c2ecdb091d8b542c37c4bed0578983c0d0a43a17fc62eeadb"
+    },
+    "results/analysis/primary_nll_v2/best/paired_statistics.csv": {
+      "bytes": 17670,
+      "sha256": "5c5ddc2f97ecb4c9d73833062fa5af36ccdba5737a3f28bbbf6b3c1271cd3d24"
+    },
+    "results/analysis/primary_nll_v2/best/all_candidates_frontier.csv": {
+      "bytes": 3025,
+      "sha256": "882da21969cdda5c2b3dcd7ddb8e79cf0ee0dceedb51cca016dfcf096ef10832"
+    },
+    "results/analysis/primary_nll_v2/best/availability.csv": {
+      "bytes": 5132,
+      "sha256": "414b5b625155ef2d4dd81820de54edf48ecb154cd7dfe57b0997550ad36d6169"
+    },
+    "results/analysis/primary_nll_v2/best/actual_training_costs.csv": {
+      "bytes": 12449,
+      "sha256": "337120c2fafbba969199c04c6e2bfe7b4d97a1c9a7f58ea15c9e8b41df234e01"
+    },
+    "results/analysis/primary_nll_v2/best/physical_inference_costs.csv": {
+      "bytes": 4384,
+      "sha256": "b64b3c687d07b83fedf528ddcad70fea9bb197d2983e19070602cbcb5cdac6be"
+    },
+    "results/analysis/primary_nll_v2/best/document_bootstrap.json": {
+      "bytes": 237095,
+      "sha256": "6e066bbff42b93d96febfa98af2781f4bbed73cfac1ce1c784eac897e87fb188"
+    },
+    "results/analysis/primary_nll_v2/best/endpoint_document_bootstrap.json": {
+      "bytes": 261681,
+      "sha256": "ac36c552f7180608b8c21d9dc00fdf8c803558dc90ca356a7112bd4719a39c9a"
+    },
+    "results/analysis/primary_nll_v2/best/analysis_manifest.json": {
+      "bytes": 23156,
+      "sha256": "3417a3597bbc89339b59adbd9eb7ff68982f33450145017c71ae299bca8ed65b"
+    },
+    "results/analysis/primary_nll_v2/best/adaptation_retention_frontier.png": {
+      "bytes": 136243,
+      "sha256": "153ad196ce8826751423dd0e42d40c5df6cb244c370fd6520a4d791277ef2e2d"
+    },
+    "results/analysis/primary_nll_v2/best/adaptation_retention_frontier.pdf": {
+      "bytes": 29591,
+      "sha256": "5040ab02122ee4e06131c05570c256dc086a3bc828ca90e17cd9db367c1e7691"
+    },
+    "results/analysis/primary_nll_v2/best/adaptation_retention_frontier.svg": {
+      "bytes": 124250,
+      "sha256": "e6d5e4fdd1f432fbb302594af3a9a0e922266949ea679f2844423fa594a3c54e"
+    },
+    "results/analysis/primary_nll_v2/best/图形说明.md": {
+      "bytes": 435,
+      "sha256": "c0f4d31b78d7b72579d7dbf3932029640e9132b812e7ffda1c53a721ea27f29a"
+    },
+    "results/analysis/primary_nll_v2/best/paired_contrasts_7in.png": {
+      "bytes": 150283,
+      "sha256": "3c8744299c65a095b4afc4ed870d7bdbb87b6a9d56fc8472ad3172d4c5b6b9dd"
+    },
+    "results/analysis/primary_nll_v2/best/paired_contrasts_7in.pdf": {
+      "bytes": 21583,
+      "sha256": "16aee873e896cd487e5c8d1505973b3d4de1f5294a0c744207ee515d08cbdc54"
+    },
+    "results/analysis/primary_nll_v2/best/paired_contrasts_7in.svg": {
+      "bytes": 79068,
+      "sha256": "e9c501426bfc7b2bc830716fd7ee6fe863de5208dd74ad4065f0e7476d482808"
+    },
+    "results/analysis/primary_nll_v2/best/budget_sensitivity_7in.png": {
+      "bytes": 264531,
+      "sha256": "6814f1832304fb3195c620ff8975f61fcd67abb6216141936d06089cf96f58ea"
+    },
+    "results/analysis/primary_nll_v2/best/budget_sensitivity_7in.pdf": {
+      "bytes": 19025,
+      "sha256": "ba71bc928bfc3d81b4aa3c0e14d69809c3d0b8f05b8071a38bfe04b37829d0d0"
+    },
+    "results/analysis/primary_nll_v2/best/budget_sensitivity_7in.svg": {
+      "bytes": 82592,
+      "sha256": "0461755c7bddc83afb5c4a50e844a725ee01a69b4bad8920b0790e575b80ea04"
+    },
+    "results/analysis/primary_nll_v2/best/endpoint_bootstrap_intervals_readable.csv": {
+      "bytes": 135976,
+      "sha256": "07634188eacf5330f09ae079a942ef0d566d9e6313c551f571fd4a554b37caaa"
+    },
+    "results/analysis/primary_nll_v2/best/paired_bootstrap_intervals_readable.csv": {
+      "bytes": 122606,
+      "sha256": "198c03ba9b072e3da1195a3996b4d618ad68752253592c9b38da85df03976af6"
+    },
+    "results/analysis/primary_nll_v2/best/主结果与六组配对表.md": {
+      "bytes": 2350,
+      "sha256": "4479d736b7096f98b1a9a099c795bd9e8e7c557dd7252471d64125f4f8c141f0"
+    }
+  },
+  "no_behavior_or_other_phase_test_scores_opened": true,
+  "storage": "Workspace on scratch; ordinary durable report package publication handled separately by root"
+}

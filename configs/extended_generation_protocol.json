@@ -42,7 +42,8 @@
       "memory_smoke_seed": null,
       "memory_smoke_n_chunks": null,
       "maximum_smoke_allocated_bytes": null,
-      "smoke_failure_policy": "halt and report; do not silently reduce batch or change sampling"
+      "smoke_failure_policy": "halt and report; do not silently reduce batch or change sampling",
+      "generation_complete": true
     },
     {
       "name": "pythia-2.8b",
@@ -57,7 +58,16 @@
       "memory_smoke_seed": 909,
       "memory_smoke_n_chunks": 128,
       "maximum_smoke_allocated_bytes": 77309411328,
-      "smoke_failure_policy": "halt and report; do not silently reduce batch or change sampling"
+      "smoke_failure_policy": "halt and report; do not silently reduce batch or change sampling",
+      "memory_smoke_result": {
+        "passed": true,
+        "manifest": "artifacts/extended/pythia-2.8b/smoke/pool_seed909_batch128.json",
+        "peak_allocated_bytes": 44216104960,
+        "tokens_per_second": 2003.571013025718
+      },
+      "generation_complete": true,
+      "resumed_after_disk_full": true
     }
-  ]
+  ],
+  "all_assets_complete": true
 }

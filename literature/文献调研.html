@@ -1,0 +1,160 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><title>研究报告</title><style>
+    @font-face { font-family: ReportCJK; src: url('file:///tmp/grad-research-20261106/worktree/artifacts/reporting/NotoSerifCJKsc-Regular.otf'); }
+    @page { size: A4; margin: 18mm 17mm 21mm;
+      @bottom-left { content: '固定回放预算下的领域适应与遗忘'; font-size: 8pt; color: #666; }
+      @bottom-right { content: counter(page) ' / ' counter(pages); font-size: 8pt; color: #666; }
+    }
+    html { font-family: ReportCJK, 'Noto Serif CJK SC', 'Songti SC', SimSun, serif; color: #20252a; }
+    body { font-size: 10.5pt; line-height: 1.65; }
+    h1 { font-size: 23pt; line-height: 1.35; margin: 0 0 18pt; color: #183b50; }
+    h2 { font-size: 14.5pt; margin-top: 22pt; border-bottom: .6pt solid #b2c4ce;
+         padding-bottom: 4pt; color: #183b50; break-after: avoid; }
+    h3 { font-size: 11.5pt; margin-top: 15pt; break-after: avoid; }
+    p { margin: 8pt 0; orphans: 3; widows: 3; }
+    a { color: #155f8b; text-decoration: none; overflow-wrap: anywhere; }
+    table { border-collapse: collapse; width: 100%; font-size: 8.5pt; line-height: 1.45; margin: 12pt 0; }
+    thead { display: table-header-group; background: #eaf0f3; }
+    th, td { border: .5pt solid #b7c4cc; padding: 5pt; vertical-align: top; overflow-wrap: anywhere; }
+    tr { break-inside: avoid; }
+    img { max-width: 100%; height: auto; }
+    pre { white-space: pre-wrap; font-size: 8pt; line-height: 1.4; background: #f2f4f5;
+          padding: 8pt; overflow-wrap: anywhere; }
+    code { font-family: ReportCJK, monospace; font-size: .88em; overflow-wrap: anywhere; }
+    blockquote { border-left: 3pt solid #b2c4ce; padding-left: 10pt; margin-left: 0; }
+    li { margin: 3pt 0; }
+    </style></head><body><h1 id="_1">固定回放预算下语言模型领域适应与遗忘：文献调研</h1>
+<p>检索日期：2026-11-06。本文区分已发表论文、预印本、官方资源卡，以及本项目据此形成的研究判断。实证结果以主报告为准，后续结果不得倒写成预先假设。</p>
+<h2 id="1">1. 选题定位</h2>
+<p>本课题是<strong>领域继续预训练</strong>：在数学文本上继续优化下一词预测，同时测量通用文本分布上的损失变化。它不等同于连续指令微调、知识编辑、机器遗忘，也不能仅凭数学文本困惑度下降宣称数学推理能力提升。</p>
+<p>研究价值应落在可复核的控制比较：当唯一回放样本量、累计回放量、目标数据暴露和损失权重被分开记录后，自生成回放能保留多少通用分布性能？简单分层选择是否比随机选择稳定？代价是否值得？“自生成回放”“KL蒸馏”“聚类选择”本身已有先例，不能作为新算法发明。</p>
+<h2 id="2">2. 核心文献证据表</h2>
+<table>
+<thead>
+<tr>
+<th>文献与来源</th>
+<th>可以支持的结论</th>
+<th>对本课题的具体影响与边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Béthune et al., ICML 2025, <a href="https://proceedings.mlr.press/v267/bethune25a.html">Scaling Laws for Forgetting during Finetuning with Pretraining Data Injection</a>；<a href="https://arxiv.org/html/2502.06042">全文</a></td>
+<td>原预训练数据注入可以缓解遗忘；其设置中很小的注入比例已有效；重复小回放库存在过拟合风险。</td>
+<td>必须区分唯一库大小与累计暴露，加入预算敏感性。论文中的约1%不是本模型通用最优值，且本项目C4不是Pythia原预训练数据。</td>
+</tr>
+<tr>
+<td>Marek et al., 2026预印本, <a href="https://arxiv.org/html/2605.26097v1">Forgetting in Language Models: Capacity, Optimization, and Self-Generated Replay</a>；<a href="https://github.com/martin-marek/forgetting">官方代码</a></td>
+<td>用冻结初始模型生成文本并施加回放约束可有效减轻遗忘；效果与容量、优化和权重相关。文中同时比较下一词CE与forward KL。</td>
+<td>最接近本课题，必须作为主对照依据。其部分实验使用自训模型、专用语料标记、强约束λ=10；不能直接移植成Pythia固定预算结论。其附录采用温度1固定长度采样，为本项目无截断BOS生成提供参照。</td>
+</tr>
+<tr>
+<td>Kotha &amp; Liang, 2026预印本, <a href="https://arxiv.org/html/2603.04964v1">Replaying pre-training data improves fine-tuning</a></td>
+<td>通用数据回放也可能改善目标域数据效率；预训练中目标数据占比会影响收益。其“replay”包括从通用分布取新样本。</td>
+<td>同时报告适应增益和遗忘，不能预设回放必然牺牲适应。固定有限回放库与其分布回放设置不同，须明确。</td>
+</tr>
+<tr>
+<td>Huang et al., ACL 2024, <a href="https://aclanthology.org/2024.acl-long.77/">Self-Synthesized Rehearsal</a></td>
+<td>SSR包含指令样例合成、输出精炼及聚类选样。其消融显示聚类并非始终优于随机。</td>
+<td>聚类是已有选择思路；本项目C组仅为受其启发的固定教师特征聚类控制，不是完整SSR复现。负结果应保留。</td>
+</tr>
+<tr>
+<td>Chang et al., NeurIPS 2024, <a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/6fdf57c71bc1f1ee29014b8dc52e723f-Paper-Conference.pdf">How Do Large Language Models Acquire Factual Knowledge During Pretraining?</a></td>
+<td>用受控事实注入分析知识获得与后续衰减，讨论重复、批量等训练因素。</td>
+<td>为“遗忘需要明确测量对象”提供依据。答案片段概率探针不同于自由生成正确率，本项目通用NLL也不能替代所有知识测量。</td>
+</tr>
+<tr>
+<td>Wu et al., 2026预印本, <a href="https://arxiv.org/abs/2609.38011">When do data mixtures improve scaling laws?</a></td>
+<td>在特定高维回归假设下研究混合数据改善缩放率的条件，并给出语言模型定性实验。</td>
+<td>可作为数据混合的理论背景；不为本研究的KL、分层选择或语言模型保留效果提供一般性保证。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3">3. 开题之后应补充的近邻工作</h2>
+<table>
+<thead>
+<tr>
+<th>文献</th>
+<th>与本课题的联系</th>
+<th>研究边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thede et al., 2026-09-30预印本, <a href="https://arxiv.org/html/2609.40089v1">Replay on Demand</a></td>
+<td>根据在线学习潜力与遗忘信号分配适应/回放训练预算，比较适应—遗忘前沿。</td>
+<td>本项目以静态固定库为主，不应声称首次进行预算内回放选择。动态调度需要额外评分成本，应作为后续扩展而非混入当前主实验。</td>
+</tr>
+<tr>
+<td>Cho et al., 2026-10-08预印本, <a href="https://arxiv.org/html/2610.12602v1">Self-Preservation in Language Models</a></td>
+<td>Task Bank指导冻结模型生成回放，测试库外保留及选择效果；固定总样本分配会影响新任务收益。</td>
+<td>指令微调与本文非监督数学适应不同；其选择收益随模型规模变化，支持报告失败条件，不能预设小模型分层有效。</td>
+</tr>
+<tr>
+<td>Abbes et al., 2025预印本, <a href="https://arxiv.org/abs/2508.01908">Revisiting Replay and Gradient Alignment for Continual Pre-Training of Large Language Models</a></td>
+<td>研究大规模跨语言继续预训练中的回放、梯度对齐及不同计算分配。</td>
+<td>提醒将计算成本与token预算区分；其百亿级数据条件不能直接外推到约10M目标token实验。</td>
+</tr>
+<tr>
+<td>Zhao et al., 2026-10-01预印本, <a href="https://arxiv.org/abs/2610.02593">Fisher-Guided Submodular Data Selection</a></td>
+<td>依据参数空间Fisher相关信号选择目标域继续预训练数据。</td>
+<td>选择的是目标域数据，并非本项目回放库；不把文中token效率数值当作可直接比较基线。</td>
+</tr>
+<tr>
+<td>Feng et al., ACL 2026, <a href="https://aclanthology.org/2026.acl-long.1144/">FOREVER</a></td>
+<td>以优化器更新幅度定义“模型时间”，安排回放时机与约束强度。</td>
+<td>属于动态调度方向；说明相同步数不一定意味着相同参数变化。</td>
+</tr>
+</tbody>
+</table>
+<p>上述2026工作已核对原始页面；FOREVER已补正ACL 2026发表信息，其余未找到正式录用信息者保持“预印本”标记。检索不构成穷尽性系统综述。</p>
+<h2 id="4">4. 基础概念与资源</h2>
+<p>开题中的EWC、Learning without Forgetting、Deep Generative Replay分别对应参数重要性约束、输出蒸馏、生成式回放三个基础方向。它们用于解释方法谱系，不将视觉持续学习设置的结论直接搬到语言模型。Luo et al. 的<a href="https://arxiv.org/abs/2308.08747">连续指令微调实证研究</a>讨论不同模型/任务上的遗忘；Wang et al. 的<a href="https://arxiv.org/abs/2307.09218">遗忘综述</a>覆盖更广的现象，适合作为背景引用。</p>
+<table>
+<thead>
+<tr>
+<th>资源</th>
+<th>官方来源</th>
+<th>本实验必须记录</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pythia-410M</td>
+<td><a href="https://huggingface.co/EleutherAI/pythia-410m">模型卡</a>、<a href="https://github.com/EleutherAI/pythia">官方仓库</a>、<a href="https://arxiv.org/abs/2304.01373">论文</a></td>
+<td>最终checkpoint commit、配置、tokenizer、训练精度；Pythia原训练来自Pile，C4只能叫替代通用回放。</td>
+</tr>
+<tr>
+<td>FineMath</td>
+<td><a href="https://huggingface.co/datasets/HuggingFaceTB/finemath">数据卡</a></td>
+<td>finemath-4plus、revision、原始shard、文档划分；它仅提供train split，需先划分后分块。卡上的token数不能代替本tokenizer预算。</td>
+</tr>
+<tr>
+<td>C4 English</td>
+<td><a href="https://huggingface.co/datasets/allenai/c4">数据卡</a></td>
+<td>子集en、原始train/validation来源、回放与评估文档隔离、规范化文本hash。</td>
+</tr>
+<tr>
+<td>WikiText-103</td>
+<td><a href="https://huggingface.co/datasets/Salesforce/wikitext">数据卡</a></td>
+<td>raw-v1、官方validation/test、按文章重建后分块；本文PPL受tokenizer/上下文约定影响，不能直接与其他论文榜单PPL比较。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5">5. 本研究形成的判断（研究设计推断，不是文献已证明事实）</h2>
+<ol>
+<li>以固定目标暴露比较端点，再沿验证轨迹比较相近适应水平，能够减少“正则越强、学得越少、看似遗忘越少”的解释歧义。</li>
+<li>五等频分层比例抽样主要约束有限库中NLL组成的波动，并不系统偏向高质量文本；没有理由预先保证均值提升。要展示每seed差异及库分布，而不只给最佳种子。</li>
+<li>Exact chunk去重可能没有样本可去。若重复率为零，应使D与B4生成相同bank并报告机制空效应；不能靠不同随机抽样制造“去重收益”。</li>
+<li>BOS-only温度1全分布采样尽量减少来源信息与采样截断混淆；其质量与通用评估覆盖可能较差，因此需要重复、特殊token、NLL和特征分布诊断。基于真实C4前缀的生成可作为明确标注的补充实验。</li>
+<li>小样本三seed均值和标准差不足以支持强显著性宣称。成对seed差值与文档bootstrap是描述性证据，文档bootstrap不能代替重新训练的seed不确定性。</li>
+</ol>
+<h2 id="6">6. 待实验证伪的问题</h2>
+<ul>
+<li>固定K及b，生成KL是否优于生成CE？C4上有效的排序是否也出现在WikiText？</li>
+<li>在同样适应收益下，M相对D是否仍有优势，还是仅表现为更强/更弱学习？</li>
+<li>K缩小但累计暴露保持不变时，有限库重复是否引起回放过拟合？</li>
+<li>固定λ改变b主要改变梯度估计噪声与覆盖，还是产生实质平均性能变化？</li>
+<li>额外生成、教师推断与聚类成本计入后，选择的微小收益是否仍值得？</li>
+</ul>
+<h2 id="_2">引用信息修订</h2>
+<p>核对出版社记录后，SSR应引用ACL 2024正式论文；FOREVER引用ACL 2026；Luo等连续微调实证论文发表于TASLP 33 (2025), 3776–3786；Wang等遗忘综述发表于TPAMI 47(3) (2025), 1464–1483。完整作者、DOI和出版社链接见<a href="references.bib">references.bib</a>，不沿用开题中较早的预印本出版状态。</p></body></html>

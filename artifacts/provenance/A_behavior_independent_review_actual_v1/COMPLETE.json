@@ -1,0 +1,136 @@
+{
+  "complete": true,
+  "phase": "supplement_A_behavior_only",
+  "logical_endpoints": 18,
+  "endpoint_task_score_rows": 72,
+  "training_seeds": [
+    11,
+    22,
+    33
+  ],
+  "final_target_prediction_tokens": 10000000,
+  "final_replay_prediction_tokens": 500000,
+  "ratio": 0.05,
+  "selected_lambdas": {
+    "B1": 0.05,
+    "B2": 1,
+    "B3": 0.1,
+    "B4": 5,
+    "M": 5,
+    "C": 1
+  },
+  "selected_policy_pairs": [
+    "M-B4",
+    "C-B4",
+    "B2-B1",
+    "B4-B3",
+    "B3-B1",
+    "B4-B2"
+  ],
+  "all_original_outputs_readonly": true,
+  "known_score_label_collision": "Original selected_policy_statistics.csv unchanged. Reviewer score-resolved statistics used for all readable summaries and policy figures.",
+  "no_reselection_or_other_phase_analysis": true,
+  "reviewer_checks": 9528,
+  "maximum_absolute_numeric_error": 1.1102230246251565e-16,
+  "fresh_review_bytes": 392807220,
+  "checkpoint_payload_bytes_read": 0,
+  "new_model_forward_calls": 0,
+  "csv_copy_count": 7,
+  "all_csv_presenter_copies_byte_equal": true,
+  "figures": {
+    "count": 6,
+    "formats": [
+      "PNG",
+      "PDF",
+      "SVG"
+    ]
+  },
+  "proofs": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/supplement_A_behavior_analysis_actual_v1/COMPLETE.json",
+      "sha256": "3d25b75e895e940011cffc89c472b5b8782dae703014f1ce045ce01c97150641",
+      "bytes": 17179
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/A_behavior_analysis_actual_v1/ROOT_authority.json",
+      "sha256": "4babbba6eb83fd7452bd32d652936d27129eece4963951f2e2d72cd81fd4ffa5",
+      "bytes": 13471
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/supplemental_score_first_reads_v1/supplement_A_behavior_31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa.json",
+      "sha256": "1a276564dc42a85892e1d9e6156677fd254e2a269faac5b9dde90f0f81d02dfe",
+      "bytes": 1790
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/A_behavior_analysis_actual_v1/state_capture/actual_successor_state_immutable.json",
+      "sha256": "27b41e7ee3d8f7e49180e3bf228684816a15d6f7558df7ea65c40624c1eadb88",
+      "bytes": 459803
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/manifest.json",
+      "sha256": "31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa",
+      "bytes": 370691
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/supplement_A_validation/validation_lambda_selection.json",
+      "sha256": "9548085fc18278f69fad584b67485bceb5193a18b10c78f516f6b09b4fa4e477",
+      "bytes": 144518
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/supplement_A_behavior_independent_review_v1/COMPLETE.json",
+      "sha256": "e9b71fa7f5746a0a302a125c859970d88f63f7f3da7ee84a9fd02945039ac6dc",
+      "bytes": 55521
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/supplement_A_behavior_presented_v1/COMPLETE.json",
+      "sha256": "d3177fa882356bbe16db4989282690c7f9142053f788684a97b75fd334c188fa",
+      "bytes": 12427
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/supplement_A_behavior_findings_v1/COMPLETE.json",
+      "sha256": "76ecb8cddc017f9230145d2497c32a6c49912177a8e8a36bd8254928eaad6221",
+      "bytes": 4444
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/supplement_A_behavior_findings_v1/讨论.md",
+      "sha256": "6e49f45bd230f7957907ff8749fd42ff1fb65a56c41ccd142e6884c64b509fa7",
+      "bytes": 6083
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/supplement_A_behavior_findings_v1/全部18端点可读表.md",
+      "sha256": "d696e19184e4e7b709b8199228dd3f1db91ff666e844ef6a70c7b84f109a0fe7",
+      "bytes": 12669
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/results/supplement_A_behavior_findings_v1/全部六策略配对可读表.md",
+      "sha256": "bf94d5dd644502cf88278c89f63f63701c318d86aa224092a82d8a9c5b8f2712",
+      "bytes": 5012
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/A_behavior_independent_review_actual_v1/whole_parent_timing.json",
+      "sha256": "9483716133c0f3bddb1f8d2cdb3644738223122a35a4cd7e790d46e082bf8e63",
+      "bytes": 1785
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/A_behavior_presentation_actual_v1/whole_parent_timing.json",
+      "sha256": "a6892d5098abf9b95f0d5e8583dc8b6bd21a06aa830fa22df4eb3ae38bed69e3",
+      "bytes": 1356
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/A_behavior_findings_format_actual_v1/whole_parent_timing.json",
+      "sha256": "ccf3b3bcfc79df17621983ae0ef4d1722d86426930fd5e31adfb69ce1bc478dc",
+      "bytes": 695
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/A_behavior_presentation_visual_review_actual_v1/visual_review.json",
+      "sha256": "2b4b8a44a205b4906f43c357cbf7eff9b11678601c58c966453cbccd6fc7da1c",
+      "bytes": 1009
+    }
+  ],
+  "frozen_tool_sha256_unchanged": {
+    "scripts/review_behavioral_results.py": "bb261a20ac45fb47c690f57b7461856b5204066eade15178ca92886a9766966b",
+    "scripts/present_behavioral_review.py": "fef5b7839629391db8188df80d729845f472fc59e2c685be5558cd9a80ef99ae"
+  },
+  "timing": "Independent reviewer 8.667267136275768s and presenter4.851645927876234s are separate complete external Popen parents. Their adjacent script timers are nested. Formatting .040336877s is independent; contact sheet .285419844s is an in-process measured region. Manual overall unknown.",
+  "preparation_vs_actual": "Earlier prepared commands were examples. ROOT used actual readiness.json, ROOT_authority.json, results/supplement_A_behavior_analysis_actual_v1. Actual COMPLETE/authority/journal immutable SHA bindings prevail; historical preparation left unchanged."
+}

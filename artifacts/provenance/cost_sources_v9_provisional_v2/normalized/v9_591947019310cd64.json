@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/A_behavior_findings_format_actual_v1/whole_parent_timing.json",
+    "sha256": "ccf3b3bcfc79df17621983ae0ef4d1722d86426930fd5e31adfb69ce1bc478dc",
+    "bytes": 695
+  },
+  "original_wall_pointer": "/whole_process_wall_seconds",
+  "wall_seconds": 0.04033687710762024,
+  "CPU_component_pointers": [
+    "/child_user_seconds",
+    "/child_system_seconds"
+  ],
+  "CPU_components": {
+    "child_user_seconds": 0.027139999999999997,
+    "child_system_seconds": 0.011641
+  },
+  "recorded_inclusive_CPU_seconds": 0.038780999999999996,
+  "original_returncode": 0,
+  "scope": "Popen spawn to exit, formatting approved existing A reviewer CSVs; no new statistics/inference/selection. Manual writing overall unknown.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall; sum only the named user/system components. Failure rc retained. No calendar-derived elapsed.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

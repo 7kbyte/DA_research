@@ -1,0 +1,1995 @@
+{
+  "status": "passed",
+  "scope": "main",
+  "scope_description": "actual active strict main36 training assets",
+  "prepared_at_utc": "2026-11-06T06:06:55.788484+00:00",
+  "ngram_tokens": 13,
+  "fixed_threshold": 0.2,
+  "threshold_rule": "5 * exact matching query ngram occurrences >= query ngram occurrences; length<13 inapplicable",
+  "query_policy": "prepare_choice(max_length=2048), full context+choice sequence = input_ids followed by final label; includes final predicted token; no gold-choice selection",
+  "source_boundary_policy": "within each actual unpadded 512-token training chunk only, never cross chunk/document boundaries",
+  "item_counting": "a task item is counted once across its choices and once across source artifacts; per-source choice details retained",
+  "all_choice_token_fingerprint_sha256": "1fcb114f278ac832def3bb1aaf50082d873ac53f9ee3e5a52b6c6b71a46a108d",
+  "task_items": {
+    "piqa": 1838,
+    "hellaswag": 10042
+  },
+  "choice_sequences": 43844,
+  "choices_shorter_than_13_inapplicable": [
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:27",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:27",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:43",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:43",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:46",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:46",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:144",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:144",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:217",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:217",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:221",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:221",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:224",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:241",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:243",
+      "choice_index": 0,
+      "tokens": 9
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:243",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:291",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:291",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:296",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:296",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:395",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:395",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:408",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:408",
+      "choice_index": 1,
+      "tokens": 9
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:421",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:421",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:426",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:426",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:427",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:427",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:439",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:439",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:473",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:473",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:479",
+      "choice_index": 0,
+      "tokens": 9
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:479",
+      "choice_index": 1,
+      "tokens": 9
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:486",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:486",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:547",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:547",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:552",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:552",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:564",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:568",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:568",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:573",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:589",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:589",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:616",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:616",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:691",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:691",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:697",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:697",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:709",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:723",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:723",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:732",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:736",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:736",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:756",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:756",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:792",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:792",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:809",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:848",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:848",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:857",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:857",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:888",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:905",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:905",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:948",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:958",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:958",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1003",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1003",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1004",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1004",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1018",
+      "choice_index": 0,
+      "tokens": 9
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1018",
+      "choice_index": 1,
+      "tokens": 9
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1025",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1026",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1026",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1034",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1034",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1070",
+      "choice_index": 0,
+      "tokens": 9
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1070",
+      "choice_index": 1,
+      "tokens": 9
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1087",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1087",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1111",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1111",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1115",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1116",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1116",
+      "choice_index": 1,
+      "tokens": 9
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1121",
+      "choice_index": 0,
+      "tokens": 9
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1121",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1122",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1134",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1141",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1141",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1179",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1192",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1261",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1261",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1264",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1264",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1269",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1269",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1289",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1289",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1301",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1306",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1306",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1312",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1312",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1317",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1317",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1331",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1331",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1347",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1372",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1377",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1410",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1410",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1415",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1430",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1430",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1442",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1442",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1464",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1466",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1466",
+      "choice_index": 1,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1469",
+      "choice_index": 0,
+      "tokens": 9
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1469",
+      "choice_index": 1,
+      "tokens": 9
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1532",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1532",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1547",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1549",
+      "choice_index": 0,
+      "tokens": 9
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1549",
+      "choice_index": 1,
+      "tokens": 9
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1561",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1572",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1590",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1590",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1608",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1608",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1611",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1620",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1621",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1627",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1627",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1659",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1684",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1684",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1706",
+      "choice_index": 0,
+      "tokens": 10
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1706",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1711",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1714",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1714",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1721",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1721",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1728",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1728",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1731",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1731",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1748",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1771",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1771",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1774",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1774",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1790",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1790",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1794",
+      "choice_index": 1,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1800",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1803",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1803",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1804",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1804",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1813",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1813",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1814",
+      "choice_index": 0,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1814",
+      "choice_index": 1,
+      "tokens": 11
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1827",
+      "choice_index": 0,
+      "tokens": 12
+    },
+    {
+      "task": "piqa",
+      "item_id": "piqa:validation:1827",
+      "choice_index": 1,
+      "tokens": 11
+    }
+  ],
+  "choices_with_context_truncation": 0,
+  "choices_with_tokenization_boundary_mismatch": 0,
+  "unique_flagged_item_ids": {
+    "piqa": [],
+    "hellaswag": []
+  },
+  "reports": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/data/finemath_train.pt",
+      "role": "actual_target_training",
+      "used_by_run_ids": [
+        "formal_deterministic_B0_s11_b0_w0",
+        "formal_deterministic_B1_s11_b0p05_w0p05",
+        "formal_deterministic_B2_s11_b0p05_w0p05",
+        "formal_deterministic_B3_s11_b0p05_w0p05",
+        "formal_deterministic_B4_s11_b0p05_w0p05",
+        "formal_deterministic_D_s11_b0p05_w0p05",
+        "formal_deterministic_M_s11_b0p05_w0p05",
+        "formal_deterministic_C_s11_b0p05_w0p05",
+        "formal_deterministic_B0_s22_b0_w0",
+        "formal_deterministic_B1_s22_b0p05_w0p05",
+        "formal_deterministic_B2_s22_b0p05_w0p05",
+        "formal_deterministic_B3_s22_b0p05_w0p05",
+        "formal_deterministic_B4_s22_b0p05_w0p05",
+        "formal_deterministic_D_s22_b0p05_w0p05",
+        "formal_deterministic_M_s22_b0p05_w0p05",
+        "formal_deterministic_C_s22_b0p05_w0p05",
+        "formal_deterministic_B0_s33_b0_w0",
+        "formal_deterministic_B1_s33_b0p05_w0p05",
+        "formal_deterministic_B2_s33_b0p05_w0p05",
+        "formal_deterministic_B3_s33_b0p05_w0p05",
+        "formal_deterministic_B4_s33_b0p05_w0p05",
+        "formal_deterministic_D_s33_b0p05_w0p05",
+        "formal_deterministic_M_s33_b0p05_w0p05",
+        "formal_deterministic_C_s33_b0p05_w0p05",
+        "formal_deterministic_B4_s11_b0p01_w0p05",
+        "formal_deterministic_B4_s22_b0p01_w0p05",
+        "formal_deterministic_B4_s33_b0p01_w0p05",
+        "formal_deterministic_B4_s11_b0p1_w0p05",
+        "formal_deterministic_B4_s22_b0p1_w0p05",
+        "formal_deterministic_B4_s33_b0p1_w0p05",
+        "formal_deterministic_M_s11_b0p01_w0p05",
+        "formal_deterministic_M_s22_b0p01_w0p05",
+        "formal_deterministic_M_s33_b0p01_w0p05",
+        "formal_deterministic_M_s11_b0p1_w0p05",
+        "formal_deterministic_M_s22_b0p1_w0p05",
+        "formal_deterministic_M_s33_b0p1_w0p05"
+      ],
+      "source_chunks": 4096,
+      "source_unique_13grams": 1880104,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "af49c1455484f3471bf1a3569601373e2e84795849b9f59291b96ff2d637b39f"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/banks/c4_random_seed11.pt",
+      "role": "actual_selected_replay_bank",
+      "used_by_run_ids": [
+        "formal_deterministic_B1_s11_b0p05_w0p05",
+        "formal_deterministic_B2_s11_b0p05_w0p05"
+      ],
+      "source_chunks": 196,
+      "source_unique_13grams": 97309,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "71d229c9203ba0a5579997148e1a06ab4f7d28f41bf40c63bee4513b3eda5be7"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_random_seed11.pt",
+      "role": "actual_selected_replay_bank",
+      "used_by_run_ids": [
+        "formal_deterministic_B3_s11_b0p05_w0p05",
+        "formal_deterministic_B4_s11_b0p05_w0p05",
+        "formal_deterministic_B4_s11_b0p01_w0p05",
+        "formal_deterministic_B4_s11_b0p1_w0p05"
+      ],
+      "source_chunks": 196,
+      "source_unique_13grams": 97193,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "a1f0ddc372ad23d24ae0f628910881f77b22b8cb62be02f94c915c23d9155118"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_dedup_random_seed11.pt",
+      "role": "actual_selected_replay_bank",
+      "used_by_run_ids": [
+        "formal_deterministic_D_s11_b0p05_w0p05"
+      ],
+      "source_chunks": 196,
+      "source_unique_13grams": 97193,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "2b4762d5e7a9b5a5b8bc1cdb2afdbc8aa1b4a0a329c0b0a94e7d30457b60b90e"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_nll_stratified_seed11.pt",
+      "role": "actual_selected_replay_bank",
+      "used_by_run_ids": [
+        "formal_deterministic_M_s11_b0p05_w0p05",
+        "formal_deterministic_M_s11_b0p01_w0p05",
+        "formal_deterministic_M_s11_b0p1_w0p05"
+      ],
+      "source_chunks": 196,
+      "source_unique_13grams": 97547,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "0bcbb43d37b343c4bf62c3553c80a8d8fcfcb7ae95d1e035011fcacbfc300cfe"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_cluster_seed11.pt",
+      "role": "actual_selected_replay_bank",
+      "used_by_run_ids": [
+        "formal_deterministic_C_s11_b0p05_w0p05"
+      ],
+      "source_chunks": 196,
+      "source_unique_13grams": 97312,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "2bda5b5772abcda2c92bacb25a67c5f9fc88caf683b5554c49c81de63d814746"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/banks/c4_random_seed22.pt",
+      "role": "actual_selected_replay_bank",
+      "used_by_run_ids": [
+        "formal_deterministic_B1_s22_b0p05_w0p05",
+        "formal_deterministic_B2_s22_b0p05_w0p05"
+      ],
+      "source_chunks": 196,
+      "source_unique_13grams": 97466,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "e0db1c270cf75f5b0ff19fde245d43d4fadd72fdf8f97bae6e824a9389ec0777"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_random_seed22.pt",
+      "role": "actual_selected_replay_bank",
+      "used_by_run_ids": [
+        "formal_deterministic_B3_s22_b0p05_w0p05",
+        "formal_deterministic_B4_s22_b0p05_w0p05",
+        "formal_deterministic_B4_s22_b0p01_w0p05",
+        "formal_deterministic_B4_s22_b0p1_w0p05"
+      ],
+      "source_chunks": 196,
+      "source_unique_13grams": 97539,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "14c3827bad0687943d61d024768b018997360d481715601b35c385479d8dae82"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_dedup_random_seed22.pt",
+      "role": "actual_selected_replay_bank",
+      "used_by_run_ids": [
+        "formal_deterministic_D_s22_b0p05_w0p05"
+      ],
+      "source_chunks": 196,
+      "source_unique_13grams": 97539,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "b585a780b25e383a96cb6039c3301f9ab0d3047b6d287b5cc542d96ca745f3be"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_nll_stratified_seed22.pt",
+      "role": "actual_selected_replay_bank",
+      "used_by_run_ids": [
+        "formal_deterministic_M_s22_b0p05_w0p05",
+        "formal_deterministic_M_s22_b0p01_w0p05",
+        "formal_deterministic_M_s22_b0p1_w0p05"
+      ],
+      "source_chunks": 196,
+      "source_unique_13grams": 97076,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "95bca391e5a4b928e051624669940e97523d6d372f56c6ae8bd32a2b05f32356"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_cluster_seed22.pt",
+      "role": "actual_selected_replay_bank",
+      "used_by_run_ids": [
+        "formal_deterministic_C_s22_b0p05_w0p05"
+      ],
+      "source_chunks": 196,
+      "source_unique_13grams": 97453,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "23051038f93b035f4a28de78e779447b90e63b109cd33660e454dd16818b2f27"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/banks/c4_random_seed33.pt",
+      "role": "actual_selected_replay_bank",
+      "used_by_run_ids": [
+        "formal_deterministic_B1_s33_b0p05_w0p05",
+        "formal_deterministic_B2_s33_b0p05_w0p05"
+      ],
+      "source_chunks": 196,
+      "source_unique_13grams": 97414,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "7d395d5c506277fd5ebd33e3067baba6fe82eab5064e0744c3eb0a1b187147c3"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_random_seed33.pt",
+      "role": "actual_selected_replay_bank",
+      "used_by_run_ids": [
+        "formal_deterministic_B3_s33_b0p05_w0p05",
+        "formal_deterministic_B4_s33_b0p05_w0p05",
+        "formal_deterministic_B4_s33_b0p01_w0p05",
+        "formal_deterministic_B4_s33_b0p1_w0p05"
+      ],
+      "source_chunks": 196,
+      "source_unique_13grams": 97590,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "558b6e00b0c6d2a6f0531cddf06aca06b0a187fc8a88a26cd1fbb4f2e483b13c"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_dedup_random_seed33.pt",
+      "role": "actual_selected_replay_bank",
+      "used_by_run_ids": [
+        "formal_deterministic_D_s33_b0p05_w0p05"
+      ],
+      "source_chunks": 196,
+      "source_unique_13grams": 97590,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "e19e9647564da50f6ec9f75d97c6e6e43835c6be171ed50df01e10ec7a55f969"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_nll_stratified_seed33.pt",
+      "role": "actual_selected_replay_bank",
+      "used_by_run_ids": [
+        "formal_deterministic_M_s33_b0p05_w0p05",
+        "formal_deterministic_M_s33_b0p01_w0p05",
+        "formal_deterministic_M_s33_b0p1_w0p05"
+      ],
+      "source_chunks": 196,
+      "source_unique_13grams": 97442,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "bd37c3f067194d89e373bdba113fb6e2c49bc99a1c14b5686b7ca3183fedea6e"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_cluster_seed33.pt",
+      "role": "actual_selected_replay_bank",
+      "used_by_run_ids": [
+        "formal_deterministic_C_s33_b0p05_w0p05"
+      ],
+      "source_chunks": 196,
+      "source_unique_13grams": 96863,
+      "by_task": {
+        "hellaswag": {
+          "items": 10042,
+          "choices": 40168,
+          "choices_shorter_than_13_inapplicable": 0,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        },
+        "piqa": {
+          "items": 1838,
+          "choices": 3676,
+          "choices_shorter_than_13_inapplicable": 184,
+          "confirmed_flagged_choices": 0,
+          "confirmed_flagged_items": 0,
+          "flagged_item_ids": [],
+          "hashed_fraction_max": 0.0
+        }
+      },
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": [],
+      "sha256": "e87f747cdf637a65b0c45a77bea47421e67c50d3cc1f9529e2753c3d09cfe3b6"
+    }
+  ],
+  "actual_condition_target_plus_replay_unions": [
+    {
+      "source_paths": [
+        "/tmp/grad-research-20261106/worktree/artifacts/data/finemath_train.pt"
+      ],
+      "actual_run_ids": [
+        "formal_deterministic_B0_s11_b0_w0",
+        "formal_deterministic_B0_s22_b0_w0",
+        "formal_deterministic_B0_s33_b0_w0"
+      ],
+      "hashed_fraction_max": 0.0,
+      "hashed_flagged_choices": 0,
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": []
+    },
+    {
+      "source_paths": [
+        "/tmp/grad-research-20261106/worktree/artifacts/banks/c4_random_seed11.pt",
+        "/tmp/grad-research-20261106/worktree/artifacts/data/finemath_train.pt"
+      ],
+      "actual_run_ids": [
+        "formal_deterministic_B1_s11_b0p05_w0p05",
+        "formal_deterministic_B2_s11_b0p05_w0p05"
+      ],
+      "hashed_fraction_max": 0.0,
+      "hashed_flagged_choices": 0,
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": []
+    },
+    {
+      "source_paths": [
+        "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_random_seed11.pt",
+        "/tmp/grad-research-20261106/worktree/artifacts/data/finemath_train.pt"
+      ],
+      "actual_run_ids": [
+        "formal_deterministic_B3_s11_b0p05_w0p05",
+        "formal_deterministic_B4_s11_b0p01_w0p05",
+        "formal_deterministic_B4_s11_b0p05_w0p05",
+        "formal_deterministic_B4_s11_b0p1_w0p05"
+      ],
+      "hashed_fraction_max": 0.0,
+      "hashed_flagged_choices": 0,
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": []
+    },
+    {
+      "source_paths": [
+        "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_dedup_random_seed11.pt",
+        "/tmp/grad-research-20261106/worktree/artifacts/data/finemath_train.pt"
+      ],
+      "actual_run_ids": [
+        "formal_deterministic_D_s11_b0p05_w0p05"
+      ],
+      "hashed_fraction_max": 0.0,
+      "hashed_flagged_choices": 0,
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": []
+    },
+    {
+      "source_paths": [
+        "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_nll_stratified_seed11.pt",
+        "/tmp/grad-research-20261106/worktree/artifacts/data/finemath_train.pt"
+      ],
+      "actual_run_ids": [
+        "formal_deterministic_M_s11_b0p01_w0p05",
+        "formal_deterministic_M_s11_b0p05_w0p05",
+        "formal_deterministic_M_s11_b0p1_w0p05"
+      ],
+      "hashed_fraction_max": 0.0,
+      "hashed_flagged_choices": 0,
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": []
+    },
+    {
+      "source_paths": [
+        "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_cluster_seed11.pt",
+        "/tmp/grad-research-20261106/worktree/artifacts/data/finemath_train.pt"
+      ],
+      "actual_run_ids": [
+        "formal_deterministic_C_s11_b0p05_w0p05"
+      ],
+      "hashed_fraction_max": 0.0,
+      "hashed_flagged_choices": 0,
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": []
+    },
+    {
+      "source_paths": [
+        "/tmp/grad-research-20261106/worktree/artifacts/banks/c4_random_seed22.pt",
+        "/tmp/grad-research-20261106/worktree/artifacts/data/finemath_train.pt"
+      ],
+      "actual_run_ids": [
+        "formal_deterministic_B1_s22_b0p05_w0p05",
+        "formal_deterministic_B2_s22_b0p05_w0p05"
+      ],
+      "hashed_fraction_max": 0.0,
+      "hashed_flagged_choices": 0,
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": []
+    },
+    {
+      "source_paths": [
+        "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_random_seed22.pt",
+        "/tmp/grad-research-20261106/worktree/artifacts/data/finemath_train.pt"
+      ],
+      "actual_run_ids": [
+        "formal_deterministic_B3_s22_b0p05_w0p05",
+        "formal_deterministic_B4_s22_b0p01_w0p05",
+        "formal_deterministic_B4_s22_b0p05_w0p05",
+        "formal_deterministic_B4_s22_b0p1_w0p05"
+      ],
+      "hashed_fraction_max": 0.0,
+      "hashed_flagged_choices": 0,
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": []
+    },
+    {
+      "source_paths": [
+        "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_dedup_random_seed22.pt",
+        "/tmp/grad-research-20261106/worktree/artifacts/data/finemath_train.pt"
+      ],
+      "actual_run_ids": [
+        "formal_deterministic_D_s22_b0p05_w0p05"
+      ],
+      "hashed_fraction_max": 0.0,
+      "hashed_flagged_choices": 0,
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": []
+    },
+    {
+      "source_paths": [
+        "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_nll_stratified_seed22.pt",
+        "/tmp/grad-research-20261106/worktree/artifacts/data/finemath_train.pt"
+      ],
+      "actual_run_ids": [
+        "formal_deterministic_M_s22_b0p01_w0p05",
+        "formal_deterministic_M_s22_b0p05_w0p05",
+        "formal_deterministic_M_s22_b0p1_w0p05"
+      ],
+      "hashed_fraction_max": 0.0,
+      "hashed_flagged_choices": 0,
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": []
+    },
+    {
+      "source_paths": [
+        "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_cluster_seed22.pt",
+        "/tmp/grad-research-20261106/worktree/artifacts/data/finemath_train.pt"
+      ],
+      "actual_run_ids": [
+        "formal_deterministic_C_s22_b0p05_w0p05"
+      ],
+      "hashed_fraction_max": 0.0,
+      "hashed_flagged_choices": 0,
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": []
+    },
+    {
+      "source_paths": [
+        "/tmp/grad-research-20261106/worktree/artifacts/banks/c4_random_seed33.pt",
+        "/tmp/grad-research-20261106/worktree/artifacts/data/finemath_train.pt"
+      ],
+      "actual_run_ids": [
+        "formal_deterministic_B1_s33_b0p05_w0p05",
+        "formal_deterministic_B2_s33_b0p05_w0p05"
+      ],
+      "hashed_fraction_max": 0.0,
+      "hashed_flagged_choices": 0,
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": []
+    },
+    {
+      "source_paths": [
+        "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_random_seed33.pt",
+        "/tmp/grad-research-20261106/worktree/artifacts/data/finemath_train.pt"
+      ],
+      "actual_run_ids": [
+        "formal_deterministic_B3_s33_b0p05_w0p05",
+        "formal_deterministic_B4_s33_b0p01_w0p05",
+        "formal_deterministic_B4_s33_b0p05_w0p05",
+        "formal_deterministic_B4_s33_b0p1_w0p05"
+      ],
+      "hashed_fraction_max": 0.0,
+      "hashed_flagged_choices": 0,
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": []
+    },
+    {
+      "source_paths": [
+        "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_dedup_random_seed33.pt",
+        "/tmp/grad-research-20261106/worktree/artifacts/data/finemath_train.pt"
+      ],
+      "actual_run_ids": [
+        "formal_deterministic_D_s33_b0p05_w0p05"
+      ],
+      "hashed_fraction_max": 0.0,
+      "hashed_flagged_choices": 0,
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": []
+    },
+    {
+      "source_paths": [
+        "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_nll_stratified_seed33.pt",
+        "/tmp/grad-research-20261106/worktree/artifacts/data/finemath_train.pt"
+      ],
+      "actual_run_ids": [
+        "formal_deterministic_M_s33_b0p01_w0p05",
+        "formal_deterministic_M_s33_b0p05_w0p05",
+        "formal_deterministic_M_s33_b0p1_w0p05"
+      ],
+      "hashed_fraction_max": 0.0,
+      "hashed_flagged_choices": 0,
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": []
+    },
+    {
+      "source_paths": [
+        "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_cluster_seed33.pt",
+        "/tmp/grad-research-20261106/worktree/artifacts/data/finemath_train.pt"
+      ],
+      "actual_run_ids": [
+        "formal_deterministic_C_s33_b0p05_w0p05"
+      ],
+      "hashed_fraction_max": 0.0,
+      "hashed_flagged_choices": 0,
+      "confirmed_flagged_choices": [],
+      "confirmed_13gram_source_witnesses": [],
+      "hash_collision_rejections": []
+    }
+  ],
+  "input_files_sha256": {
+    "/tmp/grad-research-20261106/worktree/artifacts/behavioral/data_manifest.json": "5c91890603f5149fb2f2f62b29edd16ee2044d3602d75265f819f35a501b7d0f",
+    "/tmp/grad-research-20261106/worktree/artifacts/behavioral/piqa_validation.jsonl": "1c651cd30ba15f579a2bfddfe6c92b2bdc20a01c00921693c50a620993119301",
+    "/tmp/grad-research-20261106/worktree/artifacts/behavioral/hellaswag_validation.jsonl": "948f15fb1733acf005121510a504272a58133ee1d4a9511870176e6ff6f50d75",
+    "/tmp/grad-research-20261106/worktree/configs/formal_deterministic_registry.json": "284fa9dd939dab75195afe3f968e0eb6411501b26b8a5caa1962b4ee5e9f372b",
+    "/tmp/grad-research-20261106/worktree/artifacts/data/finemath_train.pt": "af49c1455484f3471bf1a3569601373e2e84795849b9f59291b96ff2d637b39f",
+    "/tmp/grad-research-20261106/worktree/artifacts/banks/c4_random_seed11.pt": "71d229c9203ba0a5579997148e1a06ab4f7d28f41bf40c63bee4513b3eda5be7",
+    "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_random_seed11.pt": "a1f0ddc372ad23d24ae0f628910881f77b22b8cb62be02f94c915c23d9155118",
+    "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_dedup_random_seed11.pt": "2b4762d5e7a9b5a5b8bc1cdb2afdbc8aa1b4a0a329c0b0a94e7d30457b60b90e",
+    "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_nll_stratified_seed11.pt": "0bcbb43d37b343c4bf62c3553c80a8d8fcfcb7ae95d1e035011fcacbfc300cfe",
+    "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_cluster_seed11.pt": "2bda5b5772abcda2c92bacb25a67c5f9fc88caf683b5554c49c81de63d814746",
+    "/tmp/grad-research-20261106/worktree/artifacts/banks/c4_random_seed22.pt": "e0db1c270cf75f5b0ff19fde245d43d4fadd72fdf8f97bae6e824a9389ec0777",
+    "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_random_seed22.pt": "14c3827bad0687943d61d024768b018997360d481715601b35c385479d8dae82",
+    "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_dedup_random_seed22.pt": "b585a780b25e383a96cb6039c3301f9ab0d3047b6d287b5cc542d96ca745f3be",
+    "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_nll_stratified_seed22.pt": "95bca391e5a4b928e051624669940e97523d6d372f56c6ae8bd32a2b05f32356",
+    "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_cluster_seed22.pt": "23051038f93b035f4a28de78e779447b90e63b109cd33660e454dd16818b2f27",
+    "/tmp/grad-research-20261106/worktree/artifacts/banks/c4_random_seed33.pt": "7d395d5c506277fd5ebd33e3067baba6fe82eab5064e0744c3eb0a1b187147c3",
+    "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_random_seed33.pt": "558b6e00b0c6d2a6f0531cddf06aca06b0a187fc8a88a26cd1fbb4f2e483b13c",
+    "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_dedup_random_seed33.pt": "e19e9647564da50f6ec9f75d97c6e6e43835c6be171ed50df01e10ec7a55f969",
+    "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_nll_stratified_seed33.pt": "bd37c3f067194d89e373bdba113fb6e2c49bc99a1c14b5686b7ca3183fedea6e",
+    "/tmp/grad-research-20261106/worktree/artifacts/banks/generated_cluster_seed33.pt": "e87f747cdf637a65b0c45a77bea47421e67c50d3cc1f9529e2753c3d09cfe3b6"
+  },
+  "tokenizer_files_sha256": {
+    "tokenizer.json": "c24618a1b3e6a38167beff1c72cffd126c3a66254347304b50547d12c5f25624",
+    "tokenizer_config.json": "70e38394e494931c6f773ba41e19460dd4436526b852207367f04341b4066d3f",
+    "special_tokens_map.json": "6f50ab5a5a509a1c309d6171f339b196a900dc9c99ad0408ff23bb615fdae7ad"
+  },
+  "source_files_sha256": {
+    "scripts/audit_behavioral_training_overlap.py": "6b110040906d87aa15592b7baaccab929b516176e16b5520a25429f83c85bc3d",
+    "scripts/audit_data_ngrams.py": "47ffc90a8116a35bea817ef16ba9691614696ac97dfa4df15d55d437bedf9a5c",
+    "src/replay_study/tasks.py": "c631b1c81386193b645b59a3a82eb73dfacc6d9d1302b95e997f0de4afc47a51"
+  },
+  "seconds": 21.6536706648767,
+  "gpu_used": false,
+  "model_scores_read": false,
+  "frozen_inputs_modified": false,
+  "interpretation": "Lexical overlap diagnostic only. No automatic task exclusion. Candidate pools not selected into training are not inputs here. Common contexts can trigger multiple choices but are counted once per item. Zero flags cannot exclude semantic paraphrases, source-boundary overlaps or historical Pile pretraining contamination."
+}

@@ -1,0 +1,960 @@
+{
+  "schema_version": 1,
+  "scope_path": "/tmp/grad-research-20261106/worktree/configs/nll_scope_execution_freeze_v1.json",
+  "source_sha256": {
+    "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_nll_manifest.json": "d1502bcaff5cdcd75d984a4b8776f1cb4027b596f474835bfe9ed18875d9fd18",
+    "/tmp/grad-research-20261106/worktree/scripts/freeze_nll_scope.py": "6a014c4393fc7dc6ef42d5a5fef9ed23656467c2ccf226e5ed837820fea75451",
+    "/tmp/grad-research-20261106/worktree/configs/supplemental_v1_A_registry.json": "0f43c49530b79d09c18113e8c50239b640e99bbbdcb26b890e805d71cf291310",
+    "/tmp/grad-research-20261106/worktree/configs/supplemental_v1/activated/B_conditional_bank_variance/executor_registry.json": "841c8f86a6b6bc6c098ca5f3540b1ac3c758f6cc5cb0d48fc5f4083759b517cc",
+    "/tmp/grad-research-20261106/worktree/configs/formal_deterministic/formal_deterministic_B4_s11_b0p05_w0p05.json": "a4f8622c5ca6e65bd09adf28e24a175ab65165a6cc6aee567386ca7f8b831c9e",
+    "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s11_b0p05_w0p05_summary.json": "600892fa82d0a73b92e31c7f032792e20a22add11ef08722306527c8e4034bdf",
+    "/tmp/grad-research-20261106/worktree/configs/formal_deterministic/formal_deterministic_B4_s22_b0p05_w0p05.json": "72274eb106907958b04ee2434c07c4c7de42092c26c59f8a7d5e3103f3b2dd66",
+    "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s22_b0p05_w0p05_summary.json": "32a28e2daf25f05a28a468f81a590b27d00edf6ea6490b1716cb43c7ddffded3",
+    "/tmp/grad-research-20261106/worktree/configs/formal_deterministic/formal_deterministic_B4_s33_b0p05_w0p05.json": "fea1d37dd6f38b94807ade1d10aa0c927f499de9f770572fc4707e0649c73f5c",
+    "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s33_b0p05_w0p05_summary.json": "ca32af13fb9ac7960fa07fdc135442d2f514d53de142af50f27207c840f1a73d",
+    "/tmp/grad-research-20261106/worktree/configs/formal_deterministic/formal_deterministic_B4_s11_b0p01_w0p05.json": "d828394748d89c6817047b339581ffa55326b3076db664d87eccdd1030dd3da5",
+    "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s11_b0p01_w0p05_summary.json": "61dd48fc92dc640b18dfc6ceea548d0ca59fe3e3c433f86a5be5cb798b1f9998",
+    "/tmp/grad-research-20261106/worktree/configs/formal_deterministic/formal_deterministic_B4_s22_b0p01_w0p05.json": "280745de5d80dd19bd6977c770a898455c2b936f110e02c1edfbb30c4f8d6341",
+    "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s22_b0p01_w0p05_summary.json": "c11a921419ace1edd57e0d6ce1b4d10f7d6982c8fe0bc99017a1d89932f5d03a",
+    "/tmp/grad-research-20261106/worktree/configs/formal_deterministic/formal_deterministic_B4_s33_b0p01_w0p05.json": "8eb710814a86935b1682ba73a111c13889acf59c07ddba3e20a6229f7fd24f94",
+    "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s33_b0p01_w0p05_summary.json": "408fed44794dde087424327ccc677cfd0fa1e7c1eb00e38952a33cbe68415919",
+    "/tmp/grad-research-20261106/worktree/configs/formal_deterministic/formal_deterministic_B4_s11_b0p1_w0p05.json": "a01be76e178bd4568d2f499ec4b0c91bd7902a1392a125fc681e5634a11a4bae",
+    "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s11_b0p1_w0p05_summary.json": "a528eeb08bc2f48fde105ff835263d60bfaa6d0ee5b2619d722ef10dd249f502",
+    "/tmp/grad-research-20261106/worktree/configs/formal_deterministic/formal_deterministic_B4_s22_b0p1_w0p05.json": "d7776a97b884cc0321b83d26361496ddc783ed82e58b1124a571c1b5db105612",
+    "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s22_b0p1_w0p05_summary.json": "e1b2114505ceff830fb134f55b35a285ca3fa95ed87f595f12f532e4882ee5a0",
+    "/tmp/grad-research-20261106/worktree/configs/formal_deterministic/formal_deterministic_B4_s33_b0p1_w0p05.json": "b86ba6b9e9c954d715c70667700e128c49d4e91928612d960d265c777f656c53",
+    "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s33_b0p1_w0p05_summary.json": "84aed885a3abc71baf38d80ace16f1b633524bece93bf9cf47cd5a516cf34f1f",
+    "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/finemath_test.json": "63b07f91703e0ab084a61e4b8ffd5a2ee8b719f0ed39ff059a94aca33eadb05c",
+    "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/finemath_test.pt": "3fdea241e0bf812e772ab1789ec1e9e722fdd6a18efdf6850e5aeb18cfac63f3",
+    "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/c4_test.json": "272e023f73a35b3cf0324b995ce8dcd0715f92bf6a9da39eacf8eb8745e6c8ce",
+    "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/c4_test.pt": "95457714af354880c92716edd99b878110e9635d70f3d0d2435dc75e9a755e61",
+    "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/wikitext103_test.json": "d9797bc38cd4b1a2366a51522cc567e432807f6aa54163352f9a015537c24a5b",
+    "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/wikitext103_test.pt": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f",
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_lr_registry.json": "2ff7788ae3da97dec62dde24910706cfb7d8d5fd1198776eea95340664c985f9",
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_lr/extended_v2_pythia_410m_m64_lr_B0_s101_lr1em05.json": "90e94e833366abc1f18b7355a762a8485eb793b88474fd6758b0b710fdb7e411",
+    "/tmp/grad-research-20261106/worktree/results/extended/pythia-410m/extended_v2_pythia_410m_m64_lr_B0_s101_lr1em05_summary.json": "d0dc508fd55472424ba96a4f141d0a633df5be38192108813073e26642c9ee33",
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_lr/extended_v2_pythia_410m_m64_lr_B0_s101_lr3em05.json": "9b1ac86fff47c81cda4079bd615fd793cb3254f420b41b876538b7ac326cdf6f",
+    "/tmp/grad-research-20261106/worktree/results/extended/pythia-410m/extended_v2_pythia_410m_m64_lr_B0_s101_lr3em05_summary.json": "642dbffd8da75d005cd1735ddd8adb0a8b1bf98a35f89d9fce81bc6233c4f1e5",
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_lr/extended_v2_pythia_410m_m64_lr_B0_s101_lr0p0001.json": "88f31bb42aa2175d479b9dd31bf5da00ee9201545884301a84a4522547012f13",
+    "/tmp/grad-research-20261106/worktree/results/extended/pythia-410m/extended_v2_pythia_410m_m64_lr_B0_s101_lr0p0001_summary.json": "657c726a7b684acef83cd0d8f0ec319b1b9681ac843859d65d9efdee2218c176",
+    "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_test.json": "b6f64ffb6695e9e850b40927a0d9cfd33b11ad95088cbc46972251e3775a7649",
+    "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_test.pt": "f19f802f985d929ecb3a623e3255785159b1fcb895c8f439bc037a7012d29718",
+    "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_test.json": "e105d85150041c37670523724f5106c3a864afb44e89b6fd3cb7530b251d7e39",
+    "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_test.pt": "e81744326b66513afdfc02cc3b74b9c92908cd2359f13d0eac2b1a99bf516747",
+    "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_test.json": "4b8a5bee339a6c0cc1412c4ba5b381e4cd521b2e06c68d84db61f6379e02660f",
+    "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_test.pt": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f",
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_lr_registry.json": "0774b9e6f8c2f43f553baf7582fbc04a8350fdd7b9737cbc2b87fa221a4c1080",
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_lr/extended_v2_pythia_1b_m32_lr_B0_s101_lr1em05.json": "380e86b3b8d47eced37c10785d7628d40d5818b71c89b7bfb20f4e6b52e8716c",
+    "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_lr_B0_s101_lr1em05_summary.json": "d42840803c67f57abb6f490ead252d376d925c90f80a8d24eb537c33f7027442",
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_lr/extended_v2_pythia_1b_m32_lr_B0_s101_lr3em05.json": "7cc277128de891d7dbd3ae854b3ce567125163489a5dcd4f860d44974bfd1eee",
+    "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_lr_B0_s101_lr3em05_summary.json": "ebfc57a32ca90b7b65d6aba9639604a6e13a1c65dfa0859a4723ca613dcfd04d",
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_lr/extended_v2_pythia_1b_m32_lr_B0_s101_lr0p0001.json": "e1d91b2a8bb276c8bdf06a86761c28b9c0999ad8414368c251d7eb9a4f6cb38d",
+    "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_lr_B0_s101_lr0p0001_summary.json": "77b5f43cc89aef201716fce5afe32e206172e4ae209bccff3cff75de612e03ca",
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_lr_registry.json": "4c0f4b9567e569b671b9f7bb3b88f859da1f9fd4eb9b00d7e049cbe7432e7703",
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_lr/extended_v2_pythia_2p8b_m8_lr_B0_s101_lr1em05.json": "c31fe744bbf94f087f9bc5efdd45198e74e36f52a236f9fb11847aa2d21c9b35",
+    "/tmp/grad-research-20261106/worktree/results/extended/pythia-2.8b/extended_v2_pythia_2p8b_m8_lr_B0_s101_lr1em05_summary.json": "7ae91d8be2da829269bbcc6982347f1edef6e129eab17c65f69e656c6398ab26",
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_lr/extended_v2_pythia_2p8b_m8_lr_B0_s101_lr3em05.json": "9c87d455591f7d6fdd808d136e15941c56119709be28466a7756c6ddd283d2c3",
+    "/tmp/grad-research-20261106/worktree/results/extended/pythia-2.8b/extended_v2_pythia_2p8b_m8_lr_B0_s101_lr3em05_summary.json": "6d8c054bdbb78cf48fb2a1f897681f195ed8046749fef011659b769f18e07dda",
+    "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_lr/extended_v2_pythia_2p8b_m8_lr_B0_s101_lr0p0001.json": "a19083b635bb097c07633ef4ee1af95b081dfe96c4b50901ea3792c1afaffed8",
+    "/tmp/grad-research-20261106/worktree/results/extended/pythia-2.8b/extended_v2_pythia_2p8b_m8_lr_B0_s101_lr0p0001_summary.json": "98143c83d86e3867a2d3f00805ed40aeaa2291fa0a1da6d8a1b287d4f83c37c9"
+  },
+  "logical_endpoints": 384,
+  "unique_adapted_forward_jobs_before_further_proofs": 360,
+  "planned_initial_jobs": 4,
+  "all_NLL_inference_jobs_before_further_proofs": 364,
+  "groups": [
+    {
+      "model": "pythia-410m",
+      "data_family": "main_v3",
+      "inference_policy": {
+        "model": "/tmp/grad-research-20261106/models/pythia-410m-final",
+        "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+        "batch_size": 16,
+        "max_length": 512,
+        "device": "cuda:0",
+        "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+        "cuda_version": "12.4",
+        "gpu_name": "NVIDIA H100 80GB HBM3",
+        "precision": "bf16",
+        "device_type": "cuda",
+        "effective_precision": "cuda_bfloat16_autocast",
+        "attention_implementation": "sdpa",
+        "attention_backend": "auto",
+        "deterministic_algorithms": true,
+        "deterministic_warn_only": false,
+        "allow_tf32_matmul": true,
+        "allow_tf32_cudnn": true,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "flash_sdp_enabled": true,
+        "mem_efficient_sdp_enabled": true,
+        "math_sdp_enabled": true,
+        "cudnn_sdp_enabled": true,
+        "model_weight_dtype": "torch.float32"
+      },
+      "corpora": {
+        "target": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/finemath_test.pt",
+          "sha256": "3fdea241e0bf812e772ab1789ec1e9e722fdd6a18efdf6850e5aeb18cfac63f3",
+          "chunks": 1024,
+          "prediction_tokens": 523264
+        },
+        "c4": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/c4_test.pt",
+          "sha256": "95457714af354880c92716edd99b878110e9635d70f3d0d2435dc75e9a755e61",
+          "chunks": 1024,
+          "prediction_tokens": 523264
+        },
+        "wikitext": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/wikitext103_test.pt",
+          "sha256": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f",
+          "chunks": 529,
+          "prediction_tokens": 270319
+        }
+      },
+      "adapted_inferences_before_further_equivalence_proofs": 234,
+      "initial_inferences": 1,
+      "prediction_tokens_per_inference": 1316847,
+      "student_prediction_tokens": 309459045,
+      "teacher_additional_prediction_tokens": 308142198,
+      "initial_teacher_logits_reused": true,
+      "timing_proxy": {
+        "source": "completed validation only; no NLL test results read",
+        "samples": [
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s11_b0p05_w0p05_summary.json",
+            "step": 50,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.97383739799261,
+            "teacher_forward_seconds_nested": 4.439322368621827,
+            "seconds_per_prediction_token": 1.4799042350077967e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s11_b0p05_w0p05_summary.json",
+            "step": 100,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.98205104097724,
+            "teacher_forward_seconds_nested": 4.440070344924926,
+            "seconds_per_prediction_token": 1.4805448753159654e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s11_b0p05_w0p05_summary.json",
+            "step": 150,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.993923533707857,
+            "teacher_forward_seconds_nested": 4.454345441818238,
+            "seconds_per_prediction_token": 1.4814708952824905e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s11_b0p05_w0p05_summary.json",
+            "step": 200,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.990945540368557,
+            "teacher_forward_seconds_nested": 4.446332290649413,
+            "seconds_per_prediction_token": 1.4812386204472944e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s11_b0p05_w0p05_summary.json",
+            "step": 250,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 19.012993212789297,
+            "teacher_forward_seconds_nested": 4.4693624267578125,
+            "seconds_per_prediction_token": 1.4829582748905737e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s11_b0p05_w0p05_summary.json",
+            "step": 300,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 19.015493642538786,
+            "teacher_forward_seconds_nested": 4.463471040725707,
+            "seconds_per_prediction_token": 1.4831533011521565e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s11_b0p05_w0p05_summary.json",
+            "step": 306,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.98381558433175,
+            "teacher_forward_seconds_nested": 4.448859031677247,
+            "seconds_per_prediction_token": 1.4806825045750562e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s22_b0p05_w0p05_summary.json",
+            "step": 50,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 19.126291662454605,
+            "teacher_forward_seconds_nested": 4.514418493270873,
+            "seconds_per_prediction_token": 1.4917952250531828e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s22_b0p05_w0p05_summary.json",
+            "step": 100,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.913554839789867,
+            "teacher_forward_seconds_nested": 4.416343013763429,
+            "seconds_per_prediction_token": 1.4752023704713807e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s22_b0p05_w0p05_summary.json",
+            "step": 150,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.905130676925182,
+            "teacher_forward_seconds_nested": 4.423901453018189,
+            "seconds_per_prediction_token": 1.4745453102237178e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s22_b0p05_w0p05_summary.json",
+            "step": 200,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.979256730526686,
+            "teacher_forward_seconds_nested": 4.448405345916748,
+            "seconds_per_prediction_token": 1.4803269272128506e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s22_b0p05_w0p05_summary.json",
+            "step": 250,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.927438244223595,
+            "teacher_forward_seconds_nested": 4.424357181549072,
+            "seconds_per_prediction_token": 1.4762852357129671e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s22_b0p05_w0p05_summary.json",
+            "step": 300,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.963162887841463,
+            "teacher_forward_seconds_nested": 4.440277524948121,
+            "seconds_per_prediction_token": 1.4790716542046647e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s22_b0p05_w0p05_summary.json",
+            "step": 306,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.92873203754425,
+            "teacher_forward_seconds_nested": 4.437388031005859,
+            "seconds_per_prediction_token": 1.4763861478360291e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s33_b0p05_w0p05_summary.json",
+            "step": 50,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 19.037481486797333,
+            "teacher_forward_seconds_nested": 4.484347492218016,
+            "seconds_per_prediction_token": 1.4848682891724689e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s33_b0p05_w0p05_summary.json",
+            "step": 100,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 19.004605926573277,
+            "teacher_forward_seconds_nested": 4.454472702026367,
+            "seconds_per_prediction_token": 1.4823040909144518e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s33_b0p05_w0p05_summary.json",
+            "step": 150,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 19.064881283789873,
+            "teacher_forward_seconds_nested": 4.484657323837281,
+            "seconds_per_prediction_token": 1.487005393794853e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s33_b0p05_w0p05_summary.json",
+            "step": 200,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 19.006282970309258,
+            "teacher_forward_seconds_nested": 4.451789058685302,
+            "seconds_per_prediction_token": 1.4824348954573132e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s33_b0p05_w0p05_summary.json",
+            "step": 250,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 19.0146492049098,
+            "teacher_forward_seconds_nested": 4.460363006591796,
+            "seconds_per_prediction_token": 1.483087437468542e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s33_b0p05_w0p05_summary.json",
+            "step": 300,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.992653224617243,
+            "teacher_forward_seconds_nested": 4.450168994903565,
+            "seconds_per_prediction_token": 1.4813718148611959e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s33_b0p05_w0p05_summary.json",
+            "step": 306,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 19.00742679834366,
+            "teacher_forward_seconds_nested": 4.456794658660889,
+            "seconds_per_prediction_token": 1.4825241107234043e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s11_b0p01_w0p05_summary.json",
+            "step": 50,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 19.05722589790821,
+            "teacher_forward_seconds_nested": 4.485149505615235,
+            "seconds_per_prediction_token": 1.4864082959200663e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s11_b0p01_w0p05_summary.json",
+            "step": 100,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 19.03170793130994,
+            "teacher_forward_seconds_nested": 4.469948486328125,
+            "seconds_per_prediction_token": 1.4844179686053838e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s11_b0p01_w0p05_summary.json",
+            "step": 150,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.995259672403336,
+            "teacher_forward_seconds_nested": 4.447253570556641,
+            "seconds_per_prediction_token": 1.4815751102218576e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s11_b0p01_w0p05_summary.json",
+            "step": 200,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 19.003733355551958,
+            "teacher_forward_seconds_nested": 4.447744821548462,
+            "seconds_per_prediction_token": 1.4822360329079079e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s11_b0p01_w0p05_summary.json",
+            "step": 250,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 19.01177627593279,
+            "teacher_forward_seconds_nested": 4.457675477981568,
+            "seconds_per_prediction_token": 1.482863357348597e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s11_b0p01_w0p05_summary.json",
+            "step": 300,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.994338642805815,
+            "teacher_forward_seconds_nested": 4.45037696647644,
+            "seconds_per_prediction_token": 1.4815032725870478e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s11_b0p01_w0p05_summary.json",
+            "step": 306,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 19.001253060996532,
+            "teacher_forward_seconds_nested": 4.453058719635011,
+            "seconds_per_prediction_token": 1.4820425771330087e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s22_b0p01_w0p05_summary.json",
+            "step": 50,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.895592734217644,
+            "teacher_forward_seconds_nested": 4.428383443832397,
+            "seconds_per_prediction_token": 1.4738013783816728e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s22_b0p01_w0p05_summary.json",
+            "step": 100,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.917807586491108,
+            "teacher_forward_seconds_nested": 4.444853094100953,
+            "seconds_per_prediction_token": 1.4755340723681328e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s22_b0p01_w0p05_summary.json",
+            "step": 150,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.892029657959938,
+            "teacher_forward_seconds_nested": 4.42318761253357,
+            "seconds_per_prediction_token": 1.4735234687773672e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s22_b0p01_w0p05_summary.json",
+            "step": 200,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.886738486588,
+            "teacher_forward_seconds_nested": 4.422818086624145,
+            "seconds_per_prediction_token": 1.4731107727709015e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s22_b0p01_w0p05_summary.json",
+            "step": 250,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.90252870693803,
+            "teacher_forward_seconds_nested": 4.4340846042633055,
+            "seconds_per_prediction_token": 1.4743423641183737e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s22_b0p01_w0p05_summary.json",
+            "step": 300,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.920985393226147,
+            "teacher_forward_seconds_nested": 4.438156131744385,
+            "seconds_per_prediction_token": 1.4757819320681278e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s22_b0p01_w0p05_summary.json",
+            "step": 306,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.8768698759377,
+            "teacher_forward_seconds_nested": 4.420340867996217,
+            "seconds_per_prediction_token": 1.4723410497892674e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s33_b0p01_w0p05_summary.json",
+            "step": 50,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 19.011276949197054,
+            "teacher_forward_seconds_nested": 4.456649471282958,
+            "seconds_per_prediction_token": 1.4828244113127811e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s33_b0p01_w0p05_summary.json",
+            "step": 100,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 19.006248708814383,
+            "teacher_forward_seconds_nested": 4.45539715385437,
+            "seconds_per_prediction_token": 1.4824322231601759e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s33_b0p01_w0p05_summary.json",
+            "step": 150,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 19.025104839354753,
+            "teacher_forward_seconds_nested": 4.466228620529174,
+            "seconds_per_prediction_token": 1.4839029466019983e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s33_b0p01_w0p05_summary.json",
+            "step": 200,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 19.064690608531237,
+            "teacher_forward_seconds_nested": 4.480289442062378,
+            "seconds_per_prediction_token": 1.4869905216782196e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s33_b0p01_w0p05_summary.json",
+            "step": 250,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 19.069399550557137,
+            "teacher_forward_seconds_nested": 4.485952960968017,
+            "seconds_per_prediction_token": 1.4873578054859365e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s33_b0p01_w0p05_summary.json",
+            "step": 300,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 19.05917790904641,
+            "teacher_forward_seconds_nested": 4.487560995101929,
+            "seconds_per_prediction_token": 1.4865605471220562e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s33_b0p01_w0p05_summary.json",
+            "step": 306,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 19.054720748215914,
+            "teacher_forward_seconds_nested": 4.479503362655639,
+            "seconds_per_prediction_token": 1.4862129015166468e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s11_b0p1_w0p05_summary.json",
+            "step": 50,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 19.04510224983096,
+            "teacher_forward_seconds_nested": 4.470725570678711,
+            "seconds_per_prediction_token": 1.485462686565621e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s11_b0p1_w0p05_summary.json",
+            "step": 100,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 19.056077226996422,
+            "teacher_forward_seconds_nested": 4.478626949310303,
+            "seconds_per_prediction_token": 1.486318702923598e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s11_b0p1_w0p05_summary.json",
+            "step": 150,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 19.02022821456194,
+            "teacher_forward_seconds_nested": 4.461982904434203,
+            "seconds_per_prediction_token": 1.4835225840252538e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s11_b0p1_w0p05_summary.json",
+            "step": 200,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.998181153088808,
+            "teacher_forward_seconds_nested": 4.4522494678497315,
+            "seconds_per_prediction_token": 1.4818029772341144e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s11_b0p1_w0p05_summary.json",
+            "step": 250,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 19.01650458201766,
+            "teacher_forward_seconds_nested": 4.465009536743164,
+            "seconds_per_prediction_token": 1.4832321514966988e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s11_b0p1_w0p05_summary.json",
+            "step": 300,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 19.0743315666914,
+            "teacher_forward_seconds_nested": 4.498033576965331,
+            "seconds_per_prediction_token": 1.4877424884265099e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s11_b0p1_w0p05_summary.json",
+            "step": 306,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 19.05332140251994,
+            "teacher_forward_seconds_nested": 4.478473766326904,
+            "seconds_per_prediction_token": 1.4861037566147342e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s22_b0p1_w0p05_summary.json",
+            "step": 50,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.996458735316992,
+            "teacher_forward_seconds_nested": 4.46106844329834,
+            "seconds_per_prediction_token": 1.481668633648181e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s22_b0p1_w0p05_summary.json",
+            "step": 100,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.973871640861034,
+            "teacher_forward_seconds_nested": 4.441265634536744,
+            "seconds_per_prediction_token": 1.479906905852125e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s22_b0p1_w0p05_summary.json",
+            "step": 150,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.971160862594843,
+            "teacher_forward_seconds_nested": 4.4384837951660145,
+            "seconds_per_prediction_token": 1.4796954730168921e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s22_b0p1_w0p05_summary.json",
+            "step": 200,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.982583168894053,
+            "teacher_forward_seconds_nested": 4.443191804885863,
+            "seconds_per_prediction_token": 1.480586379748682e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s22_b0p1_w0p05_summary.json",
+            "step": 250,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.987841069698334,
+            "teacher_forward_seconds_nested": 4.449213567733765,
+            "seconds_per_prediction_token": 1.4809964807474566e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s22_b0p1_w0p05_summary.json",
+            "step": 300,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.99633852392435,
+            "teacher_forward_seconds_nested": 4.451787652969362,
+            "seconds_per_prediction_token": 1.4816592575085348e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s22_b0p1_w0p05_summary.json",
+            "step": 306,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.97218733653426,
+            "teacher_forward_seconds_nested": 4.439507869720459,
+            "seconds_per_prediction_token": 1.4797755350042596e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s33_b0p1_w0p05_summary.json",
+            "step": 50,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 19.063510909676552,
+            "teacher_forward_seconds_nested": 4.508254648208619,
+            "seconds_per_prediction_token": 1.4868985085922812e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s33_b0p1_w0p05_summary.json",
+            "step": 100,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.969005540013313,
+            "teacher_forward_seconds_nested": 4.456908346176148,
+            "seconds_per_prediction_token": 1.4795273641125462e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s33_b0p1_w0p05_summary.json",
+            "step": 150,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.983073972165585,
+            "teacher_forward_seconds_nested": 4.464958240509033,
+            "seconds_per_prediction_token": 1.480624660979034e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s33_b0p1_w0p05_summary.json",
+            "step": 200,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.962992154061794,
+            "teacher_forward_seconds_nested": 4.455773084640503,
+            "seconds_per_prediction_token": 1.4790583374654996e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s33_b0p1_w0p05_summary.json",
+            "step": 250,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.965125933289528,
+            "teacher_forward_seconds_nested": 4.451745950698853,
+            "seconds_per_prediction_token": 1.4792247660507907e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s33_b0p1_w0p05_summary.json",
+            "step": 300,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.966018803417683,
+            "teacher_forward_seconds_nested": 4.4582158432006835,
+            "seconds_per_prediction_token": 1.4792944073287385e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B4_s33_b0p1_w0p05_summary.json",
+            "step": 306,
+            "valid_prediction_tokens": 1282099,
+            "corpus_wall_seconds_sum": 18.988239012658596,
+            "teacher_forward_seconds_nested": 4.4708794994354255,
+            "seconds_per_prediction_token": 1.481027519143108e-05
+          }
+        ],
+        "median_seconds_per_prediction_token": 1.4815751102218576e-05,
+        "sample_min_max": [
+          1.4723410497892674e-05,
+          1.4917952250531828e-05
+        ],
+        "scorer_corpus_loops_seconds_per_endpoint_proxy": 19.510077391703227,
+        "all_group_corpus_loops_seconds_proxy": 4584.868187050259,
+        "initial_proxy_uses_adapted_validation_cost": true
+      }
+    },
+    {
+      "model": "pythia-410m",
+      "data_family": "extended_v1",
+      "inference_policy": {
+        "model": "/tmp/grad-research-20261106/models/pythia-410m-final",
+        "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+        "batch_size": 16,
+        "max_length": 512,
+        "device": "cuda:0",
+        "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+        "cuda_version": "12.4",
+        "gpu_name": "NVIDIA H100 80GB HBM3",
+        "precision": "bf16",
+        "device_type": "cuda",
+        "effective_precision": "cuda_bfloat16_autocast",
+        "attention_implementation": "sdpa",
+        "attention_backend": "auto",
+        "deterministic_algorithms": true,
+        "deterministic_warn_only": false,
+        "allow_tf32_matmul": true,
+        "allow_tf32_cudnn": true,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "flash_sdp_enabled": true,
+        "mem_efficient_sdp_enabled": true,
+        "math_sdp_enabled": true,
+        "cudnn_sdp_enabled": true,
+        "model_weight_dtype": "torch.float32"
+      },
+      "corpora": {
+        "target": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_test.pt",
+          "sha256": "f19f802f985d929ecb3a623e3255785159b1fcb895c8f439bc037a7012d29718",
+          "chunks": 979,
+          "prediction_tokens": 500269
+        },
+        "c4": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_test.pt",
+          "sha256": "e81744326b66513afdfc02cc3b74b9c92908cd2359f13d0eac2b1a99bf516747",
+          "chunks": 979,
+          "prediction_tokens": 500269
+        },
+        "wikitext": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_test.pt",
+          "sha256": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f",
+          "chunks": 529,
+          "prediction_tokens": 270319
+        }
+      },
+      "adapted_inferences_before_further_equivalence_proofs": 48,
+      "initial_inferences": 1,
+      "prediction_tokens_per_inference": 1270857,
+      "student_prediction_tokens": 62271993,
+      "teacher_additional_prediction_tokens": 61001136,
+      "initial_teacher_logits_reused": true,
+      "timing_proxy": {
+        "source": "completed validation only; no NLL test results read",
+        "samples": [
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/extended/pythia-410m/extended_v2_pythia_410m_m64_lr_B0_s101_lr1em05_summary.json",
+            "step": 62,
+            "valid_prediction_tokens": 1236109,
+            "corpus_wall_seconds_sum": 18.347922708839178,
+            "teacher_forward_seconds_nested": 4.2857248382568365,
+            "seconds_per_prediction_token": 1.4843288665351662e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/extended/pythia-410m/extended_v2_pythia_410m_m64_lr_B0_s101_lr3em05_summary.json",
+            "step": 62,
+            "valid_prediction_tokens": 1236109,
+            "corpus_wall_seconds_sum": 18.51352209597826,
+            "teacher_forward_seconds_nested": 4.346033702850341,
+            "seconds_per_prediction_token": 1.4977256937679655e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/extended/pythia-410m/extended_v2_pythia_410m_m64_lr_B0_s101_lr0p0001_summary.json",
+            "step": 62,
+            "valid_prediction_tokens": 1236109,
+            "corpus_wall_seconds_sum": 18.438262060284615,
+            "teacher_forward_seconds_nested": 4.330197820663452,
+            "seconds_per_prediction_token": 1.4916372310439139e-05
+          }
+        ],
+        "median_seconds_per_prediction_token": 1.4916372310439139e-05,
+        "sample_min_max": [
+          1.4843288665351662e-05,
+          1.4977256937679655e-05
+        ],
+        "scorer_corpus_loops_seconds_per_endpoint_proxy": 18.956576165327753,
+        "all_group_corpus_loops_seconds_proxy": 928.8722321010599,
+        "initial_proxy_uses_adapted_validation_cost": true
+      }
+    },
+    {
+      "model": "pythia-1b",
+      "data_family": "extended_v1",
+      "inference_policy": {
+        "model": "/tmp/grad-research-20261106/models/pythia-1b-final",
+        "revision": "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2",
+        "batch_size": 16,
+        "max_length": 512,
+        "device": "cuda:0",
+        "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+        "cuda_version": "12.4",
+        "gpu_name": "NVIDIA H100 80GB HBM3",
+        "precision": "bf16",
+        "device_type": "cuda",
+        "effective_precision": "cuda_bfloat16_autocast",
+        "attention_implementation": "sdpa",
+        "attention_backend": "auto",
+        "deterministic_algorithms": true,
+        "deterministic_warn_only": false,
+        "allow_tf32_matmul": true,
+        "allow_tf32_cudnn": true,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "flash_sdp_enabled": true,
+        "mem_efficient_sdp_enabled": true,
+        "math_sdp_enabled": true,
+        "cudnn_sdp_enabled": true,
+        "model_weight_dtype": "torch.float32"
+      },
+      "corpora": {
+        "target": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_test.pt",
+          "sha256": "f19f802f985d929ecb3a623e3255785159b1fcb895c8f439bc037a7012d29718",
+          "chunks": 979,
+          "prediction_tokens": 500269
+        },
+        "c4": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_test.pt",
+          "sha256": "e81744326b66513afdfc02cc3b74b9c92908cd2359f13d0eac2b1a99bf516747",
+          "chunks": 979,
+          "prediction_tokens": 500269
+        },
+        "wikitext": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_test.pt",
+          "sha256": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f",
+          "chunks": 529,
+          "prediction_tokens": 270319
+        }
+      },
+      "adapted_inferences_before_further_equivalence_proofs": 48,
+      "initial_inferences": 1,
+      "prediction_tokens_per_inference": 1270857,
+      "student_prediction_tokens": 62271993,
+      "teacher_additional_prediction_tokens": 61001136,
+      "initial_teacher_logits_reused": true,
+      "timing_proxy": {
+        "source": "completed validation only; no NLL test results read",
+        "samples": [
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_lr_B0_s101_lr1em05_summary.json",
+            "step": 62,
+            "valid_prediction_tokens": 1236109,
+            "corpus_wall_seconds_sum": 23.38746400922537,
+            "teacher_forward_seconds_nested": 6.796104014396667,
+            "seconds_per_prediction_token": 1.8920227916167078e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_lr_B0_s101_lr3em05_summary.json",
+            "step": 62,
+            "valid_prediction_tokens": 1236109,
+            "corpus_wall_seconds_sum": 23.32579204440117,
+            "teacher_forward_seconds_nested": 6.778200120925902,
+            "seconds_per_prediction_token": 1.8870335904358894e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/extended/pythia-1b/extended_v2_pythia_1b_m32_lr_B0_s101_lr0p0001_summary.json",
+            "step": 62,
+            "valid_prediction_tokens": 1236109,
+            "corpus_wall_seconds_sum": 23.384489838033915,
+            "teacher_forward_seconds_nested": 6.799973160743715,
+            "seconds_per_prediction_token": 1.8917821840981593e-05
+          }
+        ],
+        "median_seconds_per_prediction_token": 1.8917821840981593e-05,
+        "sample_min_max": [
+          1.8870335904358894e-05,
+          1.8920227916167078e-05
+        ],
+        "scorer_corpus_loops_seconds_per_endpoint_proxy": 24.041846311364345,
+        "all_group_corpus_loops_seconds_proxy": 1178.050469256853,
+        "initial_proxy_uses_adapted_validation_cost": true
+      }
+    },
+    {
+      "model": "pythia-2.8b",
+      "data_family": "extended_v1",
+      "inference_policy": {
+        "model": "/tmp/grad-research-20261106/models/pythia-2.8b-final",
+        "revision": "2a259cdd96a4beb1cdf467512e3904197345f6a9",
+        "batch_size": 8,
+        "max_length": 512,
+        "device": "cuda:0",
+        "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+        "cuda_version": "12.4",
+        "gpu_name": "NVIDIA H100 80GB HBM3",
+        "precision": "bf16",
+        "device_type": "cuda",
+        "effective_precision": "cuda_bfloat16_autocast",
+        "attention_implementation": "sdpa",
+        "attention_backend": "auto",
+        "deterministic_algorithms": true,
+        "deterministic_warn_only": false,
+        "allow_tf32_matmul": true,
+        "allow_tf32_cudnn": true,
+        "cudnn_deterministic": true,
+        "cudnn_benchmark": false,
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "flash_sdp_enabled": true,
+        "mem_efficient_sdp_enabled": true,
+        "math_sdp_enabled": true,
+        "cudnn_sdp_enabled": true,
+        "model_weight_dtype": "torch.float32"
+      },
+      "corpora": {
+        "target": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_test.pt",
+          "sha256": "f19f802f985d929ecb3a623e3255785159b1fcb895c8f439bc037a7012d29718",
+          "chunks": 979,
+          "prediction_tokens": 500269
+        },
+        "c4": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_test.pt",
+          "sha256": "e81744326b66513afdfc02cc3b74b9c92908cd2359f13d0eac2b1a99bf516747",
+          "chunks": 979,
+          "prediction_tokens": 500269
+        },
+        "wikitext": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_test.pt",
+          "sha256": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f",
+          "chunks": 529,
+          "prediction_tokens": 270319
+        }
+      },
+      "adapted_inferences_before_further_equivalence_proofs": 30,
+      "initial_inferences": 1,
+      "prediction_tokens_per_inference": 1270857,
+      "student_prediction_tokens": 39396567,
+      "teacher_additional_prediction_tokens": 38125710,
+      "initial_teacher_logits_reused": true,
+      "timing_proxy": {
+        "source": "completed validation only; no NLL test results read",
+        "samples": [
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/extended/pythia-2.8b/extended_v2_pythia_2p8b_m8_lr_B0_s101_lr1em05_summary.json",
+            "step": 62,
+            "valid_prediction_tokens": 1236109,
+            "corpus_wall_seconds_sum": 58.99553278461099,
+            "teacher_forward_seconds_nested": 21.61278699874879,
+            "seconds_per_prediction_token": 4.7726804662542696e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/extended/pythia-2.8b/extended_v2_pythia_2p8b_m8_lr_B0_s101_lr3em05_summary.json",
+            "step": 62,
+            "valid_prediction_tokens": 1236109,
+            "corpus_wall_seconds_sum": 58.8670093677938,
+            "teacher_forward_seconds_nested": 21.558567543029792,
+            "seconds_per_prediction_token": 4.762283048484705e-05
+          },
+          {
+            "summary_path": "/tmp/grad-research-20261106/worktree/results/extended/pythia-2.8b/extended_v2_pythia_2p8b_m8_lr_B0_s101_lr0p0001_summary.json",
+            "step": 62,
+            "valid_prediction_tokens": 1236109,
+            "corpus_wall_seconds_sum": 58.809069994837046,
+            "teacher_forward_seconds_nested": 21.543012351989745,
+            "seconds_per_prediction_token": 4.757595810307752e-05
+          }
+        ],
+        "median_seconds_per_prediction_token": 4.762283048484705e-05,
+        "sample_min_max": [
+          4.757595810307752e-05,
+          4.7726804662542696e-05
+        ],
+        "scorer_corpus_loops_seconds_per_endpoint_proxy": 60.52180748148127,
+        "all_group_corpus_loops_seconds_proxy": 1876.1760319259192,
+        "initial_proxy_uses_adapted_validation_cost": true
+      }
+    }
+  ],
+  "student_prediction_tokens_total": 473399598,
+  "additional_teacher_prediction_tokens_total": 468270180,
+  "total_model_forward_prediction_token_equivalent": 941669778,
+  "summed_validation_rate_corpus_loop_seconds_proxy": 8567.96692033409,
+  "sensitivity_scenarios": [
+    {
+      "unmeasured_test_vs_validation_rate_factor": 0.75,
+      "aggregate_corpus_loop_seconds_proxy": 6425.975190250569,
+      "ideal_four_uncontended_slots_seconds_proxy": 1606.4937975626422
+    },
+    {
+      "unmeasured_test_vs_validation_rate_factor": 1.0,
+      "aggregate_corpus_loop_seconds_proxy": 8567.96692033409,
+      "ideal_four_uncontended_slots_seconds_proxy": 2141.9917300835227
+    },
+    {
+      "unmeasured_test_vs_validation_rate_factor": 1.5,
+      "aggregate_corpus_loop_seconds_proxy": 12851.950380501137,
+      "ideal_four_uncontended_slots_seconds_proxy": 3212.9875951252843
+    }
+  ],
+  "proxy_limitations": [
+    "Validation loop wall includes teacher/KL arithmetic; teacher child timings are nested and never added again",
+    "Initial reuses logits; using adapted validation cost for it is a conservative proxy, not a measured bound",
+    "Exclude scorer/model/checkpoint startup, per-job CPU SHA, scheduling and alias materialization; these need separate wall allowances",
+    "Dataset-size scaling assumes identical shapes/policy and does not identify pure GPU time",
+    "Four-slot arithmetic excludes ongoing training contention; scenarios are not confidence intervals or runtime guarantees",
+    "Further complete model_state proofs may reduce forward count; no unproven C duplicates deducted"
+  ],
+  "combine_with_behavior_budget": "results/behavioral_timing_budget_v1.json; replace large-model timing assumptions only with score-blind measured attestations",
+  "replay_fit_separate": {
+    "manifest": "docs/replay_fit_diagnostic_v2_manifest.json",
+    "inferences": 15,
+    "single_forward_prediction_token_equivalent": 27000729
+  },
+  "test_or_behavior_scores_parsed": false,
+  "new_inference_started": false
+}

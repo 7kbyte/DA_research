@@ -1,0 +1,24 @@
+--- before.md
++++ after.md
+@@ -238,7 +238,7 @@
+ 
+ ![主行为全部冻结同λ配对：acc_norm](results/primary_behavior_presented_v1/fixed_lambda_pairs_acc_norm.png)
+ 
+-图：每点是同seed左减右的accuracy差，单位pp，向上表示左侧较高；均值±样本SD与全部seed分别保留，final/best分开。五个冻结对比为B2−B1、B4−B3、D−B4、M−B4及C−B4，M−B4另含三个b。D−B4点差全为0，逻辑namespace的有限bootstrap区间略异不表示模型或预测不同。[辅助acc全部配对图](results/primary_behavior_presented_v1/fixed_lambda_pairs_acc.png)、[全部配对逐seed数表](results/primary_behavior_findings_v2/全部冻结配对可读表.md)。
++图：每点是同seed左减右的accuracy差，单位pp，向上表示左侧较高；均值±样本SD与全部seed分别保留，final/best分开。五个冻结对比为B2−B1、B4−B3、D−B4、M−B4及C−B4，M−B4另含三个b。D−B4点差及三个seed的差均为0；D与B4各自相对initial的端点有限bootstrap区间可略异，这不表示模型或预测不同。[辅助acc全部配对图](results/primary_behavior_presented_v1/fixed_lambda_pairs_acc.png)、[全部配对逐seed数表](results/primary_behavior_findings_v2/全部冻结配对可读表.md)。
+ 
+ 净准确率提高仍可伴随旧正确题变错。固定B4 seed11在HellaSwag final的acc_norm净增1.5734 pp，同时有345题由初始正确变错（CW）、503题由错误变对（WC），条件遗忘率CW/初始正确数为8.5122%；其数学best净变化为0，仍有CW=WC=361。PiQA final则CW=91、WC=85，净变化−.3264 pp。两个score分别保留CC/CW/WC/WW和条件率，不能将净增益解释为所有旧行为均被保留，也不能用这些选择题替代C4/WikiText NLL或数学推理评价。
+ 
+@@ -301,9 +301,9 @@
+ | B3−B1 | 0.1/0.05 | -0.2902±0.4627 | -0.1632±0.5885 | -0.4548±0.2528 | -0.2755±0.1451 |
+ | B4−B2 | 5/1 | -0.2539±0.2513 | +0.1269±0.2684 | -0.1560±0.1458 | -0.3718±0.1582 |
+ 
+-M−B4是本批唯一同λ=5的方法配对。其PiQA主评分在三个seed均为正，但条件题目区间均跨零；HellaSwag主评分均值接近零、三个区间跨零，辅助评分还有seed方向变化，仍不支持M在两任务、两评分上统一优于B4。C−B4的两任务、两评分在三个seed均为正，但λ为1对5，不能归因于固定教师约束强度下的选库净效应。B2−B1与B4−B3的HellaSwag两评分在三个seed均为负、条件区间均低于零；由于双方λ不同，也不能解释为固定λ下KL普遍差于CE。来源配对B3−B1、B4−B2同样保留实际λ与评分条件，不据此作跨设置的来源排序。
+-
+-全部个体端点与条件区间见[acc_norm个体图](results/supplement_A_behavior_presented_v1/endpoints_acc_norm.png)、[acc个体图](results/supplement_A_behavior_presented_v1/endpoints_acc.png)；六策略配对见[acc_norm图](results/supplement_A_behavior_presented_v1/selected_policy_pairs_acc_norm.png)、[acc图](results/supplement_A_behavior_presented_v1/selected_policy_pairs_acc.png)；唯一同λ配对另见[M−B4 acc_norm图](results/supplement_A_behavior_presented_v1/fixed_lambda_pairs_acc_norm.png)、[acc图](results/supplement_A_behavior_presented_v1/fixed_lambda_pairs_acc.png)。[全部18端点可读表](results/supplement_A_behavior_findings_v1/全部18端点可读表.md)及[全部六策略逐seed配对表](results/supplement_A_behavior_findings_v1/全部六策略配对可读表.md)保留准确率变化、CW/WC及条件遗忘/获得率；净准确率变化不代表所有旧正确行为都被保留。
++在六个预定策略对照中，M−B4是唯一同λ的方法配对，双方λ均为5。其PiQA主评分在三个seed均为正，但条件题目区间均跨零；HellaSwag主评分均值接近零、三个区间跨零，辅助评分还有seed方向变化，仍不支持M在两任务、两评分上统一优于B4。C−B4的两任务、两评分在三个seed均为正，但λ为1对5，不能归因于固定教师约束强度下的选库净效应。B2−B1与B4−B3的HellaSwag两评分在三个seed均为负、条件区间均低于零；由于双方λ不同，也不能解释为固定λ下KL普遍差于CE。来源配对B3−B1、B4−B2同样保留实际λ与评分条件，不据此作跨设置的来源排序。
++
++全部个体端点与条件区间见[acc_norm个体图](results/supplement_A_behavior_presented_v1/endpoints_acc_norm.png)、[acc个体图](results/supplement_A_behavior_presented_v1/endpoints_acc.png)；六策略配对见[acc_norm图](results/supplement_A_behavior_presented_v1/selected_policy_pairs_acc_norm.png)、[acc图](results/supplement_A_behavior_presented_v1/selected_policy_pairs_acc.png)；预定的同λ配对另见[M−B4 acc_norm图](results/supplement_A_behavior_presented_v1/fixed_lambda_pairs_acc_norm.png)、[acc图](results/supplement_A_behavior_presented_v1/fixed_lambda_pairs_acc.png)。[全部18端点可读表](results/supplement_A_behavior_findings_v1/全部18端点可读表.md)及[全部六策略逐seed配对表](results/supplement_A_behavior_findings_v1/全部六策略配对可读表.md)保留准确率变化、CW/WC及条件遗忘/获得率；净准确率变化不代表所有旧正确行为都被保留。
+ 
+ 这些结果不倒改上文A的NLL结论或验证选择。三条seed训练路径同时参与了λ选择，样本SD不是三次独立重复调参的波动，也不估计新seed重做整个选择流程的泛化变化。原5,000次题目bootstrap条件于既定检查点；HellaSwag同activity/context的依赖未校正。多方法、任务、评分、seed和配对的逐项95%区间未经多重比较校正，不保证同时覆盖。这里没有新增统计检验、行为调参或新的推理能力主张。[完整行为讨论](results/supplement_A_behavior_findings_v1/讨论.md)、[按评分分别复核的策略统计CSV](results/supplement_A_behavior_independent_review_v1/selected_policy_score_resolved_statistics.csv)。
+ 

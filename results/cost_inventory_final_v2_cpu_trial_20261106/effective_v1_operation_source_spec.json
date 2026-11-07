@@ -1,0 +1,1052 @@
+{
+  "collection_contract": {
+    "future_handoff_states_require_explicit_append_and_definition_consistency": true,
+    "no_recursive_timer_discovery": true,
+    "old_source_and_collector_must_remain_unchanged": true,
+    "ready_manifests_are_not_proof_of_executed_forward": true,
+    "score_JSON_semantics_forbidden": true
+  },
+  "created_at_utc": "2026-11-06T10:23:32.173598+00:00",
+  "evaluation_ready_indexes": [
+    {
+      "catalog": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/supplemental_evaluation_preparation_v5.json",
+        "sha256": "90163f7a77529434c872f52f41d45151bf09826ddd17ab58ea48d21d16f3d186"
+      },
+      "optional": false,
+      "path": "artifacts/evaluation_ready_v5/ready_index.json"
+    }
+  ],
+  "evaluation_scheduler_states": [
+    {
+      "optional": false,
+      "path": "logs/supplemental_job_state.json"
+    }
+  ],
+  "legacy_collector_dependencies": [
+    {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/inventory_study_costs.py",
+      "sha256": "5a1936e4366864f3d39ce0e88556cf779f50caa7845a74897830997023d68219"
+    },
+    {
+      "path": "/tmp/grad-research-20261106/worktree/src/replay_study/evaluation_cost_inventory.py",
+      "sha256": "0046281e937ec2d917f3c41b3fc27d75c88ef1e52022515989f1581fe3d6220f"
+    }
+  ],
+  "legacy_source_spec": {
+    "path": "/tmp/grad-research-20261106/worktree/configs/cost_inventory_sources_with_evaluations_v3.json",
+    "sha256": "ff922135fa72230bacc5146b0e980ad5e9362282d8a9880b47e574b8013f461f"
+  },
+  "opaque_digest_caches": [
+    {
+      "directory": "artifacts/evaluation_digest_cache_v1",
+      "progress": "artifacts/evaluation_ready_v5/cache_progress.json",
+      "reader_sha256": "9cc01b493b46a5bf391a7c649a379d87011fff077ddeea701eaf8a84bdb568e2"
+    }
+  ],
+  "operations": [
+    {
+      "accepted_statuses": [
+        "completed"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "calendar_end_pointer": null,
+      "calendar_start_pointer": null,
+      "category": "cpu_analysis",
+      "id": "A_nll_CPU_analysis",
+      "parent_id": null,
+      "process_cpu_pointer": null,
+      "scope": "One successful complete guard+statistics+figures subprocess; no score files read by this collector.",
+      "source": {
+        "path": "artifacts/provenance/supplement_A_nll_authorized_watch_v1/COMPLETED.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/analysis_wall_seconds"
+    },
+    {
+      "accepted_statuses": [],
+      "add_to_recorded_wall_totals": false,
+      "calendar_end_pointer": null,
+      "calendar_start_pointer": null,
+      "category": "cpu_analysis",
+      "id": "A_nll_guard_child",
+      "parent_id": "A_nll_CPU_analysis",
+      "process_cpu_pointer": null,
+      "scope": "Nested within A_nll_CPU_analysis, never added again.",
+      "source": {
+        "path": "results/supplemental_analysis_v2/supplement_A_nll/whole_phase_readiness.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "nested_measured_child",
+      "wall_pointer": "/score_blind_verification_wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "passed"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "calendar_end_pointer": null,
+      "calendar_start_pointer": null,
+      "category": "lossless_export",
+      "id": "primary24_lossless_export",
+      "parent_id": null,
+      "process_cpu_pointer": null,
+      "scope": "Original24 logical final endpoints: lossless encoding, archive and complete roundtrip; no shared publication included.",
+      "source": {
+        "path": "artifacts/assets/primary_weight_delivery_acceptance.json"
+      },
+      "status_pointer": "/receipt/status",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/receipt/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "passed"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "calendar_end_pointer": null,
+      "calendar_start_pointer": null,
+      "category": "lossless_export",
+      "id": "remaining48_export_parent",
+      "parent_id": null,
+      "process_cpu_pointer": "/process_cpu_seconds",
+      "scope": "One process exports12 budget final+36 best; both completed_packages clocks are cumulative samples from this same process start.",
+      "source": {
+        "path": "results/primary_remaining_endpoints_export_state.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "single_process_cumulative_total",
+      "wall_pointer": "/elapsed_wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "passed"
+      ],
+      "add_to_recorded_wall_totals": false,
+      "calendar_end_pointer": null,
+      "calendar_start_pointer": null,
+      "category": "lossless_export",
+      "id": "budget12_package_cumulative_child",
+      "parent_id": "remaining48_export_parent",
+      "process_cpu_pointer": "/completed_packages/0/process_cpu_seconds",
+      "scope": "Cumulative package completion clock; not a separate disjoint package stage.",
+      "source": {
+        "path": "results/primary_remaining_endpoints_export_state.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "cumulative_parent_sample",
+      "wall_pointer": "/completed_packages/0/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "passed"
+      ],
+      "add_to_recorded_wall_totals": false,
+      "calendar_end_pointer": null,
+      "calendar_start_pointer": null,
+      "category": "lossless_export",
+      "id": "best36_package_cumulative_child",
+      "parent_id": "remaining48_export_parent",
+      "process_cpu_pointer": "/completed_packages/1/process_cpu_seconds",
+      "scope": "Cumulative package completion clock; not a separate disjoint package stage.",
+      "source": {
+        "path": "results/primary_remaining_endpoints_export_state.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "cumulative_parent_sample",
+      "wall_pointer": "/completed_packages/1/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "passed"
+      ],
+      "add_to_recorded_wall_totals": false,
+      "calendar_end_pointer": "/finished_at_utc",
+      "calendar_start_pointer": "/started_at_utc",
+      "category": "storage_publication",
+      "id": "primary24_publication_calendar",
+      "parent_id": null,
+      "process_cpu_pointer": null,
+      "scope": "Whole publication calendar envelope only; unknown active work and initial failed attempt. Do not infer whole publication work from endpoints.",
+      "source": {
+        "path": "docs/primary_weights_durable_publication.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "calendar_envelope",
+      "wall_pointer": null
+    },
+    {
+      "accepted_statuses": [
+        "passed"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "calendar_end_pointer": null,
+      "calendar_start_pointer": null,
+      "category": "storage_publication",
+      "id": "primary24_publication_recovery_only",
+      "parent_id": "primary24_publication_calendar",
+      "process_cpu_pointer": null,
+      "scope": "Only explicitly timed recovery128.688892s; initial copy/failure/coordination unknown.",
+      "source": {
+        "path": "docs/primary_weights_durable_publication.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/recovery_wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "passed"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "calendar_end_pointer": "/finished_at_utc",
+      "calendar_start_pointer": "/started_at_utc",
+      "category": "storage_publication",
+      "id": "budget12_publication",
+      "parent_id": null,
+      "process_cpu_pointer": null,
+      "scope": "Recorded verified source-read/copy/destination-read/fsync/publication wall; archive construction is separate.",
+      "source": {
+        "path": "docs/budget_final_weights_durable_publication.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "passed"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "calendar_end_pointer": "/finished_at_utc",
+      "calendar_start_pointer": "/started_at_utc",
+      "category": "storage_publication",
+      "id": "best36_publication",
+      "parent_id": null,
+      "process_cpu_pointer": null,
+      "scope": "Recorded verified source-read/copy/destination-read/fsync/publication wall; archive construction is separate.",
+      "source": {
+        "path": "docs/primary_best_weights_durable_publication.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "passed"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "calendar_end_pointer": "/finished_at_utc",
+      "calendar_start_pointer": "/started_at_utc",
+      "category": "storage_publication",
+      "id": "snapshot0838_publication",
+      "parent_id": null,
+      "process_cpu_pointer": null,
+      "scope": "Recorded verified source-read/copy/destination-read/fsync/publication wall; archive construction is separate.",
+      "source": {
+        "path": "docs/snapshot_0838_durable_publication.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "passed"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "calendar_end_pointer": "/finished_at_utc",
+      "calendar_start_pointer": "/started_at_utc",
+      "category": "storage_publication",
+      "id": "snapshot1010_publication",
+      "parent_id": null,
+      "process_cpu_pointer": null,
+      "scope": "Recorded verified source-read/copy/destination-read/fsync/publication wall; archive construction is separate.",
+      "source": {
+        "path": "docs/snapshot_1010_durable_publication.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "complete"
+      ],
+      "add_to_recorded_wall_totals": false,
+      "calendar_end_pointer": "/finished_at_utc",
+      "calendar_start_pointer": "/started_at_utc",
+      "category": "storage_wait_and_reservation",
+      "id": "best_reservation_grower_including_waiting",
+      "parent_id": null,
+      "process_cpu_pointer": null,
+      "scope": "456.376669s observer/process wall includes polling and disk-availability waits; neither CPU work nor GPU time. No split active-write timer exists.",
+      "source": {
+        "path": "docs/primary_best_storage_growth_receipt.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "wall_including_waiting",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "dry_run_passed_training_not_started"
+      ],
+      "add_to_recorded_wall_totals": false,
+      "calendar_end_pointer": "/prepare_completed_at_utc",
+      "calendar_start_pointer": "/prepare_started_at_utc",
+      "category": "archive_qa",
+      "id": "archive_QA_prepare_calendar",
+      "parent_id": null,
+      "process_cpu_pointer": null,
+      "scope": "Calendar preparation envelope includes coordination; four full trainings were not started and cannot be counted as reproduction success.",
+      "source": {
+        "path": "results/reproduction_qa/archive0732_seed11_2x2_v1/preparation_receipt.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "calendar_envelope",
+      "wall_pointer": "/prepare_elapsed_wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "archive_and_base_restored_verified"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "calendar_end_pointer": null,
+      "calendar_start_pointer": null,
+      "category": "archive_qa",
+      "id": "archive_QA_extraction",
+      "parent_id": "archive_QA_prepare_calendar",
+      "process_cpu_pointer": null,
+      "scope": "Measured restore and input SHA stage only.",
+      "source": {
+        "path": "results/reproduction_qa/archive0732_seed11_2x2_v1/extraction_receipt.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/prepare_seconds"
+    },
+    {
+      "accepted_statuses": [
+        0
+      ],
+      "add_to_recorded_wall_totals": true,
+      "calendar_end_pointer": null,
+      "calendar_start_pointer": null,
+      "category": "archive_qa",
+      "id": "archive_QA_relocate",
+      "parent_id": "archive_QA_prepare_calendar",
+      "process_cpu_pointer": null,
+      "scope": "Actual archived helper relocation subprocess; no GPU training.",
+      "source": {
+        "path": "results/reproduction_qa/archive0732_seed11_2x2_v1/relocate_attempt_original.json"
+      },
+      "status_pointer": "/returncode",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        0
+      ],
+      "add_to_recorded_wall_totals": true,
+      "calendar_end_pointer": null,
+      "calendar_start_pointer": null,
+      "category": "archive_qa",
+      "id": "archive_QA_dry_run",
+      "parent_id": "archive_QA_prepare_calendar",
+      "process_cpu_pointer": null,
+      "scope": "Actual reproduce helper verified-not-started subprocess; no GPU training.",
+      "source": {
+        "path": "results/reproduction_qa/archive0732_seed11_2x2_v1/reproduce_dry_run.json"
+      },
+      "status_pointer": "/returncode",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "CPU_review_passed_with_explicit_operational_limits"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "calendar_end_pointer": null,
+      "calendar_start_pointer": null,
+      "category": "archive_qa",
+      "id": "archive_QA_independent_input_SHA",
+      "parent_id": null,
+      "process_cpu_pointer": null,
+      "scope": "Separate full input SHA diagnostic1.284139s; not complete review or preparation wall.",
+      "source": {
+        "path": "results/reproduction_qa/archive0732_seed11_2x2_v1/independent_review_v1.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/current_input_full_read_wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "prepared_only"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "category": "lossless_export",
+      "id": "A_selected_export_prepare",
+      "parent_id": null,
+      "process_cpu_pointer": "/process_cpu_seconds",
+      "scope": "Separate prepare-only invocation, outside the subsequent export process total.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/delivery/supplement_A_selected_final_v1/preparation_review.json",
+        "sha256": "6e7c6cbfba4f346ce87a04a9ab0750266aae607b4a8b65301d5f72b6739ab568"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "passed"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "category": "lossless_export",
+      "id": "A_selected_export_total",
+      "parent_id": null,
+      "process_cpu_pointer": "/process_cpu_seconds",
+      "scope": "Actual18 logical A finals,15 new weights and3 durable references; total invocation includes child record operations and assembly. Child timers never added again.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/assets/A_selected_weight_export/completion.json",
+        "sha256": "75ac19fc13588ad0345c9c22378b9248f529ad016492913912cfb413fdc2833a"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "single_process_cumulative_total",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [],
+      "add_to_recorded_wall_totals": false,
+      "category": "lossless_export",
+      "id": "A_selected_first_record_child",
+      "parent_id": "A_selected_export_total",
+      "process_cpu_pointer": "/record_process_CPU_seconds",
+      "scope": "One first-record observation already within completed A export invocation; neither a second export nor a performance bound.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/assets/A_selected_weight_first_actual_measurement.json",
+        "sha256": "232d18e5c139ec79bfb770f01ae3746678484d9cf98ddf4128166d62bd3f4fd2"
+      },
+      "status_pointer": null,
+      "timing_semantics": "nested_measured_child",
+      "wall_pointer": "/record_wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "passed"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "category": "storage_publication",
+      "id": "A_selected_publication",
+      "parent_id": null,
+      "process_cpu_pointer": null,
+      "scope": "Actual verified source/copy/destination SHA/fsync publication; disjoint from scratch export.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/docs/A_selected_weights_durable_publication.json",
+        "sha256": "0391d92780c2ee7c3b3bc508b270a3322120ea6f68ece38e0e9f8d20274ca5a6"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        true
+      ],
+      "add_to_recorded_wall_totals": false,
+      "category": "cpu_analysis",
+      "id": "B_nll_CPU_analysis_unknown",
+      "parent_id": null,
+      "process_cpu_pointer": null,
+      "scope": "Root Popen did not time the whole CPU analysis. Completion/UTC cannot supply missing process wall or CPU.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/results/supplemental_analysis_v2/supplement_B_nll/COMPLETE.json",
+        "sha256": "19818b92f1906eeae98226d5f3ef60104e29b3972ce2894fbdc632df346b84e7"
+      },
+      "status_pointer": "/complete",
+      "timing_semantics": "unmeasured_process_total_unknown",
+      "wall_pointer": null
+    },
+    {
+      "accepted_statuses": [
+        true
+      ],
+      "add_to_recorded_wall_totals": true,
+      "category": "cpu_analysis",
+      "id": "B_nll_measured_guard_lower_bound",
+      "parent_id": "B_nll_CPU_analysis_unknown",
+      "process_cpu_pointer": null,
+      "scope": "Measured guard component only, a known partial lower bound within unknown full B CPU analysis; no inference time.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/results/supplemental_analysis_v2/supplement_B_nll/whole_phase_readiness.json",
+        "sha256": "cae4eaf3322d4094841ee787fbe10bd1bfcb1e026e710cf35d970dee47b40a2a"
+      },
+      "status_pointer": "/ready",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/score_blind_verification_wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "completed"
+      ],
+      "add_to_recorded_wall_totals": false,
+      "category": "cpu_analysis",
+      "id": "B_budget_watch_calendar",
+      "parent_id": null,
+      "process_cpu_pointer": null,
+      "scope": "CPU watcher calendar including60s polling sleeps; not CPU work and never additive.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/logs/B_evaluation_budget_v5_watch.json",
+        "sha256": "4d69f310ac184774a1c6bd3cb24c7ae4790f700063353a2fc86b1f4f9f5f7db2"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "wall_including_waiting",
+      "wall_pointer": "/calendar_wall_seconds_including_wait_not_work_cost"
+    },
+    {
+      "accepted_statuses": [
+        "completed"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "category": "cpu_analysis",
+      "id": "B_budget_watch_active_attempts",
+      "parent_id": "B_budget_watch_calendar",
+      "process_cpu_pointer": "/attempt_process_cpu_seconds",
+      "scope": "All metadata/verification/collection attempts including successful budget child; excludes explicit poll sleeps, not pure CPU.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/logs/B_evaluation_budget_v5_watch.json",
+        "sha256": "4d69f310ac184774a1c6bd3cb24c7ae4790f700063353a2fc86b1f4f9f5f7db2"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "measured_attempts_excluding_poll_sleep",
+      "wall_pointer": "/attempt_wall_seconds_excluding_poll_sleep"
+    },
+    {
+      "accepted_statuses": [
+        "score_blind_remaining_evaluation_forecast"
+      ],
+      "add_to_recorded_wall_totals": false,
+      "category": "cpu_analysis",
+      "id": "B_budget_successful_collection_child",
+      "parent_id": "B_budget_watch_active_attempts",
+      "process_cpu_pointer": "/collector_process_cpu_seconds",
+      "scope": "Successful budget pass nested within cumulative watch attempts; not added twice.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/results/evaluation_timing_budget_v5.json",
+        "sha256": "940a0a0651cc7dd20da16d46321d8d4cac6b4dbbf7dd3e1ba6fbdd787e0b8f7d"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "nested_measured_child",
+      "wall_pointer": "/collector_wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "completed_post_test_exploratory_not_preregistered"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "category": "cpu_analysis",
+      "id": "A_posttest_factorial_CPU",
+      "parent_id": null,
+      "process_cpu_pointer": null,
+      "scope": "Only independent arithmetic/plot operation1.616210s; reads timer metadata, not score values or interaction tables.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/results/posttest_factorial_interaction_A_v1/analysis_manifest.json",
+        "sha256": "b2408efc1aebf096900e353d4cadc8ffe9a1842c8b25b5daddbc9b5e87cf6e5e"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/measured_CPU_analysis_and_plot_wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        true
+      ],
+      "add_to_recorded_wall_totals": true,
+      "category": "storage_wait_and_reservation",
+      "id": "final_results_reservation_actual_write",
+      "parent_id": null,
+      "process_cpu_pointer": null,
+      "scope": "Actual timed reservation write/fsync attempt only; active CPU not measured.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/docs/final_results_storage_reservation.json",
+        "sha256": "546f44638fbbe7fa036e065295c309a9ce939b4081955317e2cff4f6d41a3126"
+      },
+      "status_pointer": "/success",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        true
+      ],
+      "add_to_recorded_wall_totals": true,
+      "category": "storage_wait_and_reservation",
+      "id": "best_initial_reservation_actual_write",
+      "parent_id": null,
+      "process_cpu_pointer": null,
+      "scope": "Actual separately timed initial reservation attempt; distinct from subsequent grower waiting context.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/docs/primary_best_initial_storage_reservation.json",
+        "sha256": "96499289cc59db0597f7b5c382ffbec4ba45701ea88b8650b29708b9c95f7c74"
+      },
+      "status_pointer": "/success",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        false
+      ],
+      "add_to_recorded_wall_totals": true,
+      "category": "storage_wait_and_reservation",
+      "id": "remaining_primary_reservation_failed_attempt",
+      "parent_id": null,
+      "process_cpu_pointer": null,
+      "scope": "Explicitly timed failed50GiB request leaving real partial inode; failed does not mean zero cost. No rollback/untimed work inferred.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/docs/primary_remaining_endpoints_storage_reservation.progress.json",
+        "sha256": "209f2211c45cc9080f92cc47f5988938b2fd3f4181e8730959a07d34a79c946c"
+      },
+      "status_pointer": "/success",
+      "timing_semantics": "measured_failed_partial_allocation_attempt",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "complete_all_capacity_targets"
+      ],
+      "add_to_recorded_wall_totals": false,
+      "calendar_end_pointer": "/finished_at_utc",
+      "calendar_start_pointer": "/started_at_utc",
+      "category": "storage_wait_and_reservation",
+      "id": "supplemental_reservation_sequence_calendar",
+      "parent_id": null,
+      "process_cpu_pointer": null,
+      "scope": "Serial parent calendar only; no active CPU timer, not added to four child growers.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/supplemental_weight_reservations_v1/sequence_receipt.json",
+        "sha256": "e98172d8f0f5ff64697999e5f579bd607988bc9e1d2dc62c96cd7b14ffade706"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "calendar_envelope",
+      "wall_pointer": null
+    },
+    {
+      "accepted_statuses": [
+        "prepared_only"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "category": "lossless_export",
+      "id": "C_export_prelaunch_prepare",
+      "parent_id": null,
+      "process_cpu_pointer": "/process_cpu_seconds",
+      "scope": "Preserved separate prepare-only invocation before daemon launch; not current daemon sample.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_weight_export/ROOT_launch_preflight/preparation_review.json",
+        "sha256": "fa38896f89b3080db25b777b23eddb6dd5c83f458af16f25c2964b8c7d504edc"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "prepared_only"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "category": "lossless_export",
+      "id": "C_export_current_invocation_prepare",
+      "parent_id": "C_export_daemon_context",
+      "process_cpu_pointer": "/process_cpu_seconds",
+      "scope": "Current daemon initialization/authority-input checks measured before drafting; daemon parent remains nonadditive.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/delivery/extended_C_final_v1/preparation_review.json",
+        "sha256": "f463067aab55a8b5a3fdc2bb74c76ec7919b75ec91c9af023e430476370b55e5"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "single_measured_stage",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "complete"
+      ],
+      "add_to_recorded_wall_totals": false,
+      "category": "storage_wait_and_reservation",
+      "id": "supplemental_grower_A_selected",
+      "parent_id": "supplemental_reservation_sequence_calendar",
+      "process_cpu_pointer": null,
+      "scope": "Actual grower wall contains availability/ENOSPC/poll waits plus writes; active-write and CPU split unknown. Never add serial parent or treat wall as CPU/GPU.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/supplemental_weight_reservations_v1/A_selected_growth_receipt.json",
+        "sha256": "16841ce7cd5180ae5cf4a52a701796cd3fbd930f296ea510a4581c809f7c347b"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "wall_including_waiting",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "complete"
+      ],
+      "add_to_recorded_wall_totals": false,
+      "category": "storage_wait_and_reservation",
+      "id": "supplemental_grower_C_410m",
+      "parent_id": "supplemental_reservation_sequence_calendar",
+      "process_cpu_pointer": null,
+      "scope": "Actual grower wall contains availability/ENOSPC/poll waits plus writes; active-write and CPU split unknown. Never add serial parent or treat wall as CPU/GPU.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/supplemental_weight_reservations_v1/C_410m_growth_receipt.json",
+        "sha256": "769a42195407e0649693adaabc6b870f29d312405f1616b72c2c607c62a18817"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "wall_including_waiting",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "complete"
+      ],
+      "add_to_recorded_wall_totals": false,
+      "category": "storage_wait_and_reservation",
+      "id": "supplemental_grower_C_1b",
+      "parent_id": "supplemental_reservation_sequence_calendar",
+      "process_cpu_pointer": null,
+      "scope": "Actual grower wall contains availability/ENOSPC/poll waits plus writes; active-write and CPU split unknown. Never add serial parent or treat wall as CPU/GPU.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/supplemental_weight_reservations_v1/C_1b_growth_receipt.json",
+        "sha256": "22860adba567049a0fc51eae39174033cb1a31f6c8e1571ba73f352d0e7ccbe2"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "wall_including_waiting",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "complete"
+      ],
+      "add_to_recorded_wall_totals": false,
+      "category": "storage_wait_and_reservation",
+      "id": "supplemental_grower_C_2p8b",
+      "parent_id": "supplemental_reservation_sequence_calendar",
+      "process_cpu_pointer": null,
+      "scope": "Actual grower wall contains availability/ENOSPC/poll waits plus writes; active-write and CPU split unknown. Never add serial parent or treat wall as CPU/GPU.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/supplemental_weight_reservations_v1/C_2p8b_growth_receipt.json",
+        "sha256": "fceae6a2f1e2bbd079215919ef2ea16c617cf087836092d07d43d03786c51817"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "wall_including_waiting",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [],
+      "add_to_recorded_wall_totals": false,
+      "category": "lossless_export",
+      "id": "C_export_daemon_context",
+      "process_cpu_pointer": "/process_cpu_seconds",
+      "scope": "Whole daemon invocation cumulative wall/CPU, including prehash, drafts, assembly, lock/poll waits; nonadditive parent.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/delivery/extended_C_final_v1/progress.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "wall_including_waiting",
+      "wall_pointer": "/elapsed_wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "verified_draft_not_deliverable"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "canonical_id": "C_draft:pythia-410m:extended_v2_pythia_410m_m64_formal_B2_s11_w0p05:f97249300451a29b08850bfd593c6b618c2032bb68e753fcf478c897ccaab610",
+      "category": "lossless_export",
+      "id": "C_draft:pythia-410m:extended_v2_pythia_410m_m64_formal_B2_s11_w0p05",
+      "parent_id": "C_export_daemon_context",
+      "process_cpu_pointer": "/process_cpu_seconds",
+      "scope": "One first-created draft operation, deduplicated by registry ID and immutable record SHA; reused references are not new work.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/delivery/extended_C_final_v1/pythia-410m/records/extended_v2_pythia_410m_m64_formal_B2_s11_w0p05.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "independent_single_draft_operation",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "verified_draft_not_deliverable"
+      ],
+      "add_to_recorded_wall_totals": false,
+      "category": "lossless_export",
+      "id": "C_draft:pythia-410m:extended_v2_pythia_410m_m64_formal_B2_s11_w0p05:encode",
+      "parent_id": "C_draft:pythia-410m:extended_v2_pythia_410m_m64_formal_B2_s11_w0p05",
+      "process_cpu_pointer": "/encode_process_cpu_seconds",
+      "scope": "Nested within the same first-created draft; never added again.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/delivery/extended_C_final_v1/pythia-410m/records/extended_v2_pythia_410m_m64_formal_B2_s11_w0p05.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "nested_measured_child",
+      "wall_pointer": "/encode/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "verified_draft_not_deliverable"
+      ],
+      "add_to_recorded_wall_totals": false,
+      "category": "lossless_export",
+      "id": "C_draft:pythia-410m:extended_v2_pythia_410m_m64_formal_B2_s11_w0p05:decode",
+      "parent_id": "C_draft:pythia-410m:extended_v2_pythia_410m_m64_formal_B2_s11_w0p05",
+      "process_cpu_pointer": "/decode_process_cpu_seconds",
+      "scope": "Nested within the same first-created draft; never added again.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/delivery/extended_C_final_v1/pythia-410m/records/extended_v2_pythia_410m_m64_formal_B2_s11_w0p05.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "nested_measured_child",
+      "wall_pointer": "/decode/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "verified_draft_not_deliverable"
+      ],
+      "add_to_recorded_wall_totals": false,
+      "category": "lossless_export",
+      "id": "C_draft:pythia-410m:extended_v2_pythia_410m_m64_formal_B2_s11_w0p05:verify",
+      "parent_id": "C_draft:pythia-410m:extended_v2_pythia_410m_m64_formal_B2_s11_w0p05",
+      "process_cpu_pointer": "/verification_process_cpu_seconds",
+      "scope": "Nested within the same first-created draft; never added again.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/delivery/extended_C_final_v1/pythia-410m/records/extended_v2_pythia_410m_m64_formal_B2_s11_w0p05.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "nested_measured_child",
+      "wall_pointer": "/bytewise_verification/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "verified_draft_not_deliverable"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "canonical_id": "C_draft:pythia-410m:extended_v2_pythia_410m_m64_formal_B4_s11_w0p05:8e5d6020970fd19e2dcd2df50b7f1080dcb6bb2b2b2d8a7d983c2f7c2e7b87e3",
+      "category": "lossless_export",
+      "id": "C_draft:pythia-410m:extended_v2_pythia_410m_m64_formal_B4_s11_w0p05",
+      "parent_id": "C_export_daemon_context",
+      "process_cpu_pointer": "/process_cpu_seconds",
+      "scope": "One first-created draft operation, deduplicated by registry ID and immutable record SHA; reused references are not new work.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/delivery/extended_C_final_v1/pythia-410m/records/extended_v2_pythia_410m_m64_formal_B4_s11_w0p05.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "independent_single_draft_operation",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "verified_draft_not_deliverable"
+      ],
+      "add_to_recorded_wall_totals": false,
+      "category": "lossless_export",
+      "id": "C_draft:pythia-410m:extended_v2_pythia_410m_m64_formal_B4_s11_w0p05:encode",
+      "parent_id": "C_draft:pythia-410m:extended_v2_pythia_410m_m64_formal_B4_s11_w0p05",
+      "process_cpu_pointer": "/encode_process_cpu_seconds",
+      "scope": "Nested within the same first-created draft; never added again.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/delivery/extended_C_final_v1/pythia-410m/records/extended_v2_pythia_410m_m64_formal_B4_s11_w0p05.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "nested_measured_child",
+      "wall_pointer": "/encode/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "verified_draft_not_deliverable"
+      ],
+      "add_to_recorded_wall_totals": false,
+      "category": "lossless_export",
+      "id": "C_draft:pythia-410m:extended_v2_pythia_410m_m64_formal_B4_s11_w0p05:decode",
+      "parent_id": "C_draft:pythia-410m:extended_v2_pythia_410m_m64_formal_B4_s11_w0p05",
+      "process_cpu_pointer": "/decode_process_cpu_seconds",
+      "scope": "Nested within the same first-created draft; never added again.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/delivery/extended_C_final_v1/pythia-410m/records/extended_v2_pythia_410m_m64_formal_B4_s11_w0p05.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "nested_measured_child",
+      "wall_pointer": "/decode/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "verified_draft_not_deliverable"
+      ],
+      "add_to_recorded_wall_totals": false,
+      "category": "lossless_export",
+      "id": "C_draft:pythia-410m:extended_v2_pythia_410m_m64_formal_B4_s11_w0p05:verify",
+      "parent_id": "C_draft:pythia-410m:extended_v2_pythia_410m_m64_formal_B4_s11_w0p05",
+      "process_cpu_pointer": "/verification_process_cpu_seconds",
+      "scope": "Nested within the same first-created draft; never added again.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/delivery/extended_C_final_v1/pythia-410m/records/extended_v2_pythia_410m_m64_formal_B4_s11_w0p05.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "nested_measured_child",
+      "wall_pointer": "/bytewise_verification/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "passed"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "category": "lossless_export",
+      "id": "C_assembly:pythia-410m",
+      "parent_id": "C_export_daemon_context",
+      "process_cpu_pointer": "/process_cpu_seconds",
+      "scope": "Manifest/base closure/TAR build and verification only; prior draft operations are disjoint. Missing completion remains unknown.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/delivery/extended_C_final_v1/pythia-410m/completion.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "independent_assembly_only",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "passed"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "category": "lossless_export",
+      "id": "C_assembly:pythia-1b",
+      "parent_id": "C_export_daemon_context",
+      "process_cpu_pointer": "/process_cpu_seconds",
+      "scope": "Manifest/base closure/TAR build and verification only; prior draft operations are disjoint. Missing completion remains unknown.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/delivery/extended_C_final_v1/pythia-1b/completion.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "independent_assembly_only",
+      "wall_pointer": "/wall_seconds"
+    },
+    {
+      "accepted_statuses": [
+        "passed"
+      ],
+      "add_to_recorded_wall_totals": true,
+      "category": "lossless_export",
+      "id": "C_assembly:pythia-2.8b",
+      "parent_id": "C_export_daemon_context",
+      "process_cpu_pointer": "/process_cpu_seconds",
+      "scope": "Manifest/base closure/TAR build and verification only; prior draft operations are disjoint. Missing completion remains unknown.",
+      "source": {
+        "path": "/tmp/grad-research-20261106/delivery/extended_C_final_v1/pythia-2.8b/completion.json"
+      },
+      "status_pointer": "/status",
+      "timing_semantics": "independent_assembly_only",
+      "wall_pointer": "/wall_seconds"
+    }
+  ],
+  "purpose": "Repeatable final-collection entry, currently an intermediate observed snapshot. Never a whole-study-complete claim.",
+  "runs_root": "/tmp/grad-research-20261106/runs",
+  "schema_version": 1,
+  "training_cohorts": [
+    {
+      "expected_logical_rows": 36,
+      "expected_physical_runs": 36,
+      "expected_training_aliases": 0,
+      "id": "primary36",
+      "registry": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/formal_deterministic_registry.json",
+        "sha256": "284fa9dd939dab75195afe3f968e0eb6411501b26b8a5caa1962b4ee5e9f372b"
+      }
+    },
+    {
+      "expected_logical_rows": 126,
+      "expected_physical_runs": 108,
+      "expected_training_aliases": 18,
+      "id": "A108_additional_plus18_training_aliases",
+      "registry": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/supplemental_v1_A_registry.json",
+        "sha256": "0f43c49530b79d09c18113e8c50239b640e99bbbdcb26b890e805d71cf291310"
+      }
+    },
+    {
+      "expected_logical_rows": 60,
+      "expected_physical_runs": 60,
+      "expected_training_aliases": 0,
+      "id": "B60",
+      "registry": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/supplemental_v1/activated/B_conditional_bank_variance/executor_registry.json",
+        "sha256": "841c8f86a6b6bc6c098ca5f3540b1ac3c758f6cc5cb0d48fc5f4083759b517cc"
+      }
+    },
+    {
+      "expected_logical_rows": 24,
+      "expected_physical_runs": 24,
+      "expected_training_aliases": 0,
+      "id": "C410m24",
+      "registry": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_410m_m64_formal_active_registry.json",
+        "sha256": "c7f5c50d6794ba0df0dc3e071198da761f084ad9347ce5d9ce4dddf867ee48bd"
+      }
+    },
+    {
+      "expected_logical_rows": 24,
+      "expected_physical_runs": 24,
+      "expected_training_aliases": 0,
+      "id": "C1b24",
+      "registry": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_1b_m32_formal_active_registry.json",
+        "sha256": "c106330d947904447fe7c1aa42fa8dbe8a337a683520801b90653d7d6474b8d6"
+      }
+    },
+    {
+      "expected_logical_rows": 15,
+      "expected_physical_runs": 15,
+      "expected_training_aliases": 0,
+      "id": "C2p8b15_h25m",
+      "registry": {
+        "path": "/tmp/grad-research-20261106/worktree/configs/extended_v2_pythia_2p8b_m8_h25m_formal_active_registry.json",
+        "sha256": "c98360002f763a98423d16bf99c866edfbec21da2668a04cb3ccfd5652888d05"
+      }
+    }
+  ],
+  "unmeasured_activity_gaps": [
+    {
+      "category": "cpu_analysis",
+      "scope": "Other validation/report/bootstrap/plotting/audits and coordination have no complete structured timer; missing work unknown."
+    },
+    {
+      "category": "opaque_prehash",
+      "scope": "Only stable complete-read receipts count. Failed/interrupted reads and preparation metadata/stat-check overhead are unknown."
+    },
+    {
+      "category": "lossless_export",
+      "scope": "Only registered process receipts. Snapshot TAR construction and other future exports not automatically guessed."
+    },
+    {
+      "category": "storage_publication",
+      "scope": "Primary24 initial copy attempt not explicitly timed; recovery only is included. Downloads/environment/source acquisition still partial."
+    },
+    {
+      "category": "archive_qa",
+      "scope": "Actual CPU dry-run stages only. Four full-run QA trainings unstarted; future execution needs explicit scheduler state/registry/receipt extension."
+    },
+    {
+      "category": "rollback_and_failed_attempts",
+      "scope": "Committed-path training counters, last attested evaluation attempts, explicit ENOSPC lower bound; unknown failures never imputed zero."
+    },
+    {
+      "scope": "A/C initial zero or2GiB allocation before growers has no direct structured timer; initial_bytes is capacity, not elapsed work."
+    },
+    {
+      "scope": "C exporter read-only resource review has no complete independent timer."
+    },
+    {
+      "scope": "B full CPU analysis process was not timed by root Popen; only the measured guard lower bound is available."
+    }
+  ]
+}

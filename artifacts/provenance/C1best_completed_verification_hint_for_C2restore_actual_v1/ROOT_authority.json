@@ -1,0 +1,35 @@
+{
+  "authorized": true,
+  "authorized_by": "ROOT",
+  "scope": "one_bounded_eight_C1best_derived_verification_cache_hint_for_C2_native_restore",
+  "plan": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C1best_completed_verification_hint_for_C2restore_actual_v1/bound_plan.json",
+    "sha256": "bcb201890d1b0923f3663910bcd28f7d38580fecab8144d5ef3f24ffd76b5688"
+  },
+  "source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C1best_completed_verification_hint_for_C2restore_actual_v1/hint_once_ROOT.py",
+    "sha256": "010f22f89504240561cc03efbba603d508c61bfab60286dbf9fc0a7036657d74"
+  },
+  "utc": "2026-11-06T23:24:37.178229+00:00",
+  "scope_review": "Exact previous conditional safe helper adapted only to fixed8 C1B-best completed derived files/196 tensors/max32GiB. Target restore gate remains48,698,310,656B. Native2.8 original fresh gate failures retained; this does not authorize restore.",
+  "original_helper": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C2native_verification_hint_preparation_v1/hint_once.py",
+    "sha256": "33120a9e18a64e5084512bc2536d85f5e8d20524591592c57da1c290d49b0501"
+  },
+  "literal_guard_changes": {
+    "BASE=Path('/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/C2p8B_best')": "BASE=Path('/tmp/grad-research-20261106/delivery/additional_formal_endpoints_v4/C1B_best')",
+    "SCOPE='one_bounded_completed_derived_verification_cache_hint_for_C2_native_restore'": "SCOPE='one_bounded_eight_C1best_derived_verification_cache_hint_for_C2_native_restore'",
+    "len(plan['items'])==4": "len(plan['items'])==8",
+    "r['package']=='C2p8B_best'": "r['package']=='C1B_best'",
+    "v['tensor_count']==388": "v['tensor_count']==196",
+    "for x in items})==4": "for x in items})==8"
+  },
+  "maximum_hint_range_bytes": 34359738368,
+  "read_only_prevalidation_references": {
+    "other_FD_references": [],
+    "mappings": [],
+    "unreadable_process_metadata": []
+  },
+  "ROOT_preparation_body_seconds": 0.035606011748313904,
+  "manual_parent_seconds": null
+}

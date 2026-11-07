@@ -1,0 +1,3567 @@
+{
+  "audited_at_utc": "2026-11-06T05:36:05.755337+00:00",
+  "status": "passed",
+  "ngram_tokens": 13,
+  "fixed_chunk_fraction_threshold": 0.2,
+  "direction": "heldout chunk ngram occurrences matched against generated source-pool ngrams",
+  "boundary_policy": "within each unpadded full512 chunk only, no cross-chunk/document ngrams",
+  "threshold_rule": "at least 100 of 500 within-chunk 13grams; any flagged chunk identifies its whole document",
+  "exact_rule": "SHA256 of full canonical int64 token rows; masks verified all-valid",
+  "collision_policy": "rolling uint64 hashes as original protocol; all threshold flags confirmed with exact 13-token tuples",
+  "test_scores_accessed": false,
+  "model_inference_performed": false,
+  "frozen_inputs_modified": false,
+  "comparisons": 120,
+  "exact_match_comparison_events": 0,
+  "hashed_threshold_flag_comparison_events": 0,
+  "confirmed_threshold_flag_comparison_events": 0,
+  "global_max_ngram_fraction": 0.064,
+  "input_sha256": {
+    "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/finemath_validation.pt": "431937e95ea9ba4f98cb19da38f53bdc1f90f57f35173a2b85dc3c3a560b4490",
+    "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/finemath_test.pt": "3fdea241e0bf812e772ab1789ec1e9e722fdd6a18efdf6850e5aeb18cfac63f3",
+    "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/c4_validation.pt": "89c38a59a9985195efed818ed651d56bc00a399b3f08df4c98f5baf9380be453",
+    "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/c4_test.pt": "95457714af354880c92716edd99b878110e9635d70f3d0d2435dc75e9a755e61",
+    "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/wikitext103_validation.pt": "4018c33bd6e36b45aafcb5b5129ed18cbd480613ccbed0f8cdf57a02e8b0e85c",
+    "/tmp/grad-research-20261106/worktree/artifacts/evaluation_v3/wikitext103_test.pt": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f",
+    "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_validation.pt": "59b2bb2d89104652785915e08c45ad3f8815037461da5216de42408ccfbb3ea0",
+    "/tmp/grad-research-20261106/worktree/artifacts/data_extended/finemath_test.pt": "f19f802f985d929ecb3a623e3255785159b1fcb895c8f439bc037a7012d29718",
+    "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_validation.pt": "ee0389143e28fc8d0e2e3f1107674e7a8d8a178d324c350820223937d7bcb274",
+    "/tmp/grad-research-20261106/worktree/artifacts/data_extended/c4_test.pt": "e81744326b66513afdfc02cc3b74b9c92908cd2359f13d0eac2b1a99bf516747",
+    "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_validation.pt": "4018c33bd6e36b45aafcb5b5129ed18cbd480613ccbed0f8cdf57a02e8b0e85c",
+    "/tmp/grad-research-20261106/worktree/artifacts/data_extended/wikitext103_test.pt": "0de6565e7d41212e697ec5cf03c373ea2497c283b3011009c6b70e19496e089f",
+    "/tmp/grad-research-20261106/worktree/artifacts/generated/pool_seed101.pt": "52c70e4670c5f9e7b1a17f2e1dfa7bab593285f0c548ae609e11fa80aac2729c",
+    "/tmp/grad-research-20261106/worktree/artifacts/generated/pool_seed101.json": "9cd6d5d75b5b86cb1496f2499ece16ef50a9bc8fa114efacfd8d84375e58ad48",
+    "/tmp/grad-research-20261106/worktree/artifacts/generated/pool_seed11.pt": "9909c12dcb8b1c96650678dd9de9dfbe857aa9919bf2d6e98d44afd76baeed3d",
+    "/tmp/grad-research-20261106/worktree/artifacts/generated/pool_seed11.json": "2a3758b72000bdc307f5fd46388c14265cbeb3af5ca30a2449f5c31c46dbd071",
+    "/tmp/grad-research-20261106/worktree/artifacts/generated/pool_seed22.pt": "fe509bfbbcd7c9da21260751834c59c9109ba0c2da9449290e34ee68768008d4",
+    "/tmp/grad-research-20261106/worktree/artifacts/generated/pool_seed22.json": "9bace17d81cf51608a754d0fbf4ac432236ffc90058af19d9de041de26716005",
+    "/tmp/grad-research-20261106/worktree/artifacts/generated/pool_seed33.pt": "ab18eb638cc1d2c54facd2ac488d7a602049062c8a0ece0249e09d1eb597ed41",
+    "/tmp/grad-research-20261106/worktree/artifacts/generated/pool_seed33.json": "c67b57e3cb797cbab9fd60d88132b517c8052969ba10b0daacb83508af158c5a",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/generated/pool_seed101.pt": "850231a5938588fadb6cf2843910c939c0c936d7bc150f375c680b2754d58b89",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/generated/pool_seed101.json": "f45b161b18a74d928b22ea9403e2e2744399fe2ba0ec38598b57538b7b549f67",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/generated/pool_seed11.pt": "ca61226c2d2178f24df082801eefe67b3596597866b56d5e5e9d2dc91bac4a44",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/generated/pool_seed11.json": "0320a646d513975d5809f2574f562fbd70612f534e574d10d8c0dc96c1c00831",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/generated/pool_seed22.pt": "e514774dc42224223198f3452a197541052ef75cf6461dea274301476c7b2844",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/generated/pool_seed22.json": "2d88e614734be2f2edfaa0537a50b41d5c7a478028addb368441b23dcbfc656c",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/generated/pool_seed33.pt": "799a0d673c115025f8ab9f9e98a59271328bfb7c87582d0b77d58ec9b368b53d",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-1b/generated/pool_seed33.json": "8c33e5472b87bca856630200ff208b09b972a0b872c6f862533878dab3801b1c",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/generated/pool_seed101.pt": "3f8c35476abc68b3d6dbabdb064d16d8f1fc6ec5ae8521520ffa26ebed03525d",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/generated/pool_seed101.json": "c16ade4593845b45d19809e1c9dae03f114a67e3d00ee6e462d2f1d79b8845c7",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/generated/pool_seed11.pt": "7417447a7643ad2064c81c9c988d3d75e30e97f28cc2db5edd3797dd060ac4a6",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/generated/pool_seed11.json": "8c4f4e86eb551c7ed032d12616e8253cc9b6219d9fe173f7863c3d670f604f50",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/generated/pool_seed22.pt": "9527d95a2414971a3d9c967d629a4885c1402594574fff477aa436b9ee0cca4a",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/generated/pool_seed22.json": "b94cff82fda66e769e12ee93aac426b804497f16b36bdcaa91fb040c61ea4e94",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/generated/pool_seed33.pt": "e3f69e5fa8c1fa2e609f64cae814b4114c1daa3b62a3623c2f9c34c26cd5a05f",
+    "/tmp/grad-research-20261106/worktree/artifacts/extended/pythia-2.8b/generated/pool_seed33.json": "28569372d891515f6f7767c43d39997b83a3bf7409f48d945763dd3cac6d1d32"
+  },
+  "script_sha256": "8a2aa92c081efb297b6b4d9fd7c65429ac3a8003914eb5be87ae2b5745135c70",
+  "ngram_implementation_sha256": "47ffc90a8116a35bea817ef16ba9691614696ac97dfa4df15d55d437bedf9a5c",
+  "seconds": 21.85311434045434,
+  "results": [
+    {
+      "model": "pythia-410m",
+      "pool": "seed101",
+      "seeds": [
+        101
+      ],
+      "roles": [
+        "pilot"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "finemath_validation",
+      "heldout_chunks": 1024,
+      "reference_unique_13grams": 970826,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.002,
+      "matching_ngram_occurrences": 2,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed101",
+      "seeds": [
+        101
+      ],
+      "roles": [
+        "pilot"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "finemath_test",
+      "heldout_chunks": 1024,
+      "reference_unique_13grams": 970826,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.042,
+      "matching_ngram_occurrences": 24,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed101",
+      "seeds": [
+        101
+      ],
+      "roles": [
+        "pilot"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "c4_validation",
+      "heldout_chunks": 1024,
+      "reference_unique_13grams": 970826,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed101",
+      "seeds": [
+        101
+      ],
+      "roles": [
+        "pilot"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "c4_test",
+      "heldout_chunks": 1024,
+      "reference_unique_13grams": 970826,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed101",
+      "seeds": [
+        101
+      ],
+      "roles": [
+        "pilot"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "wikitext103_validation",
+      "heldout_chunks": 461,
+      "reference_unique_13grams": 970826,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed101",
+      "seeds": [
+        101
+      ],
+      "roles": [
+        "pilot"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "wikitext103_test",
+      "heldout_chunks": 529,
+      "reference_unique_13grams": 970826,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed101",
+      "seeds": [
+        101
+      ],
+      "roles": [
+        "pilot"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 970826,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.002,
+      "matching_ngram_occurrences": 2,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed101",
+      "seeds": [
+        101
+      ],
+      "roles": [
+        "pilot"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 970826,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.042,
+      "matching_ngram_occurrences": 24,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed101",
+      "seeds": [
+        101
+      ],
+      "roles": [
+        "pilot"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 970826,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed101",
+      "seeds": [
+        101
+      ],
+      "roles": [
+        "pilot"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 970826,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed101",
+      "seeds": [
+        101
+      ],
+      "roles": [
+        "pilot"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_validation",
+      "heldout_chunks": 461,
+      "reference_unique_13grams": 970826,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed101",
+      "seeds": [
+        101
+      ],
+      "roles": [
+        "pilot"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_test",
+      "heldout_chunks": 529,
+      "reference_unique_13grams": 970826,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed11",
+      "seeds": [
+        11
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "finemath_validation",
+      "heldout_chunks": 1024,
+      "reference_unique_13grams": 971009,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.06,
+      "matching_ngram_occurrences": 30,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed11",
+      "seeds": [
+        11
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "finemath_test",
+      "heldout_chunks": 1024,
+      "reference_unique_13grams": 971009,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.06,
+      "matching_ngram_occurrences": 51,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed11",
+      "seeds": [
+        11
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "c4_validation",
+      "heldout_chunks": 1024,
+      "reference_unique_13grams": 971009,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.002,
+      "matching_ngram_occurrences": 1,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed11",
+      "seeds": [
+        11
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "c4_test",
+      "heldout_chunks": 1024,
+      "reference_unique_13grams": 971009,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed11",
+      "seeds": [
+        11
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "wikitext103_validation",
+      "heldout_chunks": 461,
+      "reference_unique_13grams": 971009,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed11",
+      "seeds": [
+        11
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "wikitext103_test",
+      "heldout_chunks": 529,
+      "reference_unique_13grams": 971009,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed11",
+      "seeds": [
+        11
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 971009,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.06,
+      "matching_ngram_occurrences": 30,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed11",
+      "seeds": [
+        11
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 971009,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.06,
+      "matching_ngram_occurrences": 51,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed11",
+      "seeds": [
+        11
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 971009,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.002,
+      "matching_ngram_occurrences": 1,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed11",
+      "seeds": [
+        11
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 971009,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed11",
+      "seeds": [
+        11
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_validation",
+      "heldout_chunks": 461,
+      "reference_unique_13grams": 971009,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed11",
+      "seeds": [
+        11
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_test",
+      "heldout_chunks": 529,
+      "reference_unique_13grams": 971009,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed22",
+      "seeds": [
+        22
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "finemath_validation",
+      "heldout_chunks": 1024,
+      "reference_unique_13grams": 970331,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.016,
+      "matching_ngram_occurrences": 8,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed22",
+      "seeds": [
+        22
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "finemath_test",
+      "heldout_chunks": 1024,
+      "reference_unique_13grams": 970331,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed22",
+      "seeds": [
+        22
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "c4_validation",
+      "heldout_chunks": 1024,
+      "reference_unique_13grams": 970331,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.002,
+      "matching_ngram_occurrences": 1,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed22",
+      "seeds": [
+        22
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "c4_test",
+      "heldout_chunks": 1024,
+      "reference_unique_13grams": 970331,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed22",
+      "seeds": [
+        22
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "wikitext103_validation",
+      "heldout_chunks": 461,
+      "reference_unique_13grams": 970331,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed22",
+      "seeds": [
+        22
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "wikitext103_test",
+      "heldout_chunks": 529,
+      "reference_unique_13grams": 970331,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed22",
+      "seeds": [
+        22
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 970331,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.016,
+      "matching_ngram_occurrences": 8,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed22",
+      "seeds": [
+        22
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 970331,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed22",
+      "seeds": [
+        22
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 970331,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.002,
+      "matching_ngram_occurrences": 1,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed22",
+      "seeds": [
+        22
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 970331,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed22",
+      "seeds": [
+        22
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_validation",
+      "heldout_chunks": 461,
+      "reference_unique_13grams": 970331,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed22",
+      "seeds": [
+        22
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_test",
+      "heldout_chunks": 529,
+      "reference_unique_13grams": 970331,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed33",
+      "seeds": [
+        33
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "finemath_validation",
+      "heldout_chunks": 1024,
+      "reference_unique_13grams": 969853,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.06,
+      "matching_ngram_occurrences": 30,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed33",
+      "seeds": [
+        33
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "finemath_test",
+      "heldout_chunks": 1024,
+      "reference_unique_13grams": 969853,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.06,
+      "matching_ngram_occurrences": 31,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed33",
+      "seeds": [
+        33
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "c4_validation",
+      "heldout_chunks": 1024,
+      "reference_unique_13grams": 969853,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed33",
+      "seeds": [
+        33
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "c4_test",
+      "heldout_chunks": 1024,
+      "reference_unique_13grams": 969853,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed33",
+      "seeds": [
+        33
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "wikitext103_validation",
+      "heldout_chunks": 461,
+      "reference_unique_13grams": 969853,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed33",
+      "seeds": [
+        33
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "wikitext103_test",
+      "heldout_chunks": 529,
+      "reference_unique_13grams": 969853,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed33",
+      "seeds": [
+        33
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 969853,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.06,
+      "matching_ngram_occurrences": 30,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed33",
+      "seeds": [
+        33
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 969853,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.06,
+      "matching_ngram_occurrences": 31,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed33",
+      "seeds": [
+        33
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 969853,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed33",
+      "seeds": [
+        33
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 969853,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed33",
+      "seeds": [
+        33
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_validation",
+      "heldout_chunks": 461,
+      "reference_unique_13grams": 969853,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "seed33",
+      "seeds": [
+        33
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_test",
+      "heldout_chunks": 529,
+      "reference_unique_13grams": 969853,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": true
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "union_seeds101_11_22_33",
+      "seeds": [
+        101,
+        11,
+        22,
+        33
+      ],
+      "roles": [
+        "pilot",
+        "formal",
+        "formal",
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "finemath_validation",
+      "heldout_chunks": 1024,
+      "reference_unique_13grams": 3878060,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.062,
+      "matching_ngram_occurrences": 41,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "union diagnostic; no model trained on union",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "union_seeds101_11_22_33",
+      "seeds": [
+        101,
+        11,
+        22,
+        33
+      ],
+      "roles": [
+        "pilot",
+        "formal",
+        "formal",
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "finemath_test",
+      "heldout_chunks": 1024,
+      "reference_unique_13grams": 3878060,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.062,
+      "matching_ngram_occurrences": 56,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "union diagnostic; no model trained on union",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "union_seeds101_11_22_33",
+      "seeds": [
+        101,
+        11,
+        22,
+        33
+      ],
+      "roles": [
+        "pilot",
+        "formal",
+        "formal",
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "c4_validation",
+      "heldout_chunks": 1024,
+      "reference_unique_13grams": 3878060,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.002,
+      "matching_ngram_occurrences": 2,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "union diagnostic; no model trained on union",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "union_seeds101_11_22_33",
+      "seeds": [
+        101,
+        11,
+        22,
+        33
+      ],
+      "roles": [
+        "pilot",
+        "formal",
+        "formal",
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "c4_test",
+      "heldout_chunks": 1024,
+      "reference_unique_13grams": 3878060,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "union diagnostic; no model trained on union",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "union_seeds101_11_22_33",
+      "seeds": [
+        101,
+        11,
+        22,
+        33
+      ],
+      "roles": [
+        "pilot",
+        "formal",
+        "formal",
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "wikitext103_validation",
+      "heldout_chunks": 461,
+      "reference_unique_13grams": 3878060,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "union diagnostic; no model trained on union",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "union_seeds101_11_22_33",
+      "seeds": [
+        101,
+        11,
+        22,
+        33
+      ],
+      "roles": [
+        "pilot",
+        "formal",
+        "formal",
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "evaluation_v3",
+      "heldout": "wikitext103_test",
+      "heldout_chunks": 529,
+      "reference_unique_13grams": 3878060,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "union diagnostic; no model trained on union",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "union_seeds101_11_22_33",
+      "seeds": [
+        101,
+        11,
+        22,
+        33
+      ],
+      "roles": [
+        "pilot",
+        "formal",
+        "formal",
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 3878060,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.062,
+      "matching_ngram_occurrences": 41,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "union diagnostic; no model trained on union",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "union_seeds101_11_22_33",
+      "seeds": [
+        101,
+        11,
+        22,
+        33
+      ],
+      "roles": [
+        "pilot",
+        "formal",
+        "formal",
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 3878060,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.062,
+      "matching_ngram_occurrences": 56,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "union diagnostic; no model trained on union",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "union_seeds101_11_22_33",
+      "seeds": [
+        101,
+        11,
+        22,
+        33
+      ],
+      "roles": [
+        "pilot",
+        "formal",
+        "formal",
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 3878060,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.002,
+      "matching_ngram_occurrences": 2,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "union diagnostic; no model trained on union",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "union_seeds101_11_22_33",
+      "seeds": [
+        101,
+        11,
+        22,
+        33
+      ],
+      "roles": [
+        "pilot",
+        "formal",
+        "formal",
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 3878060,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "union diagnostic; no model trained on union",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "union_seeds101_11_22_33",
+      "seeds": [
+        101,
+        11,
+        22,
+        33
+      ],
+      "roles": [
+        "pilot",
+        "formal",
+        "formal",
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_validation",
+      "heldout_chunks": 461,
+      "reference_unique_13grams": 3878060,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "union diagnostic; no model trained on union",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-410m",
+      "pool": "union_seeds101_11_22_33",
+      "seeds": [
+        101,
+        11,
+        22,
+        33
+      ],
+      "roles": [
+        "pilot",
+        "formal",
+        "formal",
+        "formal"
+      ],
+      "revisions": [
+        "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_test",
+      "heldout_chunks": 529,
+      "reference_unique_13grams": 3878060,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "union diagnostic; no model trained on union",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "seed101",
+      "seeds": [
+        101
+      ],
+      "roles": [
+        "pilot"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 965556,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "seed101",
+      "seeds": [
+        101
+      ],
+      "roles": [
+        "pilot"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 965556,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.002,
+      "matching_ngram_occurrences": 1,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "seed101",
+      "seeds": [
+        101
+      ],
+      "roles": [
+        "pilot"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 965556,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "seed101",
+      "seeds": [
+        101
+      ],
+      "roles": [
+        "pilot"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 965556,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.002,
+      "matching_ngram_occurrences": 2,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "seed101",
+      "seeds": [
+        101
+      ],
+      "roles": [
+        "pilot"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_validation",
+      "heldout_chunks": 461,
+      "reference_unique_13grams": 965556,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "seed101",
+      "seeds": [
+        101
+      ],
+      "roles": [
+        "pilot"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_test",
+      "heldout_chunks": 529,
+      "reference_unique_13grams": 965556,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "seed11",
+      "seeds": [
+        11
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 964992,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.034,
+      "matching_ngram_occurrences": 17,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "seed11",
+      "seeds": [
+        11
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 964992,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "seed11",
+      "seeds": [
+        11
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 964992,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "seed11",
+      "seeds": [
+        11
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 964992,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "seed11",
+      "seeds": [
+        11
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_validation",
+      "heldout_chunks": 461,
+      "reference_unique_13grams": 964992,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "seed11",
+      "seeds": [
+        11
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_test",
+      "heldout_chunks": 529,
+      "reference_unique_13grams": 964992,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "seed22",
+      "seeds": [
+        22
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 965238,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.03,
+      "matching_ngram_occurrences": 17,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "seed22",
+      "seeds": [
+        22
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 965238,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.044,
+      "matching_ngram_occurrences": 22,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "seed22",
+      "seeds": [
+        22
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 965238,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "seed22",
+      "seeds": [
+        22
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 965238,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "seed22",
+      "seeds": [
+        22
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_validation",
+      "heldout_chunks": 461,
+      "reference_unique_13grams": 965238,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "seed22",
+      "seeds": [
+        22
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_test",
+      "heldout_chunks": 529,
+      "reference_unique_13grams": 965238,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "seed33",
+      "seeds": [
+        33
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 966829,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "seed33",
+      "seeds": [
+        33
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 966829,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "seed33",
+      "seeds": [
+        33
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 966829,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "seed33",
+      "seeds": [
+        33
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 966829,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "seed33",
+      "seeds": [
+        33
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_validation",
+      "heldout_chunks": 461,
+      "reference_unique_13grams": 966829,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "seed33",
+      "seeds": [
+        33
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_test",
+      "heldout_chunks": 529,
+      "reference_unique_13grams": 966829,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "union_seeds101_11_22_33",
+      "seeds": [
+        101,
+        11,
+        22,
+        33
+      ],
+      "roles": [
+        "pilot",
+        "formal",
+        "formal",
+        "formal"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 3854014,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.034,
+      "matching_ngram_occurrences": 19,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "union diagnostic; no model trained on union",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "union_seeds101_11_22_33",
+      "seeds": [
+        101,
+        11,
+        22,
+        33
+      ],
+      "roles": [
+        "pilot",
+        "formal",
+        "formal",
+        "formal"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 3854014,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.044,
+      "matching_ngram_occurrences": 23,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "union diagnostic; no model trained on union",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "union_seeds101_11_22_33",
+      "seeds": [
+        101,
+        11,
+        22,
+        33
+      ],
+      "roles": [
+        "pilot",
+        "formal",
+        "formal",
+        "formal"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 3854014,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "union diagnostic; no model trained on union",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "union_seeds101_11_22_33",
+      "seeds": [
+        101,
+        11,
+        22,
+        33
+      ],
+      "roles": [
+        "pilot",
+        "formal",
+        "formal",
+        "formal"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 3854014,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.002,
+      "matching_ngram_occurrences": 2,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "union diagnostic; no model trained on union",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "union_seeds101_11_22_33",
+      "seeds": [
+        101,
+        11,
+        22,
+        33
+      ],
+      "roles": [
+        "pilot",
+        "formal",
+        "formal",
+        "formal"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_validation",
+      "heldout_chunks": 461,
+      "reference_unique_13grams": 3854014,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "union diagnostic; no model trained on union",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-1b",
+      "pool": "union_seeds101_11_22_33",
+      "seeds": [
+        101,
+        11,
+        22,
+        33
+      ],
+      "roles": [
+        "pilot",
+        "formal",
+        "formal",
+        "formal"
+      ],
+      "revisions": [
+        "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_test",
+      "heldout_chunks": 529,
+      "reference_unique_13grams": 3854014,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "union diagnostic; no model trained on union",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "seed101",
+      "seeds": [
+        101
+      ],
+      "roles": [
+        "pilot"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 964420,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.064,
+      "matching_ngram_occurrences": 32,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "seed101",
+      "seeds": [
+        101
+      ],
+      "roles": [
+        "pilot"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 964420,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.064,
+      "matching_ngram_occurrences": 64,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "seed101",
+      "seeds": [
+        101
+      ],
+      "roles": [
+        "pilot"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 964420,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "seed101",
+      "seeds": [
+        101
+      ],
+      "roles": [
+        "pilot"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 964420,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.002,
+      "matching_ngram_occurrences": 1,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "seed101",
+      "seeds": [
+        101
+      ],
+      "roles": [
+        "pilot"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_validation",
+      "heldout_chunks": 461,
+      "reference_unique_13grams": 964420,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "seed101",
+      "seeds": [
+        101
+      ],
+      "roles": [
+        "pilot"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_test",
+      "heldout_chunks": 529,
+      "reference_unique_13grams": 964420,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "seed11",
+      "seeds": [
+        11
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 963726,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.06,
+      "matching_ngram_occurrences": 37,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "seed11",
+      "seeds": [
+        11
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 963726,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.06,
+      "matching_ngram_occurrences": 60,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "seed11",
+      "seeds": [
+        11
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 963726,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "seed11",
+      "seeds": [
+        11
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 963726,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "seed11",
+      "seeds": [
+        11
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_validation",
+      "heldout_chunks": 461,
+      "reference_unique_13grams": 963726,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "seed11",
+      "seeds": [
+        11
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_test",
+      "heldout_chunks": 529,
+      "reference_unique_13grams": 963726,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "seed22",
+      "seeds": [
+        22
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 965181,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.002,
+      "matching_ngram_occurrences": 2,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "seed22",
+      "seeds": [
+        22
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 965181,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.004,
+      "matching_ngram_occurrences": 4,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "seed22",
+      "seeds": [
+        22
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 965181,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "seed22",
+      "seeds": [
+        22
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 965181,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.002,
+      "matching_ngram_occurrences": 1,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "seed22",
+      "seeds": [
+        22
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_validation",
+      "heldout_chunks": 461,
+      "reference_unique_13grams": 965181,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "seed22",
+      "seeds": [
+        22
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_test",
+      "heldout_chunks": 529,
+      "reference_unique_13grams": 965181,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "seed33",
+      "seeds": [
+        33
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 963455,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.006,
+      "matching_ngram_occurrences": 5,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "seed33",
+      "seeds": [
+        33
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 963455,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.02,
+      "matching_ngram_occurrences": 18,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "seed33",
+      "seeds": [
+        33
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 963455,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "seed33",
+      "seeds": [
+        33
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 963455,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "seed33",
+      "seeds": [
+        33
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_validation",
+      "heldout_chunks": 461,
+      "reference_unique_13grams": 963455,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "seed33",
+      "seeds": [
+        33
+      ],
+      "roles": [
+        "formal"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_test",
+      "heldout_chunks": 529,
+      "reference_unique_13grams": 963455,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "single generated pool",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "union_seeds101_11_22_33",
+      "seeds": [
+        101,
+        11,
+        22,
+        33
+      ],
+      "roles": [
+        "pilot",
+        "formal",
+        "formal",
+        "formal"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 3845965,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.064,
+      "matching_ngram_occurrences": 45,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "union diagnostic; no model trained on union",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "union_seeds101_11_22_33",
+      "seeds": [
+        101,
+        11,
+        22,
+        33
+      ],
+      "roles": [
+        "pilot",
+        "formal",
+        "formal",
+        "formal"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "finemath_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 3845965,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.064,
+      "matching_ngram_occurrences": 115,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "union diagnostic; no model trained on union",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "union_seeds101_11_22_33",
+      "seeds": [
+        101,
+        11,
+        22,
+        33
+      ],
+      "roles": [
+        "pilot",
+        "formal",
+        "formal",
+        "formal"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_validation",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 3845965,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "union diagnostic; no model trained on union",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "union_seeds101_11_22_33",
+      "seeds": [
+        101,
+        11,
+        22,
+        33
+      ],
+      "roles": [
+        "pilot",
+        "formal",
+        "formal",
+        "formal"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "c4_test",
+      "heldout_chunks": 979,
+      "reference_unique_13grams": 3845965,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.002,
+      "matching_ngram_occurrences": 1,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "union diagnostic; no model trained on union",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "union_seeds101_11_22_33",
+      "seeds": [
+        101,
+        11,
+        22,
+        33
+      ],
+      "roles": [
+        "pilot",
+        "formal",
+        "formal",
+        "formal"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_validation",
+      "heldout_chunks": 461,
+      "reference_unique_13grams": 3845965,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "union diagnostic; no model trained on union",
+      "extra_scope": false
+    },
+    {
+      "model": "pythia-2.8b",
+      "pool": "union_seeds101_11_22_33",
+      "seeds": [
+        101,
+        11,
+        22,
+        33
+      ],
+      "roles": [
+        "pilot",
+        "formal",
+        "formal",
+        "formal"
+      ],
+      "revisions": [
+        "2a259cdd96a4beb1cdf467512e3904197345f6a9"
+      ],
+      "data_version": "extended_v1",
+      "heldout": "wikitext103_test",
+      "heldout_chunks": 529,
+      "reference_unique_13grams": 3845965,
+      "exact_full_chunk_matches": 0,
+      "exact_matching_chunk_indices": [],
+      "exact_matching_doc_ids": [],
+      "ngram_fraction_max": 0.0,
+      "matching_ngram_occurrences": 0,
+      "hashed_threshold_flagged_chunks": [],
+      "confirmed_13gram_threshold_flagged_chunks": [],
+      "confirmed_flag_fractions": {},
+      "flagged_doc_ids": [],
+      "scope": "union diagnostic; no model trained on union",
+      "extra_scope": false
+    }
+  ],
+  "interpretation": "Data-only overlap diagnostic; zero flags do not establish semantic independence or absence from teacher pretraining. Union reports do not add experimental replicates."
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C410_behavior_findings_format_actual_v1/whole_parent_timing.json",
+    "sha256": "290cb96d9f26f708e90a84f7d5db21f17023516de4253637de122af5e63f3517",
+    "bytes": 723
+  },
+  "original_wall_pointer": "/whole_process_wall_seconds",
+  "wall_seconds": 0.036504603922367096,
+  "CPU_component_pointers": [
+    "/child_user_seconds",
+    "/child_system_seconds"
+  ],
+  "CPU_components": {
+    "child_user_seconds": 0.0272,
+    "child_system_seconds": 0.008057
+  },
+  "recorded_inclusive_CPU_seconds": 0.035257,
+  "original_returncode": 0,
+  "scope": "Popen spawn through process exit, copying/formatting existing C410 reviewer CSVs and already open C410 NLL mean/SD. No new inference/statistics/selection. Manual writing overall unknown.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall; sum only the named user/system components. Failure rc retained. No calendar-derived elapsed.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

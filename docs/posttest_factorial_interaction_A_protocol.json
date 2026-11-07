@@ -1,0 +1,52 @@
+{
+  "declared_at_utc": "2026-11-06T10:38:07.757946+00:00",
+  "status": "post_test_exploratory_analysis_declared",
+  "primary_and_A_NLL_scores_already_seen": true,
+  "not_preregistered_confirmatory_analysis": true,
+  "purpose": "Complete the descriptive 2x2 source-by-objective interpretation at every fixed lambda, without choosing settings from tests.",
+  "scope": {
+    "phase": "supplement_A_nll",
+    "endpoint": "final",
+    "groups": [
+      "B1",
+      "B2",
+      "B3",
+      "B4"
+    ],
+    "lambdas": [
+      0.01,
+      0.05,
+      0.1,
+      0.5,
+      1,
+      5,
+      10
+    ],
+    "seeds": [
+      11,
+      22,
+      33
+    ],
+    "target_prediction_tokens": 10000000,
+    "replay_prediction_tokens": 500000
+  },
+  "metrics": [
+    "g_new",
+    "f_old_c4",
+    "f_old_wikitext",
+    "g_new_equal_document",
+    "f_old_c4_equal_document",
+    "f_old_wikitext_equal_document"
+  ],
+  "interaction_formula": "(B4-B3)-(B2-B1), paired within the same seed and lambda",
+  "summaries": "All individual values, mean and sample SD across exactly3 pipeline seeds; no new p-values, significance, equivalence test, or bootstrap.",
+  "interpretation": "An additive source/objective response would have zero interaction contrast at that setting; nonzero observed contrast alone is not proof of a specific causal mechanism. Positive G is better; negative F is better. Across-lambda points share seeds/data and are not independent replicates.",
+  "source": {
+    "path": "results/supplemental_analysis_v2/supplement_A_nll/final/endpoints.csv",
+    "sha256": "211b2cae2bf81f2b25902061797762f12dd61083c3aead5f8573e96101d5ef51"
+  },
+  "new_training_or_forward": false,
+  "frozen_primary_or_selected_policy_statistics_changed": false,
+  "B_C_behavior_scores_authorized": false,
+  "output_root": "results/posttest_factorial_interaction_A_v1"
+}

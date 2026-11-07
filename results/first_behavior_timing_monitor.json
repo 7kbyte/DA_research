@@ -1,0 +1,37 @@
+{
+  "recorded_at_utc": "2026-11-06T06:13:54.208959+00:00",
+  "job_id": "behavior_pythia-410m_109f59e1e08b4d91880e_initial",
+  "state_snapshot": {
+    "status": "completed",
+    "gpu": "0",
+    "pid": 3004843,
+    "started_at_utc": "2026-11-06T06:10:51.397042+00:00",
+    "ended_at_utc": "2026-11-06T06:12:31.540539+00:00",
+    "elapsed_seconds": 100.13961291313171,
+    "returncode": 0,
+    "missing_outputs": []
+  },
+  "manifest": "docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+  "manifest_sha256": "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+  "authority": "docs/first_behavior_timing_execution.json",
+  "authority_sha256": "856b9a49442dee5a4c643834b4ae314306fc57bb19366f9496e2b537719aef59",
+  "source_state_sha256_at_read": "c3f84e0ad313745f53ea690ebd03e433a4b328e7642d7c7313584a1bd7ce25b0",
+  "scores_or_predictions_parsed": false,
+  "model_inference_started_by_inspector": false,
+  "complete_timing_available": true,
+  "execution": {
+    "verification_wall_seconds": 0.9213802516460419,
+    "inference_subprocess_wall_seconds": 91.28385011479259,
+    "started_at_utc": "2026-11-06T06:10:51.428466+00:00",
+    "finished_at_utc": "2026-11-06T06:12:26.039670+00:00",
+    "preflight_environment": {
+      "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+      "cuda_version": "12.4",
+      "gpu_name": "NVIDIA H100 80GB HBM3"
+    }
+  },
+  "attestation": "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/baselines/109f59e1e08b4d91880e04fc18414e3548cd0718cfb5b3fdab10b946d8639ab1_execution.json",
+  "attestation_sha256": "7a6a511be6c6856332e60cfa933e133c567fdb9c644a322cff88657ce6436210",
+  "output_hashes_valid": true,
+  "expected_output_files_verified": 3
+}

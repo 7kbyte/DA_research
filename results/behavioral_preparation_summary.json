@@ -8,7 +8,6 @@
     "acc_norm"
   ],
   "official_unique_primary_metric": null,
-  "requires_before_results": "If a single display metric is required, root must name it at freeze; official task YAML defines both metrics without one primary.",
   "licenses": {
     "piqa": {
       "license": "AFL-3.0",
@@ -73,9 +72,15 @@
   },
   "all_choice_tokenization_matches_official": true,
   "audit": "results/behavioral_preparation_audit.json",
-  "cpu_scientific_tests": 8,
+  "cpu_scientific_tests": 9,
   "real_model_inference_performed": false,
   "gpu_used_for_behavioral_preparation": false,
   "cli": "scripts/evaluate_tasks.py",
-  "whole_repository_tests_passed_at_preparation": 48
+  "whole_repository_tests_passed_at_preparation": 48,
+  "project_primary_metric": "acc_norm",
+  "project_auxiliary_metric": "acc",
+  "metric_display_frozen_before_any_real_task_results": true,
+  "inference_gate": "All task inference still waits for root unified supplementary-protocol freeze; strict recalibration ongoing.",
+  "additional_causal_shift_check": "Nonuniform Markov logits independently verify the context-last-token predicts the delimiter and delimiter predicts the first answer token.",
+  "execution_cli_policy": "run_evaluate.py and evaluate_tasks.py share strict/SDP/TF32/cuDNN defaults; baseline/adapted matching enforced."
 }

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C2p8B_analysis_preparation_2130_v1/metadata_schema_whole_child_timing.json",
+    "sha256": "1a4d7b14839281016da0209d0792571e1fe050c20d3d4ffd626aff4bb347018b",
+    "bytes": 583
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 0.2747389040887356,
+  "CPU_component_pointers": [
+    "/child_user_seconds",
+    "/child_system_seconds"
+  ],
+  "CPU_components": {
+    "child_user_seconds": 0.26512399999999997,
+    "child_system_seconds": 0.119657
+  },
+  "recorded_inclusive_CPU_seconds": 0.384781,
+  "original_returncode": 0,
+  "scope": "v3 load_plan schema and small training-state/cache receipt + current five-stat only, never inspect/check/analyze or score/CP/base payload read.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall; sum only the named user/system components. Failure rc retained. No calendar-derived elapsed.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

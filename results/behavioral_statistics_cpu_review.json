@@ -1,0 +1,101 @@
+{
+  "scope": "CPU synthetic review and documentation only; no pretrained or task inference",
+  "numpy_version": "1.24.4",
+  "cuda_initialized": false,
+  "paired_state_order": [
+    "CC",
+    "CW",
+    "WC",
+    "WW"
+  ],
+  "paired_draw_exhaustive_cases": 256,
+  "grouped_and_explicit_paired_delta_distributions_exactly_equal": true,
+  "synthetic_delta_mean": 0,
+  "synthetic_delta_variance": 0.125,
+  "same_seed_and_item_permutation_reproducible": true,
+  "acc_and_acc_norm_separate_synthetic_deltas": {
+    "acc": 1.0,
+    "acc_norm": 0.0
+  },
+  "seed_derivation_example": {
+    "job_id": "behavior_model_run_final",
+    "task": "piqa",
+    "metric": "acc_norm",
+    "base": 20261106,
+    "derived_seed": 1680387993
+  },
+  "interval_interpretation": "IID/exchangeable question resampling assumption; shared activities/contexts may violate it. Conditional description only, not automatic target-population or training-randomness coverage.",
+  "table_priority": "Three training-seed individual values plus sample SD(ddof=1); question intervals supplementary.",
+  "exposure_cost_review": "Final and best use distinct checkpoint exposures; no training-cost field is imported or prorated in behavior endpoint summaries. Full-training cost stays in SHA-bound completed run summary and is counted once per run.",
+  "limitations": [
+    "Different jobs use distinct deterministic Monte Carlo streams; do not subtract marginal interval endpoints to claim a pairwise model CI.",
+    "Intervals do not account for same-source activity/context clusters."
+  ],
+  "core_sha256_before": {
+    "src/replay_study/execution.py": "70ed6b3d63f950ffc00f2c671f20e0d842c154f4cbf1648fe9a6511bbd077bf5",
+    "src/replay_study/tasks.py": "c631b1c81386193b645b59a3a82eb73dfacc6d9d1302b95e997f0de4afc47a51",
+    "scripts/evaluate_tasks.py": "cfc4f149b021740f90245e3fa822f801f30c82f6ba580d43aeec4857cbab9981",
+    "src/replay_study/evaluate.py": "d9648b4fbc891746a9bafe9e9639e2ee584521ba68bd949d2091484c833c3c46"
+  },
+  "core_sha256_after": {
+    "src/replay_study/execution.py": "70ed6b3d63f950ffc00f2c671f20e0d842c154f4cbf1648fe9a6511bbd077bf5",
+    "src/replay_study/tasks.py": "c631b1c81386193b645b59a3a82eb73dfacc6d9d1302b95e997f0de4afc47a51",
+    "scripts/evaluate_tasks.py": "cfc4f149b021740f90245e3fa822f801f30c82f6ba580d43aeec4857cbab9981",
+    "src/replay_study/evaluate.py": "d9648b4fbc891746a9bafe9e9639e2ee584521ba68bd949d2091484c833c3c46"
+  },
+  "frozen_core_changed": false,
+  "reviewed_source_sha256": {
+    "src/replay_study/behavioral_analysis.py": "18e6b57dc1914119743e87170637a46cf7e9b5d99ad704b42b3c0959e2a0e280",
+    "scripts/make_behavioral_queue.py": "72db54b8ede152ecbbe898db9aad38913946161a140eb51c2c9c2e3fa9474c3c",
+    "scripts/run_frozen_behavioral.py": "2420b2267a4245f87b2eb7fe97d8e8cb46f4619fc6ef809c995539a57ca57015",
+    "docs/行为队列与不确定性汇总.md": "4e52447bb7229b52052ac5b10751c8e236aa4fdfd9a3692dda6acbb9e9a5a5f5"
+  },
+  "all_three_item_transition_patterns_exact": 64,
+  "three_item_explicit_paired_draws_checked": 1728,
+  "main_planned_seed_stream_check": {
+    "registry": "configs/formal_deterministic_registry.json",
+    "registry_sha256": "284fa9dd939dab75195afe3f968e0eb6411501b26b8a5caa1962b4ee5e9f372b",
+    "model_tag_for_check": "pythia-410m",
+    "streams": 292,
+    "unique_derived_seeds": 292,
+    "seed_collisions": 0,
+    "inference_run": false
+  },
+  "completed_run_exposure_cost_trace_example": {
+    "run_id": "formal_deterministic_B0_s11_b0_w0",
+    "summary_path": "/tmp/grad-research-20261106/worktree/results/runs/formal_deterministic_B0_s11_b0_w0_summary.json",
+    "summary_sha256": "7dc815fdfbef8f8b0802d237788aed561967254eb467cca5a23a717626c526a7",
+    "final_target_prediction_tokens": 10000000,
+    "final_replay_prediction_tokens": 0,
+    "best_target_prediction_tokens": 3270400,
+    "best_replay_prediction_tokens": 0,
+    "completed_counter_cost_fields": {
+      "training_seconds": 171.27215100079775,
+      "validation_seconds": 132.31857142597437,
+      "checkpoint_seconds": 8.627221465110779,
+      "setup_seconds": 3.64368050172925,
+      "training_teacher_forward_seconds": 0.0,
+      "validation_teacher_forward_seconds": 30.87992666435242,
+      "validation_kl_arithmetic_seconds": 23.881538114547734,
+      "prior_elapsed_seconds": 307.3515771254897,
+      "elapsed_seconds": 312.3435116559267,
+      "total_accounted_wall_seconds": 315.9871926009655
+    },
+    "completed_timing": {
+      "training_teacher_timing_mode": "cuda_event_elapsed",
+      "training_teacher_forward_seconds_complete": true,
+      "training_teacher_forward_seconds_nested_in": "training_seconds",
+      "validation_teacher_forward_seconds_nested_in": "validation_seconds",
+      "validation_kl_arithmetic_seconds_nested_in": "validation_seconds",
+      "nested_timers_are_additive_costs": false,
+      "note": "Teacher and KL sub-timers are already included in their parent totals; do not add twice."
+    },
+    "behavior_endpoint_cost_fields_imported": [],
+    "full_training_cost_prorated_to_best": false
+  },
+  "reviewed_at_utc": "2026-11-06T05:14:49.309355+00:00",
+  "existing_cpu_regression_tests": {
+    "passed": 14,
+    "command": "PYTHONPATH=src OMP_NUM_THREADS=1 python -m pytest tests/test_behavioral_analysis.py tests/test_behavioral_queue.py -q"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "authorized_at_utc": "2026-11-06T07:01:33.859703+00:00",
+  "authorized_by": "root",
+  "phase": "primary",
+  "queue_phase": "primary_independent_nll_test",
+  "physical_jobs": 67,
+  "manifest_sha256": "d1502bcaff5cdcd75d984a4b8776f1cb4027b596f474835bfe9ed18875d9fd18",
+  "source_sha256": {
+    "docs/primary_evaluation_v2_execution_matched_nll_manifest.json": "d1502bcaff5cdcd75d984a4b8776f1cb4027b596f474835bfe9ed18875d9fd18",
+    "configs/primary_evaluation_v2_execution_matched_nll_queue.json": "1428e024f710873a09138ccd47742e2897a6eb25fe3d9b35523153d43e7df346",
+    "results/formal_run_audit.json": "3ab507ecaf9953e7056649f2fee1320467b0ba3b23f65e6584cb876dbae0cf00",
+    "results/extended_formal_freeze.json": "50786c00724008eed6a96cb753b442295152f9dea96d73a2c75f8fcf16033528",
+    "docs/extended_2p8b_horizon_selection.json": "cd9fe9354341464b584d7188c465fe063feeef09fde3f49ef5b4f809ddd8f02d",
+    "configs/lambda_sweep_deterministic_registry.json": "e342e67b23ece61a21ece4187002f6d1eb75c0cb345bf16f50f619060e1eacf4",
+    "configs/nll_scope_execution_freeze_v1.json": "2b9be7cc136b2f85808568a9536b98b1d8499b7eb0d615f03f23c0c7ce4ca77d",
+    "results/supplemental_compute_budget.json": "a7e77d56e865e6fe877343b5c41481ca319d06608b98100dbd51de35c9b2dfc8",
+    "src/replay_study/lambda_analysis.py": "573416f6db4c0b79d8de59f4b8c7632755e193a3f5415692e9abfac0356e20c5"
+  },
+  "training_methods_grids_and_horizons_frozen": true,
+  "independent_test_or_behavior_scores_seen_before_authorization": false,
+  "execution": "Append exact frozen main 67 NLL jobs with priority to existing single four-GPU scheduler only",
+  "unseal_gate": "Only after all67 completed and all input/output/attestation checks pass, analyze main NLL final and best; record first real test access UTC",
+  "behavior_and_other_phases_remain_sealed": true,
+  "no_test_driven_model_or_hyperparameter_selection": true,
+  "runtime_reason": "NLL only advances final evaluation within remaining compute margin; remaining66 main behavior deferred"
+}

@@ -1,0 +1,32 @@
+{
+  "recorded_at_utc": "2026-11-06T04:21:27.273765+00:00",
+  "scope": "Generation environment observed without changing any backend/global flags",
+  "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+  "cuda_version": "12.4",
+  "cudnn_version": 90100,
+  "cuda_sdp_flash_enabled": true,
+  "cuda_sdp_mem_efficient_enabled": true,
+  "cuda_sdp_math_enabled": true,
+  "deterministic_algorithms_enabled": false,
+  "cudnn_deterministic": false,
+  "cudnn_benchmark": false,
+  "allow_tf32_matmul": false,
+  "allow_tf32_cudnn": true,
+  "model_loader_attn_implementation": "sdpa explicitly requested by replay_study.evaluate.load_causal_model",
+  "actual_sdp_kernel": "PyTorch runtime dispatch; no claim of per-call kernel capture",
+  "generation_environment_not_modified": true,
+  "background_command_environment": {
+    "OMP_NUM_THREADS": "4",
+    "MKL_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "4"
+  },
+  "root_notice": "Training backward nondeterminism investigation does not trigger a change to already frozen forward generation. Generation continues unchanged.",
+  "measurement_process": "CPU-only observer of unchanged Torch defaults; background generation backend request is verified from loader code. Actual per-call SDP kernel was not profiled.",
+  "cuda_sdp_cudnn_enabled": false,
+  "fourth_backend_observation": {
+    "utc": "2026-11-06T04:38:28.961814+00:00",
+    "process": "separate fresh CPU-only observer; no CUDA initialization; running generation process flags were not changed",
+    "cudnn_sdp_api_available": true,
+    "cuda_initialized": false
+  }
+}

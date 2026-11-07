@@ -1,0 +1,1237 @@
+[
+  {
+    "source": "P",
+    "selector": {
+      "comparison": "B2-B1",
+      "metric": "f_old_c4",
+      "ratio": "0.05"
+    },
+    "existing_row": {
+      "role": "primary",
+      "phase_name": "primary",
+      "model_tag": "pythia-410m",
+      "data_family": "main_v3",
+      "checkpoint": "final",
+      "comparison": "B2-B1",
+      "ratio": "0.05",
+      "weight": "0.05",
+      "learning_rate": "3e-05",
+      "bank_chunks": "",
+      "metric": "f_old_c4",
+      "mean": "-0.06827082607292478",
+      "std_ddof1": "0.0005336299102426161",
+      "n": "3",
+      "expected_n": "3",
+      "complete": "True",
+      "replicate_unit": "training_seed"
+    }
+  },
+  {
+    "source": "P",
+    "selector": {
+      "comparison": "B2-B1",
+      "metric": "f_old_wikitext",
+      "ratio": "0.05"
+    },
+    "existing_row": {
+      "role": "primary",
+      "phase_name": "primary",
+      "model_tag": "pythia-410m",
+      "data_family": "main_v3",
+      "checkpoint": "final",
+      "comparison": "B2-B1",
+      "ratio": "0.05",
+      "weight": "0.05",
+      "learning_rate": "3e-05",
+      "bank_chunks": "",
+      "metric": "f_old_wikitext",
+      "mean": "-0.07430694094549661",
+      "std_ddof1": "0.007160972455961831",
+      "n": "3",
+      "expected_n": "3",
+      "complete": "True",
+      "replicate_unit": "training_seed"
+    }
+  },
+  {
+    "source": "H",
+    "selector": {
+      "left_group": "B2",
+      "right_group": "B1",
+      "task": "piqa",
+      "metric": "acc_norm",
+      "checkpoint_kind": "final",
+      "ratio": "0.05"
+    },
+    "existing_row": {
+      "role": "primary",
+      "phase_name": "primary",
+      "data_family": "main_v3",
+      "model_tag": "pythia-410m",
+      "baseline_group": "109f59e1e08b4d91880e04fc18414e3548cd0718cfb5b3fdab10b946d8639ab1",
+      "checkpoint_kind": "final",
+      "ratio": "0.05",
+      "weight": "0.05",
+      "learning_rate": "3e-05",
+      "task": "piqa",
+      "metric": "acc_norm",
+      "left_group": "B2",
+      "right_group": "B1",
+      "quantity": "accuracy_left_minus_right",
+      "mean": "-0.002357635110627476",
+      "std_ddof1": "0.0015705937681981072",
+      "n_training_seeds": "3"
+    }
+  },
+  {
+    "source": "H",
+    "selector": {
+      "left_group": "B2",
+      "right_group": "B1",
+      "task": "hellaswag",
+      "metric": "acc_norm",
+      "checkpoint_kind": "final",
+      "ratio": "0.05"
+    },
+    "existing_row": {
+      "role": "primary",
+      "phase_name": "primary",
+      "data_family": "main_v3",
+      "model_tag": "pythia-410m",
+      "baseline_group": "109f59e1e08b4d91880e04fc18414e3548cd0718cfb5b3fdab10b946d8639ab1",
+      "checkpoint_kind": "final",
+      "ratio": "0.05",
+      "weight": "0.05",
+      "learning_rate": "3e-05",
+      "task": "hellaswag",
+      "metric": "acc_norm",
+      "left_group": "B2",
+      "right_group": "B1",
+      "quantity": "accuracy_left_minus_right",
+      "mean": "-0.008132510124145268",
+      "std_ddof1": "0.0024561257032046464",
+      "n_training_seeds": "3"
+    }
+  },
+  {
+    "source": "P",
+    "selector": {
+      "comparison": "M-B4",
+      "metric": "g_new",
+      "ratio": "0.05"
+    },
+    "existing_row": {
+      "role": "primary",
+      "phase_name": "primary",
+      "model_tag": "pythia-410m",
+      "data_family": "main_v3",
+      "checkpoint": "final",
+      "comparison": "M-B4",
+      "ratio": "0.05",
+      "weight": "0.05",
+      "learning_rate": "3e-05",
+      "bank_chunks": "",
+      "metric": "g_new",
+      "mean": "0.0076430051840515505",
+      "std_ddof1": "0.016675580443895385",
+      "n": "3",
+      "expected_n": "3",
+      "complete": "True",
+      "replicate_unit": "training_seed"
+    }
+  },
+  {
+    "source": "P",
+    "selector": {
+      "comparison": "M-B4",
+      "metric": "f_old_wikitext",
+      "ratio": "0.05"
+    },
+    "existing_row": {
+      "role": "primary",
+      "phase_name": "primary",
+      "model_tag": "pythia-410m",
+      "data_family": "main_v3",
+      "checkpoint": "final",
+      "comparison": "M-B4",
+      "ratio": "0.05",
+      "weight": "0.05",
+      "learning_rate": "3e-05",
+      "bank_chunks": "",
+      "metric": "f_old_wikitext",
+      "mean": "0.0010696997310931284",
+      "std_ddof1": "0.018534505388568285",
+      "n": "3",
+      "expected_n": "3",
+      "complete": "True",
+      "replicate_unit": "training_seed"
+    }
+  },
+  {
+    "source": "P",
+    "selector": {
+      "comparison": "C-B4",
+      "metric": "g_new",
+      "ratio": "0.05"
+    },
+    "existing_row": {
+      "role": "primary",
+      "phase_name": "primary",
+      "model_tag": "pythia-410m",
+      "data_family": "main_v3",
+      "checkpoint": "final",
+      "comparison": "C-B4",
+      "ratio": "0.05",
+      "weight": "0.05",
+      "learning_rate": "3e-05",
+      "bank_chunks": "",
+      "metric": "g_new",
+      "mean": "-0.012187176110316203",
+      "std_ddof1": "0.01419785514948035",
+      "n": "3",
+      "expected_n": "3",
+      "complete": "True",
+      "replicate_unit": "training_seed"
+    }
+  },
+  {
+    "source": "P",
+    "selector": {
+      "comparison": "C-B4",
+      "metric": "f_old_c4",
+      "ratio": "0.05"
+    },
+    "existing_row": {
+      "role": "primary",
+      "phase_name": "primary",
+      "model_tag": "pythia-410m",
+      "data_family": "main_v3",
+      "checkpoint": "final",
+      "comparison": "C-B4",
+      "ratio": "0.05",
+      "weight": "0.05",
+      "learning_rate": "3e-05",
+      "bank_chunks": "",
+      "metric": "f_old_c4",
+      "mean": "0.02265960980108502",
+      "std_ddof1": "0.010639770247561822",
+      "n": "3",
+      "expected_n": "3",
+      "complete": "True",
+      "replicate_unit": "training_seed"
+    }
+  },
+  {
+    "source": "BC",
+    "selector": {
+      "group": "B4",
+      "bank_chunks": "20",
+      "metric": "teacher_nll_mean"
+    },
+    "existing_row": {
+      "group": "B4",
+      "bank_chunks": "20",
+      "metric": "teacher_nll_mean",
+      "mean": "3.2527475473284726",
+      "std_ddof1": "0.147084787940686",
+      "n": "10",
+      "expected_selection_draws": "10",
+      "complete": "True",
+      "replicate_unit": "selection_seed",
+      "n_training_seeds": "1",
+      "n_generation_pools": "1",
+      "scope": "selection-draw variability conditional on generation pool 11 and training shuffle 11; not independent training-seed uncertainty"
+    }
+  },
+  {
+    "source": "BC",
+    "selector": {
+      "group": "M",
+      "bank_chunks": "20",
+      "metric": "teacher_nll_mean"
+    },
+    "existing_row": {
+      "group": "M",
+      "bank_chunks": "20",
+      "metric": "teacher_nll_mean",
+      "mean": "3.25388526186347",
+      "std_ddof1": "0.07530416276642844",
+      "n": "10",
+      "expected_selection_draws": "10",
+      "complete": "True",
+      "replicate_unit": "selection_seed",
+      "n_training_seeds": "1",
+      "n_generation_pools": "1",
+      "scope": "selection-draw variability conditional on generation pool 11 and training shuffle 11; not independent training-seed uncertainty"
+    }
+  },
+  {
+    "source": "BC",
+    "selector": {
+      "group": "B4",
+      "bank_chunks": "196",
+      "metric": "teacher_nll_mean"
+    },
+    "existing_row": {
+      "group": "B4",
+      "bank_chunks": "196",
+      "metric": "teacher_nll_mean",
+      "mean": "3.2938392705455124",
+      "std_ddof1": "0.053864503132650766",
+      "n": "10",
+      "expected_selection_draws": "10",
+      "complete": "True",
+      "replicate_unit": "selection_seed",
+      "n_training_seeds": "1",
+      "n_generation_pools": "1",
+      "scope": "selection-draw variability conditional on generation pool 11 and training shuffle 11; not independent training-seed uncertainty"
+    }
+  },
+  {
+    "source": "BC",
+    "selector": {
+      "group": "M",
+      "bank_chunks": "196",
+      "metric": "teacher_nll_mean"
+    },
+    "existing_row": {
+      "group": "M",
+      "bank_chunks": "196",
+      "metric": "teacher_nll_mean",
+      "mean": "3.244874863432986",
+      "std_ddof1": "0.01808630544784901",
+      "n": "10",
+      "expected_selection_draws": "10",
+      "complete": "True",
+      "replicate_unit": "selection_seed",
+      "n_training_seeds": "1",
+      "n_generation_pools": "1",
+      "scope": "selection-draw variability conditional on generation pool 11 and training shuffle 11; not independent training-seed uncertainty"
+    }
+  },
+  {
+    "source": "B",
+    "selector": {
+      "group": "B4",
+      "bank_chunks": "20",
+      "metric": "g_new"
+    },
+    "existing_row": {
+      "bank_chunks": "20",
+      "group": "B4",
+      "metric": "g_new",
+      "mean": "-0.00024300083287474017",
+      "std_ddof1": "0.012014302013431203",
+      "n": "10"
+    }
+  },
+  {
+    "source": "B",
+    "selector": {
+      "group": "M",
+      "bank_chunks": "20",
+      "metric": "g_new"
+    },
+    "existing_row": {
+      "bank_chunks": "20",
+      "group": "M",
+      "metric": "g_new",
+      "mean": "-0.0027383500792954596",
+      "std_ddof1": "0.01262610246491879",
+      "n": "10"
+    }
+  },
+  {
+    "source": "B",
+    "selector": {
+      "group": "B4",
+      "bank_chunks": "196",
+      "metric": "g_new"
+    },
+    "existing_row": {
+      "bank_chunks": "196",
+      "group": "B4",
+      "metric": "g_new",
+      "mean": "0.0041922232290732",
+      "std_ddof1": "0.009500396675135294",
+      "n": "10"
+    }
+  },
+  {
+    "source": "B",
+    "selector": {
+      "group": "M",
+      "bank_chunks": "196",
+      "metric": "g_new"
+    },
+    "existing_row": {
+      "bank_chunks": "196",
+      "group": "M",
+      "metric": "g_new",
+      "mean": "0.008244320976368291",
+      "std_ddof1": "0.01075969092311129",
+      "n": "10"
+    }
+  },
+  {
+    "source": "BP",
+    "selector": {
+      "bank_chunks": "20",
+      "comparison": "M-B4",
+      "metric": "g_new"
+    },
+    "existing_row": {
+      "bank_chunks": "20",
+      "comparison": "M-B4",
+      "metric": "g_new",
+      "mean": "-0.0024953492464207193",
+      "std_ddof1": "0.021862719242943265",
+      "n": "10"
+    }
+  },
+  {
+    "source": "BP",
+    "selector": {
+      "bank_chunks": "20",
+      "comparison": "M-B4",
+      "metric": "f_old_c4"
+    },
+    "existing_row": {
+      "bank_chunks": "20",
+      "comparison": "M-B4",
+      "metric": "f_old_c4",
+      "mean": "0.0011594466894579102",
+      "std_ddof1": "0.02215181318608571",
+      "n": "10"
+    }
+  },
+  {
+    "source": "BP",
+    "selector": {
+      "bank_chunks": "20",
+      "comparison": "M-B4",
+      "metric": "f_old_wikitext"
+    },
+    "existing_row": {
+      "bank_chunks": "20",
+      "comparison": "M-B4",
+      "metric": "f_old_wikitext",
+      "mean": "0.004413714324070295",
+      "std_ddof1": "0.024367689367621834",
+      "n": "10"
+    }
+  },
+  {
+    "source": "BP",
+    "selector": {
+      "bank_chunks": "196",
+      "comparison": "M-B4",
+      "metric": "g_new"
+    },
+    "existing_row": {
+      "bank_chunks": "196",
+      "comparison": "M-B4",
+      "metric": "g_new",
+      "mean": "0.004052097747295091",
+      "std_ddof1": "0.014264932713574393",
+      "n": "10"
+    }
+  },
+  {
+    "source": "BP",
+    "selector": {
+      "bank_chunks": "196",
+      "comparison": "M-B4",
+      "metric": "f_old_c4"
+    },
+    "existing_row": {
+      "bank_chunks": "196",
+      "comparison": "M-B4",
+      "metric": "f_old_c4",
+      "mean": "-0.004414745439348078",
+      "std_ddof1": "0.013233052190285357",
+      "n": "10"
+    }
+  },
+  {
+    "source": "BP",
+    "selector": {
+      "bank_chunks": "196",
+      "comparison": "M-B4",
+      "metric": "f_old_wikitext"
+    },
+    "existing_row": {
+      "bank_chunks": "196",
+      "comparison": "M-B4",
+      "metric": "f_old_wikitext",
+      "mean": "-0.006274144986897179",
+      "std_ddof1": "0.010198208135227399",
+      "n": "10"
+    }
+  },
+  {
+    "source": "PE",
+    "selector": {
+      "group": "C",
+      "ratio": "0.05",
+      "metric": "g_new"
+    },
+    "existing_row": {
+      "role": "primary",
+      "phase_name": "primary",
+      "model_tag": "pythia-410m",
+      "data_family": "main_v3",
+      "checkpoint": "final",
+      "group": "C",
+      "ratio": "0.05",
+      "weight": "0.05",
+      "learning_rate": "3e-05",
+      "bank_chunks": "",
+      "metric": "g_new",
+      "mean": "-0.003569130366326334",
+      "std_ddof1": "0.00614387323575134",
+      "n": "3",
+      "expected_n": "3",
+      "complete": "True",
+      "replicate_unit": "training_seed",
+      "uncertainty_scope": "trained-seed sample variability"
+    }
+  },
+  {
+    "source": "PE",
+    "selector": {
+      "group": "C",
+      "ratio": "0.05",
+      "metric": "g_new_equal_document"
+    },
+    "existing_row": {
+      "role": "primary",
+      "phase_name": "primary",
+      "model_tag": "pythia-410m",
+      "data_family": "main_v3",
+      "checkpoint": "final",
+      "group": "C",
+      "ratio": "0.05",
+      "weight": "0.05",
+      "learning_rate": "3e-05",
+      "bank_chunks": "",
+      "metric": "g_new_equal_document",
+      "mean": "0.018319129962705096",
+      "std_ddof1": "0.005780473589033438",
+      "n": "3",
+      "expected_n": "3",
+      "complete": "True",
+      "replicate_unit": "training_seed",
+      "uncertainty_scope": "trained-seed sample variability"
+    }
+  },
+  {
+    "source": "PB",
+    "selector": {
+      "group": "C",
+      "ratio": "0.05",
+      "metric": "g_new"
+    },
+    "existing_row": {
+      "role": "primary",
+      "phase_name": "primary",
+      "model_tag": "pythia-410m",
+      "data_family": "main_v3",
+      "checkpoint": "best",
+      "group": "C",
+      "ratio": "0.05",
+      "weight": "0.05",
+      "learning_rate": "3e-05",
+      "bank_chunks": "",
+      "metric": "g_new",
+      "mean": "0.05739985108712246",
+      "std_ddof1": "0.0011271864569825287",
+      "n": "3",
+      "expected_n": "3",
+      "complete": "True",
+      "replicate_unit": "training_seed",
+      "uncertainty_scope": "trained-seed sample variability"
+    }
+  },
+  {
+    "source": "C",
+    "selector": {
+      "checkpoint": "final",
+      "comparison": "B2-B1",
+      "metric": "f_old_c4"
+    },
+    "existing_row": {
+      "checkpoint": "final",
+      "comparison": "B2-B1",
+      "metric": "f_old_c4",
+      "mean": "-0.9060595671837111",
+      "std_ddof1": "0.03126552310159205",
+      "n": "3",
+      "favorable_seeds": "3",
+      "unfavorable_seeds": "0",
+      "tied_seeds": "0",
+      "seed11": "-0.8726553407093092",
+      "seed22": "-0.9346213252322602",
+      "seed33": "-0.9109020356095638"
+    }
+  },
+  {
+    "source": "C",
+    "selector": {
+      "checkpoint": "final",
+      "comparison": "B2-B1",
+      "metric": "f_old_wikitext"
+    },
+    "existing_row": {
+      "checkpoint": "final",
+      "comparison": "B2-B1",
+      "metric": "f_old_wikitext",
+      "mean": "-0.6541058635563713",
+      "std_ddof1": "0.049216568835067365",
+      "n": "3",
+      "favorable_seeds": "3",
+      "unfavorable_seeds": "0",
+      "tied_seeds": "0",
+      "seed11": "-0.7095999633914398",
+      "seed22": "-0.6157487094678822",
+      "seed33": "-0.6369689178097921"
+    }
+  },
+  {
+    "source": "CH",
+    "selector": {
+      "left_group": "B2",
+      "right_group": "B1",
+      "task": "piqa",
+      "metric": "acc_norm",
+      "checkpoint_kind": "final",
+      "ratio": "0.05"
+    },
+    "existing_row": {
+      "role": "extended",
+      "phase_name": "extended_pythia_410m_100m",
+      "data_family": "extended_v1",
+      "model_tag": "pythia-410m",
+      "baseline_group": "109f59e1e08b4d91880e04fc18414e3548cd0718cfb5b3fdab10b946d8639ab1",
+      "checkpoint_kind": "final",
+      "ratio": "0.05",
+      "weight": "0.05",
+      "learning_rate": "3e-05",
+      "task": "piqa",
+      "metric": "acc_norm",
+      "left_group": "B2",
+      "right_group": "B1",
+      "quantity": "accuracy_left_minus_right",
+      "mean": "0.014508523757707614",
+      "std_ddof1": "0.007965248914036166",
+      "n_training_seeds": "3"
+    }
+  },
+  {
+    "source": "CH",
+    "selector": {
+      "left_group": "B2",
+      "right_group": "B1",
+      "task": "hellaswag",
+      "metric": "acc_norm",
+      "checkpoint_kind": "final",
+      "ratio": "0.05"
+    },
+    "existing_row": {
+      "role": "extended",
+      "phase_name": "extended_pythia_410m_100m",
+      "data_family": "extended_v1",
+      "model_tag": "pythia-410m",
+      "baseline_group": "109f59e1e08b4d91880e04fc18414e3548cd0718cfb5b3fdab10b946d8639ab1",
+      "checkpoint_kind": "final",
+      "ratio": "0.05",
+      "weight": "0.05",
+      "learning_rate": "3e-05",
+      "task": "hellaswag",
+      "metric": "acc_norm",
+      "left_group": "B2",
+      "right_group": "B1",
+      "quantity": "accuracy_left_minus_right",
+      "mean": "-0.005045475668857454",
+      "std_ddof1": "0.005199591913948132",
+      "n_training_seeds": "3"
+    }
+  },
+  {
+    "source": "HE",
+    "selector": {
+      "group": "B4",
+      "seed": "11",
+      "checkpoint_kind": "final",
+      "ratio": "0.05",
+      "task": "hellaswag",
+      "metric": "acc_norm"
+    },
+    "existing_row": {
+      "role": "primary",
+      "phase_name": "primary",
+      "data_family": "main_v3",
+      "model_tag": "pythia-410m",
+      "baseline_group": "109f59e1e08b4d91880e04fc18414e3548cd0718cfb5b3fdab10b946d8639ab1",
+      "run_id": "formal_deterministic_B4_s11_b0p05_w0p05",
+      "actual_run_id": "formal_deterministic_B4_s11_b0p05_w0p05",
+      "group": "B4",
+      "ratio": "0.05",
+      "weight": "0.05",
+      "learning_rate": "3e-05",
+      "training_seed": "11",
+      "step": "306",
+      "checkpoint_sha256": "19bf6f08e0c34d3334973a17142c7801f1be89f8fb20e49fc37f5b194303d014",
+      "weights_identity": "model_state:63069435cb5ea77931a58d7b00b573bcc4b517fdea283f7b551345997508c28c",
+      "inference_job_id": "behavior_pythia-410m_20e30088deeb14fd17faa25a",
+      "target_prediction_tokens_at_checkpoint": "10000000",
+      "replay_prediction_tokens_at_checkpoint": "500000",
+      "checkpoint_kind": "final",
+      "seed": "11",
+      "task": "hellaswag",
+      "metric": "acc_norm",
+      "primary_metric": "True",
+      "items": "10042",
+      "CC": "3708",
+      "CW": "345",
+      "WC": "503",
+      "WW": "5486",
+      "initial_accuracy": "0.40360485958972314",
+      "accuracy": "0.4193387771360287",
+      "accuracy_ci_low": "0.4097202044336269",
+      "accuracy_ci_high": "0.4290190384022663",
+      "accuracy_delta": "0.015733917546305518",
+      "delta_ci_low": "0.010057757418840869",
+      "delta_ci_high": "0.021410077673770164",
+      "conditional_forgetting_rate": "0.0851221317542561",
+      "conditional_acquisition_rate": "0.08398731006845885",
+      "bootstrap_seed": "349031128"
+    }
+  },
+  {
+    "source": "A",
+    "selector": {
+      "method": "B1"
+    },
+    "existing_row": {
+      "method": "B1",
+      "lambda": "0.05",
+      "weighting": "token",
+      "g_new_mean": "0.005403148368752812",
+      "g_new_sample_sd": "0.004730469101551888",
+      "f_old_c4_mean": "0.17546395506364046",
+      "f_old_c4_sample_sd": "0.00486326787300652",
+      "f_old_wikitext_mean": "0.21185022659991967",
+      "f_old_wikitext_sample_sd": "0.004587703917621907"
+    }
+  },
+  {
+    "source": "AH",
+    "selector": {
+      "group": "B1",
+      "task": "piqa",
+      "metric": "acc_norm",
+      "quantity": "accuracy_delta"
+    },
+    "existing_row": {
+      "role": "supplement_A",
+      "phase_name": "supplement_A",
+      "data_family": "main_v3",
+      "model_tag": "pythia-410m",
+      "baseline_group": "109f59e1e08b4d91880e04fc18414e3548cd0718cfb5b3fdab10b946d8639ab1",
+      "checkpoint_kind": "final",
+      "group": "B1",
+      "ratio": "0.05",
+      "weight": "0.05",
+      "learning_rate": "3e-05",
+      "task": "piqa",
+      "metric": "acc_norm",
+      "quantity": "accuracy_delta",
+      "mean": "0.0034457743924555676",
+      "std_ddof1": "0.002059814416322188",
+      "n_training_seeds": "3"
+    }
+  },
+  {
+    "source": "AH",
+    "selector": {
+      "group": "B1",
+      "task": "hellaswag",
+      "metric": "acc_norm",
+      "quantity": "accuracy_delta"
+    },
+    "existing_row": {
+      "role": "supplement_A",
+      "phase_name": "supplement_A",
+      "data_family": "main_v3",
+      "model_tag": "pythia-410m",
+      "baseline_group": "109f59e1e08b4d91880e04fc18414e3548cd0718cfb5b3fdab10b946d8639ab1",
+      "checkpoint_kind": "final",
+      "group": "B1",
+      "ratio": "0.05",
+      "weight": "0.05",
+      "learning_rate": "3e-05",
+      "task": "hellaswag",
+      "metric": "acc_norm",
+      "quantity": "accuracy_delta",
+      "mean": "0.01915289119033393",
+      "std_ddof1": "0.0025041066470878714",
+      "n_training_seeds": "3"
+    }
+  },
+  {
+    "source": "A",
+    "selector": {
+      "method": "B2"
+    },
+    "existing_row": {
+      "method": "B2",
+      "lambda": "1.0",
+      "weighting": "token",
+      "g_new_mean": "0.05721977482016646",
+      "g_new_sample_sd": "0.003980190245320123",
+      "f_old_c4_mean": "0.03042650924823942",
+      "f_old_c4_sample_sd": "0.0012931395629575426",
+      "f_old_wikitext_mean": "0.061404784329250596",
+      "f_old_wikitext_sample_sd": "0.007403290590890495"
+    }
+  },
+  {
+    "source": "AH",
+    "selector": {
+      "group": "B2",
+      "task": "piqa",
+      "metric": "acc_norm",
+      "quantity": "accuracy_delta"
+    },
+    "existing_row": {
+      "role": "supplement_A",
+      "phase_name": "supplement_A",
+      "data_family": "main_v3",
+      "model_tag": "pythia-410m",
+      "baseline_group": "109f59e1e08b4d91880e04fc18414e3548cd0718cfb5b3fdab10b946d8639ab1",
+      "checkpoint_kind": "final",
+      "group": "B2",
+      "ratio": "0.05",
+      "weight": "1.0",
+      "learning_rate": "3e-05",
+      "task": "piqa",
+      "metric": "acc_norm",
+      "quantity": "accuracy_delta",
+      "mean": "-0.000544069640914037",
+      "std_ddof1": "0.001961670987738841",
+      "n_training_seeds": "3"
+    }
+  },
+  {
+    "source": "AH",
+    "selector": {
+      "group": "B2",
+      "task": "hellaswag",
+      "metric": "acc_norm",
+      "quantity": "accuracy_delta"
+    },
+    "existing_row": {
+      "role": "supplement_A",
+      "phase_name": "supplement_A",
+      "data_family": "main_v3",
+      "model_tag": "pythia-410m",
+      "baseline_group": "109f59e1e08b4d91880e04fc18414e3548cd0718cfb5b3fdab10b946d8639ab1",
+      "checkpoint_kind": "final",
+      "group": "B2",
+      "ratio": "0.05",
+      "weight": "1.0",
+      "learning_rate": "3e-05",
+      "task": "hellaswag",
+      "metric": "acc_norm",
+      "quantity": "accuracy_delta",
+      "mean": "-0.004514372966872469",
+      "std_ddof1": "0.0007203921667068548",
+      "n_training_seeds": "3"
+    }
+  },
+  {
+    "source": "A",
+    "selector": {
+      "method": "B3"
+    },
+    "existing_row": {
+      "method": "B3",
+      "lambda": "0.1",
+      "weighting": "token",
+      "g_new_mean": "0.022725179074825224",
+      "g_new_sample_sd": "0.0020250209717116597",
+      "f_old_c4_mean": "0.19704392159622422",
+      "f_old_c4_sample_sd": "0.0046949178205721006",
+      "f_old_wikitext_mean": "0.20858522720201078",
+      "f_old_wikitext_sample_sd": "0.008710995027158573"
+    }
+  },
+  {
+    "source": "AH",
+    "selector": {
+      "group": "B3",
+      "task": "piqa",
+      "metric": "acc_norm",
+      "quantity": "accuracy_delta"
+    },
+    "existing_row": {
+      "role": "supplement_A",
+      "phase_name": "supplement_A",
+      "data_family": "main_v3",
+      "model_tag": "pythia-410m",
+      "baseline_group": "109f59e1e08b4d91880e04fc18414e3548cd0718cfb5b3fdab10b946d8639ab1",
+      "checkpoint_kind": "final",
+      "group": "B3",
+      "ratio": "0.05",
+      "weight": "0.1",
+      "learning_rate": "3e-05",
+      "task": "piqa",
+      "metric": "acc_norm",
+      "quantity": "accuracy_delta",
+      "mean": "0.000544069640914037",
+      "std_ddof1": "0.0033094464256247114",
+      "n_training_seeds": "3"
+    }
+  },
+  {
+    "source": "AH",
+    "selector": {
+      "group": "B3",
+      "task": "hellaswag",
+      "metric": "acc_norm",
+      "quantity": "accuracy_delta"
+    },
+    "existing_row": {
+      "role": "supplement_A",
+      "phase_name": "supplement_A",
+      "data_family": "main_v3",
+      "model_tag": "pythia-410m",
+      "baseline_group": "109f59e1e08b4d91880e04fc18414e3548cd0718cfb5b3fdab10b946d8639ab1",
+      "checkpoint_kind": "final",
+      "group": "B3",
+      "ratio": "0.05",
+      "weight": "0.1",
+      "learning_rate": "3e-05",
+      "task": "hellaswag",
+      "metric": "acc_norm",
+      "quantity": "accuracy_delta",
+      "mean": "0.0146053243045874",
+      "std_ddof1": "0.0014094718014712967",
+      "n_training_seeds": "3"
+    }
+  },
+  {
+    "source": "A",
+    "selector": {
+      "method": "B4"
+    },
+    "existing_row": {
+      "method": "B4",
+      "lambda": "5.0",
+      "weighting": "token",
+      "g_new_mean": "0.07573527166710144",
+      "g_new_sample_sd": "0.0010162678302870858",
+      "f_old_c4_mean": "0.024353989401034653",
+      "f_old_c4_sample_sd": "0.0008107222538380526",
+      "f_old_wikitext_mean": "0.05270942152730577",
+      "f_old_wikitext_sample_sd": "0.0014087320329861407"
+    }
+  },
+  {
+    "source": "AH",
+    "selector": {
+      "group": "B4",
+      "task": "piqa",
+      "metric": "acc_norm",
+      "quantity": "accuracy_delta"
+    },
+    "existing_row": {
+      "role": "supplement_A",
+      "phase_name": "supplement_A",
+      "data_family": "main_v3",
+      "model_tag": "pythia-410m",
+      "baseline_group": "109f59e1e08b4d91880e04fc18414e3548cd0718cfb5b3fdab10b946d8639ab1",
+      "checkpoint_kind": "final",
+      "group": "B4",
+      "ratio": "0.05",
+      "weight": "5.0",
+      "learning_rate": "3e-05",
+      "task": "piqa",
+      "metric": "acc_norm",
+      "quantity": "accuracy_delta",
+      "mean": "-0.0030830612985128765",
+      "std_ddof1": "0.003539938573801802",
+      "n_training_seeds": "3"
+    }
+  },
+  {
+    "source": "AH",
+    "selector": {
+      "group": "B4",
+      "task": "hellaswag",
+      "metric": "acc_norm",
+      "quantity": "accuracy_delta"
+    },
+    "existing_row": {
+      "role": "supplement_A",
+      "phase_name": "supplement_A",
+      "data_family": "main_v3",
+      "model_tag": "pythia-410m",
+      "baseline_group": "109f59e1e08b4d91880e04fc18414e3548cd0718cfb5b3fdab10b946d8639ab1",
+      "checkpoint_kind": "final",
+      "group": "B4",
+      "ratio": "0.05",
+      "weight": "5.0",
+      "learning_rate": "3e-05",
+      "task": "hellaswag",
+      "metric": "acc_norm",
+      "quantity": "accuracy_delta",
+      "mean": "-0.006074487153953396",
+      "std_ddof1": "0.0021542827776124215",
+      "n_training_seeds": "3"
+    }
+  },
+  {
+    "source": "A",
+    "selector": {
+      "method": "M"
+    },
+    "existing_row": {
+      "method": "M",
+      "lambda": "5.0",
+      "weighting": "token",
+      "g_new_mean": "0.07407335234369938",
+      "g_new_sample_sd": "0.002998216878592153",
+      "f_old_c4_mean": "0.02603224792877971",
+      "f_old_c4_sample_sd": "0.0022869252334799463",
+      "f_old_wikitext_mean": "0.05605116760045507",
+      "f_old_wikitext_sample_sd": "0.00916009299546926"
+    }
+  },
+  {
+    "source": "AH",
+    "selector": {
+      "group": "M",
+      "task": "piqa",
+      "metric": "acc_norm",
+      "quantity": "accuracy_delta"
+    },
+    "existing_row": {
+      "role": "supplement_A",
+      "phase_name": "supplement_A",
+      "data_family": "main_v3",
+      "model_tag": "pythia-410m",
+      "baseline_group": "109f59e1e08b4d91880e04fc18414e3548cd0718cfb5b3fdab10b946d8639ab1",
+      "checkpoint_kind": "final",
+      "group": "M",
+      "ratio": "0.05",
+      "weight": "5.0",
+      "learning_rate": "3e-05",
+      "task": "piqa",
+      "metric": "acc_norm",
+      "quantity": "accuracy_delta",
+      "mean": "0.00018135654697134566",
+      "std_ddof1": "0.0026838318075714076",
+      "n_training_seeds": "3"
+    }
+  },
+  {
+    "source": "AH",
+    "selector": {
+      "group": "M",
+      "task": "hellaswag",
+      "metric": "acc_norm",
+      "quantity": "accuracy_delta"
+    },
+    "existing_row": {
+      "role": "supplement_A",
+      "phase_name": "supplement_A",
+      "data_family": "main_v3",
+      "model_tag": "pythia-410m",
+      "baseline_group": "109f59e1e08b4d91880e04fc18414e3548cd0718cfb5b3fdab10b946d8639ab1",
+      "checkpoint_kind": "final",
+      "group": "M",
+      "ratio": "0.05",
+      "weight": "5.0",
+      "learning_rate": "3e-05",
+      "task": "hellaswag",
+      "metric": "acc_norm",
+      "quantity": "accuracy_delta",
+      "mean": "-0.0061408749917015205",
+      "std_ddof1": "0.0013260960204101557",
+      "n_training_seeds": "3"
+    }
+  },
+  {
+    "source": "A",
+    "selector": {
+      "method": "C"
+    },
+    "existing_row": {
+      "method": "C",
+      "lambda": "1.0",
+      "weighting": "token",
+      "g_new_mean": "0.07332445632535345",
+      "g_new_sample_sd": "0.0018043495353120074",
+      "f_old_c4_mean": "0.040247049176783456",
+      "f_old_c4_sample_sd": "0.0018280201836560763",
+      "f_old_wikitext_mean": "0.052037661603137796",
+      "f_old_wikitext_sample_sd": "0.0030674430476409563"
+    }
+  },
+  {
+    "source": "AH",
+    "selector": {
+      "group": "C",
+      "task": "piqa",
+      "metric": "acc_norm",
+      "quantity": "accuracy_delta"
+    },
+    "existing_row": {
+      "role": "supplement_A",
+      "phase_name": "supplement_A",
+      "data_family": "main_v3",
+      "model_tag": "pythia-410m",
+      "baseline_group": "109f59e1e08b4d91880e04fc18414e3548cd0718cfb5b3fdab10b946d8639ab1",
+      "checkpoint_kind": "final",
+      "group": "C",
+      "ratio": "0.05",
+      "weight": "1.0",
+      "learning_rate": "3e-05",
+      "task": "piqa",
+      "metric": "acc_norm",
+      "quantity": "accuracy_delta",
+      "mean": "0.00544069640914037",
+      "std_ddof1": "0.0018847125218377338",
+      "n_training_seeds": "3"
+    }
+  },
+  {
+    "source": "AH",
+    "selector": {
+      "group": "C",
+      "task": "hellaswag",
+      "metric": "acc_norm",
+      "quantity": "accuracy_delta"
+    },
+    "existing_row": {
+      "role": "supplement_A",
+      "phase_name": "supplement_A",
+      "data_family": "main_v3",
+      "model_tag": "pythia-410m",
+      "baseline_group": "109f59e1e08b4d91880e04fc18414e3548cd0718cfb5b3fdab10b946d8639ab1",
+      "checkpoint_kind": "final",
+      "group": "C",
+      "ratio": "0.05",
+      "weight": "1.0",
+      "learning_rate": "3e-05",
+      "task": "hellaswag",
+      "metric": "acc_norm",
+      "quantity": "accuracy_delta",
+      "mean": "0.005078669587731528",
+      "std_ddof1": "0.0022510763902524027",
+      "n_training_seeds": "3"
+    }
+  },
+  {
+    "source": "AHP",
+    "selector": {
+      "comparison": "B4-B3",
+      "task": "hellaswag",
+      "score": "acc_norm",
+      "quantity": "accuracy_left_minus_right"
+    },
+    "existing_row": {
+      "comparison": "B4-B3",
+      "lambda_a": "5.0",
+      "lambda_b": "0.1",
+      "task": "hellaswag",
+      "score": "acc_norm",
+      "quantity": "accuracy_left_minus_right",
+      "mean": "-0.02067981145854081",
+      "std_ddof1": "0.0008585618506524471",
+      "n_training_seeds": "3"
+    }
+  },
+  {
+    "source": "AHP",
+    "selector": {
+      "comparison": "C-B4",
+      "task": "hellaswag",
+      "score": "acc_norm",
+      "quantity": "accuracy_left_minus_right"
+    },
+    "existing_row": {
+      "comparison": "C-B4",
+      "lambda_a": "1.0",
+      "lambda_b": "5.0",
+      "task": "hellaswag",
+      "score": "acc_norm",
+      "quantity": "accuracy_left_minus_right",
+      "mean": "0.011153156741684897",
+      "std_ddof1": "0.001828078047270047",
+      "n_training_seeds": "3"
+    }
+  },
+  {
+    "source": "AP",
+    "selector": {
+      "comparison": "C-B4",
+      "metric": "f_old_c4"
+    },
+    "existing_row": {
+      "comparison": "C-B4",
+      "lambda_a": "1.0",
+      "lambda_b": "5.0",
+      "metric": "f_old_c4",
+      "mean": "0.015893059775748803",
+      "std_ddof1": "0.001991650700156627",
+      "n": "3",
+      "training_seeds": "11,22,33",
+      "replicate_unit": "training_seed",
+      "comparison_policy": "Each method uses its own validation-selected shared lambda; method plus selected lambda varies. Not a fixed-lambda objective effect.",
+      "uncertainty_scope": "Sample SD across these trained checkpoints conditional on their shared validation-selected lambda; not uncertainty of repeating the selection pipeline. Document/question bootstrap is conditional and does not create training replicates"
+    }
+  },
+  {
+    "source": "AP",
+    "selector": {
+      "comparison": "M-B4",
+      "metric": "g_new"
+    },
+    "existing_row": {
+      "comparison": "M-B4",
+      "lambda_a": "5.0",
+      "lambda_b": "5.0",
+      "metric": "g_new",
+      "mean": "-0.0016619193234020575",
+      "std_ddof1": "0.0034822154774214772",
+      "n": "3",
+      "training_seeds": "11,22,33",
+      "replicate_unit": "training_seed",
+      "comparison_policy": "Each method uses its own validation-selected shared lambda; method plus selected lambda varies. Not a fixed-lambda objective effect.",
+      "uncertainty_scope": "Sample SD across these trained checkpoints conditional on their shared validation-selected lambda; not uncertainty of repeating the selection pipeline. Document/question bootstrap is conditional and does not create training replicates"
+    }
+  },
+  {
+    "source": "AHP",
+    "selector": {
+      "comparison": "M-B4",
+      "task": "hellaswag",
+      "score": "acc_norm",
+      "quantity": "accuracy_left_minus_right"
+    },
+    "existing_row": {
+      "comparison": "M-B4",
+      "lambda_a": "5.0",
+      "lambda_b": "5.0",
+      "task": "hellaswag",
+      "score": "acc_norm",
+      "quantity": "accuracy_left_minus_right",
+      "mean": "-6.638783774813121e-05",
+      "std_ddof1": "0.002333983380634255",
+      "n_training_seeds": "3"
+    }
+  }
+]

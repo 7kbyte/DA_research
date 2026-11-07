@@ -1,0 +1,135 @@
+{
+  "model": "pythia-410m",
+  "generated_banks": "exact reuse of primary frozen banks",
+  "reason": "Initial teacher, generation protocol, seeds and bank size are unchanged.",
+  "c4_pool": "artifacts/data_extended/c4_candidate.pt",
+  "evaluation_requirement": "Use data_extended heldout sets with expanded training.",
+  "new_generation_cost_seconds": 0,
+  "bank_chunks": 196,
+  "banks": [
+    {
+      "seed": 101,
+      "method": "random",
+      "artifact": "artifacts/extended/pythia-410m/banks/generated_random_seed101.pt",
+      "sha256": "aea3850b28f30cc32d15b1ecf5f96af92cfbe96e4bc992bdb609841e5aae790b"
+    },
+    {
+      "seed": 101,
+      "method": "dedup_random",
+      "artifact": "artifacts/extended/pythia-410m/banks/generated_dedup_random_seed101.pt",
+      "sha256": "faa635abf235bc7b195a422a939ac92c1b0121c170d51c1caf92735b524a0eb7"
+    },
+    {
+      "seed": 101,
+      "method": "nll_stratified",
+      "artifact": "artifacts/extended/pythia-410m/banks/generated_nll_stratified_seed101.pt",
+      "sha256": "d68bd5df7dc8be1b02ae5798a6d945b2806ba287c274386c9f0bfa2db0a81182"
+    },
+    {
+      "seed": 101,
+      "method": "cluster",
+      "artifact": "artifacts/extended/pythia-410m/banks/generated_cluster_seed101.pt",
+      "sha256": "4cfaa00d6021d284f294637f86a1300bbd8e79315586495927641ddc7ba8c914"
+    },
+    {
+      "seed": 101,
+      "method": "c4_random",
+      "artifact": "artifacts/extended/pythia-410m/banks/c4_random_seed101.pt",
+      "sha256": "8febb0c842238612e8a5b370b56203910fc072e8b6b5821095696f2f4df48a2b",
+      "selection_seconds": 0.7312648482620716
+    },
+    {
+      "seed": 11,
+      "method": "random",
+      "artifact": "artifacts/extended/pythia-410m/banks/generated_random_seed11.pt",
+      "sha256": "a1f0ddc372ad23d24ae0f628910881f77b22b8cb62be02f94c915c23d9155118"
+    },
+    {
+      "seed": 11,
+      "method": "dedup_random",
+      "artifact": "artifacts/extended/pythia-410m/banks/generated_dedup_random_seed11.pt",
+      "sha256": "2b4762d5e7a9b5a5b8bc1cdb2afdbc8aa1b4a0a329c0b0a94e7d30457b60b90e"
+    },
+    {
+      "seed": 11,
+      "method": "nll_stratified",
+      "artifact": "artifacts/extended/pythia-410m/banks/generated_nll_stratified_seed11.pt",
+      "sha256": "0bcbb43d37b343c4bf62c3553c80a8d8fcfcb7ae95d1e035011fcacbfc300cfe"
+    },
+    {
+      "seed": 11,
+      "method": "cluster",
+      "artifact": "artifacts/extended/pythia-410m/banks/generated_cluster_seed11.pt",
+      "sha256": "2bda5b5772abcda2c92bacb25a67c5f9fc88caf683b5554c49c81de63d814746"
+    },
+    {
+      "seed": 11,
+      "method": "c4_random",
+      "artifact": "artifacts/extended/pythia-410m/banks/c4_random_seed11.pt",
+      "sha256": "7979f32f96bc76f74be01729d9405cbdd733917205e55a3a90aae13a5df0e559",
+      "selection_seconds": 0.2889564298093319
+    },
+    {
+      "seed": 22,
+      "method": "random",
+      "artifact": "artifacts/extended/pythia-410m/banks/generated_random_seed22.pt",
+      "sha256": "14c3827bad0687943d61d024768b018997360d481715601b35c385479d8dae82"
+    },
+    {
+      "seed": 22,
+      "method": "dedup_random",
+      "artifact": "artifacts/extended/pythia-410m/banks/generated_dedup_random_seed22.pt",
+      "sha256": "b585a780b25e383a96cb6039c3301f9ab0d3047b6d287b5cc542d96ca745f3be"
+    },
+    {
+      "seed": 22,
+      "method": "nll_stratified",
+      "artifact": "artifacts/extended/pythia-410m/banks/generated_nll_stratified_seed22.pt",
+      "sha256": "95bca391e5a4b928e051624669940e97523d6d372f56c6ae8bd32a2b05f32356"
+    },
+    {
+      "seed": 22,
+      "method": "cluster",
+      "artifact": "artifacts/extended/pythia-410m/banks/generated_cluster_seed22.pt",
+      "sha256": "23051038f93b035f4a28de78e779447b90e63b109cd33660e454dd16818b2f27"
+    },
+    {
+      "seed": 22,
+      "method": "c4_random",
+      "artifact": "artifacts/extended/pythia-410m/banks/c4_random_seed22.pt",
+      "sha256": "d645cbde6e566e357ff09ce27d1817e4c2739813f37e5ebeea98e110c80c3f81",
+      "selection_seconds": 0.7065337672829628
+    },
+    {
+      "seed": 33,
+      "method": "random",
+      "artifact": "artifacts/extended/pythia-410m/banks/generated_random_seed33.pt",
+      "sha256": "558b6e00b0c6d2a6f0531cddf06aca06b0a187fc8a88a26cd1fbb4f2e483b13c"
+    },
+    {
+      "seed": 33,
+      "method": "dedup_random",
+      "artifact": "artifacts/extended/pythia-410m/banks/generated_dedup_random_seed33.pt",
+      "sha256": "e19e9647564da50f6ec9f75d97c6e6e43835c6be171ed50df01e10ec7a55f969"
+    },
+    {
+      "seed": 33,
+      "method": "nll_stratified",
+      "artifact": "artifacts/extended/pythia-410m/banks/generated_nll_stratified_seed33.pt",
+      "sha256": "bd37c3f067194d89e373bdba113fb6e2c49bc99a1c14b5686b7ca3183fedea6e"
+    },
+    {
+      "seed": 33,
+      "method": "cluster",
+      "artifact": "artifacts/extended/pythia-410m/banks/generated_cluster_seed33.pt",
+      "sha256": "e87f747cdf637a65b0c45a77bea47421e67c50d3cc1f9529e2753c3d09cfe3b6"
+    },
+    {
+      "seed": 33,
+      "method": "c4_random",
+      "artifact": "artifacts/extended/pythia-410m/banks/c4_random_seed33.pt",
+      "sha256": "8614e2a520e8512d937ae876e690cfc2e4f61d456bf5fda0eee55b8d44d6f58a",
+      "selection_seconds": 0.7269511595368385
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "estimated_at_utc": "2026-11-06T06:22:28.876167+00:00",
+  "training_deadline_utc": "2026-11-07T00:00:00Z",
+  "remaining_wall_hours": 17.625312175833333,
+  "requested_secondary_target_prediction_tokens": 50000000,
+  "available_gpu_hours": 70.50124870333333,
+  "requested_remaining_gpu_hours": 68.3823396099333,
+  "ideal_four_gpu_wall_hours": 17.095584902483324,
+  "contingency_fraction": 0.1,
+  "four_gpu_wall_hours_with_contingency": 18.805143392731658,
+  "fits_without_contingency": true,
+  "fits_with_contingency": false,
+  "requested_matrix": [
+    {
+      "phase": "batch_benchmark",
+      "requested_runs": 2,
+      "remaining_runs": 0,
+      "remaining_gpu_seconds": 0,
+      "estimate_basis": "Queue conservative allowance180s each until the probes finish; completed probes are removed"
+    },
+    {
+      "phase": "A",
+      "requested_new_runs": 108,
+      "remaining_runs": 104,
+      "remaining_gpu_seconds": 35549.168644331345,
+      "estimate_basis": "Matched complete main runs by group; all 7 validation points and checkpoint cost included"
+    },
+    {
+      "phase": "B",
+      "requested_runs": 60,
+      "remaining_runs": 60,
+      "remaining_gpu_seconds": 20691.869474425912,
+      "estimate_basis": "Complete KL main runs; identical exposure and sequence length, conditional bank selection CPU cost separate"
+    },
+    {
+      "phase": "pythia-410m_pilot",
+      "requested_training_runs": 19,
+      "remaining_runs": 16,
+      "remaining_gpu_seconds": 1028.0538228354487
+    },
+    {
+      "phase": "pythia-410m_formal",
+      "requested_runs": 24,
+      "remaining_runs": 24,
+      "target_tokens_per_run": 100000000,
+      "remaining_gpu_seconds": 51720.1013439145
+    },
+    {
+      "phase": "pythia-1b_pilot",
+      "requested_training_runs": 19,
+      "remaining_runs": 2,
+      "remaining_gpu_seconds": 198.36235878064718
+    },
+    {
+      "phase": "pythia-1b_formal",
+      "requested_runs": 24,
+      "remaining_runs": 24,
+      "target_tokens_per_run": 100000000,
+      "remaining_gpu_seconds": 73861.88494983155
+    },
+    {
+      "phase": "pythia-2.8b_pilot",
+      "requested_training_runs": 19,
+      "remaining_runs": 0,
+      "remaining_gpu_seconds": 0.0
+    },
+    {
+      "phase": "pythia-2.8b_formal",
+      "requested_runs": 15,
+      "remaining_runs": 15,
+      "target_tokens_per_run": 50000000,
+      "remaining_gpu_seconds": 63126.98200164042
+    }
+  ],
+  "models": {
+    "pythia-410m": {
+      "microbatch": 64,
+      "steady_target_prediction_tokens_per_second": 55905.53376422255,
+      "throughput_source": "/tmp/grad-research-20261106/worktree/results/benchmarks/supplemental_v1_benchmark_pythia_410m_m64.json",
+      "validation_seconds_per_point": 18.447028557459515,
+      "validation_cost_source": "completed extended pilots",
+      "latest_checkpoint_seconds": 5.4785749316215515,
+      "model_only_checkpoint_seconds_estimate": 1.605890826632579,
+      "setup_seconds": 4.3183969383438425,
+      "formal_validation_points": 20,
+      "best_saves_assumed": 20,
+      "formal_seconds_per_run": 2155.0042226631044,
+      "formal_target_prediction_tokens": 100000000,
+      "pilot_seconds_per_run": 64.25336392721555,
+      "pilots_completed": 3,
+      "formal_completed": 0,
+      "training_time_factors": {
+        "B0": 0.85953739541235,
+        "B1": 0.9540267081422337,
+        "B2": 0.9967472601605748,
+        "B3": 0.9725161800853238,
+        "B4": 1.0,
+        "D": 1.0119810726379719,
+        "M": 0.9968280080253186,
+        "C": 1.0089692280561473
+      },
+      "training_factor_source": "primary method ratios until matching pilot B4 is measured"
+    },
+    "pythia-1b": {
+      "microbatch": 32,
+      "steady_target_prediction_tokens_per_second": 39393.63693538467,
+      "throughput_source": "/tmp/grad-research-20261106/worktree/results/benchmarks/supplemental_v1_benchmark_pythia_1b_m32.json",
+      "validation_seconds_per_point": 23.42528461095165,
+      "validation_cost_source": "completed extended pilots",
+      "latest_checkpoint_seconds": 15.811284018132616,
+      "model_only_checkpoint_seconds_estimate": 5.0019098110497,
+      "setup_seconds": 5.568608172895277,
+      "formal_validation_points": 20,
+      "best_saves_assumed": 20,
+      "formal_seconds_per_run": 3077.5785395763146,
+      "formal_target_prediction_tokens": 100000000,
+      "pilot_seconds_per_run": 99.18117939032359,
+      "pilots_completed": 17,
+      "formal_completed": 0,
+      "training_time_factors": {
+        "B0": 0.8815475798448963,
+        "B1": 0.9782527858165826,
+        "B2": 0.9998752680241386,
+        "B3": 0.9801458378720967,
+        "B4": 1.0,
+        "D": 1.0,
+        "M": 1.0,
+        "C": 1.0
+      },
+      "training_factor_source": "same model/micro pilot mean relative to B4; D/M/C use equal-shape KL factor1"
+    },
+    "pythia-2.8b": {
+      "microbatch": 8,
+      "steady_target_prediction_tokens_per_second": 14371.584922867189,
+      "throughput_source": "/tmp/grad-research-20261106/worktree/results/benchmarks/benchmark_extended_pythia_2p8b_m8_s101.json",
+      "validation_seconds_per_point": 58.87900860117454,
+      "validation_cost_source": "completed extended pilots",
+      "latest_checkpoint_seconds": 50.83583491001474,
+      "model_only_checkpoint_seconds_estimate": 15.034239164308497,
+      "setup_seconds": 10.333881384840137,
+      "formal_validation_points": 10,
+      "best_saves_assumed": 10,
+      "formal_seconds_per_run": 4208.465466776028,
+      "formal_target_prediction_tokens": 50000000,
+      "pilot_seconds_per_run": 271.33880267348803,
+      "pilots_completed": 19,
+      "formal_completed": 0,
+      "training_time_factors": {
+        "B0": 0.9135262305322858,
+        "B1": 0.9821471232227762,
+        "B2": 1.002397436887013,
+        "B3": 0.9810651121712568,
+        "B4": 1.0,
+        "D": 1.0,
+        "M": 1.0,
+        "C": 1.0
+      },
+      "training_factor_source": "same model/micro pilot mean relative to B4; D/M/C use equal-shape KL factor1"
+    }
+  },
+  "main_validation_seconds_per_point": 18.977680323756346,
+  "main_validation_tokens": 1282099,
+  "extended_validation_tokens": 1236109,
+  "limitations": [
+    "Short benchmark throughput extrapolates to long runs; validation for larger models becomes measured after pilots finish.",
+    "Assumes all validation points improve target NLL and save model-only best; this is a conservative checkpoint bound.",
+    "Independent test and behavioral scoring, CPU bank preparation and archive work are excluded; the final 3h26 reserve is separate.",
+    "Before main36 completes this timestamp includes its remaining tail and audit; refresh after master launch for the actual supplemental window.",
+    "Teacher forward and KL arithmetic are nested in training/validation totals and never added twice."
+  ],
+  "priority_policy": "Preserve preregistered comparisons and all 3 training seeds; A prioritizes B4/M; 2.8B is the secondary model-size extension. Root reviews compute-only reductions before changing the requested matrix."
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_editable_tree_restore_preparation_v2/tests_attempt1/whole_child_timing.json",
+    "sha256": "83519a48d8467849072795cc8aa54ac5a1b44dee3e24db8776bf4f0c0e2d6e06",
+    "bytes": 789
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 0.6110502369701862,
+  "CPU_component_pointers": [
+    "/child_user_seconds",
+    "/child_system_seconds"
+  ],
+  "CPU_components": {
+    "child_user_seconds": 0.497631,
+    "child_system_seconds": 0.08655199999999999
+  },
+  "recorded_inclusive_CPU_seconds": 0.584183,
+  "original_returncode": 0,
+  "scope": "v2 marker semantics, temporary synthetic archives/reservations only; no real project/reserve/shared writes",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall; sum only the named user/system components. Failure rc retained. No calendar-derived elapsed.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

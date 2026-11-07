@@ -1,0 +1,44 @@
+{
+  "returncode": 0,
+  "direct_child_returncode": 0,
+  "timed_out": false,
+  "inclusive_execution_cap_seconds": 1200,
+  "execution_plus_cleanup_budget_seconds": 1210.0,
+  "process_group_cleanup": {
+    "status": "group_absent_no_cleanup_needed",
+    "whole_group_absence_confirmed": true,
+    "pgid": 3473737,
+    "subreaper_enabled": true,
+    "signals": [],
+    "snapshots": [
+      {
+        "since_cleanup_start_seconds": 4.08664345741272e-05,
+        "killpg_0_exists": false,
+        "members": []
+      }
+    ],
+    "adopted_zombies_reaped": [],
+    "final_observation": {
+      "since_cleanup_start_seconds": 4.08664345741272e-05,
+      "killpg_0_exists": false,
+      "members": []
+    },
+    "cleanup_wall_seconds": 4.4796615839004517e-05,
+    "boundary": "SIGKILL cannot guarantee immediate removal of uninterruptible D-state tasks; unresolved groups are explicit failures, never success"
+  },
+  "whole_child_process_wall_seconds": 217.7618752680719,
+  "whole_child_user_cpu_seconds": 128.97293,
+  "whole_child_sys_cpu_seconds": 43.797849,
+  "child_peak_RSS_bytes": 17199194112,
+  "accounting": "Inclusive child spawn-to-exit plus full process-group cleanup/reaping. Descendant CPU is attributed when reaped; failed unresolved groups may have incomplete CPU totals. Body/stages are nested.",
+  "admission": {
+    "cap_seconds": 1200,
+    "TERM_grace_seconds": 5.0,
+    "KILL_grace_seconds": 5.0,
+    "teardown_overhead_allowance_seconds": 2.0,
+    "teardown_budget_seconds": 12.0,
+    "admission_margin_seconds": 300,
+    "required_remaining_seconds": 1500,
+    "deadline_utc": "2026-11-07T02:56:32+00:00"
+  }
+}

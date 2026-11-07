@@ -1,0 +1,67 @@
+{
+  "generated_at_utc": "2026-11-07T00:33:16.893579+00:00",
+  "source": "logs/gpu_telemetry.jsonl",
+  "source_sha256": "f0e9d7fd0cbeaac70e0895689a1c1be40ad7e9b958c1bb1ed64d75433a8076c7",
+  "records": 2497,
+  "incomplete_lines_skipped": 0,
+  "integration": "Trapezoidal over adjacent successful samples, excluding gaps above threshold",
+  "maximum_gap_seconds": 90,
+  "scope": "Allocated GPU telemetry, not per-process attribution or total system energy",
+  "interpretation": "Utilization integral is a sampled activity proxy, not training GPU-hours or FLOPs. Unobserved times are not counted as idle.",
+  "devices": [
+    {
+      "gpu": "0",
+      "uuid": "GPU-2686b9ad-483e-9fcc-313e-68bdb953b6c1",
+      "samples": 2497,
+      "observed_span_seconds": 75449.44745087624,
+      "integrated_coverage_seconds": 75189.81070923805,
+      "skipped_gap_seconds": 259.6367416381836,
+      "time_weighted_mean_utilization_percent": 76.92510918440493,
+      "utilization_integral_gpu_hours": 16.066623328785766,
+      "sampled_gpu_energy_kwh": 8.72885552962004,
+      "maximum_sampled_memory_mib": 76281.0,
+      "maximum_sampled_temperature_c": 62.0
+    },
+    {
+      "gpu": "1",
+      "uuid": "GPU-c0ece563-d242-281d-7d92-414237619f6c",
+      "samples": 2497,
+      "observed_span_seconds": 75449.44745087624,
+      "integrated_coverage_seconds": 75189.81070923805,
+      "skipped_gap_seconds": 259.6367416381836,
+      "time_weighted_mean_utilization_percent": 78.08274321646927,
+      "utilization_integral_gpu_hours": 16.308407450289906,
+      "sampled_gpu_energy_kwh": 9.088157184267969,
+      "maximum_sampled_memory_mib": 80993.0,
+      "maximum_sampled_temperature_c": 68.0
+    },
+    {
+      "gpu": "2",
+      "uuid": "GPU-774d2dba-9109-6216-fc23-d1f1aa9aceaf",
+      "samples": 2497,
+      "observed_span_seconds": 75449.44745087624,
+      "integrated_coverage_seconds": 75189.81070923805,
+      "skipped_gap_seconds": 259.6367416381836,
+      "time_weighted_mean_utilization_percent": 78.9127673295135,
+      "utilization_integral_gpu_hours": 16.48176677235629,
+      "sampled_gpu_energy_kwh": 8.92807536933779,
+      "maximum_sampled_memory_mib": 76281.0,
+      "maximum_sampled_temperature_c": 69.0
+    },
+    {
+      "gpu": "3",
+      "uuid": "GPU-4daf587f-9fb0-0e00-ebbd-a0574eb46393",
+      "samples": 2497,
+      "observed_span_seconds": 75449.44745087624,
+      "integrated_coverage_seconds": 75189.81070923805,
+      "skipped_gap_seconds": 259.6367416381836,
+      "time_weighted_mean_utilization_percent": 79.20548590531897,
+      "utilization_integral_gpu_hours": 16.54290414542821,
+      "sampled_gpu_energy_kwh": 8.965752558313842,
+      "maximum_sampled_memory_mib": 76281.0,
+      "maximum_sampled_temperature_c": 59.0
+    }
+  ],
+  "total_sampled_gpu_energy_kwh": 35.71084064153964,
+  "total_utilization_integral_gpu_hours": 65.39970169686018
+}

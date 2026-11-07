@@ -1,0 +1,72 @@
+{
+  "CPU_only": true,
+  "model_inference_performed": false,
+  "scheduler_started": false,
+  "checks": [
+    {
+      "id": "nll_pythia-410m_a851b7918d7ca8cb6cc1_initial",
+      "argv": [
+        "/usr/bin/python",
+        "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+        "--manifest",
+        "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_nll_manifest.json",
+        "--manifest-sha256",
+        "b22b71a9273de416bebb7e69080c20e9fd01ce7a05b0b327fb5aa5aa52ec3a33",
+        "--job-id",
+        "nll_pythia-410m_a851b7918d7ca8cb6cc1_initial",
+        "--device",
+        "cuda:0",
+        "--verify-only"
+      ],
+      "stdout": "{\"verified\": true, \"job_id\": \"nll_pythia-410m_a851b7918d7ca8cb6cc1_initial\", \"model_inference\": false, \"baseline_runtime_check_deferred\": false}",
+      "exit_code": 0
+    },
+    {
+      "id": "behavior_pythia-410m_41a3156878bf36d607b4_initial",
+      "argv": [
+        "/usr/bin/python",
+        "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+        "--manifest",
+        "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+        "--manifest-sha256",
+        "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+        "--job-id",
+        "behavior_pythia-410m_41a3156878bf36d607b4_initial",
+        "--device",
+        "cuda:0",
+        "--verify-only"
+      ],
+      "stdout": "{\"verified\": true, \"job_id\": \"behavior_pythia-410m_41a3156878bf36d607b4_initial\", \"model_inference\": false, \"baseline_runtime_check_deferred\": false}",
+      "exit_code": 0
+    },
+    {
+      "id": "behavior_pythia-410m_0b7048f9d6c49263a6caac1d",
+      "argv": [
+        "/usr/bin/python",
+        "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py",
+        "--manifest",
+        "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_behavior_manifest.json",
+        "--manifest-sha256",
+        "928f0acf6950ee9f8d5e5f7c6d2783fa50046ad04f6aa81d0ddb6e3aa37541b1",
+        "--job-id",
+        "behavior_pythia-410m_0b7048f9d6c49263a6caac1d",
+        "--device",
+        "cuda:0",
+        "--verify-only"
+      ],
+      "stdout": "{\"verified\": true, \"job_id\": \"behavior_pythia-410m_0b7048f9d6c49263a6caac1d\", \"model_inference\": false, \"baseline_runtime_check_deferred\": true}",
+      "exit_code": 0
+    }
+  ],
+  "combined_master_plus_two_primary_queues_valid": true,
+  "combined_jobs": 364,
+  "tests": {
+    "command": "pytest -q tests/test_evaluation_plan.py tests/test_behavioral_queue.py tests/test_behavioral_analysis.py tests/test_supplemental_master.py",
+    "passed": 40
+  },
+  "source_sha256": {
+    "scripts/evaluation_plan.py": "f1f6c7374ab467fd2d3bc27fc4fa801b14f736eb4ea4a0d143a9a253ac95bb94",
+    "scripts/run_frozen_evaluation.py": "a254292dfd273c47f03ea8c931151fc850e3b4277c30881888e4eaa222c0b2ec",
+    "tests/test_evaluation_plan.py": "f4af74b0adc09e6fb3733e8c857ca2767efb6d28b70e7eb218d3a6e8a55dd21b"
+  }
+}

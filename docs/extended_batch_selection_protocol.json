@@ -1,0 +1,32 @@
+{
+  "frozen_at_utc": "2026-11-06T05:27:17.014328+00:00",
+  "policy": {
+    "minimum_throughput_ratio": 1.05,
+    "minimum_reserved_headroom_bytes": 8589934592,
+    "effective_batch_chunks": 64,
+    "steady_steps": "2-10",
+    "selection_inputs": "throughput and memory only; no validation or test losses",
+    "tie_rule": "retain the previously measured microbatch"
+  },
+  "candidates": {
+    "pythia-410m": {
+      "baseline_microbatch": 16,
+      "candidate_microbatch": 64
+    },
+    "pythia-1b": {
+      "baseline_microbatch": 16,
+      "candidate_microbatch": 32
+    },
+    "pythia-2.8b": {
+      "selected_microbatch": 8,
+      "rule": "Already measured and fixed by root; no new candidate comparison"
+    }
+  },
+  "baseline_410m": "formal_deterministic_B4_s11_b0p05_w0p05 events steps2-10",
+  "baseline_1b": "results/benchmarks/benchmark_extended_pythia_1b_m16_s101.json",
+  "baseline_1b_sha256": "987815bb523df048ba898141fd8a081c9de355fafd02fbaa6c00f483910d027b",
+  "selector_source_sha256": "59fefea7606c180d83de369ea16f99c853fc81aa2d6be03d61ecb38e1d733184",
+  "comparison_limit": "Short operational measurements; 410M baseline uses primary data/seed11 while candidate uses extended data/seed101, measured at different times, with identical tensor shapes. This is an engineering choice, not a causal batch benchmark. No NLL used. No selective extra speed measurements.",
+  "scope": "Extended experiments only. Primary A/B remain micro16 accum4. Effective batch64 for every case.",
+  "candidate_results_available_at_freeze": false
+}

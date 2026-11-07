@@ -1,0 +1,761 @@
+{
+  "prepared_only": true,
+  "score_access_authorized": false,
+  "state_observation_is_not_an_analysis_state_binding": true,
+  "phases": [
+    {
+      "contract_id": "extended_pythia_1b_100m_nll",
+      "prepared_only": true,
+      "execution_authorized": false,
+      "plan": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_1b_100m_nll.json",
+        "sha256": "e828aa3b0d31c9548b48cca9a3abf597bef708b5da96ee96598a0b9683f18aa4"
+      },
+      "operational_repair": {
+        "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C1B_nll.json",
+        "sha256": "f7b6f22051c59c09d1822f010d2aa39d519bcfd067f6c14b07dac022f80d609c"
+      },
+      "FALSE_template": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_1b_100m_nll_root_authority_TEMPLATE_v3.json",
+        "sha256": "408e55b15593d8f273dc049390a87a0b826020aad08efd160ada1bfce59cf371"
+      },
+      "expected_counts": {
+        "closure_canonical_forward_jobs": 43,
+        "closure_queue_jobs": 43,
+        "closure_reuse_materializations": 0,
+        "imported_baselines": 0,
+        "imported_canonical_forward_jobs": 0,
+        "logical_aliases": 6,
+        "logical_endpoints": 48,
+        "new_forward_jobs": 43,
+        "queue_jobs": 43,
+        "reuse_jobs": 0
+      },
+      "first_read_receipt_path_immutable": "/tmp/grad-research-20261106/worktree/artifacts/provenance/supplemental_score_first_reads_v1/extended_pythia_1b_100m_nll_e1e71c5d22b4750a7f1a1e9ea278b6fe93296108812ebd0ba71b6130f8d078d7.json",
+      "ROOT_future_operation_directory_not_created": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_nll",
+      "ROOT_must_copy_actual_full_successor_state_only_after_phase_full_closure": {
+        "source": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/successor/state.json",
+        "destination": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_nll/actual_successor_state_immutable.json",
+        "sha256": "<ROOT computes from immutable copied original bytes>",
+        "same_path_and_SHA_required_from_check_through_analyze": true
+      },
+      "check_argv_REFERENCE_ONLY": [
+        "/usr/bin/python",
+        "/tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v3.py",
+        "check",
+        "--plan",
+        "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_1b_100m_nll.json",
+        "--plan-sha256",
+        "e828aa3b0d31c9548b48cca9a3abf597bef708b5da96ee96598a0b9683f18aa4",
+        "--operational-repair",
+        "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C1B_nll.json",
+        "--operational-repair-sha256",
+        "f7b6f22051c59c09d1822f010d2aa39d519bcfd067f6c14b07dac022f80d609c",
+        "--state",
+        "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_nll/actual_successor_state_immutable.json",
+        "--output",
+        "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_nll/check_readiness.json"
+      ],
+      "analyze_argv_REFERENCE_ONLY": [
+        "/usr/bin/python",
+        "/tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v3.py",
+        "analyze",
+        "--plan",
+        "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_1b_100m_nll.json",
+        "--plan-sha256",
+        "e828aa3b0d31c9548b48cca9a3abf597bef708b5da96ee96598a0b9683f18aa4",
+        "--operational-repair",
+        "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C1B_nll.json",
+        "--operational-repair-sha256",
+        "f7b6f22051c59c09d1822f010d2aa39d519bcfd067f6c14b07dac022f80d609c",
+        "--state",
+        "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_nll/actual_successor_state_immutable.json",
+        "--authority",
+        "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_nll/ROOT_AUTHORITY_v3.json",
+        "--authority-sha256",
+        "<SHA256_OF_ROOT_NEW_TRUE_AUTHORITY>",
+        "--output",
+        "/tmp/grad-research-20261106/worktree/results/supplemental_analysis_v3/extended_pythia_1b_100m_nll"
+      ],
+      "future_ROOT_authority_path_not_created": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_nll/ROOT_AUTHORITY_v3.json",
+      "authority_core_fields_from_retained_FALSE_template": {
+        "allow_partial": false,
+        "allow_score_analysis": false,
+        "authorized_by": "root",
+        "checkpoint_verification": {
+          "cache_reader_source": {
+            "path": "/tmp/grad-research-20261106/worktree/scripts/stat_bound_digest_cache.py",
+            "sha256": "9cc01b493b46a5bf391a7c649a379d87011fff077ddeea701eaf8a84bdb568e2"
+          },
+          "cache_snapshot": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/digest_cache_snapshot_1794003609611862274.json",
+            "sha256": "bba05b10faab3f3ed3c808f64949fbdd57e31237f122e856c77ffbe2a5b87d4f"
+          },
+          "mode": "v5_checkpoint_snapshot"
+        },
+        "contract_id": "extended_pythia_1b_100m_nll",
+        "expected_counts": {
+          "closure_canonical_forward_jobs": 43,
+          "closure_queue_jobs": 43,
+          "closure_reuse_materializations": 0,
+          "imported_baselines": 0,
+          "imported_canonical_forward_jobs": 0,
+          "logical_aliases": 6,
+          "logical_endpoints": 48,
+          "new_forward_jobs": 43,
+          "queue_jobs": 43,
+          "reuse_jobs": 0
+        },
+        "manifest": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_1b_100m_nll/manifest.json",
+          "sha256": "e1e71c5d22b4750a7f1a1e9ea278b6fe93296108812ebd0ba71b6130f8d078d7"
+        },
+        "plan": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_1b_100m_nll.json",
+          "sha256": "e828aa3b0d31c9548b48cca9a3abf597bef708b5da96ee96598a0b9683f18aa4"
+        },
+        "protocol": {
+          "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_protocol_v2.json",
+          "sha256": "eed050602c368e5e4be87172ac4d208b890d9a7f7e9811ce1684ae62acc8f742"
+        },
+        "ready": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_1b_100m_nll/READY.json",
+          "sha256": "7fd9ab47e028754f990effa9456b63f1ccfa251f508fb337097c47e594f80c62"
+        },
+        "test_or_behavior_used_for_selection": false,
+        "training_methods_grid_selection_horizons_frozen": true,
+        "operational_repair": {
+          "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C1B_nll.json",
+          "sha256": "f7b6f22051c59c09d1822f010d2aa39d519bcfd067f6c14b07dac022f80d609c"
+        },
+        "actual_successor_immutable_state": {
+          "path": null,
+          "sha256": null,
+          "pending_actual_completed_phase_snapshot": true,
+          "same_exact_source_required_for_check_and_analyze": true
+        },
+        "note": "Non-authorizing only. Before first real check, ROOT binds an immutable byte copy of the actual successor state after this full phase closure completes. Other phases may still run. Use that exact state path/SHA for check and analyze; never the old master or different state. This operational state field is externally enforced; frozen core is unchanged."
+      },
+      "ROOT_required_additions_after_real_check": {
+        "operational_repair": {
+          "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C1B_nll.json",
+          "sha256": "f7b6f22051c59c09d1822f010d2aa39d519bcfd067f6c14b07dac022f80d609c"
+        },
+        "actual_successor_immutable_state": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_nll/actual_successor_state_immutable.json",
+          "sha256": "<ROOT fixed actual-state SHA>",
+          "pending_actual_completed_phase_snapshot": false,
+          "same_exact_source_required_for_check_and_analyze": true
+        },
+        "whole_phase_check": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_nll/check_readiness.json",
+          "sha256": "<ROOT hashes successful original check output>"
+        },
+        "allow_score_analysis": "ROOT must explicitly authorize true after check; this reference does not authorize it"
+      },
+      "new_output_path": "/tmp/grad-research-20261106/worktree/results/supplemental_analysis_v3/extended_pythia_1b_100m_nll",
+      "whole_timing": "Use separate external Popen spawn-to-exit wall/user/sys plus stdout/stderr for original check and analyze; no nested additions."
+    },
+    {
+      "contract_id": "extended_pythia_2p8b_25m_nll",
+      "prepared_only": true,
+      "execution_authorized": false,
+      "plan": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_2p8b_25m_nll.json",
+        "sha256": "71b80a6b563a712ccceb416001022205ebfcdcc273a857c67320588c32d27412"
+      },
+      "operational_repair": {
+        "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C2p8B_nll.json",
+        "sha256": "7a218b5d402630d0d804a1a5b36be642e360cae287b1b49c0645f6fb97d3141c"
+      },
+      "FALSE_template": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_2p8b_25m_nll_root_authority_TEMPLATE_v3.json",
+        "sha256": "0bc1a8723111ce432e5d1c5a5ca1b9fbcd99bd6d8529d53b74b32771917515a2"
+      },
+      "expected_counts": {
+        "closure_canonical_forward_jobs": 31,
+        "closure_queue_jobs": 31,
+        "closure_reuse_materializations": 0,
+        "imported_baselines": 0,
+        "imported_canonical_forward_jobs": 0,
+        "logical_aliases": 0,
+        "logical_endpoints": 30,
+        "new_forward_jobs": 31,
+        "queue_jobs": 31,
+        "reuse_jobs": 0
+      },
+      "first_read_receipt_path_immutable": "/tmp/grad-research-20261106/worktree/artifacts/provenance/supplemental_score_first_reads_v1/extended_pythia_2p8b_25m_nll_88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb.json",
+      "ROOT_future_operation_directory_not_created": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_nll",
+      "ROOT_must_copy_actual_full_successor_state_only_after_phase_full_closure": {
+        "source": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/successor/state.json",
+        "destination": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_nll/actual_successor_state_immutable.json",
+        "sha256": "<ROOT computes from immutable copied original bytes>",
+        "same_path_and_SHA_required_from_check_through_analyze": true
+      },
+      "check_argv_REFERENCE_ONLY": [
+        "/usr/bin/python",
+        "/tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v3.py",
+        "check",
+        "--plan",
+        "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_2p8b_25m_nll.json",
+        "--plan-sha256",
+        "71b80a6b563a712ccceb416001022205ebfcdcc273a857c67320588c32d27412",
+        "--operational-repair",
+        "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C2p8B_nll.json",
+        "--operational-repair-sha256",
+        "7a218b5d402630d0d804a1a5b36be642e360cae287b1b49c0645f6fb97d3141c",
+        "--state",
+        "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_nll/actual_successor_state_immutable.json",
+        "--output",
+        "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_nll/check_readiness.json"
+      ],
+      "analyze_argv_REFERENCE_ONLY": [
+        "/usr/bin/python",
+        "/tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v3.py",
+        "analyze",
+        "--plan",
+        "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_2p8b_25m_nll.json",
+        "--plan-sha256",
+        "71b80a6b563a712ccceb416001022205ebfcdcc273a857c67320588c32d27412",
+        "--operational-repair",
+        "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C2p8B_nll.json",
+        "--operational-repair-sha256",
+        "7a218b5d402630d0d804a1a5b36be642e360cae287b1b49c0645f6fb97d3141c",
+        "--state",
+        "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_nll/actual_successor_state_immutable.json",
+        "--authority",
+        "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_nll/ROOT_AUTHORITY_v3.json",
+        "--authority-sha256",
+        "<SHA256_OF_ROOT_NEW_TRUE_AUTHORITY>",
+        "--output",
+        "/tmp/grad-research-20261106/worktree/results/supplemental_analysis_v3/extended_pythia_2p8b_25m_nll"
+      ],
+      "future_ROOT_authority_path_not_created": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_nll/ROOT_AUTHORITY_v3.json",
+      "authority_core_fields_from_retained_FALSE_template": {
+        "allow_partial": false,
+        "allow_score_analysis": false,
+        "authorized_by": "root",
+        "checkpoint_verification": {
+          "cache_reader_source": {
+            "path": "/tmp/grad-research-20261106/worktree/scripts/stat_bound_digest_cache.py",
+            "sha256": "9cc01b493b46a5bf391a7c649a379d87011fff077ddeea701eaf8a84bdb568e2"
+          },
+          "cache_snapshot": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/digest_cache_snapshot_1794000500254466661.json",
+            "sha256": "fd14a156b761b04a7a9ccc4dcd9dbea52f42119845ca34b71b128bce922a6ae8"
+          },
+          "mode": "v5_checkpoint_snapshot"
+        },
+        "contract_id": "extended_pythia_2p8b_25m_nll",
+        "expected_counts": {
+          "closure_canonical_forward_jobs": 31,
+          "closure_queue_jobs": 31,
+          "closure_reuse_materializations": 0,
+          "imported_baselines": 0,
+          "imported_canonical_forward_jobs": 0,
+          "logical_aliases": 0,
+          "logical_endpoints": 30,
+          "new_forward_jobs": 31,
+          "queue_jobs": 31,
+          "reuse_jobs": 0
+        },
+        "manifest": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/manifest.json",
+          "sha256": "88329c6dd6315798f468c5073e79a8a1f2e981e69ff953ff35dd87c932c24eeb"
+        },
+        "plan": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_2p8b_25m_nll.json",
+          "sha256": "71b80a6b563a712ccceb416001022205ebfcdcc273a857c67320588c32d27412"
+        },
+        "protocol": {
+          "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_protocol_v2.json",
+          "sha256": "eed050602c368e5e4be87172ac4d208b890d9a7f7e9811ce1684ae62acc8f742"
+        },
+        "ready": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_nll/READY.json",
+          "sha256": "015bed924ed7980c5732295f75d59ff75fc078edd5ca701406877ccec474f21f"
+        },
+        "test_or_behavior_used_for_selection": false,
+        "training_methods_grid_selection_horizons_frozen": true,
+        "operational_repair": {
+          "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C2p8B_nll.json",
+          "sha256": "7a218b5d402630d0d804a1a5b36be642e360cae287b1b49c0645f6fb97d3141c"
+        },
+        "actual_successor_immutable_state": {
+          "path": null,
+          "sha256": null,
+          "pending_actual_handoff": true,
+          "same_exact_source_required_for_check_and_analyze": true
+        },
+        "note": "Non-authorizing only. Before first real check, ROOT must bind one actual successor immutable state path/SHA and use that same file for both check and analyze; do not substitute current live master or a different analysis state. This operational state field must be externally enforced; frozen core state arguments/receipts are unchanged."
+      },
+      "ROOT_required_additions_after_real_check": {
+        "operational_repair": {
+          "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C2p8B_nll.json",
+          "sha256": "7a218b5d402630d0d804a1a5b36be642e360cae287b1b49c0645f6fb97d3141c"
+        },
+        "actual_successor_immutable_state": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_nll/actual_successor_state_immutable.json",
+          "sha256": "<ROOT fixed actual-state SHA>",
+          "pending_actual_completed_phase_snapshot": false,
+          "same_exact_source_required_for_check_and_analyze": true
+        },
+        "whole_phase_check": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_nll/check_readiness.json",
+          "sha256": "<ROOT hashes successful original check output>"
+        },
+        "allow_score_analysis": "ROOT must explicitly authorize true after check; this reference does not authorize it"
+      },
+      "new_output_path": "/tmp/grad-research-20261106/worktree/results/supplemental_analysis_v3/extended_pythia_2p8b_25m_nll",
+      "whole_timing": "Use separate external Popen spawn-to-exit wall/user/sys plus stdout/stderr for original check and analyze; no nested additions."
+    },
+    {
+      "contract_id": "extended_pythia_410m_100m_behavior",
+      "prepared_only": true,
+      "execution_authorized": false,
+      "plan": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_410m_100m_behavior.json",
+        "sha256": "537e591bd43085b99d2bfcaed17a74ee963180913ac5b746400e4580e731e061"
+      },
+      "operational_repair": {
+        "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C410_behavior.json",
+        "sha256": "7d6bc1d7a2be5c543f93e2195e2baf844ab37844ca120feff4d755d7ba555cbc"
+      },
+      "FALSE_template": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_410m_100m_behavior_root_authority_TEMPLATE.json",
+        "sha256": "e9968567009db3e61fab4d0573fa2c184e6a3207e8f4c5f0cd081be29c8bac59"
+      },
+      "expected_counts": {
+        "closure_canonical_forward_jobs": 22,
+        "closure_queue_jobs": 22,
+        "closure_reuse_materializations": 0,
+        "imported_baselines": 1,
+        "imported_canonical_forward_jobs": 1,
+        "logical_aliases": 3,
+        "logical_endpoints": 24,
+        "new_forward_jobs": 21,
+        "queue_jobs": 21,
+        "reuse_jobs": 0
+      },
+      "first_read_receipt_path_immutable": "/tmp/grad-research-20261106/worktree/artifacts/provenance/supplemental_score_first_reads_v1/extended_pythia_410m_100m_behavior_db6bdaf2f631ffc1c97f5d9c0ae1d0521e67ee6556790eb472d74195c5fb66e1.json",
+      "ROOT_future_operation_directory_not_created": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_410m_100m_behavior",
+      "ROOT_must_copy_actual_full_successor_state_only_after_phase_full_closure": {
+        "source": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/successor/state.json",
+        "destination": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_410m_100m_behavior/actual_successor_state_immutable.json",
+        "sha256": "<ROOT computes from immutable copied original bytes>",
+        "same_path_and_SHA_required_from_check_through_analyze": true
+      },
+      "check_argv_REFERENCE_ONLY": [
+        "/usr/bin/python",
+        "/tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v3.py",
+        "check",
+        "--plan",
+        "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_410m_100m_behavior.json",
+        "--plan-sha256",
+        "537e591bd43085b99d2bfcaed17a74ee963180913ac5b746400e4580e731e061",
+        "--operational-repair",
+        "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C410_behavior.json",
+        "--operational-repair-sha256",
+        "7d6bc1d7a2be5c543f93e2195e2baf844ab37844ca120feff4d755d7ba555cbc",
+        "--state",
+        "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_410m_100m_behavior/actual_successor_state_immutable.json",
+        "--output",
+        "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_410m_100m_behavior/check_readiness.json"
+      ],
+      "analyze_argv_REFERENCE_ONLY": [
+        "/usr/bin/python",
+        "/tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v3.py",
+        "analyze",
+        "--plan",
+        "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_410m_100m_behavior.json",
+        "--plan-sha256",
+        "537e591bd43085b99d2bfcaed17a74ee963180913ac5b746400e4580e731e061",
+        "--operational-repair",
+        "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C410_behavior.json",
+        "--operational-repair-sha256",
+        "7d6bc1d7a2be5c543f93e2195e2baf844ab37844ca120feff4d755d7ba555cbc",
+        "--state",
+        "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_410m_100m_behavior/actual_successor_state_immutable.json",
+        "--authority",
+        "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_410m_100m_behavior/ROOT_AUTHORITY_v3.json",
+        "--authority-sha256",
+        "<SHA256_OF_ROOT_NEW_TRUE_AUTHORITY>",
+        "--output",
+        "/tmp/grad-research-20261106/worktree/results/supplemental_analysis_v3/extended_pythia_410m_100m_behavior"
+      ],
+      "future_ROOT_authority_path_not_created": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_410m_100m_behavior/ROOT_AUTHORITY_v3.json",
+      "authority_core_fields_from_retained_FALSE_template": {
+        "allow_partial": false,
+        "allow_score_analysis": false,
+        "authorized_by": "root",
+        "checkpoint_verification": {
+          "cache_reader_source": {
+            "path": "/tmp/grad-research-20261106/worktree/scripts/stat_bound_digest_cache.py",
+            "sha256": "9cc01b493b46a5bf391a7c649a379d87011fff077ddeea701eaf8a84bdb568e2"
+          },
+          "cache_snapshot": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/digest_cache_snapshot_1793984987008682332.json",
+            "sha256": "d4367a24bc81d6ada9775f8dbd586078a309b01ba5da843d6e7d0c5fe70b1416"
+          },
+          "mode": "v5_checkpoint_snapshot"
+        },
+        "contract_id": "extended_pythia_410m_100m_behavior",
+        "expected_counts": {
+          "closure_canonical_forward_jobs": 22,
+          "closure_queue_jobs": 22,
+          "closure_reuse_materializations": 0,
+          "imported_baselines": 1,
+          "imported_canonical_forward_jobs": 1,
+          "logical_aliases": 3,
+          "logical_endpoints": 24,
+          "new_forward_jobs": 21,
+          "queue_jobs": 21,
+          "reuse_jobs": 0
+        },
+        "manifest": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/manifest.json",
+          "sha256": "db6bdaf2f631ffc1c97f5d9c0ae1d0521e67ee6556790eb472d74195c5fb66e1"
+        },
+        "plan": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_410m_100m_behavior.json",
+          "sha256": "537e591bd43085b99d2bfcaed17a74ee963180913ac5b746400e4580e731e061"
+        },
+        "protocol": {
+          "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_protocol_v2.json",
+          "sha256": "eed050602c368e5e4be87172ac4d208b890d9a7f7e9811ce1684ae62acc8f742"
+        },
+        "ready": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_410m_100m_behavior/READY.json",
+          "sha256": "c2d5258fcbe127bd67af010d5950b8c862b252ecb2f5e63c62d478ca88517634"
+        },
+        "test_or_behavior_used_for_selection": false,
+        "training_methods_grid_selection_horizons_frozen": true
+      },
+      "ROOT_required_additions_after_real_check": {
+        "operational_repair": {
+          "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C410_behavior.json",
+          "sha256": "7d6bc1d7a2be5c543f93e2195e2baf844ab37844ca120feff4d755d7ba555cbc"
+        },
+        "actual_successor_immutable_state": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_410m_100m_behavior/actual_successor_state_immutable.json",
+          "sha256": "<ROOT fixed actual-state SHA>",
+          "pending_actual_completed_phase_snapshot": false,
+          "same_exact_source_required_for_check_and_analyze": true
+        },
+        "whole_phase_check": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_410m_100m_behavior/check_readiness.json",
+          "sha256": "<ROOT hashes successful original check output>"
+        },
+        "allow_score_analysis": "ROOT must explicitly authorize true after check; this reference does not authorize it"
+      },
+      "new_output_path": "/tmp/grad-research-20261106/worktree/results/supplemental_analysis_v3/extended_pythia_410m_100m_behavior",
+      "whole_timing": "Use separate external Popen spawn-to-exit wall/user/sys plus stdout/stderr for original check and analyze; no nested additions."
+    },
+    {
+      "contract_id": "extended_pythia_1b_100m_behavior",
+      "prepared_only": true,
+      "execution_authorized": false,
+      "plan": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_1b_100m_behavior.json",
+        "sha256": "0d6fe37a1c376cb56be8b46f6d88b06cf4e7ef8116345ae584c7bc3788eace8c"
+      },
+      "operational_repair": {
+        "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C1B_behavior.json",
+        "sha256": "b86edb21c5e46db26bac205640441a5053aec1727f4251f77e649b2d5a1424b2"
+      },
+      "FALSE_template": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_1b_100m_behavior_root_authority_TEMPLATE_v3.json",
+        "sha256": "b469108ed5e218f7ee3cb5294eb752ec43b43b5afa654d21686c951dcda969ba"
+      },
+      "expected_counts": {
+        "closure_canonical_forward_jobs": 22,
+        "closure_queue_jobs": 22,
+        "closure_reuse_materializations": 0,
+        "imported_baselines": 1,
+        "imported_canonical_forward_jobs": 1,
+        "logical_aliases": 3,
+        "logical_endpoints": 24,
+        "new_forward_jobs": 21,
+        "queue_jobs": 21,
+        "reuse_jobs": 0
+      },
+      "first_read_receipt_path_immutable": "/tmp/grad-research-20261106/worktree/artifacts/provenance/supplemental_score_first_reads_v1/extended_pythia_1b_100m_behavior_e56a85f0c1d1eb2c375f863873fbeed7efc3c934f05b61d77b63ae7a7744fe6d.json",
+      "ROOT_future_operation_directory_not_created": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_behavior",
+      "ROOT_must_copy_actual_full_successor_state_only_after_phase_full_closure": {
+        "source": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/successor/state.json",
+        "destination": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_behavior/actual_successor_state_immutable.json",
+        "sha256": "<ROOT computes from immutable copied original bytes>",
+        "same_path_and_SHA_required_from_check_through_analyze": true
+      },
+      "check_argv_REFERENCE_ONLY": [
+        "/usr/bin/python",
+        "/tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v3.py",
+        "check",
+        "--plan",
+        "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_1b_100m_behavior.json",
+        "--plan-sha256",
+        "0d6fe37a1c376cb56be8b46f6d88b06cf4e7ef8116345ae584c7bc3788eace8c",
+        "--operational-repair",
+        "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C1B_behavior.json",
+        "--operational-repair-sha256",
+        "b86edb21c5e46db26bac205640441a5053aec1727f4251f77e649b2d5a1424b2",
+        "--state",
+        "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_behavior/actual_successor_state_immutable.json",
+        "--output",
+        "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_behavior/check_readiness.json"
+      ],
+      "analyze_argv_REFERENCE_ONLY": [
+        "/usr/bin/python",
+        "/tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v3.py",
+        "analyze",
+        "--plan",
+        "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_1b_100m_behavior.json",
+        "--plan-sha256",
+        "0d6fe37a1c376cb56be8b46f6d88b06cf4e7ef8116345ae584c7bc3788eace8c",
+        "--operational-repair",
+        "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C1B_behavior.json",
+        "--operational-repair-sha256",
+        "b86edb21c5e46db26bac205640441a5053aec1727f4251f77e649b2d5a1424b2",
+        "--state",
+        "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_behavior/actual_successor_state_immutable.json",
+        "--authority",
+        "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_behavior/ROOT_AUTHORITY_v3.json",
+        "--authority-sha256",
+        "<SHA256_OF_ROOT_NEW_TRUE_AUTHORITY>",
+        "--output",
+        "/tmp/grad-research-20261106/worktree/results/supplemental_analysis_v3/extended_pythia_1b_100m_behavior"
+      ],
+      "future_ROOT_authority_path_not_created": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_behavior/ROOT_AUTHORITY_v3.json",
+      "authority_core_fields_from_retained_FALSE_template": {
+        "allow_partial": false,
+        "allow_score_analysis": false,
+        "authorized_by": "root",
+        "checkpoint_verification": {
+          "cache_reader_source": {
+            "path": "/tmp/grad-research-20261106/worktree/scripts/stat_bound_digest_cache.py",
+            "sha256": "9cc01b493b46a5bf391a7c649a379d87011fff077ddeea701eaf8a84bdb568e2"
+          },
+          "cache_snapshot": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/digest_cache_snapshot_1794003609611862274.json",
+            "sha256": "bba05b10faab3f3ed3c808f64949fbdd57e31237f122e856c77ffbe2a5b87d4f"
+          },
+          "mode": "v5_checkpoint_snapshot"
+        },
+        "contract_id": "extended_pythia_1b_100m_behavior",
+        "expected_counts": {
+          "closure_canonical_forward_jobs": 22,
+          "closure_queue_jobs": 22,
+          "closure_reuse_materializations": 0,
+          "imported_baselines": 1,
+          "imported_canonical_forward_jobs": 1,
+          "logical_aliases": 3,
+          "logical_endpoints": 24,
+          "new_forward_jobs": 21,
+          "queue_jobs": 21,
+          "reuse_jobs": 0
+        },
+        "manifest": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_1b_100m_behavior/manifest.json",
+          "sha256": "e56a85f0c1d1eb2c375f863873fbeed7efc3c934f05b61d77b63ae7a7744fe6d"
+        },
+        "plan": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_1b_100m_behavior.json",
+          "sha256": "0d6fe37a1c376cb56be8b46f6d88b06cf4e7ef8116345ae584c7bc3788eace8c"
+        },
+        "protocol": {
+          "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_protocol_v2.json",
+          "sha256": "eed050602c368e5e4be87172ac4d208b890d9a7f7e9811ce1684ae62acc8f742"
+        },
+        "ready": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_1b_100m_behavior/READY.json",
+          "sha256": "e6b1776b90acc4e781e1536e908f5dc5a18a707ff938f7f8bb91d31e60a6bbac"
+        },
+        "test_or_behavior_used_for_selection": false,
+        "training_methods_grid_selection_horizons_frozen": true,
+        "operational_repair": {
+          "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C1B_behavior.json",
+          "sha256": "b86edb21c5e46db26bac205640441a5053aec1727f4251f77e649b2d5a1424b2"
+        },
+        "actual_successor_immutable_state": {
+          "path": null,
+          "sha256": null,
+          "pending_actual_completed_phase_snapshot": true,
+          "same_exact_source_required_for_check_and_analyze": true
+        },
+        "note": "Non-authorizing only. Before first real check, ROOT binds an immutable byte copy of the actual successor state after this full phase closure completes. Other phases may still run. Use that exact state path/SHA for check and analyze; never the old master or different state. This operational state field is externally enforced; frozen core is unchanged."
+      },
+      "ROOT_required_additions_after_real_check": {
+        "operational_repair": {
+          "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C1B_behavior.json",
+          "sha256": "b86edb21c5e46db26bac205640441a5053aec1727f4251f77e649b2d5a1424b2"
+        },
+        "actual_successor_immutable_state": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_behavior/actual_successor_state_immutable.json",
+          "sha256": "<ROOT fixed actual-state SHA>",
+          "pending_actual_completed_phase_snapshot": false,
+          "same_exact_source_required_for_check_and_analyze": true
+        },
+        "whole_phase_check": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_1b_100m_behavior/check_readiness.json",
+          "sha256": "<ROOT hashes successful original check output>"
+        },
+        "allow_score_analysis": "ROOT must explicitly authorize true after check; this reference does not authorize it"
+      },
+      "new_output_path": "/tmp/grad-research-20261106/worktree/results/supplemental_analysis_v3/extended_pythia_1b_100m_behavior",
+      "whole_timing": "Use separate external Popen spawn-to-exit wall/user/sys plus stdout/stderr for original check and analyze; no nested additions."
+    },
+    {
+      "contract_id": "extended_pythia_2p8b_25m_behavior",
+      "prepared_only": true,
+      "execution_authorized": false,
+      "plan": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_2p8b_25m_behavior.json",
+        "sha256": "e49b2ccc6d5963c6596c360e9fe916513d16d6e1d6836ee6ee3217372c652829"
+      },
+      "operational_repair": {
+        "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C2p8B_behavior.json",
+        "sha256": "5728413f502649fae3c1bd7e300a9c4b53823318ae5cced50c340deb87e73983"
+      },
+      "FALSE_template": {
+        "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_2p8b_25m_behavior_root_authority_TEMPLATE_v3.json",
+        "sha256": "a9d683ffac8b54b6dc3bc9b6f1cd70e6e8003aadb3382152dae29bd91d4c0cf6"
+      },
+      "expected_counts": {
+        "closure_canonical_forward_jobs": 16,
+        "closure_queue_jobs": 16,
+        "closure_reuse_materializations": 0,
+        "imported_baselines": 1,
+        "imported_canonical_forward_jobs": 1,
+        "logical_aliases": 0,
+        "logical_endpoints": 15,
+        "new_forward_jobs": 15,
+        "queue_jobs": 15,
+        "reuse_jobs": 0
+      },
+      "first_read_receipt_path_immutable": "/tmp/grad-research-20261106/worktree/artifacts/provenance/supplemental_score_first_reads_v1/extended_pythia_2p8b_25m_behavior_0170c8aa27ba3bcbf8b9b9c51616ac99cea0f3d806986a645a48372bd8734b0e.json",
+      "ROOT_future_operation_directory_not_created": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_behavior",
+      "ROOT_must_copy_actual_full_successor_state_only_after_phase_full_closure": {
+        "source": "/tmp/grad-research-20261106/worktree/artifacts/provenance/final_evaluation_handoff_actual_v1/successor/state.json",
+        "destination": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_behavior/actual_successor_state_immutable.json",
+        "sha256": "<ROOT computes from immutable copied original bytes>",
+        "same_path_and_SHA_required_from_check_through_analyze": true
+      },
+      "check_argv_REFERENCE_ONLY": [
+        "/usr/bin/python",
+        "/tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v3.py",
+        "check",
+        "--plan",
+        "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_2p8b_25m_behavior.json",
+        "--plan-sha256",
+        "e49b2ccc6d5963c6596c360e9fe916513d16d6e1d6836ee6ee3217372c652829",
+        "--operational-repair",
+        "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C2p8B_behavior.json",
+        "--operational-repair-sha256",
+        "5728413f502649fae3c1bd7e300a9c4b53823318ae5cced50c340deb87e73983",
+        "--state",
+        "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_behavior/actual_successor_state_immutable.json",
+        "--output",
+        "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_behavior/check_readiness.json"
+      ],
+      "analyze_argv_REFERENCE_ONLY": [
+        "/usr/bin/python",
+        "/tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v3.py",
+        "analyze",
+        "--plan",
+        "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_2p8b_25m_behavior.json",
+        "--plan-sha256",
+        "e49b2ccc6d5963c6596c360e9fe916513d16d6e1d6836ee6ee3217372c652829",
+        "--operational-repair",
+        "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C2p8B_behavior.json",
+        "--operational-repair-sha256",
+        "5728413f502649fae3c1bd7e300a9c4b53823318ae5cced50c340deb87e73983",
+        "--state",
+        "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_behavior/actual_successor_state_immutable.json",
+        "--authority",
+        "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_behavior/ROOT_AUTHORITY_v3.json",
+        "--authority-sha256",
+        "<SHA256_OF_ROOT_NEW_TRUE_AUTHORITY>",
+        "--output",
+        "/tmp/grad-research-20261106/worktree/results/supplemental_analysis_v3/extended_pythia_2p8b_25m_behavior"
+      ],
+      "future_ROOT_authority_path_not_created": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_behavior/ROOT_AUTHORITY_v3.json",
+      "authority_core_fields_from_retained_FALSE_template": {
+        "allow_partial": false,
+        "allow_score_analysis": false,
+        "authorized_by": "root",
+        "checkpoint_verification": {
+          "cache_reader_source": {
+            "path": "/tmp/grad-research-20261106/worktree/scripts/stat_bound_digest_cache.py",
+            "sha256": "9cc01b493b46a5bf391a7c649a379d87011fff077ddeea701eaf8a84bdb568e2"
+          },
+          "cache_snapshot": {
+            "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/digest_cache_snapshot_1794000500254466661.json",
+            "sha256": "fd14a156b761b04a7a9ccc4dcd9dbea52f42119845ca34b71b128bce922a6ae8"
+          },
+          "mode": "v5_checkpoint_snapshot"
+        },
+        "contract_id": "extended_pythia_2p8b_25m_behavior",
+        "expected_counts": {
+          "closure_canonical_forward_jobs": 16,
+          "closure_queue_jobs": 16,
+          "closure_reuse_materializations": 0,
+          "imported_baselines": 1,
+          "imported_canonical_forward_jobs": 1,
+          "logical_aliases": 0,
+          "logical_endpoints": 15,
+          "new_forward_jobs": 15,
+          "queue_jobs": 15,
+          "reuse_jobs": 0
+        },
+        "manifest": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_behavior/manifest.json",
+          "sha256": "0170c8aa27ba3bcbf8b9b9c51616ac99cea0f3d806986a645a48372bd8734b0e"
+        },
+        "plan": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/extended_pythia_2p8b_25m_behavior.json",
+          "sha256": "e49b2ccc6d5963c6596c360e9fe916513d16d6e1d6836ee6ee3217372c652829"
+        },
+        "protocol": {
+          "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_protocol_v2.json",
+          "sha256": "eed050602c368e5e4be87172ac4d208b890d9a7f7e9811ce1684ae62acc8f742"
+        },
+        "ready": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/extended_pythia_2p8b_25m_behavior/READY.json",
+          "sha256": "2e157df30676a728f1823be231968a056a8b01883d3a01470dd6ff6cbd0149f4"
+        },
+        "test_or_behavior_used_for_selection": false,
+        "training_methods_grid_selection_horizons_frozen": true,
+        "operational_repair": {
+          "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C2p8B_behavior.json",
+          "sha256": "5728413f502649fae3c1bd7e300a9c4b53823318ae5cced50c340deb87e73983"
+        },
+        "actual_successor_immutable_state": {
+          "path": null,
+          "sha256": null,
+          "pending_actual_handoff": true,
+          "same_exact_source_required_for_check_and_analyze": true
+        },
+        "note": "Non-authorizing only. Before first real check, ROOT must bind one actual successor immutable state path/SHA and use that same file for both check and analyze; do not substitute current live master or a different analysis state. This operational state field must be externally enforced; frozen core state arguments/receipts are unchanged."
+      },
+      "ROOT_required_additions_after_real_check": {
+        "operational_repair": {
+          "path": "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_operational_repair_v3_C2p8B_behavior.json",
+          "sha256": "5728413f502649fae3c1bd7e300a9c4b53823318ae5cced50c340deb87e73983"
+        },
+        "actual_successor_immutable_state": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_behavior/actual_successor_state_immutable.json",
+          "sha256": "<ROOT fixed actual-state SHA>",
+          "pending_actual_completed_phase_snapshot": false,
+          "same_exact_source_required_for_check_and_analyze": true
+        },
+        "whole_phase_check": {
+          "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C_pending_phase_analysis_execution_v1/extended_pythia_2p8b_25m_behavior/check_readiness.json",
+          "sha256": "<ROOT hashes successful original check output>"
+        },
+        "allow_score_analysis": "ROOT must explicitly authorize true after check; this reference does not authorize it"
+      },
+      "new_output_path": "/tmp/grad-research-20261106/worktree/results/supplemental_analysis_v3/extended_pythia_2p8b_25m_behavior",
+      "whole_timing": "Use separate external Popen spawn-to-exit wall/user/sys plus stdout/stderr for original check and analyze; no nested additions."
+    }
+  ]
+}

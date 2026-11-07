@@ -1,0 +1,65 @@
+{
+  "status": "complete_exploratory_only",
+  "scope": "15 replay-fit physical inferences; 12 adapted endpoint rows; heldout/behavior scores sealed",
+  "analysis_doc": "docs/探索性回放拟合诊断结果.md",
+  "analysis_doc_sha256": "9789408c67076eccd020a3d6db1391df583028cd48bdfb3070cf5ee999cc9911",
+  "analysis_code_sha256": "9c93af56b65ef52e722a465b4ab3ed933795ebc7b04a370137211b31bcf8f869",
+  "cli_sha256": "5a3a77019a5fae6be48932cab017bcb3a70c976c11818ac3aee69ef9328fddb7",
+  "files": {
+    "results/analysis/replay_fit_exploratory_v2/per_seed_endpoints.csv": {
+      "bytes": 4944,
+      "sha256": "652b2dcc917381168f4168b5431a3dea07399be90d87dadf1919eda0146d4eff"
+    },
+    "results/analysis/replay_fit_exploratory_v2/group_mean_sd.csv": {
+      "bytes": 2642,
+      "sha256": "0e12fffc9514a45b22237034ae99d0707e02eac7855bd1d426188d5a2685b0ee"
+    },
+    "results/analysis/replay_fit_exploratory_v2/paired_B3_minus_B4.csv": {
+      "bytes": 1454,
+      "sha256": "e167661907c6ba6f85281a7cdf0349514b1f1212517899dc851c7b3e536c1e60"
+    },
+    "results/analysis/replay_fit_exploratory_v2/paired_mean_sd.csv": {
+      "bytes": 1415,
+      "sha256": "8d4b1a44462ca0b74cd08c5755f5c8d08d445f074b1945ab85c20765c4019865"
+    },
+    "results/analysis/replay_fit_exploratory_v2/inference_costs_unique_jobs.csv": {
+      "bytes": 1810,
+      "sha256": "13080ea0a34404284a7e0f1e0a47908d64cf6582ff88cbd610014125c46eb8f3"
+    },
+    "results/analysis/replay_fit_exploratory_v2/training_costs_unique_runs.csv": {
+      "bytes": 1049,
+      "sha256": "e72115bb111cd83c01fc228c4b819f70f804cb36d2ea96b7e93ffb892b4fe273"
+    },
+    "results/analysis/replay_fit_exploratory_v2/analysis.json": {
+      "bytes": 49202,
+      "sha256": "fd145b93f73efb806494346f3f36c05ed8d797bff9a1a6c9fd353b4b198c89fc"
+    },
+    "results/analysis/replay_fit_exploratory_v2/replay_fit_nll.png": {
+      "bytes": 489110,
+      "sha256": "1f5051081bd78b8112936ba27a81dc5590bb499956b81176260e6c4f7aee2f26"
+    },
+    "results/analysis/replay_fit_exploratory_v2/replay_fit_nll.pdf": {
+      "bytes": 24496,
+      "sha256": "88e6e95438d84acbeb7ffd72de998cf8ec7e000220e191d618e75a727b82199c"
+    },
+    "results/analysis/replay_fit_exploratory_v2/replay_fit_nll.svg": {
+      "bytes": 97737,
+      "sha256": "07474507590d10e14a7e41b4bfb92d80fcd986be737b2488c81ef52cb5871f0b"
+    },
+    "results/analysis/replay_fit_exploratory_v2/replay_fit_forward_kl.png": {
+      "bytes": 243049,
+      "sha256": "75c14d7373d1258cf72de6b1db9a53b4c742b98ed4ab519e097e6f74522ecdee"
+    },
+    "results/analysis/replay_fit_exploratory_v2/replay_fit_forward_kl.pdf": {
+      "bytes": 18611,
+      "sha256": "337e3a8632ee3db5b99dfa8b4f7a898dd70a61bf709cbb186394ead6c17ab110"
+    },
+    "results/analysis/replay_fit_exploratory_v2/replay_fit_forward_kl.svg": {
+      "bytes": 61666,
+      "sha256": "2c1bb28f7407b54e0d5740037f974e6f3f36787903b3c73cff4803356e049ef4"
+    }
+  },
+  "tests": "269 passed, PYTHONPATH=src:scripts python -m pytest -q; 8 focused scientific replay-fit tests",
+  "storage": "Workspace resides on scratch; final ordinary report/code package still requires durable publication",
+  "interpretation_boundary_updated_at_utc": "2026-11-06T07:01:26.302739+00:00"
+}

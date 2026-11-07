@@ -1,0 +1,54 @@
+{
+  "A_training_aliases_excluded": 18,
+  "CPU_trial_inventory": {
+    "path": "/tmp/grad-research-20261106/worktree/results/cost_inventory_final_v1_cpu_trial_20261106/inventory.json",
+    "sha256": "c8e4a880e7eaadbf71fd4cf151183ce1489472319fb035b0f5c1c147978bbfe5"
+  },
+  "attested_evaluation_forward_jobs": 193,
+  "attested_reuse_materializations": 18,
+  "checkpoint_payloads_read_by_collection": 0,
+  "collector_trial_process_cpu_seconds": 2.535362895,
+  "collector_trial_seconds": 2.5979140363633633,
+  "created_at_utc": "2026-11-06T10:27:45.962756+00:00",
+  "documentation": {
+    "path": "/tmp/grad-research-20261106/worktree/docs/最终成本账本收集说明.md",
+    "sha256": "016c239b4c83b77a62d510c6f9f66e0b001a215b7b1b1c3b30b2c0b33f85ce36"
+  },
+  "legacy_collector_preserved": {
+    "path": "/tmp/grad-research-20261106/worktree/scripts/inventory_study_costs.py",
+    "sha256": "5a1936e4366864f3d39ce0e88556cf779f50caa7845a74897830997023d68219"
+  },
+  "legacy_evaluation_cost_module_preserved": {
+    "path": "/tmp/grad-research-20261106/worktree/src/replay_study/evaluation_cost_inventory.py",
+    "sha256": "0046281e937ec2d917f3c41b3fc27d75c88ef1e52022515989f1581fe3d6220f"
+  },
+  "new_GPU_work": false,
+  "note": "Prior development snapshot at results/cost_inventory_final_v1_snapshot_20261106_1030 retained; normative CPU trial above corrects unstarted-cohort unknown/definition-vs-observed labels without overwriting any prior output.",
+  "old_v3_source_preserved": {
+    "path": "/tmp/grad-research-20261106/worktree/configs/cost_inventory_sources_with_evaluations_v3.json",
+    "sha256": "ff922135fa72230bacc5146b0e980ad5e9362282d8a9880b47e574b8013f461f"
+  },
+  "planned_formal_physical_training_runs": 267,
+  "queues_modified": false,
+  "schema_version": 1,
+  "score_semantics_parsed": false,
+  "source": {
+    "path": "/tmp/grad-research-20261106/worktree/scripts/inventory_study_costs_final.py",
+    "sha256": "c0c9d4605da8809e48aa24bdbeca664c86cdf613fe4aef4a0fc35614d17f8b95"
+  },
+  "source_spec": {
+    "path": "/tmp/grad-research-20261106/worktree/configs/cost_inventory_final_sources_v1.json",
+    "sha256": "3b9986f853a656b7dd16cc4adc8a8b5d7194bf6f8db478ed4785ffb84167847c"
+  },
+  "status": "CPU_trial_passed_with_explicit_gaps",
+  "tests": {
+    "command": "python -m pytest -q tests/test_final_cost_inventory.py tests/test_study_cost_inventory.py tests/test_evaluation_cost_inventory.py tests/test_first_C_steady_timing.py",
+    "new_final_collector_tests": 7,
+    "passed": 24
+  },
+  "tests_source": {
+    "path": "/tmp/grad-research-20261106/worktree/tests/test_final_cost_inventory.py",
+    "sha256": "a6eede98b429f33d1a98f0d76bf265637aa272be41192afbb99639bd0f868c02"
+  },
+  "whole_study_complete": false
+}

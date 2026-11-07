@@ -1,0 +1,116 @@
+{
+  "GPU_work_or_queue_mutation_authorized_by_this_receipt": false,
+  "all_three_models_have_100_steps_excluding_10_warmup": false,
+  "hypothetical_main_behavior_66_scenarios": [
+    {
+      "66_forward_slot_seconds_proxy": 6929.13225025535,
+      "existing_training_forecast_already_contains_10pct": true,
+      "fits_before_2350_under_timing_proxy": false,
+      "four_slot_increment_with_10pct_and_dispatch_tail_seconds_proxy": 1958.0047949585196,
+      "hypothetical_margin_before_2350_minutes": 20.312475351909733,
+      "name": "low",
+      "per_job_whole_slot_seconds_proxy": 104.98685227659621
+    },
+    {
+      "66_forward_slot_seconds_proxy": 8880.43755422384,
+      "existing_training_forecast_already_contains_10pct": true,
+      "fits_before_2350_under_timing_proxy": false,
+      "four_slot_increment_with_10pct_and_dispatch_tail_seconds_proxy": 2509.3963694890094,
+      "hypothetical_margin_before_2350_minutes": 11.122615776401567,
+      "name": "central",
+      "per_job_whole_slot_seconds_proxy": 134.55208415490665
+    },
+    {
+      "66_forward_slot_seconds_proxy": 11130.744549094145,
+      "existing_training_forecast_already_contains_10pct": true,
+      "fits_before_2350_under_timing_proxy": false,
+      "four_slot_increment_with_10pct_and_dispatch_tail_seconds_proxy": 3145.2785733425126,
+      "hypothetical_margin_before_2350_minutes": 0.5245790455098529,
+      "name": "high",
+      "per_job_whole_slot_seconds_proxy": 168.6476446832446
+    }
+  ],
+  "limitations": [
+    "Early evaluation moves the same work; its time must leave the later evaluation budget once completed.",
+    "First B4 samples cover one method per model, not all future methods or contention patterns.",
+    "Training steps omit validation/checkpoint time; the source forecast includes those as separate costs.",
+    "The observer uses model/method pilot factors outside measured methods and is not a completion guarantee.",
+    "Root alone decides whether the unchanged remaining 66 evaluation definitions enter the single master."
+  ],
+  "margin_before_master_2350_stop_minutes": 52.94588860121839,
+  "master_status_counts": {
+    "completed": 440,
+    "pending": 60,
+    "running": 4
+  },
+  "minimum_steps_observed": 100,
+  "models": {
+    "pythia-1b": {
+      "complete_long_runs": 0,
+      "latest_checkpoint_seconds_proxy": 15.90097043231914,
+      "model_only_best_save_seconds_proxy": 5.087950391792937,
+      "qualifying_sample_count": 0,
+      "remaining_seconds_proxy": 73876.88668648367,
+      "samples": [],
+      "validation_seconds_per_point_proxy": 23.424528323506053
+    },
+    "pythia-2.8b": {
+      "complete_long_runs": 0,
+      "latest_checkpoint_seconds_proxy": 50.83583491001474,
+      "model_only_best_save_seconds_proxy": 15.034239164308497,
+      "qualifying_sample_count": 0,
+      "remaining_seconds_proxy": 31959.591157479415,
+      "samples": [],
+      "validation_seconds_per_point_proxy": 58.87900860117454
+    },
+    "pythia-410m": {
+      "complete_long_runs": 0,
+      "latest_checkpoint_seconds_proxy": 5.180587067219772,
+      "model_only_best_save_seconds_proxy": 1.571007221152908,
+      "qualifying_sample_count": 1,
+      "remaining_seconds_proxy": 50601.299802712456,
+      "samples": [
+        {
+          "event_path": "/tmp/grad-research-20261106/runs/extended_v2_pythia_410m_m64_formal_B4_s11_w0p05/events.jsonl",
+          "group": "B4",
+          "id": "extended_v2_pythia_410m_m64_formal_B4_s11_w0p05",
+          "observed_to_probe_seconds_ratio": 0.9779470878061801,
+          "sample": {
+            "sampled_target_prediction_tokens": 4284224,
+            "sampled_training_seconds": 74.94328561425209,
+            "seconds_per_target_prediction_token": 1.749284949018821e-05,
+            "steps_observed": 141,
+            "warmup_steps_excluded": 10
+          },
+          "trace_sha256": "eb2bc19e36b8a3768940c331cb5f711ed5656e0b98a257c5b8e362a231f5ceef"
+        }
+      ],
+      "validation_seconds_per_point_proxy": 18.439938265242073
+    }
+  },
+  "producer": {
+    "path": "/tmp/grad-research-20261106/worktree/scripts/watch_first_C_steady.py",
+    "sha256": "9bc999ee41663e2c00281886b32d8a5282eebe50cd2c8b1f913df48e262d87ed"
+  },
+  "schema_version": 1,
+  "scientific_conditions_changed": false,
+  "scores_or_predictions_read": false,
+  "source_budget": {
+    "path": "/tmp/grad-research-20261106/worktree/results/evaluation_timing_budget_v4.json",
+    "sha256": "a5154c67177e5d43bc77593c8927ebc06c330989197e8db0dc701a80da381328"
+  },
+  "source_observer_age_seconds": 5.684985,
+  "source_observer_healthy_and_fresh": true,
+  "source_observer_updated_at_utc": "2026-11-06T10:58:28.020096+00:00",
+  "source_runtime_snapshot": {
+    "path": "/tmp/grad-research-20261106/worktree/results/C_steady_timing_v1/pythia_410m_first_steady_runtime.json",
+    "sha256": "851646891124f19ebac9d8854f416eeaa43e4110511d439b2531432af55877b1"
+  },
+  "status": "waiting_reliable_samples",
+  "total_compute_reduction_due_to_earlier_evaluation_seconds": 0,
+  "training_finish_utc_with_existing_10pct_proxy": "2026-11-06T22:57:08.931669+00:00",
+  "unknown_queued_job_allowances_requiring_reconciliation": [],
+  "utc": "2026-11-06T10:58:33.705081+00:00",
+  "warmup_steps_excluded": 10,
+  "watcher_pid": 3127444
+}

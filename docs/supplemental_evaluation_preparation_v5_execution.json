@@ -1,0 +1,78 @@
+{
+  "active_output_root": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5",
+  "argv": [
+    "/usr/bin/python",
+    "/tmp/grad-research-20261106/worktree/scripts/prepare_supplemental_evaluations_v5.py",
+    "--catalog",
+    "/tmp/grad-research-20261106/worktree/configs/supplemental_evaluation_preparation_v5.json",
+    "--catalog-sha256",
+    "90163f7a77529434c872f52f41d45151bf09826ddd17ab58ea48d21d16f3d186",
+    "--output-root",
+    "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5",
+    "--cache-dir",
+    "/tmp/grad-research-20261106/worktree/artifacts/evaluation_digest_cache_v1",
+    "--prewarm-seconds",
+    "45",
+    "--poll-seconds",
+    "30",
+    "--watch"
+  ],
+  "catalog": {
+    "path": "/tmp/grad-research-20261106/worktree/configs/supplemental_evaluation_preparation_v5.json",
+    "sha256": "90163f7a77529434c872f52f41d45151bf09826ddd17ab58ea48d21d16f3d186"
+  },
+  "cpu_only_environment": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "MKL_NUM_THREADS": "2",
+    "OMP_NUM_THREADS": "2"
+  },
+  "cpu_tests": {
+    "command": "CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 python -m pytest -q tests/test_stat_bound_digest_cache.py tests/test_evaluation_prewarm_v5.py tests/test_evaluation_handoff.py tests/test_supplemental_evaluation_preparation.py",
+    "passed": 72
+  },
+  "digest_cache_directory": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_digest_cache_v1",
+  "first_real_hash_smoke": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/evaluation_preparation_v5/first_real_hash_smoke.json",
+    "sha256": "d6bd09eca1f333b7913cdbb8c103f06fb453fb49fb5e248731b7bd85474ee7ec"
+  },
+  "frozen_scorer_files_reverified": true,
+  "frozen_scorer_input_sha256": {
+    "/tmp/grad-research-20261106/worktree/scripts/evaluate_tasks.py": "cfc4f149b021740f90245e3fa822f801f30c82f6ba580d43aeec4857cbab9981",
+    "/tmp/grad-research-20261106/worktree/scripts/evaluation_plan.py": "1f68bab77a0e4d9953bcfa85306702dbc21d3ce5c85691218e06ea15df75196f",
+    "/tmp/grad-research-20261106/worktree/scripts/make_behavioral_queue.py": "14076e3bfbf9ad4d5665e9e943ce72b55bf74414a416d3465a050fefdbd8d340",
+    "/tmp/grad-research-20261106/worktree/scripts/run_evaluate.py": "6d7b9cd6b311f96e94b854e8ccd15f15f92ff9eefbd6b5a0dddc67fee8989ddf",
+    "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py": "1f691de8da574c671a8822b5999292fd601f31f83d3794f1a603eaa8c79bef8d",
+    "/tmp/grad-research-20261106/worktree/src/replay_study/evaluate.py": "d9648b4fbc891746a9bafe9e9639e2ee584521ba68bd949d2091484c833c3c46",
+    "/tmp/grad-research-20261106/worktree/src/replay_study/execution.py": "70ed6b3d63f950ffc00f2c671f20e0d842c154f4cbf1648fe9a6511bbd077bf5",
+    "/tmp/grad-research-20261106/worktree/src/replay_study/tasks.py": "c631b1c81386193b645b59a3a82eb73dfacc6d9d1302b95e997f0de4afc47a51"
+  },
+  "frozen_worker_fresh_full_sha_preserved": true,
+  "gpu_inference_started": false,
+  "master_definitions_unchanged": true,
+  "master_jobs": 378,
+  "master_queue": {
+    "path": "/tmp/grad-research-20261106/worktree/configs/supplemental_v1_queue.json",
+    "sha256": "7f4977b81d24973cab38f2d74b062244cd113bb07351a6410305a25bae6f3566"
+  },
+  "new_gpu_scheduler_started": false,
+  "preparation_revision": 5,
+  "reviewed_at_utc": "2026-11-06T09:02:27.987233+00:00",
+  "schema_version": 1,
+  "scientific_core_10_reverified": true,
+  "score_files_parsed": false,
+  "sources": {
+    "/tmp/grad-research-20261106/worktree/scripts/handoff_evaluation.py": "bbe5a14e16bde55362aa3a7edc044b35ed8a7e2d0966a8b40692513b6c3a748a",
+    "/tmp/grad-research-20261106/worktree/scripts/prepare_supplemental_evaluations_v5.py": "f533a7e4b0104c7ab422d5a6836b740dd56ba04982907db091b7e2df03efa191",
+    "/tmp/grad-research-20261106/worktree/scripts/stat_bound_digest_cache.py": "9cc01b493b46a5bf391a7c649a379d87011fff077ddeea701eaf8a84bdb568e2"
+  },
+  "training_science_changed": false,
+  "unchanged_v4_producer": {
+    "path": "/tmp/grad-research-20261106/worktree/scripts/prepare_supplemental_evaluations.py",
+    "sha256": "dd641ed5d5d0ab750fb400e1fc2add313b4ea72a38d01aa4a7f3272fc8fee26d"
+  },
+  "v4_supersession": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v4/SUPERSEDED.json",
+    "sha256": "b7998f441694b6a2d4cd822a6298ddab6e671f4b7cd3337924e4c6d4f7d6faef"
+  },
+  "watcher_pid": 3093854
+}

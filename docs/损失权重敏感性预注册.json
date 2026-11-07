@@ -1,0 +1,52 @@
+{
+  "preregistered_at_utc": "2026-11-06T04:13:44.836476+00:00",
+  "status": "prepared_not_started",
+  "source_plan": "docs/补充实验预案.md",
+  "source_plan_sha256": "05aa2847146a4df7be9b256ba846b045aa179e16f4302e127a5418b27b0af036",
+  "groups": [
+    "B4",
+    "M",
+    "B1",
+    "B2",
+    "B3",
+    "C"
+  ],
+  "lambda_grid": [
+    0.01,
+    0.05,
+    0.1,
+    0.5,
+    1.0,
+    5.0,
+    10.0
+  ],
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "cells": 126,
+  "aliases_to_formal": 18,
+  "new_training_runs": 108,
+  "target_prediction_tokens_per_run": 10000000,
+  "replay_ratio": 0.05,
+  "bank_unique_prediction_tokens": 100156,
+  "learning_rate": 3e-05,
+  "data_version": "v3",
+  "all_other_parameters": "inherited exactly from each matching formal config",
+  "priority": "Complete B4 and M weights before B1/B2/B3/C if resources become limited",
+  "single_point_selection": "Per method, choose lambda minimizing the unweighted mean over seeds 11/22/33 of S=(delta target)+.5*(delta C4+delta Wiki), measured at final 10M target exposure; strict equal-score ties choose smaller lambda; validation only",
+  "curves": "Report all prespecified weights and both old distributions; no favorable subset selection",
+  "test_policy": "Only frozen validation-selected points or the complete prespecified curve; test results never retune hyperparameters",
+  "alias_policy": "Lambda=.05 reuses each matching formal checkpoint/summary with explicit provenance and no duplicate training cost",
+  "D_policy": "Excluded from sweep as specified in plan A; main D/B4 numerical control is audited separately",
+  "launch_policy": "Do not launch before the complete formal audit and explicit root decision",
+  "registry_path": "configs/lambda_sweep_registry.json",
+  "queue_path": "configs/lambda_sweep_queue.json",
+  "aliases_path": "configs/lambda_sweep_aliases.json",
+  "registry_sha256": "1da69981e96f20ca1158e24e7e56f0541d1984dc6c39edfbf2ef901c86203a46",
+  "queue_sha256": "5435a7d6a45b347f83062068ec81c53e764d8d4d5345dca582568b9f00501792",
+  "generator_sha256": "49843812d7e44b408e27820c1181f4804e66772fe229198d0e01b1ea0fcab45f",
+  "formal_snapshot_sha256": "dde25cf3d4835c149af4cb582694b80769e42150eb916cb5073dd8b21b84b68a",
+  "new_training_tokens_total": 1080000000
+}

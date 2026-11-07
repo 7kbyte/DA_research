@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/cost_sources_v9_provisional_v1/preparation_whole_child_timing.json",
+    "sha256": "23ff839314d17ad20c8e65746d18e45e0cc3a1729bad6ec041d1a8719c0ffc34",
+    "bytes": 686
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 0.1216396912932396,
+  "CPU_component_pointers": [
+    "/child_user_seconds",
+    "/child_system_seconds"
+  ],
+  "CPU_components": {
+    "child_user_seconds": 0.07664599999999999,
+    "child_system_seconds": 0.031097999999999997
+  },
+  "recorded_inclusive_CPU_seconds": 0.10774399999999999,
+  "original_returncode": 1,
+  "scope": "Complete metadata-only provisional-source preparation child; no collector, score semantic/payload or large-model/archive reads. Script internal work nested. Manual authoring whole unknown. Not recursively included in index.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall; sum only the named user/system components. Failure rc retained. No calendar-derived elapsed.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

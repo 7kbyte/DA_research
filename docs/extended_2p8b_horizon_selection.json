@@ -1,0 +1,53 @@
+{
+  "selected_at_utc": "2026-11-06T06:22:30.382363+00:00",
+  "status": "frozen_once_before_first_formal",
+  "model": "pythia-2.8b",
+  "selected_target_prediction_tokens": 25000000,
+  "formal_runs": 15,
+  "groups": [
+    "B0",
+    "B1",
+    "B2",
+    "B4",
+    "M"
+  ],
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "amendment": {
+    "path": "docs/extended_2p8b_horizon_amendment.json",
+    "sha256": "a3ba8578807c9799ee753029bee8c84027816b890b05c7789e8ca7d5312044b7"
+  },
+  "scenarios": {
+    "50M": {
+      "path": "results/supplemental_compute_budget_50m_at_horizon_decision.json",
+      "sha256": "2b8bd1a3c65a18927179c6127458ecfac3b9887cf7d6b01349263ae30d1d467a",
+      "required_four_gpu_hours_with_10pct": 18.805143392731658,
+      "remaining_wall_hours": 17.625312175833333,
+      "fits": false
+    },
+    "25M": {
+      "path": "results/supplemental_compute_budget_25m_at_horizon_decision.json",
+      "sha256": "d8c833ab4aa67f160f2bda5087fc1e812f092a9331b917ca7ffaa55bcc1dd855",
+      "required_four_gpu_hours_with_10pct": 16.42908853568515,
+      "remaining_wall_hours": 17.624954234166665,
+      "fits": true
+    }
+  },
+  "priority_matrix_in_both_scenarios": "Complete A108, B60, 410M24x100M, 1B24x100M, all preregistered LR/lambda pilots",
+  "original_50m_candidate_preserved": true,
+  "no_2p8b_formal_job_exists_at_decision": true,
+  "calibration_policy": "Unchanged independent 2M per-model LR/lambda grid, selected validation-only; long-horizon optimum unproven.",
+  "new_schedule": "Fresh from pretrained weights using selected full target-exposure horizon for every group and seed; no truncation of a50M schedule.",
+  "behavior_or_test_scores_used": false,
+  "decision_inputs": "Timing, completed-run counts and source hashes only",
+  "new_auxiliary_source_sha256": {
+    "scripts/make_extended_experiments.py": "b26bad67c6f65ad13ccf0071495548c14e8bd395762830deb0770078b0f137a9",
+    "scripts/freeze_extended_formal.py": "ee2d30d11f0de3a899037b827fc142754f58011d1d648b34d7c77b54dc54ebc9",
+    "scripts/estimate_supplemental_budget.py": "75acd59818a6aae6cc4be9bbdb46feb1d003cadb8ef3d78f6b4e99aebbc3e4fd"
+  },
+  "scientific_core_changed": false,
+  "source_core_commit": "de54262b8deff2c49547bba740d0dbf28a1074a7"
+}

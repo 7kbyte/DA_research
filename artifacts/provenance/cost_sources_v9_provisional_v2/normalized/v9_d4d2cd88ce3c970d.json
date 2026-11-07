@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/primary_behavior_independent_review_actual_v1/whole_parent_timing.json",
+    "sha256": "c3ed729d3c30837ff7213c00aa128e9278c9a1179b81d81559d29441f00a6233",
+    "bytes": 460
+  },
+  "original_wall_pointer": "/whole_process_wall_seconds",
+  "wall_seconds": 31.38528671860695,
+  "CPU_component_pointers": [
+    "/child_user_seconds",
+    "/child_system_seconds"
+  ],
+  "CPU_components": {
+    "child_user_seconds": 32.914879,
+    "child_system_seconds": 11.58676
+  },
+  "recorded_inclusive_CPU_seconds": 44.501639,
+  "original_returncode": 0,
+  "scope": "Complete approved reviewer process and its child spawn through exit; script adjacent child timer is nested; no original analysis/inference cost included",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall; sum only the named user/system components. Failure rc retained. No calendar-derived elapsed.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

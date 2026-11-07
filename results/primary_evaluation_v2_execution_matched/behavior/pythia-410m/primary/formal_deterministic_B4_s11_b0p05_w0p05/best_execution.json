@@ -1,0 +1,70 @@
+{
+  "manifest": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+  "manifest_sha256": "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+  "job_id": "behavior_pythia-410m_2a7b4a17bc6a7cf4ddd114af",
+  "baseline_group": "109f59e1e08b4d91880e04fc18414e3548cd0718cfb5b3fdab10b946d8639ab1",
+  "checkpoint_sha256": "db7f99401668aa8de3ac01c54eb1f1958fa8fe7fe632d7d4e52a434528318839",
+  "verified_frozen_inputs": true,
+  "weights_identity": "model_state:cb76a09bf26e0242c04ec7f066b27c82a94567166988842fac3d661b5131b09e",
+  "source_model_equivalence": {
+    "proof": "/tmp/grad-research-20261106/worktree/results/formal_best_model_equivalence_proofs.json",
+    "proof_sha256": "542fa36058a8b7b5993bd24b88ac7559c5f59036307bd8b34e8b787803d095a6",
+    "comparison_index": 0,
+    "algorithm": "sha256_sorted_key_dtype_shape_contiguous_uint8_v1",
+    "fingerprint": {
+      "sha256_model_state": "cb76a09bf26e0242c04ec7f066b27c82a94567166988842fac3d661b5131b09e",
+      "state_elements": 405334016
+    },
+    "left_checkpoint_sha256": "db7f99401668aa8de3ac01c54eb1f1958fa8fe7fe632d7d4e52a434528318839",
+    "right_checkpoint_sha256": "50bf7cfba968c280772301f7a2b6fc8184bfc961e97e200543c3402103b00e30"
+  },
+  "actual_argv": [
+    "/usr/bin/python",
+    "/tmp/grad-research-20261106/worktree/scripts/evaluate_tasks.py",
+    "--model",
+    "/tmp/grad-research-20261106/models/pythia-410m-final",
+    "--revision",
+    "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+    "--device",
+    "cuda:0",
+    "--batch-size",
+    "16",
+    "--precision",
+    "bf16",
+    "--attention-backend",
+    "auto",
+    "--deterministic-algorithms",
+    "--cudnn-deterministic",
+    "--no-cudnn-benchmark",
+    "--allow-tf32-matmul",
+    "--allow-tf32-cudnn",
+    "--max-length",
+    "2048",
+    "--data-root",
+    "/tmp/grad-research-20261106/worktree/artifacts/behavioral",
+    "--tasks",
+    "piqa",
+    "hellaswag",
+    "--checkpoint",
+    "/tmp/grad-research-20261106/runs/formal_deterministic_B4_s11_b0p05_w0p05/checkpoints/checkpoint_best.pt",
+    "--baseline",
+    "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/baselines/109f59e1e08b4d91880e04fc18414e3548cd0718cfb5b3fdab10b946d8639ab1.json",
+    "--output",
+    "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p05_w0p05/best.json"
+  ],
+  "started_at_utc": "2026-11-06T22:26:07.101085+00:00",
+  "preflight_environment": {
+    "torch_version": "2.3.0a0+6ddf5cf85e.nv24.04",
+    "cuda_version": "12.4",
+    "gpu_name": "NVIDIA H100 80GB HBM3"
+  },
+  "finished_at_utc": "2026-11-06T22:27:48.898664+00:00",
+  "verification_wall_seconds": 5.431963715702295,
+  "inference_subprocess_wall_seconds": 94.71714741364121,
+  "inference_alias": false,
+  "output_sha256": {
+    "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p05_w0p05/best.json": "147f570c8621369bbab10282a198c51f21096279a812ff6504b0bc4a7d1e3252",
+    "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p05_w0p05/best_piqa.jsonl": "04c4639df68ab5e4a8732a6c09051914a8d0e8a3d10037d69ace32780385b593",
+    "/tmp/grad-research-20261106/worktree/results/primary_evaluation_v2_execution_matched/behavior/pythia-410m/primary/formal_deterministic_B4_s11_b0p05_w0p05/best_hellaswag.jsonl": "b0d432d5fe8a39360d4a9559ba8f2f984fd99a75764e48f775d5f0c7d138deea"
+  }
+}

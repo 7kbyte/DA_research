@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "normalized_actual_measured_operation",
+  "original_source": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/provenance/C2native_verification_hint_preparation_v1/prepare_whole_child_timing.json",
+    "sha256": "64682edc2532de571cb878cb65fb04fa93f87615d759e8b34ad35deb0773ed09",
+    "bytes": 749
+  },
+  "original_wall_pointer": "/whole_child_wall_seconds",
+  "wall_seconds": 0.07006311044096947,
+  "CPU_component_pointers": [
+    "/child_user_seconds",
+    "/child_system_seconds"
+  ],
+  "CPU_components": {
+    "child_user_seconds": 0.050970999999999995,
+    "child_system_seconds": 0.017584
+  },
+  "recorded_inclusive_CPU_seconds": 0.06855499999999999,
+  "original_returncode": 0,
+  "scope": "Fixed-target proof/stat/proc-reference preparation only. No hint, target payload FD, TRUE authority, tests, resource admission or restore. Prior manual engineering time unknown.",
+  "timing_semantics": "independent_measured_complete_operation",
+  "normalization": "Copy measured wall; sum only the named user/system components. Failure rc retained. No calendar-derived elapsed.",
+  "nested_subtimers_added": false,
+  "new_operation_created_by_normalization": false
+}

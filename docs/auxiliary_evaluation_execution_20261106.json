@@ -1,0 +1,26 @@
+{
+  "authorized_at_utc": "2026-11-06T06:30:49.518329+00:00",
+  "jobs": [
+    {
+      "phase": "planned_model_initial_timing_v1",
+      "manifest": "docs/planned_model_behavioral_timing_v1_manifest.json",
+      "manifest_sha256": "062c170687f7e86c61f247fc6c46c99352faeca25306923c223e28ab81d45c20",
+      "queue_sha256": "427f2e212cce083aad7aa80ccf543240d3928c5e1957c2fed613a0542655d2c6",
+      "jobs": 2,
+      "prepared_flags_are_historical_snapshot": true
+    },
+    {
+      "phase": "replay_fit_diagnostic_v2",
+      "manifest": "docs/replay_fit_diagnostic_v2_manifest.json",
+      "manifest_sha256": "391baf218cd0e4e13b902236b3ea0fe799518676cbb2fd2357cd6234e51ac019",
+      "queue_sha256": "f2066299cecc10e87c9b458645d78660a78fceb64fb7fcfb715ab2c3efd5a1d0",
+      "jobs": 15,
+      "prepared_flags_are_historical_snapshot": true
+    }
+  ],
+  "no_test_or_behavior_scores_seen": true,
+  "planned_initials_read_policy": "Only execution timing and integrity; scores remain sealed.",
+  "replay_fit_role": "Post-validation exploratory in-pool diagnostic, not independent heldout, no model/parameter selection.",
+  "science_grids_and_behavior_scope_unchanged": true,
+  "model_2p8b_horizon_selection": "docs/extended_2p8b_horizon_selection.json"
+}

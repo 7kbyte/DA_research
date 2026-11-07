@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-11-06T07:35:27.923819+00:00",
+  "catalog": {
+    "path": "/tmp/grad-research-20261106/worktree/configs/supplemental_evaluation_preparation_v4.json",
+    "sha256": "df35f09d35ddc5b9aab95e5e3cb42f7f042b86b5f87b81204a34ac83ed0f72a9"
+  },
+  "preparation_revision": 4,
+  "producer_source": {
+    "path": "/tmp/grad-research-20261106/worktree/scripts/prepare_supplemental_evaluations.py",
+    "sha256": "dd641ed5d5d0ab750fb400e1fc2add313b4ea72a38d01aa4a7f3272fc8fee26d"
+  },
+  "watcher_pid": 3052905,
+  "active_output_root": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v4",
+  "initial_ready_index": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v4/INITIAL_READY_INDEX.json",
+    "sha256": "1b310bcc95a61011fe08c9d0dd000b281e7cb78f2143396d4c9ffe28ef488b62"
+  },
+  "ready_phases_at_review": 0,
+  "plans": 9,
+  "handoff_dependency_closure_jobs_at_review": 134,
+  "v3_supersession_receipt": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v3/SUPERSEDED_BY_V4.json",
+    "sha256": "bfdaba5cdf0246861c92329a449ffde00babd46fd71e01a87df868aa3bef41d2"
+  },
+  "cpu_test_result": {
+    "passed": 102,
+    "command": "PYTHONPATH=src pytest -q tests/test_supplemental_evaluation_preparation.py tests/test_guarded_behavior_analysis.py tests/test_evaluation_plan.py tests/test_auxiliary_evaluation_monitor.py"
+  },
+  "per_model_gate": {
+    "pythia-410m": "all24success+independent_audit+3seed_final_and_best_proofs",
+    "pythia-1b": "all24success+independent_audit+3seed_final_and_best_proofs",
+    "pythia-2.8b": "original_completion_gate_no_D_group"
+  },
+  "false_equivalence_policy": "Unequal pairs are retained in audit/READY and remain distinct inference endpoints; passed completion is not equality",
+  "frozen_scorer_input_sha256": {
+    "/tmp/grad-research-20261106/worktree/scripts/evaluation_plan.py": "1f68bab77a0e4d9953bcfa85306702dbc21d3ce5c85691218e06ea15df75196f",
+    "/tmp/grad-research-20261106/worktree/scripts/run_frozen_evaluation.py": "1f691de8da574c671a8822b5999292fd601f31f83d3794f1a603eaa8c79bef8d",
+    "/tmp/grad-research-20261106/worktree/src/replay_study/evaluate.py": "d9648b4fbc891746a9bafe9e9639e2ee584521ba68bd949d2091484c833c3c46",
+    "/tmp/grad-research-20261106/worktree/src/replay_study/execution.py": "70ed6b3d63f950ffc00f2c671f20e0d842c154f4cbf1648fe9a6511bbd077bf5",
+    "/tmp/grad-research-20261106/worktree/scripts/run_evaluate.py": "6d7b9cd6b311f96e94b854e8ccd15f15f92ff9eefbd6b5a0dddc67fee8989ddf",
+    "/tmp/grad-research-20261106/worktree/scripts/evaluate_tasks.py": "cfc4f149b021740f90245e3fa822f801f30c82f6ba580d43aeec4857cbab9981",
+    "/tmp/grad-research-20261106/worktree/src/replay_study/tasks.py": "c631b1c81386193b645b59a3a82eb73dfacc6d9d1302b95e997f0de4afc47a51",
+    "/tmp/grad-research-20261106/worktree/scripts/make_behavioral_queue.py": "14076e3bfbf9ad4d5665e9e943ce72b55bf74414a416d3465a050fefdbd8d340"
+  },
+  "frozen_scorer_files_reverified": 8,
+  "master_queue": {
+    "path": "/tmp/grad-research-20261106/worktree/configs/supplemental_v1_queue.json",
+    "sha256": "7f4977b81d24973cab38f2d74b062244cd113bb07351a6410305a25bae6f3566"
+  },
+  "master_jobs": 378,
+  "master_definitions_unchanged": true,
+  "no_new_scheduler_started": true,
+  "gpu_inference_started": false,
+  "test_or_behavior_scores_read": false
+}

@@ -1,0 +1,172 @@
+{
+  "method": "nll_stratified",
+  "selection_seed": 1007,
+  "pool_chunks": 1957,
+  "pool_unique_chunks": 1957,
+  "pool_duplicate_rate": 0.0,
+  "deduplicate_before_selection": true,
+  "deduplication": "exact_tokens_and_mask_sha256",
+  "candidate_chunks_after_dedup": 1957,
+  "bank_chunks": 20,
+  "bank_unique_chunks": 20,
+  "bank_duplicate_rate": 0.0,
+  "prediction_tokens": 10220,
+  "valid_prediction_tokens": 10220,
+  "unique_prediction_tokens": 10220,
+  "raw_input_tokens": 10240,
+  "sequence_length": 512,
+  "selected_indices": [
+    1622,
+    1348,
+    1466,
+    300,
+    696,
+    1264,
+    1285,
+    886,
+    1566,
+    315,
+    1428,
+    581,
+    63,
+    598,
+    1882,
+    1381,
+    923,
+    634,
+    1749,
+    1698
+  ],
+  "selected_chunk_hashes": [
+    "62838e6bc1fb65e50c7f01c36a3f344a419bd9bb4d269fa167af3bc3f0ecf094",
+    "36cd5189fa555366ef1930f49d4828aa10d511f3287be773100825eca0a7a985",
+    "15ac58d792a25c763ad4661768a9c9a17ddf1b5a734fb8a889717c60ce152e64",
+    "4b068ccc1e777ad7787a8042560b11010f44e5681a29b494b70c233d61c78562",
+    "aa82d580af1ef328348b74a199dff459c51e9118cde2fd14cccc0f982377fcc6",
+    "82e1af115ac2035049d345d410c2f88cdcdfec2342eddd162bff141b6a123a9a",
+    "4c67c4c7566813c0cb89f1c9c719213ee9f8611a54cc765096835d8c80aac903",
+    "878b62dbea8ce5f6996fc5cd0f15885f50c375f1e45cb32a0026d01aa4483c9e",
+    "d87e34999368f4084c5625587dfb7d8cf12d9f715d8086c557073310fe17f585",
+    "d1daecfd74fda51c7b2c58325dab7be35a7f5d005cd1d5778502068d370c0d29",
+    "b66a9dcd68124a201fe92a4c6da817ea275776d331b2a17ef253737e3b2d4f8c",
+    "354e0b91e46c60a945a24010508655384820888ad822b41b39724225afd353ac",
+    "40105b89a6d054641d2156164092cc28c289df25ac7b850a641956ceb47524e3",
+    "e1f1a4f6efae574193520a74db918922d29314a22db7ca281bd5cbb990eb2d19",
+    "333f52b7ca1dec57e7716b06ccccce44a3e10cb6b8e6f650b41c79e26079b0f2",
+    "7235e21370ecfa5af345683a9a8c03eb304105f7b91957ed31c7aaf298fcf161",
+    "d1e074db620ffc1f57a05752303ac599143e58950dfcc0c0b15f391b78436bbb",
+    "6af541882de4a2d86de4e9c12b6032ce797b7fbc9897ceb733a2957cb8de52a0",
+    "4f97f1e53668b5c233ec0ee6c9448df58368ce463a9d5443473c0fd38d74f4a3",
+    "4a2797fb598f8481f380a2dece5af6862e9b57402e752f91b7bf99c15b25c1d8"
+  ],
+  "wall_seconds": 0.0214354507625103,
+  "rng": "numpy.random.default_rng(PCG64)",
+  "numpy_version": "1.24.4",
+  "n_strata": 5,
+  "stratum_sizes": [
+    392,
+    392,
+    391,
+    391,
+    391
+  ],
+  "stratum_bank_sizes": [
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "strata_nll_ranges": [
+    [
+      0.18042144179344177,
+      2.6393051147460938
+    ],
+    [
+      2.6416144371032715,
+      3.1251015663146973
+    ],
+    [
+      3.1251351833343506,
+      3.483826160430908
+    ],
+    [
+      3.483888626098633,
+      3.868499279022217
+    ],
+    [
+      3.8694965839385986,
+      7.053390026092529
+    ]
+  ],
+  "quantile_tie_policy": "stable_original_index",
+  "allocation": "proportional_largest_remainder",
+  "bank_teacher_nll": {
+    "mean": 3.243565708398819,
+    "std": 1.029512643876337,
+    "min": 1.08693528175354,
+    "max": 5.624569416046143
+  },
+  "teacher_statistics": {
+    "wall_seconds": 8.102698240429163,
+    "precision": "bf16",
+    "model_weight_dtype": "torch.float32",
+    "feature_policy": "last_layer_mean_of_valid_prediction_contexts",
+    "teacher": "/tmp/grad-research-20261106/models/pythia-410m-final",
+    "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+    "source_pool": "artifacts/generated/pool_seed11.pt",
+    "source_pool_sha256": "9909c12dcb8b1c96650678dd9de9dfbe857aa9919bf2d6e98d44afd76baeed3d"
+  },
+  "teacher_statistics_artifact": "artifacts/generated/pool_seed11_stats.pt",
+  "teacher_statistics_sha256": "357340480e19e1753edecf715faddec297eeadb20a7e01cbeb42f5e70f64e0f5",
+  "artifact_sha256": "2d156123be2dbd904eec67660278a8bff632a9a0b606ff8469b8fd4aad0c17d6",
+  "source_pool": "artifacts/generated/pool_seed11.pt",
+  "source_pool_sha256": "9909c12dcb8b1c96650678dd9de9dfbe857aa9919bf2d6e98d44afd76baeed3d",
+  "source": "initial_frozen_teacher_self_generation",
+  "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+  "tokenizer": "/tmp/grad-research-20261106/models/pythia-410m-final",
+  "split": "training_replay_bank",
+  "source_manifest": "artifacts/generated/pool_seed11.json",
+  "source_manifest_sha256": "2a3758b72000bdc307f5fd46388c14265cbeb3af5ca30a2449f5c31c46dbd071",
+  "source_preprocessing": null,
+  "preprocessing": {
+    "selection": "nll_stratified",
+    "deduplication": "exact_tokens_and_mask_sha256",
+    "deduplicate_before_selection": true
+  },
+  "phase": "conditional_bank_variance",
+  "experiment_role": "conditional_bank_variance",
+  "training_seed": 11,
+  "generation_seed": 11,
+  "parent_formal_run_id": "formal_deterministic_B4_s11_b0p05_w0p05",
+  "parent_registry_sha256": "284fa9dd939dab75195afe3f968e0eb6411501b26b8a5caa1962b4ee5e9f372b",
+  "conditional_scope": "selection-draw variability conditional on generation pool 11 and training shuffle 11; not independent training-seed uncertainty",
+  "nll_composition": {
+    "teacher_nll_mean": 3.243565708398819,
+    "teacher_nll_std_ddof1": 1.0562576858150743,
+    "teacher_nll_min": 1.08693528175354,
+    "teacher_nll_max": 5.624569416046143,
+    "teacher_nll_quantiles": [
+      1.08693528175354,
+      2.7344377040863037,
+      3.233598828315735,
+      3.832550883293152,
+      5.624569416046143
+    ],
+    "pool_nll_stratum_counts": [
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "pool_nll_stratum_fractions": [
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2
+    ],
+    "strata_policy": "five equal-frequency full-pool bins; stable original-index ties"
+  }
+}

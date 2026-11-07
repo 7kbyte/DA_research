@@ -1,0 +1,16 @@
+{
+  "launched_at_utc": "2026-11-06T07:44:04.455665+00:00",
+  "pid": 3057259,
+  "log": "/tmp/grad-research-20261106/worktree/logs/auxiliary_validation_analysis_watch.log",
+  "progress": "/tmp/grad-research-20261106/worktree/logs/auxiliary_validation_analysis_watch.json",
+  "protocol": "/tmp/grad-research-20261106/worktree/docs/auxiliary_validation_analysis_protocol_v1.json",
+  "cpu_threads": 2,
+  "gpu": false,
+  "access": "validation and scheduler logs only",
+  "tests": {
+    "command": "PYTHONPATH=src OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 pytest -q",
+    "passed": 342,
+    "elapsed_seconds": 12.11,
+    "new_tests_passed": 19
+  }
+}

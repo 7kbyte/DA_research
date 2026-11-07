@@ -1,0 +1,32 @@
+{
+  "status": "prepared_and_tested_only",
+  "created_at_utc": "2026-11-06T09:42:18.369184+00:00",
+  "shared_write_started": false,
+  "gpu_used": false,
+  "tests": {
+    "command": "OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 PYTHONPATH=src pytest -q tests/test_reserved_file_growth.py tests/test_reserved_archive_publication.py",
+    "passed": 29,
+    "failed": 0,
+    "growth_tests": 21,
+    "publisher_regression_tests": 8
+  },
+  "sources": [
+    {
+      "path": "scripts/grow_reserved_file.py",
+      "sha256": "0ff798eec88d0bd19b86b02ec61d481c846cca1438687ea98e8ce70e9dca4588"
+    },
+    {
+      "path": "tests/test_reserved_file_growth.py",
+      "sha256": "f0cc806457c6de2e644533129eb78fe0981601745ec3dac94b04a4bb6d9347b7"
+    },
+    {
+      "path": "docs/primary_best_storage_growth_plan.json",
+      "sha256": "087fc67fd932f87c6a17cb394a463625ae01dac07d3e8fa351125938e9b71f83"
+    },
+    {
+      "path": "docs/best权重预留扩容准备.md",
+      "sha256": "efe1262c348504a1501e1112677aa26fd01f2d7644cb4a22b2d723383e836875"
+    }
+  ],
+  "current_reservation_size": 10737418240
+}

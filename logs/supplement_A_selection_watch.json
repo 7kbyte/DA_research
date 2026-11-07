@@ -1,0 +1,41 @@
+{
+  "updated_at_utc": "2026-11-06T09:16:24.687951+00:00",
+  "status": "selection_frozen",
+  "pid": 3039567,
+  "source_sha256": {
+    "/tmp/grad-research-20261106/worktree/configs/supplemental_v1_A_registry.json": "0f43c49530b79d09c18113e8c50239b640e99bbbdcb26b890e805d71cf291310",
+    "/tmp/grad-research-20261106/worktree/configs/lambda_sweep_deterministic_registry.json": "e342e67b23ece61a21ece4187002f6d1eb75c0cb345bf16f50f619060e1eacf4",
+    "/tmp/grad-research-20261106/worktree/docs/损失权重敏感性预注册_lambda_sweep_deterministic.json": "96e4a5a701f00d5c5468659bb68f27b9c483bf6f96bc48d8ccd7f0b3b51faf9d",
+    "/tmp/grad-research-20261106/worktree/configs/formal_deterministic_registry.json": "284fa9dd939dab75195afe3f968e0eb6411501b26b8a5caa1962b4ee5e9f372b",
+    "/tmp/grad-research-20261106/worktree/results/pilots/lr_deterministic_v3/initial_cudnn_matched.json": "99d4dc36d5a02dd2cb7f2f078654868c8ca8bca36a526537106c9f498daab446",
+    "/tmp/grad-research-20261106/worktree/scripts/analyze_lambda_sweep.py": "2732ee87c9b35884415c31ff50a3a139f83179cb5b9811026980c138177557f4",
+    "/tmp/grad-research-20261106/worktree/src/replay_study/lambda_analysis.py": "573416f6db4c0b79d8de59f4b8c7632755e193a3f5415692e9abfac0356e20c5"
+  },
+  "gate": {
+    "ready": true,
+    "missing_actual_runs": [],
+    "failed_actual_runs": []
+  },
+  "test_or_behavior_scores_read": false,
+  "gpu_work_started": false,
+  "command": [
+    "/usr/bin/python",
+    "/tmp/grad-research-20261106/worktree/scripts/analyze_lambda_sweep.py",
+    "--registry",
+    "/tmp/grad-research-20261106/worktree/configs/supplemental_v1_A_registry.json",
+    "--output",
+    "/tmp/grad-research-20261106/worktree/results/supplement_A_validation"
+  ],
+  "selection_path": "/tmp/grad-research-20261106/worktree/results/supplement_A_validation/validation_lambda_selection.json",
+  "selection_sha256": "9548085fc18278f69fad584b67485bceb5193a18b10c78f516f6b09b4fa4e477",
+  "analysis_manifest": "/tmp/grad-research-20261106/worktree/results/supplement_A_validation/analysis_manifest.json",
+  "analysis_manifest_sha256": "29f5a24dc4c0af42dd889cb5628fd4da497bc3fd813fe03a32df7f7e1068a09e",
+  "choices": {
+    "B4": 5.0,
+    "M": 5.0,
+    "B1": 0.05,
+    "B2": 1.0,
+    "B3": 0.1,
+    "C": 1.0
+  }
+}

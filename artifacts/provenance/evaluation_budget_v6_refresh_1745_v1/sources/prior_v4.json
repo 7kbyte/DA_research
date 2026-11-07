@@ -1,0 +1,626 @@
+{
+  "A_completion": {
+    "path": "/tmp/grad-research-20261106/worktree/results/evaluation_timing_budget_v4_sources/A_runtime_completion.json",
+    "sha256": "b87e50543f9383c686248362088ea2c602ce9c2f3b0c28073ecf6c2d1a3516a8"
+  },
+  "A_selected_behavior_ready": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_A_behavior/manifest.json",
+    "sha256": "31f0877c6153a4a4539ca60dc4e2e666bb32d74416de9fd5711cdd65a10848fa"
+  },
+  "accounting": {
+    "actual_A_NLL_materialization_jobs_removed": 18,
+    "actual_frozen_A_behavior_forward_count": 15,
+    "actual_frozen_A_behavior_reuse_count": 3,
+    "actual_new_A_NLL_forward_jobs_removed": 108,
+    "completed_A_slot_seconds_separate": 4531.543528318405,
+    "earlier_primary18_forwards_removed_again": 0,
+    "earlier_primary_NLL_initial_removed_again": 0,
+    "future_unproved_C_avoided_forwards_not_deducted": {
+      "NLL_max": 12,
+      "behavior_max": 6
+    },
+    "remaining_NLL_forward_jobs": 189,
+    "remaining_behavior_forward_jobs": 144,
+    "remaining_forward_jobs": 333,
+    "remaining_materialization_jobs": 3,
+    "remaining_queue_jobs": 336,
+    "total_compute_reduction_due_to_moving_A_earlier": 0.0,
+    "v3_A_NLL_materialization_jobs": 18,
+    "v3_remaining_NLL_forward_jobs": 297,
+    "v3_remaining_behavior_forward_upper_count": 147
+  },
+  "frozen_catalog": {
+    "path": "/tmp/grad-research-20261106/worktree/configs/supplemental_evaluation_preparation_v5.json",
+    "sha256": "90163f7a77529434c872f52f41d45151bf09826ddd17ab58ea48d21d16f3d186"
+  },
+  "limitations": [
+    "The108 A NLL forwards and18 materializations are actual same-definition successful work; the18 earlier canonical main forwards and all completed baselines were already absent from v3 remaining work.",
+    "A NLL whole-slot min/median/max improve only410M final-NLL proxies; selected-best/initial costs and behavior rates are separate, while1B/2.8B v3 extrapolations remain unchanged.",
+    "Three selected A behavior aliases are proved in the frozen READY manifest and still depend on their remaining main behavior canonical forwards; their materialization is charged, not assumed free.",
+    "No future C D/B4 equality discount is spent before complete state proofs/manifests exist; any aliases still require fresh input SHA and materialization overhead.",
+    "Factors1/1.25/1.5 and alias floors10/20/40s are sensitivity assumptions; extrapolation, shared CPU/I/O and real scheduling may exceed them.",
+    "All four-slot evaluation schedules require the old master and children fully exited and all required source/proof gates satisfied; no second scheduler is started.",
+    "Five-minute handoff/preflight allowance assumes explicit cache snapshot binding and stable covered inputs; it is unmeasured and excludes the reserved30-minute delivery tail."
+  ],
+  "no_new_GPU_work_started": true,
+  "no_science_or_queue_changes": true,
+  "no_score_fields_read": true,
+  "prehash_inventory": {
+    "path": "/tmp/grad-research-20261106/worktree/results/evaluation_timing_budget_v4_sources/prehash_inventory.json",
+    "sha256": "5d860b90e51b1eeb61ec8a098d303c3352428c2ca0a4187c4c7977a8b768d909"
+  },
+  "prior_v3": {
+    "path": "/tmp/grad-research-20261106/worktree/results/evaluation_timing_budget_v3.json",
+    "sha256": "36df024abf5857539c639fe70ca26f7d7c39da970e83ca3c4df830c9e7592cf6"
+  },
+  "schema_version": 4,
+  "sensitivity_scenarios": [
+    {
+      "A_observed_410m_final_reference_seconds_before_factor": 40.084930419921875,
+      "C_future_D_B4_equality_discount_spent": false,
+      "alias_materialization_whole_slot_seconds_proxy": 10.00819706916809,
+      "already_completed_A_actual_slot_seconds_separate": 4531.543528318405,
+      "counterfactual_slot_work_if_A_not_done_early": 31291.27506603863,
+      "four_slot_dispatch": {
+        "LPT_imbalance_and_dependency_tail_seconds_proxy": 3.864249159289102,
+        "baseline_first_LPT_wall_seconds_proxy": 6693.797133589345,
+        "ideal_four_slot_wall_seconds_proxy": 6689.932884430056,
+        "job_count": 336,
+        "largest_job_seconds_proxy": 249.95685102189836,
+        "sum_whole_job_slot_seconds_proxy": 26759.731537720225
+      },
+      "from_current_training_forecast": {
+        "evaluation_finish_utc": "2026-11-07T01:07:02.830413+00:00",
+        "margin_before_30min_delivery_tail_minutes": 109.48615978333333,
+        "training_finish_utc": "2026-11-06T23:10:29.033279+00:00"
+      },
+      "future_410m_NLL_final_whole_slot_seconds_proxy": 40.084930419921875,
+      "handoff_preflight_allowance_seconds_unmeasured": 300.0,
+      "latest_feasible_start_utc_proxy": "2026-11-07T00:59:58.202866+00:00",
+      "name": "low",
+      "per_phase": [
+        {
+          "id": "main_behavior_adapted",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 104.98685227659621,
+          "remaining_forward_jobs": 66,
+          "sum_slot_seconds_proxy": 6929.13225025535
+        },
+        {
+          "id": "B_nll",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 40.084930419921875,
+          "remaining_forward_jobs": 60,
+          "sum_slot_seconds_proxy": 2405.0958251953125
+        },
+        {
+          "id": "C_pythia_410m_nll_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 38.94772026431083,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 934.74528634346
+        },
+        {
+          "id": "C_pythia_410m_nll_best",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 29.19575581209905,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 700.6981394903772
+        },
+        {
+          "id": "C_pythia_410m_nll_initial",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 29.213140334555625,
+          "remaining_forward_jobs": 1,
+          "sum_slot_seconds_proxy": 29.213140334555625
+        },
+        {
+          "id": "C_pythia_410m_behavior_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 104.98685227659621,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 2519.684454638309
+        },
+        {
+          "id": "C_pythia_1b_nll_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 49.37299152584776,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 1184.9517966203462
+        },
+        {
+          "id": "C_pythia_1b_nll_best",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 37.02777696018988,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 888.6666470445572
+        },
+        {
+          "id": "C_pythia_1b_nll_initial",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 37.04982503540411,
+          "remaining_forward_jobs": 1,
+          "sum_slot_seconds_proxy": 37.04982503540411
+        },
+        {
+          "id": "C_pythia_1b_behavior_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 100.85534981597789,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 2420.5283955834693
+        },
+        {
+          "id": "C_pythia_2p8b_nll_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 124.28923507840987,
+          "remaining_forward_jobs": 15,
+          "sum_slot_seconds_proxy": 1864.3385261761482
+        },
+        {
+          "id": "C_pythia_2p8b_nll_best",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 93.21197547097483,
+          "remaining_forward_jobs": 15,
+          "sum_slot_seconds_proxy": 1398.1796320646226
+        },
+        {
+          "id": "C_pythia_2p8b_nll_initial",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 93.26747825333901,
+          "remaining_forward_jobs": 1,
+          "sum_slot_seconds_proxy": 93.26747825333901
+        },
+        {
+          "id": "C_pythia_2p8b_behavior_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 249.95685102189836,
+          "remaining_forward_jobs": 15,
+          "sum_slot_seconds_proxy": 3749.3527653284755
+        },
+        {
+          "id": "A_selected_behavior",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 104.98685227659621,
+          "remaining_forward_jobs": 15,
+          "sum_slot_seconds_proxy": 1574.8027841489431
+        },
+        {
+          "id": "A_selected_behavior_materialization",
+          "materialization_jobs": 3,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 10.00819706916809,
+          "remaining_forward_jobs": 0,
+          "sum_slot_seconds_proxy": 30.024591207504272
+        }
+      ],
+      "remaining_forward_jobs": 333,
+      "remaining_materialization_jobs": 3,
+      "starts": {
+        "from_2350": {
+          "finish_utc": "2026-11-07T01:46:33.797134+00:00",
+          "margin_before_30min_delivery_tail_minutes": 69.97004776666667,
+          "start_utc": "2026-11-06T23:50:00+00:00"
+        },
+        "from_midnight": {
+          "finish_utc": "2026-11-07T01:56:33.797134+00:00",
+          "margin_before_30min_delivery_tail_minutes": 59.97004776666667,
+          "start_utc": "2026-11-07T00:00:00+00:00"
+        }
+      },
+      "total_compute_reduction_due_to_early_A_seconds": 0.0,
+      "wall_minutes_with_dispatch_tail_and_handoff_proxy": 116.56328555982242,
+      "wall_seconds_with_dispatch_tail_and_handoff_proxy": 6993.797133589345,
+      "whole_wall_sensitivity_factor": 1.0
+    },
+    {
+      "A_observed_410m_final_reference_seconds_before_factor": 40.1039856672287,
+      "C_future_D_B4_equality_discount_spent": false,
+      "alias_materialization_whole_slot_seconds_proxy": 20.0,
+      "already_completed_A_actual_slot_seconds_separate": 4531.543528318405,
+      "counterfactual_slot_work_if_A_not_done_early": 38918.13510584074,
+      "four_slot_dispatch": {
+        "LPT_imbalance_and_dependency_tail_seconds_proxy": 9.437281709637318,
+        "baseline_first_LPT_wall_seconds_proxy": 8606.08517609022,
+        "ideal_four_slot_wall_seconds_proxy": 8596.647894380583,
+        "job_count": 336,
+        "largest_job_seconds_proxy": 336.06981812934333,
+        "sum_whole_job_slot_seconds_proxy": 34386.59157752233
+      },
+      "from_current_training_forecast": {
+        "evaluation_finish_utc": "2026-11-07T01:38:55.118455+00:00",
+        "margin_before_30min_delivery_tail_minutes": 77.61469241666667,
+        "training_finish_utc": "2026-11-06T23:10:29.033279+00:00"
+      },
+      "future_410m_NLL_final_whole_slot_seconds_proxy": 50.12998208403587,
+      "handoff_preflight_allowance_seconds_unmeasured": 300.0,
+      "latest_feasible_start_utc_proxy": "2026-11-07T00:28:05.914824+00:00",
+      "name": "central",
+      "per_phase": [
+        {
+          "id": "main_behavior_adapted",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 134.55208415490665,
+          "remaining_forward_jobs": 66,
+          "sum_slot_seconds_proxy": 8880.43755422384
+        },
+        {
+          "id": "B_nll",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 50.12998208403587,
+          "remaining_forward_jobs": 60,
+          "sum_slot_seconds_proxy": 3007.7989250421524
+        },
+        {
+          "id": "C_pythia_410m_nll_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 48.70779364241063,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 1168.9870474178551
+        },
+        {
+          "id": "C_pythia_410m_nll_best",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 36.50785072169603,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 876.1884173207047
+        },
+        {
+          "id": "C_pythia_410m_nll_initial",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 36.51642541819453,
+          "remaining_forward_jobs": 1,
+          "sum_slot_seconds_proxy": 36.51642541819453
+        },
+        {
+          "id": "C_pythia_410m_behavior_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 134.55208415490665,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 3229.2500197177596
+        },
+        {
+          "id": "C_pythia_1b_nll_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 61.733848193877286,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 1481.6123566530548
+        },
+        {
+          "id": "C_pythia_1b_nll_best",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 46.30140635916213,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 1111.2337526198912
+        },
+        {
+          "id": "C_pythia_1b_nll_initial",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 46.31228129425514,
+          "remaining_forward_jobs": 1,
+          "sum_slot_seconds_proxy": 46.31228129425514
+        },
+        {
+          "id": "C_pythia_1b_behavior_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 134.70413619053193,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 3232.8992685727662
+        },
+        {
+          "id": "C_pythia_2p8b_nll_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 155.40587137497613,
+          "remaining_forward_jobs": 15,
+          "sum_slot_seconds_proxy": 2331.088070624642
+        },
+        {
+          "id": "C_pythia_2p8b_nll_best",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 116.55697176911282,
+          "remaining_forward_jobs": 15,
+          "sum_slot_seconds_proxy": 1748.3545765366923
+        },
+        {
+          "id": "C_pythia_2p8b_nll_initial",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 116.58434781667376,
+          "remaining_forward_jobs": 1,
+          "sum_slot_seconds_proxy": 116.58434781667376
+        },
+        {
+          "id": "C_pythia_2p8b_behavior_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 336.06981812934333,
+          "remaining_forward_jobs": 15,
+          "sum_slot_seconds_proxy": 5041.04727194015
+        },
+        {
+          "id": "A_selected_behavior",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 134.55208415490665,
+          "remaining_forward_jobs": 15,
+          "sum_slot_seconds_proxy": 2018.2812623235998
+        },
+        {
+          "id": "A_selected_behavior_materialization",
+          "materialization_jobs": 3,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 20.0,
+          "remaining_forward_jobs": 0,
+          "sum_slot_seconds_proxy": 60.0
+        }
+      ],
+      "remaining_forward_jobs": 333,
+      "remaining_materialization_jobs": 3,
+      "starts": {
+        "from_2350": {
+          "finish_utc": "2026-11-07T02:18:26.085176+00:00",
+          "margin_before_30min_delivery_tail_minutes": 38.098580399999996,
+          "start_utc": "2026-11-06T23:50:00+00:00"
+        },
+        "from_midnight": {
+          "finish_utc": "2026-11-07T02:28:26.085176+00:00",
+          "margin_before_30min_delivery_tail_minutes": 28.0985804,
+          "start_utc": "2026-11-07T00:00:00+00:00"
+        }
+      },
+      "total_compute_reduction_due_to_early_A_seconds": 0.0,
+      "wall_minutes_with_dispatch_tail_and_handoff_proxy": 148.434752934837,
+      "wall_seconds_with_dispatch_tail_and_handoff_proxy": 8906.08517609022,
+      "whole_wall_sensitivity_factor": 1.25
+    },
+    {
+      "A_observed_410m_final_reference_seconds_before_factor": 40.12494158744812,
+      "C_future_D_B4_equality_discount_spent": false,
+      "alias_materialization_whole_slot_seconds_proxy": 40.0,
+      "already_completed_A_actual_slot_seconds_separate": 4531.543528318405,
+      "counterfactual_slot_work_if_A_not_done_early": 49284.216613873745,
+      "four_slot_dispatch": {
+        "LPT_imbalance_and_dependency_tail_seconds_proxy": 22.581350446231227,
+        "baseline_first_LPT_wall_seconds_proxy": 11210.749621835066,
+        "ideal_four_slot_wall_seconds_proxy": 11188.168271388835,
+        "job_count": 336,
+        "largest_job_seconds_proxy": 453.1986432648724,
+        "sum_whole_job_slot_seconds_proxy": 44752.67308555534
+      },
+      "from_current_training_forecast": {
+        "evaluation_finish_utc": "2026-11-07T02:22:19.782901+00:00",
+        "margin_before_30min_delivery_tail_minutes": 34.20361831666666,
+        "training_finish_utc": "2026-11-06T23:10:29.033279+00:00"
+      },
+      "future_410m_NLL_final_whole_slot_seconds_proxy": 60.18741238117218,
+      "handoff_preflight_allowance_seconds_unmeasured": 300.0,
+      "latest_feasible_start_utc_proxy": "2026-11-06T23:44:41.250378+00:00",
+      "name": "high",
+      "per_phase": [
+        {
+          "id": "main_behavior_adapted",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 168.6476446832446,
+          "remaining_forward_jobs": 66,
+          "sum_slot_seconds_proxy": 11130.744549094145
+        },
+        {
+          "id": "B_nll",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 60.18741238117218,
+          "remaining_forward_jobs": 60,
+          "sum_slot_seconds_proxy": 3611.244742870331
+        },
+        {
+          "id": "C_pythia_410m_nll_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 58.47989447150402,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 1403.5174673160964
+        },
+        {
+          "id": "C_pythia_410m_nll_best",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 58.431891228664014,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 1402.3653894879362
+        },
+        {
+          "id": "C_pythia_410m_nll_initial",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 43.81971050183344,
+          "remaining_forward_jobs": 1,
+          "sum_slot_seconds_proxy": 43.81971050183344
+        },
+        {
+          "id": "C_pythia_410m_behavior_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 168.6476446832446,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 4047.5434723978706
+        },
+        {
+          "id": "C_pythia_1b_nll_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 74.10513821851961,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 1778.5233172444707
+        },
+        {
+          "id": "C_pythia_1b_nll_best",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 74.10676571285833,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 1778.5623771086
+        },
+        {
+          "id": "C_pythia_1b_nll_initial",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 55.57473755310617,
+          "remaining_forward_jobs": 1,
+          "sum_slot_seconds_proxy": 55.57473755310617
+        },
+        {
+          "id": "C_pythia_1b_behavior_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 179.86071530875392,
+          "remaining_forward_jobs": 24,
+          "sum_slot_seconds_proxy": 4316.657167410094
+        },
+        {
+          "id": "C_pythia_2p8b_nll_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 186.54877211031,
+          "remaining_forward_jobs": 15,
+          "sum_slot_seconds_proxy": 2798.23158165465
+        },
+        {
+          "id": "C_pythia_2p8b_nll_best",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 186.55286908762903,
+          "remaining_forward_jobs": 15,
+          "sum_slot_seconds_proxy": 2798.2930363144355
+        },
+        {
+          "id": "C_pythia_2p8b_nll_initial",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 139.90121738000852,
+          "remaining_forward_jobs": 1,
+          "sum_slot_seconds_proxy": 139.90121738000852
+        },
+        {
+          "id": "C_pythia_2p8b_behavior_final",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 453.1986432648724,
+          "remaining_forward_jobs": 15,
+          "sum_slot_seconds_proxy": 6797.979648973085
+        },
+        {
+          "id": "A_selected_behavior",
+          "materialization_jobs": 0,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 168.6476446832446,
+          "remaining_forward_jobs": 15,
+          "sum_slot_seconds_proxy": 2529.714670248669
+        },
+        {
+          "id": "A_selected_behavior_materialization",
+          "materialization_jobs": 3,
+          "model": null,
+          "per_job_whole_slot_seconds_proxy": 40.0,
+          "remaining_forward_jobs": 0,
+          "sum_slot_seconds_proxy": 120.0
+        }
+      ],
+      "remaining_forward_jobs": 333,
+      "remaining_materialization_jobs": 3,
+      "starts": {
+        "from_2350": {
+          "finish_utc": "2026-11-07T03:01:50.749622+00:00",
+          "margin_before_30min_delivery_tail_minutes": -5.3124937,
+          "start_utc": "2026-11-06T23:50:00+00:00"
+        },
+        "from_midnight": {
+          "finish_utc": "2026-11-07T03:11:50.749622+00:00",
+          "margin_before_30min_delivery_tail_minutes": -15.312493700000001,
+          "start_utc": "2026-11-07T00:00:00+00:00"
+        }
+      },
+      "total_compute_reduction_due_to_early_A_seconds": 0.0,
+      "wall_minutes_with_dispatch_tail_and_handoff_proxy": 191.84582703058445,
+      "wall_seconds_with_dispatch_tail_and_handoff_proxy": 11510.749621835066,
+      "whole_wall_sensitivity_factor": 1.5
+    }
+  ],
+  "source_proofs": {
+    "master_queue.json": {
+      "path": "/tmp/grad-research-20261106/worktree/results/evaluation_timing_budget_v4_sources/master_queue.json",
+      "sha256": "98cfe063e8c00b607688685085be78ac0fb80a9fb3df7e08180f87410d8a5e63"
+    },
+    "prehash_progress.json": {
+      "path": "/tmp/grad-research-20261106/worktree/results/evaluation_timing_budget_v4_sources/prehash_progress.json",
+      "sha256": "7838d3c21e0d89e466de6bd46f53ed5d8ee7a156c8331b6edfabf9dde3684c54"
+    },
+    "primary_behavior_manifest": {
+      "path": "/tmp/grad-research-20261106/worktree/docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+      "sha256": "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934"
+    },
+    "producer_source": {
+      "path": "/tmp/grad-research-20261106/worktree/scripts/describe_remaining_evaluation_budget_v4.py",
+      "sha256": "a83711ad69d03ecc4314a015a8ca21379acf07ebaaea50aa0820a298554c39b7"
+    },
+    "raw_runtime.json": {
+      "path": "/tmp/grad-research-20261106/worktree/results/evaluation_timing_budget_v4_sources/raw_runtime.json",
+      "sha256": "8ab2e99bb65b2a48dbe91848408fc24034cc1fb6d9b7fc4ea682bf6d20e2ecd3"
+    },
+    "ready_index.json": {
+      "path": "/tmp/grad-research-20261106/worktree/results/evaluation_timing_budget_v4_sources/ready_index.json",
+      "sha256": "b6992600637098ad972e64fdd688b1d1eb9981cfdb0b463d9c41dfbda918d59d"
+    },
+    "scheduler_state.json": {
+      "path": "/tmp/grad-research-20261106/worktree/results/evaluation_timing_budget_v4_sources/scheduler_state.json",
+      "sha256": "f1996ac11fa35db808fb94661b6af5db926a6073cb4f029bb82d194b39cf371e"
+    }
+  },
+  "status": "score_blind_remaining_evaluation_forecast",
+  "time_window": {
+    "delivery_tail_seconds": 1800,
+    "hard_deadline_utc": "2026-11-07T03:26:32Z",
+    "latest_inference_finish_utc": "2026-11-07T02:56:32+00:00",
+    "master_2350_stop_utc": "2026-11-06T23:50:00Z",
+    "midnight_utc": "2026-11-07T00:00:00Z"
+  },
+  "training_forecast": {
+    "finish_utc_with_existing_10pct": "2026-11-06T23:10:29.033279+00:00",
+    "master_jobs": 504,
+    "master_status_counts": {
+      "completed": 396,
+      "pending": 104,
+      "running": 4
+    },
+    "raw_generic_A_allowance_removed_once_slot_seconds": 0,
+    "raw_observer_A_jobs_still_in_other_queued_jobs": [],
+    "updated_at_utc": "2026-11-06T09:56:22.139701+00:00"
+  },
+  "utc": "2026-11-06T09:57:06.660667+00:00"
+}

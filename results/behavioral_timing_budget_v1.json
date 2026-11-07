@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-11-06T06:13:54.293696+00:00",
+  "timing_source": "results/first_behavior_timing_monitor.json",
+  "timing_source_sha256": "78ac61009ab1c5a36bb2b38a85eb43015da0ebab6f5f9dc9a50f7f3819d1d2a9",
+  "manifest": "docs/primary_evaluation_v2_execution_matched_behavior_manifest.json",
+  "manifest_sha256": "312d8e150030d489593e7e705699ec1da5f7d505e349ecd15a978eca2c2f7934",
+  "structural_source": "results/behavioral_budget_preregistered_v2.json",
+  "structural_source_sha256": "d8e2c0091ac5e6399d3cc625100c715fabd9717f5b1fe77d5f8572dbd04d757b",
+  "measured_410m_initial": {
+    "scorer_subprocess_wall_seconds": 91.28385011479259,
+    "source_verification_wall_seconds": 0.9213802516460419,
+    "scheduler_elapsed_seconds": 100.13961291313171,
+    "unattributed_preflight_polling_overhead_seconds": 7.934382546693087,
+    "source_verification_input_bytes": 924642842,
+    "single_observation_not_a_runtime_distribution": true
+  },
+  "primary": {
+    "total_inferences_including_completed_initial": 67,
+    "adapted_remaining": 66,
+    "checkpoint_input_byte_ratio_range": [
+      2.777493025788221,
+      11.545640812952943
+    ],
+    "sensitivity_scenarios": [
+      {
+        "adapted_scorer_factor_assumption": 1.0,
+        "remaining_scorer_job_wall_seconds_proxy": 6843.334620575126,
+        "all_67_job_wall_seconds_proxy": 6943.474233488258,
+        "ideal_four_uncontended_gpu_wall_seconds_lower_bound": 1735.8685583720644
+      },
+      {
+        "adapted_scorer_factor_assumption": 1.25,
+        "remaining_scorer_job_wall_seconds_proxy": 8349.518147469204,
+        "all_67_job_wall_seconds_proxy": 8449.657760382335,
+        "ideal_four_uncontended_gpu_wall_seconds_lower_bound": 2112.414440095584
+      },
+      {
+        "adapted_scorer_factor_assumption": 1.5,
+        "remaining_scorer_job_wall_seconds_proxy": 9855.701674363281,
+        "all_67_job_wall_seconds_proxy": 9955.841287276413,
+        "ideal_four_uncontended_gpu_wall_seconds_lower_bound": 2488.9603218191032
+      }
+    ],
+    "verification_proxy_assumption": "SHA time proportional to verified bytes; caching/contention may violate it",
+    "adapted_proxy_assumption": "Same forward shapes, extra checkpoint loading/baseline transitions unmeasured; scorer multipliers are sensitivity assumptions"
+  },
+  "whole_preregistered_scope": {
+    "maximum_passes_after_six_proven_primary_aliases": 150,
+    "model_counts": {
+      "pythia-410m": 109,
+      "pythia-1b": 25,
+      "pythia-2.8b": 16
+    },
+    "parameter_ratios_for_structure_only": {
+      "pythia-410m": 1.0,
+      "pythia-1b": 2.4961675854019614,
+      "pythia-2.8b": 6.8467211002592
+    },
+    "sensitivity_scenarios": [
+      {
+        "unmeasured_large_model_factor_relative_to_parameter_ratio": 0.5,
+        "wall_factors_relative_to_measured_410m_initial": {
+          "pythia-410m": 1.0,
+          "pythia-1b": 1.2480837927009807,
+          "pythia-2.8b": 3.4233605501296
+        },
+        "job_wall_seconds_proxy_by_model": {
+          "pythia-410m": 10915.217807531357,
+          "pythia-1b": 3124.5656971057383,
+          "pythia-2.8b": 5485.02400563302
+        },
+        "aggregate_job_wall_seconds_proxy": 19524.807510270115,
+        "ideal_four_uncontended_gpu_wall_seconds_lower_bound": 4881.201877567529,
+        "interpretation": "Assumed sensitivity scenario, not a measured bound or confidence interval; batch8 kernel/launch costs are unmeasured"
+      },
+      {
+        "unmeasured_large_model_factor_relative_to_parameter_ratio": 1.0,
+        "wall_factors_relative_to_measured_410m_initial": {
+          "pythia-410m": 1.0,
+          "pythia-1b": 2.4961675854019614,
+          "pythia-2.8b": 6.8467211002592
+        },
+        "job_wall_seconds_proxy_by_model": {
+          "pythia-410m": 10915.217807531357,
+          "pythia-1b": 6249.131394211477,
+          "pythia-2.8b": 10970.04801126604
+        },
+        "aggregate_job_wall_seconds_proxy": 28134.397213008873,
+        "ideal_four_uncontended_gpu_wall_seconds_lower_bound": 7033.599303252218,
+        "interpretation": "Assumed sensitivity scenario, not a measured bound or confidence interval; batch8 kernel/launch costs are unmeasured"
+      },
+      {
+        "unmeasured_large_model_factor_relative_to_parameter_ratio": 2.0,
+        "wall_factors_relative_to_measured_410m_initial": {
+          "pythia-410m": 1.0,
+          "pythia-1b": 4.992335170803923,
+          "pythia-2.8b": 13.6934422005184
+        },
+        "job_wall_seconds_proxy_by_model": {
+          "pythia-410m": 10915.217807531357,
+          "pythia-1b": 12498.262788422953,
+          "pythia-2.8b": 21940.09602253208
+        },
+        "aggregate_job_wall_seconds_proxy": 45353.57661848639,
+        "ideal_four_uncontended_gpu_wall_seconds_lower_bound": 11338.394154621597,
+        "interpretation": "Assumed sensitivity scenario, not a measured bound or confidence interval; batch8 kernel/launch costs are unmeasured"
+      }
+    ],
+    "further_reuse_not_yet_deducted": "A selected cells may reuse primary, and extended D/B4 may match; require current checkpoint/model_state proof",
+    "unmeasured_models": [
+      "pythia-1b",
+      "pythia-2.8b"
+    ]
+  },
+  "evaluation_window_after_training_seconds": 12392,
+  "scope_excludes": [
+    "NLL test",
+    "replay-fit diagnostic",
+    "training",
+    "packaging",
+    "fault retries",
+    "resource contention"
+  ],
+  "wall_is_not_pure_gpu_time": true,
+  "scores_or_predictions_parsed": false,
+  "new_inference_started": false
+}

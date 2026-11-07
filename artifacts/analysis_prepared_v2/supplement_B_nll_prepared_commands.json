@@ -1,0 +1,100 @@
+{
+  "B_statistics_unchanged": {
+    "bank_chunks": [
+      20,
+      196
+    ],
+    "bootstrap_replicates": 5000,
+    "bootstrap_seed": 20261106,
+    "confidence": 0.95,
+    "generation_seed": 11,
+    "groups": [
+      "B4",
+      "M",
+      "C"
+    ],
+    "replicate_unit": "selection_seed",
+    "selection_seeds": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "training_seed": 11
+  },
+  "analyze_NOT_EXECUTED_AND_REQUIRES_ROOT_AUTHORITY": [
+    "/usr/bin/python",
+    "/tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v2.py",
+    "analyze",
+    "--plan",
+    "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/supplement_B_nll.json",
+    "--plan-sha256",
+    "2c5f8a15498827b6acd80f72a67848fa666b6d06145b9f5a95ed80a0e3b0dd33",
+    "--authority",
+    "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/supplement_B_nll_ROOT_AUTHORITY.json",
+    "--authority-sha256",
+    "<ROOT_AUTHORITY_SHA256>",
+    "--state",
+    "/tmp/grad-research-20261106/worktree/logs/supplemental_job_state.json",
+    "--output",
+    "/tmp/grad-research-20261106/worktree/results/supplemental_analysis_v2/supplement_B_nll"
+  ],
+  "cache_allowlist_verification": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/supplement_B_nll_checkpoint_cache_allowlist_verification.json",
+    "sha256": "1cee597cd006d601db771f9abf8c109a77be0070536706edc8f2248066bee16d"
+  },
+  "check_NOT_EXECUTED": [
+    "/usr/bin/python",
+    "/tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v2.py",
+    "check",
+    "--plan",
+    "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/supplement_B_nll.json",
+    "--plan-sha256",
+    "2c5f8a15498827b6acd80f72a67848fa666b6d06145b9f5a95ed80a0e3b0dd33",
+    "--state",
+    "/tmp/grad-research-20261106/worktree/logs/supplemental_job_state.json",
+    "--output",
+    "/tmp/grad-research-20261106/worktree/results/supplemental_analysis_v2/supplement_B_nll_readiness.json"
+  ],
+  "full_phase_first_read_gate": "All 60 adapted jobs plus the imported completed baseline (61 closure jobs) must pass completed/rc0/frozen definitions and fresh output/source attestations before immutable first-read. No partial analysis.",
+  "new_GPU_or_score_parsing_started": false,
+  "plan": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/supplement_B_nll.json",
+    "sha256": "2c5f8a15498827b6acd80f72a67848fa666b6d06145b9f5a95ed80a0e3b0dd33"
+  },
+  "prepare_argv_EXECUTED_ONCE": [
+    "/usr/bin/python",
+    "/tmp/grad-research-20261106/worktree/scripts/analyze_supplemental_phase_v2.py",
+    "prepare",
+    "--ready",
+    "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/supplement_B_nll/READY.json",
+    "--ready-sha256",
+    "dbf2c6d46350e757443d57f60122465e5ca81b9bad9c56be9b7a2de89c0a0019",
+    "--protocol",
+    "/tmp/grad-research-20261106/worktree/docs/supplemental_aux_analysis_protocol_v2.json",
+    "--protocol-sha256",
+    "eed050602c368e5e4be87172ac4d208b890d9a7f7e9811ce1684ae62acc8f742",
+    "--contract-id",
+    "supplement_B_nll",
+    "--digest-cache-snapshot",
+    "/tmp/grad-research-20261106/worktree/artifacts/evaluation_ready_v5/digest_cache_snapshot_1793964579849756045.json",
+    "--digest-cache-snapshot-sha256",
+    "b3dfc9bd3b3c020a0d19d388cf58fba7a7e3d22308e41b800ab1728834a3a97b",
+    "--output",
+    "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/supplement_B_nll.json"
+  ],
+  "prepared_only": true,
+  "root_authority_false_template": {
+    "path": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/supplement_B_nll_root_authority_TEMPLATE.json",
+    "sha256": "55e9fbb5fc09bf62230836c941335098dd3ecee40fa0dd7d512b4f6ced59ba83"
+  },
+  "root_authority_to_create_after_independent_review": "/tmp/grad-research-20261106/worktree/artifacts/analysis_prepared_v2/supplement_B_nll_ROOT_AUTHORITY.json",
+  "schema_version": 2,
+  "score_authority_issued": false
+}
